@@ -21,6 +21,20 @@ log_Zref=0
 
 col_den_OVI=log10(data['O+5'])
 
+# mask=T==5.30
+
+# nH_mask=nH[mask]
+# col_den_OVI_mask=col_den_OVI[mask]
+
+# plt.scatter(nH_mask,col_den_OVI_mask)
+# plt.plot(nH_mask,col_den_OVI_mask,ls='--')
+# plt.xlim(right=0.6)
+# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15)
+# plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
+# plt.show()
+# quit()
+
+
 def col_den_nH(n):
 
     mask=nH==n
@@ -32,7 +46,7 @@ def col_den_nH(n):
 Z=[]
 nH_plot=[]
 
-for n in range(-5,4):
+for n in range(-5,1):
 
     T_n,col_den_n=col_den_nH(n)
 
@@ -55,6 +69,9 @@ for n in range(-5,4):
     # print(f'nH = {n} : {round(Z,3)}')
 
 plt.scatter(nH_plot,Z)
+plt.plot(nH_plot,Z,ls='--')
+plt.xlabel(r'$\mathbf{log \ [Z]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15)
 plt.show()
 
 
