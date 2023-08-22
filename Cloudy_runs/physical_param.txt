@@ -1,0 +1,6 @@
+component       log[N(HI)]      Ions        log[nH]     log[Z]      log[N(H)]       L       P/K        
+
+II              14.13           H I, O VI      -4.83    -1.06           18.93      188      0.6
+III             16.10           H I,O VI,C II  -3.29    -1.06           17.18      0.1      10.5 
+                                C III, Si II,
+                                Si III
