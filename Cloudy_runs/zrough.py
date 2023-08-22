@@ -1,17 +1,9 @@
-from cProfile import label
 from astropy.io import fits,ascii
 from astropy.table import Table
 from numpy import *
 from scipy.interpolate import interp2d,interp1d
 import pickle
 import matplotlib.pyplot as plt
-
-
-
-
-
-
-
 
 
 
@@ -46,14 +38,8 @@ data_2d=Table(hdu[1].data)
 hdu=fits.open(f'Data/component_III_nH_col_density_param.fits')
 data_1d=Table(hdu[1].data)
 
-# ind=[]
 
-# for i,row in enumerate(data_2d):
 
-#     if row['H']==0 or row['H']<10**16:
-#        ind.append(i) 
-
-# data_2d.remove_rows([ind])
 
 log_nH_1d=data_1d['log_nH']
 
@@ -70,9 +56,19 @@ ions=['Si+', 'Si+2','C+', 'C+2','O+5']
 
 observations={'Si+':[13.19,0.41], 'Si+2':[12.87,0.08],'C+':[14.21,0.39], 'C+2':[13.81,0.04],'O+5':[13.91,0.04]}
 
+
+for i in observations.keys():
+
+    plt.figure()
+    plt.scatter(log_nH_1d,log10(data_1d[i]))
+    plt.title(i)
+
+plt.show()
+quit()
+
 def save_func(func,name):
 
-    with open(f'Data/{name}.pkl','wb') as pickle_file:
+    with open(f'Interp_2d_func/{name}_quintic.pkl','wb') as pickle_file:
         pickle.dump(func,pickle_file)
 
 def interp_func(ion,kind='cubic'):
@@ -104,6 +100,38 @@ def interp_func(ion,kind='cubic'):
 
     return f_2d
 
+def interp_func_1d():
+
+    func_dict={}
+    # log_nH=data['log_nH']
+
+    for ion in observations.keys():
+
+        ion_col_den=data_1d[ion].value
+
+        for i,j in enumerate(ion_col_den):
+            if j==0:
+                break
+
+        log_nH_f=log_nH_1d[:i]
+        log_col_den=log10(ion_col_den[:i])
+        f=interp1d(log_nH_f,log_col_den,fill_value='extrapolate',kind='quadratic')
+        func_dict[ion]=f
+
+    return func_dict
+
+interp_func_1d_dict=interp_func_1d()
+
+def plot_1d_interp(ion,nH,Z):
+
+    log_col_den=interp_func_1d_dict[ion](nH)+Z+1
+
+    plt.scatter(Z,log_col_den,label=f'{nH} 1d')
+
+
+
+
+
 
 def col_vs_z(ion,nH):
 
@@ -116,58 +144,24 @@ def col_vs_z(ion,nH):
     
 i='O+5'
 
-with open(f'Data/{i}.pkl','rb') as pickle_file:
-    f=pickle.load(pickle_file)
+# with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+#     f=pickle.load(pickle_file)
 
 z=linspace(-3,2,100)
-nH=arange(-5,0.1,1)
+nH=arange(-5,0,1)
 
 plt.figure()
 
 for n in nH:
-    plt.scatter(z,f(n,z),label=f'{n}')
+    # plt.scatter(z,f(n,z),label=f'{n}')
     col_vs_z(i,n)
+    plot_1d_interp(i,n,z)
+
 
 plt.legend()
-plt.title(i)
+# plt.title(i)
 
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-# hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
-# data=Table(hdu[1].data)
-
-# ind=[]
-
-# for i,row in enumerate(data):
-
-#     if row['H']==0 or row['H']<10**16 or row['log_nH']>0 or row['log_Z']>0:
-#        ind.append(i) 
-
-# data.remove_rows([ind])
-
-
-
-# H=data['H']
-
-# plt.hist(log10(H),bins='auto')
-
-
-
-# plt.scatter(nH,Z)
-# plt.show()
-
-
-
 
 
 
