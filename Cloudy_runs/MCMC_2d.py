@@ -32,32 +32,32 @@ lognH_range=[-5,0]
 logZ_range=[-3,2]
 
 param=data['parameters']
-ions=['Si+', 'Si+2','C+', 'C+2','O+5']
+ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 
-observations={'Si+':[13.19,0.41], 'Si+2':[12.87,0.08],'C+':[14.21,0.39], 'C+2':[13.81,0.04],'O+5':[13.91,0.04]}
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
 
-def interp_func():
+# def interp_func():
 
-    func_dict={}
-    # log_nH=data['log_nH']
+#     func_dict={}
+#     # log_nH=data['log_nH']
 
-    for i in observations.keys():
+#     for i in observations.keys():
 
-        x=[]
+#         x=[]
 
-        for j in data[i].value:
-            if j==0:
-                x.append(10**(-30))
+#         for j in data[i].value:
+#             if j==0:
+#                 x.append(10**(-30))
             
-            else:
-                x.append(j)
+#             else:ions=['Si+2', 'Si+','C+2', 'C+','O+5']
+#                 x.append(j)
 
-        log_col_den=log10(x)
-        f=interp2d(log_nH,log_Z,log_col_den,kind='cubic')
-        func_dict[i]=f
+#         log_col_den=log10(x)
+#         f=interp2d(log_nH,log_Z,log_col_den,kind='cubic')
+#         func_dict[i]=f
 
-    return func_dict
+#     return func_dict
 
 interp_func_dict={}
 
@@ -81,17 +81,13 @@ for i in observations.keys():
 # plt.show()
 # quit()
 
-# Si+: bad in middle and end
-# Si+2: okayish, some waviness in middle bad in end
-# C+: bad in end
-# C+2: ok
-# O+5: some ok some not
+
 
 
 def log_posterior(theta,ions_to_use):
 
     lognH,logZ=theta
-
+    
     #prior
 
     if lognH_range[0]<=lognH<=lognH_range[1] and logZ_range[0]<=logZ<=logZ_range[1]:
@@ -102,7 +98,6 @@ def log_posterior(theta,ions_to_use):
 
     #likelihood
     
-    # interp_func_list=interp_func()
     model_col_den=[]
     observed_col_den=[]
     col_den_error=[]
@@ -125,38 +120,44 @@ def log_posterior(theta,ions_to_use):
     return log_prior+log_likelihood    # posterior
 
 
+def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=5000,n_param = 2):
+
+    if guess==None:
+
+        n_guess = random.uniform(lognH_range[0],lognH_range[1], nwalkers)
+        z_guess = random.uniform(logZ_range[0],logZ_range[1], nwalkers)
+    
+    else:
+
+        if len(guess)==4:
+            n_guess=random.normal(guess[0],guess[1],nwalkers)
+            z_guess=random.normal(guess[2],guess[3],nwalkers)
+
+        else:
+            n_guess=ones(nwalkers)*float(guess[0])
+            z_guess=ones(nwalkers)*float(guess[1])
+
+    starting_guesses = vstack((n_guess, z_guess)).T 
+
+    sampler=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use]))
+    sampler.run_mcmc(starting_guesses, nsteps, progress=True)
+
+    if discard_tau==True:
+        tau=sampler.get_autocorr_time()  
+        thin=int(mean(tau)/2) 
+        flat_samples=sampler.get_chain(discard=thin*20,flat=True)
+    
+    else:
+        flat_samples=sampler.get_chain(flat=True)
+
+    return flat_samples
+
 ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
 ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-n_param = 2 
-nwalkers = 50
-nsteps = 5000
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,guess=[-1.6,0.001,0.48,0.001],discard_tau=False,nsteps=10000)
+# flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1])
 
-# n_guess = random.uniform(lognH_range[0],lognH_range[1], nwalkers)
-# z_guess = random.uniform(logZ_range[0],logZ_range[1], nwalkers)
-
-n_guess=random.normal(-1.6,0.2,nwalkers)
-z_guess=random.normal(0.48,0.2,nwalkers)
-
-starting_guesses = vstack((n_guess, z_guess)).T 
-
-sampler1=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use1]))
-sampler1.run_mcmc(starting_guesses, nsteps, progress=True)
-# tau=sampler1.get_autocorr_time()  
-# thin=int(mean(tau)/2) 
-flat_samples1=sampler1.get_chain(flat=True)
-
-n_guess=random.normal(-3.78,0.1,nwalkers)
-z_guess=random.normal(-1.4,0.1,nwalkers)
-
-# starting_guesses = vstack((n_guess, z_guess)).T 
-
-
-sampler2=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use2]))
-sampler2.run_mcmc(starting_guesses, nsteps, progress=True)
-# tau=sampler2.get_autocorr_time()  
-# thin=int(mean(tau)/2) 
-flat_samples2=sampler2.get_chain(flat=True)
 
 def sol_write(q):
 
@@ -184,18 +185,21 @@ labels=['log nH', 'log Z']
 buffer = StringIO()
 sys.stdout = buffer
 
-corner.corner(flat_samples1, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
+corner.corner(flat_samples_exc_OVI, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
 quantiles1 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol1=sol_write(quantiles1)
 
+print(sol1)
+plt.show()
 
+quit()
 # fig.savefig('Files_n_figures/cornerplot_exc_OVI.png')
 
 buffer = StringIO()
 sys.stdout = buffer
 
-corner.corner(flat_samples2, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
+corner.corner(flat_samples_inc_OVI, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
 quantiles2 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol2=sol_write(quantiles2)
@@ -203,9 +207,8 @@ sol2=sol_write(quantiles2)
 # # fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
 # plt.show()
 # quit()
-
-ions_all=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
-inds = random.randint(int(max(len(flat_samples1),len(flat_samples2))/1.33),min(len(flat_samples1),len(flat_samples2)), size=100)
+ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
+inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
 
 
 plt.figure()
@@ -214,10 +217,10 @@ x=linspace(1,len(ions_all),len(ions_all))
 
 for i in inds:
 
-    sample1=flat_samples1[i]
+    sample1=flat_samples_exc_OVI[i]
     int_col_den1=[]
     int_col_den2=[]
-    sample2=flat_samples2[i]
+    sample2=flat_samples_inc_OVI[i]
 
     for j in observations.keys():
         f=interp_func_dict[j]
@@ -234,11 +237,11 @@ for i in inds:
         plt.plot(x,int_col_den2,c='green',alpha=0.4,label='Model samples (including O VI)')
 
 
-# median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0],sol1[3]) for i in observations.keys()])
-# median_col_den_inc_OVI=array([interp_func_dict[i](sol2[0],sol2[3]) for i in observations.keys()])
+median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0],sol1[3]) for i in observations.keys()])
+median_col_den_inc_OVI=array([interp_func_dict[i](sol2[0],sol2[3]) for i in observations.keys()])
 
-median_col_den_exc_OVI=array([interp_func_dict[i](-1.6,0.48) for i in observations.keys()])
-median_col_den_inc_OVI=array([interp_func_dict[i](-3.78,-1.40) for i in observations.keys()])
+# median_col_den_exc_OVI=array([interp_func_dict[i](-1.6,0.48) for i in observations.keys()])
+# median_col_den_inc_OVI=array([interp_func_dict[i](-3.78,-1.40) for i in observations.keys()])
 
 obs_col_den=array([observations[i][0]  for i in ions])
 col_den_error=array([observations[i][1]  for i in ions])
