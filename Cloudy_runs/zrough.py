@@ -63,7 +63,7 @@ for i in observations.keys():
     plt.scatter(log_nH_1d,log10(data_1d[i]))
     plt.title(i)
 
-# plt.show()
+# plt.show() hdhldh
 quit()
 
 def save_func(func,name):
