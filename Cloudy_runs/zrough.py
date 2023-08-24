@@ -11,98 +11,41 @@ import matplotlib.pyplot as plt
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
+i='O+5'
 
-interp_func_dict={}
+with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+    f=pickle.load(pickle_file)
 
-for i in observations.keys():
-
-    with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
-        f=pickle.load(pickle_file)
-
-    interp_func_dict[i]=f
 
 
 obs_col_den=array([observations[i][0]  for i in ions])
 col_den_error=array([observations[i][1]  for i in ions]) 
 
-def chi_sq(nH,Z):
-
-    if type(nH)==type(1) or type(nH)==type(1.0):
-        nH=[nH]
-
-    else:
-        nH=nH
-
-    median_col_den_exc_OVI=array([interp_func_dict[i](nH,Z) for i in observations.keys()])
-    chi_sq_exc=zeros(len(nH))
-
-    for i in range(len(nH)):
-
-        med_col_den=median_col_den_exc_OVI[:,i]
-        chi_sq_exc[i]=sum((((obs_col_den-med_col_den)/col_den_error)**2)[:-1])
-
-    return chi_sq_exc
-
 
 nH=arange(-5,0,0.01)
 Z=arange(-3,2,0.01)
 
-# nH=linspace(-5,0,100)
-# Z=linspace(-3,2,100)
 
 x=array(list(nH)*len(Z))
 y=zeros(len(x))
 
-chi_sq_arr=zeros((len(Z),len(nH)))
+col_den=zeros((len(Z),len(nH)))
 
 for i,z in enumerate(Z):
 
-    chi_sq_arr[i]=chi_sq(nH,z)
+    col_den[i]=f(nH,z)
     y[len(nH)*i:len(nH)*(i+1)]=z
 
 
-z=chi_sq_arr.flatten()
-i=argmin(z)
+z=col_den.flatten()
 
-nH=round(x[i],2)
-Z=round(y[i],2)
-print('\n ----------------------------------- \n')
-print(f'nH = {nH}  Z = {Z}  chi-sq = {round(z[i],3)}')
-print('\n ----------------------------------- \n')
+fig=plt.figure()
+ax=plt.axes(projection ='3d')
 
-ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
-median_col_den_exc_OVI=array([interp_func_dict[i](nH,Z) for i in observations.keys()])
-
-obs_col_den=array([observations[i][0]  for i in ions])
-col_den_error=array([observations[i][1]  for i in ions])
-
-
-x=linspace(1,len(ions_all),len(ions_all))
-
-plt.errorbar(x,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
-plt.plot(x,median_col_den_exc_OVI,label='median solution (excluding O VI)',ls='--',lw=3,color='orange')
-plt.xticks(x,ions_all,fontsize=20)
-plt.yticks(fontsize=20)
-plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
-plt.legend()
-# plt.savefig('Files_n_figures/Observed_and_predicted.png')
-plt.show()
-
-
-
-
-
-
-# fig=plt.figure()
-# ax=plt.axes(projection ='3d')
-
-# ax.scatter(x,y,z)
-# ax.set_xlabel('nH')
-# ax.set_ylabel('Z')
-# ax.set_zlabel('chi_square')
-
-
+ax.scatter(x,y,z)
+ax.set_xlabel('nH')
+ax.set_ylabel('Z')
+ax.set_zlabel('col_den')
 
 plt.show()
 

@@ -3,8 +3,10 @@ from astropy.table import Table
 from numpy import *
 from scipy.interpolate import interp2d,interp1d
 import pickle
-
 import matplotlib.pyplot as plt
+import warnings
+
+warnings.filterwarnings("ignore")
 
 
 # plt.style.use('../Python/my_style.mpl')
@@ -84,22 +86,22 @@ def col_vs_z(ion,nH):
     plt.scatter(Z,log_col_den,label=f'{nH}',marker='D')    
 
 
-i='O+5'
+# i=ions[4]
 
 
-with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
-    f=pickle.load(pickle_file)
+# with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+#     f=pickle.load(pickle_file)
 
-z=linspace(-3,2,100)
-nH=arange(-5,0.1,1)
+# z=linspace(-3,2,100)
+# nH=arange(-5,0.1,0.01) 
 
-plt.figure()
+# plt.figure()
 
-for n in nH:
-    plt.scatter(z,f(n,z),label=f'{n}')
-    col_vs_z(i,n)
+# for n in nH:
+#     plt.scatter(z,f(n,z),label=f'{n}')
+#     col_vs_z(i,n)
 
-plt.legend()
-plt.title(i)
+# # plt.legend()
+# plt.title(i)
 
-plt.show()
+# plt.show()

@@ -1,6 +1,4 @@
-from cProfile import label
-import enum
-from traceback import print_tb
+from operator import indexOf
 from astropy.io import fits,ascii
 from astropy.table import Table
 from numpy import *
@@ -49,91 +47,92 @@ def chi_sq_func(nH,Z):
     return chi_sq_exc,chi_sq_inc
 
 
-nH=arange(-5,0,0.01)
-Z=arange(-3,2,0.01)
+nH_global=arange(-5,0.01,0.01)
+Z_global=arange(-3,2.01,0.01)
 
-x=array(list(nH)*len(Z))
+x=array(list(nH_global)*len(Z_global))
 y=zeros(len(x))
 
-chi_sq_exc=zeros((len(Z),len(nH)))
-chi_sq_inc=zeros((len(Z),len(nH)))
+chi_sq_exc=zeros((len(Z_global),len(nH_global)))
+chi_sq_inc=zeros((len(Z_global),len(nH_global)))
 
-for i,a in enumerate(Z):
+for i,a in enumerate(Z_global):
 
-    chi_sq_exc[i],chi_sq_inc[i]=chi_sq_func(nH,a)
-    y[len(nH)*i:len(nH)*(i+1)]=a
+    chi_sq_exc[i],chi_sq_inc[i]=chi_sq_func(nH_global,a)
+    y[len(nH_global)*i:len(nH_global)*(i+1)]=a
 
 
 def model(chi_sq,name,c):
 
     chi_sq_arr=chi_sq.flatten()
-    i=argmin(chi_sq_arr)
+    ind=argmin(chi_sq_arr)
 
-    nH=round(x[i],2)
-    Z=round(y[i],2)
-    chi_sq_min=round(chi_sq_arr[i],3)
+    nH=round(x[ind],2)
+    Z=round(y[ind],2)
+    chi_sq_min=round(chi_sq_arr[ind],3)
 
-    
-
-
-
-
-    print(f'{name} : nH = {nH}   Z = {Z}  chi-sq = {chi_sq_min}')
-
-    col_den=array([interp_func_dict[i](nH,Z) for i in observations.keys()])
-
-    xaxis=linspace(1,len(ions_roman),len(ions_roman))
-    plt.plot(xaxis,col_den,label=name,ls='--',lw=3,color=c)
-
-    return float(nH),float(Z)
-
-
-def error_estimate(nH,Z,case):
-
-    nH_arr=arange(-5,0,0.01)
-    Z_arr=arange(-3,2,0.01)
-
-    if case=='Exc':
+    if name[:3]=='Exc':
         a=0
     else:
         a=1
     
-    chi_sq_min=chi_sq_func(nH,Z)[a]
-    chi_sq_err_nH=[chi_sq_func(n,Z)[a] for n in nH_arr]
-    chi_sq_err_Z=[chi_sq_func(nH,z)[a] for z in Z_arr]
+    chi_sq_err_nH=[chi_sq_func(n,Z)[a] for n in nH_global]
+    chi_sq_err_Z=[chi_sq_func(nH,z)[a] for z in Z_global]
+
+    nH_level=[]
+    Z_level=[]
+
+    i=indexOf(nH_global,x[ind])
+
+    for j in range(i):
+        if chi_sq_err_nH[i-j]-chi_sq_min>1:
+            nH_level.append(round(nH_global[i-j],2))
+            break
+
+    for j in range(i,len(nH_global)):
+        if chi_sq_err_nH[j]-chi_sq_min>1:
+            nH_level.append(round(nH_global[j],2))
+            break
+
+    i=indexOf(Z_global,y[ind])
 
 
+    for j in range(i):
+        if chi_sq_err_Z[i-j]-chi_sq_min>1:
+            Z_level.append(round(Z_global[i-j],2))
+            break
 
-    plt.figure()
-    plt.title('nH')
-    plt.scatter(nH_arr,chi_sq_err_nH)
-    plt.hlines(chi_sq_min+1,xmin=nH_arr[0],xmax=nH_arr[-1])
+    for j in range(i,len(Z_global)):
+        if chi_sq_err_Z[j]-chi_sq_min>1:
+            Z_level.append(round(Z_global[j],2))
+            break
 
-    plt.figure()
-    plt.title('Z')
-    plt.scatter(Z_arr,chi_sq_err_Z)
-    plt.hlines(chi_sq_min+1,xmin=Z_arr[0],xmax=Z_arr[-1])
+    nH_err=[round(nH-nH_level[0],2),round(nH_level[1]-nH,2)]
+    Z_err=[round(Z-Z_level[0],2),round(Z_level[1]-Z,2)]
 
-    # nH_ind=[]
-    # Z_ind=[]
+    print(f'{name} : nH = {nH}  [{nH_err[0]},{nH_err[1]}]   Z = {Z}  [{Z_err[0]},{Z_err[1]}]  chi-sq = {chi_sq_min}')
 
-    # for i,chi in enumerate(chi_sq_err_nH):
-    #     if chi-chi_sq_min>=1:
-    #         nH_ind.append(i)
+    col_den=array([interp_func_dict[ion](nH,Z) for ion in observations.keys()])
+    xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-    # chi_diff_nH=      
+    plt.plot(xaxis,col_den,label=name,ls='--',lw=3,color=c)
 
-
-
-
+    return float(nH),float(Z),nH_err,Z_err
 
 
+def plot_samples(m,c,n=10,i1=1,i2=1):
 
+    nH_sample=random.normal(m[0],max(m[2])*i1,n)
+    Z_sample=random.normal(m[1],max(m[3])*i2,n)
 
-    
+    sample = vstack((nH_sample, Z_sample)).T 
+    print(sample)
+    xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-
-
+    for s in sample:
+        nH,Z=s
+        col_den=array([interp_func_dict[i](round(nH,3),round(Z,3)) for i in observations.keys()]) 
+        plt.plot(xaxis,col_den,alpha=0.2,color=c)
 
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
@@ -143,15 +142,14 @@ plt.figure()
 plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
+plot_samples(m1,'orange')
+plot_samples(m2,'green')
 plt.xticks(xaxis,ions_roman,fontsize=20)
 plt.yticks(fontsize=20)
 plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 # plt.savefig('Files_n_figures/Observed_and_predicted.png')
-
-
-error_estimate(m1[0],m1[1],'Exc')
 
 plt.show()
 
@@ -169,14 +167,36 @@ plt.show()
 
 
 
-plt.show()
 
 
 
 
+quit()
+
+
+def error_estimate(nH,Z,case):
+
+    if case=='Exc':
+        a=0
+    else:
+        a=1
+    
+    chi_sq_min=chi_sq_func(nH,Z)[a]
+    chi_sq_err_nH=[chi_sq_func(n,Z)[a] for n in nH_global]
+    chi_sq_err_Z=[chi_sq_func(nH,z)[a] for z in Z_global]
 
 
 
+    plt.figure()
+    plt.title('nH')
+    plt.scatter(nH_global,chi_sq_err_nH)
+    plt.hlines(chi_sq_min+1,xmin=nH_global[0],xmax=nH_global[-1])
+
+    plt.figure()
+    plt.title('Z')
+    plt.scatter(Z_global,chi_sq_err_Z)
+    plt.hlines(chi_sq_min+1,xmin=Z_global[0],xmax=Z_global[-1])
+ 
 
 
 

@@ -15,7 +15,7 @@ z_abs=0.347
 dL=cosmo.luminosity_distance(z_abs)  # Mpc
 
 M_star_I=5*log10(cosmo.h)-22.46
-m_I=23
+m_I=20
 M_I=m_I-(5*log10(dL.value*1e6))+5
 L_by_Lstar=10**((M_star_I-M_I)/2.5)
 
