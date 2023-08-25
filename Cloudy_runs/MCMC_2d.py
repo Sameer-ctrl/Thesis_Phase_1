@@ -155,8 +155,8 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
 ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
 ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,guess=[-1.6,0.001,0.48,0.001],discard_tau=False,nsteps=10000)
-# flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1])
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,nsteps=5000)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1])
 
 
 def sol_write(q):
@@ -190,10 +190,7 @@ quantiles1 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol1=sol_write(quantiles1)
 
-print(sol1)
-plt.show()
 
-quit()
 # fig.savefig('Files_n_figures/cornerplot_exc_OVI.png')
 
 buffer = StringIO()
@@ -205,8 +202,7 @@ sys.stdout = sys.__stdout__
 sol2=sol_write(quantiles2)
 
 # # fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
-# plt.show()
-# quit()
+
 ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
 inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
 

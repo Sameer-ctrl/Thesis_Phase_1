@@ -10,6 +10,8 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+plt.style.use('Files_n_figures/my_style.mpl')
+
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 ions_roman=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
 observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
@@ -115,35 +117,37 @@ def model(chi_sq,name,c):
     col_den=array([interp_func_dict[ion](nH,Z) for ion in observations.keys()])
     xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-    plt.plot(xaxis,col_den,label=name,ls='--',lw=3,color=c)
+    plt.plot(xaxis,col_den,ls='--',lw=3,color=c)
+    plt.scatter(xaxis,col_den,color=c,s=100,label=name)
 
     return float(nH),float(Z),nH_err,Z_err
 
 
-def plot_samples(m,c,n=10,i1=1,i2=1):
+def plot_samples(m,c,n=50,i1=1,i2=1):
 
     nH_sample=random.normal(m[0],max(m[2])*i1,n)
     Z_sample=random.normal(m[1],max(m[3])*i2,n)
 
     sample = vstack((nH_sample, Z_sample)).T 
-    print(sample)
     xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
     for s in sample:
         nH,Z=s
         col_den=array([interp_func_dict[i](round(nH,3),round(Z,3)) for i in observations.keys()]) 
-        plt.plot(xaxis,col_den,alpha=0.2,color=c)
+        plt.plot(xaxis,col_den,alpha=0.05,color=c)
 
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-plt.figure()
-
-plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
-plot_samples(m1,'orange')
-plot_samples(m2,'green')
+plt.clf()
+
+plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
+plot_samples(m1,'orange',n=50)
+m1=model(chi_sq_exc,'Excluding OVI','orange')
+plot_samples(m2,'green',n=50)
+m2=model(chi_sq_inc,'Including OVI','green')
 plt.xticks(xaxis,ions_roman,fontsize=20)
 plt.yticks(fontsize=20)
 plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
