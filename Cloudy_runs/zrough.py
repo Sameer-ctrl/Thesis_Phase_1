@@ -1,12 +1,176 @@
 from astropy.io import fits,ascii
 from astropy.table import Table
 from numpy import *
+from roman import toRoman
 from scipy.interpolate import interp2d,interp1d
 import pickle
 import matplotlib.pyplot as plt
+import warnings
+
+warnings.filterwarnings("ignore")
+plt.style.use('../Python/my_style.mpl')
+
+
+hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
+data=Table(hdu[1].data)
+
+
+log_nH=data['log_nH']
+log_Z=data['log_Z']
+
+lognH_range=[-5,0]
+logZ_range=[-3,2]
+
+param=data['parameters']
+ions=['Si+2', 'Si+','C+2', 'C+','O+5']
+
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+
+
+interp_func_dict={}
+
+for i in observations.keys():
+
+    with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+        f=pickle.load(pickle_file)
+
+    interp_func_dict[i]=f
+    
+
+def log_posterior(theta,ions_to_use=['Si+2', 'Si+','C+2', 'C+']):
+
+    lognH,logZ=theta
+    
+    #prior
+
+    if lognH_range[0]<=lognH<=lognH_range[1] and logZ_range[0]<=logZ<=logZ_range[1]:
+         log_prior=0
+    
+    else:
+        log_prior=-inf
+
+    #likelihood
+    
+    model_col_den=[]
+    observed_col_den=[]
+    col_den_error=[]
+
+    for i in ions_to_use:
+
+        f=interp_func_dict[i]
+        col_den=f(lognH,logZ)
+        model_col_den.append(col_den)
+
+        observed_col_den.append(observations[i][0])
+        col_den_error.append(observations[i][1])
+    
+    model_col_den=array(model_col_den)    
+    observed_col_den=array(observed_col_den)
+    col_den_error=array(col_den_error)
+
+    log_likelihood=-0.5*sum(log(2*pi*(col_den_error**2))+(((observed_col_den-model_col_den)/(col_den_error))**2))
+
+    return log_prior+log_likelihood    # posterior
+
+
+nH=arange(-5,0,0.01)
+Z=arange(-3,2,0.01)
+
+x=zeros(len(nH)*len(Z))
+y=zeros(len(nH)*len(Z))
+log_post=zeros(len(nH)*len(Z))
+
+k=0
+for i,n in enumerate(nH):
+    for j,z in enumerate(Z):
+        n=round(n,2)
+        z=round(z,2)
+        x[k]=n
+        y[k]=z
+        log_post[k]=log_posterior([n,z])
+        k+=1
+
+
+i=argmax(log_post)
+
+print(f'nH = {x[i]}  Z = {y[i]}')
+
+fig=plt.figure()
+ax=plt.axes(projection ='3d')
+
+ax.scatter(x,y,log_post)
+ax.set_xlabel('nH')
+ax.set_ylabel('Z')
+ax.set_zlabel('log_post')
+
+plt.show()
 
 
 
+
+
+
+quit()
+
+ions=['Si+2', 'Si+','C+2', 'C+','O+5']
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+
+i='O+5'
+
+with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+    f=pickle.load(pickle_file)
+
+
+
+obs_col_den=array([observations[i][0]  for i in ions])
+col_den_error=array([observations[i][1]  for i in ions]) 
+
+
+nH=arange(-5,0,0.01)
+Z=arange(-3,2,0.01)
+
+
+x=array(list(nH)*len(Z))
+y=zeros(len(x))
+
+col_den=zeros((len(Z),len(nH)))
+
+for i,z in enumerate(Z):
+
+    col_den[i]=f(nH,z)
+    y[len(nH)*i:len(nH)*(i+1)]=z
+
+
+z=col_den.flatten()
+
+fig=plt.figure()
+ax=plt.axes(projection ='3d')
+
+ax.scatter(x,y,z)
+ax.set_xlabel('nH')
+ax.set_ylabel('Z')
+ax.set_zlabel('col_den')
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quit()
 
 'plotting saved functions'
 
@@ -167,6 +331,42 @@ plt.show()
 
 
 
+
+
+
+
+
+
+# hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
+# data=Table(hdu[1].data)
+
+# ind=[]
+
+# for i,row in enumerate(data):
+
+#     if row['H']==0 or row['H']<10**16 or row['log_nH']>0 or row['log_Z']>0:
+#        ind.append(i) 
+
+# data.remove_rows([ind])
+
+
+
+# H=data['H']
+
+# plt.hist(log10(H),bins='auto')
+
+
+
+# plt.scatter(nH,Z)
+# plt.show()
+
+
+
+
+
+
+
+
 'interp1 function'
 
 # hdu=fits.open(f'Data/component_III_nH_col_density_param.fits')
@@ -212,45 +412,5 @@ plt.show()
 
 
 
-quit()
 
-# data=loadtxt('text.txt',dtype=str)
-
-# a=data[:,1]
-
-# v=[float(x[:-2]) for x in a]
-
-# print(v)
-
-
-'observed and predicted'
-
-
-# plt.style.use('../Python/my_style.mpl')
-
-
-# ions=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}', f'O {toRoman(6)}']
-# x=linspace(1,len(ions),len(ions))
-
-
-# obs_col_density=array([12.53,12.69,13.49,13.65,13.84])
-# col_density_error=array([0.07,0.06,0.05,0.03,0.03])
-
-# predicted_all_ions=log10([4.43676e+11, 6.40882e+11, 1.18221e+14, 1.23953e+14, 4.68142e+13])
-# predicted_without_OVI=log10([3.29517e+12, 2.07164e+12,1.02575e+14, 3.75366e+13, 4.88502e+11])
-
-# fig=plt.figure(figsize=(11,11))
-
-# plt.errorbar(x,obs_col_density,c='red',yerr=col_density_error, fmt='o',capsize=3,label='Observed')
-# plt.plot(x,predicted_all_ions,label=r'All ions $(T={10}^{4.49}\ K)$',ls='--')
-# plt.plot(x,predicted_without_OVI,label=r'Excluding OVI $(T={10}^{4.38}\ K)$',ls='--')
-# plt.xticks(x,ions,fontsize=20)
-# plt.yticks(fontsize=20)
-# plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
-# plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
-# plt.legend(loc='upper left')
-# plt.savefig('Files_n_figures/Observed_and_predicted.png')
-# plt.show()
-
-# quit()
 
