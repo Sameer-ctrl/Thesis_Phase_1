@@ -5,11 +5,37 @@ from numpy import *
 from scipy.integrate import simpson
 
 
-print(((1.25892e16+1.46159e+19)/10**(-3.29))*(3.2408e-22))
-print((10**(-3.29))*(10**4.305))
-print(log10(1.25892e16+1.46159e+19)) 
-# 
-print(10**4.305)          
+file_path='Data/VPfit_fits_rebinned/Metals_HI'
+
+data=loadtxt(f'{file_path}/HI_1025.txt',comments='!')
+wave=data[:,0]
+cont=data[:,3]
+
+data1=loadtxt(f'{file_path}/HI_1025_1.txt',comments='!')
+wave1=data1[:,0]
+cont1=data1[:,3]
+
+data2=loadtxt(f'{file_path}/HI_1025_2.txt',comments='!')
+wave2=data2[:,0]
+cont2=data2[:,3]
+
+data3=loadtxt(f'{file_path}/HI_1025_3.txt',comments='!')
+wave3=data3[:,0]
+cont3=data3[:,3]
+
+
+plt.plot(wave,cont)
+plt.plot(wave1,cont1,ls='--')
+plt.plot(wave2,cont2,ls='--')
+plt.plot(wave3,cont3,ls='--')
+plt.plot(wave,(cont1+cont2+cont3)-2,ls='-.')
+
+plt.show()
+
+
+
+
+
 
 quit()
 
@@ -27,40 +53,7 @@ del_v=3e5*((1+z1)**2-(1+z2)**2)/((1+z1)**2+(1+z2)**2)
 print(del_v)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 quit()
-data=ascii.read('Data/PG0003+158_rebinned_cont_norm.asc')
-
-wave=data['WAVE']
-flux=data['FLUX']
-
-plt.step(wave,flux)
-plt.show()
-
-
-
-
-quit()
-data=loadtxt('chi_square.txt',dtype=str)
-
-line=data[1:,0]
-dof=data[1:,1].astype(float)
-chi_sq=data[1:,2].astype(float)
-red_chi_sq=[round(chi_sq[i]/dof[i],3) for i in range(len(dof))]
-
-print(line)
-print(red_chi_sq)
 
 # 'comparison of different continuum, binning'
 
@@ -298,11 +291,11 @@ print(red_chi_sq)
 
 'temperature using 0 VI and HI'
 
-bHI=62.49162
-bOVI=29.63435
+# bHI=62.49162
+# bOVI=29.63435
 
-T=(16/(15*(0.129**2)))*(bHI**2-(bOVI**2))
-print(log10(T))
+# T=(16/(15*(0.129**2)))*(bHI**2-(bOVI**2))
+# print(log10(T))
 
 
 'difference in paramaters due to continuum'

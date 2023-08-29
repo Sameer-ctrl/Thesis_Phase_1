@@ -12,38 +12,67 @@ cosmo=FlatLambdaCDM(H0=69.7,Om0=0.3,Tcmb0=2.725)
 z_abs=0.347
 
 
-dL=cosmo.luminosity_distance(z_abs)  # Mpc
+def L_by_Lstar(m_I):
 
-M_star_I=5*log10(cosmo.h)-22.46
-m_I=20
-M_I=m_I-(5*log10(dL.value*1e6))+5
-L_by_Lstar=10**((M_star_I-M_I)/2.5)
+    dL=cosmo.luminosity_distance(z_abs)  # Mpc
+    M_star_I=5*log10(cosmo.h)-22.46
+    M_I=m_I-(5*log10(dL.value*1e6))+5
+    L_by_Lstar_val=10**((M_star_I-M_I)/2.5)
 
-print(L_by_Lstar)
-quit()
+    print(L_by_Lstar_val)
+
+# L_by_Lstar(25)
 
 v_abs=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))
 z1=sqrt((1+((v_abs+1000)/3e5))/(1-((v_abs+1000)/3e5)))-1
 z2=sqrt((1+((v_abs-1000)/3e5))/(1-((v_abs-1000)/3e5)))-1
 
-# v=
-
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
-print(dA_scale*60)
+# print(dA_scale*60)
 
-data=loadtxt('Data/gal_data.txt',dtype=str)
+data=loadtxt('Data/VVDS/cesam_vvds_spF22_WIDE.txt',dtype=str)
 
 
-ra=data[1:,0].astype(float)
-dec=data[1:,1].astype(float)
-z=data[1:,2].astype(float)
+ra=data[:,2].astype(float)
+dec=data[:,3].astype(float)
+z=data[:,4].astype(float)
 v=3e5*(((1+z)**2-1)/((1+z)**2+1))-v_abs
+
 
 ra_qso,dec_qso=[1.4968167,16.163614]
 
+plt.scatter(ra,dec)
+plt.scatter(ra_qso,dec_qso,s=200,c='black',marker='X')
 
+plt.show()
+quit()
 abs_sys_coord=SkyCoord(ra_qso*u.degree,dec_qso*u.degree)
 gal_coords=SkyCoord(ra*u.degree,dec*u.degree)
+
+d2d = abs_sys_coord.separation(gal_coords)
+
+mask_sep = d2d < 1*u.deg
+
+# mask_z1 = z>=0.342
+# mask_z2 = z<=0.352
+
+# mask=[]
+
+# for i,val in enumerate(mask_sep):
+
+#     if val==True and mask_z1[i]==True and mask_z2[i]==True:
+#         mask.append(True)
+
+#     else:
+#         mask.append(False)
+
+print(len(z[mask_sep]),len(z))
+
+
+
+
+quit()
+
 
 # sep_sky=abs_sys_coord.separation(gal_coords).arcminute
 # sep_3d=abs_sys_coord.separation_3d(gal_coords)
