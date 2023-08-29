@@ -3,27 +3,27 @@ from numpy import *
 from astropy.io import ascii
 from time import sleep
 
-run_name = 'component_II_nH_Z'
-parameters=['log_nH','log_Z']
+run_name = 'component_III_nH_Z0'
+parameters=['log_nH']
 
 'UV background model : KS19'
 
-redshift = 0.34758
+redshift = 0.3479
 uvb_scale = 1
 uvb_Q = 18
 
 He_abun=0.08156498
 
 hden = [-5,-0,0.02]
-metal = [-3,2,0.05] 
+metal = [0] 
 # print((len(arange(*hden))+1)*(len(arange(*metal))+1))
 # quit()
 # print((len(arange(*hden))+1))
-temp = [5.29]
+temp = None
 # print((len(arange(*hden))+1)*(len(arange(*temp))+1))
 
 
-stop_nH=14.13
+stop_nH=16.10
 stop_T=20
 
 grid_file=f'{run_name}_grid.txt'
@@ -150,6 +150,6 @@ if a=='y':
 
 else:
 
-    # os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+    os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
     print('Cloudy run terminated...')
     
