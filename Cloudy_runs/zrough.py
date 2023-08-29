@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
 
-hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
+hdu=fits.open(f'Data/component_III_nH_Z0_col_density_param.fits')
 data=Table(hdu[1].data)
 
 

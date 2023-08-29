@@ -11,27 +11,25 @@ import sys
 
 plt.style.use('../Python/my_style.mpl')
 
-hdu=fits.open('Data/component_III_nH_col_density_param.fits')
+hdu=fits.open('Data/component_III_nH_Z0_col_density_param.fits')
 data=Table(hdu[1].data)
 
 
 log_nH=data['log_nH']
 
-logZ_ref=-1
+logZ_ref=0
 
-lognH_range=[-5,2]
+lognH_range=[-5,0.98]
 logZ_range=[-3,2]
 
 param=data['parameters']
-ions=['Si+', 'Si+2','C+', 'C+2','O+5']
+ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 
-#rebinned observation
-observations={'Si+':[13.19,0.41], 'Si+2':[12.87,0.08],'C+':[14.21,0.39], 'C+2':[13.81,0.04],'O+5':[13.91,0.04]}
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
 def interp_func():
 
     func_dict={}
-    # log_nH=data['log_nH']
 
     for ion in observations.keys():
 
@@ -92,40 +90,44 @@ def log_posterior(theta,ions_to_use):
 
     return log_prior+log_likelihood    # posterior
 
+def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=10000,n_param = 2):
 
+    if guess==None:
+
+        n_guess = random.uniform(lognH_range[0],lognH_range[1], nwalkers)
+        z_guess = random.uniform(logZ_range[0],logZ_range[1], nwalkers)
+    
+    else:
+
+        if len(guess)==4:
+            n_guess=random.normal(guess[0],guess[1],nwalkers)
+            z_guess=random.normal(guess[2],guess[3],nwalkers)
+
+        else:
+            n_guess=ones(nwalkers)*float(guess[0])
+            z_guess=ones(nwalkers)*float(guess[1])
+
+    starting_guesses = vstack((n_guess, z_guess)).T 
+
+    sampler=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use]))
+    sampler.run_mcmc(starting_guesses, nsteps, progress=True)
+
+    if discard_tau==True:
+        tau=sampler.get_autocorr_time()  
+        thin=int(mean(tau)/2) 
+        flat_samples=sampler.get_chain(discard=thin*20,flat=True)
+    
+    else:
+        flat_samples=sampler.get_chain(flat=True)
+
+    return flat_samples
 
 ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
 ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-n_param = 2 
-nwalkers = 50
-nsteps = 3000
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2)
 
-n_guess = random.uniform(lognH_range[0],lognH_range[1], nwalkers)
-z_guess = random.uniform(logZ_range[0],logZ_range[1], nwalkers)
-
-# n_guess=random.normal(-3.8,0.2,nwalkers)
-# z_guess=random.normal(-1.5,0.2,nwalkers)
-
-starting_guesses = vstack((n_guess, z_guess)).T 
-
-sampler1=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use1]))
-sampler1.run_mcmc(starting_guesses, nsteps, progress=True)
-tau=sampler1.get_autocorr_time()  
-thin=int(mean(tau)/2) 
-flat_samples1=sampler1.get_chain(discard=thin*40,flat=True)
-
-# n_guess=random.normal(-3.8,0.2,nwalkers)
-# z_guess=random.normal(-1.5,0.2,nwalkers)
-
-# starting_guesses = vstack((n_guess, z_guess)).T 
-
-
-sampler2=emcee.EnsembleSampler(nwalkers, n_param, log_posterior, args=([ions_to_use2]))
-sampler2.run_mcmc(starting_guesses, nsteps, progress=True)
-tau=sampler2.get_autocorr_time()  
-thin=int(mean(tau)/2) 
-flat_samples2=sampler2.get_chain(discard=thin*20, flat=True)
 
 def sol_write(q):
 
@@ -153,28 +155,25 @@ labels=['log nH', 'log Z']
 buffer = StringIO()
 sys.stdout = buffer
 
-corner.corner(flat_samples1, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True)
+corner.corner(flat_samples_exc_OVI, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
 quantiles1 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol1=sol_write(quantiles1)
-
 
 # fig.savefig('Files_n_figures/cornerplot_exc_OVI.png')
 
 buffer = StringIO()
 sys.stdout = buffer
 
-corner.corner(flat_samples2, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True)
+corner.corner(flat_samples_inc_OVI, labels=labels, quantiles=[0.16, 0.5, 0.84],show_titles=True, title_kwargs={"fontsize": 12},verbose=True,plot_contours=False)
 quantiles2 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol2=sol_write(quantiles2)
 
-# # fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
+# fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
 
-
-
-ions_all=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
-inds = random.randint(int(max(len(flat_samples1),len(flat_samples2))/1.33),min(len(flat_samples1),len(flat_samples2)), size=100)
+ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
+inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
 
 
 plt.figure()
@@ -183,17 +182,16 @@ x=linspace(1,len(ions_all),len(ions_all))
 
 for i in inds:
 
-    sample1=flat_samples1[i]
+    sample1=flat_samples_exc_OVI[i]
     int_col_den1=[]
     int_col_den2=[]
-    sample2=flat_samples2[i]
+    sample2=flat_samples_inc_OVI[i]
 
     for j in observations.keys():
         f=interp_func_dict[j]
         int_col_den1.append(f(sample1[0])+sample1[1]-logZ_ref)
         int_col_den2.append(f(sample2[0])+sample2[1]-logZ_ref)
 
-    # plt.plot(x,int_col_den1,c='orange',alpha=0.1)
     if i!=inds[-1]:
         plt.plot(x,int_col_den1,c='orange',alpha=0.1)
         plt.plot(x,int_col_den2,c='green',alpha=0.1)
@@ -226,79 +224,3 @@ plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 # plt.savefig('Files_n_figures/Observed_and_predicted.png')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def obs_col_density(lognH,logZ,err=1):
-
-#     for i in range(len(data)):
-#         if log_nH[i]==lognH:
-#             break
-#         else:
-#             pass
-
-#     row=data[i]
-#     obs_col_den=[]
-#     obs_col_den_err=[]
-
-#     for j in row:
-
-#         j=log10(j)+logZ-logZ_ref
-#         sig=random.normal(0,err*0.01*j,1)
-#         obs_col_den.append(j+sig)
-#         obs_col_den_err.append(abs(sig))
-    
-#     return array(obs_col_den[:-2]),array(obs_col_den_err[:-2])
-
-
-
-
-
-# def col_density(ion,*param_given):
-
-#     "*param_given order: lognH, logZ, logT"
-
-#     param_given=array(param_given)
-
-#     for i in range(len(param)):
-
-#         if array_equiv(param_given,param[i]):
-#             break
-#         else:
-#             pass
-
-#     return data[ion][i]
-

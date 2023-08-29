@@ -1,5 +1,5 @@
 from astropy.table import Table,vstack
-from numpy import loadtxt,sum, arange
+from numpy import *
 from astropy.io import ascii,fits
 
 
@@ -7,16 +7,16 @@ def write_param():
 
     # for i in range(0):
 
-        run_name = f'component_III_nH_Z'
-        parameters=['log_nH','log_Z']
+        run_name = f'component_III_nH_Z0'
+        parameters=['log_nH']
         print(run_name)
 
-        # with open(f'{run_name}/{run_name}_col_density.txt') as f:
-        #         data=f.read()
-        #         data=data.replace('#column density ','')
+        with open(f'{run_name}/{run_name}_col_density.txt') as f:
+                data=f.read()
+                data=data.replace('#column density ','')
 
-        # with open(f'{run_name}/{run_name}_col_density.txt','w') as f:
-        #     f.write(data)
+        with open(f'{run_name}/{run_name}_col_density.txt','w') as f:
+            f.write(data)
 
 
         grid=loadtxt(f'{run_name}/{run_name}_grid.txt',dtype=str)
@@ -32,6 +32,23 @@ def write_param():
             col_density.add_column(param_data[i],name=parameters[i])
             
         param_data=tuple(zip(*param_data))
+
+        temp_file=f'{run_name}_temp.txt'
+        
+        data_temp=genfromtxt(f'{run_name}/{temp_file}',delimiter=[11,11,9,10,10])
+
+        Te=data_temp[:,1]
+        d2t_dr2=data_temp[:,4]
+
+        log_Te=zeros(len(col_density))
+        k=0
+
+        for i,j in enumerate(d2t_dr2):
+            if j==0:
+                log_Te[k]=round(log10(Te[i]),3)
+                k+=1
+
+        col_density.add_column(log_Te,name='log_Te')
 
         col_density.add_column(param_data,name='parameters')
         print(col_density.colnames,'\n')
