@@ -3,23 +3,23 @@ from numpy import *
 from astropy.io import ascii
 from time import sleep
 
-run_name = 'component_trial'
+run_name = 'component_II_nH_Z'
 parameters=['log_nH','log_Z']
 
 'UV background model : KS19'
 
-redshift = 0.3479
+redshift = 0.34758
 uvb_scale = 1
 uvb_Q = 18
 
 He_abun=0.08156498
 
-hden = [-4,-3,1]
-metal = [-3,-2,1] 
+hden = [-5,-0,0.02]
+metal = [-3,2,0.05] 
 # print((len(arange(*hden))+1)*(len(arange(*metal))+1))
 # quit()
 # print((len(arange(*hden))+1))
-temp = None
+temp = [5.29]
 # print((len(arange(*hden))+1)*(len(arange(*temp))+1))
 
 
@@ -27,7 +27,7 @@ stop_nH=14.13
 stop_T=20
 
 grid_file=f'{run_name}_grid.txt'
-hyd_cond=f'{run_name}_hydrogen.txt'
+# hyd_cond=f'{run_name}_hydrogen.txt'
 col_density=f'{run_name}_col_density.txt'
 temp_file=f'{run_name}_temp.txt'
 
@@ -37,7 +37,7 @@ uv_b=f'TABLE KS19 redshift = {redshift} scale = {uvb_scale} Q = {uvb_Q} \n'
 abundance=f'abundances "solar_GASS10.abn" \nelement helium abundance {He_abun} linear \n'
 stop_criteria_nH=f'stop column density {stop_nH} neutral H \nstop temperature {stop_T} K linear \n'
 save_grid=f'save grid "{grid_file}" last no hash \n'
-save_hyd=f'save hydrogen conditions "{hyd_cond}" last no clobber \n'
+# save_hyd=f'save hydrogen conditions "{hyd_cond}" last no clobber \n'
 save_col_den=f'save species column density "{col_density}" no hash \n'
 save_temp=f'save temperature "{temp_file}" no hash \n'
 
@@ -67,7 +67,7 @@ if temp!=None:
 else:
     temp=''
 
-lines=[uv_b,abundance,hden,metal,temp,stop_criteria_nH,save_grid,save_hyd,save_temp,save_col_den]
+lines=[uv_b,abundance,hden,metal,temp,stop_criteria_nH,save_grid,save_temp,save_col_den]
 
 os.mkdir(run_name)
 file=open(f'{run_name}/{run_name}.in','w+')
@@ -150,6 +150,6 @@ if a=='y':
 
 else:
 
-    os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+    # os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
     print('Cloudy run terminated...')
     

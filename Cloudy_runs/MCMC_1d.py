@@ -88,7 +88,7 @@ def log_posterior(theta,ions_to_use):
     observed_col_den=array(observed_col_den)
     col_den_error=array(col_den_error)
 
-    log_likelihood=-0.5*sum(log(2*pi*(col_den_error**2))+(((observed_col_den-model_col_den)/(sqrt(2)*col_den_error))**2))
+    log_likelihood=-0.5*sum(log(2*pi*(col_den_error**2))+(((observed_col_den-model_col_den)/(col_den_error))**2))
 
     return log_prior+log_likelihood    # posterior
 

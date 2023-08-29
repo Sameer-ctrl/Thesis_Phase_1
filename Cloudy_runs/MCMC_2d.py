@@ -10,54 +10,14 @@ from io import StringIO
 import sys
 import pickle
 
-plt.style.use('../Python/my_style.mpl')
-
-hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
-data=Table(hdu[1].data)
-
-# ind=[]
-
-# for i,row in enumerate(data):
-
-#     if row['H']==0 or row['H']<10**16 or row['log_nH']>0 or row['log_Z']>0:
-#        ind.append(i) 
-
-# data.remove_rows([ind])
-
-
-log_nH=data['log_nH']
-log_Z=data['log_Z']
+# plt.style.use('../Python/my_style.mpl')
 
 lognH_range=[-5,0]
 logZ_range=[-3,2]
 
-param=data['parameters']
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 
 observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
-
-
-# def interp_func():
-
-#     func_dict={}
-#     # log_nH=data['log_nH']
-
-#     for i in observations.keys():
-
-#         x=[]
-
-#         for j in data[i].value:
-#             if j==0:
-#                 x.append(10**(-30))
-            
-#             else:ions=['Si+2', 'Si+','C+2', 'C+','O+5']
-#                 x.append(j)
-
-#         log_col_den=log10(x)
-#         f=interp2d(log_nH,log_Z,log_col_den,kind='cubic')
-#         func_dict[i]=f
-
-#     return func_dict
 
 interp_func_dict={}
 
@@ -67,20 +27,6 @@ for i in observations.keys():
         f=pickle.load(pickle_file)
 
     interp_func_dict[i]=f
-
-
-
-
-# for i in arange(-5,0,0.5):
-
-#     plt.scatter(arange(-3,0,0.01),interp_func_dict[ions[0]](i,arange(-3,0,0.01)),label=i)
-
-
-
-# plt.legend()
-# plt.show()
-# quit()
-
 
 
 
@@ -115,12 +61,12 @@ def log_posterior(theta,ions_to_use):
     observed_col_den=array(observed_col_den)
     col_den_error=array(col_den_error)
 
-    log_likelihood=-0.5*sum(log(2*pi*(col_den_error**2))+(((observed_col_den-model_col_den)/(sqrt(2)*col_den_error))**2))
+    log_likelihood=-0.5*sum(log(2*pi*(col_den_error**2))+(((observed_col_den-model_col_den)/(col_den_error))**2))
 
     return log_prior+log_likelihood    # posterior
 
 
-def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=5000,n_param = 2):
+def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=10000,n_param = 2):
 
     if guess==None:
 
@@ -155,7 +101,7 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
 ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
 ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,nsteps=5000)
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1)
 flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1])
 
 
@@ -190,7 +136,6 @@ quantiles1 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol1=sol_write(quantiles1)
 
-
 # fig.savefig('Files_n_figures/cornerplot_exc_OVI.png')
 
 buffer = StringIO()
@@ -201,7 +146,7 @@ quantiles2 = buffer.getvalue()
 sys.stdout = sys.__stdout__
 sol2=sol_write(quantiles2)
 
-# # fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
+# fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
 
 ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
 inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
@@ -235,9 +180,6 @@ for i in inds:
 
 median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0],sol1[3]) for i in observations.keys()])
 median_col_den_inc_OVI=array([interp_func_dict[i](sol2[0],sol2[3]) for i in observations.keys()])
-
-# median_col_den_exc_OVI=array([interp_func_dict[i](-1.6,0.48) for i in observations.keys()])
-# median_col_den_inc_OVI=array([interp_func_dict[i](-3.78,-1.40) for i in observations.keys()])
 
 obs_col_den=array([observations[i][0]  for i in ions])
 col_den_error=array([observations[i][1]  for i in ions])
