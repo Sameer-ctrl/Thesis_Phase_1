@@ -31,16 +31,28 @@ def N_O(x):
 
 log_Z=-0.31
 
+ax=plt.axes()
+axin=ax.inset_axes([0.3,0.6,0.2,0.2])
 
-for x in arange(4.25,4.35,0.01):
+for x in arange(4.28,4.32,0.01):
     x=round(x,2)
-    plt.scatter(t,log10(f_OVI)+N_O(x)+log_Z-log10(Z_Zsol),label=f'{x}')
+    ax.scatter(t,log10(f_OVI)+N_O(x)+log_Z-log10(Z_Zsol),label=f'{x}')
+    axin.scatter(t,log10(f_OVI)+N_O(x)+log_Z-log10(Z_Zsol),label=f'{x}')
 
+axin.vlines(5.29,ymin=1,ymax=N_OVI,ls='--',color='black')
+axin.hlines(N_OVI,xmin=4,xmax=5.29,ls='--',color='black')
 
 plt.vlines(5.29,ymin=1,ymax=N_OVI,ls='--',color='black')
 plt.hlines(N_OVI,xmin=4,xmax=5.29,ls='--',color='black')
 plt.legend()
 plt.xlim(left=4.7)
+plt.xlabel(r'$\mathbf{log \ [T \ (k)]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
+axin.set_xlim(5.2898,5.2902)
+axin.set_ylim(14.23,14.30)
+axin.set_xticks([])
+axin.set_yticks([])
+ax.indicate_inset_zoom(axin)
 plt.show()
 
 
