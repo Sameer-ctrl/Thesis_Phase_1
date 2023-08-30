@@ -1,4 +1,5 @@
 from astropy.io import fits,ascii
+from matplotlib import table
 from numpy import *
 import matplotlib.pyplot as plt
 from astropy.table import Table
@@ -7,8 +8,37 @@ from scipy.interpolate import interp2d,interp1d
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-data=ascii.read('Data/gnat_sternberg_O_CIE.txt')
 
+hdu=fits.open('Data/component_II_nH_Z_col_density_param.fits')
+data=Table(hdu[1].data)
+
+log_nH=data['log_nH']
+log_Z=data['log_Z']
+
+col_den_OVI=data['O+5']
+
+Z=-0.30
+N_OVI=14.26
+
+mask=log_Z==Z
+
+data=data[mask]
+
+log_nH=data['log_nH']
+col_den_OVI=data['O+5']
+
+plt.plot(log_nH,log10(col_den_OVI))
+plt.hlines(N_OVI,xmin=-5,xmax=-2.4145,ls='--',color='black')
+plt.vlines(-2.4145,ymin=14,ymax=N_OVI,ls='--',color='black')
+plt.ylim(bottom=14.1)
+plt.show()
+
+
+'-----------------------'
+quit()
+
+
+data=ascii.read('Data/gnat_sternberg_O_CIE.txt')
 
 t=data['log_T']
 f_OVI=data['ionf_6']
@@ -55,7 +85,7 @@ axin.set_yticks([])
 ax.indicate_inset_zoom(axin)
 plt.show()
 
-
+'-----------------------'
 
 
 # hdu=fits.open('Data/component_II_nH_col_density_param.fits')
@@ -172,37 +202,6 @@ plt.show()
 
 
 
-quit()
-
-def interp_func():
-
-    x=[]
-
-    for j in data['O+6'].value:
-        if j==0:
-            x.append(10**(-30))
-        
-        else:
-            x.append(j)
-
-    log_col_den=log10(x)
-    f=interp2d(log_nH,log_T,log_col_den,kind='cubic')
-
-    return f
 
 
-interp_func_OVI=interp_func()
 
-col_den_med=interp_func_OVI(log_nH,log10(T))
-col_den_low=interp_func_OVI(log_nH,log10(T_low))
-col_den_high=interp_func_OVI(log_nH,log10(T_high))
-
-
-plt.figure()
-
-plt.plot(log_nH,col_den_med,label='med',color='red')
-plt.plot(log_nH,col_den_low,label='low',color='green',ls='--')
-plt.plot(log_nH,col_den_high,label='high',color='blue',ls='--')
-
-plt.legend()
-plt.show()
