@@ -11,6 +11,22 @@ warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
 
+'------------------------------------'
+'Checking interpolation function'
+
+
+
+
+
+
+
+
+
+
+
+'------------------------------------'
+'Likelihood'
+
 hdu=fits.open(f'Data/component_III_nH_Z0_col_density_param.fits')
 data=Table(hdu[1].data)
 
@@ -105,10 +121,7 @@ ax.set_zlabel('log_post')
 
 plt.show()
 
-
-
-
-
+'------------------------------------'
 
 quit()
 
