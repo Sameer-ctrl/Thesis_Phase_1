@@ -15,6 +15,47 @@ plt.style.use('../Python/my_style.mpl')
 'Checking interpolation function'
 
 
+hdu=fits.open('Data/component_II_T_col_density_param.fits')
+data=Table(hdu[1].data)
+
+T=data['log_T']
+col_den_OVI=log10(data['O+5'])
+
+f=interp1d(T,col_den_OVI,kind='cubic')
+
+N_OVI=14.26
+
+T_plot=linspace(4,7,1000)
+interp_col_den=f(T_plot)
+log_Zref=0
+
+Z=arange(-1.13,-1.08,0.01)
+
+ax=plt.axes()
+axin=ax.inset_axes([0.47,0.41,0.07,0.2])
+
+for z in Z:
+    ax.plot(T_plot,interp_col_den+round(z,2),label=f'log Z = {round(z,2)}',ls='--')
+    axin.plot(T_plot,interp_col_den+round(z,2),label=f'{round(z,2)}',ls='--')
+    
+
+plt.plot(T_plot,interp_col_den,label='Solar metallicity')
+
+axin.vlines(5.29,ymin=1,ymax=N_OVI,lw=3,color='black')
+axin.hlines(N_OVI,xmin=3,xmax=5.29,lw=3,color='black')
+plt.vlines(5.29,ymin=1,ymax=N_OVI,lw=3,color='black')
+plt.hlines(N_OVI,xmin=3,xmax=5.29,lw=3,color='black')
+axin.set_xlim(5.2898,5.2902)
+axin.set_ylim(14.23,14.28)
+axin.set_xticks([])
+axin.set_yticks([])
+ax.indicate_inset_zoom(axin)
+plt.ylim(bottom=10)
+plt.legend()
+plt.xlim(left=3.8)
+plt.xlabel(r'$\mathbf{log \ [T \ (k)]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
+plt.show()
 
 
 

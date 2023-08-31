@@ -9,33 +9,82 @@ from scipy.interpolate import interp2d,interp1d
 plt.style.use('Files_n_figures/my_style.mpl')
 
 
-hdu=fits.open('Data/component_II_nH_Z_col_density_param.fits')
+hdu=fits.open('Data/component_II_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
-log_nH=data['log_nH']
-log_Z=data['log_Z']
+T=data['log_T']
+col_den_OVI=log10(data['O+5'])
 
-col_den_OVI=data['O+5']
+f=interp1d(T,col_den_OVI,kind='cubic')
 
-Z=-0.30
 N_OVI=14.26
 
-mask=log_Z==Z
+T_plot=linspace(4,7,1000)
+interp_col_den=f(T_plot)
+log_Zref=0
 
-data=data[mask]
+Z=arange(-1.13,-1.08,0.01)
 
-log_nH=data['log_nH']
-col_den_OVI=data['O+5']
+ax=plt.axes()
+axin=ax.inset_axes([0.47,0.41,0.07,0.2])
 
-plt.plot(log_nH,log10(col_den_OVI))
-plt.hlines(N_OVI,xmin=-5,xmax=-2.4145,ls='--',color='black')
-plt.vlines(-2.4145,ymin=14,ymax=N_OVI,ls='--',color='black')
-plt.ylim(bottom=14.1)
+for z in Z:
+    ax.plot(T_plot,interp_col_den+round(z,2),label=f'log Z = {round(z,2)}',ls='--')
+    axin.plot(T_plot,interp_col_den+round(z,2),label=f'{round(z,2)}',ls='--')
+    
+
+plt.plot(T_plot,interp_col_den,label='Solar metallicity')
+
+axin.vlines(5.29,ymin=1,ymax=N_OVI,lw=3,color='black')
+axin.hlines(N_OVI,xmin=3,xmax=5.29,lw=3,color='black')
+plt.vlines(5.29,ymin=1,ymax=N_OVI,lw=3,color='black')
+plt.hlines(N_OVI,xmin=3,xmax=5.29,lw=3,color='black')
+axin.set_xlim(5.2898,5.2902)
+axin.set_ylim(14.23,14.28)
+axin.set_xticks([])
+axin.set_yticks([])
+ax.indicate_inset_zoom(axin)
+plt.ylim(bottom=10)
+plt.legend()
+plt.xlim(left=3.8)
+plt.xlabel(r'$\mathbf{log \ [T \ (k)]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
 plt.show()
+
+
+
 
 
 '-----------------------'
 quit()
+
+# hdu=fits.open('Data/component_II_nH_Z_col_density_param.fits')
+# data=Table(hdu[1].data)
+
+# log_nH=data['log_nH']
+# log_Z=data['log_Z']
+
+# col_den_OVI=data['O+5']
+
+# Z=-0.30
+# N_OVI=14.26
+
+# mask=log_Z==Z
+
+# data=data[mask]
+
+# log_nH=data['log_nH']
+# col_den_OVI=data['O+5']
+
+# plt.plot(log_nH,log10(col_den_OVI))
+# plt.hlines(N_OVI,xmin=-5,xmax=-2.4145,ls='--',color='black')
+# plt.vlines(-2.4145,ymin=14,ymax=N_OVI,ls='--',color='black')
+# plt.ylim(bottom=14.1)
+# plt.show()
+
+
+'-----------------------'
+# quit()
 
 
 data=ascii.read('Data/gnat_sternberg_O_CIE.txt')
