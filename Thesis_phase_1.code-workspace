@@ -1,13 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "Cloudy_runs"
-		},
-		{
-			"path": "Cloudy"
-		},
-		{
 			"path": "Python"
+		},
+		{
+			"path": "Cloudy_runs"
 		}
 	],
 	"settings": {}
