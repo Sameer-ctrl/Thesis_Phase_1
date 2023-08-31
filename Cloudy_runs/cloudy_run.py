@@ -3,27 +3,27 @@ from numpy import *
 from astropy.io import ascii
 from time import sleep
 
-run_name = 'component_III_nH_Z0'
-parameters=['log_nH']
+run_name = 'component_II_logT'
+parameters=['log_T']
 
 'UV background model : KS19'
 
-redshift = 0.3479
+redshift = 0.34758
 uvb_scale = 1
 uvb_Q = 18
 
 He_abun=0.08156498
 
-hden = [-5,-0,0.02]
+hden = [-4]
 metal = [0] 
 # print((len(arange(*hden))+1)*(len(arange(*metal))+1))
 # quit()
 # print((len(arange(*hden))+1))
-temp = None
+temp = [4,7,0.02]
 # print((len(arange(*hden))+1)*(len(arange(*temp))+1))
 
 
-stop_nH=16.10
+stop_nH=14.13
 stop_T=20
 
 grid_file=f'{run_name}_grid.txt'
@@ -67,7 +67,7 @@ if temp!=None:
 else:
     temp=''
 
-lines=[uv_b,abundance,hden,metal,temp,stop_criteria_nH,save_grid,save_temp,save_col_den]
+lines=[uv_b,abundance,hden,metal,temp,stop_criteria_nH,save_grid,save_col_den]
 
 os.mkdir(run_name)
 file=open(f'{run_name}/{run_name}.in','w+')
@@ -90,7 +90,7 @@ if a=='y':
 
     os.chdir(run_name)
 
-    cloudy_path='/home/sameer/Documents/Sameer/c22.02/source/cloudy.exe'
+    cloudy_path='/home/sameer/Sameer/c22.02/source/cloudy.exe'
     cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
     print(f'\n Cloudy running in {run_name} ... \n')
@@ -125,20 +125,20 @@ if a=='y':
         
     param_data=tuple(zip(*param_data))
 
-    data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
+    # data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
 
-    Te=data_temp[:,1]
-    d2t_dr2=data_temp[:,4]
+    # Te=data_temp[:,1]
+    # d2t_dr2=data_temp[:,4]
 
-    log_Te=zeros(len(col_density))
-    k=0
+    # log_Te=zeros(len(col_density))
+    # k=0
 
-    for i,j in enumerate(d2t_dr2):
-        if j==0:
-            log_Te[k]=round(log10(Te[i]),3)
-            k+=1
+    # for i,j in enumerate(d2t_dr2):
+    #     if j==0:
+    #         log_Te[k]=round(log10(Te[i]),3)
+    #         k+=1
 
-    col_density.add_column(log_Te,name='log_Te')
+    # col_density.add_column(log_Te,name='log_Te')
     col_density.add_column(param_data,name='parameters')
 
 
@@ -150,6 +150,6 @@ if a=='y':
 
 else:
 
-    os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+    # os.remove(f'/home/sameer/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
     print('Cloudy run terminated...')
     
