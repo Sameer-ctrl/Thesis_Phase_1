@@ -1,3 +1,4 @@
+from cProfile import label
 from astropy.io import fits,ascii
 from matplotlib import table
 from numpy import *
@@ -8,28 +9,35 @@ from scipy.interpolate import interp2d,interp1d
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-# hdu=fits.open('Data/component_II_T1_col_density_param.fits')
-# data=Table(hdu[1].data)
-
-# log_T=data['log_T']
-
-# col_den_OVI=log10(data['O+5'])
-
-
-# plt.scatter(log_T,col_den_OVI)
-# plt.show()
-
-
-
-'-----------------------'
-# quit()
-
-hdu=fits.open('Data/component_II_T1_col_density_param.fits')
+hdu=fits.open('Data/component_II_nH_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
 T=data['log_T']
+nH=data['log_nH']
+
 col_den_OVI=log10(data['O+5'])
 
+def col_den_nH(n):
+
+    mask=nH==n
+    T_mask=T[mask]
+    col_den_OVI_mask=col_den_OVI[mask]
+
+    return T_mask, col_den_OVI_mask
+
+T_mask1,col_den_nH_1=col_den_nH(-5)
+T_mask2,col_den_nH_2=col_den_nH(-4)
+T_mask3,col_den_nH_3=col_den_nH(-3)
+
+for n in arange(-5,-2,1):
+    n=round(n,1)
+    a=col_den_nH(n)
+    plt.scatter(a[0],a[1],label=f'{n}')
+
+plt.legend()
+plt.show()
+
+quit()
 f=interp1d(T,col_den_OVI,kind='cubic')
 
 N_OVI=14.26
