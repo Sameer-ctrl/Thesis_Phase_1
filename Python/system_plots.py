@@ -111,13 +111,13 @@ class abs_line():
         # plt.tick_params(axis="y", labelsize=15)
     
 
-fig=plt.figure(figsize=(12,12),dpi=300)
+fig=plt.figure(figsize=(24,12),dpi=300)
 # ax = fig.add_subplot(111,frameon=False)
 # ax.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
 
 
 
-ax1=plt.subplot(int(ceil(n/2)),2,1)
+ax1=plt.subplot(int(ceil(n/3)),3,1)
 # k=0
 
 for i in range(n):   
@@ -135,7 +135,7 @@ for i in range(n):
         if i==n-2:
            plt.tick_params('x', labelbottom=True,labelsize=15) 
         
-        ax=plt.subplot(int(ceil(n/2)),2,i+2,sharex=ax1, sharey=ax1)
+        ax=plt.subplot(int(ceil(n/3)),3,i+2,sharex=ax1, sharey=ax1)
         
     else:
         plt.tick_params('x', labelbottom=True,labelsize=15)
@@ -144,11 +144,11 @@ for i in range(n):
         
 
 fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=0)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.05, y=0.55) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.07, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(0,4.3), loc='upper center',ncols=3)
+plt.legend(bbox_to_anchor=(0.4,3.25), loc='upper center',ncols=3)
 # plt.legend(bbox_to_anchor=(1,6.5), loc='upper center',ncols=3)  #(1,6.5) for lyman 
-plt.savefig('Files_n_figures/sys_plot_rebinned.png')
+plt.savefig('Files_n_figures/sys_plot_rebinned_3.png')
 # plt.show()  
 
 

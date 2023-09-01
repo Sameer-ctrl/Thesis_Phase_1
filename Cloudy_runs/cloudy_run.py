@@ -14,7 +14,7 @@ uvb_Q = 18
 
 He_abun=0.08156498
 
-hden = [-4]
+hden = [-3]
 metal = [0] 
 # print((len(arange(*hden))+1)*(len(arange(*metal))+1))
 # quit()

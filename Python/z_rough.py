@@ -7,19 +7,19 @@ from scipy.integrate import simpson
 
 file_path='Data/VPfit_fits_rebinned/Metals_HI'
 
-data=loadtxt(f'{file_path}/HI_1025.txt',comments='!')
+data=loadtxt(f'{file_path}/HI_1215.txt',comments='!')
 wave=data[:,0]
 cont=data[:,3]
 
-data1=loadtxt(f'{file_path}/HI_1025_1.txt',comments='!')
+data1=loadtxt(f'{file_path}/HI_1215_1.txt',comments='!')
 wave1=data1[:,0]
 cont1=data1[:,3]
 
-data2=loadtxt(f'{file_path}/HI_1025_2.txt',comments='!')
+data2=loadtxt(f'{file_path}/HI_1215_2.txt',comments='!')
 wave2=data2[:,0]
 cont2=data2[:,3]
 
-data3=loadtxt(f'{file_path}/HI_1025_3.txt',comments='!')
+data3=loadtxt(f'{file_path}/HI_1215_3.txt',comments='!')
 wave3=data3[:,0]
 cont3=data3[:,3]
 
@@ -28,7 +28,7 @@ plt.plot(wave,cont)
 plt.plot(wave1,cont1,ls='--')
 plt.plot(wave2,cont2,ls='--')
 plt.plot(wave3,cont3,ls='--')
-plt.plot(wave,(cont1+cont2+cont3)-2,ls='-.')
+plt.plot(wave,(cont1*cont2*cont3),ls='-.')
 
 plt.show()
 
