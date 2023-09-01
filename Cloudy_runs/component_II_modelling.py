@@ -8,23 +8,23 @@ from scipy.interpolate import interp2d,interp1d
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-hdu=fits.open('Data/component_II_logT_col_density_param.fits')
-data=Table(hdu[1].data)
+# hdu=fits.open('Data/component_II_T1_col_density_param.fits')
+# data=Table(hdu[1].data)
 
-log_T=data['log_T']
+# log_T=data['log_T']
 
-col_den_OVI=log10(data['O+5'])
+# col_den_OVI=log10(data['O+5'])
 
 
-plt.scatter(log_T,col_den_OVI)
-plt.show()
+# plt.scatter(log_T,col_den_OVI)
+# plt.show()
 
 
 
 '-----------------------'
-quit()
+# quit()
 
-hdu=fits.open('Data/component_II_T_col_density_param.fits')
+hdu=fits.open('Data/component_II_T1_col_density_param.fits')
 data=Table(hdu[1].data)
 
 T=data['log_T']
