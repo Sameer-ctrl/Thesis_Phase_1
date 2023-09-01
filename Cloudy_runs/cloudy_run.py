@@ -14,7 +14,7 @@ uvb_Q = 18
 
 He_abun=0.08156498
 
-hden = [-3]
+hden = [-4]
 metal = [0] 
 # print((len(arange(*hden))+1)*(len(arange(*metal))+1))
 # quit()
@@ -90,7 +90,7 @@ if a=='y':
 
     os.chdir(run_name)
 
-    cloudy_path='/home/sameer/Documents/Sameer/c22.02/source/cloudy.exe'
+    cloudy_path='/home/sameer/Sameer/c22.02/source/cloudy.exe'
     cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
     print(f'\n Cloudy running in {run_name} ... \n')
@@ -150,6 +150,6 @@ if a=='y':
 
 else:
 
-    os.remove(f'/home/sameer/Documents/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+    # os.remove(f'/home/sameer/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
     print('Cloudy run terminated...')
     

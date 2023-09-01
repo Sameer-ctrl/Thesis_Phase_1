@@ -7,8 +7,8 @@ def write_param():
 
     # for i in range(0):
 
-        run_name = f'component_II_nH_Z'
-        parameters=['log_nH','log_Z']
+        run_name = f'component_II_T1'
+        parameters=['log_T']
         print(run_name)
 
         with open(f'{run_name}/{run_name}_col_density.txt') as f:
