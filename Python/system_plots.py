@@ -45,7 +45,7 @@ wave_obs={rest_wave['HI_1215']:[1638.23436,1637.23542,1638.61559],rest_wave['HI_
 
 # plt.hist(z,bins='auto')
 # plt.show()
-lines=['HI_1215','OVI_1031','HI_1025','OVI_1037','CII_1036','SiII_1260','CIII_977','SiIII_1206']
+lines=['HI_1215','OVI_1031','CII_1036','HI_1025','OVI_1037','CIII_977','HI_972','SiII_1260','SiIII_1206']
 # lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918']
 n=len(lines)
 
@@ -129,24 +129,24 @@ for i in range(n):
 
     if i!=n-1:
 
-        if i%2!=0:
+        if i%3!=0:
             plt.tick_params('y', labelleft=False)
         
-        if i==n-2:
+        if i==n-2 or i==n-3:
            plt.tick_params('x', labelbottom=True,labelsize=15) 
         
         ax=plt.subplot(int(ceil(n/3)),3,i+2,sharex=ax1, sharey=ax1)
         
     else:
         plt.tick_params('x', labelbottom=True,labelsize=15)
-        if n%2==0:
+        if n%3==0:
             plt.tick_params('y', labelleft=False)
         
 
 fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=0)  #y=0.18  (y=0 for lyman)
 fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.07, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(0.4,3.25), loc='upper center',ncols=3)
+plt.legend(bbox_to_anchor=(-0.5,3.25), loc='upper center',ncols=3)
 # plt.legend(bbox_to_anchor=(1,6.5), loc='upper center',ncols=3)  #(1,6.5) for lyman 
 plt.savefig('Files_n_figures/sys_plot_rebinned_3.png')
 # plt.show()  

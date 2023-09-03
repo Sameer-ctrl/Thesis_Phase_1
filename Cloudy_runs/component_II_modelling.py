@@ -15,6 +15,10 @@ data=Table(hdu[1].data)
 T=data['log_T']
 nH=data['log_nH']
 
+N_OVI=14.26
+T_OVI=5.29
+log_Zref=0
+
 col_den_OVI=log10(data['O+5'])
 
 def col_den_nH(n):
@@ -25,17 +29,34 @@ def col_den_nH(n):
 
     return T_mask, col_den_OVI_mask
 
-T_mask1,col_den_nH_1=col_den_nH(-5)
-T_mask2,col_den_nH_2=col_den_nH(-4)
-T_mask3,col_den_nH_3=col_den_nH(-3)
+Z=[]
+nH_plot=[]
 
-for n in arange(-5,-2,1):
-    n=round(n,1)
-    a=col_den_nH(n)
-    plt.scatter(a[0],a[1],label=f'{n}')
+for n in range(-5,4):
 
-plt.legend()
+    T_n,col_den_n=col_den_nH(n)
+
+    T_mask=[]
+    col_den_mask=[]
+
+    for i,t in enumerate(T_n):
+
+        if 5.2<t<5.7:
+            T_mask.append(t)
+            col_den_mask.append(col_den_n[i])
+
+    f=interp1d(T_mask,col_den_mask,kind='cubic')
+
+    z=N_OVI-f(T_OVI)+log_Zref
+
+    Z.append(z)
+    nH_plot.append(n)
+
+    # print(f'nH = {n} : {round(Z,3)}')
+
+plt.scatter(nH_plot,Z)
 plt.show()
+
 
 quit()
 f=interp1d(T,col_den_OVI,kind='cubic')
