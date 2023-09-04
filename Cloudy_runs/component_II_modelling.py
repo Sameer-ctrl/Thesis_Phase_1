@@ -70,8 +70,8 @@ for n in range(-5,1):
 
 plt.scatter(nH_plot,Z)
 plt.plot(nH_plot,Z,ls='--')
-plt.xlabel(r'$\mathbf{log \ [Z]}$',labelpad=15)
-plt.ylabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [Z]}$',labelpad=15)
+plt.xlabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15)
 plt.show()
 
 
