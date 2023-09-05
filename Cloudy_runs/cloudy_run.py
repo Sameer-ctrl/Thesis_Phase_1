@@ -179,7 +179,8 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     else:
 
-        # os.remove(f'/home/sameer/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+        os.chdir(f'Data/{run_name}')
+        os.remove(f'{run_name}')
         print('Cloudy run terminated...')
 
 
