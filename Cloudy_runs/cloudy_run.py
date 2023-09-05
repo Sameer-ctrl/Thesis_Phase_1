@@ -4,7 +4,7 @@ from astropy.io import ascii
 from time import sleep
 
 
-def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True):
+def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
 
     grid_parameters=[]
 
@@ -79,7 +79,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
     for i in ions:
         save_col_den+=f'"{i}" \n'
 
-    lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,save_grid,save_Temp,save_hyd,save_col_den]
+    lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,miscalleneous_command,save_grid,save_Temp,save_hyd,save_col_den]
 
     os.mkdir(f'Data/{run_name}')
     file=open(f'Data/{run_name}/{run_name}.in','w+')
@@ -179,7 +179,8 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     else:
 
-        # os.remove(f'/home/sameer/Sameer/Thesis_Phase_1/Cloudy_runs/{run_name}')
+        os.chdir(f'Data/{run_name}')
+        os.remove(f'{run_name}')
         print('Cloudy run terminated...')
 
 
