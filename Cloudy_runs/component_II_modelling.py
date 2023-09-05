@@ -1,4 +1,3 @@
-from cProfile import label
 from astropy.io import fits,ascii
 from matplotlib import table
 from numpy import *
@@ -6,20 +5,50 @@ import matplotlib.pyplot as plt
 from astropy.table import Table
 from roman import toRoman
 from scipy.interpolate import interp2d,interp1d
+from roman import toRoman
+
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-hdu=fits.open('Data/component_II_nH_T_col_density_param.fits')
+hdu=fits.open('Data/component_II_nH_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
-T=data['log_T']
 nH=data['log_nH']
+ions=['Si+', 'Si+2','C+', 'C+2']
+ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}']
+
+upper_col_den=[12.4,12.3,13.3,'NA']
+
+upper_lim=dict(zip(ions,upper_col_den))
 
 N_OVI=14.26
 T_OVI=5.29
-log_Zref=0
+log_Zref=-1
 
 col_den_OVI=log10(data['O+5'])
+
+Z=N_OVI-col_den_OVI+log_Zref
+
+
+ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
+
+
+for i,ion in enumerate(ions):
+    plt.plot(nH,log10(data[ion])+Z-log_Zref,ls=ls[i],label=f'{ions_label[i]} ({upper_lim[ion]})')
+    plt.scatter(nH,log10(data[ion])+Z-log_Zref)
+
+
+# plt.scatter(nH,Z)
+# plt.plot(nH,Z,ls='--')
+
+# plt.ylabel(r'$\mathbf{log \ [Z]}$',labelpad=15)
+plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
+plt.xlabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15)
+plt.legend()
+plt.show()
+
+
+quit()
 
 # mask=T==5.30
 
@@ -35,47 +64,7 @@ col_den_OVI=log10(data['O+5'])
 # quit()
 
 
-def col_den_nH(n):
 
-    mask=nH==n
-    T_mask=T[mask]
-    col_den_OVI_mask=col_den_OVI[mask]
-
-    return T_mask, col_den_OVI_mask
-
-Z=[]
-nH_plot=[]
-
-for n in range(-5,1):
-
-    T_n,col_den_n=col_den_nH(n)
-
-    T_mask=[]
-    col_den_mask=[]
-
-    for i,t in enumerate(T_n):
-
-        if 5.2<t<5.7:
-            T_mask.append(t)
-            col_den_mask.append(col_den_n[i])
-
-    f=interp1d(T_mask,col_den_mask,kind='cubic')
-
-    z=N_OVI-f(T_OVI)+log_Zref
-
-    Z.append(z)
-    nH_plot.append(n)
-
-    # print(f'nH = {n} : {round(Z,3)}')
-
-plt.scatter(nH_plot,Z)
-plt.plot(nH_plot,Z,ls='--')
-plt.ylabel(r'$\mathbf{log \ [Z]}$',labelpad=15)
-plt.xlabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15)
-plt.show()
-
-
-quit()
 f=interp1d(T,col_den_OVI,kind='cubic')
 
 N_OVI=14.26

@@ -40,11 +40,11 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
         grid_file=f'{run_name}_grid.txt'
         save_grid=f'save grid "{grid_file}" last no hash \n'
 
-        if temp==None:
-            n_models=((len(range(*hden)))+1)*((len(range(*metal)))+1)
+        # if temp==None:
+        #     n_models=((len(range(*hden)))+1)*((len(range(*metal)))+1)
         
-        else:
-            n_models=((len(range(*hden)))+1)*((len(range(*metal)))+1)*((len(range(*temp)))+1)
+        # else:
+        #     n_models=((len(range(*hden)))+1)*((len(range(*metal)))+1)*((len(range(*temp)))+1)
     
     else: 
         save_grid=f''
@@ -96,7 +96,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     if n>=1:
         print(f'Grid parameters : {grid_parameters}')
-        print(f'No. of models : {n_models} \n')
+        # print(f'No. of models : {n_models} \n')
 
     a=input('Check the input file for cloudy. \nPress Y to continue.\n')
 
@@ -183,13 +183,13 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
         print('Cloudy run terminated...')
 
 
-run_name='trial'
+run_name='component_II_nH_const_T'
 
 hden=[-5,0,1]
-metal=[-3,-2,1]
-temp=None
-redshift=0.347
-stop_nH=14.10
+metal=[-1]
+temp=[5.29]
+redshift=0.34758
+stop_nH=14.13
 
 ions=['H', 'H+', 'C+','C+2', 'C+3', 'O+5','O+6','Si+', 'Si+2', 'Si+3']
 
