@@ -46,7 +46,9 @@ wave_obs={rest_wave['HI_1215']:[1638.23436,1637.23542,1638.61559],rest_wave['HI_
 # plt.hist(z,bins='auto')
 # plt.show()
 lines=['HI_1215','OVI_1031','CII_1036','HI_1025','OVI_1037','CIII_977','HI_972','SiII_1260','SiIII_1206']
+line_label={'HI_1215':['H','I','1215'],'OVI_1031':['O','VI','1031'],'CII_1036':['C','II','1036'],'HI_1025':['H','I','1025'],'OVI_1037':['O','VI','1037'],'CIII_977':['C','III','977'],'HI_972':['H','I','972'],'SiII_1260':['Si','II','1260'],'SiIII_1206':['Si','III','1206']}
 # lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918']
+
 n=len(lines)
 
 # f,ax_sub=plt.subplots(n,1,figsize=(15,45))
@@ -75,7 +77,7 @@ class abs_line():
         v2=3*(10**5)*((wave_spec**2-(cen_wave_obs**2))/(wave_spec**2+(cen_wave_obs**2)))
 
         # plt.step(v1,flux,c='black')
-        plt.step(v2,flux_spec,c='green',lw=2,label='Flux')
+        plt.step(v2,flux_spec,c='green',lw=2,label=r'$\mathbf{Flux}$')
 
         n=len(file_group(line))-1
         # component=['I','II','III','IV']
@@ -94,17 +96,20 @@ class abs_line():
         plt.hlines(1,-330,330,ls='--',lw=1,color='black')
         plt.hlines(0,-330,330,ls='--',lw=1,color='black')
         plt.vlines(0,-0.1,1.7,ls='--',lw=1,color='black')
-        plt.plot(v1,cont1,c='red',label='Voigt profile fit',lw=3)
-        plt.step(v2,err_spec,c='#ffb3ff',label='Error')
+        plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
+        plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
         
         for i in range(len(line)):
             if line[i]=='_':
                 break
 
         # plt.ylabel(f'{line[:i]} {line[i+1:]}',fontsize=20)
-        plt.xlim(-330,330)
+        plt.xlim(-340,340)
         plt.ylim(-0.1,1.7)
-        plt.text(-260,0.21,f'${line[:i]} \ \ {line[i+1:]}$',fontsize=20)
+        line_name=line_label[line]
+        # plt.text(-260,0.21,r'{\fontsize{25pt}{3em}\selectfont{}$\mathbf{1206}$} {\fontsize{17pt}{3em}\selectfont{}$\mathbf{VI}$')
+        plt.text(-260,0.21,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
+        # plt.text(-260,0.11,f'$\mathbf{{{line[:i]} \ \ {line[i+1:]}}}$',fontsize=20)
         # plt.text(-250,0.3,r'$\textbf{}$'
         # plt.yticks(fontsize=15)
         # plt.tick_params(axis="x", labelsize=15)
@@ -132,21 +137,24 @@ for i in range(n):
         if i%3!=0:
             plt.tick_params('y', labelleft=False)
         
+        else:
+            plt.tick_params('y', labelsize=20)
+        
         if i==n-2 or i==n-3:
-           plt.tick_params('x', labelbottom=True,labelsize=15) 
+           plt.tick_params('x', labelbottom=True,labelsize=20) 
         
         ax=plt.subplot(int(ceil(n/3)),3,i+2,sharex=ax1, sharey=ax1)
         
     else:
-        plt.tick_params('x', labelbottom=True,labelsize=15)
+        plt.tick_params('x', labelbottom=True,labelsize=20)
         if n%3==0:
             plt.tick_params('y', labelleft=False)
         
 
-fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=0)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.07, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=-0.02)  #y=0.18  (y=0 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(-0.5,3.25), loc='upper center',ncols=3)
+plt.legend(bbox_to_anchor=(-0.5,3.38), loc='upper center',ncols=3,fontsize=30)
 # plt.legend(bbox_to_anchor=(1,6.5), loc='upper center',ncols=3)  #(1,6.5) for lyman 
 plt.savefig('Files_n_figures/sys_plot_rebinned_3.png')
 # plt.show()  

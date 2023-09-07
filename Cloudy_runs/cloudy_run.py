@@ -112,7 +112,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
-        print(f'\n Cloudy running in Data/{run_name} ... \n')
+        print(f'\nCloudy running in Data/{run_name} ... \n')
         os.system(cloudy_run_command)
 
         sleep(1)
@@ -184,10 +184,10 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
         print('Cloudy run terminated...')
 
 
-run_name='component_II_nH_const_T'
+run_name='component_II_CIE_sol'
 
-hden=[-5,0,1]
-metal=[-1]
+hden=[-3]
+metal=[-0.4]
 temp=[5.29]
 redshift=0.34758
 stop_nH=14.13
