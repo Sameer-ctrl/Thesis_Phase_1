@@ -10,6 +10,53 @@ from roman import toRoman
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
+
+hdu=fits.open('Data/component_II_nH_Z_const_T_col_density_param.fits')
+data=Table(hdu[1].data)
+
+log_nH=data['log_nH']
+log_Z=data['log_Z']
+col_den_HII=log10(data['H+'])
+
+nH=[]
+Z=[]
+col_den=[]
+
+for i in range(len(data)):
+
+    if log_nH[i]>=-3 and 1>=log_Z[i]>=-0.4:
+        nH.append(log_nH[i])
+        Z.append(log_Z[i])
+        col_den.append(col_den_HII[i])
+
+
+plt.figure()
+
+ax=plt.axes(projection='3d')
+
+ax.scatter(nH,Z,col_den)
+# ax.set_xlim(left=-3)
+# ax.set_ylim(bottom=-0.4)
+# plt.xlim(-3,0)
+# plt.ylim(-2,0)
+ax.set_xlabel('nH')
+ax.set_ylabel('Z')
+ax.set_zlabel('HII')
+
+plt.figure()
+plt.scatter(nH,col_den,c=Z,cmap='jet')
+plt.colorbar()
+plt.title('nH')
+
+plt.figure()
+plt.scatter(Z,col_den,c=nH,cmap='jet')
+plt.colorbar()
+plt.title('Z')
+
+plt.show()
+
+quit()
+
 hdu=fits.open('Data/component_II_nH_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
