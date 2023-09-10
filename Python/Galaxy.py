@@ -11,6 +11,9 @@ plt.style.use('my_style.mpl')
 cosmo=FlatLambdaCDM(H0=69.6,Om0=0.3,Tcmb0=2.725)
 z_abs=0.347
 
+dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
+print(dA_scale*30*u.arcmin)
+quit()
 
 def L_by_Lstar(m_I,M_star):
 
