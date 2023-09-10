@@ -11,6 +11,36 @@ from roman import toRoman
 plt.style.use('Files_n_figures/my_style.mpl')
 
 
+hdu=fits.open('Data/component_II_nH_col_density_param.fits')
+data=Table(hdu[1].data)
+
+mask=data['H']!=0
+data=data[mask]
+
+nH=data['log_nH']
+ions=['Si+', 'Si+2','C+', 'C+2', 'O+5']
+ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
+
+obs_OVI=14.26   
+
+ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
+
+for i,ion in enumerate(ions):
+    plt.plot(nH,log10(data[ion]),label=ions_label[i],ls=ls[i])
+
+plt.hlines(obs_OVI,xmin=-6.5,xmax=-4.5065,color='black',ls='--')
+plt.vlines(-4.5065,ymin=1.35,ymax=obs_OVI,color='black',ls='--')
+plt.legend()
+plt.xlim(left=-5.25)
+plt.ylim(bottom=5.22)
+plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
+plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
+
+plt.show()
+
+quit()
+
+
 hdu=fits.open('Data/component_II_nH_Z_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
@@ -234,33 +264,33 @@ plt.show()
 '-----------------------'
 
 
-# hdu=fits.open('Data/component_II_nH_col_density_param.fits')
-# data=Table(hdu[1].data)
+hdu=fits.open('Data/component_II_nH_col_density_param.fits')
+data=Table(hdu[1].data)
 
-# mask=data['H']!=0
-# data=data[mask]
+mask=data['H']!=0
+data=data[mask]
 
-# nH=data['log_nH']
-# ions=['Si+', 'Si+2','C+', 'C+2', 'O+5']
-# ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
+nH=data['log_nH']
+ions=['Si+', 'Si+2','C+', 'C+2', 'O+5']
+ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
 
-# obs_OVI=14.26   
+obs_OVI=14.26   
 
-# ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
+ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
 
-# for i,ion in enumerate(ions):
-#     plt.plot(nH,log10(data[ion]),label=ions_label[i],ls=ls[i])
+for i,ion in enumerate(ions):
+    plt.plot(nH,log10(data[ion]),label=ions_label[i],ls=ls[i])
 
-# plt.hlines(obs_OVI,xmin=-6.5,xmax=-4.3729,color='black',ls='--')
-# plt.vlines(-4.3729,ymin=1.35,ymax=obs_OVI,color='black',ls='--')
-# plt.legend()
-# plt.xlim(left=-5.25)
-# plt.ylim(bottom=5.22)
-# plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
-# plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
-# # plt.show()
+plt.hlines(obs_OVI,xmin=-6.5,xmax=-4.3729,color='black',ls='--')
+plt.vlines(-4.3729,ymin=1.35,ymax=obs_OVI,color='black',ls='--')
+plt.legend()
+plt.xlim(left=-5.25)
+plt.ylim(bottom=5.22)
+plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
+plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
+# plt.show()
 
-# quit()
+quit()
 
 # bHI=[62.49,2.92]
 # bOVI=[29.63,2.04]
