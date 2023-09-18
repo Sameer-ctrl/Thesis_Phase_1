@@ -12,8 +12,7 @@ cosmo=FlatLambdaCDM(H0=69.6,Om0=0.3,Tcmb0=2.725)
 z_abs=0.347
 
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
-print(dA_scale*30*u.arcmin)
-quit()
+
 
 def L_by_Lstar(m_I,M_star):
 
@@ -32,8 +31,10 @@ z1=sqrt((1+((v_abs+1000)/3e5))/(1-((v_abs+1000)/3e5)))-1
 z2=sqrt((1+((v_abs-1000)/3e5))/(1-((v_abs-1000)/3e5)))-1
 
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
+
 # print(dA_scale*60)
 
+data=loadtxt('Data/gal_data.txt',dtype=str)
 data=loadtxt('Data/gal_data.txt',dtype=str)
 
 
@@ -42,12 +43,58 @@ dec=data[:,1].astype(float)
 z=data[:,2].astype(float)
 v=3e5*(((1+z)**2-1)/((1+z)**2+1))-v_abs
 
-
 ra_qso,dec_qso=[1.4968167,16.163614]
+
+# plt.scatter(ra,dec)
+# plt.scatter(ra_qso,dec_qso,s=200,c='black',marker='X')
+
+# plt.show()
+# quit()
 
 abs_sys_coord=SkyCoord(ra_qso*u.degree,dec_qso*u.degree)
 gal_coords=SkyCoord(ra*u.degree,dec*u.degree)
 
+d2d = abs_sys_coord.separation(gal_coords)
+
+# print((d2d*u.deg*60)[0].value)
+# quit()
+
+for i in range(len(ra)):
+    sep=(d2d*u.deg*60)[i].value
+    proj_dist=dA_scale.value*sep*0.001
+    print(f'{ra[i]:.5f}  &  {dec[i]:.5f}  &  {z[i]}  &  {v[i]:.0f}  &  {sep:.1f}  &  {proj_dist:.1f}  \\\\')
+
+
+
+quit()
+
+# mask_sep = d2d < 1*u.deg
+
+# mask_z1 = z>=0.342
+# mask_z2 = z<=0.352
+
+# mask=[]
+
+# for i,val in enumerate(mask_sep):
+
+#     if val==True and mask_z1[i]==True and mask_z2[i]==True:
+#         mask.append(True)
+
+#     else:
+#         mask.append(False)
+
+print(len(z[mask_sep]),len(z))
+
+
+
+
+quit()
+
+
+# sep_sky=abs_sys_coord.separation(gal_coords).arcminute
+# sep_3d=abs_sys_coord.separation_3d(gal_coords)
+
+# print(sep_3d)
 
 def circle(r,x0,y0,label):
 
