@@ -1,4 +1,4 @@
-%% PG0003+158_rebinned_high_cont_norm.asc     1   1636.3000   1639.8000 pfinst=LSF/lsf3/cos_G160M_lsf_16  !  0.000000    96 2023/07/24
+%% PG0003+158_rebinned_high_cont_norm.asc     1   1636.3000   1639.8000 pfinst=LSF/lsf3/cos_G160M_lsf_16  !  0.000000    96 2023/09/13
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1380.7000   1383.5000 pfinst=LSF/lsf3/cos_G130M_lsf_13  !  0.000000    76   2
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1310.0000   1311.5000 pfinst=LSF/lsf3/cos_G130M_lsf_13  !  0.000000    41   3
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1279.6000   1280.7500 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000000    32   4
@@ -9,5 +9,5 @@
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1240.9000   1241.7000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000000    22   9
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1238.7000   1239.7000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000000    28  10
 %% PG0003+158_rebinned_high_cont_norm.asc     1   1237.1000   1237.9000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000000    22  11
-! Stats:  30   130.8575800  440  440  0.000  0  AICc:   57577.34        
+! Stats:   1   130.8575800  440  440  0.000  0  AICc:   57577.34        
  H I      0.3467724083A   0.0000000000    38.04186F     0.00000  13.522009G   0.000000  0 ! 
