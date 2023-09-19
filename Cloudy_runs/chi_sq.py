@@ -7,10 +7,14 @@ from scipy.interpolate import interp2d,interp1d
 import pickle
 import matplotlib.pyplot as plt
 
-# plt.style.use('Files_n_figures/my_style.mpl')
+plt.style.use('Files_n_figures/my_style.mpl')
+
+def ion_label(ion,state):
+
+    return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
-ions_roman=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
+ions_roman=[ion_label('Si','III'),ion_label('Si','II'),ion_label('C','III'),ion_label('C','II'),ion_label('O','VI')]
 observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
 interp_func_dict={}
@@ -136,24 +140,27 @@ def plot_samples(m,c,n=50,i1=1,i2=1):
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
+plt.figure(figsize=(16,10))
+
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
 plt.clf()
 
-plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
+
+plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=ion_label('Observed',''))
 plot_samples(m1,'orange',n=100)
-m1=model(chi_sq_exc,'Excluding OVI','orange')
+m1=model(chi_sq_exc,ion_label('Excluding','')+ion_label('O','VI'),'orange')
 plot_samples(m2,'green',n=100)
-m2=model(chi_sq_inc,'Including OVI','green')
-plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
-plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
-plt.xticks(xaxis,ions_roman,fontsize=20)
-plt.yticks(fontsize=20)
-plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
-plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
+m2=model(chi_sq_inc,ion_label('Including','')+ion_label('O','VI'),'green')
+# plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
+# plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
+plt.xticks(xaxis,ions_roman,fontsize=30)
+plt.yticks(fontsize=25)
+plt.ylabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15,fontsize=30)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
+# plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
 plt.legend()
-# plt.savefig('Files_n_figures/Observed_and_predicted.png')
+# plt.savefig('Observed_and_predicted.png')
 
 plt.show()
 

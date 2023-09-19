@@ -93,8 +93,8 @@ class abs_line():
 
                 plt.plot(v,cont,label=f'{comp}',ls='--')
 
-        plt.hlines(1,-330,330,ls='--',lw=1,color='black')
-        plt.hlines(0,-330,330,ls='--',lw=1,color='black')
+        plt.hlines(1,-350,350,ls='--',lw=1,color='black')
+        plt.hlines(0,-350,350,ls='--',lw=1,color='black')
         plt.vlines(0,-0.1,1.7,ls='--',lw=1,color='black')
         plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
         plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
@@ -104,7 +104,7 @@ class abs_line():
                 break
 
         # plt.ylabel(f'{line[:i]} {line[i+1:]}',fontsize=20)
-        plt.xlim(-340,340)
+        plt.xlim(-350,350)
         plt.ylim(-0.1,1.7)
         line_name=line_label[line]
         # plt.text(-260,0.21,r'{\fontsize{25pt}{3em}\selectfont{}$\mathbf{1206}$} {\fontsize{17pt}{3em}\selectfont{}$\mathbf{VI}$')
@@ -138,15 +138,15 @@ for i in range(n):
             plt.tick_params('y', labelleft=False)
         
         else:
-            plt.tick_params('y', labelsize=20)
+            plt.tick_params('y', labelsize=25)
         
         if i==n-2 or i==n-3:
-           plt.tick_params('x', labelbottom=True,labelsize=20) 
+           plt.tick_params('x', labelbottom=True,labelsize=25) 
         
         ax=plt.subplot(int(ceil(n/3)),3,i+2,sharex=ax1, sharey=ax1)
         
     else:
-        plt.tick_params('x', labelbottom=True,labelsize=20)
+        plt.tick_params('x', labelbottom=True,labelsize=25)
         if n%3==0:
             plt.tick_params('y', labelleft=False)
         

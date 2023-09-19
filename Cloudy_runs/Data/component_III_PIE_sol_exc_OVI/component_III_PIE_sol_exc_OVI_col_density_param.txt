@@ -1,0 +1,17 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: H, datatype: float64}
+# - {name: H+, datatype: float64}
+# - {name: C+, datatype: float64}
+# - {name: C+2, datatype: float64}
+# - {name: C+3, datatype: float64}
+# - {name: O+5, datatype: float64}
+# - {name: O+6, datatype: int64}
+# - {name: Si+, datatype: float64}
+# - {name: Si+2, datatype: float64}
+# - {name: Si+3, datatype: float64}
+# - {name: log_Te, datatype: float64}
+# schema: astropy-2.0
+H H+ C+ C+2 C+3 O+5 O+6 Si+ Si+2 Si+3 log_Te
+1.25893e+16 8.19728e+17 40909400000000.0 67855900000000.0 719709000000.0 97878300.0 0 5979170000000.0 6420830000000.0 754980000000.0 4.007
