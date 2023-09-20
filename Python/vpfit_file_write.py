@@ -1,48 +1,57 @@
 from operator import indexOf
 from astropy.io import ascii
 import os
-
-from numpy import argmin, mean
+from numpy import argmin, linspace, logical_and, mean, sqrt, hstack,vstack, where, zeros
 
 data=ascii.read('Data/abs_system.csv')
 lsf_files=os.listdir('Data/COS_LSF')
 
+lines=data['LINE_ID']
 
-def lsf_file_search(wave_range):
 
-    file_list=[]
-    wave_diff1=[]
-    wave_diff2=[]
+def lsf_file_search(lambda1,lambda2):
 
-    for file in lsf_files:
-        wave_lsf=int(file[14:18])
+    cen_wave=mean([lambda1,lambda2])
+    wave_diff=[abs(cen_wave-int(file[14:18])) for file in lsf_files]
+    i=argmin(wave_diff)
 
-        if wave_range[0]<=wave_lsf<=wave_range[1]:
-            file_list.append(file)
+    return lsf_files[i]
 
-        else:
-            wave_diff1.append(abs(wave_range[0]-wave_lsf))
-            wave_diff2.append(abs(wave_range[1]-wave_lsf))
+z_sys=0.347
+v_sep_lim=200
 
-    if len(file_list)>0:
-        
-        wave_diff_cen=[]
+v_sys=3e5*(((1+z_sys)**2-1)/((1+z_sys)**2+1))
 
-        for file in file_list:
-            wave=int(file[14:18])
-            wave_diff_cen.append(abs(wave-mean(wave_range)))
-        
-        i=argmin(wave_diff_cen)
+z1=sqrt((1+((v_sys-v_sep_lim)/3e5))/(1-((v_sys-v_sep_lim)/3e5)))-1
+z2=sqrt((1+((v_sys+v_sep_lim)/3e5))/(1-((v_sys+v_sep_lim)/3e5)))-1
 
-        return file_list[i]
-        
-    else:
-    
-        if min(wave_diff1) > min(wave_diff2):
-            return lsf_files[argmin(wave_diff2)]
-        
-        else:
-            return lsf_files[argmin(wave_diff1)]
+mask=logical_and(data['Z_SYS']>=z1, data['Z_SYS']<=z2)
+data=data[mask]
+lines_z=data['LINE_ID'] 
+z_lines=data['z_ABS']
+b=data['BVALUE']
+logN=data['LOGN']
+wave=data['WAVELENGTH']
+
+ions=[line.split(' ')[0] for line in lines_z]
+
+ion_to_fit='CII'
+ind=[]
+
+for i,ion in enumerate(ions):
+    if ion==ion_to_fit:
+        ind.append(i)
+
+guess_z=z_lines[ind]
+guess_b=b[ind]
+guess_logN=logN[ind]
+
+init_guess=vstack((guess_z,zeros(len(ind)),guess_b,zeros(len(ind)),guess_logN,zeros(len(ind)))).transpose()
+
+print(init_guess)
+
+
+
 
 
 
