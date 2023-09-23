@@ -15,7 +15,7 @@ def ion_label(ion,state):
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 ions_roman=[ion_label('Si','III'),ion_label('Si','II'),ion_label('C','III'),ion_label('C','II'),ion_label('O','VI')]
-observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.72,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
 interp_func_dict={}
 

@@ -92,12 +92,16 @@ for n in nH:
 plt.figure(figsize=(16,10))
 plt.plot(nH,Z,ls='--')
 plt.scatter(nH,Z)
+plt.hlines(-0.41271532,-7,-3,ls='--',lw=2,color='black')
+plt.vlines(-3,-4,-0.41271532,ls='--',lw=2,color='black')
 plt.ylabel(r'$\mathbf{log \ [Z/{Z_{\odot}}]}$',labelpad=15,fontsize=30)
 # plt.ylabel(ion_label('log \ [Z/{Z_{\odot}}]',''),labelpad=15,fontsize=30)
 plt.xlabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15,fontsize=30)
 plt.xticks(fontsize=25)
 plt.yticks(fontsize=25)
-plt.savefig('comp_II_CIE.png')
+plt.xlim(-5.25,0.25)
+plt.ylim(-1.3,-0.2)
+plt.savefig('comp_II_CIE1.png')
 
 plt.show()
 
