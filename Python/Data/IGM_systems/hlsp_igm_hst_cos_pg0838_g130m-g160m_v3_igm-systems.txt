@@ -1,0 +1,110 @@
+#SIMPLE  = T
+#XTENSION= 'BINTABLE'
+#BITPIX  = 8                       / 8-bit bytes.
+#NAXIS   = 2                      / 2-dimensional table.
+#NAXIS1  = 64                    / Width of table in bytes.
+#NAXIS2  =           31             / Number of rows in table.
+#PCOUNT  =   0                 /Random parameter count
+#GCOUNT  =  1                  /Group count
+#TELESCOP= 'HST'                  / Observatory name.
+#INSTRUME= 'COS'                  / Instrument name.
+#RADESYS = 'FK5'                  / Astrometric reference system.
+#EQUINOX = 2000.                  / Equinox of the coordinates.
+#TARGNAME= 'PG0838+770'           / Sight line name.
+#TARGROOT= 'pg0838+'       / 7-character sight line id.
+#RA_TARG = 131.18858333   / RA of the target [deg].
+#DEC_TARG=  76.88597222   / DEC of the target [deg].
+#TARG_ZEM= 0.13100000             / Nominal emission redshift.
+#DATE-OBS= '2009-09-24'    / Approximate date of first observation [YYYY-MM-DD].
+#HLSPLEAD= 'Charles Danforth'    / HLSP Lead.
+#CITATION= 'Danforth, et al. 2016, ApJ submitted (arXiv:1402.2655)' / Reference for HLSP.
+#PR_INV_L= 'Danforth'      / PI Last Name.
+#PR_INV_F= 'Charles'      / PI First Name.
+#AIRORVAC= 'VAC     '        / Are wavelengths in air or vacuum? 
+#FILTER01= 'G130M'           / Filter used in coadd.
+#FILTER02= 'G160M'           / Filter used in coadd.
+#EXPTIME1=         8866          / Max exposure time in Filter 1 [sec].
+#EXPTIME2=         6349          / Max exposure time in Filter 2 [sec].
+#SN_RES_1= 33                / Median S/N per 7-pixel resel in Filter 1.
+#SN_RES_2= 17                / Median S/N per 7-pixel resel in Filter 2.
+#TFIELDS = 17                 / Number of fields in each row.
+#TTYPE1  = 'Z_SYS'            / 1: system redshift
+#TFORM1  = '1E'
+#TTYPE2  = 'DELTAV_SYS'       / 2: system velocity half-width
+#TFORM2  = '1E'
+#TUNIT2  = 'km/s'
+#TTYPE3  = 'WAVELENGTH'       / 3: Observed wavelength
+#TFORM3  = '1E'
+#TUNIT3  = 'Ang'
+#TTYPE4  = 'LINE_ID'          / 4: Line ID
+#TFORM4  = '13A'
+#TTYPE5  = 'z_ABS'            / 5: Line redshift
+#TFORM5  = '1E'
+#TTYPE6  = 'SIGLEVEL   '      / 6: Line Significance Level
+#TFORM6  = '1E'
+#TUNIT6  = 'SIGMA'
+#TTYPE7  = 'S/N  '            / 7: Local S/N per resel 
+#TFORM7  = '1E'
+#TTYPE8  = 'EQW  '            / 8: Line Equiv. Width
+#TFORM8  = '1J'
+#TUNIT8  = 'mAA'
+#TTYPE9  = 'EQW_ERR'          / 9: Equiv Width error
+#TFORM9  = '1J'
+#TUNIT9  = 'mAA'
+#TTYPE10 = 'BVALUE'           / 10: Line b-value
+#TFORM10 = '1E'
+#TUNIT10 = 'km/s'
+#TTYPE11 = 'BVALUE_ERR'       / 11: b-value error
+#TFORM11 = '1E'
+#TUNIT11 = 'km/s'
+#TTYPE12 = 'LOGN lower limit' / 12: column density lower limit flag
+#TFORM12 = '1I'                      /    
+#TTYPE13 = 'LOGN'             / 13: line log column density
+#TFORM13 = '1E'
+#TUNIT13 = 'log cm^-2'
+#TTYPE14 = 'LOGN_ERR'         / 14: log column density error
+#TFORM14 = '1E'
+#TUNIT14 = 'log cm^-2'
+#TTYPE15 = 'FLAG_FIT'         / 15: line fit quality concerns?
+#TFORM15 = '1I'
+#TTYPE16 = 'LCOD'             / 16: line-center optical depth
+#TFORM16 = '1I'
+#TTYPE17 = 'NUM_SYS_LINES'    / 17: number of lines in system
+#TFORM17 = '1I'
+#TTYPE18 = 'NUM_METAL_LINES'  / 18: number of metal lines in system
+#TFORM18 = '1I'
+#COMMENT     
+#COMMENT 'Generated Thu Dec 17 12:13:28 2015' 
+#COMMENT 'Delivered to MAST from the COS Sight Lines HLSP project'
+#END
+0.002377  47.0 1218.57  "Lya 1215"   0.002404 43.5 14.0  537  93  33.8  5.6 1 15.11 0.34 1 3  8  7
+0.002377  47.0 1551.85  "CIV 1548"   0.002355  8.8 14.0  124 115  27.6  4.5 0 13.57 0.05 0 0  8  7
+0.002377  47.0 1554.46  "CIV 1550"   0.002372  6.1 14.0   79  21  22.8  5.8 0 13.66 0.10 0 0  8  7
+0.002377  47.0 1337.73  "CII 1334"   0.002397  9.8 23.0   54   8  14.5  2.8 0 13.52 0.06 0 0  8  7
+0.002377  47.0 1397.09  "SiIV 1393"  0.002389 10.2 28.0   56  13  22.7  3.5 0 12.86 0.09 1 0  8  7
+0.002377  47.0 1406.11  "SiIV 1402"  0.002379  7.2 27.0   37   8  17.8  3.7 0 12.97 0.08 0 0  8  7
+0.002377  47.0 1209.38  "SiIII 1206" 0.002395 21.8 18.0  167   9  20.2  1.4 0 13.17 0.03 0 1  8  7
+0.002377  47.0 1263.40  "SiII 1260"  0.002361  4.3 22.0   32  13  29.1  9.6 0 12.31 0.14 0 0  8  7
+0.002655  29.0 1263.77  "SiII 1260"  0.002655 11.1 23.0   61   7  15.4  2.7 0 12.67 0.05 0 0  1  1
+0.004500  29.0 1221.12  "Lya 1215"   0.004500  4.2 17.0   40   9  28.7  8.9 0 12.91 0.09 0 0  1  0
+0.005092  29.0 1221.84  "Lya 1215"   0.005092  7.7 18.0   66   7  26.7  4.9 0 13.14 0.05 0 0  1  0
+0.007371  30.0 1224.61  "Lya 1215"   0.007371  8.2 22.0   78  10  50.5  7.9 0 13.19 0.05 0 0  1  0
+0.009748  30.0 1227.50  "Lya 1215"   0.009748  8.2 23.0   67   8  40.7  6.9 0 13.13 0.05 0 0  1  0
+0.014478  30.0 1233.25  "Lya 1215"   0.014478  5.6 21.0   43   7  29.8  7.7 0 12.94 0.07 0 0  1  0
+0.035446  29.0 1258.74  "Lya 1215"   0.035446  6.9 21.0   58   8  36.9  6.6 0 13.06 0.05 0 0  1  0
+0.040447  30.0 1264.82  "Lya 1215"   0.040447  5.1 25.0   30   5  24.5  8.1 0 12.77 0.09 0 0  1  0
+0.046658  29.0 1272.37  "Lya 1215"   0.046658 12.6 21.0   87   5  24.2  2.6 0 13.29 0.03 0 0  1  0
+0.049657  30.0 1276.02  "Lya 1215"   0.049657  4.0 21.0   36  18  41.8 13.9 0 12.85 0.16 0 0  1  0
+0.062373  61.0 1291.47  "Lya 1215"   0.062373 41.5 14.0  535  22  39.5  1.8 1 14.74 0.07 0 3  1  0
+0.065832  29.0 1295.68  "Lya 1215"   0.065832  6.3 16.0  105  40  81.2 14.3 0 13.31 0.13 0 0  1  0
+0.086275  30.0 1320.53  "Lya 1215"   0.086275  3.3 19.0   65  31 148.8 42.9 0 13.09 0.16 0 0  3  2
+0.086275  30.0 1345.72  "NV 1238"    0.086226  4.6 24.0   57  22 100.0  1.0 0 13.45 0.13 1 0  3  2
+0.086275  30.0 1349.94  "NV 1242"    0.086189  3.7 28.0   25  19  43.4 17.4 0 13.39 0.26 0 0  3  2
+0.092839  30.0 1328.51  "Lya 1215"   0.092839  4.5 21.0   33   7  28.5  9.3 0 12.81 0.09 0 0  1  0
+0.108481  29.0 1347.52  "Lya 1215"   0.108481 22.3 25.0  145   9  33.3  2.0 0 13.54 0.03 0 1  1  0
+0.119862  30.0 1361.36  "Lya 1215"   0.119862 41.0 28.0  243   4  35.1  1.0 0 13.85 0.01 0 1  3  1
+0.119862  30.0 1148.65  "Lyb 1025"   0.119855  4.7 12.0   59  24  33.3  8.8 0 13.95 0.15 0 0  3  1
+0.119862  30.0 1350.98  "SiIII 1206" 0.119751  4.2 25.0   18   7  12.0  6.3 0 11.98 0.13 0 0  3  1
+0.123218  29.0 1365.44  "Lya 1215"   0.123218  6.5 28.0   25   3  12.5  3.5 0 12.73 0.06 0 0  1  0
+0.124197  30.0 1366.63  "Lya 1215"   0.124197  8.2 30.0   39   6  25.5  5.4 0 12.90 0.07 0 0  1  0
+0.124510  29.0 1367.01  "Lya 1215"   0.124510  5.2 32.0   30   8  43.3 15.0 0 12.76 0.11 0 0  1  0
