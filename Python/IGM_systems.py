@@ -29,7 +29,7 @@ for file in files:
         
     qso=file[ind[3]+1:ind[4]]
 
-    data=ascii.read(f'Data/IGM_systems/{file}')
+    data=ascii.read(f'Data/IGM_Danforth_Data/Systems/{file}')
     data.rename_columns(data.colnames,col_names)
 
     line=data['LINE_ID']
