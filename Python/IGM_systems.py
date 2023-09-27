@@ -5,8 +5,7 @@ from numpy import *
 
 col_names=['Z_SYS',  'DELTAV_SYS',  'WAVELENGTH',  'LINE_ID', 'z_ABS', 'SIGLEVEL', 'SNR', 'EQW', 'EQW_ERR', 'BVALUE', 'BVALUE_ERR', 'LOGN_lower_limit', 'LOGN', 'LOGN_ERR', 'FLAG_FIT', 'LCOD', 'NUM_SYS_LINES', 'NUM_METAL_LINES']
 
-files=os.listdir('Data/IGM_systems')
-
+files=os.listdir('Data/IGM_Danforth_Data/Systems')
 
 for file in files:
 

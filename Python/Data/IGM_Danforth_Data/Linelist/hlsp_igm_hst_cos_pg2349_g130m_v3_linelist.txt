@@ -1,0 +1,131 @@
+#SIMPLE  = T
+#XTENSION= 'BINTABLE'
+#BITPIX  = 8                       / 8-bit bytes.
+#NAXIS   = 2                       / 2-dimensional table.
+#NAXIS1  = 58                      / Width of table in bytes.
+#NAXIS2  =                     57           / Number of rows in table.
+#PCOUNT  =   0                     /Random parameter count
+#GCOUNT  =  1                      /Group count
+#TELESCOP= 'HST'                   / Observatory name.
+#INSTRUME= 'COS'                   / Instrument name.
+#RADESYS = 'FK5'                   / Astrometric reference system.
+#EQUINOX = 2000.                   / Equinox of the coordinates.
+#TARGNAME= 'PG2349-014'           / Sight line name.
+#TARGROOT= 'pg2349+'       / 7-char sight line identifier.
+#RA_TARG = 357.98383333   / RA of the target [deg].
+#DEC_TARG=  -1.15363889   / DEC of the target [deg].
+#TARG_ZEM= 0.17374000             / Nominal emission redshift.
+#DATE-OBS= '2011-10-20'    / Approximate date of first observation [YYYY-MM-DD].
+#HLSPLEAD= 'Charles Danforth'    / HLSP Lead.
+#CITATION= 'Danforth, et al. 2016, ApJ submitted (arXiv:1402.2655)' / Reference for HLSP.
+#PR_INV_L= 'Danforth'      / PI Last Name.
+#PR_INV_F= 'Charles'      / PI First Name.
+#AIRORVAC= 'VAC     '           / Are wavelengths in air or vacuum? 
+#FILTER01= 'G130M'            / Filter used in coadd.
+#FILTER02= 'G160M'            / Filter used in coadd.
+#EXPTIME1=         1844          / Max exposure time in Filter 1 [sec].
+#EXPTIME2=            0          / Max exposure time in Filter 2 [sec].
+#SN_RES_1= 25          / Median S/N per 7-pixel resel in Filter 1.
+#SN_RES_2=  0          / Median S/N per 7-pixel resel in Filter 2.
+#TFIELDS = 16                        / Number of fields in each row.
+#TTYPE1  = 'WAVELENGTH'              / 1: Observed Wavelength
+#TFORM1  = '1E'                      /                    
+#TUNIT1  = 'Ang'                     /                    
+#TTYPE2  = 'LINE_ID'                 / 2: Line ID
+#TFORM2  = '13A'                     /                    
+#TTYPE3  = 'z_ABS'                   / 3: Absorber redshift
+#TFORM3  = '1E'                      /                    
+#TTYPE4  = 'SIGLEVEL'                / 4: Absorber Significance Level
+#TFORM4  = '1E'                      /                    
+#TUNIT4  = 'SIGMA'                   /                    
+#TTYPE5  = 'S/N  '                   / 5: S/N per resel.
+#TFORM5  = '1E'                      /                    
+#TTYPE6  = 'EQW  '                   / 6: Equiv. Width
+#TFORM6  = '1J'                      /                    
+#TUNIT6  = 'mAng'                    /                    
+#TTYPE7  = 'EQW_ERR'                 / 7: Equiv. Width Error
+#TFORM7  = '1J'                      /                    
+#TUNIT7  = 'mAA'                     /                    
+#TTYPE8  = 'BVALUE'                  / 8: Doppler b-parameter
+#TFORM8  = '1E'                      /    
+#TUNIT8  = 'km/s'                    /    
+#TTYPE9  = 'BVALUE_ERR'              / 9: b-param. error   
+#TFORM9  = '1E'                      /    
+#TUNIT9  = 'km/s'                    /    
+#TTYPE10 = 'LOGN lower limit'        / 10: column density lower limit flag
+#TFORM10 = '1I'                      /    
+#TTYPE11 = 'LOGN'                    / 11: log column density
+#TFORM11 = '1E'                      /    
+#TUNIT11 = 'log cm^-2'               /    
+#TTYPE12 = 'LOGN_ERR'                / 12: log column density error
+#TFORM12 = '1E'                      /    
+#TUNIT12 = 'log cm^-2'               /    
+#TTYPE13 = 'FLAG_FIT'                / 13: Line fit quality concerns?
+#TFORM13 = '1I'                      /    
+#TTYPE14 = 'LCOD'                    / 14: line-center optical depth
+#TFORM14 = '1I'                      /    
+#TTYPE15 = 'FLAG_ISM'                / 15: ISM feature?
+#TFORM15 = '1I'                      /    
+#TTYPE16 = 'FLAG_AGN'                / 16: AGN-intrinsic feature?
+#TFORM16 = '1I'                      /    
+#COMMENT   
+#COMMENT 'Generated Thu Dec 17 12:15:14 2015' 
+#COMMENT 'Delivered to MAST from the COS Sight Lines HLSP project'
+#END
+1170.13    NULL      -0.037461  3.2 11.0   88  34  95.5 32.6 0 13.23  0.13 0 0 0 0
+1189.25  "SiII 1190"  0.000000 11.3 14.0  144  11   0.0  0.0 0  0.00  0.00 1 1 1 0
+1190.41  "SiII 1190"  0.000000 25.1 15.0  252  12   0.0  0.0 0  0.00  0.00 0 2 1 0
+1192.12  "SiII 1193"  0.000000 19.1 17.0  191   9   0.0  0.0 0  0.00  0.00 1 1 1 0
+1193.29  "SiII 1193"  0.000000 31.2 17.0  280  15   0.0  0.0 0  0.00  0.00 1 2 1 0
+1199.54  "NI 1199"    0.000000 26.9 17.0  210  17   0.0  0.0 0  0.00  0.00 0 2 1 0
+1200.22  "NI 1200"    0.000000 26.2 16.0  211  25   0.0  0.0 0  0.00  0.00 0 2 1 0
+1200.70  "NI 1200"    0.000000 26.7 17.0  194  30   0.0  0.0 0  0.00  0.00 0 2 1 0
+1205.33  "SiIII 1206" 0.000000 51.9 19.0  534  20   0.0  0.0 0  0.00  0.00 1 3 1 0
+1205.74  "SiIII 1206" 0.000000 12.6 19.0  128  11   0.0  0.0 0  0.00  0.00 0 0 1 0
+1206.61  "SiIII 1206" 0.000000 50.3 18.0  511  24   0.0  0.0 0  0.00  0.00 1 3 1 0
+1224.93  "Lya 1215"   0.007634 22.2 18.0  217   8  35.3  2.0 0 13.78  0.02 0 1 0 0
+1250.57  "SII 1250"   0.000000 15.3 17.0  107  10   0.0  0.0 0  0.00  0.00 0 1 1 0
+1252.53  "SiIII 1206" 0.038152  4.6 18.0   33  13  18.0  7.0 0 12.24  0.13 0 0 0 0
+1253.79  "SII 1253"   0.000000 18.5 17.0  138   9   0.0  0.0 0  0.00  0.00 0 1 1 0
+1259.16  "SII 1259"   0.000000 29.8 20.0  298  11   0.0  0.0 0  0.00  0.00 1 1 1 0
+1259.50  "SII 1259"   0.000000 27.4 21.0  186  10   0.0  0.0 0  0.00  0.00 1 2 1 0
+1260.43  "SiII 1260"  0.000000 45.2 23.0  313  89   0.0  0.0 0  0.00  0.00 0 2 1 0
+1260.73  "SiII 1260"  0.000000 11.8 22.0   84  84   0.0  0.0 0  0.00  0.00 0 0 1 0
+1262.00  "Lya 1215"   0.038128 49.1 18.0  418  41  27.0  2.4 1 14.93  0.21 0 3 0 0
+1271.00  "Lya 1215"   0.045531  6.4 19.0   64  12  43.8  9.5 0 13.11  0.07 0 0 0 0
+1277.21  "CI 1277"    0.000000  3.3 16.0   42  12   0.0  0.0 0  0.00  0.00 0 0 1 0
+1286.81    NULL       0.058522  3.0 17.0   36  13  51.8 22.0 0 12.84  0.14 0 0 0 0
+1290.27    NULL       0.061367  3.4 15.0   88  16 150.0 -0.0 0 13.23  0.08 0 0 0 0
+1300.88  "OI 1302"    0.000000  5.2 11.0   60  11   0.0  0.0 0  0.00  0.00 0 0 1 0
+1302.14  "OI 1302"    0.000000 36.3 15.0  274  12   0.0  0.0 0  0.00  0.00 0 2 1 0
+1303.06  "SiII 1304"  0.000000  5.5 11.0   67  11   0.0  0.0 0  0.00  0.00 0 0 1 0
+1303.42  "SiII 1304"  0.000000 12.8 11.0  209  13   0.0  0.0 0  0.00  0.00 0 1 1 0
+1304.31  "SiII 1304"  0.000000 19.6 11.0  196 102   0.0  0.0 0  0.00  0.00 0 2 1 0
+1327.59  "Lya 1215"   0.092082  6.2 12.0   69  11  21.1  5.0 0 13.19  0.07 0 0 0 0
+1331.90  "Lya 1215"   0.095624 20.0 12.0  240  12  25.2  1.5 0 13.99  0.03 0 2 0 0
+1333.21  "CII 1334"   0.000000 22.4 14.0  319  10   0.0  0.0 0  0.00  0.00 1 2 1 0
+1333.73  "CII 1334"   0.000000  5.3 14.0   59  10   0.0  0.0 0  0.00  0.00 0 0 1 0
+1334.50  "CII 1334"   0.000000 27.1 14.0  242 127   0.0  0.0 0  0.00  0.00 0 3 1 0
+1334.64  "CII 1334"   0.000000 20.0 13.0  333  33   0.0  0.0 0  0.00  0.00 0 2 1 0
+1335.69  "CII* 1335"  0.000000 10.8 13.0  117   8   0.0  0.0 0  0.00  0.00 0 1 1 0
+1352.64  "Lya 1215"   0.112689  5.2 15.0   57   9  34.3  9.0 0 13.06  0.08 0 0 0 0
+1353.94    NULL       0.113743  3.2 17.0   33  21  39.8 24.4 0 12.81  0.28 0 0 0 0
+1356.43  "Lya 1215"   0.115806 10.5 16.0  109  11  34.8  4.6 0 13.38  0.04 0 0 0 0
+1373.04  "Lya 1215"   0.129470  4.8 15.0   53  12  36.0  9.6 0 13.03  0.09 0 0 0 0
+1377.35    NULL       0.132999  3.6 15.0   25   7  11.8  6.9 0 12.73  0.13 0 0 0 0
+1377.81  "Lya 1215"   0.133394  6.0 16.0   79  17  56.7 12.7 0 13.19  0.08 0 0 0 0
+1379.56    NULL       0.134813  3.0 16.0   21   7  13.8  9.1 0 12.62  0.14 0 0 0 0
+1383.30    NULL       0.137889  3.2 18.0   22   7  18.1 10.5 0 12.64  0.14 0 0 0 0
+1389.40    NULL       0.142909  3.6 16.0   27   7  17.3  7.9 0 12.74  0.11 0 0 0 0
+1392.35  "SiIV 1393"  0.000000 14.8 16.0  219  11   0.0  0.0 0  0.00  0.00 1 1 1 0
+1393.74  "SiIV 1393"  0.000000 12.2 17.0  148   9   0.0  0.0 0  0.00  0.00 0 1 1 0
+1401.35  "SiIV 1402"  0.000000  9.7 18.0  104  10   0.0  0.0 0  0.00  0.00 1 0 1 0
+1402.78  "SiIV 1402"  0.000000  6.8 17.0   80   9   0.0  0.0 0  0.00  0.00 0 0 1 0
+1403.80  "Lya 1215"   0.154773  7.8 18.0   61   7  25.8  4.5 0 13.11  0.05 0 0 0 0
+1407.53  "Lya 1215"   0.157841  6.6 18.0   70  10  48.0  8.0 0 13.15  0.05 0 0 0 0
+1409.39  "Lya 1215"   0.159372  5.2 21.0   43   9  40.2 10.1 0 12.92  0.08 0 0 0 0
+1413.33    NULL       0.162593  3.1 23.0   21   7  32.8 14.7 0 12.62  0.14 0 0 0 0
+1414.76  "Lya 1215"   0.163789  3.9 23.0   20   6  16.8  7.5 0 12.60  0.11 0 0 0 0
+1422.97    NULL       0.170519  2.8 22.0   11   3   6.1  8.0 0 12.35  0.15 0 0 0 0
+1424.71    NULL       0.171954  3.3 20.0   16   4   9.6  5.6 0 12.51  0.10 0 0 0 0
+1433.83    NULL       0.179458  3.8 17.0   33   6  23.0  6.1 0 12.82  0.08 1 0 0 0
