@@ -16,9 +16,12 @@ for file in files:
         
     qso=file[ind[3]+1:ind[4]]
 
-k=0
-j=0
-n_qso=0
+
+n_BLA_metal_lines=0
+n_BLA_metal_ions=0
+n_qso_los=0
+n_BLA=0
+n_BLA_OVI_metal_ions=0
 
 for file in files:
     
@@ -38,18 +41,23 @@ for file in files:
     n_metal_lines=data['NUM_METAL_LINES']
 
     mask=logical_and(line=='Lya 1215',b>=45)
-    mask=logical_and(mask,n_metal_lines>=3)
-
     data_BLA=data[mask]
-    n=len(data_BLA)
+    n_BLA+=len(data_BLA)
+
+    z_sys_BLA_metal=data_BLA['Z_SYS']
+
+    mask=logical_and(mask,n_metal_lines>=3)
+    data_BLA_metal=data[mask]
+    n=len(data_BLA_metal)
 
     if n>0:
 
-        z_sys_BLA=data_BLA['Z_SYS']
+        z_sys_BLA_metal=data_BLA_metal['Z_SYS']
         print(f'\n {qso} : {n}')
         m=0
+        i=0
 
-        for z in z_sys_BLA:
+        for z in z_sys_BLA_metal:
 
             mask=z_sys==z
             line_sys=line[mask].value
@@ -60,18 +68,27 @@ for file in files:
                     metal_lines.append(l)
             
             ions=set([m.split(' ')[0] for m in metal_lines])
+            
             if len(ions)>=3:
                 m=m+1
+                i=1
+
+                if 'OVI' in ions:
+                    n_BLA_OVI_metal_ions+=1
 
             print(f'{z} : {metal_lines} : {ions} :{len(ions)}')
 
-        j=j+m
-        n_qso=n_qso+1
+        n_BLA_metal_ions+=m
+        n_qso_los+=i
 
-    k=k+n
+    n_BLA_metal_lines+=n
         
 
 print('\n ---------------------- \n')
-print(k)
-print(j)
-print(n_qso)
+
+print(f'Systems with BLA and metal lines >=3               : {n_BLA_metal_lines}')
+print(f'Systems with BLA and distinct metal ions >=3       : {n_BLA_metal_ions}')
+print(f'No. of los with BLA and distinct metal ions >= 3   : {n_qso_los}')
+print(f'Systems with BLA                                   : {n_BLA}')
+print(f'Systems with BLA, O VI and other metal ions >=2    : {n_BLA_OVI_metal_ions}')
+
