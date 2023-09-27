@@ -1,0 +1,15 @@
+%% PG0003+158_rebinned_cont_norm.asc     1   1636.2000   1639.8000 pfinst=LSF/lsf3/cos_G160M_lsf_16  !  0.000027    99 2023/08/05
+%% PG0003+158_rebinned_cont_norm.asc     1   1380.7000   1383.5000 pfinst=LSF/lsf3/cos_G130M_lsf_13  !  0.000000    76   2
+%% PG0003+158_rebinned_cont_norm.asc     1   1310.0000   1311.5000 pfinst=LSF/lsf3/cos_G130M_lsf_13  !  0.001016    41   3
+%% PG0003+158_rebinned_cont_norm.asc     1   1279.6000   1280.7500 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000327    32   4
+%% PG0003+158_rebinned_cont_norm.asc     1   1263.5000   1264.6000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.019526    30   5
+%% PG0003+158_rebinned_cont_norm.asc     1   1253.9000   1255.2000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000154    35   6
+%% PG0003+158_rebinned_cont_norm.asc     1   1247.9000   1249.0000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000024    30   7
+%% PG0003+158_rebinned_cont_norm.asc     1   1243.8000   1244.8000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000007    28   8
+%% PG0003+158_rebinned_cont_norm.asc     1   1240.9000   1241.7000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.000000    22   9
+%% PG0003+158_rebinned_cont_norm.asc     1   1238.7000   1239.7000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.006698    28  10
+%% PG0003+158_rebinned_cont_norm.asc     1   1237.1000   1237.9000 pfinst=LSF/lsf3/cos_G130M_lsf_12  !  0.067853    22  11
+! Stats:   1     2.3908136  443  443  0.000  0  AICc:    1059.13        
+ H I      0.3467764144A   0.0000000000    38.12759C     0.00000  13.456094E   0.000000  0 ! 
+ H I      0.3475849613I   0.0000000000    62.49162G     0.00000  14.126428H   0.000000  0 ! 
+ H I      0.3479117504B   0.0000000000    16.20340D     0.00000  16.127090F   0.000000  0 ! 
