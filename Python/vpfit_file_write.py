@@ -3,7 +3,12 @@ from astropy.io import ascii
 import os
 from numpy import argmin, linspace, logical_and, mean, sqrt, hstack,vstack, where, zeros
 
-data=ascii.read('Data/abs_system.csv')
+
+data=ascii.read('Data/IGM_systems/hlsp_igm_hst_cos_pg0003_g130m-g160m_v3_igm-systems.txt')
+
+col_names=['Z_SYS',  'DELTAV_SYS',  'WAVELENGTH',  'LINE_ID', 'z_ABS', 'SIGLEVEL', 'SNR', 'EQW', 'EQW_ERR', 'BVALUE', 'BVALUE_ERR', 'LOGN_lower_limit', 'LOGN', 'LOGN_ERR', 'FLAG_FIT', 'LCOD', 'NUM_SYS_LINES', 'NUM_METAL_LINES']
+data.rename_columns(data.colnames,col_names)
+
 lsf_files=os.listdir('Data/COS_LSF')
 
 lines=data['LINE_ID']
