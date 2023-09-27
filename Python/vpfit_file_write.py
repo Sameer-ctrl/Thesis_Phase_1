@@ -3,7 +3,7 @@ from astropy.io import ascii
 import os
 from numpy import argmin, linspace, logical_and, mean, sqrt, hstack,vstack, where, zeros
 
-data=ascii.read('Data/abs_system.csv')
+data=ascii.read('Data/IGM_systems/hlsp_igm_hst_cos_pg0003_g130m-g160m_v3_igm-systems.txt')
 lsf_files=os.listdir('Data/COS_LSF')
 
 lines=data['LINE_ID']
