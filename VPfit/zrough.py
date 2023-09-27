@@ -4,7 +4,9 @@ from astropy.table import Table
 from numpy import *
 
 
-files=os.listdir('Data/IGM_Danforth_Data/Spectra')
+b='Spectra'
+
+files=os.listdir(f'Data/IGM_Danforth_Data/{b}')
 
 for file in files:
     ind=[]
@@ -13,4 +15,4 @@ for file in files:
             ind.append(i)
         
     qso=file[ind[3]+1:ind[4]]
-    os.rename(f'Data/IGM_Danforth_Data/Spectra/{file}',f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits')
+    os.rename(f'Data/IGM_Danforth_Data/{b}/{file}',f'Data/IGM_Danforth_Data/{b}/{qso}_spec.fits')
