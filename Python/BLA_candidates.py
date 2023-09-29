@@ -26,6 +26,7 @@ files=os.listdir('Data/IGM_Danforth_Data/Systems')
 for file in files:
         
     qso=file[:-16]
+    print(f'\n{qso}')
 
     data=ascii.read(f'Data/IGM_Danforth_Data/Systems/{file}')
     data.rename_columns(data.colnames,col_names)
@@ -60,7 +61,7 @@ for file in files:
         if 'OVI' in ions:
             n_BLA_OVI+=1
             z_plot_BLA_OVI.append(z)
-            # print(f'{z} : {metal_lines} : {ions} :{len(ions)}')
+            print(f'BLA and OVI  : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
 
     mask_BLA_metal_lines=logical_and(mask_BLA,n_metal_lines>=3)
@@ -70,7 +71,6 @@ for file in files:
 
     if n>0:
 
-        print(f'\n{qso}')
         i=0
         z_plot_BLA_OVI_metal_ions=[]
         for z in z_sys_BLA_metal_lines:
@@ -93,21 +93,22 @@ for file in files:
                 n_BLA_metal_ions+=1
                 i=1
 
-                print(f'{z} : {metal_lines} : {ions} :{len(ions)}')
+                print(f'Ions > 2     : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
                 'systems with OVI and other distinct metal ions >= 2'
 
                 if 'OVI' in ions:
                     n_BLA_OVI_metal_ions+=1
                     z_plot_BLA_OVI_metal_ions.append(z)
+                    print(f'OVI and ions : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
         n_qso_los+=i
 
-        plt.title(f'LOS : {qso}')
-        plt.scatter(z_plot_BLA_OVI,ones(len(z_plot_BLA_OVI)),label='BLA and OVI')
-        plt.scatter(z_plot_BLA_OVI_metal_ions,2*ones(len(z_plot_BLA_OVI_metal_ions)),label='BLA, OVI and metal ions')
-        plt.legend()
-        plt.show()
+        # plt.title(f'LOS : {qso}')
+        # plt.scatter(z_plot_BLA_OVI,ones(len(z_plot_BLA_OVI)),label='BLA and OVI')
+        # plt.scatter(z_plot_BLA_OVI_metal_ions,2*ones(len(z_plot_BLA_OVI_metal_ions)),label='BLA, OVI and metal ions')
+        # plt.legend()
+        # plt.show()
         
 
 print('\n----------------------------------\n')

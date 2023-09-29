@@ -4,15 +4,19 @@ from astropy.table import Table
 from numpy import *
 
 
-b='Spectra'
+a=1.23
 
-files=os.listdir(f'Data/IGM_Danforth_Data/{b}')
+print(f'{a:.6f}')
 
-for file in files:
-    ind=[]
-    for i,a in enumerate(file):
-        if a=='_':
-            ind.append(i)
+# b='Spectra'
+
+# files=os.listdir(f'Data/IGM_Danforth_Data/{b}')
+
+# for file in files:
+#     ind=[]
+#     for i,a in enumerate(file):
+#         if a=='_':
+#             ind.append(i)
         
-    qso=file[ind[3]+1:ind[4]]
-    os.rename(f'Data/IGM_Danforth_Data/{b}/{file}',f'Data/IGM_Danforth_Data/{b}/{qso}_spec.fits')
+#     qso=file[ind[3]+1:ind[4]]
+#     os.rename(f'Data/IGM_Danforth_Data/{b}/{file}',f'Data/IGM_Danforth_Data/{b}/{qso}_spec.fits')
