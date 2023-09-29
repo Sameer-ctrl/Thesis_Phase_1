@@ -4,11 +4,11 @@ import os
 from numpy import *
 
 
-qso='pg0003'
-spec='spec.fits'
-z_absorber=0.347
+qso='pks0405'
+spec=f'{qso}_cont_norm.asc'
+z_absorber=0.167125
 v_sep_lim=300
-ion='OVI'
+ion='CII'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -117,7 +117,7 @@ spectrum_lines=''
 
 for i,wr in enumerate(wave_range):
     lsf_file=lsf_file_search(*wr)
-    line=f'%% {spec} {i+1} {wr[0]:.3f} {wr[1]:.3f} pfinst={lsf_file} !\n'
+    line=f'%% {spec} {i+1} {wr[0]:.3f} {wr[1]:.3f} pfinst=LSF/{lsf_file} !\n'
     spectrum_lines+=line
 
 guess_line=''
@@ -133,9 +133,9 @@ for i in init_guess:
     guess_line+=line
 
 
-with open(f'fit.asc','w') as f:
+with open(f'{qso}/fit_{ion}.asc','w') as f:
     f.writelines([spectrum_lines,guess_line])
 
-with open(f'fit.asc','r') as f:
+with open(f'{qso}/fit_{ion}.asc','r') as f:
     print(f.read())
 
