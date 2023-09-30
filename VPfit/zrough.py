@@ -1,12 +1,49 @@
-import os
 from astropy.io import ascii
-from astropy.table import Table
 from numpy import *
+import subprocess
+import matplotlib.pyplot as plt
+import os
 
 
-a=1.23
 
-print(f'{a:.6f}')
+n=2
+
+file='fit_HI.asc'
+ip=''
+
+if n==1:
+    ip=f'f\n\n{file}\n\nas\n\n\n'
+
+else:
+    for i in range(1,n+1):
+        if i==1:
+            ip+=f'f\n\n{file}\n\n\nas\n\n\n\n'
+        
+        else:
+            ip+=f'\nas\nas\n\n\n\n'
+
+vpfit = subprocess.Popen(['vpfit'], stdin=subprocess.PIPE, stderr=subprocess.PIPE, text=True,shell=True)
+output, errors = vpfit.communicate(input=ip)
+
+
+for i in range(n):
+
+    data=loadtxt(f'vpfit_chunk00{i+1}.txt',comments='!')
+    wave=data[:,0]
+    flux=data[:,1]
+    cont=data[:,3]
+
+    plt.subplot(int(ceil(n/3)),3,i+1)
+    plt.plot(wave,cont,c='red')
+    plt.step(wave,flux,c='green')
+    plt.title(f'{i+1}',fontsize='20')
+
+
+os.system('rm vpfit_chunk*')
+plt.show()
+
+
+# -----------------------------
 
 # b='Spectra'
 
