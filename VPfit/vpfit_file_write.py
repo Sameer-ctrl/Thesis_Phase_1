@@ -8,7 +8,7 @@ qso='pks0405'
 spec=f'{qso}_cont_norm.asc'
 z_absorber=0.167125
 v_sep_lim=300
-ion='CII'
+ion='SiIV'
 
 lsf_files=os.listdir('Data/COS_LSF')
 

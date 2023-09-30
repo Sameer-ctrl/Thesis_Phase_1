@@ -1,0 +1,22 @@
+OVI :
+	OVI 1038 seems to be contaminated, so only OVI 1032 has been fitted.
+
+CII :
+	CII 1036 seems to be contaminated, so only CII 1334 has been fitted.
+
+OI:
+	Very shallow
+
+NII:
+	two very nearby components
+
+NIII:
+	maybe a little contamination on the wings
+
+SiIII:
+	great fit!
+
+NV:
+	contamination from Lyb from z=0.408816
+
+
