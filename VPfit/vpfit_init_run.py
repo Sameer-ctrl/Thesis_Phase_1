@@ -1,14 +1,16 @@
 from astropy.io import ascii
 from astropy.table import Table
 import os
+import subprocess
 from numpy import *
+import matplotlib.pyplot as plt
 
 
 qso='pks0405'
 spec=f'{qso}_cont_norm.asc'
 z_absorber=0.167125
 v_sep_lim=300
-ion='SiIV'
+ion=''
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -138,4 +140,57 @@ with open(f'{qso}/fit_{ion}.asc','w') as f:
 
 with open(f'{qso}/fit_{ion}.asc','r') as f:
     print(f.read())
+
+os.chdir(f'{qso}')
+
+# os.system(f'gedit fit_{ion}.asc')
+
+n=len(wave_range)
+
+file=f'fit_{ion}.asc'
+ip=''
+
+if n==1:
+    ip=f'f\n\n{file}\n\nas\n\n\n'
+
+else:
+    for i in range(1,n+1):
+        if i==1:
+            ip+=f'f\n\n{file}\n\n\nas\n\n\n\n'
+        
+        else:
+            ip+=f'\nas\nas\n\n\n\n'
+            
+
+vpfit = subprocess.Popen(['vpfit'], stdin=subprocess.PIPE, stderr=subprocess.PIPE, text=True,shell=True)
+output, errors = vpfit.communicate(input=ip)
+
+
+if n==1:
+    subplot_shape= [1,1]
+
+elif n==2:
+    subplot_shape= [1,2]
+
+elif 2<n<=4:
+    subplot_shape=[2,2]
+
+else:
+    subplot_shape= [int(ceil(n/3)),3]
+
+
+for i in range(n):
+
+    data=loadtxt(f'vpfit_chunk00{i+1}.txt',comments='!')
+    wave=data[:,0]
+    flux=data[:,1]
+    cont=data[:,3]
+
+    plt.subplot(*subplot_shape,i+1)
+    plt.plot(wave,cont,c='red')
+    plt.step(wave,flux,c='green')
+    plt.title(f'{i+1}')
+
+os.system('rm vpfit_chunk*')
+plt.show()
 
