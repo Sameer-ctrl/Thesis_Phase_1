@@ -131,7 +131,7 @@ for i in init_guess:
     for param in i:
         i_str+=f'{param}   '
 
-    line=f'{ion} {i_str} 0 ! \n'
+    line=f'{ion}     {i_str} 0 ! \n'
     guess_line+=line
 
 
@@ -140,6 +140,8 @@ with open(f'{qso}/fit_{ion}.asc','w') as f:
 
 with open(f'{qso}/fit_{ion}.asc','r') as f:
     print(f.read())
+
+pause=input('Press Enter to continue')
 
 os.chdir(f'{qso}')
 

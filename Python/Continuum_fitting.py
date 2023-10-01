@@ -40,6 +40,7 @@ norm_err_col=Column(name='NORMALIZED_ERROR',data=err/spec.co)
 
 new_table.add_columns([wave_col,norm_flux_col,norm_err_col])
 new_table.write(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc', format='ascii', overwrite=True)
+new_table.write(f'../VPfit/{qso}/{qso}_cont_norm.asc', format='ascii', overwrite=True)
 
 # new_table.add_columns([wave_col,flux_col,err_col,cont_col,norm_flux_col,norm_err_col])
 # new_table.write(f'{file[:-5]}_unbinned.fits', format='fits', overwrite=True)

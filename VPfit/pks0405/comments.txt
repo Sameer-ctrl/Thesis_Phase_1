@@ -4,6 +4,9 @@ OVI :
 CII :
 	CII 1036 seems to be contaminated, so only CII 1334 has been fitted.
 
+CIII : 
+	Great fit
+
 OI:
 	Very shallow
 
@@ -13,10 +16,33 @@ NII:
 NIII:
 	maybe a little contamination on the wings
 
-SiIII:
-	great fit!
-
 NV:
 	contamination from Lyb from z=0.408816
 
+SiIII:
+	great fit!
 
+SiIV:
+	Low SNR 1st component
+	Should consider more uncertainity in logN of this component
+
+SiII:
+	SiII 1526 has low S/N, so dropped from fitting
+	Has other nearby lines, didn't fit now, but could be fitted.
+
+HI:
+	Lyg contaminated with galactic (ISM) NI 1134
+	Same problem as always with HI, some show some components, some show other 	components
+ 
+Lya
+ H I      0.1669342491    0.0000158407   107.43341      3.33445  14.115669    0.057806  0 !
+ H I      0.1665854096    0.0000056754    15.73860      2.98302  13.067180    0.076863  0 !
+ H I      0.1671083501    0.0000033331    44.89764      2.14149  15.065766    0.071996  0 !
+
+Lyb
+ H I      0.1666762973    0.0001984330   118.11076     46.32214  13.859353    0.222539  0 !
+ H I      0.1671116532    0.0000013723    37.11682      1.56490  15.783518    0.077605  0 !
+
+Lyg
+ H I      0.1670435644    0.0000070977    37.71294      5.19653  15.892431    0.192655  0 !
+ N I     -0.0000039951    0.0000048214     6.28010      0.94240  18.839580    0.186428  0 !
