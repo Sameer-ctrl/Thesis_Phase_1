@@ -1,0 +1,7 @@
+%% pks0405_cont_norm.asc     1   1388.2000   1390.1000 pfinst=LSF/cos_G130M_lsf_1388_lt  !  0.000000    63 2023/10/01
+%% pks0405_cont_norm.asc     1   1779.2100   1783.6000 pfinst=LSF/cos_G160M_lsf_1782_lt  !  0.004716   120   2
+%% pks0405_cont_norm.asc     1   1521.8000   1523.0000 pfinst=LSF/cos_G160M_lsf_1522_lt  !  0.003544    33   3
+%% pks0405_cont_norm.asc     1   1469.8000   1471.6000 pfinst=LSF/cos_G160M_lsf_1471_lt  !  0.000000    49   4
+%% pks0405_cont_norm.asc     1   1391.8000   1393.3000 pfinst=LSF/cos_G130M_lsf_1393_lt  !  0.000000    50   5
+! Stats:   1     5.5407314  315  315  0.000  0  AICc:    1745.33        
+ SiII     0.1671099024A   0.0000000000    15.43042A     0.00000  13.236619A   0.000000  0 ! 
