@@ -1,0 +1,30 @@
+NV:
+	Weak line
+
+NII:
+	Shows a little asymmetric right wing, but couldn't fit 2 components
+
+PII:
+	Very weak line
+
+SiIII:
+	Good fit
+
+SiIV:
+	Very narrow line. So error are overestimated.
+	Errors from chi-sq : b - 0.4     logN - 0.04
+
+OVI:
+	Good fit
+
+CIV:
+	Little noisy CIV_1550
+	Currently both lines are fitted together
+
+CII:
+	Best what we can get for both the lines, though visually not good.
+	Fitting one doesn't fit other.
+
+ 
+	
+

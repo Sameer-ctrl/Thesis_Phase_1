@@ -10,7 +10,7 @@ qso='pg1116'
 spec=f'{qso}_cont_norm.asc'
 z_absorber=0.138527
 v_sep_lim=300
-ion=''
+ion='SiII'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -191,7 +191,9 @@ for i in range(n):
     plt.plot(wave,cont,c='red')
     plt.step(wave,flux,c='green')
     plt.title(f'{i+1}')
+    plt.ylim(0,1.3)
 
 os.system('rm vpfit_chunk*')
+
 plt.show()
 

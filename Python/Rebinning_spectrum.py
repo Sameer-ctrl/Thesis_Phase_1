@@ -35,6 +35,8 @@ rebin_err=rebin_spec.sig
 
 'Continuum fitting'
 
+file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
+z=float(file_systems.readlines()[16].split(' ')[1])
 
 spec = XSpectrum1D.from_tuple((rebin_wave,rebin_flux,rebin_err))
 spec.fit_continuum(kind='QSO', redshift=z)
