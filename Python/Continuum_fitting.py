@@ -5,7 +5,7 @@ from astropy.io import fits
 from astropy.table import Table,Column
 from numpy import *
 
-qso='pks0405'
+qso='pg1116'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -22,25 +22,22 @@ err=data['ERR']
 spec = XSpectrum1D.from_tuple((wave,flux,err))
 spec.fit_continuum(kind='QSO', redshift=z)
 
+cont=spec.co
+
+tab=Table()
+
+wave_col=Column(name='WAVE',data=wave)
+flux_col=Column(name='FLUX',data=flux/cont)
+err_col=Column(name='ERROR',data=err/cont)
+
+tab.add_columns([wave_col,flux_col,err_col])
+tab.write(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc', format='ascii', overwrite=True)
+tab.write(f'../VPfit/{qso}/{qso}_cont_norm.asc', format='ascii', overwrite=True)
 
 plt.step(wave,flux,label='spectrum')
 plt.plot(wave,spec.co,label='continuum')
 plt.legend()
 plt.show()
-
-cont_col=Column(name='CONT_FLUX',data=spec.co)
-
-new_table=Table()
-
-wave_col=Column(name='WAVE',data=wave)
-flux_col=Column(name='FLUX',data=flux)
-err_col=Column(name='ERROR',data=err)
-norm_flux_col=Column(name='NORMALISED_FLUX',data=flux/spec.co)
-norm_err_col=Column(name='NORMALIZED_ERROR',data=err/spec.co)
-
-new_table.add_columns([wave_col,norm_flux_col,norm_err_col])
-new_table.write(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc', format='ascii', overwrite=True)
-new_table.write(f'../VPfit/{qso}/{qso}_cont_norm.asc', format='ascii', overwrite=True)
 
 # new_table.add_columns([wave_col,flux_col,err_col,cont_col,norm_flux_col,norm_err_col])
 # new_table.write(f'{file[:-5]}_unbinned.fits', format='fits', overwrite=True)

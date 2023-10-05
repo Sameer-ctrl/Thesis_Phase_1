@@ -6,9 +6,9 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pks0405'
+qso='pg1116'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.167125
+z_absorber=0.138527
 v_sep_lim=300
 ion=''
 
@@ -145,7 +145,6 @@ pause=input('Press Enter to continue')
 
 os.chdir(f'{qso}')
 
-# os.system(f'gedit fit_{ion}.asc')
 
 n=len(wave_range)
 
