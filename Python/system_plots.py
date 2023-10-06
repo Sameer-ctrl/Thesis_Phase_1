@@ -195,6 +195,7 @@ plt.legend(bbox_to_anchor=(-1,4.4), loc='upper center',ncols=3,fontsize=30)
 # plt.text(0.15, 1.03, f'{{\\fontsize{{30pt}}{{3em}}\selectfont{{}}$\mathbf{{{qso}}}$}}', fontsize=30, transform=plt.gcf().transFigure)
 plt.text(0.4, 1.1, f'$\mathbf{{{qso} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/{qso}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/{qso}_sys_plot.png')
 
 # plt.show()  
 
