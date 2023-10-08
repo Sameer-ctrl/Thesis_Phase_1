@@ -5,7 +5,7 @@ from astropy.io import fits
 from astropy.table import Table,Column
 from numpy import *
 
-qso='pg1116'
+qso='h1821'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -17,6 +17,10 @@ data=Table(hdu[1].data)
 wave=data['WAVE']
 flux=data['FLUX']
 err=data['ERR']
+
+plt.step(wave,flux)
+plt.step(wave,err)
+plt.show()
 
 
 spec = XSpectrum1D.from_tuple((wave,flux,err))

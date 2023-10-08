@@ -1,0 +1,10 @@
+HI:
+	Good fit
+
+SiIII:
+	Weak line. Fitted with one component now. Always ambiguous on number of components for weak lines.
+
+
+NV:
+	
+
