@@ -7,3 +7,7 @@ SiIII:
 NV:
 	
 
+OVI:
+	OVI 1038 is strongly contaminated by ISM Lyα absorption and geocoronal emission (savage et al)
+	Couldn't fit OVI 1032
+
