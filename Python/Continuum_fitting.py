@@ -22,6 +22,7 @@ plt.step(wave,flux)
 plt.step(wave,err)
 plt.show()
 
+quit()
 
 spec = XSpectrum1D.from_tuple((wave,flux,err))
 spec.fit_continuum(kind='QSO', redshift=z)
