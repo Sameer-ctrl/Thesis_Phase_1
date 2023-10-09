@@ -6,11 +6,11 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pg1116'
+qso='h1821'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.138527
+z_absorber=0.170062
 v_sep_lim=300
-ion='HI'
+ion='NV'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -62,6 +62,8 @@ def init_guess_contamination(z_sys_uniq,ion):
 
         init_guess=vstack((guess_z,zeros(len(guess_z)),guess_b,zeros(len(guess_z)),guess_logN,zeros(len(guess_z)))).transpose()
 
+        # print(z,init_guess,len(init_guess)>0)
+
         if len(init_guess)>0:
             # print(f'init_guess : {init_guess[0]}')
             # print(f'range : {wave_range} \n')
@@ -69,7 +71,7 @@ def init_guess_contamination(z_sys_uniq,ion):
 
             for wr in wave_range:
                 wave_range_list.append(wr)
-
+    
     wave=data_linelist['WAVELENGTH']
     table=[]
 

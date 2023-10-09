@@ -1,15 +1,15 @@
 import matplotlib.pyplot as plt
-from numpy import loadtxt,ceil
+from numpy import loadtxt,ceil, unique
 from astropy.io import ascii
 import os
 
 plt.style.use('my_style.mpl')
 
-qso='pks0405'
+qso='pg1116'
 file_path=f'../VPfit/{qso}/VPfit_chunks'
 
 files=os.listdir(f'{file_path}')
-z_abs=0.167116  
+z_abs=0.138527  
 
 data=loadtxt('Data/rest_wave.txt',dtype=str)
 
@@ -33,21 +33,24 @@ def file_group(x):
     
     return grouped
 
-# wave_obs={rest_wave['HI_1215']:[1638.23436,1637.23542,1638.61559],rest_wave['HI_1025']:[1382.36100,1382.55866,1382.79019],rest_wave['HI_972']:[1310.56725],rest_wave['OVI_1032']:[1390.60515,1390.91597],rest_wave['OVI_1038']:[1398.27370,1398.58624],rest_wave['CII_1036']:[1396.94145],rest_wave['CIII_977']:[1316.52808,1316.94620],rest_wave['SiII_1260']:[1698.99935],rest_wave['SiIII_1206']:[1626.31495]}
-# wave_rest=[1215,1025,972,1032,1038,1036,977,1260,1206]
 
-# z=[]
+lines=[]
 
-# for i in wave_obs:
-#     for j in wave_obs[i]:
-#         z.append((j-i)/i)
+for file in files:
+    a=file.split('_')
+    
+    if len(a)==3:
+        lines.append(f'{a[0]}_{a[1]}')
+    
+    else:
+        b=a[1].split('.')[0]
+        lines.append(f'{a[0]}_{b}')
 
-# print(z)
+lines=unique(lines)
 
-# plt.hist(z,bins='auto')
-# plt.show()
-lines=['HI_1215','OVI_1032','CII_1036','CII_1334','HI_1025','OVI_1038','CIII_977','SiII_1260','SiIII_1206','SiII_1193','SiII_1304','SiII_1190','SiII_1526','SiIV_1393','SiIV_1402','OI_1302','NII_1083','NIII_989','NV_1238','NV_1242']
-line_label={'HI_1215':['H','I','1215'],'OVI_1032':['O','VI','1032'],'CII_1036':['C','II','1036'],'CII_1334':['C','II','1334'],'HI_1025':['H','I','1025'],'OVI_1038':['O','VI','1038'],'OI_1302':['O','I','1302'],'CIII_977':['C','III','977'],'HI_972':['H','I','972'],'SiII_1260':['Si','II','1260'],'SiII_1190':['Si','II','1190'],'SiII_1193':['Si','II','1193'],'SiII_1304':['Si','II','1304'],'SiII_1526':['Si','II','1526'],'SiIII_1206':['Si','III','1206'],'SiIV_1393':['Si','IV','1393'],'SiIV_1402':['Si','IV','1402'],'NII_1083':['N','II','1083'],'NIII_989':['N','III','989'],'NV_1238':['N','V','1238'],'NV_1242':['N','V','1242']}
+
+# lines=['HI_1215','OVI_1032','CII_1036','CII_1334','HI_1025','OVI_1038','SiII_1260','SiIII_1206','SiII_1193','SiII_1190','SiIV_1393','NII_1083','NIII_989','NV_1238','NV_1242']
+line_label={'HI_1215':['H','I','1215'],'OVI_1032':['O','VI','1032'],'CII_1036':['C','II','1036'],'CII_1334':['C','II','1334'],'HI_1025':['H','I','1025'],'OVI_1038':['O','VI','1038'],'OI_1302':['O','I','1302'],'CIII_977':['C','III','977'],'CIV_1548':['C','IV','1548'],'CIV_1550':['C','IV','1550'],'HI_972':['H','I','972'],'SiII_1260':['Si','II','1260'],'SiII_1190':['Si','II','1190'],'SiII_1193':['Si','II','1193'],'SiII_1304':['Si','II','1304'],'SiII_1526':['Si','II','1526'],'SiIII_1206':['Si','III','1206'],'SiIV_1393':['Si','IV','1393'],'SiIV_1402':['Si','IV','1402'],'NII_1083':['N','II','1083'],'NIII_989':['N','III','989'],'NV_1238':['N','V','1238'],'NV_1242':['N','V','1242'],'PII_1152':['P','II','1152']}
 # lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918']
 
 n=len(lines)
@@ -188,9 +191,12 @@ for i in range(n):
 fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=-0.02)  #y=0.18  (y=0 for lyman)
 fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(-1,5.5), loc='upper center',ncols=3,fontsize=30)
-# plt.legend(bbox_to_anchor=(1,6.5), loc='upper center',ncols=3)  #(1,6.5) for lyman 
+plt.legend(bbox_to_anchor=(-1,4.4), loc='upper center',ncols=3,fontsize=30)
+# plt.text(0.15, 1.03, f'{{\\fontsize{{30pt}}{{3em}}\selectfont{{}}$\mathbf{{{qso}}}$}}', fontsize=30, transform=plt.gcf().transFigure)
+plt.text(0.4, 1.1, f'$\mathbf{{{qso} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/{qso}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/{qso}_sys_plot.png')
+
 # plt.show()  
 
 
