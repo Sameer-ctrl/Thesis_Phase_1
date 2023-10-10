@@ -1,0 +1,12 @@
+SiIII:
+	good fit
+
+CIII:
+	Nice fit
+
+OVI:
+	Good fit, but 2nd component has low b value of ~1km/s.
+
+HI:
+
+
