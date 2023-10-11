@@ -6,11 +6,11 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='h1821'
+qso='3c263'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.224832
+z_absorber=0.140754
 v_sep_lim=300
-ion='OVI'
+ion='CIV'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -137,10 +137,10 @@ for i in init_guess:
     guess_line+=line
 
 
-with open(f'{qso}/fit_{ion}.asc','w') as f:
+with open(f'{qso}/{ion}','w') as f:
     f.writelines([spectrum_lines,guess_line])
 
-with open(f'{qso}/fit_{ion}.asc','r') as f:
+with open(f'{qso}/{ion}','r') as f:
     print(f.read())
 
 pause=input('Press Enter to continue')
@@ -150,7 +150,7 @@ os.chdir(f'{qso}')
 
 n=len(wave_range)
 
-file=f'fit_{ion}.asc'
+file=f'{ion}'
 ip=''
 
 if n==1:
