@@ -1,3 +1,4 @@
+from curses.ascii import isupper
 from astropy.io import ascii
 from numpy import *
 import subprocess
@@ -5,6 +6,27 @@ import matplotlib.pyplot as plt
 import os
 
 
+
+# a='HI_1215'
+a='HeeeII_1206'
+
+def line_label(line):
+
+    for i,s in enumerate(line):
+        if s.isupper():
+            if i==0:
+                pass
+            else:
+                break
+
+    ion=line[:i]
+    n,wave=line[i:].split('_')
+
+    return ion,n,wave
+
+line_label('RdII_1206')
+
+quit()
 
 n=2
 
