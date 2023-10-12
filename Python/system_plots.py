@@ -5,9 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pks0405'
-z_abs=0.167125 
+qso='3c263'
+z_abs=0.140756 
 vlim=380
+n_col=3
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
@@ -126,8 +127,6 @@ def abs_line_plot(line):
 
 fig=plt.figure(figsize=(40,20),dpi=300)
 
-n_col=5
-
 ax1=plt.subplot(int(ceil(n/n_col)),n_col,1)
 
 for i,line in enumerate(lines):
@@ -155,7 +154,7 @@ fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/{qso_label}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/{qso_label}_sys_plot.png')
+plt.savefig(f'Files_n_figures/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
 
-# plt.show() 
+# plt.show()  

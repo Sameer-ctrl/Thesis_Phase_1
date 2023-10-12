@@ -10,7 +10,7 @@ qso='3c263'
 spec=f'{qso}_cont_norm.asc'
 z_absorber=0.140754
 v_sep_lim=300
-ion='CIV'
+ion='HI'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
