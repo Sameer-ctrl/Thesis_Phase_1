@@ -1,0 +1,12 @@
+SiIII:
+	Good fit. Has OVI line on the left, didn't fit now, but could be fitted.
+
+CIV:
+	CIV 1548 has contamination on right from Ly alpha lines at z=0.453561 and 0.453904
+
+OVI:
+	Good fit
+
+HI:
+	Good fit
+
