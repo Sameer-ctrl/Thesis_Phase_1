@@ -26,7 +26,7 @@ CII:
 	Fitting one doesn't fit other.
 
 HI:
-	Not sure how many components to fit. Linelist gives two components for Lya but one 	for Lyb. Savage et. al fitted 3 components. Currently fitted with 2 components, but 	none are BLA. Fitting 3 components do gives a large b(~80) for one component but gives low b (~10) for one component also. Other Lyman transitions are not in COS coverage, but Savage et al. used those to fit.
+	Not sure how many components to fit. Linelist gives two components for Lya but one 	for Lyb. Savage et. al fitted 3 components. Currently fitted with 2 components, but none are BLA. Fitting 3 components do gives a large b(~80) for one component but gives low b (~10) for one component also. Other Lyman transitions are not in COS coverage, but Savage et al. used those from STIS to fit.
 
 SiII:
 	 

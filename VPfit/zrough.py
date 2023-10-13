@@ -24,7 +24,6 @@ def line_label(line):
 
     return ion,n,wave
 
-line_label('RdII_1206')
 
 quit()
 
