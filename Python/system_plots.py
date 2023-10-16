@@ -5,10 +5,11 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='3c263'
-z_abs=0.140756 
+qso='h1821'
+z_abs=0.224981
 vlim=380
 n_col=3
+vsep=20
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
@@ -103,14 +104,24 @@ def abs_line_plot(line):
 
             wave=data[:,0]
             cont=data[:,3]
+
             v=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
 
-            plt.plot(v,cont,ls='--')
+            if line=='HI_1215':
+                plt.plot(v-vsep,cont,ls='--')
+
+            else:
+                plt.plot(v,cont,ls='--')
 
     plt.hlines(1,-5000,5000,ls='--',lw=1,color='black')
     plt.hlines(0,-5000,5000,ls='--',lw=1,color='black')
     plt.vlines(0,-1,2,ls='--',lw=1,color='black')
-    plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
+
+    if line=='HI_1215':
+        plt.plot(v1-vsep,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
+
+    else:
+        plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
     plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
     
     for i in range(len(line)):
@@ -154,7 +165,7 @@ fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/{qso_label}_z={z_abs}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+# plt.savefig(f'Files_n_figures/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_shifted_sys_plot.png')
 
 # plt.show()  
