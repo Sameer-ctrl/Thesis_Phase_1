@@ -1,0 +1,11 @@
+SiIII:
+	Good fit
+
+CIII:
+	Good fit
+
+OVI:
+	Excluded OVI 1038 from fit, looks little noisy. and I component comes to be quite (b~58 km/s) broad
+
+HI:
+	
