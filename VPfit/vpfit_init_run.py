@@ -6,9 +6,9 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='3c263'
+qso='pg1216'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.140754
+z_absorber=0.282195
 v_sep_lim=300
 ion='HI'
 
@@ -62,8 +62,6 @@ def init_guess_contamination(z_sys_uniq,ion):
 
         init_guess=vstack((guess_z,zeros(len(guess_z)),guess_b,zeros(len(guess_z)),guess_logN,zeros(len(guess_z)))).transpose()
 
-        # print(z,init_guess,len(init_guess)>0)
-
         if len(init_guess)>0:
             # print(f'init_guess : {init_guess[0]}')
             # print(f'range : {wave_range} \n')
@@ -71,13 +69,13 @@ def init_guess_contamination(z_sys_uniq,ion):
 
             for wr in wave_range:
                 wave_range_list.append(wr)
-    
+
     wave=data_linelist['WAVELENGTH']
     table=[]
 
-    if len(init_guess)>0:
+    if len(init_guess_list)>0:
 
-        for wr in wave_range:
+        for wr in wave_range_list:
 
             mask=logical_and(wave>=wr[0],wave<=wr[1])
 
@@ -85,7 +83,7 @@ def init_guess_contamination(z_sys_uniq,ion):
             table.append(data)
 
         table=Table(hstack([*table]))  
-    
+        
     unique_wave_range=[]
 
     for wr in wave_range_list:
@@ -184,7 +182,13 @@ else:
 
 for i in range(n):
 
-    data=loadtxt(f'vpfit_chunk00{i+1}.txt',comments='!')
+    if i<9:
+        name=f'vpfit_chunk00{i+1}.txt'
+
+    else:
+        name=f'vpfit_chunk0{i+1}.txt'
+
+    data=loadtxt(name,comments='!')
     wave=data[:,0]
     flux=data[:,1]
     cont=data[:,3]
