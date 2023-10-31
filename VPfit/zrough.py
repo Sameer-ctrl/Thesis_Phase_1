@@ -6,6 +6,35 @@ import matplotlib.pyplot as plt
 import os
 
 
+# files=os.listdir('pg1216/HI_chunks')
+
+os.chdir('pg1216')
+
+rest_wave=[1215,1025,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
+
+for i,wave in enumerate(rest_wave):
+
+    if i<9:
+        file=f'vpfit_chunk00{i+1}.txt'
+
+    else:
+        file=f'vpfit_chunk0{i+1}.txt'
+
+    
+    if i<13:
+        os.rename(file,f'HI_{wave}_2.txt')
+    
+    else:
+        os.rename(file,f'{wave}_2.txt')
+
+
+
+
+
+
+
+
+quit()
 # a='HI_1215'
 a='HeeeII_1206'
 
