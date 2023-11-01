@@ -1,0 +1,13 @@
+!%% pks0637_cont_norm.asc 1 1721.6 1724.9 pfinst=LSF/cos_G160M_lsf_1722_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 2 1452.8 1455 pfinst=LSF/cos_G160M_lsf_1454_ltpos_3.dat !
+%% pks0637_cont_norm.asc 3 1377.6 1379.6 pfinst=LSF/cos_G130M_lsf_1378_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 4 1345.4 1347 pfinst=LSF/cos_G130M_lsf_1345_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 5 1328.2 1330.4 pfinst=LSF/cos_G130M_lsf_1328_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 6 1318.4 1320.1 pfinst=LSF/cos_G130M_lsf_1317_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 7 1312.2 1313.7 pfinst=LSF/cos_G130M_lsf_1312_ltpos_3.dat !
+!%% pks0637_cont_norm.asc 8 1307.7 1309.7 pfinst=LSF/cos_G130M_lsf_1307_ltpos_3.dat !
+!H I      0.4174466395A    0.0000073949    30.04463A      1.45930  15.410618A    0.026802  0 ! 
+H I       0.4176439851A    0.0000029802    45.74984A      3.73329  14.611473A    0.065552  0 ! 
+!N III    0.4685407421A    0.0000182180    15.47755A      5.88010  13.868735A    0.093377  0 ! 
+!C I      0.0000286262A   0.0000000000    14.20873A     16.87339  13.454811A    0.224179  0 ! 
+!H I      0.0766894119A    0.0000072537    35.22731A      2.99336  14.058239A    0.036137  0 ! 

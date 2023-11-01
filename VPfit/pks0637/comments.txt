@@ -1,2 +1,0 @@
-NV:
-	Has OVI from z=0.386432 on right. Not much strong line, fitted with one component.

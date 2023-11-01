@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1216'
-z_abs=0.282286
+qso='pks0637'
+z_abs=0.417539
 vlim=350
 n_col=3
 vsep=0
@@ -59,9 +59,10 @@ def file_group(x):
 
 # lines=unique(lines)
 
+lines=['HI_1215','OVI_1032','SiIII_1206','HI_1025','OVI_1038','CIII_977','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923']
 # lines=['HI_1215','OVI_1032','CIII_977','HI_1025','OVI_1038','SiIII_1206','HI_972','HI_949','HI_937']
 # line_label={'HI_1215':['H','I','1215'],'HI_1025':['H','I','1025'],'HI_972':['H','I','972'],'HI_949':['H','I','949'],'HI_937':['H','I','937'],'HI_930':['H','I','930'],'OVI_1032':['O','VI','1032'],'CII_1036':['C','II','1036'],'CII_1334':['C','II','1334'],'HI_1025':['H','I','1025'],'OVI_1038':['O','VI','1038'],'OI_1302':['O','I','1302'],'CIII_977':['C','III','977'],'CIV_1548':['C','IV','1548'],'CIV_1550':['C','IV','1550'],'HI_972':['H','I','972'],'SiII_1260':['Si','II','1260'],'SiII_1190':['Si','II','1190'],'SiII_1193':['Si','II','1193'],'SiII_1304':['Si','II','1304'],'SiII_1526':['Si','II','1526'],'SiIII_1206':['Si','III','1206'],'SiIV_1393':['Si','IV','1393'],'SiIV_1402':['Si','IV','1402'],'NII_1083':['N','II','1083'],'NIII_989':['N','III','989'],'NV_1238':['N','V','1238'],'NV_1242':['N','V','1242'],'PII_1152':['P','II','1152']}
-lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918','HI_917','HI_916']
+# lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918','HI_917','HI_916']
 
 def line_label(line):
 
@@ -95,9 +96,20 @@ def abs_line_plot(line):
 
     plt.step(v2,flux_spec,c='green',lw=2,label=r'$\mathbf{Flux}$')
 
-    n=len(file_group(line))-1
-    if n>0:
-        for i in range(n):
+    vpfit_chunks=file_group(line)
+
+    n=len(vpfit_chunks)-1
+    m=0
+
+    for f in vpfit_chunks:
+        splitted=f.split('_')
+        if len(splitted)>2:
+            if splitted[2][:4]=='cont':
+                m+=1
+
+    if n-m>0:
+
+        for i in range(n-m):
 
             comp=i+1
             data=loadtxt(f'{file_path}/{line}_{comp}.txt',comments='!')
@@ -107,18 +119,30 @@ def abs_line_plot(line):
 
             v=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
 
-            # if line=='HI_1215':
-            #     plt.plot(v-vsep,cont,ls='--')
-
-            # else:
             plt.plot(v,cont,ls='--')
+
+    if m>0:
+
+        for i in range(m):
+
+            if m==1:
+                data=loadtxt(f'{file_path}/{line}_cont.txt',comments='!')
+
+            else:
+                data=loadtxt(f'{file_path}/{line}_cont{i+1}.txt',comments='!')
+
+            wave=data[:,0]
+            cont=data[:,3]
+
+            v=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
+
+            plt.plot(v,cont,ls='--',c='black')
+
+
 
     plt.hlines(1,-5000,5000,ls='--',lw=1,color='black')
     plt.hlines(0,-5000,5000,ls='--',lw=1,color='black')
     plt.vlines(0,-1,2,ls='--',lw=1,color='black')
-
-    # if line=='HI_1215':
-    #     plt.plot(v1-vsep,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
 
     plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
     plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
@@ -164,7 +188,7 @@ fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/{qso_label}_z={z_abs}_Ly_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_Ly_sys_plot.png')
+plt.savefig(f'Files_n_figures/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
 
 # plt.show()  

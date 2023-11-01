@@ -8,9 +8,10 @@ import os
 
 # files=os.listdir('pg1216/HI_chunks')
 
-os.chdir('pg1216')
+os.chdir('pks0637')
 
 rest_wave=[1215,1025,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
+comp=2
 
 for i,wave in enumerate(rest_wave):
 
@@ -22,10 +23,10 @@ for i,wave in enumerate(rest_wave):
 
     
     if i<13:
-        os.rename(file,f'HI_{wave}_2.txt')
+        os.rename(file,f'HI_{wave}_{comp}.txt')
     
     else:
-        os.rename(file,f'{wave}_2.txt')
+        os.rename(file,f'{wave}_{comp}.txt')
 
 
 

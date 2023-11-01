@@ -1,0 +1,14 @@
+SiIII:
+	 A little doubt on continuum. Contaminated with galactic NiII 1709. 
+
+CIII:
+	Good fit. Seems like something is there at right wing. Nothing in the line list
+
+OVI:
+	Good fit
+
+HI:
+	Lyb contaminated from NIII 989 from z=0.468541
+	Lye contaminated from galactic CI 1328
+	Ly8 contaminated from Lya from z=0.076689 
+

@@ -1,0 +1,13 @@
+NV:
+	Has OVI 1038 from z=0.386432 on right. Not much strong line, fitted with one component.
+
+SiIII:
+	Good fit
+
+OVI :
+	Satisfactory fit
+
+HI:
+	Good fit. Ly-a has Ly-g on right,this contamination is fitted with two components.  Ly-beta has contamination from galactic SiII lines.
+	This contamination is fitted with 3 components.
+	Ly-a has very large b value (~162 km/s) and Ly-b has almost negligible contribution from the first component.

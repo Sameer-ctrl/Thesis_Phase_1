@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 
 qso='pks0637'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.161068
+z_absorber=0.417573
 v_sep_lim=300
-ion='NV'
+ion='HI'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
