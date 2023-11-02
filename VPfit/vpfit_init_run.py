@@ -6,9 +6,9 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pks0637'
+qso='pg0003'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.417573
+z_absorber=0.421880
 v_sep_lim=300
 ion='HI'
 

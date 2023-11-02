@@ -1,0 +1,8 @@
+CIII:
+	Good fit
+
+OIII: 
+	Good fit, but a little less chi-sq of 0.68
+
+OVI:
+	
