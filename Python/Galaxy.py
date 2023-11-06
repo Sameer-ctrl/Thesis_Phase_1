@@ -23,8 +23,8 @@ def L_by_Lstar(m_I,M_star):
 
     print(L_by_Lstar_val)
 
-L_by_Lstar(17.8,-21.64)
-# quit()
+L_by_Lstar(21.719,-21.64)
+quit()
 
 v_abs=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))
 z1=sqrt((1+((v_abs+1000)/3e5))/(1-((v_abs+1000)/3e5)))-1

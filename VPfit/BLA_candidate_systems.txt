@@ -250,11 +250,11 @@ pg1216*  : 3   #
 --------------------------------------------------------------------
 
 Systems with BLA and metal lines >=3               : 42
-Systems with BLA and distinct metal ions >=3       : 29
+Systems with BLA and distinct metal ions >=3       : 29 (-1)
 No. of los with BLA and distinct metal ions >= 3   : 22
-Systems with BLA                                   : 569
+Systems with BLA                                   : 569 (-1)
 Systems with BLA and OVI                           : 69
-Systems with BLA, OVI and other metal ions >=2     : 17
+Systems with BLA, OVI and other metal ions >=2     : 17 (-1)
 
 
 ton1187

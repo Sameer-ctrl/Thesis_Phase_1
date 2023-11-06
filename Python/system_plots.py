@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pks0637'
-z_abs=0.417539
+qso='pg0003'
+z_abs=0.421876
 vlim=350
 n_col=3
 vsep=0
@@ -45,21 +45,21 @@ def file_group(x):
     
     return grouped
 
-# lines=[]
+lines=[]
 
-# for file in files:
-#     a=file.split('_')
+for file in files:
+    a=file.split('_')
     
-#     if len(a)==3:
-#         lines.append(f'{a[0]}_{a[1]}')
+    if len(a)==3:
+        lines.append(f'{a[0]}_{a[1]}')
     
-#     else:
-#         b=a[1].split('.')[0]
-#         lines.append(f'{a[0]}_{b}')
+    else:
+        b=a[1].split('.')[0]
+        lines.append(f'{a[0]}_{b}')
 
-# lines=unique(lines)
+lines=unique(lines)
 
-lines=['HI_1215','OVI_1032','SiIII_1206','HI_1025','OVI_1038','CIII_977','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923']
+# lines=['HI_1215','OVI_1032','SiIII_1206','HI_1025','OVI_1038','CIII_977','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923']
 # lines=['HI_1215','OVI_1032','CIII_977','HI_1025','OVI_1038','SiIII_1206','HI_972','HI_949','HI_937']
 # line_label={'HI_1215':['H','I','1215'],'HI_1025':['H','I','1025'],'HI_972':['H','I','972'],'HI_949':['H','I','949'],'HI_937':['H','I','937'],'HI_930':['H','I','930'],'OVI_1032':['O','VI','1032'],'CII_1036':['C','II','1036'],'CII_1334':['C','II','1334'],'HI_1025':['H','I','1025'],'OVI_1038':['O','VI','1038'],'OI_1302':['O','I','1302'],'CIII_977':['C','III','977'],'CIV_1548':['C','IV','1548'],'CIV_1550':['C','IV','1550'],'HI_972':['H','I','972'],'SiII_1260':['Si','II','1260'],'SiII_1190':['Si','II','1190'],'SiII_1193':['Si','II','1193'],'SiII_1304':['Si','II','1304'],'SiII_1526':['Si','II','1526'],'SiIII_1206':['Si','III','1206'],'SiIV_1393':['Si','IV','1393'],'SiIV_1402':['Si','IV','1402'],'NII_1083':['N','II','1083'],'NIII_989':['N','III','989'],'NV_1238':['N','V','1238'],'NV_1242':['N','V','1242'],'PII_1152':['P','II','1152']}
 # lines=['HI_1215','HI_1025','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923','HI_920','HI_919','HI_918','HI_917','HI_916']
