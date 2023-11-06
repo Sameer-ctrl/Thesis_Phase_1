@@ -11,7 +11,7 @@ import os
 os.chdir('pg0003')
 
 rest_wave=[1215,1025,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
-comp=3
+comp=2
 
 for i,wave in enumerate(rest_wave):
 

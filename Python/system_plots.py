@@ -6,7 +6,7 @@ import os
 plt.style.use('my_style.mpl')
 
 qso='pg0003'
-z_abs=0.421876
+z_abs=0.386089
 vlim=350
 n_col=3
 vsep=0

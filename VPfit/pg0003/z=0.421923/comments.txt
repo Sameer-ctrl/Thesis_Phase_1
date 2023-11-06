@@ -1,0 +1,16 @@
+CIII:
+	Good fit
+
+OIII: 
+	Good fit, but a little less chi-sq of 0.68
+
+OVI:
+	Good fit. Currently fitted with one component. OVI 1032 has something on the right wing. Fitting two components give a good fit for 1032, but not for 1038, could be subjected to continuum.
+
+HI : 
+	HI 1025 : contamination from Lya from z=0.198659
+	HI 972 :  contamination from Lyb from z=0.346781,0.347695,0.347918
+	HI 930 :  contamination from Lyb from z=0.290181
+	HI 926 :  contamination from Lya from z=0.082976, CIII 977 from z=0.347946
+	HI 937 badly contaminated from galactic CII, CIII from z=0.365110 so excluded from fit, HI 923 was also excluded due to low S/N
+	

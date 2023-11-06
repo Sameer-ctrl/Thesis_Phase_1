@@ -1,9 +1,16 @@
 from astropy.io import ascii
 import matplotlib.pyplot as plt
+import os
 
 
-qso=input('Enter QSO name \n')
-data=ascii.read(f'{qso}_cont_norm.asc')
+files=os.listdir()
+
+for f in files:
+    if f[-4:]=='.asc':
+        spectra=f
+        break
+
+data=ascii.read(spectra)
 
 wave=data['WAVE']
 flux=data['FLUX']

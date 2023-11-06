@@ -1,0 +1,16 @@
+OIII:
+	Good fit
+
+CIII:
+	Good fit, have contamination on right from OVI 1038 from z=0.305723, outside the wing.
+
+NV:
+	Good fit, but low S/N
+
+OVI:
+	Good fit for OVI 1032. OVI 1038 has an unidentified contamination on right of the component II. So only OVI 1032 is used to fit the lines.
+	OVI 1032 has contamination from Lya from z=0.1761508 and OVI 1038 has contamination from Lyb from z=0.401366 on left. 
+
+HI:
+	Used all the lines for fitting	
+	HI 949 contaminated with HI 926 from z=0.421823, Lya from  z=0.082980 and  CIII 977 from z=0.347952

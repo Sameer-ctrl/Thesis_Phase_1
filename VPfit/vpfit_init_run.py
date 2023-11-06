@@ -6,9 +6,9 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pg0003'
+qso='1es1553'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.421880
+z_absorber=0.187731
 v_sep_lim=300
 ion='HI'
 
@@ -141,7 +141,7 @@ with open(f'{qso}/{ion}','w') as f:
 with open(f'{qso}/{ion}','r') as f:
     print(f.read())
 
-pause=input('Press Enter to continue')
+# pause=input('Press Enter to continue')
 
 os.chdir(f'{qso}')
 
