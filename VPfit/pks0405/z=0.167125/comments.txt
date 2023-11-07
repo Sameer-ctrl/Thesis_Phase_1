@@ -1,6 +1,6 @@
 OVI :
-	OVI 1038 seems to be contaminated from Lya at z=0, so only OVI 1032 has been 	fitted.
-	Shows a hint a 5th component blueward of 1st component. But fitted with 4 	components as of now.
+	OVI 1038 seems to be contaminated from Lya at z=0, so only OVI 1032 has been fitted.
+	Shows a hint a 5th component blueward of 1st component. But fitted with 4 components as of now.
 
 CII :
 	CII 1036 seems to be contaminated, so only CII 1334 has been fitted.
@@ -33,7 +33,7 @@ SiII:
 
 HI:
 	Lyg contaminated with galactic (ISM) NI 1134
-	Same problem as always with HI, some show some components, some show other 	components
+	Same problem as always with HI, some show some components, some show other components
 
  !H I     0.1680183339    0.0000003615    55.92861     22.00347  12.515289    0.152738  0 !
  H I      0.1665961771    0.0000143181    23.30515      3.35315  13.463873    0.081321  0 !
