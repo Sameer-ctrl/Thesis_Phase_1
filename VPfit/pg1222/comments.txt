@@ -1,0 +1,13 @@
+OIII:
+	Not much strong line. Broad line with b ~ 60 km/s.
+
+SiIII:
+	Good fit. Contamination from Lya from z=0.367606
+
+CIII:
+	Nice fit. Fitted with 4 components.
+
+OVI:
+	
+
+
