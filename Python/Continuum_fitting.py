@@ -5,7 +5,7 @@ from astropy.io import fits
 from astropy.table import Table,Column
 from numpy import *
 
-qso='1es1553'
+qso='pg1222'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -18,11 +18,6 @@ wave=data['WAVE']
 flux=data['FLUX']
 err=data['ERR']
 
-# plt.step(wave,flux)
-# plt.step(wave,err)
-# plt.show()
-
-# quit()
 
 spec = XSpectrum1D.from_tuple((wave,flux,err))
 spec.fit_continuum(kind='QSO', redshift=z)
