@@ -1,6 +1,0 @@
-CIV:
-	Good fit. Component I in CIV 1550 is not much prominent. Tried fitting only CIV 1548 alone, but parameters don't change much.
-	Fitted both line together
-
-SiIII:
-	Good fit 

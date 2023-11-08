@@ -1,0 +1,16 @@
+CIV:
+	Good fit. Component I in CIV 1550 is not much prominent. Tried fitting only CIV 1548 alone, but parameters don't change much.
+	Fitted both lines together
+
+SiIII:
+	Good fit 
+
+SiIV:
+	Good fit 
+
+OVI:
+	Nice fit. OVI 1038 is contaminated with galactic SiII 1190 line
+
+HI:	
+	Nice fit. Lya is contaminated with galactic SiIV 1394 line.
+ 
