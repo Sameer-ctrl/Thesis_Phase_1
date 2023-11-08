@@ -5,7 +5,7 @@ from astropy.io import fits
 from astropy.table import Table,Column
 from numpy import *
 
-qso='pg1222'
+qso='pg1424'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
