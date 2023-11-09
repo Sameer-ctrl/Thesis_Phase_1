@@ -6,11 +6,11 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pg1424'
+qso='s135712'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.146789
+z_absorber=0.097767
 v_sep_lim=300
-ion='HI'
+ion='OVI'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
