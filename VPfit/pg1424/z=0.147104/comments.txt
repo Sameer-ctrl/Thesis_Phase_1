@@ -6,7 +6,7 @@ SiIII:
 	Good fit 
 
 SiIV:
-	Good fit 
+	Good fit. SiIV 1403 is contaminated with galactic FeII 1608 lines. Used both lines for fitting.
 
 OVI:
 	Nice fit. OVI 1038 is contaminated with galactic SiII 1190 line
