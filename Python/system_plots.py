@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1424'
-z_abs=0.147104
+qso='pg1222'
+z_abs=0.378389
 vlim=400
-n_col=3
+n_col=2
 vsep=0
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
