@@ -1,0 +1,20 @@
+SiIII:
+	Nice fit
+
+CIII:
+	Nice fit
+
+CII:
+	Nice fit
+
+SiIV:
+	Good fit. Line not much prominent though. SiIV 1402 is non-detection.
+
+SiII:
+	Satisfactory fit. Fitted 2 components because right wings seem to be little asymmetrical. Used all the 3 lines for fitting
+
+OVI:
+	Satisfactory fit. Line is not much strong though. Used both lines to fit.
+
+HI:
+	All the lines are nearly saturated and other lines are outside COS coverage. 	Currently fiited with two components. 
