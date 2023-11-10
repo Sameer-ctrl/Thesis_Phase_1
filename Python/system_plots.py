@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1424'
-z_abs=0.147104
+qso='s135712'
+z_abs=0.097869
 vlim=400
 n_col=3
 vsep=0

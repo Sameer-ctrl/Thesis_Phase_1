@@ -1,0 +1,18 @@
+SiIII:
+	Good fit. 
+	Large error in col density of component II due to low b. Error using chi-sq is 0.13
+
+CIV:
+	Good fit, a little noisy though.
+
+SiIV:
+	Satisfactory fit. Used both SiIV 1393 and 1402 to fit. SiIV 1402 is not much strong.
+
+CII:
+	Used only CII 1334 line to fit. As CII 1036 is noisy and not much strong so excluded.
+
+OVI:
+	OVI 1032 is out of coverage of COS. So only have OVI 1038, which is not much great. Fitted one component only, fitting two components doesn't give satisafactory fit.
+
+HI:
+	Good fit. Only have Lya and which is saturated also. All other transitions are outside COS coverage. Fitted nearby components also. Contaminated with galactic CII* 1335 line. Fixed the redshift of component 2 and 3 to that of SiIV.
