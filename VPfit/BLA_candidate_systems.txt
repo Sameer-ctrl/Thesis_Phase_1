@@ -233,11 +233,11 @@ OVI and ions : 0.224832 : ['OVI 1032', 'OVI 1032', 'OVI 1038', 'OVI 1038', 'CIII
 
 OVI and ions number of ions : 
 
-pks0405  : 10   #
-pg1116   : 9    #
+pks0405  : 10  #
+pg1116   : 9   #
 sbs1108* : 7
-pg1121*  : 6
-s135712* : 5  
+pg1121*  : 6   
+s135712* : 5   #  
 pg1424*  : 4   #
 pg1222*  : 4   *
 pg0003*  : 4,3 #,#   
