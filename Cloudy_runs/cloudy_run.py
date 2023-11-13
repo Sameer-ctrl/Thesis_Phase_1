@@ -4,7 +4,7 @@ from astropy.io import ascii
 from time import sleep
 
 
-def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
+def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
 
     grid_parameters=[]
 
@@ -81,14 +81,14 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,miscalleneous_command,save_grid,save_Temp,save_hyd,save_col_den]
 
-    os.mkdir(f'Data/{run_name}')
-    file=open(f'Data/{run_name}/{run_name}.in','w+')
+    os.mkdir(f'{qso}/{run_name}')
+    file=open(f'{qso}/{run_name}/{run_name}.in','w+')
     file.writelines(lines)
     file.write('end')
     file.close()
 
 
-    file=open(f'Data/{run_name}/{run_name}.in','r')
+    file=open(f'{qso}/{run_name}/{run_name}.in','r')
 
     print('-------------Cloudy input file------------- \n')
     print(file.read())
@@ -102,17 +102,17 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     if a=='y':
 
-        os.chdir(f'Data/{run_name}')
+        os.chdir(f'{qso}/{run_name}')
 
         cloudy_path_desktop='/home/sameer/Documents/Sameer/c22.02/source/cloudy.exe'
         cloudy_path_workstation='/home/sameer/Sameer/c22.02/source/cloudy.exe'
         cloudy_path_pc='/home/sameer/cloudy/source/sys_gcc/cloudy.exe'
 
-        cloudy_path=cloudy_path_pc
+        cloudy_path=cloudy_path_workstation
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
-        print(f'\nCloudy running in Data/{run_name} ... \n')
+        print(f'\nCloudy running in {qso}/{run_name} ... \n')
         os.system(cloudy_run_command)
 
         sleep(1)
@@ -179,20 +179,20 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, stop_T=1000
 
     else:
 
-        os.chdir(f'Data/{run_name}')
+        os.chdir(f'{qso}/{run_name}')
         os.remove(f'{run_name}')
         print('Cloudy run terminated...')
 
 
-run_name='component_II_PIE_sol'
-
-hden=[-4.51]
-metal=[-0.31]
+run_name='component_II_PI_nH_Z'
+qso='pks0637'
+hden=[-5,0,0.02]
+metal=[-3,2,0.05]
 temp=None
-redshift=0.34758
-stop_nH=14.13
+redshift= 0.161062
+stop_nH=15.01
 
-ions=['H', 'H+', 'C+','C+2', 'C+3', 'O+5','O+6','Si+', 'Si+2', 'Si+3']
+ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
-run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions)
+run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso)
 
