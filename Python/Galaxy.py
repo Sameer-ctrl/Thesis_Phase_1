@@ -23,7 +23,7 @@ def L_by_Lstar(m_I,M_star):
 
     print(L_by_Lstar_val)
 
-L_by_Lstar(21.719,-21.64)
+L_by_Lstar(19.745,-21.64)
 quit()
 
 v_abs=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))

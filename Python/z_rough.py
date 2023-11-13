@@ -5,6 +5,18 @@ from numpy import *
 from scipy.integrate import simpson
 
 
+data=loadtxt('Data/rest_wave.txt',dtype=str)
+
+ion=data[:,1][13:26]
+wave=data[:,0].astype(float)[13:26]
+
+for i in range(len(ion)):
+    print(f'{ion[i]}  {1347.4/wave[i]-(1):f}')
+
+
+quit()
+
+
 file_path='Data/VPfit_fits_rebinned/Metals_HI'
 
 data=loadtxt(f'{file_path}/HI_1215.txt',comments='!')
