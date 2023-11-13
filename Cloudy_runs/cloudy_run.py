@@ -108,7 +108,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
         cloudy_path_workstation='/home/sameer/Sameer/c22.02/source/cloudy.exe'
         cloudy_path_pc='/home/sameer/cloudy/source/sys_gcc/cloudy.exe'
 
-        cloudy_path=cloudy_path_workstation
+        cloudy_path=cloudy_path_desktop
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
@@ -184,15 +184,18 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
         print('Cloudy run terminated...')
 
 
-run_name='component_II_PI_nH_Z'
+run_name='component_I_PI_nH_Z'
 qso='pks0637'
 hden=[-5,0,0.02]
 metal=[-3,2,0.05]
 temp=None
-redshift= 0.161062
-stop_nH=15.01
+redshift=0.161013
+stop_nH=13.60
 
 ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
 run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso)
 
+# H	H+	C+	C+0	C+0	N+0	N+0	O	O+0	O+0	O+0	Si+	Si+0	Si+0	Si+0
+# 0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00
+# 000000000	F	F	                  ok	0	000	-0.000000	-0.000000	-0.000000, -0.000000

@@ -84,8 +84,13 @@ def join_data():
 
 # join_data()
 
+<<<<<<< HEAD
 qso='3C263'
 run_name = f'component_II_PI_nH_Z'
+=======
+qso='pks0637'
+run_name = f'component_I_PI_nH_Z'
+>>>>>>> 5382d14267d764e44d814309700fc4aac0e112f8
 parameters=['log_nH','log_Z']
 
 write_param(qso,run_name,parameters)
