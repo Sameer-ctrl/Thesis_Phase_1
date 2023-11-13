@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1121'
-z_abs=0.192393
+qso='sbs1108'
+z_abs=0.463207
 vlim=300
-n_col=3
+n_col=4
 vsep=0
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -45,19 +45,39 @@ def file_group(x):
     
     return grouped
 
-lines=[]
 
-for file in files:
-    a=file.split('_')
-    
-    if len(a)==3:
-        lines.append(f'{a[0]}_{a[1]}')
-    
-    else:
-        b=a[1].split('.')[0]
-        lines.append(f'{a[0]}_{b}')
+# lines=[]
 
-lines=unique(lines)
+# for file in files:
+
+#     if file[:2]!='Ly':
+
+#         a=file.split('_')
+
+#         if len(a)==3:
+#             lines.append(f'{a[0]}_{a[1]}')
+        
+#         else:
+#             b=a[1].split('.')[0]
+#             lines.append(f'{a[0]}_{b}')
+    
+#     else:
+#         a=file.split('_')
+
+#         if len(a)==2:
+#             lines.append(a[0])
+        
+#         else:
+#             lines.append(a[0].split('.')[0])
+
+
+# lines=unique(lines)
+
+# print(lines)
+# quit()
+
+lines=['CIII_977', 'CII_1036', 'HI_1215', 'HI_1025', 'HI_972', 'HI_937', 'HI_949' , 'HI_937', 'HI_930', 'HI_926', 'HI_923', 'HI_920'
+ ,'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 
 # lines=['HI_1215','OVI_1032','SiIII_1206','HI_1025','OVI_1038','CIII_977','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923']
 # lines=['HI_1215','OVI_1032','CIII_977','HI_1025','OVI_1038','SiIII_1206','HI_972','HI_949','HI_937']
