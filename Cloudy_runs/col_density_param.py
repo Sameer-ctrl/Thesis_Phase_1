@@ -3,24 +3,24 @@ from numpy import *
 from astropy.io import ascii,fits
 
 
-def write_param():
+def write_param(qso,run_name,parameters):
 
     # for i in range(0):
 
-        run_name = f'component_II_T1'
-        parameters=['log_T']
+        # run_name = f'component_II_PI_nH_Z'
+        # parameters=['log_nH','log_Z']
         print(run_name)
 
-        with open(f'{run_name}/{run_name}_col_density.txt') as f:
+        with open(f'{qso}/{run_name}/{run_name}_col_density.txt') as f:
                 data=f.read()
                 data=data.replace('#column density ','')
 
-        with open(f'{run_name}/{run_name}_col_density.txt','w') as f:
+        with open(f'{qso}/{run_name}/{run_name}_col_density.txt','w') as f:
             f.write(data)
 
 
-        grid=loadtxt(f'{run_name}/{run_name}_grid.txt',dtype=str)
-        col_density=ascii.read(f'{run_name}/{run_name}_col_density.txt')
+        grid=loadtxt(f'{qso}/{run_name}/{run_name}_grid.txt',dtype=str)
+        col_density=ascii.read(f'{qso}/{run_name}/{run_name}_col_density.txt')
         n=len(parameters)
 
         param_data=[]
@@ -52,9 +52,9 @@ def write_param():
 
         col_density.add_column(param_data,name='parameters')
         print(col_density.colnames,'\n')
-        col_density.write(f'{run_name}/{run_name}_col_density_param.fits',overwrite=True)
-        ascii.write(col_density,f'{run_name}/{run_name}_col_density_param.txt',format='ecsv',overwrite=True)
-        col_density.write(f'Data/{run_name}_col_density_param.fits',overwrite=True)
+        col_density.write(f'{qso}/{run_name}/{run_name}_col_density_param.fits',overwrite=True)
+        ascii.write(col_density,f'{qso}/{run_name}/{run_name}_col_density_param.txt',format='ecsv',overwrite=True)
+        col_density.write(f'{qso}/{run_name}_col_density_param.fits',overwrite=True)
 
 
 def join_data():
@@ -83,4 +83,9 @@ def join_data():
     data.write(f'Data/component_III_2d_joined_col_density_param.fits',overwrite=True)
 
 # join_data()
-write_param()
+
+qso='pks0637'
+run_name = f'component_I_PI_nH_Z'
+parameters=['log_nH','log_Z']
+
+write_param(qso,run_name,parameters)
