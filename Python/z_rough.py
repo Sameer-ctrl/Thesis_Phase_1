@@ -1,9 +1,69 @@
+from cProfile import label
 from astropy.io import fits,ascii
 from astropy.table import Table,Column
 import matplotlib.pyplot as plt
 from numpy import *
 from scipy.integrate import simpson
 
+plt.style.use('my_style.mpl')
+
+
+b=linspace(20,100,5,dtype=int)
+# N=[13,13.5,14,14.5,15,15.5,16,16.5,17,17.5,18,18.5,19]
+N=[13,13.5,14,15,16.5,17.5,18.5]
+a=1.25
+plt.figure(figsize=(15*a,9*a),dpi=300)
+
+# for val in N:
+for val in b:
+    # file=f'voigt_mock/N_{val}.txt'
+    file=f'voigt_mock/b_{val}_1.txt'
+
+    data=loadtxt(file,comments='!')
+
+    cen_wave_rest=1215.6701
+    cen_wave_obs=cen_wave_rest*(1)
+
+    wave=data[:,0]
+    cont=data[:,3]
+    v=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
+
+    plt.plot(v,cont,label=f'{{$\mathbf{{b=}} \ \mathbf{{{val}}} \ \mathbf{{km \ s^{{-1}}}}$}}',lw=2)
+    # plt.plot(v*(3/5),cont,label=f'{{$\mathbf{{N=}} \ \mathbf{{{val}}} \ \mathbf{{cm^{{-2}}}} $}}',lw=2)
+
+    # v2=3*(10**5)*((wave_spec**2-(cen_wave_obs**2))/(wave_spec**2+(cen_wave_obs**2)))
+# \mathbf{10^{13} \ cm^{-2}}
+plt.legend(loc='lower right',fontsize=22*a)
+plt.xlim(-300,300)
+# plt.ylim(bottom=0.65)
+plt.xticks(fontsize=20*a)
+plt.yticks(fontsize=20*a)
+plt.xlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',labelpad=20,fontsize=30*a)
+plt.ylabel(r'$\mathbf{Normalized \ Flux} $',labelpad=20,fontsize=30*a)
+# plt.text(-270,0.185,r'$\mathbf{{b=}} \ \mathbf{{{50}}} \ \mathbf{{km \ s^{{-1}}}}$',fontsize=25*a)
+plt.text(-250,0.725,r'$\mathbf{{N=}} \ \mathbf{{10^{13}}} \ \mathbf{{cm^{{-2}}}}$',fontsize=25*a)
+plt.savefig('Voigt-b.png')
+# plt.show()
+
+
+# wave=linspace(1200,1230,10000)
+# flux=ones(10000)
+# err=ones(10000)*0.1
+
+# wave_col=Column(name='WAVE',data=wave)
+# flux_col=Column(name='FLUX',data=flux)
+# err_col=Column(name='ERROR',data=err)
+
+# tab=Table()
+
+# tab.add_columns([wave_col,flux_col,err_col])
+# tab.write(f'Mock.asc', format='ascii', overwrite=True)
+
+
+
+
+
+quit()
 
 data=loadtxt('Data/rest_wave.txt',dtype=str)
 
