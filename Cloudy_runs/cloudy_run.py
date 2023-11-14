@@ -3,6 +3,22 @@ from numpy import *
 from astropy.io import ascii
 from time import sleep
 
+cwd=os.getcwd()
+cwd_split=cwd.split('/')
+
+cloudy_path_desktop='/home/sameer/Documents/Sameer/c22.02/source/cloudy.exe'
+cloudy_path_workstation='/home/sameer/Sameer/c22.02/source/cloudy.exe'
+cloudy_path_pc='/home/sameer/cloudy/source/sys_gcc/cloudy.exe'
+
+if cwd_split[3]=='Thesis_Phase_1':
+    cloudy_path=cloudy_path_pc
+
+elif cwd_split[3]=='Sameer':
+    cloudy_path=cloudy_path_workstation
+
+else:
+    cloudy_path=cloudy_path_desktop
+
 
 def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
 
@@ -103,12 +119,6 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
     if a=='y':
 
         os.chdir(f'{qso}/{run_name}')
-
-        cloudy_path_desktop='/home/sameer/Documents/Sameer/c22.02/source/cloudy.exe'
-        cloudy_path_workstation='/home/sameer/Sameer/c22.02/source/cloudy.exe'
-        cloudy_path_pc='/home/sameer/cloudy/source/sys_gcc/cloudy.exe'
-
-        cloudy_path=cloudy_path_workstation
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
