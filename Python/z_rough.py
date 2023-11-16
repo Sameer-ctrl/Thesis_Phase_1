@@ -7,6 +7,44 @@ from scipy.integrate import simpson
 
 plt.style.use('my_style.mpl')
 
+def ion_label(ion):
+
+    for i,s in enumerate(ion):
+        if s.isupper():
+            if i==0:
+                pass
+            else:
+                break
+
+    atom=ion[:i]
+    n=ion[i:]
+
+    return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{atom}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{n}}}$}}'
+
+
+total_ions=['CIII', 'NV', 'OVI', 'CIV', 'SiIV', 'SiIII', 'OVI', 'CIV', 'SiIII', 'NV', 'CIV', 'SiIV', 'NV', 'OVI', 'SiIII', 'CIII', 'OVI', 'SiIII', 'NV', 'CIV', 'SiIII', 'NV', 'CIV', 'SiIV', 'SiIII', 'CIII', 'NV', 'OVI', 'OIII', 'CIII', 'OVI', 'OIII', 'CII', 'NV', 'FeII', 'SiIII', 'AlII', 'CIV', 'SiIV', 'OI', 'SiII', 'CII*', 'NII', 'NV', 'CII', 'SiIII', 'OVI', 'CIV', 'SiIV', 'PII', 'SiII', 'CIII', 'CII', 'SiIII', 'OVI', 'SiIV', 'SiII', 'CII', 'SiII', 'OI', 'CIII', 'OVI', 'SiIII', 'CIV', 'SiIV', 'SiIII', 'CIII', 'OVI', 'OIII', 'SiIII', 'CIV', 'SiIV', 'SiIII', 'SiIV', 'OVI', 'CIV', 'SiIII', 'NII', 'CII', 'FeII', 'CIV', 'SiIV', 'OI', 'SiII', 'NII', 'NV', 'NIII', 'CIII', 'CII', 'SiIII', 'OVI', 'SiIV', 'OI', 'SiII', 'NV', 'OVI', 'SiIII', 'CIII', 'OVI', 'SiIII', 'CII', 'SiIII', 'SiII', 'CIV', 'SiIV', 'SiIII', 'CII', 'SiIII', 'SiIV', 'OVI', 'CIV', 'CIII', 'CII', 'NIII', 'SiIII', 'OVI', 'OI', 'SiII', 'CII', 'FeII', 'SiII']
+
+
+hist_plot=plt.hist(total_ions,bins=len(set(total_ions)),rwidth=0.5,color='#a1c9f4')
+x=array([ 0 ,  0.9375,  1.875 ,  2.8125,  3.75  ,  4.6875,  5.625 , 6.5625,  7.5   ,  8.4375,  9.375 , 10.3125, 11.25  , 12.1875, 13.125 , 14.0625, 15])# ions=plt.xticks()
+ions_ticks= [  'CIII',  'NV',  'OVI',  'CIV',  'SiIV',  'SiIII',  'OIII',  'CII', 'FeII', 'AlII','OI',  'SiII', 'CII*', 'NII',  'PII', 'NIII']
+ions_ticks=[ion_label(x) for x in ions_ticks]
+plt.xticks(x[:-1]+(0.9375/2),ions_ticks)
+plt.yticks([0,4,8,12,16,20,24],fontsize=25)
+plt.xlabel(r'$\mathbf{Metal \ Ions}$',labelpad=20,fontsize=30)
+plt.ylabel(r'$\mathbf{n}$',labelpad=20,fontsize=30)
+plt.show()
+
+# a=f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}}'
+
+
+
+
+
+quit()
+
+plt.style.use('my_style.mpl')
+
 
 b=linspace(20,100,5,dtype=int)
 # N=[13,13.5,14,14.5,15,15.5,16,16.5,17,17.5,18,18.5,19]
