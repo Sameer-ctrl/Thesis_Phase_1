@@ -21,7 +21,7 @@ z = 0.140756
 HI components: 2
 
 fitting     :  Done
-Cloudy run  :  
+Cloudy run  :  PI done (1d and 2d)
 
 --------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ z = 0.161064
 HI components: 2
 
 fitting     :  Done
-Cloudy run  :  PI
+Cloudy run  :  PI done (1d and 2d)
 
 
 
