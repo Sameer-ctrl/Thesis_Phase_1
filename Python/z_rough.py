@@ -1,9 +1,28 @@
-from cProfile import label
+import os
 from astropy.io import fits,ascii
 from astropy.table import Table,Column
 import matplotlib.pyplot as plt
 from numpy import *
 from scipy.integrate import simpson
+
+files=os.listdir('Files_n_figures/sys_plots')
+files=sorted(files)
+
+for file in files:
+    file_split=file.split('_')
+
+    print(f'\\begin{{figure}} \n  \centering  \n  \hspace*{{-21mm}}\n    \captionsetup{{oneside,margin={{0cm,21mm}}}}\n    \includegraphics[width=\linewidth]{{Figures//system-plots/{file}}} \n  \caption{{System plot of the BLA candidate towards LOS of {file_split[0]} at $z_{{abs}}=${file_split[1][2:]}}} \n\end{{figure}}')
+    print('\n\n')
+
+# \begin{figure}
+#     \centering
+#     \includegraphics[width=1\linewidth]{Figures//system-plots/1ES1553+113_z=0.187764_sys_plot.png}
+#     \caption{Enter Caption}
+# \end{figure}
+
+
+
+quit()
 
 plt.style.use('my_style.mpl')
 

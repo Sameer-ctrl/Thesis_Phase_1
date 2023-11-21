@@ -11,20 +11,33 @@ plt.style.use('my_style.mpl')
 cosmo=FlatLambdaCDM(H0=69.6,Om0=0.3,Tcmb0=2.725)
 z_abs=0.347579
 
+
+data=loadtxt('tom_shanks_data.txt')
+z=data[0:,2].astype(float)
+r=data[0:,7].astype(float)
+# print(z)
+# print(r)
+
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
+k=array([0.1,0.15,0.28,0.44,0.54])
 
+def L_by_Lstar(m_I,M_star,z):
 
-def L_by_Lstar(m_I,M_star):
-
-    dL=cosmo.luminosity_distance(z_abs)  # Mpc
+    dL=cosmo.luminosity_distance(z)  # Mpc
     M_star_I=5*log10(cosmo.h)+M_star
     M_I=m_I-(5*log10(dL.value*1e6))+5
     L_by_Lstar_val=10**((M_star_I-M_I)/2.5)
 
-    print(L_by_Lstar_val)
+    print(f'&  {m_I}   &  {L_by_Lstar_val:.2f}   &  {250*(L_by_Lstar_val**0.2):.2f}')
 
-L_by_Lstar(19.745,-21.64)
+# L_by_Lstar(r,-21.64,z)
+# quit()
+
+for i in range(len(z)):
+    L_by_Lstar(r[i],-21.64,z[i])
+
 quit()
+
 
 v_abs=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))
 z1=sqrt((1+((v_abs+1000)/3e5))/(1-((v_abs+1000)/3e5)))-1
