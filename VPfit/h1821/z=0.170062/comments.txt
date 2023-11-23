@@ -2,12 +2,12 @@ HI:
 	Good fit
 
 SiIII:
-	Weak line. Fitted with one component now. Always ambiguous on number of components for weak lines.
+	Fitted with two components now, though second component is very weak. Always ambiguous on number of components for weak lines.
 
 NV:
 	
 
 OVI:
-	OVI 1038 is strongly contaminated by ISM Lyα absorption and geocoronal emission (savage et al)
+	OVI 1038 is strongly contaminated by ISM Lyα absorption and geocoronal emission (savage et al. 2014)
 	Couldn't fit OVI 1032
 

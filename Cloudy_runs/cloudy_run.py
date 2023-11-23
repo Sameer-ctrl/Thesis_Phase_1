@@ -193,13 +193,13 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
         print('Cloudy run terminated...')
 
 
-run_name='component_IV_PI_nH'
+run_name='component_III_PI_nH'
 qso='1es1553'
 hden=[-5,1,0.02]
 metal=[-1]
 temp=None
-redshift= 0.189788
-stop_nH=13.46
+redshift= 0.189501
+stop_nH=13.00
 
 ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
