@@ -5,11 +5,12 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='sbs1108'
-z_abs=0.463207
-vlim=300
-n_col=4
+qso='pg0003'
+z_abs=0.347579
+vlim=350
+n_col=3
 vsep=0
+vshift=0
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
@@ -76,8 +77,11 @@ def file_group(x):
 # print(lines)
 # quit()
 
-lines=['CIII_977', 'CII_1036', 'HI_1215', 'HI_1025', 'HI_972', 'HI_937', 'HI_949' , 'HI_937', 'HI_930', 'HI_926', 'HI_923', 'HI_920'
- ,'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
+lines=['HI_1215','OVI_1032', 'CIII_977','HI_1025','OVI_1038', 'CII_1036',  'HI_972'  
+ ,'SiIII_1206', 'SiII_1260']
+
+# lines=['CIII_977', 'CII_1036', 'HI_1215', 'HI_1025', 'HI_972', 'HI_937', 'HI_949' , 'HI_937', 'HI_930', 'HI_926', 'HI_923', 'HI_920'
+#  ,'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 
 # lines=['HI_1215','OVI_1032','SiIII_1206','HI_1025','OVI_1038','CIII_977','HI_972','HI_949','HI_937','HI_930','HI_926','HI_923']
 # lines=['HI_1215','OVI_1032','CIII_977','HI_1025','OVI_1038','SiIII_1206','HI_972','HI_949','HI_937']
@@ -156,7 +160,13 @@ def abs_line_plot(line):
 
             v=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
 
-            plt.plot(v,cont,ls='--',c='black')
+            if line=='HI_1215': 
+
+                plt.plot(v+vshift,cont,ls='--',c='black')
+            
+            else:
+                plt.plot(v,cont,ls='--',c='black')
+
 
 
 
@@ -164,8 +174,14 @@ def abs_line_plot(line):
     plt.hlines(0,-5000,5000,ls='--',lw=1,color='black')
     plt.vlines(0,-1,2,ls='--',lw=1,color='black')
 
-    plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
-    plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
+    if line=='HI_1215':
+
+        plt.plot(v1+vshift,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
+        plt.step(v2+vshift,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
+    
+    else:
+        plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=3)
+        plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=2)
     
     for i in range(len(line)):
         if line[i]=='_':
@@ -203,8 +219,8 @@ for i,line in enumerate(lines):
         ax=plt.subplot(int(ceil(n/n_col)),n_col,i+2,sharex=ax1, sharey=ax1)
 
 
-fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=30,y=-0.02)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=30,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
