@@ -2,6 +2,7 @@ import os
 from numpy import *
 from astropy.io import ascii
 from time import sleep
+from roman import toRoman
 
 cwd=os.getcwd()
 cwd_split=cwd.split('/')
@@ -114,9 +115,10 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
         print(f'Grid parameters : {grid_parameters}')
         # print(f'No. of models : {n_models} \n')
 
-    a=input('Check the input file for cloudy. \nPress Y to continue.\n')
+    # a=input('Check the input file for cloudy. \nPress Y to continue.\n')
 
-    if a=='y':
+    if True:
+    # if a=='y':
 
         os.chdir(f'{qso}/{run_name}')
 
@@ -186,6 +188,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
             
 
         print('----------- Output files written -------------')
+        os.chdir(cwd)
 
     else:
 
@@ -193,17 +196,30 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
         print('Cloudy run terminated...')
 
 
-run_name='component_III_PI_nH'
-qso='1es1553'
+# run_name='component_III_PI_nH'
+
+qso='pg1424'
+
+if not os.path.exists(qso):
+    os.makedirs(qso)
+
+
 hden=[-5,1,0.02]
 metal=[-1]
 temp=None
-redshift= 0.189501
-stop_nH=13.00
+redshift=[0.145337,0.146765,0.147104,0.147945]
+stop_nH=[13.16,14.88,15.44,13.49]
 
 ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
-run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso,save_temp=True,delete_temp_file=True,stop_T=100, delete_out_file=True)
+for i in range(len(stop_nH)):
+
+    run_name=f'component_{toRoman(i+1)}_PI_nH'
+    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, stop_T=100, save_temp=True, delete_temp_file=True, delete_out_file=True)
+
+    sleep(30)
+
+
 
 # H	H+	C+	C+0	C+0	N+0	N+0	O	O+0	O+0	O+0	Si+	Si+0	Si+0	Si+0
 # 0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00	0.00000e+00
