@@ -5,13 +5,13 @@ NV:
 	Good fit
 
 OVI:
-	Good fit. OVI 1032 is contaminated with Lya from z=0.008275. Fitted a distant 3rd component also.
+	Good fit. OVI 1032 is contaminated with Lya from z=0.008275. Fitted a distant 3rd 	component also.
 	Component is narrow so large error in its col density
 
 HI:
-	Lya contaminated with Lyb from z=0.408356, but contamination couldn't be fit properly, b value is reaching value of 200 km/s. Danforth et al. give value of around 35 km/s. Currently fitted with this wrongly fitted contmination, however parameters not change significantly while not taking contmination.
+	Lya contaminated with Lyb from z=0.408356,
 	Lyb is contaminated with geo-coronal emission.
-	Lyg is not prominent, so excluded from fit. So only Lya is used for fitting, it is unsaturated, so can be used.
-	Fitted  with one nearby system also having 2 components. Although Danforth et. al shows 3 component, but the 1st has very low value (0.1 km/s) so excluded it.
+	Lyg is not prominent, so excluded from fit. So only Lya is used for fitting, it is 	unsaturated, so can be used.
+	Fitted  with one nearby system also having 2 components. Although Danforth et. al 	shows 3 component, but the 1st has very low value (0.1 km/s) so excluded it.
 
 

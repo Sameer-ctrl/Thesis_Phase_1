@@ -1,0 +1,17 @@
+SiII:
+	Good fit. Narrow line (b~4 km/s)
+
+SiIII:
+	Good fit. Narrow line (b~10 km/s)
+
+CII:
+	Good fit. Narrow line (b~6 km/s)
+
+CIII:
+	Good fit. Contamination from Lya from z=0.083078, HI 926 from z=	0.421913, HI 949 from z=0.386036 and 0.386296
+	
+OVI:
+	Good fit.
+
+HI:
+	

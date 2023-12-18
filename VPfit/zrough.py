@@ -6,12 +6,36 @@ import matplotlib.pyplot as plt
 import os
 
 
+# def tick_pos():
+
+#     with open('CIV_1548.txt') as f:
+#         data=f.readlines()
+
+#     i=0 
+#     tick_wave=[]
+
+#     for line in data:
+        
+#         if line[0]=='!':
+#             i+=1
+
+#             if i>2:
+#                 tick_wave.append(float(line[:-1].split()[1]))
+
+#     return array(tick_wave)
+
+
+# plt.vlines(tick_pos(),[0],[1])
+# plt.show()
+
+# quit()
+
 # files=os.listdir('pg1216/HI_chunks')
 
-os.chdir('sbs1108')
+os.chdir('pg0003/z=0.347579')
 
-rest_wave=[1215,1025,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
-comp=2
+rest_wave=[1025,1215,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
+comp=3
 
 for i,wave in enumerate(rest_wave):
 

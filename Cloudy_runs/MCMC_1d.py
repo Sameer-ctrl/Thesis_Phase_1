@@ -11,21 +11,43 @@ import sys
 
 plt.style.use('../Python/my_style.mpl')
 
-hdu=fits.open('Data/component_III_nH_Z0_col_density_param.fits')
+
+qso='s135712'
+comp='III'
+z_abs=0.097869
+
+ions=['Si+2','Si+3','C+','C+3','O+5']
+col_den_dict=[[14.67,0.13],[13.3,0.05],[13.92,0.04],[13.63,0.12],[14.3,0.11]]
+
+observations=dict(zip(ions,col_den_dict))
+# observations={'C+3':[13.58,0.09],'Si+2':[12.58,0.05],'Si+3':[12.69,0.1],'O+5':[13.77,0.11]}
+
+ions_to_use1=ions[:-1]
+ions_to_use2=ions
+
+qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
+qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
+qso_label=qso_dict[qso]
+
+hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
-
 log_nH=data['log_nH']
-
-logZ_ref=0
-
-lognH_range=[-5,0.98]
+logZ_ref=-1
+lognH_range=[-5,1]
 logZ_range=[-3,2]
 
-param=data['parameters']
-ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 
-observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+def ion_label(ion,ion_font_size=25,radicle_font_size=17):
+
+    a=ion.split('+')
+
+    if a[1]!='':
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+
+    else:
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
+
 
 def interp_func():
 
@@ -48,12 +70,6 @@ def interp_func():
 
 interp_func_dict=interp_func()
 
-# for i in ions:
-#     plt.plot(log_nH,interp_func_dict[i](log_nH),label=i)
-
-# plt.legend()
-# plt.show()
-# quit()
 
 def log_posterior(theta,ions_to_use):
 
@@ -90,7 +106,7 @@ def log_posterior(theta,ions_to_use):
 
     return log_prior+log_likelihood    # posterior
 
-def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=10000,n_param = 2):
+def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, nsteps=5000,n_param = 2):
 
     if guess==None:
 
@@ -122,11 +138,9 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
 
     return flat_samples
 
-ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
-ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1)
-flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2)
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=5000)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,discard_tau=True,nsteps=5000)
 
 
 def sol_write(q):
@@ -172,13 +186,20 @@ sol2=sol_write(quantiles2)
 
 # fig.savefig('Files_n_figures/cornerplot_inc_OVI.png')
 
-ions_all=[f'Si {toRoman(3)}', f'Si {toRoman(2)}',f'C {toRoman(3)}', f'C {toRoman(2)}',f'O {toRoman(6)}']
+print(f'\nExcluding OVI : {sol1}')
+print(f'Including OVI : {sol2}\n')
+
+print(f'Excluding \ion{{O}}{{vi}} : $n_H$ = {sol1[0]} $\pm$ {max([sol1[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol1[3]} $\pm$ {max([sol1[4:]])[0]}\n')
+print(f'Including \ion{{O}}{{vi}} : $n_H$ = {sol2[0]} $\pm$ {max([sol2[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol2[3]} $\pm$ {max([sol2[4:]])[0]}')
+print(f'\\\\\\\\')
+print(f'\includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}.png}}\n')
+
 inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
 
+plt.figure(figsize=(16,9))
 
-plt.figure()
-
-x=linspace(1,len(ions_all),len(ions_all))
+ions_roman=[ion_label(i) for i in ions]
+x=linspace(1,len(ions_roman),len(ions_roman))
 
 for i in inds:
 
@@ -197,8 +218,8 @@ for i in inds:
         plt.plot(x,int_col_den2,c='green',alpha=0.1)
     
     else:
-        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label='Model samples (excluding O VI)')
-        plt.plot(x,int_col_den2,c='green',alpha=0.4,label='Model samples (including O VI)')
+        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label=f'Model samples (excluding {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})')
+        plt.plot(x,int_col_den2,c='green',alpha=0.4,label=f'Model samples (including {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})')
 
 
 median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0])+sol1[3]-logZ_ref for i in observations.keys()])
@@ -211,16 +232,18 @@ col_den_error=array([observations[i][1]  for i in ions])
 chi_sq_exc=sum((((obs_col_den-median_col_den_exc_OVI)/col_den_error)**2)[:-1])
 chi_sq_inc=sum((((obs_col_den-median_col_den_inc_OVI)/col_den_error)**2)[:-1])
 
-print(f'reduced chi-sq excluding OVI : {chi_sq_exc/(4-2)}')
+print(f'\nreduced chi-sq excluding OVI : {chi_sq_exc/(4-2)}')
 print(f'reduced chi-sq including OVI : {chi_sq_inc/(5-2)}')
 
+
 plt.errorbar(x,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
-plt.plot(x,median_col_den_exc_OVI,label='median solution (excluding O VI)',ls='--',lw=3,color='orange')
-plt.plot(x,median_col_den_inc_OVI,label='median solution (including O VI)',ls='--',lw=3,color='green')
-plt.xticks(x,ions_all,fontsize=20)
+plt.plot(x,median_col_den_exc_OVI,label=f'median solution (excluding {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='orange')
+plt.plot(x,median_col_den_inc_OVI,label=f'median solution (including {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='green')
+plt.xticks(x,ions_roman,fontsize=20)
 plt.yticks(fontsize=20)
 plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
-# plt.savefig('Files_n_figures/Observed_and_predicted.png')
+plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
+plt.savefig(f'../LaTeX/BLA Survey results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}.png')
 plt.show()

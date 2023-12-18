@@ -1,0 +1,22 @@
+%% pg0003_cont_norm.asc 1 1380.7 1383.7 pfinst=LSF/cos_G130M_lsf_1383_ltpos_3.dat !
+%% pg0003_cont_norm.asc 2 1636.2 1639.8 pfinst=LSF/cos_G160M_lsf_1637_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 3 1310.0 1311.8 pfinst=LSF/cos_G130M_lsf_1310_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 4 1279.3 1280.75 pfinst=LSF/cos_G130M_lsf_1279_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 5 1263.2 1264.9 pfinst=LSF/cos_G130M_lsf_1264_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 6 1253.9 1255.2 pfinst=LSF/cos_G130M_lsf_1254_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 7 1247.9 1249.0 pfinst=LSF/cos_G130M_lsf_1248_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 8 1243.8 1244.8 pfinst=LSF/cos_G130M_lsf_1244_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 9 1240.9 1242.0 pfinst=LSF/cos_G130M_lsf_1242_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 10 1238.7 1239.7 pfinst=LSF/cos_G130M_lsf_1239_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 11 1237.1 1238.0 pfinst=LSF/cos_G130M_lsf_1237_ltpos_3.dat ! 
+%% pg0003_cont_norm.asc 12 1235.6 1236.8 pfinst=LSF/cos_G130M_lsf_1237_ltpos_3.dat !
+%% pg0003_cont_norm.asc 13 1234.8 1235.7 pfinst=LSF/cos_G130M_lsf_1234_ltpos_3.dat !
+%% pg0003_cont_norm.asc 14 1234.2 1234.8 pfinst=LSF/cos_G130M_lsf_1233_ltpos_3.dat !
+%% pg0003_cont_norm.asc 15 1233.5 1234.1 pfinst=LSF/cos_G130M_lsf_1233_ltpos_3.dat !
+%% pg0003_cont_norm.asc 16 1232.9 1233.5 pfinst=LSF/cos_G130M_lsf_1233_ltpos_3.dat !
+H I      0.4219040957A    0.0000096799    22.42733A      3.16225  14.832407A    0.034264  0 !
+!H I      0.3467628655A    0.0000160753    37.32807A      5.34296  13.449561A    0.044143  0 !
+!H I      0.3475884672A    0.0000011358    62.94239A      0.09877  14.204603    0.021683  0 !
+!H I      0.3479158970A    0.0000012811    16.29249A      0.24759  16.070595A    0.013856  0 !
+!H I      0.4219040957A    0.0000096799    22.42733A      3.16225  14.832407A    0.034264  0 !
+>>       2.4404780000SZ  0.0000000000     14.12408A      1.32064   1.000000SH  0.000000  2 !

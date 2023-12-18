@@ -21,7 +21,7 @@ else:
     cloudy_path=cloudy_path_desktop
 
 
-def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
+def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs, stop_T=1000, save_temp=False, save_Hyd=False, uvb_scale = 1, uvb_Q = 18, He_abun=0.08156498, delete_out_file=False, delete_temp_file=True, miscalleneous_command=''):
 
     grid_parameters=[]
 
@@ -98,14 +98,14 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
 
     lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,miscalleneous_command,save_grid,save_Temp,save_hyd,save_col_den]
 
-    os.mkdir(f'{qso}/{run_name}')
-    file=open(f'{qso}/{run_name}/{run_name}.in','w+')
+    os.mkdir(f'{qso}/z={z_abs}/{run_name}')
+    file=open(f'{qso}/z={z_abs}/{run_name}/{run_name}.in','w+')
     file.writelines(lines)
     file.write('end')
     file.close()
 
 
-    file=open(f'{qso}/{run_name}/{run_name}.in','r')
+    file=open(f'{qso}/z={z_abs}/{run_name}/{run_name}.in','r')
 
     print('-------------Cloudy input file------------- \n')
     print(file.read())
@@ -120,11 +120,11 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
     if True:
     # if a=='y':
 
-        os.chdir(f'{qso}/{run_name}')
+        os.chdir(f'{qso}/z={z_abs}/{run_name}')
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
-        print(f'\nCloudy running in {qso}/{run_name} ... \n')
+        print(f'\nCloudy running in {qso}/z={z_abs}/{run_name} ... \n')
         os.system(cloudy_run_command)
 
         sleep(1)
@@ -192,30 +192,31 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions,qso, stop_T=
 
     else:
 
-        os.system(f'rm -rf {qso}/{run_name}')
+        os.system(f'rm -rf {qso}/z={z_abs}/{run_name}')
         print('Cloudy run terminated...')
 
 
 # run_name='component_III_PI_nH'
 
-qso='s135712'
+qso='1es1553'
+z_abs=0.187764
 
-if not os.path.exists(qso):
-    os.makedirs(qso)
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
 
 
 hden=[-5,1,0.02]
 metal=[-1]
 temp=None
-redshift=[0.095892,0.097625,0.097869,0.099436]
-stop_nH=[13.36,16.48,15.01,13.52]
+redshift=[0.187550,0.187648,0.189500,0.189788]
+stop_nH=[12.76,13.88,13.02,13.46]
 
 ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
 for i in range(len(stop_nH)):
 
     run_name=f'component_{toRoman(i+1)}_PI_nH'
-    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, stop_T=100, save_temp=True, delete_temp_file=True, delete_out_file=True)
+    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=100, save_temp=True, delete_temp_file=True, delete_out_file=True)
 
     sleep(30)
 

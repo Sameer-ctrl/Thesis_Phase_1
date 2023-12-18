@@ -20,6 +20,7 @@ pg1222  - OVI and HI
 h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170062  : OVI and 
 pg1116  - 2 comp vs 3 comp : Savage 
 pks0405 - continuum and slight changes
+sbs1108 - Lyman lines
 
 
 
@@ -30,7 +31,7 @@ pks0405 - continuum and slight changes
 1) z = 0.140756
 HI components: 2
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI (1d and 2d)
 
 --------------------------------------------------------------------
@@ -40,41 +41,41 @@ pks0637:
 2) z = 0.161064
 HI components: 2
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI (1d and 2d)
 
 
 3) z = 0.417539
 HI components: 2
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI 
 
 --------------------------------------------------------------------
 
 1es1553: 
 
-4) z = 0.161064
+4) z = 0.187764
 HI components: 4
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 --------------------------------------------------------------------
 
 pg0003: 
 
-5) z = 0.386094
+5) z = 0.386089
 HI components: 2
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 
-6) z = 0.421880
+6) z = 0.421923
 HI components: 3
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 --------------------------------------------------------------------
@@ -84,7 +85,7 @@ pg1216:
 7) z = 0.282286
 HI components: 3
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 --------------------------------------------------------------------
@@ -94,7 +95,7 @@ pg1424:
 8) z = 0.147104
 HI components: 4
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI  
 
 --------------------------------------------------------------------
@@ -104,7 +105,7 @@ s135712:
 9) z = 0.097869
 HI components: 4
 
-fitting     :  Done
+fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 --------------------------------------------------------------------

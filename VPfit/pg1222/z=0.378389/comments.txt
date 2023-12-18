@@ -8,6 +8,12 @@ CIII:
 	Nice fit. Fitted with 4 components.
 
 OVI:
+	Good fit.
+	6 components.
+	Little large errors in col densities.
+	OVI 1038 has contamination from Lyb from z=0.394333
+
+HI:
 	
 
 
