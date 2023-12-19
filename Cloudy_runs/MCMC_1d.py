@@ -12,12 +12,12 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='s135712'
-comp='III'
-z_abs=0.097869
+qso='1es1553'
+comp='I'
+z_abs=0.187764
 
-ions=['Si+2','Si+3','C+','C+3','O+5']
-col_den_dict=[[14.67,0.13],[13.3,0.05],[13.92,0.04],[13.63,0.12],[14.3,0.11]]
+ions=['C+2','N+4','O+5']
+col_den_dict=[[13.17,0.10],[13.43,0.05],[14.23,0.07]]
 
 observations=dict(zip(ions,col_den_dict))
 # observations={'C+3':[13.58,0.09],'Si+2':[12.58,0.05],'Si+3':[12.69,0.1],'O+5':[13.77,0.11]}

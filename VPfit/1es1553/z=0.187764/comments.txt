@@ -1,17 +1,15 @@
 CIII:
-	Good fit. But narrow lines. Large error in col density of component 1 as b is small.
+	Good fit. But narrow lines. Large error in col density of component 1 as b is small 	(error from chi-sq in col density = 0.10)
 
 NV:
 	Good fit
 
 OVI:
 	Good fit. OVI 1032 is contaminated with Lya from z=0.008275. Fitted a distant 3rd 	component also.
-	Component is narrow so large error in its col density
+	Component I is narrow so large error in its col density. (error from chi-sq in col 	density = 0.07)
 
 HI:
 	Lya contaminated with Lyb from z=0.408356,
 	Lyb is contaminated with geo-coronal emission.
 	Lyg is not prominent, so excluded from fit. So only Lya is used for fitting, it is 	unsaturated, so can be used.
 	Fitted  with one nearby system also having 2 components. Although Danforth et. al 	shows 3 component, but the 1st has very low value (0.1 km/s) so excluded it.
-
-

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  18 DEC 2023 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  19 DEC 2023 18:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -533,23 +533,56 @@ Overfull \hbox (42.14558pt too wide) in paragraph at lines 473--476
  []|  [] |
  []
 
-[20] [21
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
+
+ []
 
 
-] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 511--514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--521
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--521
+
+ []
+
+[21
+
+
+]
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png, id=100, 992.9898pt x 610.6815pt>
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png, id=101, 992.9898pt x 610.6815pt>
+ [22] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
 Here is how much of TeX's memory you used:
- 4396 strings out of 481239
- 67497 string characters out of 5920376
+ 4406 strings out of 481239
+ 68028 string characters out of 5920376
  304040 words of memory out of 5000000
- 19594 multiletter control sequences out of 15000+600000
+ 19602 multiletter control sequences out of 15000+600000
  540211 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,42p,299b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (21 pages, 93872 bytes).
+ 41i,12n,42p,336b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (22 pages, 103028 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
