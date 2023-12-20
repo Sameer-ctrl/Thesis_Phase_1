@@ -206,7 +206,7 @@ if not os.path.exists(f'{qso}/z={z_abs}'):
 
 
 hden=[-5,1,0.02]
-metal=[-1]
+metal=[1]
 temp=None
 redshift=[0.187550,0.187648,0.189500,0.189788]
 stop_nH=[12.76,13.88,13.02,13.46]
