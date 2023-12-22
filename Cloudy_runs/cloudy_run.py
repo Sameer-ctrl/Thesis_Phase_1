@@ -198,18 +198,18 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
 # run_name='component_III_PI_nH'
 
-qso='1es1553'
-z_abs=0.187764
+qso='sbs1108'
+z_abs=0.463207
 
 if not os.path.exists(f'{qso}/z={z_abs}'):
     os.makedirs(f'{qso}/z={z_abs}')
 
 
 hden=[-5,1,0.02]
-metal=[1]
+metal=[-1]
 temp=None
-redshift=[0.187550,0.187648,0.189500,0.189788]
-stop_nH=[12.76,13.88,13.02,13.46]
+redshift=[0.462938,0.463152,0.463365]
+stop_nH=[15.77,15.79,18.09]
 
 ions=['H', 'H+', 'C+','C+2', 'C+3','N+2', 'N+4', 'O','O+2','O+5','O+6','Si+', 'Si+2', 'Si+3','Si+4']
 
