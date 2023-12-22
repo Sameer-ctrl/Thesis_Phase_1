@@ -22,10 +22,10 @@ OVI:
 
 HI:
 	Lyman limit system.
-	Fitted using line from HI 937 to 918 with HI 920 excluded
+	Fitted using line from HI 937 to 918 with HI 920 excluded earlier fitted with two 	components, but Lya to Lyd fits were not good, so fitted with 3 components, now the 	fits are good.
 	Lyb contaminated with Lya from z=0.233778
 	HI 930 contaminated with OVI 1032 from z=0.320172
 	HI 920 contaminated with unknown contamination (possibly from Ly12 from z=0.469115)
-	HI 915 contaminated with Lya from z=0.102172
+	HI 915 (Ly14) contaminated with Lya from z=0.102172
 
 

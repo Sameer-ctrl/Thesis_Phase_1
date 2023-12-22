@@ -6,17 +6,17 @@
 %% sbs1108_cont_norm.asc 6 1360.6 1363.4 pfinst=LSF/cos_G130M_lsf_1361_ltpos_3.dat !
 %% sbs1108_cont_norm.asc 7 1354.2 1356.5 pfinst=LSF/cos_G130M_lsf_1355_ltpos_3.dat !
 %% sbs1108_cont_norm.asc 8 1349.6 1352 pfinst=LSF/cos_G130M_lsf_1351_ltpos_3.dat !
-%% sbs1108_cont_norm.asc 9 1346.5 1348.6 pfinst=LSF/cos_G130M_lsf_1346_ltpos_3.dat !
+!%% sbs1108_cont_norm.asc 9 1346.5 1348.6 pfinst=LSF/cos_G130M_lsf_1346_ltpos_3.dat !
 %% sbs1108_cont_norm.asc 10 1344.3 1346.1 pfinst=LSF/cos_G130M_lsf_1345_ltpos_3.dat !
 %% sbs1108_cont_norm.asc 11 1342.6 1344.4 pfinst=LSF/cos_G130M_lsf_1343_ltpos_3.dat !
-%% sbs1108_cont_norm.asc 12 1341.6 1342.95 pfinst=LSF/cos_G130M_lsf_1342_ltpos_3.dat !
-%% sbs1108_cont_norm.asc 13 1340.6 1341.55 pfinst=LSF/cos_G130M_lsf_1340_ltpos_3.dat !
-%% sbs1108_cont_norm.asc 14 1339.8 1340.55 pfinst=LSF/cos_G130M_lsf_1338_ltpos_3.dat !
-%% sbs1108_cont_norm.asc 15 1339.15 1340.5 pfinst=LSF/cos_G130M_lsf_1337_ltpos_3.dat !
-H I      0.4629377870A   0.0000000000    22.22540A      1.57764  15.772134A    0.022115  0 ! 
-H I      0.4633320004A    0.0000023498    23.87763A      0.96597  17.280045A    0.094602  0 ! 
-O VI     0.3201719534A    0.0000129336    11.83173A      5.55633  13.704841A    0.083407  0 !
+!%% sbs1108_cont_norm.asc 12 1341.4 1342.8 pfinst=LSF/cos_G130M_lsf_1342_ltpos_3.dat !
+!%% sbs1108_cont_norm.asc 13 1340.45 1341.55 pfinst=LSF/cos_G130M_lsf_1340_ltpos_3.dat !
+!%% sbs1108_cont_norm.asc 14 1339.65 1340.55 pfinst=LSF/cos_G130M_lsf_1338_ltpos_3.dat !
+!%% sbs1108_cont_norm.asc 15 1339.15 1339.7 pfinst=LSF/cos_G130M_lsf_1337_ltpos_3.dat !
+H I      0.4629377870A    0.0000000000    22.22540A      1.57764  15.772134A    0.022115  0 ! 
+H I      0.4631521364A    0.0000141140    16.44734A      0.34694  15.786790A    0.106679  0 !
+H I      0.4633647317A    0.0000052695    15.59633A      0.58706  18.095307A    0.120655  0 !
 H I      0.2337784079A    0.0000350685    36.52686A     12.92706  13.243103A    0.104381  0 !
 H I      0.1021726123A    0.0000052585    18.55233A      2.52291  13.854087A    0.070245  0 !
-!
-
+O VI     0.3201598506A    0.0000123869    15.35878A      5.20986  13.789192A    0.065920  0 !
+!9 12-

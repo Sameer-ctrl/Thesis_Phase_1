@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='1es1553'
-z_abs=0.187764
+qso='sbs1108'
+z_abs=0.463207
 vlim=350
-n_col=3
+n_col=4
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -96,7 +96,9 @@ def tick_pos(file):
 
     return array(tick_wave)
 
-lines=lines_all()
+# lines=lines_all()
+# print(lines)
+lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
 # print(lines)
@@ -117,7 +119,7 @@ line_vshift=dict(zip(lines,zeros(n)))
 # line_vshift['Ly16']=-3
 # line_vshift['SiII_1260']=-5
 # line_vshift['SiIII_1206']=-5
-line_vshift['OVI_1038']=-6
+# line_vshift['OVI_1038']=-6
 
 # lines=['HI_1215','OVI_1032', 'CIII_977','HI_1025','OVI_1038', 'CII_1036',  'HI_972'  
 #  ,'SiIII_1206', 'SiII_1260']
@@ -168,10 +170,19 @@ def abs_line_plot(line):
 
     for f in vpfit_chunks:
         splitted=f.split('_')
-        if len(splitted)>2:
-            if splitted[2][:4]=='cont':
-                m+=1
 
+        if f[:2]=='Ly':
+            if len(splitted)>1:
+                if splitted[1][:4]=='cont':
+                    m+=1
+            
+        else:
+
+            if len(splitted)>2:
+                if splitted[2][:4]=='cont':
+                    m+=1
+        
+    
     if n-m>0:
 
         for i in range(n-m):
@@ -279,7 +290,7 @@ plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc=
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 # plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_latest1.png')
 # plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_latest_only_spec.png')
-plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
-# plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+# plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
 
 # plt.show()  

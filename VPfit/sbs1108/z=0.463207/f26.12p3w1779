@@ -1,17 +1,17 @@
-%% sbs1108_cont_norm.asc     1   1776.7000   1781.0000 pfinst=LSF/cos_G160M_lsf_1777_lt  !  0.000000   117 2023/11/13
-%% sbs1108_cont_norm.asc     1   1498.8000   1502.4000 pfinst=LSF/cos_G160M_lsf_1500_lt  !  0.000000    98   2
+%% sbs1108_cont_norm.asc     1   1776.7000   1781.0000 pfinst=LSF/cos_G160M_lsf_1777_lt  !  0.356683   117 2023/12/22
+%% sbs1108_cont_norm.asc     1   1498.8000   1502.4000 pfinst=LSF/cos_G160M_lsf_1500_lt  !  0.335283    98   2
 %% sbs1108_cont_norm.asc     1   1421.8000   1424.3000 pfinst=LSF/cos_G160M_lsf_1422_lt  !  0.000000    83   3
-%% sbs1108_cont_norm.asc     1   1388.6000   1390.8000 pfinst=LSF/cos_G130M_lsf_1388_lt  !  0.000000    73   4
-%% sbs1108_cont_norm.asc     1   1371.0000   1373.6000 pfinst=LSF/cos_G130M_lsf_1371_lt  !  0.000000    87   5
-%% sbs1108_cont_norm.asc     1   1360.6000   1363.4000 pfinst=LSF/cos_G130M_lsf_1361_lt  !  0.000000    94   6
+%% sbs1108_cont_norm.asc     1   1388.6000   1390.8000 pfinst=LSF/cos_G130M_lsf_1388_lt  !  0.255418    73   4
+%% sbs1108_cont_norm.asc     1   1371.0000   1373.6000 pfinst=LSF/cos_G130M_lsf_1371_lt  !  0.091233    87   5
+%% sbs1108_cont_norm.asc     1   1360.6000   1363.4000 pfinst=LSF/cos_G130M_lsf_1361_lt  !  0.929655    94   6
 %% sbs1108_cont_norm.asc     1   1354.2000   1356.5000 pfinst=LSF/cos_G130M_lsf_1355_lt  !  0.000000    76   7
-%% sbs1108_cont_norm.asc     1   1349.6000   1352.0000 pfinst=LSF/cos_G130M_lsf_1351_lt  !  0.000000    80   8
-%% sbs1108_cont_norm.asc     1   1346.5000   1348.6000 pfinst=LSF/cos_G130M_lsf_1346_lt  !  0.000000    70   9
-%% sbs1108_cont_norm.asc     1   1344.3000   1346.1000 pfinst=LSF/cos_G130M_lsf_1345_lt  !  0.000000    60  10
-%% sbs1108_cont_norm.asc     1   1342.6000   1344.4000 pfinst=LSF/cos_G130M_lsf_1343_lt  !  0.000000    60  11
-%% sbs1108_cont_norm.asc     1   1341.6000   1342.9500 pfinst=LSF/cos_G130M_lsf_1342_lt  !  0.000000    45  12
-%% sbs1108_cont_norm.asc     1   1340.6000   1341.5500 pfinst=LSF/cos_G130M_lsf_1340_lt  !  0.000000    32  13
-%% sbs1108_cont_norm.asc     1   1339.8000   1340.5500 pfinst=LSF/cos_G130M_lsf_1338_lt  !  0.000000    25  14
-%% sbs1108_cont_norm.asc     1   1339.1500   1340.5000 pfinst=LSF/cos_G130M_lsf_1337_lt  !  0.000000    45  15
-! Stats:   1  3284.9412970 1045 1045  0.000  0  AICc: 3432763.66        
+%% sbs1108_cont_norm.asc     1   1349.6000   1352.0000 pfinst=LSF/cos_G130M_lsf_1351_lt  !  0.035572    80   8
+%% sbs1108_cont_norm.asc     1   1344.3000   1346.1000 pfinst=LSF/cos_G130M_lsf_1345_lt  !  0.085450    60   9
+%% sbs1108_cont_norm.asc     1   1342.6000   1344.4000 pfinst=LSF/cos_G130M_lsf_1343_lt  !  0.814452    60  10
+! Stats:   1     2.6027278  828  828  0.000  0  AICc:    2155.06        
+ H I      0.4629377870A   0.0000000000    22.22540A     0.00000  15.772134A   0.000000  0 ! 
+ H I      0.4631521364A   0.0000000000    16.44734A     0.00000  15.786790A   0.000000  0 ! 
+ H I      0.4633647317A   0.0000000000    15.59633A     0.00000  18.095307A   0.000000  0 ! 
+ H I      0.2337784079A   0.0000000000    36.52686A     0.00000  13.243103A   0.000000  0 ! 
  H I      0.1021726123A   0.0000000000    18.55233A     0.00000  13.854087A   0.000000  0 ! 
+ O VI     0.3201598506A   0.0000000000    15.35878A     0.00000  13.789192A   0.000000  0 ! 

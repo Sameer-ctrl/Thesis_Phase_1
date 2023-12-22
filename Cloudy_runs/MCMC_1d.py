@@ -33,7 +33,7 @@ hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
 log_nH=data['log_nH']
-logZ_ref=-1
+logZ_ref=1
 lognH_range=[-5,1]
 logZ_range=[-3,2]
 
@@ -164,7 +164,7 @@ def sol_write(q):
 
     return nH+Z
 
-labels=['log nH', 'log Z']
+labels=[r'$\mathbf{log \ n_H}$', r'$\mathbf{log \ Z}$']
 
 buffer = StringIO()
 sys.stdout = buffer
