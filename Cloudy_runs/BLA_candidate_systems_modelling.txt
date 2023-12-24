@@ -15,12 +15,12 @@ pg1216*  : 3    #       %
 
 Fits to check :
 
-pg1121  - CII and Lyg
+pg1121  - CII and Lyg - Needs a lot of changes
 pg1222  - OVI and HI
 h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170062  : OVI and 
 pg1116  - 2 comp vs 3 comp : Savage 
 pks0405 - continuum and slight changes
-sbs1108 - Lyman lines
+sbs1108 - Lyman lines #
 
 
 
@@ -115,8 +115,18 @@ sbs1108:
 10) z = 0.463207
 HI components: 
 
-fitting     :  
-Cloudy run  :  
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+
+--------------------------------------------------------------------
+
+sbs1108: 
+
+11) z = 0.463207
+HI components: 
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
 
 --------------------------------------------------------------------
 

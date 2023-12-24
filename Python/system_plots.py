@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='sbs1108'
-z_abs=0.463207
-vlim=350
-n_col=4
+qso='pg1222'
+z_abs=0.378389
+vlim=500
+n_col=3
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -96,12 +96,11 @@ def tick_pos(file):
 
     return array(tick_wave)
 
-# lines=lines_all()
+lines=lines_all()
 # print(lines)
-lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
+# lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-# print(lines)
 # line_vshift['CII_1036']=-5
 # line_vshift['HI_1215']=-3
 # line_vshift['HI_916']=-4
@@ -109,7 +108,7 @@ line_vshift=dict(zip(lines,zeros(n)))
 # line_vshift['HI_918']=-2
 # line_vshift['HI_972']=-1
 # line_vshift['HI_949']=-1
-# line_vshift['HI_937']=-2
+# line_vshift['HI_937']=-3
 # line_vshift['HI_930']=-4
 # line_vshift['HI_926']=-4
 # line_vshift['HI_923']=-2
@@ -117,7 +116,7 @@ line_vshift=dict(zip(lines,zeros(n)))
 # line_vshift['Ly14']=-1
 # line_vshift['Ly15']=-3
 # line_vshift['Ly16']=-3
-# line_vshift['SiII_1260']=-5
+# line_vshift['SiII_1193']=-3
 # line_vshift['SiIII_1206']=-5
 # line_vshift['OVI_1038']=-6
 
@@ -288,9 +287,7 @@ fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=60,x=0.08, y
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-# plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_latest1.png')
-# plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_latest_only_spec.png')
-# plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
+# plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
 
 # plt.show()  

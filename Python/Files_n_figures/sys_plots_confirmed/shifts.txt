@@ -64,3 +64,13 @@ qso='1es1553'
 z_abs=0.187764
 line_vshift['OVI_1038']=-6
 
+
+qso='sbs1108'
+z_abs=0.463207
+line_vshift['CII_1036']=-5
+line_vshift['HI_937']=-3
+line_vshift['HI_923']=-2
+line_vshift['SiII_1193']=-3
+
+
+

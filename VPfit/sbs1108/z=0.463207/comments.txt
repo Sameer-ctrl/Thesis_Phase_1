@@ -1,15 +1,14 @@
 OI :
-	Good fit. But something strange is there. Fitting one component, but output plot shows three component fit, thought all 3 redshifts are same, and output file also has just one component. But fit looks asymmetric
-	Has Lyg on left and NIII 989 on right, currently not fitted. 
+	Good fit. Has Lyg on left and NIII 989 on right, currently not fitted. 
 
 SiIII:
 	Nice fit. large erros in col density and b  of component II due to low b value. Error in col density is estimated by fixing all other parameters and varying it alone. Getting similar error with chi-sq also.
 
 CII:
-	Nice fit. Contaminated with OVI 1032 from z=0.468475 on left and with Lye from z=0.617596 on right
+	Nice fit. Contaminated with OVI 1032 from z=0.468475 on left and with Lye from z=0.617596 on right. Fitted with both single and 2 components.
 
 CIII:
-	Nice fit. Contaminated with Lya from z=0.175257 on left. Fitted with one component currently. Fitting two components also give similar fit.
+	Nice fit. Contaminated with Lya from z=0.175257 on left. Fitted with both one component and 3 components with redshifts fixed from HI as line is saturated. Fitting two components also give similar fit.
 
 NIII:
 	Good fit
@@ -22,7 +21,7 @@ OVI:
 
 HI:
 	Lyman limit system.
-	Fitted using line from HI 937 to 918 with HI 920 excluded earlier fitted with two 	components, but Lya to Lyd fits were not good, so fitted with 3 components, now the 	fits are good.
+	Fitted using line from HI 937 to 918 with HI 920 excluded. earlier fitted with two components, but Lya to Lyd fits were not good, so fitted with 3 components, now the fits are good.
 	Lyb contaminated with Lya from z=0.233778
 	HI 930 contaminated with OVI 1032 from z=0.320172
 	HI 920 contaminated with unknown contamination (possibly from Ly12 from z=0.469115)

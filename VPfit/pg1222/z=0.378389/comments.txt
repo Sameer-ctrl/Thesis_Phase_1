@@ -14,6 +14,11 @@ OVI:
 	OVI 1038 has contamination from Lyb from z=0.394333
 
 HI:
-	
+	Not exact fit. Needs quite some work.
+	Lyb contaminated with OVI from z=0.363731, Lya from z=0.162493
+	Lyd contaminated with HI 920 from z=0.420766
+	HI 930 contaminated with Lya from z= and OVI from z=
+	HI 923 contaminated with SiIII 2 components from z= and Lyb from z=
+ 	
 
 
