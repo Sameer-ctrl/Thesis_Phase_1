@@ -16,10 +16,10 @@ pg1216*  : 3    #       %
 Fits to check :
 
 pg1121  - CII and Lyg - Needs a lot of changes
-pg1222  - OVI and HI - OVI done, HI not exactly done.
+pg1222  - OVI and HI - OVI done, HI not exactly done, preliminary for the time being
 h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170062  : OVI and 
 pg1116  - 2 comp vs 3 comp : Savage : Done
-pks0405 - continuum and slight changes
+pks0405 - continuum and slight changes : 
 sbs1108 - Lyman lines - Done
 
 

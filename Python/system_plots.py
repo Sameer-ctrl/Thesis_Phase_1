@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1116'
-z_abs=0.138527
+qso='pks0405'
+z_abs=0.167125
 vlim=350
-n_col=4
+n_col=5
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -105,7 +105,10 @@ line_vshift['CII_1334']=-5
 line_vshift['CIV_1548']=-5
 line_vshift['CIV_1550']=9
 line_vshift['SiIV_1402']=-5
+line_vshift['SiIV_1393']=-5
 line_vshift['SiII_1193']=-6
+line_vshift['SiII_1190']=-5
+line_vshift['HI_972']=-10
 # line_vshift['HI_1215']=-3
 # line_vshift['HI_916']=-4
 # line_vshift['HI_917']=-3
