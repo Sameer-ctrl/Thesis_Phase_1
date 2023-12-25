@@ -1,0 +1,83 @@
+3c263 : 
+
+line_vshift['CIV_1550']=38.92139
+
+pks0637 : 
+
+z=0.41 : 
+
+line_vshift['HI_949']=-11
+line_vshift['HI_937']=-7
+line_vshift['HI_930']=-11
+
+pg1216 : 
+
+line_vshift['HI_949']=-10
+line_vshift['HI_919']=-10
+
+pg1424 : 
+
+line_vshift['HI_1025']=-8
+line_vshift['SiIV_1402']=-9
+
+s135712 : 
+
+line_vshift['CII_1036']=-11
+
+pg0003 : 
+
+z=0.347 : 
+
+line_vshift['HI_1215']=10
+line_vshift['HI_972']=4
+line_vshift['HI_937']=-3
+line_vshift['HI_930']=-3
+line_vshift['HI_926']=-3
+line_vshift['HI_923']=-3
+line_vshift['HI_920']=-2
+line_vshift['HI_918']=-2
+line_vshift['OVI_1038']=3
+line_vshift['SiIII_1206']=8 
+
+new:
+
+line_vshift['CII_1036']=-5
+line_vshift['HI_1215']=-3
+line_vshift['HI_916']=-4
+line_vshift['HI_917']=-3
+line_vshift['HI_918']=-2
+line_vshift['HI_972']=-1
+line_vshift['HI_949']=-1
+line_vshift['HI_937']=-2
+line_vshift['HI_930']=-4
+line_vshift['HI_926']=-4
+line_vshift['HI_923']=-2
+line_vshift['HI_920']=-2
+line_vshift['Ly14']=-1
+line_vshift['Ly15']=-3
+line_vshift['Ly16']=-3
+line_vshift['SiII_1260']=-5
+line_vshift['SiIII_1206']=-5
+
+
+qso='1es1553'
+z_abs=0.187764
+line_vshift['OVI_1038']=-6
+
+
+qso='sbs1108'
+z_abs=0.463207
+line_vshift['CII_1036']=-5
+line_vshift['HI_937']=-3
+line_vshift['HI_923']=-2
+line_vshift['SiII_1193']=-3
+
+
+qso='pg1116'
+z_abs=0.138527
+line_vshift['CII_1334']=-5
+line_vshift['CIV_1548']=-5
+line_vshift['CIV_1550']=9
+line_vshift['SiIV_1402']=-5
+line_vshift['SiII_1193']=-6
+
