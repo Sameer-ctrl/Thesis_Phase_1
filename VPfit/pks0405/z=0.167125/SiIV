@@ -1,0 +1,4 @@
+%% pks0405_cont_norm.asc 1 1625 1627.8 pfinst=LSF/cos_G160M_lsf_1625_ltpos_3.dat !
+%% pks0405_cont_norm.asc 2 1635.5 1638.1 pfinst=LSF/cos_G160M_lsf_1637_ltpos_3.dat !
+ SiIV     0.1666159870A    0.0000007854    24.68000A     4.98609  12.611939D    0.058900  0 !
+ SiIV     0.1671318528A    0.0000047325    30.60401A     1.82337  13.254543C    0.017492  0 !
