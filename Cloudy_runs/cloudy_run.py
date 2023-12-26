@@ -198,8 +198,8 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
 # run_name='component_III_PI_nH'
 
-qso='pks0405'
-z_abs=0.167125
+qso='pg1121'
+z_abs=0.192393
 
 if not os.path.exists(f'{qso}/z={z_abs}'):
     os.makedirs(f'{qso}/z={z_abs}')
