@@ -19,7 +19,7 @@ pg1121  - CII and Lyg - Needs a lot of changes
 pg1222  - OVI and HI - OVI done, HI not exactly done, preliminary for the time being
 h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170062  : OVI and 
 pg1116  - 2 comp vs 3 comp : Savage : Done
-pks0405 - continuum and slight changes : 
+pks0405 - continuum and slight changes : Done
 sbs1108 - Lyman lines - Done
 
 
@@ -123,7 +123,7 @@ Cloudy run  :  PI
 pg1222: 
 
 11) z = 0.463207
-HI components: 
+HI components: 6
 
 fitting     :  Done :  HI still needs to be looked at, done priliminary for the time being
 Cloudy run  :  PI
@@ -133,11 +133,50 @@ Cloudy run  :  PI
 pg1116: 
 
 12) z = 0.138527
-HI components: 
+HI components: 3
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
 
 --------------------------------------------------------------------
 
+pks0405: 
+
+13) z = 0.167125
+HI components: 6
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+
+--------------------------------------------------------------------
+
+pg1121: 
+
+14) z = 0.192393
+HI components: 2
+
+fitting     :  Done - To be looked
+Cloudy run  :  PI - done with previous fits
+
+--------------------------------------------------------------------
+
+h1821: 
+
+15) z = 0.224981
+HI components: 
+
+fitting     :  Done - To be looked
+Cloudy run  :  PI - done with previous fits
+
+--------------------------------------------------------------------
+
+h1821: 
+
+16) z = 0.170062
+HI components: 
+
+fitting     :  OVI and one more to be fitted
+Cloudy run  :  PI - not done
+
+--------------------------------------------------------------------
 

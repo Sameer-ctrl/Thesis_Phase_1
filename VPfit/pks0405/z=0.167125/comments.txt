@@ -6,7 +6,7 @@ CII :
 	CII 1036 contaminated from OVI 1038 from z=0.166059 on right. initially CII 1334 was fitted alone, fitting together gives similar results.
 
 CIII : 
-	Great fit
+	Great fit. Fitted with 2 comp but Savage fitted 5 comp, on oversampled spectrum, don't see the absorption features for 5 comp in our spectra.
 
 OI:
 	Very shallow
