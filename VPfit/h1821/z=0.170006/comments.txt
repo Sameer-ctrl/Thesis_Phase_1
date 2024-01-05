@@ -1,0 +1,14 @@
+HI:
+	Good fit
+
+SiIII:
+	Fitted with two components now, though second component is very weak. Always ambiguous on number of components for weak lines.
+
+NV:
+	Good fit. Fitted with 2 comp. NV 1242 is contaminated with galactic NiII 1454. 
+
+OVI:
+	Not much good, should be cautious, differ from Savage, but this was the best possible.
+	OVI 1038 is strongly contaminated by ISM Lyα absorption and geocoronal emission (savage et al. 2014)
+	Fitted with 2 comp, one is very broad b~150, contaminated with HI 930 from z=0.296630 and 0.296845, and galactic SiIII 1206 lines.
+

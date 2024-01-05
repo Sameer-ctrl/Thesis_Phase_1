@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-qso='pg0003'
-comp='I'
-z_abs=0.386089
+qso='sbs1108'
+comp='III'
+z_abs=0.463207
 
 hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
@@ -26,19 +26,30 @@ logZ_range=[-3,2]
 param=data['parameters']
 
 
-def ion_label(ion,state):
+def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
-    return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+    a=ion.split('+')
 
-ions=['O+2','C+2','N+4','O+5']
+    if len(a)>1:
 
-observations={'O+2':[13.93,0.08],'C+2':[13.35,0.05],'N+4':[13.49,0.11],'O+5':[13.87,0.04]}
-ions_roman=[ion_label('O','III'),ion_label('C','III'),ion_label('N','V'),ion_label('O','VI')]
+        if a[1]!='':
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+
+        else:
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
+
+    else:
+
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
 
 
-def ion_label(ion,state):
+# observations={'O+2':[13.93,0.08],'C+2':[13.35,0.05],'N+4':[13.49,0.11],'O+5':[13.87,0.04]}
+# ions_roman=[ion_label('O','III'),ion_label('C','III'),ion_label('N','V'),ion_label('O','VI')]
+ions=['O','Si+2','C+','C+2','N+2','Si+','O+5']
+col_den_dict=[[14.13,0.05],[14.61,0.24],[14.67,0.1],[13.95,0.05],[14.49,0.09],[13.57,0.08],[13.71,0.07]]
+ions_roman=[ion_label(i) for i in ions]
 
-    return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+observations=dict(zip(ions,col_den_dict))
 
 
 def interp_func():
@@ -183,11 +194,11 @@ m2=model(chi_sq_inc,'Including OVI','green')
 plt.clf()
 
 
-plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=ion_label('Observed',''))
+plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
 plot_samples(m1,'orange',n=100)
-m1=model(chi_sq_exc,ion_label('Excluding','')+ion_label('O','VI'),'orange')
+m1=model(chi_sq_exc,'Excluding'+ion_label('O+5'),'orange')
 plot_samples(m2,'green',n=100)
-m2=model(chi_sq_inc,ion_label('Including','')+ion_label('O','VI'),'green')
+m2=model(chi_sq_inc,'Including'+ion_label('O+5'),'green')
 # plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
 # plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
 plt.xticks(xaxis,ions_roman,fontsize=30)

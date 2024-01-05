@@ -5,10 +5,10 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pks0405'
-z_abs=0.167125
+qso='h1821'
+z_abs=0.170006
 vlim=350
-n_col=5
+n_col=3
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -101,14 +101,14 @@ lines=lines_all()
 # lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-line_vshift['CII_1334']=-5
-line_vshift['CIV_1548']=-5
-line_vshift['CIV_1550']=9
-line_vshift['SiIV_1402']=-5
-line_vshift['SiIV_1393']=-5
-line_vshift['SiII_1193']=-6
-line_vshift['SiII_1190']=-5
-line_vshift['HI_972']=-10
+# line_vshift['CII_1334']=-5
+# line_vshift['CIV_1548']=-5
+# line_vshift['CIV_1550']=9
+# line_vshift['SiIV_1402']=-5
+# line_vshift['SiIV_1393']=-5
+# line_vshift['SiII_1193']=-6
+# line_vshift['SiII_1190']=-5
+# line_vshift['HI_972']=-10
 # line_vshift['HI_1215']=-3
 # line_vshift['HI_916']=-4
 # line_vshift['HI_917']=-3
@@ -295,6 +295,6 @@ plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
-# plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
 
 # plt.show()  

@@ -1,8 +1,8 @@
 from numpy import *
 import os
 
-qso='1es1553'
-z_abs=0.187764
+qso='pks0405'
+z_abs=0.167125
 
 file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
 
@@ -20,7 +20,7 @@ with open(file) as f:
 with open('temp_param_file.txt','w') as f:
     f.write(data)
 
-param_file=loadtxt('temp_param_file.txt',dtype=str,comments='>')
+param_file=loadtxt('temp_param_file.txt',dtype=str,comments=('>','#'))
 
 ions=param_file[:,0]
 z=param_file[:,1].astype(float)
