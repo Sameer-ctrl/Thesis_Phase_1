@@ -17,7 +17,7 @@ Fits to check :
 
 pg1121  - CII and Lyg - Needs a lot of changes
 pg1222  - OVI and HI - OVI done, HI not exactly done, preliminary for the time being
-h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170062  : OVI and 
+h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170006  : Done
 pg1116  - 2 comp vs 3 comp : Savage : Done
 pks0405 - continuum and slight changes : Done
 sbs1108 - Lyman lines - Done
@@ -33,6 +33,7 @@ HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI (1d and 2d)
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -43,13 +44,14 @@ HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI (1d and 2d)
-
+Modelling   :  Done
 
 3) z = 0.417539
 HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI 
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -60,6 +62,7 @@ HI components: 4
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -70,13 +73,14 @@ HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
-
+Modelling   :  Done
 
 6) z = 0.421923
 HI components: 3
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -87,6 +91,7 @@ HI components: 3
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -97,6 +102,7 @@ HI components: 4
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI  
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -107,6 +113,7 @@ HI components: 4
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -117,16 +124,18 @@ HI components:
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
 pg1222: 
 
-11) z = 0.463207
+11) z = 0.378389
 HI components: 6
 
 fitting     :  Done :  HI still needs to be looked at, done priliminary for the time being
 Cloudy run  :  PI
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -137,6 +146,7 @@ HI components: 3
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  Done - not good needs to be looked
 
 --------------------------------------------------------------------
 
@@ -147,6 +157,7 @@ HI components: 6
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
+Modelling   :  
 
 --------------------------------------------------------------------
 
@@ -157,6 +168,7 @@ HI components: 2
 
 fitting     :  Done - To be looked
 Cloudy run  :  PI - done with previous fits
+Modelling   :  
 
 --------------------------------------------------------------------
 
@@ -167,16 +179,15 @@ HI components:
 
 fitting     :  Done - To be looked
 Cloudy run  :  PI - done with previous fits
+Modelling   :  
 
---------------------------------------------------------------------
 
-h1821: 
-
-16) z = 0.170062
+16) z = 0.170006
 HI components: 
 
-fitting     :  OVI and one more to be fitted
-Cloudy run  :  PI - not done
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+Modelling   :  
 
 --------------------------------------------------------------------
 

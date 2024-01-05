@@ -160,7 +160,7 @@ plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=30)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
 # plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
 plt.legend()
-plt.savefig('Observed_and_predicted.png')
+# plt.savefig('Observed_and_predicted.png')
 
 plt.show()
 

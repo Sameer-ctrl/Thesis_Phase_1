@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  20 DEC 2023 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  27 DEC 2023 13:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,20 +569,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--521
 ]
 <Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png, id=100, 992.9898pt x 610.6815pt>
 <Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png, id=101, 992.9898pt x 610.6815pt>
- [22] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
+ [22]
+<System-Plots/SBS1108+560_z=0.463207_sys_plot.png, id=105, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 547--550
+ []|  [] |
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--600
+
+ []
+
+[24
+
+
+]
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII.png, id=112, 978.5358pt x 610.6815pt>
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII.png, id=113, 978.5358pt x 610.6815pt>
+ [25]
+<System-Plots/PG1222+216_z=0.378389_sys_plot.png, id=118, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 624--627
+ []|  [] |
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+
+ []
+
+<Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png, id=122, 978.5358pt x 610.6815pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
+
+ []
+
+[27
+
+
+] [28]
+<System-Plots/PG1116+215_z=0.138527_sys_plot.png, id=129, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 682--685
+ []|  [] |
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 719--720
+
+ []
+
+[30
+
+
+]
+<Ionisation-Modelling-Plots/pg1116-z=0.138527-compI.png, id=136, 992.9898pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pg1116-z=0.138527-compII.png, id=137, 978.5358pt x 610.6815pt>
+ [31]
+<System-Plots/PKS0405-123_z=0.167125_sys_plot.png, id=142, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 750--753
+ []|  [] |
+ []
+
+[32] [33
+
+
+] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
 Here is how much of TeX's memory you used:
- 4406 strings out of 481239
- 68028 string characters out of 5920376
- 304040 words of memory out of 5000000
- 19602 multiletter control sequences out of 15000+600000
+ 4451 strings out of 481239
+ 70311 string characters out of 5920376
+ 307040 words of memory out of 5000000
+ 19638 multiletter control sequences out of 15000+600000
  540211 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,42p,372b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (22 pages, 103467 bytes).
+Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (33 pages, 112260 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 183 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

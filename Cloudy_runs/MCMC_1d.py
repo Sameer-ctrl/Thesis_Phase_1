@@ -12,12 +12,13 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='1es1553'
-comp='I'
-z_abs=0.187764
+qso='pg1116'
+comp='II'
+z_abs=0.138527
 
-ions=['C+2','N+4','O+5']
-col_den_dict=[[13.17,0.10],[13.43,0.05],[14.23,0.07]]
+ions=['N+4','N+','Si+','Si+2','Si+3','C+','C+3','O+5']
+col_den_dict=[[12.84,0.09],[13.62,0.11],[12.46,0.06],[12.92,0.04],[12.84,0.09],[13.85,0.04],[13.17,0.07],[13.84,0.02]]
+
 
 observations=dict(zip(ions,col_den_dict))
 # observations={'C+3':[13.58,0.09],'Si+2':[12.58,0.05],'Si+3':[12.69,0.1],'O+5':[13.77,0.11]}
@@ -42,11 +43,17 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
     a=ion.split('+')
 
-    if a[1]!='':
-        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+    if len(a)>1:
+
+        if a[1]!='':
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+
+        else:
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
 
     else:
-        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
+
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
 
 
 def interp_func():
@@ -189,6 +196,7 @@ sol2=sol_write(quantiles2)
 print(f'\nExcluding OVI : {sol1}')
 print(f'Including OVI : {sol2}\n')
 
+print('N(\ion{H}{I})=   \\\ \n')
 print(f'Excluding \ion{{O}}{{vi}} : $n_H$ = {sol1[0]} $\pm$ {max([sol1[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol1[3]} $\pm$ {max([sol1[4:]])[0]}\n')
 print(f'Including \ion{{O}}{{vi}} : $n_H$ = {sol2[0]} $\pm$ {max([sol2[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol2[3]} $\pm$ {max([sol2[4:]])[0]}')
 print(f'\\\\\\\\')
