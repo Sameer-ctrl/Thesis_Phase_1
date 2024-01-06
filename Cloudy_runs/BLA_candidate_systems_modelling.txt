@@ -133,7 +133,7 @@ pg1222:
 11) z = 0.378389
 HI components: 6
 
-fitting     :  Done :  HI still needs to be looked at, done priliminary for the time being
+fitting     :  HI still needs to be looked at, done priliminary for the time being
 Cloudy run  :  PI
 Modelling   :  Done
 

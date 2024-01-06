@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='h1821'
-z_abs=0.170006
+qso='pg1121'
+z_abs=0.192393
 vlim=350
 n_col=3
 lw1=1.5
@@ -101,7 +101,11 @@ lines=lines_all()
 # lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-# line_vshift['CII_1334']=-5
+line_vshift['CIII_977']=-5
+line_vshift['CII_1334']=-2
+line_vshift['HI_1025']=-5
+line_vshift['HI_972']=-5
+line_vshift['SiII_1193']=-4
 # line_vshift['CIV_1548']=-5
 # line_vshift['CIV_1550']=9
 # line_vshift['SiIV_1402']=-5
