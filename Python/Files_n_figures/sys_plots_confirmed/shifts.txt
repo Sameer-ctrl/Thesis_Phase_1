@@ -93,3 +93,12 @@ line_vshift['SiII_1193']=-6
 line_vshift['SiII_1190']=-5
 line_vshift['HI_972']=-10
 
+
+qso='pg1121'
+z_abs=0.192393
+line_vshift['CIII_977']=-5
+line_vshift['CII_1334']=-2
+line_vshift['HI_1025']=-5
+line_vshift['HI_972']=-5
+line_vshift['SiII_1193']=-4
+
