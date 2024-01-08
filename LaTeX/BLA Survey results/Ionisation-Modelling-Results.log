@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  27 DEC 2023 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  7 JAN 2024 23:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,29 +647,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 719--720
 <Ionisation-Modelling-Plots/pg1116-z=0.138527-compI.png, id=136, 992.9898pt x 610.6815pt>
 <Ionisation-Modelling-Plots/pg1116-z=0.138527-compII.png, id=137, 978.5358pt x 610.6815pt>
  [31]
-<System-Plots/PKS0405-123_z=0.167125_sys_plot.png, id=142, 2384.91pt x 1634.2656pt>
+<System-Plots/H1821+643_z=0.170006_sys_plot.png, id=142, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 750--753
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 751--754
  []|  [] |
  []
 
-[32] [33
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
+
+ []
 
 
-] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 788--789
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--792
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--792
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
+
+ []
+
+[33
+
+
+]
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png, id=149, 992.9898pt x 610.6815pt>
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png, id=150, 992.9898pt x 610.6815pt>
+ [34]
+<System-Plots/PG1121+422_z=0.192393_sys_plot.png, id=154, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 822--825
+ []|  [] |
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 859--860
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--867
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--867
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 868--869
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+[36
+
+
+]
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png, id=161, 1154.1519pt x 637.4214pt>
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png, id=162, 978.5358pt x 610.6815pt>
+ [37] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
 Here is how much of TeX's memory you used:
- 4451 strings out of 481239
- 70311 string characters out of 5920376
- 307040 words of memory out of 5000000
- 19638 multiletter control sequences out of 15000+600000
+ 4476 strings out of 481239
+ 71580 string characters out of 5920376
+ 305040 words of memory out of 5000000
+ 19658 multiletter control sequences out of 15000+600000
  540211 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,42p,372b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (33 pages, 112260 bytes).
+Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (37 pages, 115565 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 203 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

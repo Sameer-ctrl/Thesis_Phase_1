@@ -15,7 +15,7 @@ pg1216*  : 3    #       %
 
 Fits to check :
 
-pg1121  - CII and Lyg - Needs a lot of changes
+pg1121  - CII and Lyg - Needs a lot of changes : done
 pg1222  - OVI and HI - OVI done, HI not exactly done, preliminary for the time being
 h1821   - z=0.224981 : 3 comp vs 5 comp, Savage   z=0.170006  : Done
 pg1116  - 2 comp vs 3 comp : Savage : Done
@@ -166,9 +166,9 @@ pg1121:
 14) z = 0.192393
 HI components: 2
 
-fitting     :  Done - To be looked
-Cloudy run  :  PI - done with previous fits
-Modelling   :  
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+Modelling   :  Done - sol not good
 
 --------------------------------------------------------------------
 
@@ -187,7 +187,7 @@ HI components:
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
-Modelling   :  
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
