@@ -12,12 +12,12 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='pg1116'
+qso='pg1121'
 comp='II'
-z_abs=0.138527
+z_abs=0.192393
 
-ions=['N+4','N+','Si+','Si+2','Si+3','C+','C+3','O+5']
-col_den_dict=[[12.84,0.09],[13.62,0.11],[12.46,0.06],[12.92,0.04],[12.84,0.09],[13.85,0.04],[13.17,0.07],[13.84,0.02]]
+ions=['C+','C+2','Si+','Si+2','Si+3','O+5']
+col_den_dict=[[13.69,0.08],[13.04,0.09],[13.04,0.06],[12.62,0.10],[12.86,0.13],[12.84,0.19]]
 
 
 observations=dict(zip(ions,col_den_dict))
@@ -34,7 +34,7 @@ hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
 log_nH=data['log_nH']
-logZ_ref=1
+logZ_ref=-1
 lognH_range=[-5,1]
 logZ_range=[-3,2]
 
