@@ -32,10 +32,10 @@ import os
 
 # files=os.listdir('pg1216/HI_chunks')
 
-os.chdir('pg1121/z=0.192393')
+os.chdir('h1821/z=0.224981')
 
-rest_wave=[1215,1025,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
-comp=2
+rest_wave=[1025,1215,972,949,937,930,926,923,920,919,918,917,916,'Ly14','Ly15','Ly16','Ly17']
+comp=3
 
 for i,wave in enumerate(rest_wave):
 

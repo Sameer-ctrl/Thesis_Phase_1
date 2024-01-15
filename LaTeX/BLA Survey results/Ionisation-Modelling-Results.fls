@@ -192,9 +192,6 @@ INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1116+215_z=0.138527_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1116+215_z=0.138527_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1116+215_z=0.138527_sys_plot.png
-INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compI.png
-INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compI.png
-INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compI.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compII.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compII.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1116-z=0.138527-compII.png
@@ -207,6 +204,12 @@ INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
@@ -219,6 +222,15 @@ INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb

@@ -5,9 +5,9 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1121'
-z_abs=0.192393
-vlim=350
+qso='h1821'
+z_abs=0.224981
+vlim=450
 n_col=3
 lw1=1.5
 
@@ -101,11 +101,11 @@ lines=lines_all()
 # lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-line_vshift['CIII_977']=-5
-line_vshift['CII_1334']=-2
-line_vshift['HI_1025']=-5
-line_vshift['HI_972']=-5
-line_vshift['SiII_1193']=-4
+line_vshift['HI_949']=-3
+line_vshift['HI_937']=-12
+line_vshift['OVI_1032']=-3
+# line_vshift['HI_930']=-4
+# line_vshift['SiII_1193']=-4
 # line_vshift['CIV_1548']=-5
 # line_vshift['CIV_1550']=9
 # line_vshift['SiIV_1402']=-5
@@ -129,7 +129,7 @@ line_vshift['SiII_1193']=-4
 # line_vshift['Ly16']=-3
 # line_vshift['SiII_1193']=-3
 # line_vshift['SiIII_1206']=-5
-# line_vshift['OVI_1038']=-6
+
 
 # lines=['HI_1215','OVI_1032', 'CIII_977','HI_1025','OVI_1038', 'CII_1036',  'HI_972'  
 #  ,'SiIII_1206', 'SiII_1260']
@@ -262,7 +262,7 @@ def abs_line_plot(line):
     plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     # plt.text(-260,0.21,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     plt.yticks([0,0.5,1,1.5])
-    plt.xticks([-300,-200,-100,0,100,200,300])
+    plt.xticks([-400,-300,-200,-100,0,100,200,300,400])
     
 
 fig=plt.figure(figsize=(40,20),dpi=300)
@@ -300,5 +300,6 @@ plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc=
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
 plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+
 
 # plt.show()  

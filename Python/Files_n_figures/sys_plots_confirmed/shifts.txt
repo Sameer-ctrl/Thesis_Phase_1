@@ -102,3 +102,9 @@ line_vshift['HI_1025']=-5
 line_vshift['HI_972']=-5
 line_vshift['SiII_1193']=-4
 
+
+qso='h1821'
+z_abs=0.224981
+line_vshift['HI_949']=-3
+line_vshift['HI_937']=-12
+line_vshift['OVI_1032']=-3
