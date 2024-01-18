@@ -12,12 +12,12 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='pks0405'
+qso='h1821'
 comp='IV'
-z_abs=0.167125
+z_abs=0.224981
 
-ions=['C+','C+2','N+','Si+2','Si+','O+5']
-col_den_dict=[[13.76,0.02],[14.33,0.04],[13.47,0.09],[12.66,0.1],[12.54,0.09],[14.11,0.17]]
+ions=['Si+2','C+2','O+5']
+col_den_dict=[[12.71,0.13],[13.84,0.02],[13.12,0.1]]
 
 observations=dict(zip(ions,col_den_dict))
 # observations={'C+3':[13.58,0.09],'Si+2':[12.58,0.05],'Si+3':[12.69,0.1],'O+5':[13.77,0.11]}
@@ -145,8 +145,8 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
     return flat_samples
 
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=5000)
-flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,discard_tau=True,nsteps=5000)
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=20000)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,discard_tau=False,nsteps=20000)
 
 
 def sol_write(q):
