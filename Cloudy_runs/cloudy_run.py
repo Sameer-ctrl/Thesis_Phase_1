@@ -198,24 +198,24 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
 # run_name='component_III_PI_nH'
 
-qso='h1821'
-z_abs=0.224981
+qso='pg1116'
+z_abs=0.138527
 
 if not os.path.exists(f'{qso}/z={z_abs}'):
     os.makedirs(f'{qso}/z={z_abs}')
     
 hden=[-5,1,0.02]
-metal=[-1]
+metal=[1]
 temp=None
-redshift=[0.224516,0.224818,0.224901,0.225057]
-stop_nH=[13.87,15.16,13.64,15.13]
+redshift=[0.138495,0.138506,0.138645]
+stop_nH=[14.97,13.6,16.04]
 
 ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4']
 
 for i in range(len(stop_nH)):
 
     run_name=f'component_{toRoman(i+1)}_PI_nH'
-    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=100, save_temp=True, delete_temp_file=True, delete_out_file=True)
+    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=False, delete_temp_file=True, delete_out_file=True)
 
     sleep(30)
 

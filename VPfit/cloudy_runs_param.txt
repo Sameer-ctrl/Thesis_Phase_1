@@ -1,0 +1,65 @@
+qso='3c263'
+z_abs=0.140756
+
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
+    
+hden=[-5,1,0.02]
+metal=[1]
+temp=None
+redshift=[0.140702,0.140755]
+stop_nH=[13.49,14.49]
+
+
+qso='pks0637'
+z_abs=0.161064
+
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
+    
+hden=[-5,1,0.02]
+metal=[1]
+temp=None
+redshift=[0.161013,0.161062]
+stop_nH=[13.6,15.0]
+
+
+qso='s135712'
+z_abs=0.097869
+
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
+    
+hden=[-5,1,0.02]
+metal=[1]
+temp=None
+redshift=[0.095892,0.097625,0.097869,0.099436]
+stop_nH=[13.36,16.48,15.01,13.52]
+
+
+qso='sbs1108'
+z_abs=0.463207
+
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
+    
+hden=[-5,1,0.02]
+metal=[1]
+temp=None
+redshift=[0.462938,0.463152,0.463365]
+stop_nH=[15.77,15.79,18.09]
+
+
+qso='pg1116'
+z_abs=0.138527
+
+if not os.path.exists(f'{qso}/z={z_abs}'):
+    os.makedirs(f'{qso}/z={z_abs}')
+    
+hden=[-5,1,0.02]
+metal=[1]
+temp=None
+redshift=[0.138495,0.138506,0.138645]
+stop_nH=[14.97,13.6,16.04]
+
+
