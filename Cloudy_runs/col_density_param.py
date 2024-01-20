@@ -3,7 +3,7 @@ from numpy import *
 from astropy.io import ascii,fits
 
 
-def write_param(qso,run_name,parameters):
+def write_param(qso,z_abs,run_name,parameters,temp=False):
 
     # for i in range(0):
 
@@ -11,16 +11,16 @@ def write_param(qso,run_name,parameters):
         # parameters=['log_nH','log_Z']
         print(run_name)
 
-        with open(f'{qso}/{run_name}/{run_name}_col_density.txt') as f:
+        with open(f'{qso}/z={z_abs}/{run_name}/{run_name}_col_density.txt') as f:
                 data=f.read()
                 data=data.replace('#column density ','')
 
-        with open(f'{qso}/{run_name}/{run_name}_col_density.txt','w') as f:
+        with open(f'{qso}/z={z_abs}/{run_name}/{run_name}_col_density.txt','w') as f:
             f.write(data)
 
 
-        grid=loadtxt(f'{qso}/{run_name}/{run_name}_grid.txt',dtype=str)
-        col_density=ascii.read(f'{qso}/{run_name}/{run_name}_col_density.txt')
+        grid=loadtxt(f'{qso}/z={z_abs}/{run_name}/{run_name}_grid.txt',dtype=str)
+        col_density=ascii.read(f'{qso}/z={z_abs}/{run_name}/{run_name}_col_density.txt')
         n=len(parameters)
 
         param_data=[]
@@ -33,28 +33,37 @@ def write_param(qso,run_name,parameters):
             
         param_data=tuple(zip(*param_data))
 
-        # temp_file=f'{run_name}_temp.txt'
-        
-        # data_temp=genfromtxt(f'{run_name}/{temp_file}',delimiter=[11,11,9,10,10])
+        if temp==True:
 
-        # Te=data_temp[:,1]
-        # d2t_dr2=data_temp[:,4]
+            temp_file=f'{run_name}_temp.txt'
+            
+            data_temp=genfromtxt(f'{qso}/z={z_abs}/{run_name}/{temp_file}',delimiter=[11,11,9,10,10])
 
-        # log_Te=zeros(len(col_density))
-        # k=0
+            Te=data_temp[:,1]
+            d2t_dr2=data_temp[:,4]
+            
 
-        # for i,j in enumerate(d2t_dr2):
-        #     if j==0:
-        #         log_Te[k]=round(log10(Te[i]),3)
-        #         k+=1
-
-        # col_density.add_column(log_Te,name='log_Te')
-
+            log_Te=zeros(len(col_density))
+            # log_Te=[]
+            # print(len(col_density))
+            k=0
+            
+            for i,j in enumerate(d2t_dr2):
+                
+                if j==0:
+                    print(k,Te[i],i)
+                    log_Te[k]=round(log10(Te[i]),3)
+                
+                    k+=1
+            
+            # quit()  
+            col_density.add_column(log_Te,name='log_Te')
+            
         col_density.add_column(param_data,name='parameters')
         print(col_density.colnames,'\n')
-        col_density.write(f'{qso}/{run_name}/{run_name}_col_density_param.fits',overwrite=True)
-        ascii.write(col_density,f'{qso}/{run_name}/{run_name}_col_density_param.txt',format='ecsv',overwrite=True)
-        col_density.write(f'{qso}/{run_name}_col_density_param.fits',overwrite=True)
+        col_density.write(f'{qso}/z={z_abs}/{run_name}/{run_name}_col_density_param.fits',overwrite=True)
+        ascii.write(col_density,f'{qso}/z={z_abs}/{run_name}/{run_name}_col_density_param.txt',format='ecsv',overwrite=True)
+        col_density.write(f'{qso}/z={z_abs}/{run_name}_col_density_param.fits',overwrite=True)
 
 
 def join_data():
@@ -85,7 +94,8 @@ def join_data():
 # join_data()
 
 qso='pks0637'
-run_name = f'component_I_PI_nH_Z'
-parameters=['log_nH','log_Z']
+z_abs=0.161064
+run_name = f'component_II_PI_nH'
+parameters=['log_nH']
 
-write_param(qso,run_name,parameters)
+write_param(qso,z_abs,run_name,parameters,temp=True)
