@@ -9,9 +9,12 @@ import matplotlib.pyplot as plt
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
-qso='sbs1108'
-comp='III'
-z_abs=0.463207
+qso='h1821'
+comp='IV'
+z_abs=0.224981
+
+ions=['Si+2','C+2','O+5']
+col_den_dict=[[12.71,0.13],[13.84,0.02],[13.12,0.1]]
 
 hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
@@ -45,8 +48,8 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
 # observations={'O+2':[13.93,0.08],'C+2':[13.35,0.05],'N+4':[13.49,0.11],'O+5':[13.87,0.04]}
 # ions_roman=[ion_label('O','III'),ion_label('C','III'),ion_label('N','V'),ion_label('O','VI')]
-ions=['O','Si+2','C+','C+2','N+2','Si+','O+5']
-col_den_dict=[[14.13,0.05],[14.61,0.24],[14.67,0.1],[13.95,0.05],[14.49,0.09],[13.57,0.08],[13.71,0.07]]
+# ions=['Si+2','C+2','O+5']
+# col_den_dict=[[12.23,0.15],[13.36,0.07],[14.24,0.01]]
 ions_roman=[ion_label(i) for i in ions]
 
 observations=dict(zip(ions,col_den_dict))
