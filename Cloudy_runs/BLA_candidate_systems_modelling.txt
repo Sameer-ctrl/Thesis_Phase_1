@@ -179,7 +179,7 @@ HI components:
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI
-Modelling   :  
+Modelling   :  Done
 
 
 16) z = 0.170006
@@ -191,3 +191,93 @@ Modelling   :  Done
 
 --------------------------------------------------------------------
 
+
+
+logZ=1
+
+3c263: 
+
+1) z = 0.140756
+HI components: 2
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI*
+Modelling   :  
+
+--------------------------------------------------------------------
+
+pks0637: 
+
+2) z = 0.161064
+HI components: 2
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI*
+Modelling   :  
+
+--------------------------------------------------------------------
+
+s135712: 
+
+3) z = 0.097869
+HI components: 4
+
+fitting     :  Done-Confirmed
+Cloudy run  :  
+Modelling   :  
+
+--------------------------------------------------------------------
+
+1es1553: 
+
+4) z = 0.187764
+HI components: 4
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+Modelling   :  Done
+
+--------------------------------------------------------------------
+
+sbs1108: 
+
+5) z = 0.463207
+HI components: 
+
+fitting     :  Done-Confirmed
+Cloudy run  :  
+Modelling   :  
+
+--------------------------------------------------------------------
+h1821: 
+
+6) z = 0.170006
+HI components: 
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+Modelling   :  Done
+
+--------------------------------------------------------------------
+
+pg1116: 
+
+7) z = 0.138527
+HI components: 3
+
+fitting     :  Done-Confirmed
+Cloudy run  :  
+Modelling   :  
+
+--------------------------------------------------------------------
+
+pg1121: 
+
+8) z = 0.192393
+HI components: 2
+
+fitting     :  Done-Confirmed
+Cloudy run  :  PI
+Modelling   :  Done
+
+--------------------------------------------------------------------
