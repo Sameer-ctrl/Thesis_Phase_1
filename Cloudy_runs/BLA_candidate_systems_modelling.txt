@@ -202,7 +202,7 @@ HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI*
-Modelling   :  
+Modelling   :  Done
 
 --------------------------------------------------------------------
 
@@ -213,7 +213,7 @@ HI components: 2
 
 fitting     :  Done-Confirmed
 Cloudy run  :  PI*
-Modelling   :  
+Modelling   :  done
 
 --------------------------------------------------------------------
 
@@ -223,8 +223,8 @@ s135712:
 HI components: 4
 
 fitting     :  Done-Confirmed
-Cloudy run  :  Done
-Modelling   :  
+Cloudy run  :  PI
+Modelling   :  done
 
 --------------------------------------------------------------------
 
@@ -245,8 +245,8 @@ sbs1108:
 HI components: 
 
 fitting     :  Done-Confirmed
-Cloudy run  :  Done
-Modelling   :  
+Cloudy run  :  PI
+Modelling   :  done
 
 --------------------------------------------------------------------
 h1821: 
@@ -266,7 +266,7 @@ pg1116:
 HI components: 3
 
 fitting     :  Done-Confirmed
-Cloudy run  :  Done
+Cloudy run  :  PI
 Modelling   :  
 
 --------------------------------------------------------------------
