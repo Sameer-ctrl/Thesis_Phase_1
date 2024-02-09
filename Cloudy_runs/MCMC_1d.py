@@ -12,16 +12,17 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='h1821'
-comp='IV'
-z_abs=0.224981
+qso='pg1116'
+comp='II'
+z_abs=0.138527
 
-ions=['Si+2','C+2','O+5']
-col_den_dict=[[12.71,0.13],[13.84,0.02],[13.12,0.1]]
+ions=['N+4','N+','Si+','Si+2','Si+3','C+','C+3','O+5']
+col_den_dict=[[12.84,0.09],[13.62,0.11],[12.46,0.06],[12.92,0.04],[12.84,0.09],[13.85,0.04],[13.17,0.07],[13.84,0.02]]
 
 observations=dict(zip(ions,col_den_dict))
 # observations={'C+3':[13.58,0.09],'Si+2':[12.58,0.05],'Si+3':[12.69,0.1],'O+5':[13.77,0.11]}
 
+logZ_ref=1
 ions_to_use1=ions[:-1]
 ions_to_use2=ions
 
@@ -29,11 +30,10 @@ qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
 qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
 qso_label=qso_dict[qso]
 
-hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
+hdu=fits.open(f'{qso}/z={z_abs}/logZ={logZ_ref}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
 log_nH=data['log_nH']
-logZ_ref=-1
 lognH_range=[-5,1]
 logZ_range=[-3,2]
 
@@ -145,8 +145,8 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
     return flat_samples
 
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=20000)
-flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,discard_tau=False,nsteps=20000)
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=10000)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,discard_tau=True,nsteps=10000)
 
 
 def sol_write(q):
@@ -199,7 +199,7 @@ print('N(\ion{H}{I})=   \\\ \n')
 print(f'Excluding \ion{{O}}{{vi}} : $n_H$ = {sol1[0]} $\pm$ {max([sol1[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol1[3]} $\pm$ {max([sol1[4:]])[0]}\n')
 print(f'Including \ion{{O}}{{vi}} : $n_H$ = {sol2[0]} $\pm$ {max([sol2[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol2[3]} $\pm$ {max([sol2[4:]])[0]}')
 print(f'\\\\\\\\')
-print(f'\includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}.png}}\n')
+print(f'\includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png}}\n')
 
 inds = random.randint(int(max(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI))/1.33),min(len(flat_samples_exc_OVI),len(flat_samples_inc_OVI)), size=100)
 
@@ -252,5 +252,5 @@ plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
-plt.savefig(f'../LaTeX/BLA Survey results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}.png')
+plt.savefig(f'../LaTeX/BLA Survey results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png')
 plt.show()
