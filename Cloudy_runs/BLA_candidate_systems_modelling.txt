@@ -190,7 +190,7 @@ Cloudy run  :  PI
 Modelling   :  Done
 
 --------------------------------------------------------------------
-
+--------------------------------------------------------------------
 
 
 logZ=1
@@ -223,7 +223,7 @@ s135712:
 HI components: 4
 
 fitting     :  Done-Confirmed
-Cloudy run  :  
+Cloudy run  :  Done
 Modelling   :  
 
 --------------------------------------------------------------------
@@ -245,7 +245,7 @@ sbs1108:
 HI components: 
 
 fitting     :  Done-Confirmed
-Cloudy run  :  
+Cloudy run  :  Done
 Modelling   :  
 
 --------------------------------------------------------------------
@@ -266,7 +266,7 @@ pg1116:
 HI components: 3
 
 fitting     :  Done-Confirmed
-Cloudy run  :  
+Cloudy run  :  Done
 Modelling   :  
 
 --------------------------------------------------------------------

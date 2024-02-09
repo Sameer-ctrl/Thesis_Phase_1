@@ -21,22 +21,22 @@ r=data[0:,7].astype(float)
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
 k=array([0.1,0.15,0.28,0.44,0.54])
 
-def L_by_Lstar(m_I,M_star,z):
+# def L_by_Lstar(m_I,M_star,z):
 
-    dL=cosmo.luminosity_distance(z)  # Mpc
-    M_star_I=5*log10(cosmo.h)+M_star
-    M_I=m_I-(5*log10(dL.value*1e6))+5
-    L_by_Lstar_val=10**((M_star_I-M_I)/2.5)
+#     dL=cosmo.luminosity_distance(z)  # Mpc
+#     M_star_I=5*log10(cosmo.h)+M_star
+#     M_I=m_I-(5*log10(dL.value*1e6))+5
+#     L_by_Lstar_val=10**((M_star_I-M_I)/2.5)
 
-    print(f'&  {m_I}   &  {L_by_Lstar_val:.2f}   &  {250*(L_by_Lstar_val**0.2):.2f}')
+#     print(f'&  {m_I}   &  {L_by_Lstar_val:.2f}   &  {250*(L_by_Lstar_val**0.2):.2f}')
 
-# L_by_Lstar(r,-21.64,z)
+# # L_by_Lstar(r,-21.64,z)
+# # quit()
+
+# for i in range(len(z)):
+#     L_by_Lstar(r[i],-21.64,z[i])
+
 # quit()
-
-for i in range(len(z)):
-    L_by_Lstar(r[i],-21.64,z[i])
-
-quit()
 
 
 v_abs=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))
@@ -126,20 +126,20 @@ plt.scatter((ra-ra_qso)*60,(dec-dec_qso)*60,s=600,c=abs(v),cmap='jet')
 # for i in range(len(ra)):
 #     plt.text((ra[i]-ra_qso)*60,(dec[i]-dec_qso)*60,s=f'{i+1}')
 
-cb=plt.colorbar(label=r'$\mathbf{\Delta V \ (km \ s^{-1})}$')
-cb.ax.tick_params(labelsize=25)
-cb.set_label(r'$\mathbf{\Delta V \ (km \ s^{-1})}$',labelpad=40)
+cb=plt.colorbar(label=r'$\mathbf{\Delta v \ (km \ s^{-1})}$')
+cb.ax.tick_params(labelsize=35)
+cb.set_label(r'$\mathbf{\Delta v \ (km \ s^{-1})}$',labelpad=40,fontsize=45)
 circle(500/dA_scale.value,0,0,r'$\mathbf{500 \ kpc}$')
 circle(1000/dA_scale.value,0,0,r'$\mathbf{1 \ Mpc}$')
 # circle(5000/dA_scale.value,0,0,'5 Mpc')
 plt.scatter(0,0,s=900,c='black',marker='X')
-plt.legend(fontsize=30,loc='lower right')
+plt.legend(fontsize=33,loc='lower right')
 plt.xlim(-10,10)
 plt.ylim(-15,5)
-plt.xticks(fontsize=25)
-plt.yticks(fontsize=25)
-plt.xlabel(r'$\mathbf{\alpha-{\alpha}_{QSO} \ [arc \ min]}$',fontsize=30,labelpad=15)
-plt.ylabel(r'$\mathbf{\delta-{\delta}_{QSO} \ [arc \ min]}$',fontsize=30)
+plt.xticks(fontsize=30)
+plt.yticks(fontsize=30)
+plt.xlabel(r'$\mathbf{\alpha-{\alpha}_{QSO} \ [arc \ min]}$',fontsize=45,labelpad=15)
+plt.ylabel(r'$\mathbf{\delta-{\delta}_{QSO} \ [arc \ min]}$',fontsize=45)
 plt.savefig('galaxy_environment.png')
 # plt.show()
 

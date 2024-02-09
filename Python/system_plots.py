@@ -5,9 +5,9 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='h1821'
-z_abs=0.224981
-vlim=450
+qso='pg0003'
+z_abs=0.347579
+vlim=350
 n_col=3
 lw1=1.5
 
@@ -98,12 +98,18 @@ def tick_pos(file):
 
 lines=lines_all()
 # print(lines)
-# lines=['CIII_977', 'CII_1036', 'HI_1025', 'HI_1215', 'HI_916', 'HI_917', 'HI_918' ,'HI_919', 'HI_920', 'HI_923', 'HI_926', 'HI_930', 'HI_937', 'HI_949', 'HI_972', 'NIII_989', 'OI_988', 'OVI_1032', 'OVI_1038', 'SiIII_1206', 'SiII_1190', 'SiII_1193']
+# quit()
+# lines=['HI_1215', 'OVI_1032','CIII_977', 'HI_1025' , 'OVI_1038', 'CII_1036', 'HI_972' ,'SiIII_1206', 'SiII_1260']
+lines=['HI_1215', 'HI_1025', 'HI_972', 'OVI_1032', 'OVI_1038','CIII_977' , 'CII_1036' ,'SiIII_1206', 'SiII_1260']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-line_vshift['HI_949']=-3
-line_vshift['HI_937']=-12
-line_vshift['OVI_1032']=-3
+line_vshift['HI_1215']=0
+line_vshift['HI_972']=4
+line_vshift['OVI_1038']=3
+line_vshift['SiIII_1206']=2 
+line_vshift['OVI_1038']=-5
+# line_vshift['HI_949']=-3
+# line_vshift['HI_937']=-12
 # line_vshift['HI_930']=-4
 # line_vshift['SiII_1193']=-4
 # line_vshift['CIV_1548']=-5
@@ -259,13 +265,14 @@ def abs_line_plot(line):
     plt.xlim(-vlim,vlim)
     plt.ylim(-0.1,1.6)
     line_name=line_label(line)
-    plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
-    # plt.text(-260,0.21,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
+    # plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
+    plt.text(-260,0.21,f'{{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{40pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     plt.yticks([0,0.5,1,1.5])
-    plt.xticks([-400,-300,-200,-100,0,100,200,300,400])
+    plt.xticks([-300,-200,-100,0,100,200,300])
     
 
 fig=plt.figure(figsize=(40,20),dpi=300)
+# fig=plt.figure(figsize=(20,20),dpi=300)
 
 ax1=plt.subplot(int(ceil(n/n_col)),n_col,1)
 
@@ -277,29 +284,30 @@ for i,line in enumerate(lines):
         plt.tick_params('y', labelleft=False)
 
     else:
-        plt.tick_params('y', labelsize=35)
-        # plt.tick_params('y', labelsize=25)
+        # plt.tick_params('y', labelsize=35)
+        plt.tick_params('y', labelsize=40)  #ASI
 
     if i < n-n_col:
         plt.tick_params('x', labelbottom=False)
     
     else:
-        plt.tick_params('x', labelbottom=True,labelsize=35)
-        # plt.tick_params('x', labelbottom=True,labelsize=25)
+        # plt.tick_params('x', labelbottom=True,labelsize=35)
+        plt.tick_params('x', labelbottom=True,labelsize=40)  #ASI
 
     if i!=n-1:
         ax=plt.subplot(int(ceil(n/n_col)),n_col,i+2,sharex=ax1, sharey=ax1)
 
 
-fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=60,y=-0.02)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=60,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+fig.supxlabel(r'$\mathbf{v} \ \mathbf{(km \ \ s^{-1})}$',fontsize=80,y=-0.03)  #y=0.18  (y=0 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=80,x=0.07, y=0.53) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 # fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
 # fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+# plt.savefig(f'Files_n_figures/sys_plots_confirmed/{qso_label}_z={z_abs}_sys_plot.png')
+# plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_ASI.png')
 
 
 # plt.show()  

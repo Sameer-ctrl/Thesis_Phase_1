@@ -11,7 +11,9 @@ plt.style.use('Files_n_figures/my_style.mpl')
 
 def ion_label(ion,state):
 
-    return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+    # return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+    return f'{{\\fontsize{{45pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+    # return f'{{\\fontsize{{30pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{20pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 ions_roman=[ion_label('Si','III'),ion_label('Si','II'),ion_label('C','III'),ion_label('C','II'),ion_label('O','VI')]
@@ -140,7 +142,7 @@ def plot_samples(m,c,n=50,i1=1,i2=1):
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(20,10))
 
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
@@ -154,15 +156,15 @@ plot_samples(m2,'green',n=100)
 m2=model(chi_sq_inc,ion_label('Including','')+ion_label('O','VI'),'green')
 # plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
 # plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
-plt.xticks(xaxis,ions_roman,fontsize=30)
-plt.yticks(fontsize=25)
-plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=30)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
+plt.xticks(xaxis,ions_roman,fontsize=30,)
+plt.yticks(fontsize=35)
+plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=45)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=45)
 # plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
 plt.legend()
-# plt.savefig('Observed_and_predicted.png')
+plt.savefig('Observed_and_predicted-ASI.png')
 
-plt.show()
+# plt.show()
 
 
 

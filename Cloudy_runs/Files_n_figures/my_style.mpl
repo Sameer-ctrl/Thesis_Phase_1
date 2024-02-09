@@ -7,7 +7,7 @@ xtick.direction : in
 ytick.direction : in
 xtick.major.size : 6
 xtick.minor.size : 6
-xtick.major.pad : 10
+xtick.major.pad : 18
 xtick.minor.width : 1.2
 xtick.major.width : 1.8
 #xtick.top : True
