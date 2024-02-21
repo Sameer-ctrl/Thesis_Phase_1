@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,draft]{report}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{multirow}
 \usepackage{lscape}
@@ -83,6 +83,18 @@ Including \ion{O}{vi} : $n_H$ = -4.45 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.30 $\pm$ 
     \caption{N(\ion{H}{i})=13.49, log $Z_{ref}$=1}
 \end{figure}
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item All 3 ions couldn't be explained together
+    \item \ion{O}{vi} is underproduced when excluded
+    \item Reference metallicity was initially used as logZ=-1, resulted in metallicity to be around 1, so later modelled with reference metallicity of logZ=1. 
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
 
 
 \newpage
@@ -103,51 +115,64 @@ Including \ion{O}{vi} : $n_H$ = -4.45 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.30 $\pm$ 
 
 \begin{center}
  
-    \begin{tabular}{cccc}
-            \hline \hline \tabularnewline
-           \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]} 
-           \tabularnewline \tabularnewline \hline \tabularnewline 
-    
-           \ion{N}{v}   &    -42 $\pm$ 6    &    40 $\pm$ 9    &     13.37 $\pm$ 0.07 \\
-           \ion{Si}{iii}   &    11 $\pm$ 4    &    30 $\pm$ 7    &     12.37 $\pm$ 0.06 \\
-           \ion{O}{vi}   &    0 $\pm$ 3    &    48 $\pm$ 5    &     14.02 $\pm$ 0.03 \\
-           \ion{H}{i}   &    -13 $\pm$ 2    &    162 $\pm$ 21    &     13.6 $\pm$ 0.06 \\
-           \ion{H}{i}   &    -1 $\pm$ 1    &    45 $\pm$ 1    &     15.01 $\pm$ 0.02 \\
-    \tabularnewline \hline \hline \tabularnewline
-    
-    \end{tabular}
-    
-    \end{center}
+\begin{tabular}{cccc}
+        \hline \hline \tabularnewline
+        \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]} 
+        \tabularnewline \tabularnewline \hline \tabularnewline 
 
-    N(\ion{H}{I})=13.60 \\
+        \ion{N}{v}   &    -42 $\pm$ 6    &    40 $\pm$ 9    &     13.37 $\pm$ 0.07 \\
+        \ion{Si}{iii}   &    11 $\pm$ 4    &    30 $\pm$ 7    &     12.37 $\pm$ 0.06 \\
+        \ion{O}{vi}   &    0 $\pm$ 3    &    48 $\pm$ 5    &     14.02 $\pm$ 0.03 \\
+        \ion{H}{i}   &    -13 $\pm$ 2    &    162 $\pm$ 21    &     13.6 $\pm$ 0.06 \\
+        \ion{H}{i}   &    -1 $\pm$ 1    &    45 $\pm$ 1    &     15.01 $\pm$ 0.02 \\
+\tabularnewline \hline \hline \tabularnewline
 
-    log $Z_{ref}$ = -1 \\
-    
-    Excluding \ion{O}{vi} : $n_H$ = -4.05 $\pm$ 0.03 \hspace{10mm} $Z$ = 1.20 $\pm$ 0.05
-    
-    Including \ion{O}{vi} : $n_H$ = -4.12 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.30 $\pm$ 0.04
-    \\\\
+\end{tabular}
 
-    log $Z_{ref}$ = 1 \\
+\end{center}
 
-    Excluding \ion{O}{vi} : $n_H$ = -4.29 $\pm$ 0.02 \hspace{10mm} $Z$ = 1.64 $\pm$ 0.05
+N(\ion{H}{I})=13.60 \\
 
-    Including \ion{O}{vi} : $n_H$ = -4.42 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.69 $\pm$ 0.04
+log $Z_{ref}$ = -1 \\
 
-    \newpage
+Excluding \ion{O}{vi} : $n_H$ = -4.05 $\pm$ 0.03 \hspace{10mm} $Z$ = 1.20 $\pm$ 0.05
 
-    \begin{figure}[!h]
-        \centering
-        \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png}
-        \caption{N(\ion{H}{i})=13.60, log $Z_{ref}$=-1}
-    \end{figure}
+Including \ion{O}{vi} : $n_H$ = -4.12 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.30 $\pm$ 0.04
+\\\\
 
-    \begin{figure}[!b]
-        \centering
-        \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png}
-        \caption{N(\ion{H}{i})=13.60, log $Z_{ref}$=1}
-    \end{figure}
+log $Z_{ref}$ = 1 \\
 
+Excluding \ion{O}{vi} : $n_H$ = -4.29 $\pm$ 0.02 \hspace{10mm} $Z$ = 1.64 $\pm$ 0.05
+
+Including \ion{O}{vi} : $n_H$ = -4.42 $\pm$ 0.01 \hspace{10mm} $Z$ = 1.69 $\pm$ 0.04
+
+\newpage
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png}
+    \caption{N(\ion{H}{i})=13.60, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png}
+    \caption{N(\ion{H}{i})=13.60, log $Z_{ref}$=1}
+\end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item large \emph{b} value
+    \item All 3 ions couldn't be explained together
+    \item When excluded \ion{O}{vi} is underproduced, but not significantly less, about an order of magnitude
+    \item Modelled using both logZ=1 and logZ=-1 
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 \newpage
@@ -196,6 +221,16 @@ NOTE : MCMC walkers initialised near the solution for excluding \ion{O}{vi} case
 \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png}
 
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item All 3 ions couldn't be explained together
+    \item When excluded \ion{O}{vi} is underproduced
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 \newpage
@@ -236,34 +271,47 @@ NOTE : MCMC walkers initialised near the solution for excluding \ion{O}{vi} case
             \tabularnewline \hline \hline \tabularnewline
     
     \end{tabular}
-    
-    \end{center}
-    
-    N(\ion{H}{I})=15.44 \\
-    
-    Excluding \ion{O}{vi} : $n_H$ = -3.81 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.46 $\pm$ 0.03
-    
-    Including \ion{O}{vi} : $n_H$ = -3.88 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.42 $\pm$ 0.02
-    \\\\
 
-    N(\ion{H}{I})=14.88 \\
-    
-    Excluding \ion{O}{vi} : $n_H$ = -3.74 $\pm$ 0.05 \hspace{10mm} $Z$ = -0.22 $\pm$ 0.04
-    
-    Including \ion{O}{vi} : $n_H$ = -3.96 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.07 $\pm$ 0.04
-    \\\\
+\end{center}
 
-    \newpage
+N(\ion{H}{I})=15.44 \\
 
-    \begin{figure}[!h]
-        \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png}
-        \caption{N(\ion{H}{i})=15.44}
-    \end{figure}
+Excluding \ion{O}{vi} : $n_H$ = -3.81 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.46 $\pm$ 0.03
 
-    \begin{figure}[!b]
-        \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png}
-        \caption{N(\ion{H}{i})=14.88}
-    \end{figure}
+Including \ion{O}{vi} : $n_H$ = -3.88 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.42 $\pm$ 0.02
+\\\\
+
+N(\ion{H}{I})=14.88 \\
+
+Excluding \ion{O}{vi} : $n_H$ = -3.74 $\pm$ 0.05 \hspace{10mm} $Z$ = -0.22 $\pm$ 0.04
+
+Including \ion{O}{vi} : $n_H$ = -3.96 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.07 $\pm$ 0.04
+\\\\
+
+\newpage
+
+\begin{figure}[!h]
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png}
+    \caption{N(\ion{H}{i})=15.44}
+\end{figure}
+
+\begin{figure}[!b]
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png}
+    \caption{N(\ion{H}{i})=14.88}
+\end{figure}
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Smaller \emph{b} values 23 and 29 km/s
+    \item All 4 ions couldn't be explained together
+    \item Ions excluding \ion{O}{vi} could be explained together for both the components
+    \item Ionisation : CI
+    \item BLA : tentative - small b value but collisionally ionised
+\end{itemize}
+
 
 \newpage
 
@@ -309,6 +357,17 @@ Excluding \ion{O}{vi} : $n_H$ = -4.12 $\pm$ 0.06 \hspace{10mm} $Z$ = -0.65 $\pm$
 Including \ion{O}{vi} : $n_H$ = -4.07 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.68 $\pm$ 0.03
 \\\\
 \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Not a good solution
+    \item Ionisation : can't comment
+    \item BLA : can't comment
+\end{itemize}
 
 
 
@@ -358,6 +417,19 @@ NOTE : Convergence is not good for excluding \ion{O}{vi} case
 \\\\
 \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png}
     
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item All 3 ions couldn't be explained together
+    \item When excluded \ion{O}{vi} is heavily underproduced
+    \item Convergence is not good for excluding \ion{O}{vi} case
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
 
 
 \newpage
@@ -430,6 +502,20 @@ NOTE : Convergence is not much good for excluding \ion{O}{vi} case
     \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png}
     \caption{N(\ion{H}{i})=16.40}
 \end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Results similar for both the components
+    \item All 3 ions couldn't be explained together
+    \item When excluded \ion{O}{vi} is heavily underproduced
+    \item Convergence is not much good for excluding \ion{O}{vi} case
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 \newpage
@@ -521,6 +607,20 @@ NOTE : Using \ion{O}{vi} column density from other component to compare.
 \end{figure}
 
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Good solution II component (N(\ion{H}{i})=16.49) : small \emph{b} value - 29 km/s
+    \item All other 4 ions could be explained together except \ion{O}{vi}
+    \item When excluded \ion{O}{vi} is heavily underproduced
+    \item For III component (N(\ion{H}{i})=15.01), model can't predict column density of \ion{Si}{iii} for the excluding \ion{O}{vi} case. 
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
+
 
 \newpage
 
@@ -593,6 +693,18 @@ Including \ion{O}{vi} : $n_H$ = -4.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.06 $\pm$
     \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png}
     \caption{N(\ion{H}{i})=13.88}
 \end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Same solution for  I component (N(\ion{H}{i})=12.76) : all ions explained in both the cases
+    \item For II component (N(\ion{H}{i})=13.02), all 3 ions couldn't be explained together, \ion{O}{vi} is overproduced. 
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 
@@ -705,6 +817,20 @@ NOTE : With log $Z_{ref}=1$, logZ is coming -ve for both the components
     \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png}
     \caption{N(\ion{H}{i})=15.79, log $Z_{ref}$=1}
 \end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Smaller \emph{b} values for all 3 components
+    \item Not much good solution for component III ((N(\ion{H}{i})=18.10)), as there are many ions. Only few can be explained.
+    \item Modelled using both logZ=-1 and logZ=1 for both the components
+    \item For component II ((N(\ion{H}{i})=15.79)), when using logZ=1 model, the metallicity is coming -ve. And the solution is better when logZ=-1 model is used.
+    \item Ionisation : CI
+    \item BLA : tentative
+\end{itemize}
 
 
 
