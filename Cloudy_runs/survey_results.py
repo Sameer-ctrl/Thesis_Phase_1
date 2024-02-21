@@ -62,7 +62,9 @@ absorbers=[
     BLA('pks0405',0.167125,13.46,0.04,26,3,14.05,0.1,41,3,10,False)]
 
 b_H=zeros(len(absorbers))
+b_H_err=zeros(len(absorbers))
 n_H=zeros(len(absorbers))
+n_H_err=zeros(len(absorbers))
 b_OVI=zeros(len(absorbers))
 n_OVI=zeros(len(absorbers))
 n_ions=zeros(len(absorbers))
@@ -70,8 +72,10 @@ is_BLA=zeros(len(absorbers))
 
 for i,a in enumerate(absorbers):
     b_H[i]=a.b_H
+    b_H_err[i]=a.b_H_err
     b_OVI[i]=a.b_OVI
     n_H[i]=a.nH
+    n_H_err[i]=a.nH_err
     n_OVI[i]=a.n_OVI
     n_ions=a.n_ions
     is_BLA[i]=a.is_BLA
@@ -91,9 +95,9 @@ def f(x,m,c):
 fit=curve_fit(f,b_H_fit,n_H_fit)
 print(fit[0])
 
-
-plt.scatter(b_H,n_H,label='H',c=is_BLA)
-plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--')
+plt.scatter(b_H,n_H,c=is_BLA,s=100)
+# plt.errorbar(b_H,n_H,yerr=n_H_err,xerr=b_H_err, fmt='o',capsize=3)
+plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--',lw=3)
 plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
 plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
 plt.show()
