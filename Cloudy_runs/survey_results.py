@@ -95,26 +95,36 @@ def f(x,m,c):
 fit=curve_fit(f,b_H_fit,n_H_fit)
 print(fit[0])
 
+plt.figure()
+
 plt.subplot(121)
-plt.title('N(HI)')
+plt.title(r'$\mathbf{Column \ density}$',fontsize=25)
 plt.hist(n_H,bins=7)
+plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
 
 plt.subplot(122)
-plt.title('b')
+plt.title(r'$\mathbf{Doppler \ parameter}$',fontsize=25)
 plt.hist(b_H,bins='auto')
-plt.show()
+plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
+plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
 
 
-# plt.scatter(b_H,n_H,label='H',c=is_BLA)
+plt.figure()
+
+plt.vlines(40,13,16,ls='--',color='black',lw=3)
+plt.scatter(b_H,n_H,label='H',s=70)
 # plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--')
-# plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+
+plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
+plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+plt.ylim(13.35,15.9)
 
 # plt.scatter(n_H,b_H,label='H',c=is_BLA)
 # plt.plot(f(array([42,100]),fit[0][0],fit[0][1]),[42,100],ls='--')
 # plt.ylabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
 # plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-# plt.show()
+plt.show()
 
 
 

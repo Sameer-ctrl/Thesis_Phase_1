@@ -17,11 +17,34 @@
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
 \newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}
 
-\title{Thesis Phase-1}
-\author{Sameer Patidar}
-\date{July 2023}
+\title{\textbf{Voigt profile fitting and Ionisation modelling results}}
+% \date{}
 
 \begin{document}
+
+\maketitle
+
+\textbf{System plots} 
+
+\begin{itemize}
+    \item Velocity taken to be 0 at $z_{abs}$ given on the title of the plots
+    \item Blue dashed curves are the individual components and orange dashed curves are the contamination
+\end{itemize}
+
+\textbf{Ionisation modelling} 
+
+\begin{itemize}
+    \item PI \textsc{cloudy} models with varying log $n_H \ (cm^{-3})$ from -5 to 1 at constant metallicity of log Z = -1
+    \item Column densities are scaled with metallicity
+    \item This approximation is valid for metallicities less than around log Z $<1$
+    \item If solution from MCMC gives metallicity of around or above log Z = 1, in such cases \textsc{cloudy} models are run at base metallicity of log Z = 1 
+    \item $n_H$ and $Z$ values are reported for both excluding and including \ion{O}{vi} cases.
+    \item In case if some component doesn't have \ion{O}{vi}, column density of \ion{O}{vi} from other component is taken for the sake of solution
+    \item CI : collisional ionisation,  PI : photoionisation
+\end{itemize}
+
+
+\newpage
 
 
 \begin{landscape}
@@ -368,7 +391,7 @@ Including \ion{O}{vi} : $n_H$ = -4.07 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.68 $\pm$
 \begin{itemize}
     \item Not a good solution
     \item Ionisation : can't comment
-    \item BLA : can't comment
+    \item BLA : +ve
 \end{itemize}
 
 
@@ -702,9 +725,9 @@ Including \ion{O}{vi} : $n_H$ = -4.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.06 $\pm$
 \textbf{Comments}
 \\\\
 \begin{itemize}
-    \item Same solution for  I component (N(\ion{H}{i})=12.76) : all ions explained in both the cases
+    \item Same solution for  I component (N(\ion{H}{i})=12.76) : all ions explained in both the cases : PI
     \item For II component (N(\ion{H}{i})=13.02), all 3 ions couldn't be explained together, \ion{O}{vi} is overproduced. 
-    \item Ionisation : CI
+    \item Ionisation : PI in component I and CI for component II
     \item BLA : +ve
 \end{itemize}
 
@@ -893,6 +916,18 @@ Including \ion{O}{vi} : $n_H$ = -3.16 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.66 $\pm$
 \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png}
 
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item All ions couldn't be xplained together
+    \item When excluded, \ion{O}{vi} is underproduced. However, column density of \ion{O}{iii} is also off by around 0.5 dex from predicted value 
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
+
 
 \newpage
 
@@ -967,6 +1002,18 @@ NOTE : logZ coming near 2 for both the cases and for logZ=1 also, \ion{P}{ii} is
     \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png}
     \caption{N(\ion{H}{i})=13.60, log $Z_{ref}=1$}
 \end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Not good solution as there are many ions.
+    \item metallicity is coming 2, which is the upper bound taken in flat priors
+    \item Ionisation : tentative CI (since \ion{O}{vi} can't be explained, even though the solution is not good)
+    \item BLA : +ve
+\end{itemize}
 
 
 
@@ -1069,6 +1116,18 @@ Including \ion{O}{vi} : $n_H$ = -4.41 $\pm$ 0.02 \hspace{10mm} $Z$ = 1.15 $\pm$ 
 \end{figure}
 
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item For component II (N(\ion{H}{i})=13.68), solution very close to explaining all 3 ions but not exactly when using logZ=-1 models, but clearly, can't explain the 3 ions together when logZ=1 models are used.
+    \item Similarly, for component III (N(\ion{H}{i})=13.68), all 3 ions can be explained when using logZ=-1 models, but not with logZ=1 models.
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
+
 
 \newpage
 
@@ -1143,6 +1202,17 @@ NOTE : Solution using $\chi^2$, MCMC didn't converge good, shows hint of two sol
     \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png}
     \caption{N(\ion{H}{i})=15.13}
 \end{figure}
+
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item All 3 ions couldn't be explained for both component II (N(\ion{H}{i})=15.16) and IV (N(\ion{H}{i})=15.13)
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 
@@ -1235,6 +1305,17 @@ NOTE : Since very high N(\ion{H}{i}), so low metallicity. And solutions aren't m
 
 
 
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item For component I (N(\ion{H}{i})=14.34), solution is little better when logZ=-1 model is used, where other ions than \ion{O}{vi} could be explained upto some level. And solution is not good in case of logZ=1 model
+    \item For component II (N(\ion{H}{i})=17.70), no good solution is obtained, possibly due to more no. of ions. 
+    \item All the solutions underproduce \ion{O}{vi}
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
 
 
 
@@ -1300,6 +1381,9 @@ NOTE : Since very high N(\ion{H}{i}), so low metallicity. And solutions aren't m
 \end{center}
 
 
+\newpage
+
+
 N(\ion{H}{I})= 13.46  \\ 
 
 Excluding \ion{O}{vi} : $n_H$ = -3.98 $\pm$ 0.03 \hspace{10mm} $Z$ = 0.62 $\pm$ 0.02
@@ -1330,6 +1414,47 @@ Including \ion{O}{vi} : $n_H$ = -3.27 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.33 $\pm$
     \caption{N(\ion{H}{i})=15.98}
 \end{figure}
 
+
+\newpage
+
+\textbf{Comments}
+\\\\
+\begin{itemize}
+    \item Not a good solution for component II (N(\ion{H}{i})=13.46)
+    \item For component IV (N(\ion{H}{i})=15.98), excluding \ion{O}{vi} case explains all ions except \ion{Si}{iii} and \ion{O}{vi} is underproduced in this case.
+    \item Ionisation : CI
+    \item BLA : +ve
+\end{itemize}
+
+
+\newpage
+
+\large{\textbf{Some statistics}}
+
+Total no. of absorbers : 16 \\
+
+CI : 14 + 1 tentative 
+
+PI : 1 (one component is PI and other is CI, so this is included in above 14 CI absorbers)
+
+BLA +ve : 14 
+
+BLA -ve or tentative : 2 - one has \emph{b} values of 23, 9 and other absorber has 22,16,16 
+
+For, one absorber ionisation state (PG0003 $z_{abs}$=0.386089) couldn't be inferred. \\\\
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Distribution_NH_b.png}
+\caption{Distribution of column density and doppler parameters of the Lyman lines in the 17 absorbers}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{NH_vs_b_1.png}
+\caption{Column desnity v/s doppler parameter. Vertical black dashed line shows the doppler parameter of 40 km s$^{-1}$}
+\end{figure}
 
 
 
