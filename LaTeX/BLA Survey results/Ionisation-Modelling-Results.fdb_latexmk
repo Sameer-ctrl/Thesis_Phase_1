@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1708514971 "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.tex" "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" "Ionisation-Modelling-Results" 1708514971
+["pdflatex"] 1708581166 "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.tex" "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" "Ionisation-Modelling-Results" 1708581321
   "/etc/texmf/web2c/texmf.cnf" 1701296402 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux" 1708514971 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.tex" 1708514969 44967 153944466a4b5ccafde312eef681adfd ""
+  "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux" 1708581159 5934 082e9bcd92c3d3b5b0f06543880c71ff ""
+  "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.tex" 1708581165 44961 1dcf9fd1abe199d81a89d8430a30dc7b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -29,7 +29,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm" 1579560596 908 375dcd194b89b9cc9481ab62f2da0667 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm" 1579560596 908 9b2ed8097703005e83b790aecb955a2f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/wasy/wasy6.tfm" 1579560596 912 8da0595e5e615d33e0b2860959a58bf8 ""
@@ -44,7 +43,6 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1573336935 6902 30fdaf7dc5636b8e3afa306210c45cae ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -118,8 +116,8 @@
   "Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png" 1707478535 135678 33363c1399b4afd3fcee54dec14c2888 ""
   "Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png" 1707478535 254172 d4aef38ab8bfdcf4610d519a6d31c278 ""
   "Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png" 1707478535 255591 de9f5d2ffa275aa083afce6411a99453 ""
-  "Ionisation-Modelling-Results.aux" 0 -1 0 "pdflatex"
-  "Ionisation-Modelling-Results.tex" 1708514969 44967 153944466a4b5ccafde312eef681adfd ""
+  "Ionisation-Modelling-Results.aux" 1708581159 5934 082e9bcd92c3d3b5b0f06543880c71ff "pdflatex"
+  "Ionisation-Modelling-Results.tex" 1708581165 44961 1dcf9fd1abe199d81a89d8430a30dc7b ""
   "System-Plots/1ES1553+113_z=0.187764_sys_plot.png" 1702917655 988163 ef1480211705403b28f440de20f70c9b ""
   "System-Plots/3C263_z=0.140756_sys_plot.png" 1702265670 1040650 bcc3eb4bddd06db6964fd059a88edae6 ""
   "System-Plots/H1821+643_z=0.170006_sys_plot.png" 1704645885 960638 7ea8e22269305dcbf3d77dbcbcffccf6 ""
@@ -137,8 +135,8 @@
   "System-Plots/SBS1108+560_z=0.463207_sys_plot.png" 1703353778 2004117 a52dfac6b3d3e25530519d667d919f34 ""
   "System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png" 1702831777 1309986 3c68b561eae99c0fbc85df86e53a1b3b ""
   (generated)
+  "Ionisation-Modelling-Results.log"
   "Ionisation-Modelling-Results.pdf"
   "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.log"
   "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf"
   "Ionisation-Modelling-Results.aux"
-  "Ionisation-Modelling-Results.log"
