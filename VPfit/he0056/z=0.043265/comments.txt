@@ -1,0 +1,13 @@
+SiIII:
+	Good fit. Little broad b ~ 33 km/s
+
+NV:
+	Good fit. Very narrow line b~1 km/s. So very large errors. Errors got from freezing the parameters. NV 1242 is non detection.
+
+CIV: 
+	Nice fit. A little hint of two component, but couldn't fit 2. Currently fitted with 1.
+
+HI:
+	Nice fit. Contaminated from NV 1242 from z=0.020021. Saturated, other transitions are mot covered in COS. Fitted with two components.
+
+	
