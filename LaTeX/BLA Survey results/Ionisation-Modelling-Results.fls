@@ -61,8 +61,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux
-INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux
 OUTPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -257,3 +255,45 @@ INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
 INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Distribution_NH_b.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Distribution_NH_b.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Distribution_NH_b.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/NH_vs_b_1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/NH_vs_b_1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/NH_vs_b_1.png
+INPUT /home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux
+INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb

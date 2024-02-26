@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  22 FEB 2024 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  22 FEB 2024 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -203,7 +203,8 @@ Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count196
 \l__pdf_internal_box=\box47
-) (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux)
+)
+No file Ionisation-Modelling-Results.aux.
 \openout1 = `Ionisation-Modelling-Results.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -220,7 +221,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count197
 \scratchdimen=\dimen162
@@ -1094,4 +1095,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 1121--1123
 File: System-Plots/H1821+643_z=0.224981_sys_plot.png Graphic file (type png)
 <use System-Plots/H1821+643_z=0.224981_sys_plot.png>
 Package pdftex.def Info: System-Plots/H1821+643_z=0.224981_sys_plot.png  used on input line 1141.
-(p
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1139--1142
+ []|  [] 
+ []
+
+[54 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/H1821+643_z=0.224981_sys_plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+
+ []
+
+[55
+
+
+]
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png, id=275, 1166.4378pt x 601.2864pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png  used on input line 1196.
+(pdftex.def)             Requested size: 365.50655pt x 188.41533pt.
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png, id=276, 1184.5053pt x 601.2864pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png  used on input line 1202.
+(pdftex.def)             Requested size: 365.50655pt x 185.53441pt.
+ [56 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png> </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1211
+
+ []
+
+[57]
+<System-Plots/PG1121+422_z=0.192393_sys_plot.png, id=285, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1121+422_z=0.192393_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1121+422_z=0.192393_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1121+422_z=0.192393_sys_plot.png  used on input line 1228.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1226--1229
+ []|  [] 
+ []
+
+[58 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PG1121+422_z=0.192393_sys_plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+
+ []
+
+[59
+
+
+]
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png, id=293, 1154.1519pt x 637.4214pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png  used on input line 1290.
+(pdftex.def)             Requested size: 365.50655pt x 201.85869pt.
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png, id=294, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png  used on input line 1296.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png, id=295, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png  used on input line 1302.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [60 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png> </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
+
+ []
+
+[61 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png>]
+<System-Plots/PKS0405-123_z=0.167125_sys_plot.png, id=306, 2384.91pt x 1634.2656pt>
+File: System-Plots/PKS0405-123_z=0.167125_sys_plot.png Graphic file (type png)
+<use System-Plots/PKS0405-123_z=0.167125_sys_plot.png>
+Package pdftex.def Info: System-Plots/PKS0405-123_z=0.167125_sys_plot.png  used on input line 1333.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1331--1334
+ []|  [] 
+ []
+
+[62 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/System-Plots/PKS0405-123_z=0.167125_sys_plot.png>] [63
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1400
+
+ []
+
+[64]
+<Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png, id=317, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png  used on input line 1407.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png, id=318, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png  used on input line 1413.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [65 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png> </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1422
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
+
+ []
+
+<Distribution_NH_b.png, id=328, 1141.866pt x 612.1269pt>
+File: Distribution_NH_b.png Graphic file (type png)
+<use Distribution_NH_b.png>
+Package pdftex.def Info: Distribution_NH_b.png  used on input line 1449.
+(pdftex.def)             Requested size: 430.00462pt x 230.5184pt.
+<NH_vs_b_1.png, id=329, 1164.9924pt x 589.0005pt>
+File: NH_vs_b_1.png Graphic file (type png)
+<use NH_vs_b_1.png>
+Package pdftex.def Info: NH_vs_b_1.png  used on input line 1455.
+(pdftex.def)             Requested size: 430.00462pt x 217.4055pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[67 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Distribution_NH_b.png>] [68 </home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/NH_vs_b_1.png>] (/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.aux) ) 
+Here is how much of TeX's memory you used:
+ 4633 strings out of 481239
+ 79160 string characters out of 5920376
+ 307062 words of memory out of 5000000
+ 19796 multiletter control sequences out of 15000+600000
+ 545861 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,12n,42p,372b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "/home/sameer/Thesis_Phase_1/LaTeX/BLA Survey results/Ionisation-Modelling-Results.pdf" (69 pages, 27559605 bytes).
+PDF statistics:
+ 381 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+
