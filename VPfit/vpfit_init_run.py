@@ -10,7 +10,7 @@ qso='pg1216'
 spec=f'{qso}_cont_norm.asc'
 z_absorber=0.006390
 v_sep_lim=300
-ion='SiII'
+ion='CII'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
