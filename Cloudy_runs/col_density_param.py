@@ -99,27 +99,27 @@ z_abs=0.161064
 run_name = f'component_II_PI_nH'
 parameters=['log_nH']
 
-write_param(qso,z_abs,run_name,parameters,temp=True)
+# write_param(qso,z_abs,run_name,parameters,temp=True)
 
 
-# parameters=['log_nH','log_NHi']
-# grid=loadtxt(f'NHi_nH/NHi_nH_grid.txt',dtype=str)
-# col_density=ascii.read(f'NHi_nH/NHi_nH_col_density.txt')
-# n=len(parameters)
+parameters=['log_nH','log_NHi']
+grid=loadtxt(f'NHi_nH/NHi_nH_grid.txt',dtype=str)
+col_density=ascii.read(f'NHi_nH/NHi_nH_col_density.txt')
+n=len(parameters)
 
-# param_data=[]
+param_data=[]
 
-# for i in range(n):
-#     param_data.append(grid[:,6+i].astype(float))
+for i in range(n):
+    param_data.append(grid[:,6+i].astype(float))
 
-# for i in range(n):
-#     col_density.add_column(param_data[i],name=parameters[i])
+for i in range(n):
+    col_density.add_column(param_data[i],name=parameters[i])
     
-# param_data=tuple(zip(*param_data))
+param_data=tuple(zip(*param_data))
 
  
-# col_density.add_column(param_data,name='parameters')
-# print(col_density.colnames,'\n')
-# col_density.write(f'NHi_nH/NHi_nH_col_density_param.fits',overwrite=True)
-# ascii.write(col_density,f'NHi_nH/NHi_nH_col_density_param.txt',format='ecsv',overwrite=True)
+col_density.add_column(param_data,name='parameters')
+print(col_density.colnames,'\n')
+col_density.write(f'NHi_nH/NHi_nH_col_density_param.fits',overwrite=True)
+ascii.write(col_density,f'NHi_nH/NHi_nH_col_density_param.txt',format='ecsv',overwrite=True)
 
