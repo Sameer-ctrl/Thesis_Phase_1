@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='he0056'
-z_abs=0.043265
+qso='pg0003'
+z_abs=0.347579
 vlim=350
 n_col=3
 lw1=1.5
@@ -303,6 +303,7 @@ plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc=
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs}_sys_plot.png')
 plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+
 
 
 
