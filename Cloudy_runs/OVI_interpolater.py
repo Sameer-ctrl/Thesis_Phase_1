@@ -74,7 +74,7 @@ col_den1=col_den1.flatten()
 
 
 fig=plt.figure()
-ax=plt.axes(projection ='3d')
+ax=plt.axes(projection ='3d')   
 
 ax.scatter(log_nH,log_Z,log_col_den,label='interp1')
 ax.scatter(x,y,col_den,label='interpolated')
