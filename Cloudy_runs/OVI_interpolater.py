@@ -6,6 +6,24 @@ from scipy.interpolate import interp2d
 import pickle
 
 
+hdu=fits.open(f'pg0003/z=0.347579/nH_Z/component_III_nH_Z_col_density_param.fits')
+data_2d=Table(hdu[1].data)
+
+hdu=fits.open(f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_col_density_param.fits')
+data_1d=Table(hdu[1].data)
+
+log_nH_2d=data_2d['log_nH']
+log_Z_2d=data_2d['log_Z']
+
+
+# plt.
+
+
+
+quit()
+
+
+
 hdu=fits.open('Data/col_den_OVI.fits')
 data=Table(hdu[1].data)
 
