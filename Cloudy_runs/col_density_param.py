@@ -94,32 +94,54 @@ def join_data():
 
 # join_data()
 
-qso='pks0637'
-z_abs=0.161064
-run_name = f'component_II_PI_nH'
+# qso='pks0637'
+# z_abs=0.161064
+# run_name = f'component_II_PI_nH'
+# parameters=['log_nH']
+
+# write_param(qso,z_abs,run_name,parameters,temp=True)
+
+
 parameters=['log_nH']
+grid=loadtxt(f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_grid.txt',dtype=str)
+col_density=ascii.read(f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_col_density.txt')
+n=len(parameters)
 
-write_param(qso,z_abs,run_name,parameters,temp=True)
+param_data=[]
 
+for i in range(n):
+    param_data.append(grid[:,6+i].astype(float))
 
-# parameters=['log_nH','log_NHi']
-# grid=loadtxt(f'NHi_nH/NHi_nH_grid.txt',dtype=str)
-# col_density=ascii.read(f'NHi_nH/NHi_nH_col_density.txt')
-# n=len(parameters)
-
-# param_data=[]
-
-# for i in range(n):
-#     param_data.append(grid[:,6+i].astype(float))
-
-# for i in range(n):
-#     col_density.add_column(param_data[i],name=parameters[i])
+for i in range(n):
+    col_density.add_column(param_data[i],name=parameters[i])
     
-# param_data=tuple(zip(*param_data))
+param_data=tuple(zip(*param_data))
 
+
+temp_file=f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_temp.txt'
+            
+data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
+
+Te=data_temp[:,1]
+d2t_dr2=data_temp[:,4]
+
+
+log_Te=zeros(len(col_density))
+k=0
+
+for i,j in enumerate(d2t_dr2):
+    
+    if j==0:
+        # print(k,Te[i],i)
+        log_Te[k]=round(log10(Te[i]),3)
+    
+        k+=1
+
+col_density.add_column(log_Te,name='log_Te')
+            
  
-# col_density.add_column(param_data,name='parameters')
-# print(col_density.colnames,'\n')
-# col_density.write(f'NHi_nH/NHi_nH_col_density_param.fits',overwrite=True)
-# ascii.write(col_density,f'NHi_nH/NHi_nH_col_density_param.txt',format='ecsv',overwrite=True)
+col_density.add_column(param_data,name='parameters')
+print(col_density.colnames,'\n')
+col_density.write(f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_col_density_param.fits',overwrite=True)
+ascii.write(col_density,f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_col_density_param.txt',format='ecsv',overwrite=True)
 

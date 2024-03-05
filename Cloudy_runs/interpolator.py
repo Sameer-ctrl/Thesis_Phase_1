@@ -11,10 +11,10 @@ warnings.filterwarnings("ignore")
 
 # plt.style.use('../Python/my_style.mpl')
 
-hdu=fits.open(f'Data/component_III_nH_Z_col_density_param.fits')
+hdu=fits.open(f'pg0003/z=0.347579/nH_Z/component_III_nH_Z_col_density_param.fits')
 data_2d=Table(hdu[1].data)
 
-hdu=fits.open(f'Data/component_III_nH_col_density_param.fits')
+hdu=fits.open(f'pg0003/z=0.347579/nH_Z=-1/component_III_nH_col_density_param.fits')
 data_1d=Table(hdu[1].data)
 
 # ind=[]
@@ -33,17 +33,17 @@ log_Z_2d=data_2d['log_Z']
 
 
 lognH_range=[-5,0]
-logZ_range=[-3,0]
+logZ_range=[-3,2]
 log_Z_ref=-1
 
 param=data_2d['parameters']
-ions=['Si+', 'Si+2','C+', 'C+2','O+5']
+ions=['Si+', 'Si+2','C+', 'C+2']
 
 observations={'Si+':[13.19,0.41], 'Si+2':[12.87,0.08],'C+':[14.21,0.39], 'C+2':[13.81,0.04],'O+5':[13.91,0.04]}
 
 def save_func(func,name):
 
-    with open(f'Interp_2d_func/{name}.pkl','wb') as pickle_file:
+    with open(f'Interp_2d_func_new/{name}.pkl','wb') as pickle_file:
         pickle.dump(func,pickle_file)
 
 def interp_func(ion,kind='cubic'):
@@ -73,7 +73,11 @@ def interp_func(ion,kind='cubic'):
     f_2d=interp2d(log_nH_2d,log_Z_2d,log_col_den,kind=kind)
     save_func(f_2d,f'{ion}_{kind}')
 
-    return f_2d
+    # return f_2d
+
+# for i in ions:
+#     print(f'ion={i}')
+#     interp_func(i,kind='quintic')
 
 
 def col_vs_z(ion,nH):
@@ -86,22 +90,24 @@ def col_vs_z(ion,nH):
     plt.scatter(Z,log_col_den,label=f'{nH}',marker='D')    
 
 
-# i=ions[4]
+
+i=ions[3]
 
 
-# with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
-#     f=pickle.load(pickle_file)
+with open(f'Interp_2d_func_new/{i}_quintic.pkl','rb') as pickle_file:
+    f=pickle.load(pickle_file)
 
-# z=linspace(-3,2,100)
-# nH=arange(-5,0.1,0.01) 
+z=linspace(-3,2,100)
+nH=arange(-5,0.01,0.05)
 
-# plt.figure()
+plt.figure(figsize=(20,10))
 
-# for n in nH:
-#     plt.scatter(z,f(n,z),label=f'{n}')
-#     col_vs_z(i,n)
+for n in nH:
+    n=round(n,2)
+    plt.scatter(z,f(n,z),label=f'{n}')
+    col_vs_z(i,n)
 
-# # plt.legend()
-# plt.title(i)
-
+plt.legend()
+plt.title(i)
+plt.savefig(i+'.png')
 # plt.show()

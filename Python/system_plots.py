@@ -23,15 +23,16 @@ qso_label=qso_dict[qso]
 
 file_path=f'../VPfit/{qso}/z={z_abs}/VPfit_chunks'
 files=os.listdir(f'{file_path}')
+
 data=loadtxt('Data/rest_wave.txt',dtype=str)
 
-ion=data[:,1]
-wave=data[:,0].astype(float)
+line_atom=data[:,0]
+wave_rest=data[:,1].astype(float)
 
 rest_wave={}
 
-for i in range(len(ion)):
-    rest_wave.update({ion[i]:wave[i]})
+for i in range(len(line_atom)):
+    rest_wave.update({line_atom[i]:wave_rest[i]})
 
 
 def file_group(x):
