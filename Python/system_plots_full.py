@@ -28,6 +28,13 @@ data=loadtxt('Data/lines_system_plots.txt',dtype=str)
 
 line_atom=data[:,0]
 wave_atom=data[:,1].astype(float)
+f=data[:,2].astype(float)
+
+
+
+
+
+quit()
 
 rest_wave={}
 

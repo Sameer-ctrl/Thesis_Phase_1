@@ -15,8 +15,21 @@ data_1d=Table(hdu[1].data)
 log_nH_2d=data_2d['log_nH']
 log_Z_2d=data_2d['log_Z']
 
+ions=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-# plt.
+for i in ions:
+
+    col_den_OVI=log10(data_2d[i])
+    plt.figure(figsize=(10,10))
+    plt.scatter(log_nH_2d,log_Z_2d,c=col_den_OVI)
+    plt.colorbar()
+    plt.xlim(-5,0)
+    plt.ylim(-3,2)
+    plt.title(i)
+    plt.savefig(f'{i}_obs.png')
+
+
+# plt.show()
 
 
 
