@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-from numpy import loadtxt,ceil, unique, array, zeros
+from numpy import *
+from scipy.integrate import simpson
 from astropy.io import ascii
 import os
 
@@ -7,10 +8,11 @@ plt.style.use('my_style.mpl')
 
 
 qso='h1821'
-z_abs=0.170006
+z_abs=0.224981
 vlim=350
 n_col=6
 lw1=1.5
+vlim_aod=[-130,150]
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
@@ -28,18 +30,14 @@ data=loadtxt('Data/lines_system_plots.txt',dtype=str)
 
 line_atom=data[:,0]
 wave_atom=data[:,1].astype(float)
-f=data[:,2].astype(float)
-
-
-
-
-
-quit()
+f_atom=data[:,2].astype(float)
 
 rest_wave={}
+f={}
 
 for i in range(len(line_atom)):
     rest_wave.update({line_atom[i]:wave_atom[i]})
+    f.update({line_atom[i]:f_atom[i]})
 
 
 def file_group(x):
@@ -103,6 +101,7 @@ def tick_pos(file):
                 tick_wave.append(float(line[:-1].split()[1]))
 
     return array(tick_wave)
+
 
 # lines=lines_all()
 lines=line_atom
@@ -175,13 +174,16 @@ def line_label(line):
 
 def abs_line_plot(line):
 
+    cen_wave_rest=rest_wave[line]
+    cen_wave_obs=cen_wave_rest*(1+z_abs)
+    vshift=line_vshift[line]
+
+    print(f'{line}  :  {cen_wave_obs}')
+
     if os.path.exists(f'{file_path}/{line}.txt'):
 
         data=loadtxt(f'{file_path}/{line}.txt',comments='!')
 
-        cen_wave_rest=rest_wave[line]
-        cen_wave_obs=cen_wave_rest*(1+z_abs)
-        vshift=line_vshift[line]
 
         wave=data[:,0]
         cont1=data[:,3]
@@ -196,10 +198,10 @@ def abs_line_plot(line):
         n=len(vpfit_chunks)-1
         m=0
 
-        for f in vpfit_chunks:
-            splitted=f.split('_')
+        for file in vpfit_chunks:
+            splitted=file.split('_')
 
-            if f[:2]=='Ly':
+            if file[:2]=='Ly':
                 if len(splitted)>1:
                     if splitted[1][:4]=='cont':
                         m+=1
@@ -283,32 +285,43 @@ def abs_line_plot(line):
         plt.xticks([-300,-200,-100,0,100,200,300])
 
     else:
-        
-        # data=loadtxt(f'{file_path}/{line}.txt',comments='!')
 
-        cen_wave_rest=rest_wave[line]
-        cen_wave_obs=cen_wave_rest*(1+z_abs)
-        vshift=line_vshift[line]
+        v=3*(10**5)*((wave_spec**2-(cen_wave_obs**2))/(wave_spec**2+(cen_wave_obs**2)))
 
-        # wave=data[:,0]
-        # cont1=data[:,3]
-    
-        # v1=3*(10**5)*((wave**2-(cen_wave_obs**2))/(wave**2+(cen_wave_obs**2)))
-        v2=3*(10**5)*((wave_spec**2-(cen_wave_obs**2))/(wave_spec**2+(cen_wave_obs**2)))
-
-        plt.step(v2-vshift,flux_spec,c='green',lw=lw1+2,label=r'$\mathbf{Flux}$')
+        plt.step(v-vshift,flux_spec,c='green',lw=lw1+2,label=r'$\mathbf{Flux}$')
 
         plt.hlines(1,-5000,5000,ls='--',lw=1,color='black')
         plt.hlines(0,-5000,5000,ls='--',lw=1,color='black')
         plt.vlines(0,-1,2,ls='--',lw=1,color='black')
 
+
         plt.xlim(-vlim,vlim)
         plt.ylim(-0.1,1.6)
         line_name=line_label(line)
         plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
-        # plt.text(-260,0.21,f'{{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{40pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
         plt.yticks([0,0.5,1,1.5])
         plt.xticks([-300,-200,-100,0,100,200,300])
+
+
+        wave_range_aod=cen_wave_obs*sqrt(((3*(10**5))+array(vlim_aod))/((3*(10**5))-array(vlim_aod)))
+
+        if wave_range_aod[0]>min(wave_spec) and wave_range_aod[1]<max(wave_spec):
+
+            f_line=f[line]
+            mask=logical_and(v>vlim_aod[0],v<vlim_aod[1])
+
+            v_aod=v[mask]
+            tau_v=-log(flux_spec[mask])
+
+            N=simpson(tau_v,v_aod)/((f_line*cen_wave_rest*2.654E-15))
+
+            col_den_aod=round(log10(abs(N)),1)
+            plt.text(180,0.21,f'{{\\fontsize{{20pt}}{{3em}}\selectfont{{}}$\mathbf{{<}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{col_den_aod}}}$}}')
+            plt.vlines(vlim_aod[0],0.9,1.1,lw=3,color='red')
+            plt.vlines(vlim_aod[1],0.9,1.1,lw=3,color='red')
+            plt.hlines(1,vlim_aod[0],vlim_aod[1],lw=3,color='red')
+
+        
     
 
 fig=plt.figure(figsize=(40,20),dpi=300)
@@ -343,6 +356,7 @@ plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc=
 plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
 plt.savefig(f'Files_n_figures/sys_plots_full/{qso_label}_z={z_abs}_sys_plot_full.png')
 # plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot_full.png')
+# plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_full.png')
 
 
 
