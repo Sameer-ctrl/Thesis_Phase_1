@@ -95,6 +95,20 @@ def f(x,m,c):
 fit=curve_fit(f,b_H_fit,n_H_fit)
 print(fit[0])
 
+
+plt.figure()
+
+plt.scatter(b_H,b_OVI)
+plt.plot(array([0,150]),array([0,150]),ls='--')
+plt.vlines(40,-10,170,ls='--',color='red')
+plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylim(bottom=-5,top=160)
+plt.savefig('bHi_vs_BOvi.png')
+# plt.show()
+quit()
+
+
 plt.figure()
 
 plt.subplot(121)
