@@ -12,6 +12,18 @@ warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
 
+a=[True, True, True]
+
+print(all(a))
+
+
+
+
+
+
+
+
+quit()
 '------------------------------------'
 'Checking interpolation function'
 
