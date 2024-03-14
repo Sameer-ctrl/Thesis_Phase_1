@@ -12,20 +12,22 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='pg1424'
+qso='sbs1108'
 comp='II'
-z_abs=0.147104
+z_abs=0.463207
 
-ions=['C+3','Si+2','Si+3','O+5']
-col_den_dict=[[13.58,0.09],[12.58,0.05],[12.69,0.10],[13.77,0.11]]
+ions=['Si+2','C+2','N+2','O+5']
+col_den_dict=[[13.26,0.12],[14.16,0.07],[13.77,0.1],[13.71,0.07]]
 
-non_detc_ions=['Si+','N+4']
-non_detc_col_den=[12.0,13.6]
+non_detc_ions=['C+','Si+','Si+2','Si+3']
+non_detc_col_den=[13.0,11.9,11.1,12.2]
+
+N_Hi=12.76
+logZ_ref=1
 
 observations=dict(zip(ions,col_den_dict))
 non_detections=dict(zip(non_detc_ions,non_detc_col_den))
 
-logZ_ref=-1
 ions_to_use1=ions[:-1]
 ions_to_use2=ions
 
@@ -227,10 +229,11 @@ print(f'Including OVI : {sol2}\n')
 print(r'\newpage')
 print('')
 print(r'\textbf{Non-detections}')
+print('')
 print(r'\begin{figure}')
 print('    \centering')
 print(f'    \includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_non_detection.png}}')
-print(f'    \caption{{N(\ion{{H}}{{i}})= , log $Z_{{ref}}$={logZ_ref}}}')
+print(f'    \caption{{N(\ion{{H}}{{i}})={N_Hi}, log $Z_{{ref}}$={logZ_ref}}}')
 print(r'\end{figure}')
 # print(f'\includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png}}\n')
 
