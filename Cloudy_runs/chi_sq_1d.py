@@ -16,17 +16,28 @@ z_abs=0.224981
 ions=['Si+2','C+2','O+5']
 col_den_dict=[[12.71,0.13],[13.84,0.02],[13.12,0.1]]
 
-hdu=fits.open(f'{qso}/z={z_abs}/component_{comp}_PI_nH_col_density_param.fits')
+non_detc_ions=['C+','Si+','Si+3','N+4']
+non_detc_col_den=[13.3,12.4,12.8,12.8]
+
+N_Hi=15.13
+logZ_ref=-1
+
+observations=dict(zip(ions,col_den_dict))
+non_detections=dict(zip(non_detc_ions,non_detc_col_den))
+
+hdu=fits.open(f'{qso}/z={z_abs}/logZ={logZ_ref}/component_{comp}_PI_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
 log_nH=data['log_nH']
-
-logZ_ref=-1
 
 lognH_range=[-5,1]
 logZ_range=[-3,2]
 
 param=data['parameters']
+
+qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
+qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
+qso_label=qso_dict[qso]
 
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
@@ -50,16 +61,17 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 # ions_roman=[ion_label('O','III'),ion_label('C','III'),ion_label('N','V'),ion_label('O','VI')]
 # ions=['Si+2','C+2','O+5']
 # col_den_dict=[[12.23,0.15],[13.36,0.07],[14.24,0.01]]
-ions_roman=[ion_label(i) for i in ions]
+ions_roman=[ion_label(i) for i in list(observations.keys())+list(non_detections.keys())]
 
-observations=dict(zip(ions,col_den_dict))
 
+# observations=dict(zip(ions,col_den_dict))
+# non_detections=dict(zip(non_detc_ions,non_detc_col_den))
 
 def interp_func():
 
     func_dict={}
 
-    for ion in observations.keys():
+    for ion in list(observations.keys())+list(non_detections.keys()):
 
         ion_col_den=data[ion].value
 
@@ -165,7 +177,7 @@ def model(chi_sq,name,c):
 
     print(f'{name} : nH = {nH}  [{nH_err[0]},{nH_err[1]}]   Z = {Z}  [{Z_err[0]},{Z_err[1]}]  chi-sq = {chi_sq_min}')
 
-    col_den=array([interp_func_dict[ion](nH)+Z-logZ_ref for ion in observations.keys()])
+    col_den=array([interp_func_dict[ion](nH)+Z-logZ_ref for ion in list(observations.keys())+list(non_detections.keys())])
     xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
     plt.plot(xaxis,col_den,ls='--',lw=3,color=c)
@@ -184,36 +196,34 @@ def plot_samples(m,c,n=50,i1=1,i2=1):
 
     for s in sample:
         nH,Z=s
-        col_den=array([interp_func_dict[i](round(nH,3))+round(Z,3)-logZ_ref for i in observations.keys()]) 
+        col_den=array([interp_func_dict[i](round(nH,3))+round(Z,3)-logZ_ref for i in list(observations.keys())+list(non_detections.keys())]) 
         plt.plot(xaxis,col_den,alpha=0.05,color=c)
 
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(16,9))
 
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
 plt.clf()
 
 
-plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
+plt.errorbar(xaxis[:len(ions)],obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
+plt.errorbar(xaxis[len(ions):],non_detc_col_den,yerr=0.25,xerr=0.1,uplims=1,fmt='o',label='Non-detections')
 plot_samples(m1,'orange',n=100)
-m1=model(chi_sq_exc,'Excluding'+ion_label('O+5'),'orange')
+m1=model(chi_sq_exc,'Excluding '+ion_label('O+5',ion_font_size=15,radicle_font_size=10),'orange')
 plot_samples(m2,'green',n=100)
-m2=model(chi_sq_inc,'Including'+ion_label('O+5'),'green')
+m2=model(chi_sq_inc,'Including '+ion_label('O+5',ion_font_size=15,radicle_font_size=10),'green')
 # plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
 # plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
-plt.xticks(xaxis,ions_roman,fontsize=30)
-plt.yticks(fontsize=25)
-plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=30)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
-# plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
+plt.xticks(xaxis,ions_roman,fontsize=20)
+plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
-# plt.savefig('Observed_and_predicted.png')
-
+plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
+plt.savefig(f'../LaTeX/BLA Survey results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_non_detection.png')
 plt.show()
-
 
 
 
