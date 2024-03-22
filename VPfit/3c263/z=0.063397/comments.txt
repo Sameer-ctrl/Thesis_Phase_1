@@ -1,0 +1,20 @@
+SiII:
+	Good fit. 
+
+SiIII:
+	Nice fit. Fitted with 2 comp. Has HI 937 on right, currently not fitted.
+
+SiIV:
+	Good fit. 
+	SiIV 1393 : contaminated by Lya from z=0.218048, 0.218991 and 0.219161
+	SiIV 1402 : contaminated by Lyb from z=0.453629 and 0.453969, CIII 977 from z=0.527982 and 0.528336
+
+CIV:
+	Nice fit. Fitted with 3 comp.
+
+CII:
+	Good fit. CII 1036 is out of coverage.
+
+HI:
+	Nice fit. Fitted with 4 componets. Redshift of the three components in the saturated part are fixed from CIII 977 line.
+

@@ -7,12 +7,12 @@ import os
 plt.style.use('my_style.mpl')
 
 
-qso='pg1222'
-z_abs=0.378389
+qso='3c263'
+z_abs=0.063397
 vlim=350
 n_col=6
 lw1=1.5
-vlim_aod=[-100,100]
+vlim_aod=[-100,120]
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
