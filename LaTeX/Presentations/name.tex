@@ -1,0 +1,259 @@
+\documentclass[compress]{beamer}
+
+\usetheme{Darmstadt}
+
+\newcounter{prevsection}
+\newcounter{nextsection}
+
+\newcommand\prevsection{}
+\newcommand\nextsection{}
+
+\makeatletter
+% A new section definition to automatically set labels with the name: sec:sectionnumber
+\let\oldsection\section
+\renewcommand{\section}[1]{\oldsection{#1}\label{sec:\thesection}}
+% A new subsection definition to automatically set labels with the name: sec:sectionnumber.subsectionnumer
+%init some calculators
+\newcounter{calculator}
+\newcounter{calcmaxsec}
+% \newcounter{calcmaxsubsec}
+% \newcommand{\calcsubsection}[1]%procedure to get the name of section thissection+i
+% {
+%     \setcounter{calculator}{\thesubsection}\addtocounter{calculator}{#1}
+%     \@ifundefined{r@sec:\thesection.\thecalculator}{}{\color{fg!40!bg}\nameref{sec:\thesection.\thecalculator}}
+% }
+\newcommand{\calcsection}[1]%procedure to get the name of subsection thissection.thissubsection+i
+{
+    \setcounter{calculator}{\thesection}\addtocounter{calculator}{#1}
+    \@ifundefined{r@sec:\thesection}{}{\color{fg!40!bg}\nameref{sec:\thecalculator}}
+}
+\newcommand{\Testframe}%some testframe definition
+    {
+        \begin{frame}
+            The Section: \thesection\\
+            The Subsection: \thesubsection\\
+            The Calculator: \thecalculator\\
+            Count\thesection
+        \end{frame}
+    }
+%Defining the layout%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}
+{
+     \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{section in head/foot}%
+        \vbox to \@tempdimb{%
+        \setcounter{calcmaxsec}{\thesection}\addtocounter{calcmaxsec}{-\beamer@sectionmax}
+        \ifnum\thecalcmaxsec>-1{\calcsection{-3}}\fi%
+        \ifnum\thecalcmaxsec>-2{\calcsection{-2}}\fi%
+        \ifnum\thesection>1\hspace*{3mm}{\calcsection{-1}}\fi%
+        \ifnum\thesection>0\hfill\insertsectionhead\fi
+        \ifnum\thecalcmaxsec<0\hfill{ \calcsection{1}  \hspace*{3mm}}\fi
+        % \ifnum\thecalcmaxsec<-1\hfill {\calcsection{2}}\fi
+        % \ifnum\thesection<2{\calcsection{3}}\fi
+        % \ifnum\thesection<1{\calcsection{4}}\fi
+        %
+     }%
+     \end{beamercolorbox}%
+
+}%
+\makeatother
+
+% Here you put the names that will go in the navigation bar
+\newcommand\sectioni{test one}
+\newcommand\sectionii{test two}
+\newcommand\sectioniii{test three}
+\newcommand\sectioniv{test four}
+\newcommand\sectionv{test five}
+\newcommand\sectionvi{test six}
+\newcommand\sectionvii{test seven}
+\newcommand\sectionviii{test eight}
+
+\begin{document}
+
+\section{Section 1}
+\subsection{Subsection 1.1}
+\begin{frame}{Frame 1.11}
+...
+\end{frame}
+\begin{frame}{Frame 1.12}
+...
+\end{frame}
+\begin{frame}{Frame 1.13}
+...
+\end{frame}
+\subsection{Subsection 1.2}
+\begin{frame}{Frame 1.21}
+...
+\end{frame}
+\begin{frame}{Frame 1.22}
+...
+\end{frame}
+\begin{frame}{Frame 1.23}
+...
+\end{frame}
+
+\section{Section 2}
+\begin{frame}{Frame 2}
+...
+\end{frame}
+
+\section{Section 3}
+
+\subsection{Subsection 1.1}
+\begin{frame}{Frame 1.11}
+...
+\end{frame}
+\begin{frame}{Frame 1.12}
+...
+\end{frame}
+\begin{frame}{Frame 1.13}
+...
+\end{frame}
+\subsection{Subsection 1.2}
+\begin{frame}{Frame 1.21}
+...
+\end{frame}
+\begin{frame}{Frame 1.22}
+...
+\end{frame}
+\begin{frame}{Frame 1.23}
+...
+\end{frame}
+
+\section{Section 4}
+\begin{frame}{Frame 4}
+...
+\end{frame}
+
+\section{Section 5}
+\begin{frame}{Frame 5}
+...
+\end{frame}
+
+\section{Section 6}
+\begin{frame}{Frame 6}
+...
+\end{frame}
+
+\section{Section 7}
+\begin{frame}{Frame 7}
+...
+\end{frame}
+
+\section{Section 8}
+\begin{frame}{Frame 8}
+...
+\end{frame}
+
+% \section{Section 9}
+% \subsection{Subsection 9.1}
+% \begin{frame}{Frame 9.11}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 9.12}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 9.13}
+% ...
+% \end{frame}
+% \subsection{Subsection 9.2}
+% \begin{frame}{Frame 9.21}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 9.22}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 9.23}
+% ...
+% \end{frame}
+
+
+% \section{Section 10}
+% \begin{frame}{Frame 10}
+% ...
+% \end{frame}
+
+% \section{Section 11}
+% \begin{frame}{Frame 11}
+% ...
+% \end{frame}
+
+% \section{Section 12}
+% \begin{frame}{Frame 12}
+% ...
+% \end{frame}
+
+% \section{Section 13}
+% \begin{frame}{Frame 13}
+% ...
+% \end{frame}
+
+% \section{Section 14}
+% \begin{frame}{Frame 14}
+% ...
+% \end{frame}
+
+% \section{Section 15}
+% \begin{frame}{Frame 15}
+% ...
+% \end{frame}
+
+% \section{Section 16}
+% \subsection{Subsection 16.1}
+% \begin{frame}{Frame 16.11}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 16.12}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 16.13}
+% ...
+% \end{frame}
+% \subsection{Subsection 16.2}
+% \begin{frame}{Frame 16.21}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 16.22}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 16.23}
+% ...
+% \end{frame}
+
+% \section{Section 17}
+% \begin{frame}{Frame 17}
+% ...
+% \end{frame}
+
+% \section{Section 18}
+% \begin{frame}{Frame 18}
+% ...
+% \end{frame}
+
+% \section{Section 19}
+% \subsection{Subsection 19.1}
+% \begin{frame}{Frame 19.11}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 19.12}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 19.13}
+% ...
+% \end{frame}
+% \subsection{Subsection 19.2}
+% \begin{frame}{Frame 19.21}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 19.22}
+% ...
+% \end{frame}
+% \begin{frame}{Frame 19.23}
+% ...
+% \end{frame}
+
+% \section{Section 20}
+% \begin{frame}{Frame 20}
+% ...
+% \end{frame}
+
+\end{document}

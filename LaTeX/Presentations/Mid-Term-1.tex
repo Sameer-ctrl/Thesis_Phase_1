@@ -1,0 +1,1420 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx}
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{pgfpages}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{animate}
+
+\usepackage{tikz}
+
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand\aap{A\&A}                % Astronomy and Astrophysics
+\let\astap=\aap                          % alternative shortcut
+\newcommand\aapr{A\&ARv}             % Astronomy and Astrophysics Review (the)
+\newcommand\aaps{A\&AS}              % Astronomy and Astrophysics Supplement Series
+\newcommand\actaa{Acta Astron.}      % Acta Astronomica
+\newcommand\afz{Afz}                 % Astrofizika
+\newcommand\aj{AJ}                   % Astronomical Journal (the)
+\newcommand\ao{Appl. Opt.}           % Applied Optics
+\let\applopt=\ao                         % alternative shortcut
+\newcommand\aplett{Astrophys.~Lett.} % Astrophysics Letters
+\newcommand\apj{ApJ}                 % Astrophysical Journal
+\newcommand\apjl{ApJ}                % Astrophysical Journal, Letters
+\let\apjlett=\apjl                       % alternative shortcut
+\newcommand\apjs{ApJS}               % Astrophysical Journal, Supplement
+\let\apjsupp=\apjs                       % alternative shortcut
+% The following journal does not appear to exist! Disabled.
+%\newcommand\apspr{Astrophys.~Space~Phys.~Res.} % Astrophysics Space Physics Research
+\newcommand\apss{Ap\&SS}             % Astrophysics and Space Science
+\newcommand\araa{ARA\&A}             % Annual Review of Astronomy and Astrophysics
+\newcommand\arep{Astron. Rep.}       % Astronomy Reports
+\newcommand\aspc{ASP Conf. Ser.}     % ASP Conference Series
+\newcommand\azh{Azh}                 % Astronomicheskii Zhurnal
+\newcommand\baas{BAAS}               % Bulletin of the American Astronomical Society
+\newcommand\bac{Bull. Astron. Inst. Czechoslovakia} % Bulletin of the Astronomical Institutes of Czechoslovakia 
+\newcommand\bain{Bull. Astron. Inst. Netherlands} % Bulletin Astronomical Institute of the Netherlands
+\newcommand\caa{Chinese Astron. Astrophys.} % Chinese Astronomy and Astrophysics
+\newcommand\cjaa{Chinese J.~Astron. Astrophys.} % Chinese Journal of Astronomy and Astrophysics
+\newcommand\fcp{Fundamentals Cosmic Phys.}  % Fundamentals of Cosmic Physics
+\newcommand\gca{Geochimica Cosmochimica Acta}   % Geochimica Cosmochimica Acta
+\newcommand\grl{Geophys. Res. Lett.} % Geophysics Research Letters
+\newcommand\iaucirc{IAU~Circ.}       % IAU Cirulars
+\newcommand\icarus{Icarus}           % Icarus
+\newcommand\japa{J.~Astrophys. Astron.} % Journal of Astrophysics and Astronomy
+\newcommand\jcap{J.~Cosmology Astropart. Phys.} % Journal of Cosmology and Astroparticle Physics
+\newcommand\jcp{J.~Chem.~Phys.}      % Journal of Chemical Physics
+\newcommand\jgr{J.~Geophys.~Res.}    % Journal of Geophysics Research
+\newcommand\jqsrt{J.~Quant. Spectrosc. Radiative Transfer} % Journal of Quantitiative Spectroscopy and Radiative Transfer
+\newcommand\jrasc{J.~R.~Astron. Soc. Canada} % Journal of the RAS of Canada
+\newcommand\memras{Mem.~RAS}         % Memoirs of the RAS
+\newcommand\memsai{Mem. Soc. Astron. Italiana} % Memoire della Societa Astronomica Italiana
+\newcommand\mnassa{MNASSA}           % Monthly Notes of the Astronomical Society of Southern Africa
+\newcommand\mnras{MNRAS}             % Monthly Notices of the Royal Astronomical Society
+\newcommand\na{New~Astron.}          % New Astronomy
+\newcommand\nar{New~Astron.~Rev.}    % New Astronomy Review
+\newcommand\nat{Nature}              % Nature
+\newcommand\nphysa{Nuclear Phys.~A}  % Nuclear Physics A
+\newcommand\pra{Phys. Rev.~A}        % Physical Review A: General Physics
+\newcommand\prb{Phys. Rev.~B}        % Physical Review B: Solid State
+\newcommand\prc{Phys. Rev.~C}        % Physical Review C
+\newcommand\prd{Phys. Rev.~D}        % Physical Review D
+\newcommand\pre{Phys. Rev.~E}        % Physical Review E
+\newcommand\prl{Phys. Rev.~Lett.}    % Physical Review Letters
+\newcommand\pasa{Publ. Astron. Soc. Australia}  % Publications of the Astronomical Society of Australia
+\newcommand\pasp{PASP}               % Publications of the Astronomical Society of the Pacific
+\newcommand\pasj{PASJ}               % Publications of the Astronomical Society of Japan
+\newcommand\physrep{Phys.~Rep.}      % Physics Reports
+\newcommand\physscr{Phys.~Scr.}      % Physica Scripta
+\newcommand\planss{Planet. Space~Sci.} % Planetary Space Science
+\newcommand\procspie{Proc.~SPIE}     % Proceedings of the Society of Photo-Optical Instrumentation Engineers
+\newcommand\rmxaa{Rev. Mex. Astron. Astrofis.} % Revista Mexicana de Astronomia y Astrofisica
+\newcommand\qjras{QJRAS}             % Quarterly Journal of the RAS
+\newcommand\sci{Science}             % Science
+\newcommand\skytel{Sky \& Telesc.}   % Sky and Telescope
+\newcommand\solphys{Sol.~Phys.}      % Solar Physics
+\newcommand\sovast{Soviet~Ast.}      % Soviet Astronomy (aka Astronomy Reports)
+\newcommand\ssr{Space Sci. Rev.}     % Space Science Reviews
+\newcommand\zap{Z.~Astrophys.}       % Zeitschrift fuer Astrophysik
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\setlength{\fboxsep}{0pt}
+
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+
+\makeatletter
+\def\sectionentry#1#2#3#4#5{% section number, section title, page
+%
+\newcount\mymin%
+\mymin=2
+\ifnum\c@section=1%
+    \mymin=3
+\fi%
+\ifnum\c@section=2%
+    \mymin=2
+\fi%
+%
+\newcount\mymax%
+\mymax=2
+\ifnum\c@section=\beamer@sectionmax%
+    \mymax=3
+\fi%
+\ifnum\c@section=\numexpr\beamer@sectionmax-1%
+    \mymax=2
+\fi%
+%
+    \ifnum\numexpr\c@section-#1<\mymax%
+        \ifnum\numexpr#1-\c@section<\mymin%
+            \ifnum#5=\c@part%
+                \beamer@section@set@min@width
+                \box\beamer@sectionbox\hskip1.875ex plus 1fill%
+                \beamer@xpos=0\relax%
+                \beamer@ypos=1\relax%
+                \setbox\beamer@sectionbox=
+                \hbox{
+                    \def\insertsectionhead{#2}%
+                    \def\insertsectionheadnumber{#1}%
+                    \def\insertpartheadnumber{#5}%
+
+                    {%
+                        \usebeamerfont{section in head/foot}\usebeamercolor[fg]{section in head/foot}%
+                        \ifnum\c@section=#1%
+                            \hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot}}}%
+                        \else%
+                            \hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}%
+                        \fi%    
+                    }%
+                }%
+                \ht\beamer@sectionbox=1.875ex%
+                \dp\beamer@sectionbox=0.75ex%
+            \fi%
+        \fi%
+    \fi%
+    \ignorespaces%
+}
+
+\def\slideentry#1#2#3#4#5#6{%
+	%section number, subsection number, slide number, first/last frame, page number, part number
+	%
+	\newcount\mymin%
+	\mymin=2
+	\ifnum\c@section=1%
+		\mymin=3
+	\fi%
+	\ifnum\c@section=2%
+		\mymin=2
+	\fi%
+		%
+	\newcount\mymax%
+	\mymax=2
+	\ifnum\c@section=\beamer@sectionmax%
+		\mymax=3
+	\fi%
+	\ifnum\c@section=\numexpr\beamer@sectionmax-1%
+		\mymax=2
+	\fi%
+	%
+	\ifnum\numexpr\c@section-#1<\mymax%
+		\ifnum\numexpr#1-\c@section<\mymin%
+		  \ifnum#6=\c@part\ifnum#2>0\ifnum#3>0%
+		    \ifbeamer@compress%
+		      \advance\beamer@xpos by1\relax%
+		    \else%
+		      \beamer@xpos=#3\relax%
+		      \beamer@ypos=#2\relax%
+		    \fi%
+		  \hbox to 0pt{%
+		    \beamer@tempdim=-\beamer@vboxoffset%
+		    \advance\beamer@tempdim by-\beamer@boxsize%
+		    \multiply\beamer@tempdim by\beamer@ypos%
+		    \advance\beamer@tempdim by -.05cm%
+		    \raise\beamer@tempdim\hbox{%
+		      \beamer@tempdim=\beamer@boxsize%
+		      \multiply\beamer@tempdim by\beamer@xpos%
+		      \advance\beamer@tempdim by -\beamer@boxsize%
+		      \advance\beamer@tempdim by 1pt%
+		      \kern\beamer@tempdim
+		      \global\beamer@section@min@dim\beamer@tempdim
+		      \hbox{\beamer@link(#4){%
+		          \usebeamerfont{mini frame}%
+		          \ifnum\c@section=#1%
+		            \ifnum\c@subsection=#2%
+		              \usebeamercolor[fg]{mini frame}%
+		              \ifnum\c@subsectionslide=#3%
+		                \usebeamertemplate{mini frame}%\beamer@minislidehilight%
+		              \else%
+		                \usebeamertemplate{mini frame in current subsection}%\beamer@minisliderowhilight%
+		              \fi%
+		            \else%
+		              \usebeamercolor{mini frame}%
+		              %\color{fg!50!bg}%
+		              \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+		            \fi%
+		          \else%
+		            \usebeamercolor{mini frame}%
+		            %\color{fg!50!bg}%
+		            \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+		          \fi%
+		        }}}\hskip-10cm plus 1fil%
+		  }\fi\fi%
+		  \else%
+		  \fakeslideentry{#1}{#2}{#3}{#4}{#5}{#6}%
+		 \fi%
+		\fi%
+	\fi%
+	\ignorespaces%
+}
+\makeatother
+
+
+
+
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\scriptsize}
+% \setbeamercovered{transparent}
+\setbeamercovered{invisible}
+
+
+%% Load the markdown package
+\usepackage[citations,footnotes,definitionLists,hashEnumerators,smartEllipses,tightLists=false,pipeTables,tableCaptions,hybrid]{markdown}
+%%begin novalidate
+\markdownSetup{rendererPrototypes={
+ link = {\href{#2}{#1}},
+ headingOne = {\section{#1}},
+ headingTwo = {\subsection{#1}},
+ headingThree = {\begin{frame}\frametitle{#1}},
+ headingFour = {\begin{block}{#1}},
+ horizontalRule = {\end{block}}
+}}
+%%end novalidate
+
+\usetheme{Dresden}
+\usefonttheme{serif}
+\usecolortheme{rose}
+
+
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \scriptsize{\insertnavigation{\paperwidth}}
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \inserttitle \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+
+\author[Sameer Patidar]{\vspace*{-2mm}\Large{Mid-Term}\\
+\vspace*{7mm}
+\large{Sameer Patidar}
+\\ 
+\vspace*{0.5mm}
+SC19B161} % (optional, for multiple authors)
+% {A.~B.~Arthur\inst{1} \and J.~Doe\inst{2}}
+
+\institute[Indian Institute of Space Science and Technology] % (optional)
+{
+  \large{Dual Degree (Astronomy \& Astrophysics)} \\\\
+\vspace{1mm}
+  \large{Indian Institute of Space Science and Technology} \\\\
+\vspace{5mm}
+\large{Supervisors : Dr. Vikram Khaire and Dr. Anand Narayanan}
+}
+\logo{\includegraphics[height=1cm]{IIST.png}}
+
+\begin{document}
+
+% TITLE OF THE PRESENTATION
+
+\newcommand{\titleofpresentation}{Finding Missing Baryons using Broad Ly$\alpha$ Absorbers}
+
+\date{\large{}}
+\title{\LARGE{\textbf{\titleofpresentation}}}
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+    \end{beamercolorbox}%
+  }
+  
+}
+
+\begin{frame}
+\vspace*{-3mm}
+\maketitle
+\end{frame}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \textbf{\titleofpresentation} \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+\logo{}
+
+% \begin{frame}
+% \frametitle{\huge{{\textbf{Outline}}}}
+% \tableofcontents
+% \end{frame}
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \scriptsize{\textbf{\insertnavigation{\paperwidth}}}
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \textbf{\titleofpresentation} \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+\begin{markdown}
+
+# The Missing Baryon Problem
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{The Missing Baryon Problem}}}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{The Missing Baryon Problem}}}}
+
+\begin{columns}
+    \begin{column}{0.6\textwidth} 
+        \uncover<1->{
+         \begin{itemize}
+             \uncover<2->{\item Baryon census showed deficiency in baryon count} 
+            \uncover<3->{\item $\sim \ 50\%$ baryons were missing}
+            \uncover<4->{\item Recent surveys still indicate deficit of $\sim 30\%$} 
+        \end{itemize}
+        }
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \uncover<4->{\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=5cm]{Figures/Mid-term/Baryon_distribution.png}
+          \vspace*{-1mm}
+          \caption{Baryon budget at $z \sim 0$. \\\\ Shull et al. (2012)}
+          \label{}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Sulucci and Persic (1999)}} 
+   \uncover<4->{\node at (0.24,0.15) {Shull et al. (2012)}}
+   
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{Where are the Missing Baryons ?}}}}
+
+\uncover<1->{
+ \begin{itemize}
+     \uncover<2->{\item Residing  in sparse $(10^{-6}-10^{-4} \ cm^{-3})$ and  hot ($10^{5}-10^{7}$ K) gas : WHIM}   
+    \uncover<3->{\item Low density - Undetectable emission signature}
+    \uncover<4->{\item High temperature - Collisionally ionised} 
+\end{itemize}
+}
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Cen and Ostriker (1999, 2006)}} 
+   
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{How to detect WHIM ?}}}}
+
+\begin{columns}
+    \begin{column}{0.35\textwidth} 
+        \vspace{-10mm}
+        \uncover<1->{
+         \begin{itemize}
+            \uncover<2->{\item Quasars as backlight}   
+                \begin{itemize}
+                \uncover<4->{\item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.}
+                \uncover<5->{\item[-] BLAs}
+                \end{itemize} 
+          \end{itemize}
+        }
+    \end{column}
+    \begin{column}{0.65\textwidth}
+        \uncover<3->{
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=9cm]{Figures/Mid-term/spec slice.png}
+          \vspace*{-1mm}
+          \caption{Slice of spectrum of quasar HE0153-4520 ($z_{em}=0.4510$). \\ Danforth et al. (2016)}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<4->{\node at (0.25,0.17) {Ref. : Tepper-García et al. (2013)}
+   \node at (0.25,0.12) {Savage et al. (2014)}}
+   
+\end{tikzpicture}
+
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\huge{{\textbf{How to detect WHIM ?}}}}
+
+\begin{columns}
+    \begin{column}{0.35\textwidth} 
+        \vspace{-10mm}
+         \begin{itemize}
+            \item Quasars as backlight  
+                \begin{itemize}
+                    \item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.
+                    \item[-] BLAs
+                \end{itemize} 
+          \end{itemize}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+        \uncover<1->{
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=9cm]{Figures/Mid-term/BLA-individual.png}
+          \vspace*{-1mm}
+          \caption{A BLA towards the LOS of quasar H 1821+643 $(z_{em} = 0.297)$ \\\\ Philipp Richter (2005)}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
+   \node at (0.20,0.12) {Savage et al. (2014)}}
+   
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[noframenumbering]{\huge{{\textbf{How to detect WHIM ?}}}}
+
+\begin{columns}
+    \begin{column}{0.35\textwidth} 
+        \vspace{-10mm}
+         \begin{itemize}
+            \item Quasars as backlight  
+                \begin{itemize}
+                    \item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.
+                    \item[-] BLAs
+                \end{itemize} 
+          \end{itemize}
+    \end{column}
+    \begin{column}{0.65\textwidth}
+        \uncover<1->{
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=9cm]{Figures/Mid-term/BLA.png}
+          \vspace*{-1mm}
+          \caption{A BLA blended with other Ly$\alpha$ absorption lines towards the LOS of quasar PG1116+215 $(z_{em} = 0.176)$. \\\\ Philipp Richter (2020)}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
+   \node at (0.20,0.12) {Savage et al. (2014)}}
+   
+\end{tikzpicture}
+    
+\end{frame}
+
+
+# Project Roadmap
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Project Roadmap}}}
+
+\end{frame}
+
+
+\begin{frame}{\huge{\textbf{Roadmap}}}
+
+\uncover<1->{
+ \begin{itemize}
+     \uncover<2->{\item \textbf{Phase 1}}   
+        \begin{itemize}
+                \uncover<3->{\item[-] Detailed study of one absorber system}      
+                \uncover<4->{\item[-] Absorber along LOS of PG0003+158}
+        \end{itemize} 
+        \vspace*{5mm}
+    \uncover<2->{\item \textbf{Phase 2}}   
+        \begin{itemize}
+                \uncover<5->{
+                    \item[-] Hunt for BLAs : An Exhaustive Survey  
+                    }
+        \end{itemize}
+\end{itemize}
+}
+
+
+
+\end{frame}
+
+
+# Data
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Data}}}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{\textit{HST}/COS Data}}}}
+
+\uncover<1->{\begin{itemize}
+    \uncover<2->{\item 82 UV-bright AGNs chosen by Danforth et al. (2016)
+    \uncover<3->{\item $z_{AGN} < 0.85$}}
+    \uncover<4->{\item High S/N $\gtrsim$ 15}
+    \uncover<5->{\item FUV channel : G130M and G160M gratings
+    \uncover<6->{\item Coverage : 1130-1790 \AA}}
+    \uncover<7->{\item $\text{R} \sim 17,000 \ \approx$ 17 km $\text{s}^{-1}$} 
+\end{itemize}}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{Danforth et al. (2016) Datasets}}}}
+
+- Spectra
+- IGM systems
+- Identified lines
+
+\end{frame}
+
+
+# Phase I
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Phase I}}}
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{Studying an Absorber System}}}}
+
+\uncover<1->
+{
+\begin{itemize}
+    \uncover<2->{
+    \item \textbf{I \ \ \ \ } \uncover<3->{: \hspace{1mm} Voigt profile fitting - VPFIT}
+    \item \textbf{II \ \ \hspace{1pt}} \uncover<4->{: \hspace{1mm} Ionization modelling - CLOUDY}
+    \item \textbf{III \ }  \uncover<5->{: \hspace{1mm} Analyzing galaxy neighbourhood}
+    }
+\end{itemize}
+}
+ 
+\end{frame}
+
+% \begin{frame}{\textbf{VPFIT}}
+
+% \begin{figure}[!htbp]
+%           \hspace{-6cm}
+%           \fbox{\includegraphics[width=10cm]{Figures/Mid-term/VPFIT_ip.png}}
+%           \vspace*{-1mm}
+%           \hspace{-6cm}
+%           \caption{An example VPFIT input file}
+% \end{figure}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \fbox{\includegraphics[width=12cm]{Figures/Mid-term/VPFIT_op.png}}
+%           \vspace*{-1mm}
+%           \caption{An example VPFIT output file}
+% \end{figure}
+
+% \end{frame}
+
+% \begin{frame}{\textbf{}}
+
+% \vspace*{-6mm}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=7cm]{Figures/Mid-term/VPFIT_fit.png}
+%           \vspace*{-1mm}
+%           \caption{An example 2 component fit with VPFIT}
+% \end{figure}
+
+% \end{frame}
+
+
+\begin{frame}{\textbf{CLOUDY}}
+
+\uncover<1->{\begin{itemize}
+    \uncover<2->{\item Predicts thermal, ionization, and chemical structure of cloud} 
+    \uncover<3->{\item Photoionization and Collisional ionization}
+    \uncover<4->{\item Models clouds as homogeneous plane parallel slabs} 
+    \uncover<5->{\item Inputs : density, metallicity, {\color{red} temperature}, N(\ion{H}{i}), etc.}  
+    \uncover<6->{\item Outputs : column densities, ionization fractions, {\color{red} temperature}, etc.}
+\end{itemize}}
+
+\end{frame}
+
+\begin{frame}[noframenumbering]{\textbf{CLOUDY}}
+    
+\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=12cm]{Figures/Mid-term/cloudy-transparent.png}
+          \vspace*{-1mm}
+          \caption{Schematic diagram of CLOUDY simulations.}
+\end{figure}
+        
+\end{frame}
+
+
+
+# Absorber system towards PG0003+158
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Absorber system towards PG0003+158}}}
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Absorber system}}}}
+
+- Sy1.2 AGN at $z_{em}=0.45089$
+- $z_{abs} \sim$ 0.347
+- 3 component system
+
+\begin{figure}[!htbp]
+      \centering
+      \includegraphics[width=7cm]{Figures/Mid-term/Component_structure2.png}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Voigt profile fitting}}}}
+
+% \vspace*{-6mm}
+
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=8cm]{Figures/Mid-term/param.png}
+% \end{figure}
+
+\begin{columns}
+    \begin{column}{0.4\textwidth} 
+        \vspace{-10mm}
+        \uncover<1->{
+         \begin{itemize}
+            \item \ion{H}{i} : 3 components  
+            \item \ion{O}{vi} : 2 components
+            \item \ion{C}{ii}, \ion{C}{iii}, \ion{Si}{ii}, \ion{Si}{iii}  : 1 component
+          \end{itemize}
+        }
+    \end{column}
+    \begin{column}{0.6\textwidth}
+        \vspace{-3mm}
+        \uncover<2->{
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=8cm]{Figures/Mid-term/param.png}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% ### \huge{{\textbf{Voigt profile fitting results}}}
+% \begin{frame}<presentation:0>[plain,noframenumbering]
+
+% % \begin{figure}[!htbp]
+% %           \centering
+% %           \includegraphics[width=10cm]{Figures/Mid-term/system_plot.jpg}
+% %           \vspace*{-1mm}
+% %           \caption{System plot of the absorber system. Velocity is taken to be zero at the redshift of \ion{O}{vi} line of component II, i.e. z = 0.347579}
+% % \end{figure}   
+
+% \end{frame}
+
+\begin{frame}[plain]{}
+
+\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=12cm]{Figures/Mid-term/system_plot.jpg}
+          \vspace*{-1mm}
+          \caption{System plot of the absorber system. Velocity is taken zero at the redshift of \ion{O}{vi} line of component II (z = 0.347579)}
+\end{figure}   
+
+\end{frame}
+
+\begin{frame}{\huge{{\textbf{Ionization Modelling}}}}
+
+- Component I \ \ \ : -
+- Component II \ \  : Hybrid - Collisional + Photo-ionization
+- Component III   \ : Photo-ionization (PI)
+
+\end{frame}
+
+\begin{frame}{\textbf{Component III : PI}}
+
+\uncover<1->{\begin{itemize}
+    \uncover<2->{\item Grid of CLOUDY models : Density and Metallicity} 
+    \uncover<3->{\item log (${\text{n}}_{\text{H}} / \text{cm}^{-3}$) : -5 to 1 in steps of 0.02}
+    \uncover<4->{\item log (Z/$Z\odot$) : -3 to 2 in steps of 0.05} 
+    \uncover<5->{\item Solution : Model that best matches the observed column densities}
+\end{itemize}
+}
+
+\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)}} 
+   
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}{}
+
+\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=10cm]{Figures/Mid-term/comp-III-PIE.png}
+          \vspace*{-1mm}
+          \caption{Modelled and observed column densities for the component III based on photoionization modelling}
+\end{figure}
+
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Component II : Hybrid}}
+
+\uncover<1->{\begin{itemize}
+    \uncover<2->{\item b(\ion{H}{i}) = $62 \pm 3$ \& b(\ion{O}{vi}) = $30 \pm 2$  km s$^{-1} \ \  \Rightarrow \ \ T={10}^{{5.29}_{-0.08}^{+0.07}}$ K} 
+    \uncover<3->{\item Constant temperature CLOUDY models} 
+    \uncover<4->{\item \ion{O}{vi} as constraining factor}
+\end{itemize}}
+
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=10cm]{Figures/Mid-term/comp-II-CIE.png}
+          \vspace*{-1mm}
+          \caption{Hybrid model solution for component II.}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}[noframenumbering]{} 
+
+\begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=14cm]{Figures/Mid-term/physical-params.png}
+\end{figure}
+
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Galaxy Environment}}}}
+
+\begin{columns}
+    \begin{column}{0.4\textwidth} 
+        \vspace{-10mm}
+        \uncover<1->{
+         \begin{itemize}
+            \uncover<2->{\item Galaxies within 15' and 1000 km s$^{-1}$}  
+            \uncover<3->{\item SDSS : L $\gtrsim 2.77$ L\*}
+            \uncover<4->{\item VIMOS : 5 galaxies identified}
+          \end{itemize}
+        }
+    \end{column}
+    \begin{column}{0.6\textwidth}
+        \vspace{-3mm}
+        \uncover<5->{
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=7cm]{Figures/Mid-term/galaxy-environment.jpg}
+          \vspace*{-1mm}
+          \caption{Galaxies around the absorber color-coded with their velocity separation from the absorber. Velocity is 0 at z = 0.347579}
+        \end{figure}}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+
+# Towards Phase II
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Towards Phase II}}}
+
+\end{frame}
+
+\begin{frame}{\huge{\textbf{Phase II : The Survey}}}
+
+- Survey of BLAs
+- Extending the work to other absorber systems 
+- Contribution of BLAs in ${\Omega_\text{b}}$
+
+\end{frame}
+
+% \uncover<1->{\begin{itemize}
+%     \uncover<2->{\item } 
+%     \uncover<3->{\item }
+%     \uncover<4->{\item } 
+%     \uncover<5->{\item }
+% \end{itemize}}
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%              \uncover<1->{\item Baryon surveys showed deficiency in baryon count} 
+%             \uncover<2->{\item }
+%             \uncover<3->{\item } 
+%             \uncover<4->{\item }
+%             \uncover<5->{\item } 
+%             \uncover<6->{\item } 
+%         \end{itemize}
+%     \end{column}
+%     \begin{column}{0.4\textwidth}
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Placeholder.png}
+%           \vspace*{-1mm}
+%           \caption{}
+%           \label{}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+
+
+
+
+
+%% ----------- References ---------- 
+
+\begin{frame}<presentation:0>[noframenumbering]
+
+{\cite{salucci} \cite{Shull} \cite{cen-ostriker} \cite{tepper} \cite{savage} \cite{danforth} \cite{acharya}}
+    
+\end{frame}
+    
+% % \end{frame}
+
+
+
+\begin{frame}
+\renewcommand{\bibfont}{\footnotesize}
+\frametitle{\huge{\textbf{References}}}
+
+\bibliographystyle{mnras}
+\bibliography{ExportedItems}
+
+\end{frame}
+
+
+\begin{frame}{}
+  \centering \Huge
+  \textbf{\emph{Such good times...}}
+\end{frame}
+
+
+\end{markdown}
+
+\end{document}
+
+
+% # Emissions from Galaxy Clusters 
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{Emissions from Galaxy Clusters}}}
+    
+% \end{frame}
+
+% ### \huge{{\textbf{Emissions from Galaxy Clusters}}} 
+
+% \begin{itemize}
+%     \uncover<1->{\item Radio : Synchrotron radiation}
+%     \uncover<2->{\item X-ray : Thermal Bremsstrahlung from ICM Plasma}
+%     \uncover<3->{\item $\gamma$ rays :
+%         \begin{itemize}
+%              \uncover<4->{\item[-] Inverse Compton scattering by $e^{-}${\small{s}} on CMB}
+%              \uncover<5->{\item[-] Hadronic interactions between CR protons and ICM protons}
+%     \end{itemize}}
+% \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}
+
+
+% \begin{tikzpicture}[remember picture, overlay]
+% \node[right=-1mm] at (current page.west) (A)
+% {
+%     \includegraphics[width=16cm]{Figures/Seminar-1/Abell 2744 Emission.png}
+%     \vspace*{-1mm}
+% };
+% \end{tikzpicture}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics{}
+%     \vspace*{50mm}
+%     \caption{The galaxy cluster Abell 2744. Credits : Medezinski et al. (2016), Merten et al. (2011), Lotz et al. (2017), R. J. van Weeren et al. (2019).}
+%     \label{}
+% \end{figure}
+    
+% \end{frame}
+
+
+% # Diffuse Radio Emission from Galaxy Clusters
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{Diffuse Radio Emission from Galaxy Clusters}}}
+    
+% \end{frame}
+
+% ### \huge{{\textbf{Diffuse Radio Emission from Galaxy Clusters}}} 
+
+% \begin{itemize}
+%     \uncover<1->{\item Non-thermal component of CRs is present in ICM}
+%     \uncover<2->{\item Particles are accelerated to relativistic energies by ICM shocks and turbulence}
+%     \uncover<3->{\item Emit synchrotron radiation in the presence of ICM magnetic fields}
+%      \uncover<4->{\item Extended synchrotron radiation shows the presence of large-scale magnetic fields} 
+% \end{itemize}
+
+% \end{frame}
+
+% ### \huge{{\textbf{Insights from Diffuse Radio Emission}}} 
+
+% \begin{itemize}
+%     \uncover<1->{\item Signpost of ICM shocks and turbulence}
+%     \uncover<2->{\item Complementary method to discover clusters that were missed by X-ray, SZ (Sunyaev-Zel'dovich), or optical surveys}
+
+% \end{itemize}
+
+% \end{frame}
+
+
+% # Acceleration Mechanisms
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{ Modes of acceleration}}}
+
+% \end{frame}
+
+% ### {\huge{\textbf{ Modes of acceleration}}}
+
+% - First order Fermi acceleration (Fermi-I)
+% - Second order Fermi acceleration (Fermi-II)
+% - Adiabatic compression
+% - Secondary models
+
+% \end{frame}
+
+% ### \textbf{i) First order Fermi acceleration (Fermi-I)}
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%              \uncover<1->{\item Particles are accelerated at a shock diffusively} 
+%             \uncover<2->{\item Get scattered from magnetic inhomogeneities}
+%             \uncover<3->{\item Produces powerlaw distribution} 
+%         \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Fermi-I.png}
+%           \vspace*{-1mm}
+%           \caption{First order Fermi acceleration. Credits : Ohira (2018)}
+%           \label{}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+    
+% \end{frame}
+
+% ### \textbf{ii) Second order Fermi acceleration (Fermi-II)}
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%             \uncover<1->{\item Stochastic process} 
+%             \uncover<2->{\item Particles get scattered from magnetic inhomogeneities}
+%             \uncover<3->{\item Inefficient mode of acceleration} 
+%         \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Fermi II b.png}
+%           \vspace*{-1mm}
+%           \caption{Second order Fermi acceleration. Credits : Che and Zank (2019)}
+%           \label{}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+    
+% \end{frame}
+
+
+% ### \textbf{iii) Adiabatic Compression}
+
+
+%  \begin{itemize}
+%     \uncover<1->{\item Adiabatic compression of a bubble of (old) relativistic radio plasma by shock waves} 
+%     \uncover<2->{\item Particles regain energy and boost the emission}
+% \end{itemize}
+
+    
+% \end{frame}
+
+% ### \textbf{iv) Secondary Models}
+
+
+%  \begin{itemize}
+%     \uncover<1->{\item From secondary processes as decay products} 
+%     \uncover<2->{\item Collisions between relativistic protons and the thermal ions produce secondary CR electrons}
+% \end{itemize}
+
+    
+% \end{frame}
+
+
+% # Classification of Cluster Radio Sources
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{Classification of Cluster Radio Sources}}}
+    
+% \end{frame}
+
+% ### \huge{{\textbf{Classification of Cluster Radio Sources}}} 
+
+% \begin{itemize}
+%     \item Radio Halos
+%         \begin{itemize}
+%             \item[-] Giant radio halo 
+%             \item[-] Mini-halo 
+%         \end{itemize}
+%     \item Radio Relics
+%     \item Revived AGN fossil plasma sources, phoenices, and Gently Re-Energized Tails (GReETs)
+% \end{itemize}
+
+% \end{frame}
+
+% ### \textbf{i) Giant radio halos}
+
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%               \uncover<1->{\item Centrally located diffuse sources in merging clusters}
+%               \uncover<2->{\item Smooth and regular morphology with sizes $\sim$1-2 Mpc}
+%               \uncover<3->{\item Particles accelerated by Fermi-II processes and/or secondary electrons}  
+%               \uncover<4->{\item Emission approximately follows the thermal ICM distribution}
+%          \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Giant Halo.png}
+%           \vspace*{-1mm}
+%           \caption{Giant radio-halo in Abell 2744. Credits: Pearce et al. (2017)}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+% \end{frame}
+
+% \begin{frame}{}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=7cm]{Figures/Seminar-1/Giant halo.png}
+%           \vspace*{-1mm}
+%           \caption{Examples of clusters hosting giant radio halos. Credits- MACS J0717.5+3745: van Weeren et al. (2017a). Bullet cluster: Shimwell et al. (2015). Coma cluster: Brown & Rudnick (2011). Abell 2744: Pearce et al. (2017)}
+%           \label{}
+%         \end{figure}
+    
+% \end{frame}
+
+
+% ### \textbf{ii) Mini-halos}
+
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%               \uncover<1->{\item Found in relaxed cool core clusters}
+%               \uncover<2->{\item Sizes $\sim$100-500 kpc}
+%               \uncover<3->{\item Emission surrounds the central bright radio galaxy}  
+%               \uncover<4->{\item Distinguishing AGN lobes and mini-halos can be difficult}
+%          \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Mini-halo.png}
+%           \vspace*{-1mm}
+%           \caption{Mini-halo in Perseus cluster. Credits: Gendron-Marsolais et al. (2017)}
+%           \label{}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+% \end{frame}
+
+% \begin{frame}{}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=13cm]{Figures/Seminar-1/2 Mini-halo.png}
+%           \vspace*{-1mm}
+%           \caption{Examples of clusters having mini-halos. Credits- Perseus: Abolfathi et al. (2018). RX J1720.1+2638: Chambers et al. (2016)}
+%         \end{figure}
+    
+% \end{frame}
+
+% ### \textbf{iii) Radio Relics}
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%               \uncover<1->{\item Found mostly in the outskirts of galaxy clusters}
+%               \uncover<2->{\item Elongated in shape with sizes $\sim$0.5-2 Mpc}
+%               \uncover<3->{\item Trace shock waves in the cluster outskirts}  
+%               \uncover<4->{\item Cluster double radio shocks are also observed in merging clusters}
+%          \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Relic.png}
+%           \vspace*{-1mm}
+%           \caption{Cluster radio shock. Credits: van Weeren et al. 2011b and Kierdorf et al. 2017}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+% \end{frame}
+
+% \begin{frame}{}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=13cm]{Figures/Seminar-1/Double relics.png}
+%           \vspace*{-1mm}
+%           \caption{Examples of cluster double radio shocks. Credits: Sausage
+% Cluster : van Weeren et al. 2010; Ogrean et al. 2014a). Abell 1240: Hoang et al. 2018b}
+%         \end{figure}
+    
+% \end{frame}
+
+
+
+% # Cluster Magnetic Fields
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{Cluster Magnetic Fields}}}
+
+% \end{frame}
+
+
+% ### {\huge{\textbf{Cluster Magnetic Fields}}}
+
+
+% \begin{itemize}
+%               \uncover<1->{\item Have key role in particle acceleration and large scale structure formation}
+%               \uncover<2->{\item Affects turbulence, large-scale motions, cloud collapse, heat and momentum transfer, etc.}
+%               \uncover<3->{\item Origin of observed magnetic fields is uncertain}  
+% \end{itemize}
+   
+% \end{frame}
+
+% ### {\huge{\textbf{Estimation of Magnetic Fields}}}
+
+
+% \begin{itemize}
+%               \uncover<1->{\item Equipartition:}
+%               \begin{itemize}
+%                   \uncover<2->{\item[-] Energies in cosmic rays and magnetic fields are equal }
+%                   \uncover<3->{\item[-] 0.1-10 $\mu$ Gauss }
+%               \end{itemize}
+%               \uncover<4->{\item Faraday rotation:}
+%               \begin{itemize}
+%                   \uncover<5->{\item[-] Strength and structure of cluster magnetic fields can be constrained}
+%                    \uncover<6->{\item[-] Relaxed clusters: $\sim 10 \ \mu$Gauss}
+%                    \uncover<7->{\item[-] Dynamical clusters: $\sim \ \mu$Gauss}
+%               \end{itemize}
+%               \uncover<8->{\item Source Widths}  
+%               \uncover<9->{\item From measurements of IC X-ray emissions} 
+% \end{itemize}
+   
+% \end{frame}
+
+
+% # Towards the paper
+
+% \vspace*{2.7cm}
+
+% {\huge{\textbf{Towards the paper}}}
+
+% \end{frame}
+
+% ### {\huge{\textbf{Towards the paper}}}
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%             \item Abell 2255 : dynamically disturbed cluster at z=0.08
+%             \item LOFAR deep observations at 49 and 145 MHz were done 
+%             \item Discusses the origin of relativistic electrons and magnetic fields
+%         \end{itemize}
+%     \end{column}
+    
+%    \begin{column}{0.4\textwidth}     
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Seminar-1/Abell 2255.png}
+%           \vspace*{-1mm}
+%           \caption{Optical image of Abell 2255. Credits: ESO Digitised Sky Survey}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+
+% \end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ### Projected Profit
+
+% 1. And the answer is...
+% 2. $f(x)=\sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n$
+%     #. How do we _know_ that?
+%     #. __Maths!__
+
+% \end{frame}
+
+% ### Testing blocks
+
+% #### This is a block!
+
+% - Here is some content.
+% - Here's more contents.
+
+% ---
+
+% \end{frame}
+
+
+% ### Citations
+
+% - This is a citation [@novotny:2017]
+% - Works like `natbib` syntax [see @novotny:2019 p.26]
+
+% \end{frame}
+
+
+% ### Pipe Tables
+
+% - Use `pipeTables` and `tableCaptions` options
+% - Available since `markdown` v2.8.0
+
+% | Right | Left | Default | Center |
+% |------:|:-----|---------|:------:| 
+% |  12   |  12  |  12     |   12   | 
+% | 123   |  123 |   123   |  123   | 
+% |   1   |    1 |     1   |    1   | 
+
+%   : Demonstration of pipe table syntax.
+  
+% \end{frame}
+
+% %%novalidate
+
+% \end{markdown}
+
+% \begin{frame}
+% \renewcommand{\bibfont}{\footnotesize}
+% \frametitle{Bibliography}
+
+% \bibliographystyle{apalike}
+% \bibliography{refs}
+
+% \end{frame}
+
+
+
+% \end{document}
