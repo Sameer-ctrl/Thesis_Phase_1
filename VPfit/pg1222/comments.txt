@@ -1,0 +1,9 @@
+SiIII:
+	Nice fit. Fitted with 2 comp. Contaminated with HI 923.
+
+SiIV:
+	Good fit. Fitted with two components. SiIV 1402 comp 2 is weak. Lines need to be 	shifted. Not shifted while fitting
+
+CIV:
+	
+	

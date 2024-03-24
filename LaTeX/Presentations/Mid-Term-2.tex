@@ -1,4 +1,4 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169,draft]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathabx}
@@ -14,7 +14,6 @@
 \usepackage{animate}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage{tikz}
 \usetikzlibrary{calc,shapes}
 \usepackage{amssymb}
 
@@ -31,7 +30,6 @@
 }
 \newcommand{\MyBox}[2][blue!50!black]{\tikzmark{bl}#2\tikzmark{br}\DrawBox[#1]}
 
-\usepackage{tikz}
 
 \tikzset{
     use page relative coordinates/.style={
@@ -256,19 +254,6 @@
 \setbeamercovered{invisible}
 
 
-%% Load the markdown package
-\usepackage[citations,footnotes,definitionLists,hashEnumerators,smartEllipses,tightLists=false,pipeTables,tableCaptions,hybrid]{markdown}
-%%begin novalidate
-\markdownSetup{rendererPrototypes={
- link = {\href{#2}{#1}},
- headingOne = {\section{#1}},
- headingTwo = {\subsection{#1}},
- headingThree = {\begin{frame}\frametitle{#1}},
- headingFour = {\begin{block}{#1}},
- horizontalRule = {\end{block}}
-}}
-%%end novalidate
-
 \usetheme{Dresden}
 \usefonttheme{serif}
 \usecolortheme{rose}
@@ -303,7 +288,7 @@
 
 
 
-\author[Sameer Patidar]{\vspace*{-2mm}\Large{Mid-term 2}\\
+\author[Sameer Patidar]{\vspace*{-2mm}\Large{Mid-Term 2}\\
 \vspace*{7mm}
 \large{Sameer Patidar}
 \\ 
@@ -408,9 +393,7 @@ SC19B161} % (optional, for multiple authors)
 }
 
 
-\begin{markdown}
-
-# Thesis Phase I : Recap
+\section{Thesis Phase I : Recap}
 
 \vspace*{2.7cm}
 
@@ -421,17 +404,19 @@ SC19B161} % (optional, for multiple authors)
 \begin{frame}{\huge{{\textbf{Recap}}}}
 
 \begin{columns}
+  % Consolas, 'Courier New', monospace,
     \begin{column}{0.6\textwidth} 
         \vspace{-13mm}
         \uncover<1->{
-         \begin{itemize}
-             \item The missing baryon problem
-             \item BLAs : Way to probe WHIM
-             \item Absorber towards PG 0003+158
-             \item BLA survey  
+          \begin{itemize}
+              \item The missing baryon problem
+              \item BLAs : Way to probe WHIM
+              \item Absorber towards PG 0003+158
+              \item BLA survey  
         \end{itemize}
         }
-    \end{column}
+    \end{column}      
+
     \begin{column}{0.4\textwidth}
         \uncover<4->{\begin{figure}[!htbp]
           \centering
@@ -441,34 +426,23 @@ SC19B161} % (optional, for multiple authors)
           \label{}
         \end{figure}}
     \end{column}
+
 \end{columns}
 
-\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
-  
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)}} 
-   \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)}}
-   
-\end{tikzpicture}
 
-\end{frame}
-
-\begin{frame}{\huge{{\textbf{Where are the Missing Baryons ?}}}}
-
-\uncover<1->{
- \begin{itemize}
-     \uncover<2->{\item Residing in sparse $(10^{-6}-10^{-4} \ cm^{-3})$ and  hot ($10^{5}-10^{7}$ K) gas : WHIM}   
-    \uncover<3->{\item Low density - Undetectable emission signature}
-    \uncover<4->{\item High temperature - Collisionally ionised} 
-\end{itemize}
-}
+% sdjfsdkjf
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Cen and Ostriker (1999, 2006)}} 
-   
+    \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)} ;} 
+    \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)} ;}
+    
 \end{tikzpicture}
 
 \end{frame}
+  
+
+
 
 \begin{frame}{\huge{{\textbf{How to detect WHIM ?}}}}
 
@@ -499,8 +473,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<4->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<4->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
 
@@ -534,8 +508,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
 
@@ -567,47 +541,15 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
     
 \end{frame}
 
 
-# Project Roadmap
-
-\vspace*{2.7cm}
-
-{\huge{\textbf{Project Roadmap}}}
-
-\end{frame}
-
-
-\begin{frame}{\huge{\textbf{Roadmap}}}
-
-\uncover<1->{
- \begin{itemize}
-     \uncover<2->{\item \textbf{Phase 1}}   
-        \begin{itemize}
-                \uncover<3->{\item[-] Detailed study of one absorber system}      
-                \uncover<4->{\item[-] Absorber along LOS of PG0003+158}
-        \end{itemize} 
-        \vspace*{5mm}
-    \uncover<2->{\item \textbf{Phase 2}}   
-        \begin{itemize}
-                \uncover<5->{\item[-] Hunt for BLAs : An Exhaustive Survey}
-                \uncover<6->{\item[-] Contribution of BLAs to $\Omega_b$}
-        \end{itemize}
-\end{itemize}
-}
-
-
-
-\end{frame}
-
-
-# Data
+\section{Data}
 
 \vspace*{2.7cm}
 
@@ -628,98 +570,22 @@ SC19B161} % (optional, for multiple authors)
 
 \end{frame}
 
-\begin{frame}{\huge{{\textbf{Danforth et al. (2016) Datasets}}}}
 
-- Reduced spectra
-- Identified lines
+\section{Phase I}
 
-\end{frame}
-
-
-# Phase I
-
-\vspace*{2.7cm}
+\begin{frame}{}
 
 {\huge{\textbf{Phase I}}}
 
 \end{frame}
 
-\begin{frame}{\huge{{\textbf{Studying an Absorber System}}}}
 
-\uncover<1->
-{
-\begin{itemize}
-    \uncover<2->{
-    \item \textbf{I \ \ \ \ } \uncover<3->{: \hspace{1mm} Voigt profile fitting - VPFIT}
-    \item \textbf{II \ \ \hspace{1pt}} \uncover<4->{: \hspace{1mm} Ionization modelling - CLOUDY}
-    \item \textbf{III \ }  \uncover<5->{: \hspace{1mm} Analyzing galaxy neighbourhood}
-    }
-\end{itemize}
-}
- 
-\end{frame}
-
-% \begin{frame}{\textbf{VPFIT}}
-
-% \begin{figure}[!htbp]
-%           \hspace{-6cm}
-%           \fbox{\includegraphics[width=10cm]{Figures/Mid-term/VPFIT_ip.png}}
-%           \vspace*{-1mm}
-%           \hspace{-6cm}
-%           \caption{An example VPFIT input file}
-% \end{figure}
-
-% \begin{figure}[!htbp]
-%           \centering
-%           \fbox{\includegraphics[width=12cm]{Figures/Mid-term/VPFIT_op.png}}
-%           \vspace*{-1mm}
-%           \caption{An example VPFIT output file}
-% \end{figure}
-
-% \end{frame}
-
-% \begin{frame}{\textbf{}}
-
-% \vspace*{-6mm}
-
-% \begin{figure}[!htbp]
-%           \centering
-%           \includegraphics[width=7cm]{Figures/Mid-term/VPFIT_fit.png}
-%           \vspace*{-1mm}
-%           \caption{An example 2 component fit with VPFIT}
-% \end{figure}
-
-% \end{frame}
+\section{Absorber system towards PG0003+158}
 
 
-% \begin{frame}{\textbf{CLOUDY}}
+% \subsection{djdbkjdbv}
 
-% \uncover<1->{\begin{itemize}
-%     \uncover<2->{\item Predicts thermal, ionization, and chemical structure of cloud} 
-%     \uncover<3->{\item Photoionization and Collisional ionization}
-%     \uncover<4->{\item Models clouds as homogeneous plane parallel slabs} 
-%     \uncover<5->{\item Inputs : density, metallicity, {\color{red} temperature}, N(\ion{H}{i}), etc.}  
-%     \uncover<6->{\item Outputs : column densities, ionization fractions, {\color{red} temperature}, etc.}
-% \end{itemize}}
-
-% \end{frame}
-
-% \begin{frame}[noframenumbering]{\textbf{CLOUDY}}
-    
-% \begin{figure}[!htbp]
-%           \centering
-%           \includegraphics[width=12cm]{Figures/Mid-term/cloudy-3.png}
-%           \vspace*{-1mm}
-%           \caption{Schematic diagram of CLOUDY simulations.}
-% \end{figure}
-        
-% \end{frame}
-
-
-
-# Absorber system towards PG0003+158
-
-\vspace*{2.7cm}
+\begin{frame}{}
 
 {\huge{\textbf{Absorber system towards PG0003+158}}}
 
@@ -728,9 +594,11 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}{\huge{{\textbf{Absorber system}}}}
 
-- Quasar at $z_{em}=0.45089$
-- $z_{abs} \sim$ 0.347
-- 3 component system
+\begin{itemize}
+    \item Quasar at $z_{em}=0.45089$
+    \item $z_{abs} \sim$ 0.347
+    \item 3 component system
+\end{itemize}
 
 \begin{figure}[!htbp]
       \centering
@@ -743,18 +611,6 @@ SC19B161} % (optional, for multiple authors)
 
 \end{frame}
 
-
-% ### \huge{{\textbf{Voigt profile fitting results}}}
-% \begin{frame}<presentation:0>[plain,noframenumbering]
-
-% % \begin{figure}[!htbp]
-% %           \centering
-% %           \includegraphics[width=10cm]{Figures/Mid-term/system_plot.jpg}
-% %           \vspace*{-1mm}
-% %           \caption{System plot of the absorber system. Velocity is taken to be zero at the redshift of \ion{O}{vi} line of component II, i.e. z = 0.347579}
-% % \end{figure}   
-
-% \end{frame}
 
 \begin{frame}[plain,noframenumbering]{}
 
@@ -791,8 +647,6 @@ SC19B161} % (optional, for multiple authors)
 \end{frame}
 
 
-
-
 \begin{frame}[noframenumbering]{\textbf{CLOUDY}}
     
 \begin{figure}[!htbp]
@@ -808,9 +662,11 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}{\huge{{\textbf{Ionization Modelling}}}}
 
-- Component I \ \ \ : -
-- Component II \ \  : Hybrid - Collisional + Photo-ionization
-- Component III   \ : Photo-ionization (PI)
+\begin{itemize}
+    \item Component I \ \ \ : -
+    \item Component II \ \  : Hybrid - Collisional + Photo-ionization
+    \item Component III   \ : Photo-ionization (PI)
+\end{itemize}
 
 \end{frame}
 
@@ -826,7 +682,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)}} 
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)} ;} 
    
 \end{tikzpicture}
 
@@ -861,17 +717,6 @@ SC19B161} % (optional, for multiple authors)
 
 \end{frame}
 
-\begin{frame}{} 
-
-\begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=10cm]{Figures/Mid-term/comp-II-CIE.png}
-          \vspace*{-1mm}
-          \caption{Hybrid model solution for component II.}
-\end{figure}
-
-
-\end{frame}
 
 \begin{frame}[noframenumbering]{} 
 
@@ -883,68 +728,7 @@ SC19B161} % (optional, for multiple authors)
 
 \end{frame}
 
-
-\begin{frame}{\huge{{\textbf{Galaxy Environment}}}}
-
-\begin{columns}
-    \begin{column}{0.4\textwidth} 
-        \vspace{-10mm}
-        \uncover<1->{
-         \begin{itemize}
-            \uncover<2->{\item Galaxies within 15\arcmin and 1000 km s$^{-1}$}  
-            \uncover<3->{\item SDSS : L $\gtrsim 2.77$ L$^\*$}
-            \uncover<4->{\item VIMOS \uncover<6->{: L $\gtrsim 0.07$ L$^\*$}}
-            \vspace{2mm}
-            \uncover<7->{\item $r_{vir}=250\left(\frac{L}{L^{\*}}\right)^{0.2}$ kpc}
-          \end{itemize}
-          \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
-            \uncover<3->{\node at (0.18,0.15) {Ref. : Ilbert et al. (2005)}} 
-            \uncover<7->{\node at (0.24,0.10) {Prochaska et al. (2011)}} 
-          \end{tikzpicture}
-        }
-    \end{column}
-    \begin{column}{0.6\textwidth}
-        \vspace{-3mm}
-        \uncover<5->{
-        \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=7cm]{Figures/Mid-term/galaxy-environment.jpg}
-          \vspace*{-1mm}
-          \caption{Galaxies around the absorber color-coded with their velocity separation from the absorber. Velocity is 0 at z = 0.347579}
-        \end{figure}}
-    \end{column}
-\end{columns}
-
-\end{frame}
-
-
-# Summary : Phase I
-
-\vspace*{2.7cm}
-
-{\huge{\textbf{Summary : Phase I}}}
-
-\end{frame}
-
-\begin{frame}{\huge{{\textbf{Summary : Phase I}}}}
-
-\uncover<1->
-{         
- \begin{itemize}
-    \uncover<2->{\item BLA candidate towards PG0003+158}
-        \vspace{1mm}
-         \begin{itemize}
-            \uncover<3->{\item[-] Voigt profile fitting}  
-            \uncover<4->{\item[-] Ionisation modelling}
-            \uncover<5->{\item[-] Galaxy environment}
-      \end{itemize}
-  \end{itemize}
-}
-
-\end{frame}
-
-
-# The Survey
+\section{The Survey}
 
 \vspace*{2.7cm}
 
@@ -988,69 +772,6 @@ $$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Righ
 
 
 
-\begin{frame}{\huge{\textbf{Survey so far}}}
-
-\uncover<1->{\begin{itemize}
-    \uncover<2->{\item \ion{O}{vi} absorbers : 16} 
-    \uncover<3->{\item Voigt profile fitting \ \ \checkmark}
-\end{itemize}}
-
-\end{frame}
-
-
-# Towards Thesis Phase II
-
-\vspace*{2.7cm}
-
-{\huge{\textbf{Towards Thesis Phase II}}}
-
-\end{frame}
-
-\begin{frame}{\huge{\textbf{Towards Thesis Phase II}}}
-
-- Ionisation modelling of \ion{O}{vi} absorbers
-- Galaxy environments of these absorbers
-- Studying remaining 12 absorbers
-- Contribution of BLAs to $\Omega_b$
-
-
-\end{frame}
-
-
-% \uncover<1->{\begin{itemize}
-%     \uncover<2->{\item } 
-%     \uncover<3->{\item }
-%     \uncover<4->{\item } 
-%     \uncover<5->{\item }
-% \end{itemize}}
-
-% \begin{columns}
-%     \begin{column}{0.6\textwidth} 
-%          \begin{itemize}
-%              \uncover<1->{\item Baryon surveys showed deficiency in baryon count} 
-%             \uncover<2->{\item }
-%             \uncover<3->{\item } 
-%             \uncover<4->{\item }
-%             \uncover<5->{\item } 
-%             \uncover<6->{\item } 
-%         \end{itemize}
-%     \end{column}
-%     \begin{column}{0.4\textwidth}
-%         \begin{figure}[!htbp]
-%           \centering
-%           \includegraphics[width=5cm]{Placeholder.png}
-%           \vspace*{-1mm}
-%           \caption{}
-%           \label{}
-%         \end{figure}
-%     \end{column}
-% \end{columns}
-
-
-
-
-
-
 %% ----------- References ---------- 
 
 \begin{frame}<presentation:0>[noframenumbering]
@@ -1060,7 +781,6 @@ $$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Righ
 \end{frame}
     
 % \end{frame}
-
 
 
 \begin{frame}
@@ -1073,12 +793,7 @@ $$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Righ
 \end{frame}
 
 
-\begin{frame}{}
-  \centering \Huge
-  \textbf{\emph{Seek understanding, not $\chi^2=1$}}
-\end{frame}
-
-
-\end{markdown}
+% \end{markdown}
 
 \end{document}
+

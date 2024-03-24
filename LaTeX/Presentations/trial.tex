@@ -1,4 +1,4 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169,draft]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathabx}
@@ -14,7 +14,6 @@
 \usepackage{animate}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage{tikz}
 \usetikzlibrary{calc,shapes}
 \usepackage{amssymb}
 
@@ -31,7 +30,6 @@
 }
 \newcommand{\MyBox}[2][blue!50!black]{\tikzmark{bl}#2\tikzmark{br}\DrawBox[#1]}
 
-\usepackage{tikz}
 
 \tikzset{
     use page relative coordinates/.style={
@@ -444,8 +442,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)}} 
-   \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)}}
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)} ;} 
+   \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)} ;}
    
 \end{tikzpicture}
 
@@ -480,8 +478,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<4->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<4->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
 
@@ -515,8 +513,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
 
@@ -548,8 +546,8 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)}
-   \node at (0.20,0.12) {Savage et al. (2014)}}
+   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+   \node at (0.20,0.12) {Savage et al. (2014)} ;}
    
 \end{tikzpicture}
     
@@ -690,7 +688,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)}} 
+   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)} ;} 
    
 \end{tikzpicture}
 
