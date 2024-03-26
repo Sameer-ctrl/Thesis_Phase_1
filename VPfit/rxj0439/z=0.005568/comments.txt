@@ -1,0 +1,12 @@
+SiIII:
+	Nice fit. Near geo coronal Lyman emission. Contaminated with CIII 977 from z=0.242393 and z=0.242580.
+	Had to change nchext to 5 in VPsetup.
+
+SiIV:
+	Not much strong line. Fitted only SiIV 1393 line, SiIV 1402 seems to be non-detection.
+
+CIV:
+	Good fit.
+
+HI:
+	Good fit. Fitted with two comp, which are very close.

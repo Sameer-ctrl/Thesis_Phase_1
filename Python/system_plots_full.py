@@ -7,8 +7,8 @@ import os
 plt.style.use('my_style.mpl')
 
 
-qso='pg1222'
-z_abs=0.054491
+qso='rxj0439'
+z_abs=0.005568
 vlim=350
 n_col=6
 lw1=1.5
@@ -263,7 +263,7 @@ def abs_line_plot(line):
         v_tick=3*(10**5)*((tick_wave**2-(cen_wave_obs**2))/(tick_wave**2+(cen_wave_obs**2)))
 
         plt.plot(v1,cont1,c='red',label=r'$\mathbf{Voigt \ profile \ fit}$',lw=lw1+3)
-        plt.step(v2,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=lw1+2)
+        plt.step(v2-vshift,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=lw1+2)
 
         if n-m==0:
             plt.vlines(v_tick,1.1,1.2,color='blue',lw=2.5)
@@ -289,6 +289,7 @@ def abs_line_plot(line):
         v=3*(10**5)*((wave_spec**2-(cen_wave_obs**2))/(wave_spec**2+(cen_wave_obs**2)))
 
         plt.step(v-vshift,flux_spec,c='green',lw=lw1+2,label=r'$\mathbf{Flux}$')
+        plt.step(v-vshift,err_spec,c='#ffb3ff',label=r'$\mathbf{Error}$',lw=lw1+2)
 
         plt.hlines(1,-5000,5000,ls='--',lw=1,color='black')
         plt.hlines(0,-5000,5000,ls='--',lw=1,color='black')

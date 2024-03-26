@@ -1,0 +1,18 @@
+SiIII:
+	Nice fit. Fitted with 2 comp. Contaminated with HI 923.
+
+SiIV:
+	Good fit. Fitted with two components. SiIV 1402 comp 2 is weak. Lines need to be 	shifted. Not shifted while fitting
+
+CIV:
+	Good fit. Fitted with 3 comp. The right side feature shows a possibility of further substructure, tried fitting it with 2 comp also, fits were not much better, so going with 1 comp.
+
+CII:
+	Nice fit. CII 1036 is not covered. Fitted with 2 comp. Contaminated by OVI 1032 from z=0.363300
+
+HI:
+	Good fit. Contaminated from OVI 1032 from z=0.241833 on left and HI 930 from z=0.378411 on right.
+	Fitted with two comp. One comp has high col density of ~17.9
+
+	Fitted with redshift fixed from SiIV also, in this case we don't get BLA but narrlow lines with high col densities of ~ 17.9 and 17.2
+	In VPfit_chunks, files are those fits which had BLA
