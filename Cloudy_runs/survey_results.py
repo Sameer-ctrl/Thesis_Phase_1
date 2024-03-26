@@ -126,10 +126,11 @@ class abs_system():
         self.BLA_obj=ion('HI',v=v_BLA_obj,b=b_BLA_obj,logN=logN_BLA_obj)
 
         self.qso_label=qso_dict[qso]
+        self.z_abs=z_abs
         self.ion_obj=ion_obj_dict
         self.ions=ions_all[ions_all!='HI']
         self.n_ions=len(self.ions)
-        print(f'{qso} : {z_abs} : {self.ions} : {self.n_ions}')
+        # print(f'{qso} : {z_abs} : {self.ions} : {self.n_ions}')
 
 absorbers=[
             abs_system('3c263',0.140756),
@@ -150,6 +151,28 @@ absorbers=[
             abs_system('pg1121',0.192393),
             abs_system('pks0405',0.167125)
            ]
+
+for a in absorbers:
+
+    BLA=a.BLA_obj
+    Ovi=a.ion_obj['OVI']
+    
+    v_BLA=[x[0] for x in BLA.v]
+    v_err_BLA=[x[1] for x in BLA.v]
+
+    v_Ovi=[x[0] for x in Ovi.v]
+    v_err_Ovi=[x[1] for x in Ovi.v]
+
+    plt.title(f'{a.qso_label} (z_abs={a.z_abs})')
+    plt.errorbar(v_BLA,10*ones(len(v_BLA)),0,v_err_BLA,label='BLA',fmt='o',capsize=3)
+    plt.errorbar(v_Ovi,9*ones(len(v_Ovi)),0,v_err_Ovi,label='OVI',fmt='o',capsize=3)
+    plt.legend()
+    plt.ylim(0,11)
+    plt.show()
+
+
+
+
 
 
 
