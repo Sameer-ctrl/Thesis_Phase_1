@@ -412,106 +412,85 @@ SC19B161} % (optional, for multiple authors)
               \item The missing baryon problem
               \item BLAs : Way to probe WHIM
               \item Absorber towards PG 0003+158
-              \item BLA survey  
+              \item BLA survey : 28 BLA candidates 
         \end{itemize}
         }
     \end{column}      
 
     \begin{column}{0.4\textwidth}
-        \uncover<4->{\begin{figure}[!htbp]
+        \uncover<1->{\begin{figure}[!htbp]
           \centering
-          \includegraphics[width=5cm]{Figures/Mid-term/Baryon_distribution.png}
+          \includegraphics[width=5cm]{Figures/Baryon_distribution.png}
           \vspace*{-1mm}
           \caption{Baryon budget at $z \sim 0$. \\\\ Shull et al. (2012)}
-          \label{}
         \end{figure}}
     \end{column}
 
 \end{columns}
 
 
-% sdjfsdkjf
-
-\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+% \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-    \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)} ;} 
-    \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)} ;}
+%     \uncover<2->{\node at (0.25,0.20) {Ref. : Fukugita et al. (1998)} ;} 
+%     \uncover<4->{\node at (0.263,0.15) {Shull et al. (2012)} ;}
     
-\end{tikzpicture}
-
-\end{frame}
-  
-
-
-
-\begin{frame}{\huge{{\textbf{How to detect WHIM ?}}}}
-
-\begin{columns}
-    \begin{column}{0.35\textwidth} 
-        \vspace{-13mm}
-        \uncover<1->{
-         \begin{itemize}
-            \uncover<2->{\item Quasars as backlight}   
-                \begin{itemize}
-                \uncover<4->{\item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.}
-                \uncover<5->{\item[-] \textbf{BLAs}}
-                \end{itemize} 
-          \end{itemize}
-        }
-    \end{column}
-    \begin{column}{0.65\textwidth}
-        \uncover<3->{
-        \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=9cm]{Figures/Mid-term/spec slice.png}
-          \vspace*{-1mm}
-          \caption{Slice of spectrum of quasar HE0153-4520 ($z_{em}=0.4510$). \\ Danforth et al. (2016)}
-        \end{figure}}
-    \end{column}
-\end{columns}
-
-
-\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
-  
-   \uncover<4->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
-   \node at (0.20,0.12) {Savage et al. (2014)} ;}
-   
-\end{tikzpicture}
-
+% \end{tikzpicture}
 
 \end{frame}
 
 
-\begin{frame}[noframenumbering]{\huge{{\textbf{How to detect WHIM ?}}}}
 
-\begin{columns}
-    \begin{column}{0.35\textwidth} 
-        \vspace{-13mm}
-         \begin{itemize}
-            \item Quasars as backlight  
-                \begin{itemize}
-                    \item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.
-                    \item[-] \textbf{BLAs}
-                \end{itemize} 
-          \end{itemize}
-    \end{column}
-    \begin{column}{0.65\textwidth}
-        \uncover<1->{
-        \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=9cm]{Figures/Mid-term/BLA-individual.png}
-          \vspace*{-1mm}
-          \caption{A BLA towards the LOS of quasar H 1821+643 $(z_{em} = 0.297)$ \\\\ Philipp Richter (2005)}
-        \end{figure}}
-    \end{column}
-\end{columns}
+\section{Ionisation Modelling}
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Ionisation Modelling}}}
+
+\end{frame}
+
+
+
+\begin{frame}{\huge{{\textbf{Method}}}}
+
+\uncover<1->{\begin{itemize}
+  \uncover<2->{\item Grid of PI CLOUDY models : Density and Metallicity} 
+  \uncover<3->{\item log (${\text{n}}_{\text{H}} / \text{cm}^{-3}$) : -5 to 1 in steps of 0.02}
+  \uncover<4->{\item log (Z/$Z\odot$) : -3 to 2 in steps of 0.05} 
+  \uncover<5->{\item Solution : Model that best predicts the observed column densities}
+\end{itemize}
+}
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
-   \node at (0.20,0.12) {Savage et al. (2014)} ;}
+  \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)} ;} 
    
 \end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Scaling approximation}}}}
+
+\uncover<1->{\begin{itemize}
+  \uncover<2->{\item 2d CLOUDY models : computationally expensive} 
+  \uncover<3->{\item Scale column density with metallcity}
+  \uncover<4->{\item N($n_H,Z$) = N($n_H,Z_0$) + log($Z/Z_0$)} 
+  \uncover<5->{\item $Z_0=0.1Z\odot$}
+\end{itemize}
+}
+
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{}}}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/BLA-individual.png}
+  \vspace*{-1mm}
+  \caption{Column density of ion vs. Hydrogen densities at various metallcities }
+\end{figure}
 
 \end{frame}
 
@@ -532,7 +511,7 @@ SC19B161} % (optional, for multiple authors)
         \uncover<1->{
         \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=9cm]{Figures/Mid-term/BLA.png}
+          \includegraphics[width=9cm]{Figures/BLA.png}
           \vspace*{-1mm}
           \caption{A BLA blended with other Ly$\alpha$ absorption lines towards the LOS of quasar PG1116+215 $(z_{em} = 0.176)$. Philipp Richter (2020)}
         \end{figure}}
@@ -602,7 +581,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
       \centering
-      \includegraphics[width=7cm]{Figures/Mid-term/Component_structure2.png}
+      \includegraphics[width=7cm]{Figures/Component_structure2.png}
 \end{figure}
 
 \end{frame}
@@ -616,7 +595,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=12cm]{Figures/Mid-term/PG0003+158-z=0.347579-sys-plot.png}
+          \includegraphics[width=12cm]{Figures/PG0003+158-z=0.347579-sys-plot.png}
           \vspace*{-1mm}
           \caption{System plot of the absorber system. Velocity is taken zero at z = 0.347579}
 \end{figure}   
@@ -639,7 +618,7 @@ SC19B161} % (optional, for multiple authors)
         \vspace{-3mm}
         \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=8cm]{Figures/Mid-term/param.png}
+          \includegraphics[width=8cm]{Figures/param.png}
         \end{figure}
     \end{column}
 \end{columns}
@@ -651,7 +630,7 @@ SC19B161} % (optional, for multiple authors)
     
 \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=12cm]{Figures/Mid-term/cloudy-transparent.png}
+          \includegraphics[width=12cm]{Figures/cloudy-transparent.png}
           \vspace*{-1mm}
           \caption{Schematic diagram of CLOUDY simulations.}
 \end{figure}
@@ -692,7 +671,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=10cm]{Figures/Mid-term/comp-III-PIE.png}
+          \includegraphics[width=10cm]{Figures/comp-III-PIE.png}
           \vspace*{-1mm}
           \caption{Modelled and observed column densities for the component III based on photoionization modelling}
 \end{figure}
@@ -707,7 +686,7 @@ SC19B161} % (optional, for multiple authors)
 
 \uncover<1->{
     \uncover<2->{\begin{center}
-       {\includegraphics[width=5cm]{Figures/Mid-term/b3.png}} 
+       {\includegraphics[width=5cm]{Figures/b3.png}} 
     \end{center}}
     \begin{itemize}
     \uncover<3->{\item $T={10}^{{5.29}_{-0.08}^{+0.07}}$ K} 
@@ -722,7 +701,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=14cm]{Figures/Mid-term/physical-params.png}
+          \includegraphics[width=14cm]{Figures/physical-params.png}
 \end{figure}
 
 
@@ -764,7 +743,7 @@ $$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Righ
 \begin{frame}{}
     \begin{figure}[!htbp]
           \centering
-          \includegraphics[width=12cm]{Figures/Mid-term/metal-ions.png}
+          \includegraphics[width=12cm]{Figures/metal-ions.png}
           \vspace*{-1mm}
           \caption{No. of different metal ions in all the 28 candidate BLAs}
     \end{figure}
