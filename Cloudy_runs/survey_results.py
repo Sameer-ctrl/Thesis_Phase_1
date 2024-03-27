@@ -46,7 +46,7 @@ class ion():
 
 class abs_system():
 
-    def __init__(self,qso,z_abs,cont='*'):
+    def __init__(self,qso,z_abs,cont_mark='*'):
 
         file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
 
@@ -65,7 +65,7 @@ class abs_system():
         mask=[]
 
         for i in ions:
-            mask.append(cont not in i)  
+            mask.append(cont_mark not in i)  
 
         ions=ions[mask]
         z=param_file[:,1].astype(float)[mask]
