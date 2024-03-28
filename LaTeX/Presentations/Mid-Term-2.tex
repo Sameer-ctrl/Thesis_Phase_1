@@ -12,7 +12,7 @@
 \usepackage{pifont}
 \usepackage{graphicx}
 \usepackage{animate}
-\usepackage[dvipsnames]{xcolor}
+% \usepackage[dvipsnames]{xcolor}
 \usepackage[most]{tcolorbox}
 \usetikzlibrary{calc,shapes}
 \usepackage{amssymb}
@@ -298,9 +298,9 @@ SC19B161} % (optional, for multiple authors)
 
 \institute[Indian Institute of Space Science and Technology] % (optional)
 {
-  \large{Dual Degree (Astronomy \& Astrophysics)} \\\\
+  \large{Dual Degree (Astronomy \& Astrophysics)} \\
 \vspace{1mm}
-  \large{Indian Institute of Space Science and Technology} \\\\
+  \large{Indian Institute of Space Science and Technology} \\
 \vspace{5mm}
 \large{Supervisors : Dr. Vikram Khaire and Dr. Anand Narayanan}
 }
@@ -340,9 +340,11 @@ SC19B161} % (optional, for multiple authors)
   
 }
 
-\begin{frame}
+\begin{frame}{}
+
 \vspace*{-3mm}
 \maketitle
+
 \end{frame}
 
 \setbeamertemplate{footline}{%
@@ -395,7 +397,9 @@ SC19B161} % (optional, for multiple authors)
 
 \section{Thesis Phase I : Recap}
 
-\vspace*{2.7cm}
+\begin{frame}{}
+
+\vspace*{1cm}
 
 {\huge{\textbf{Thesis Phase I : Recap}}}
 
@@ -422,7 +426,7 @@ SC19B161} % (optional, for multiple authors)
           \centering
           \includegraphics[width=5cm]{Figures/Baryon_distribution.png}
           \vspace*{-1mm}
-          \caption{Baryon budget at $z \sim 0$. \\\\ Shull et al. (2012)}
+          \caption{Baryon budget at $z \sim 0$. \\ Shull et al. (2012)}
         \end{figure}}
     \end{column}
 
@@ -439,10 +443,58 @@ SC19B161} % (optional, for multiple authors)
 \end{frame}
 
 
+\begin{frame}{}
+
+\section{The BLA Survey}
+
+\vspace*{1cm}
+
+{\huge{\textbf{The BLA Survey}}}
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Insights}}}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{Distribution of \ion{H}{i} column densities and Doppler parameters.}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\huge{{\textbf{Insights}}}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{\ion{H}{i} column density vs. Doppler parameter}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\huge{{\textbf{Insights}}}}
+
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=9cm]{Figures/placeholder.png}
+    \vspace*{-1mm}
+    \caption{\emph{b}(\ion{O}{vi}) vs. \emph{b}(\ion{H}{i})}
+  \end{figure}
+  
+  \end{frame}
+
+
+\begin{frame}{}
 
 \section{Ionisation Modelling}
 
-\vspace*{2.7cm}
+\vspace*{1cm}
 
 {\huge{\textbf{Ionisation Modelling}}}
 
@@ -487,267 +539,331 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/BLA-individual.png}
+  \includegraphics[width=9cm]{Figures/placeholder.png}
   \vspace*{-1mm}
   \caption{Column density of ion vs. Hydrogen densities at various metallcities }
 \end{figure}
 
 \end{frame}
 
-\begin{frame}[noframenumbering]{\huge{{\textbf{How to detect WHIM ?}}}}
 
-\begin{columns}
-    \begin{column}{0.35\textwidth} 
-        \vspace{-13mm}
-         \begin{itemize}
-            \item Quasars as backlight  
-                \begin{itemize}
-                    \item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.
-                    \item[-] \textbf{BLAs}
-                \end{itemize} 
-          \end{itemize}
-    \end{column}
-    \begin{column}{0.65\textwidth}
-        \uncover<1->{
-        \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=9cm]{Figures/BLA.png}
-          \vspace*{-1mm}
-          \caption{A BLA blended with other Ly$\alpha$ absorption lines towards the LOS of quasar PG1116+215 $(z_{em} = 0.176)$. Philipp Richter (2020)}
-        \end{figure}}
-    \end{column}
-\end{columns}
+\begin{frame}{\huge{{\textbf{Results}}}}
+
+\uncover<1->{
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{Distribution of no. of metal ions in the absorber systems}
+\end{figure}
+}
+  
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Results}}}}
+
+\uncover<1->{
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{Distribution of no. of metal ions in the absorber systems}
+\end{figure}
+}
+  
+\end{frame}
+
+
+\begin{frame}[plain]{}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=12cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{System plot of the absorber system towards LOS of }
+\end{figure}  
+
 
 \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
-   \node at (0.20,0.12) {Savage et al. (2014)} ;}
+   \uncover<1->{\node at (0.05,0.92) {\LARGE{\textbf{I}}} ;}
    
 \end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=10cm]{Figures/placeholder.png}
+  \vspace*{-1mm}
+  \caption{Observed and predicted column densities of the ions.}
+\end{figure}  
+
+
+\end{frame}
+
+
+
+
+
+% \begin{frame}[noframenumbering]{\huge{{\textbf{How to detect WHIM ?}}}}
+
+% \begin{columns}
+%     \begin{column}{0.35\textwidth} 
+%         \vspace{-13mm}
+%          \begin{itemize}
+%             \item Quasars as backlight  
+%                 \begin{itemize}
+%                     \item[-] \ion{O}{vi-viii}, \ \ion{Ne}{ix-x}, \ \ion{N}{vii}, etc.
+%                     \item[-] \textbf{BLAs}
+%                 \end{itemize} 
+%           \end{itemize}
+%     \end{column}
+%     \begin{column}{0.65\textwidth}
+%         \uncover<1->{
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=9cm]{Figures/BLA.png}
+%           \vspace*{-1mm}
+%           \caption{A BLA blended with other Ly$\alpha$ absorption lines towards the LOS of quasar PG1116+215 $(z_{em} = 0.176)$. Philipp Richter (2020)}
+%         \end{figure}}
+%     \end{column}
+% \end{columns}
+
+% \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+  
+%    \uncover<1->{\node at (0.20,0.17) {Ref. : Tepper-García et al. (2013)} ;
+%    \node at (0.20,0.12) {Savage et al. (2014)} ;}
+   
+% \end{tikzpicture}
     
-\end{frame}
+% \end{frame}
 
 
-\section{Data}
+% \section{Data}
 
-\vspace*{2.7cm}
+% \vspace*{2.7cm}
 
-{\huge{\textbf{Data}}}
+% {\huge{\textbf{Data}}}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{\huge{{\textbf{\textit{HST}/COS Data}}}}
+% \begin{frame}{\huge{{\textbf{\textit{HST}/COS Data}}}}
 
-\uncover<1->{\begin{itemize}
-    \uncover<2->{\item 82 UV-bright AGNs chosen by Danforth et al. (2016)
-    \uncover<3->{\item $z_{AGN} < 0.85$}}
-    \uncover<4->{\item High S/N $\gtrsim$ 15}
-    \uncover<5->{\item FUV channel : G130M and G160M gratings
-    \uncover<6->{\item Coverage : 1130-1790 \AA}}
-    \uncover<7->{\item $\text{R} \sim 17,000 \ \approx$ 17 km $\text{s}^{-1}$} 
-\end{itemize}}
+% \uncover<1->{\begin{itemize}
+%     \uncover<2->{\item 82 UV-bright AGNs chosen by Danforth et al. (2016)
+%     \uncover<3->{\item $z_{AGN} < 0.85$}}
+%     \uncover<4->{\item High S/N $\gtrsim$ 15}
+%     \uncover<5->{\item FUV channel : G130M and G160M gratings
+%     \uncover<6->{\item Coverage : 1130-1790 \AA}}
+%     \uncover<7->{\item $\text{R} \sim 17,000 \ \approx$ 17 km $\text{s}^{-1}$} 
+% \end{itemize}}
 
-\end{frame}
-
-
-\section{Phase I}
-
-\begin{frame}{}
-
-{\huge{\textbf{Phase I}}}
-
-\end{frame}
+% \end{frame}
 
 
-\section{Absorber system towards PG0003+158}
+% \section{Phase I}
+
+% \begin{frame}{}
+
+% {\huge{\textbf{Phase I}}}
+
+% \end{frame}
 
 
-% \subsection{djdbkjdbv}
-
-\begin{frame}{}
-
-{\huge{\textbf{Absorber system towards PG0003+158}}}
-
-\end{frame}
+% \section{Absorber system towards PG0003+158}
 
 
-\begin{frame}{\huge{{\textbf{Absorber system}}}}
+% % \subsection{djdbkjdbv}
 
-\begin{itemize}
-    \item Quasar at $z_{em}=0.45089$
-    \item $z_{abs} \sim$ 0.347
-    \item 3 component system
-\end{itemize}
+% \begin{frame}{}
 
-\begin{figure}[!htbp]
-      \centering
-      \includegraphics[width=7cm]{Figures/Component_structure2.png}
-\end{figure}
+% {\huge{\textbf{Absorber system towards PG0003+158}}}
 
-\end{frame}
-
-\begin{frame}{\huge{{\textbf{Voigt profile fitting}}}}
-
-\end{frame}
+% \end{frame}
 
 
-\begin{frame}[plain,noframenumbering]{}
+% \begin{frame}{\huge{{\textbf{Absorber system}}}}
 
-\begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=12cm]{Figures/PG0003+158-z=0.347579-sys-plot.png}
-          \vspace*{-1mm}
-          \caption{System plot of the absorber system. Velocity is taken zero at z = 0.347579}
-\end{figure}   
+% \begin{itemize}
+%     \item Quasar at $z_{em}=0.45089$
+%     \item $z_{abs} \sim$ 0.347
+%     \item 3 component system
+% \end{itemize}
 
-\end{frame}
+% \begin{figure}[!htbp]
+%       \centering
+%       \includegraphics[width=7cm]{Figures/Component_structure2.png}
+% \end{figure}
 
+% \end{frame}
 
-\begin{frame}{\huge{{\textbf{Voigt profile fitting}}}}
+% \begin{frame}{\huge{{\textbf{Voigt profile fitting}}}}
 
-\begin{columns}
-    \begin{column}{0.4\textwidth} 
-        \vspace{-10mm}
-         \begin{itemize}
-            \item \ion{H}{i} : 3 components  
-            \item \ion{O}{vi} : 2 components
-            \item \ion{C}{ii}, \ion{C}{iii}, \ion{Si}{ii}, \ion{Si}{iii}  : 1 component
-          \end{itemize}
-    \end{column}
-    \begin{column}{0.6\textwidth}
-        \vspace{-3mm}
-        \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=8cm]{Figures/param.png}
-        \end{figure}
-    \end{column}
-\end{columns}
-
-\end{frame}
+% \end{frame}
 
 
-\begin{frame}[noframenumbering]{\textbf{CLOUDY}}
+% \begin{frame}[plain,noframenumbering]{}
+
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=12cm]{Figures/PG0003+158-z=0.347579-sys-plot.png}
+%           \vspace*{-1mm}
+%           \caption{System plot of the absorber system. Velocity is taken zero at z = 0.347579}
+% \end{figure}   
+
+% \end{frame}
+
+
+% \begin{frame}{\huge{{\textbf{Voigt profile fitting}}}}
+
+% \begin{columns}
+%     \begin{column}{0.4\textwidth} 
+%         \vspace{-10mm}
+%          \begin{itemize}
+%             \item \ion{H}{i} : 3 components  
+%             \item \ion{O}{vi} : 2 components
+%             \item \ion{C}{ii}, \ion{C}{iii}, \ion{Si}{ii}, \ion{Si}{iii}  : 1 component
+%           \end{itemize}
+%     \end{column}
+%     \begin{column}{0.6\textwidth}
+%         \vspace{-3mm}
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=8cm]{Figures/param.png}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+% \end{frame}
+
+
+% \begin{frame}[noframenumbering]{\textbf{CLOUDY}}
     
-\begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=12cm]{Figures/cloudy-transparent.png}
-          \vspace*{-1mm}
-          \caption{Schematic diagram of CLOUDY simulations.}
-\end{figure}
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=12cm]{Figures/cloudy-transparent.png}
+%           \vspace*{-1mm}
+%           \caption{Schematic diagram of CLOUDY simulations.}
+% \end{figure}
         
-\end{frame}
+% \end{frame}
 
 
 
-\begin{frame}{\huge{{\textbf{Ionization Modelling}}}}
+% \begin{frame}{\huge{{\textbf{Ionization Modelling}}}}
 
-\begin{itemize}
-    \item Component I \ \ \ : -
-    \item Component II \ \  : Hybrid - Collisional + Photo-ionization
-    \item Component III   \ : Photo-ionization (PI)
-\end{itemize}
+% \begin{itemize}
+%     \item Component I \ \ \ : -
+%     \item Component II \ \  : Hybrid - Collisional + Photo-ionization
+%     \item Component III   \ : Photo-ionization (PI)
+% \end{itemize}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{\textbf{Component III : PI}}
+% \begin{frame}{\textbf{Component III : PI}}
 
-\uncover<1->{\begin{itemize}
-    \uncover<2->{\item Grid of CLOUDY models : Density and Metallicity} 
-    \uncover<3->{\item log (${\text{n}}_{\text{H}} / \text{cm}^{-3}$) : -5 to 1 in steps of 0.02}
-    \uncover<4->{\item log (Z/$Z\odot$) : -3 to 2 in steps of 0.05} 
-    \uncover<5->{\item Solution : Model that best matches the observed column densities}
-\end{itemize}
-}
+% \uncover<1->{\begin{itemize}
+%     \uncover<2->{\item Grid of CLOUDY models : Density and Metallicity} 
+%     \uncover<3->{\item log (${\text{n}}_{\text{H}} / \text{cm}^{-3}$) : -5 to 1 in steps of 0.02}
+%     \uncover<4->{\item log (Z/$Z\odot$) : -3 to 2 in steps of 0.05} 
+%     \uncover<5->{\item Solution : Model that best matches the observed column densities}
+% \end{itemize}
+% }
 
-\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+% \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
   
-   \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)} ;} 
+%    \uncover<2->{\node at (0.25,0.20) {Ref. : Acharya and Khaire (2021)} ;} 
    
-\end{tikzpicture}
+% \end{tikzpicture}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{}
+% \begin{frame}{}
 
-\begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=10cm]{Figures/comp-III-PIE.png}
-          \vspace*{-1mm}
-          \caption{Modelled and observed column densities for the component III based on photoionization modelling}
-\end{figure}
-
-
-\end{frame}
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=10cm]{Figures/comp-III-PIE.png}
+%           \vspace*{-1mm}
+%           \caption{Modelled and observed column densities for the component III based on photoionization modelling}
+% \end{figure}
 
 
-\begin{frame}{\textbf{Component II : Hybrid}}
-
-\vspace{-5mm}
-
-\uncover<1->{
-    \uncover<2->{\begin{center}
-       {\includegraphics[width=5cm]{Figures/b3.png}} 
-    \end{center}}
-    \begin{itemize}
-    \uncover<3->{\item $T={10}^{{5.29}_{-0.08}^{+0.07}}$ K} 
-    \uncover<4->{\item Constant temperature CLOUDY models} 
-    \uncover<5->{\item \ion{O}{vi} and size as constraining factors}
-\end{itemize}}
-
-\end{frame}
+% \end{frame}
 
 
-\begin{frame}[noframenumbering]{} 
+% \begin{frame}{\textbf{Component II : Hybrid}}
 
-\begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=14cm]{Figures/physical-params.png}
-\end{figure}
+% \vspace{-5mm}
+
+% \uncover<1->{
+%     \uncover<2->{\begin{center}
+%        {\includegraphics[width=5cm]{Figures/b3.png}} 
+%     \end{center}}
+%     \begin{itemize}
+%     \uncover<3->{\item $T={10}^{{5.29}_{-0.08}^{+0.07}}$ K} 
+%     \uncover<4->{\item Constant temperature CLOUDY models} 
+%     \uncover<5->{\item \ion{O}{vi} and size as constraining factors}
+% \end{itemize}}
+
+% \end{frame}
 
 
-\end{frame}
+% \begin{frame}[noframenumbering]{} 
 
-\section{The Survey}
+% \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=14cm]{Figures/physical-params.png}
+% \end{figure}
 
-\vspace*{2.7cm}
 
-{\huge{\textbf{The Survey}}}
+% \end{frame}
 
-\end{frame}
+% \section{The Survey}
 
-\begin{frame}{\huge{\textbf{Hunt for BLAs}}}
+% \vspace*{2.7cm}
 
-\uncover<1->{
-\begin{itemize}
+% {\huge{\textbf{The Survey}}}
 
-\uncover<2->{\item Broad Ly$\alpha$ :}
+% \end{frame}
 
-$$\uncover<3->{\MyBox{b \geq 45 \ \text{km s}^{-1}}} \uncover<4->{\hspace{8mm} \Rightarrow \ \ \  \text{568 systems}}$$  
+% \begin{frame}{\huge{\textbf{Hunt for BLAs}}}
 
-\vspace{-3mm}
+% \uncover<1->{
+% \begin{itemize}
 
-\uncover<5->{\item Ionisation modelling :}
-\vspace{2mm}
-$$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Rightarrow \ \ \  \text{28 systems}}$$ 
+% \uncover<2->{\item Broad Ly$\alpha$ :}
 
-\begin{center}
-\vspace{2mm}
- \uncover<8->{\MyBox[red]{\textbf{28 BLA candidates}}}   
-\end{center}
+% $$\uncover<3->{\MyBox{b \geq 45 \ \text{km s}^{-1}}} \uncover<4->{\hspace{8mm} \Rightarrow \ \ \  \text{568 systems}}$$  
 
-\end{itemize}
-}
+% \vspace{-3mm}
 
-\end{frame}
+% \uncover<5->{\item Ionisation modelling :}
+% \vspace{2mm}
+% $$\uncover<6->{\MyBox{\text{metal ions} \geq 3}} \uncover<7->{\hspace{8mm} \Rightarrow \ \ \  \text{28 systems}}$$ 
 
-\begin{frame}{}
-    \begin{figure}[!htbp]
-          \centering
-          \includegraphics[width=12cm]{Figures/metal-ions.png}
-          \vspace*{-1mm}
-          \caption{No. of different metal ions in all the 28 candidate BLAs}
-    \end{figure}
-\end{frame}
+% \begin{center}
+% \vspace{2mm}
+%  \uncover<8->{\MyBox[red]{\textbf{28 BLA candidates}}}   
+% \end{center}
+
+% \end{itemize}
+% }
+
+% \end{frame}
+
+% \begin{frame}{}
+%     \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=12cm]{Figures/metal-ions.png}
+%           \vspace*{-1mm}
+%           \caption{No. of different metal ions in all the 28 candidate BLAs}
+%     \end{figure}
+% \end{frame}
 
 
 
