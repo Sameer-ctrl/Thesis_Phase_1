@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  28 MAR 2024 16:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  29 MAR 2024 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1349,6 +1349,14 @@ Package caption Info: End \AtBeginDocument code.
 \mymax=\count436
 \mymin=\count437
 \mymax=\count438
+\mymin=\count439
+\mymax=\count440
+\mymin=\count441
+\mymax=\count442
+\mymin=\count443
+\mymax=\count444
+\mymin=\count445
+\mymax=\count446
 LaTeX Font Info:    Trying to load font information for U+zeur on input line 348.
  (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1371,14 +1379,6 @@ Overfull \vbox (14.00206pt too high) detected at line 348
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\mymin=\count439
-\mymax=\count440
-\mymin=\count441
-\mymax=\count442
-\mymin=\count443
-\mymax=\count444
-\mymin=\count445
-\mymax=\count446
 \mymin=\count447
 \mymax=\count448
 \mymin=\count449
@@ -1411,14 +1411,6 @@ Overfull \vbox (14.00206pt too high) detected at line 348
 \mymax=\count476
 \mymin=\count477
 \mymax=\count478
- [2
-
-]
-<Figures/Baryon_distribution.png, id=60, 505.28775pt x 426.99525pt>
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 443.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
 \mymin=\count479
 \mymax=\count480
 \mymin=\count481
@@ -1435,6 +1427,14 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count492
 \mymin=\count493
 \mymax=\count494
+ [2
+
+]
+<Figures/Baryon_distribution.png, id=60, 505.28775pt x 426.99525pt>
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 434.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
 \mymin=\count495
 \mymax=\count496
 \mymin=\count497
@@ -1459,9 +1459,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count516
 \mymin=\count517
 \mymax=\count518
- [3
-
-]
 \mymin=\count519
 \mymax=\count520
 \mymin=\count521
@@ -1486,6 +1483,10 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count540
 \mymin=\count541
 \mymax=\count542
+ [3
+
+]
+<Figures/BLA-individual.png, id=70, 821.0675pt x 404.51125pt>
 \mymin=\count543
 \mymax=\count544
 \mymin=\count545
@@ -1502,10 +1503,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count556
 \mymin=\count557
 \mymax=\count558
- [4
-
-]
-<Figures/placeholder.png, id=74, 1217.54875pt x 561.09625pt>
 \mymin=\count559
 \mymax=\count560
 \mymin=\count561
@@ -1538,6 +1535,15 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count588
 \mymin=\count589
 \mymax=\count590
+ [4
+
+]
+<Figures/PG0003+158-z=0.347579-sys-plot.png, id=75, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
+ |  [] 
+ []
+
 \mymin=\count591
 \mymax=\count592
 \mymin=\count593
@@ -1546,9 +1552,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count596
 \mymin=\count597
 \mymax=\count598
- [5
-
-]
 \mymin=\count599
 \mymax=\count600
 \mymin=\count601
@@ -1589,9 +1592,10 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count636
 \mymin=\count637
 \mymax=\count638
- [6
+[5
 
 ]
+<Figures/metal-ions.png, id=80, 1162.8243pt x 624.4128pt>
 \mymin=\count639
 \mymax=\count640
 \mymin=\count641
@@ -1632,9 +1636,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count676
 \mymin=\count677
 \mymax=\count678
- [7
-
-]
 \mymin=\count679
 \mymax=\count680
 \mymin=\count681
@@ -1643,6 +1644,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count684
 \mymin=\count685
 \mymax=\count686
+ [6
+
+]
 \mymin=\count687
 \mymax=\count688
 \mymin=\count689
@@ -1675,9 +1679,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count716
 \mymin=\count717
 \mymax=\count718
- [8
-
-]
 \mymin=\count719
 \mymax=\count720
 \mymin=\count721
@@ -1694,6 +1695,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count732
 \mymin=\count733
 \mymax=\count734
+ [7
+
+]
 \mymin=\count735
 \mymax=\count736
 \mymin=\count737
@@ -1718,9 +1722,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count756
 \mymin=\count757
 \mymax=\count758
- [9
-
-]
 \mymin=\count759
 \mymax=\count760
 \mymin=\count761
@@ -1745,6 +1746,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count780
 \mymin=\count781
 \mymax=\count782
+ [8
+
+]
 \mymin=\count783
 \mymax=\count784
 \mymin=\count785
@@ -1761,9 +1765,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count796
 \mymin=\count797
 \mymax=\count798
- [10
-
-]
 \mymin=\count799
 \mymax=\count800
 \mymin=\count801
@@ -1796,6 +1797,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count828
 \mymin=\count829
 \mymax=\count830
+ [9
+
+]
 \mymin=\count831
 \mymax=\count832
 \mymin=\count833
@@ -1804,9 +1808,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count836
 \mymin=\count837
 \mymax=\count838
- [11
-
-]
 \mymin=\count839
 \mymax=\count840
 \mymin=\count841
@@ -1847,9 +1848,10 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count876
 \mymin=\count877
 \mymax=\count878
- [12
+ [10
 
 ]
+<Figures/placeholder.png, id=102, 1217.54875pt x 561.09625pt>
 \mymin=\count879
 \mymax=\count880
 \mymin=\count881
@@ -1890,9 +1892,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count916
 \mymin=\count917
 \mymax=\count918
- [13
-
-]
 \mymin=\count919
 \mymax=\count920
 \mymin=\count921
@@ -1901,6 +1900,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count924
 \mymin=\count925
 \mymax=\count926
+ [11
+
+]
 \mymin=\count927
 \mymax=\count928
 \mymin=\count929
@@ -1933,9 +1935,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count956
 \mymin=\count957
 \mymax=\count958
- [14
-
-]
 \mymin=\count959
 \mymax=\count960
 \mymin=\count961
@@ -1952,6 +1951,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count972
 \mymin=\count973
 \mymax=\count974
+ [12
+
+]
 \mymin=\count975
 \mymax=\count976
 \mymin=\count977
@@ -1976,9 +1978,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count996
 \mymin=\count997
 \mymax=\count998
- [15
-
-]
 \mymin=\count999
 \mymax=\count1000
 \mymin=\count1001
@@ -2003,6 +2002,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1020
 \mymin=\count1021
 \mymax=\count1022
+ [13
+
+]
 \mymin=\count1023
 \mymax=\count1024
 \mymin=\count1025
@@ -2019,9 +2021,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1036
 \mymin=\count1037
 \mymax=\count1038
- [16
-
-]
 \mymin=\count1039
 \mymax=\count1040
 \mymin=\count1041
@@ -2054,6 +2053,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1068
 \mymin=\count1069
 \mymax=\count1070
+ [14
+
+]
 \mymin=\count1071
 \mymax=\count1072
 \mymin=\count1073
@@ -2062,9 +2064,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1076
 \mymin=\count1077
 \mymax=\count1078
- [17
-
-]
 \mymin=\count1079
 \mymax=\count1080
 \mymin=\count1081
@@ -2105,7 +2104,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1116
 \mymin=\count1117
 \mymax=\count1118
- [18
+ [15
 
 ]
 \mymin=\count1119
@@ -2148,9 +2147,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1156
 \mymin=\count1157
 \mymax=\count1158
- [19
-
-]
 \mymin=\count1159
 \mymax=\count1160
 \mymin=\count1161
@@ -2159,6 +2155,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1164
 \mymin=\count1165
 \mymax=\count1166
+ [16
+
+]
 \mymin=\count1167
 \mymax=\count1168
 \mymin=\count1169
@@ -2191,9 +2190,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1196
 \mymin=\count1197
 \mymax=\count1198
- [20
-
-]
 \mymin=\count1199
 \mymax=\count1200
 \mymin=\count1201
@@ -2210,6 +2206,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1212
 \mymin=\count1213
 \mymax=\count1214
+ [17
+
+]
 \mymin=\count1215
 \mymax=\count1216
 \mymin=\count1217
@@ -2234,11 +2233,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1236
 \mymin=\count1237
 \mymax=\count1238
- [21
-
-] [22
-
-]
 \mymin=\count1239
 \mymax=\count1240
 \mymin=\count1241
@@ -2263,6 +2257,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1260
 \mymin=\count1261
 \mymax=\count1262
+ [18
+
+]
 \mymin=\count1263
 \mymax=\count1264
 \mymin=\count1265
@@ -2279,9 +2276,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1276
 \mymin=\count1277
 \mymax=\count1278
- [23
-
-] (./Mid-Term-2.bbl)
 \mymin=\count1279
 \mymax=\count1280
 \mymin=\count1281
@@ -2314,6 +2308,9 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1308
 \mymin=\count1309
 \mymax=\count1310
+ [19
+
+]
 \mymin=\count1311
 \mymax=\count1312
 \mymin=\count1313
@@ -2322,7 +2319,508 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count1316
 \mymin=\count1317
 \mymax=\count1318
+\mymin=\count1319
+\mymax=\count1320
+\mymin=\count1321
+\mymax=\count1322
+\mymin=\count1323
+\mymax=\count1324
+\mymin=\count1325
+\mymax=\count1326
+\mymin=\count1327
+\mymax=\count1328
+\mymin=\count1329
+\mymax=\count1330
+\mymin=\count1331
+\mymax=\count1332
+\mymin=\count1333
+\mymax=\count1334
+\mymin=\count1335
+\mymax=\count1336
+\mymin=\count1337
+\mymax=\count1338
+\mymin=\count1339
+\mymax=\count1340
+\mymin=\count1341
+\mymax=\count1342
+\mymin=\count1343
+\mymax=\count1344
+\mymin=\count1345
+\mymax=\count1346
+\mymin=\count1347
+\mymax=\count1348
+\mymin=\count1349
+\mymax=\count1350
+\mymin=\count1351
+\mymax=\count1352
+\mymin=\count1353
+\mymax=\count1354
+\mymin=\count1355
+\mymax=\count1356
+\mymin=\count1357
+\mymax=\count1358
+ [20
+
+]
+\mymin=\count1359
+\mymax=\count1360
+\mymin=\count1361
+\mymax=\count1362
+\mymin=\count1363
+\mymax=\count1364
+\mymin=\count1365
+\mymax=\count1366
+\mymin=\count1367
+\mymax=\count1368
+\mymin=\count1369
+\mymax=\count1370
+\mymin=\count1371
+\mymax=\count1372
+\mymin=\count1373
+\mymax=\count1374
+\mymin=\count1375
+\mymax=\count1376
+\mymin=\count1377
+\mymax=\count1378
+\mymin=\count1379
+\mymax=\count1380
+\mymin=\count1381
+\mymax=\count1382
+\mymin=\count1383
+\mymax=\count1384
+\mymin=\count1385
+\mymax=\count1386
+\mymin=\count1387
+\mymax=\count1388
+\mymin=\count1389
+\mymax=\count1390
+\mymin=\count1391
+\mymax=\count1392
+\mymin=\count1393
+\mymax=\count1394
+\mymin=\count1395
+\mymax=\count1396
+\mymin=\count1397
+\mymax=\count1398
+\mymin=\count1399
+\mymax=\count1400
+\mymin=\count1401
+\mymax=\count1402
+\mymin=\count1403
+\mymax=\count1404
+\mymin=\count1405
+\mymax=\count1406
+ [21
+
+]
+\mymin=\count1407
+\mymax=\count1408
+\mymin=\count1409
+\mymax=\count1410
+\mymin=\count1411
+\mymax=\count1412
+\mymin=\count1413
+\mymax=\count1414
+\mymin=\count1415
+\mymax=\count1416
+\mymin=\count1417
+\mymax=\count1418
+\mymin=\count1419
+\mymax=\count1420
+\mymin=\count1421
+\mymax=\count1422
+\mymin=\count1423
+\mymax=\count1424
+\mymin=\count1425
+\mymax=\count1426
+\mymin=\count1427
+\mymax=\count1428
+\mymin=\count1429
+\mymax=\count1430
+\mymin=\count1431
+\mymax=\count1432
+\mymin=\count1433
+\mymax=\count1434
+\mymin=\count1435
+\mymax=\count1436
+\mymin=\count1437
+\mymax=\count1438
+\mymin=\count1439
+\mymax=\count1440
+\mymin=\count1441
+\mymax=\count1442
+\mymin=\count1443
+\mymax=\count1444
+\mymin=\count1445
+\mymax=\count1446
+\mymin=\count1447
+\mymax=\count1448
+\mymin=\count1449
+\mymax=\count1450
+\mymin=\count1451
+\mymax=\count1452
+\mymin=\count1453
+\mymax=\count1454
+ [22
+
+]
+\mymin=\count1455
+\mymax=\count1456
+\mymin=\count1457
+\mymax=\count1458
+\mymin=\count1459
+\mymax=\count1460
+\mymin=\count1461
+\mymax=\count1462
+\mymin=\count1463
+\mymax=\count1464
+\mymin=\count1465
+\mymax=\count1466
+\mymin=\count1467
+\mymax=\count1468
+\mymin=\count1469
+\mymax=\count1470
+\mymin=\count1471
+\mymax=\count1472
+\mymin=\count1473
+\mymax=\count1474
+\mymin=\count1475
+\mymax=\count1476
+\mymin=\count1477
+\mymax=\count1478
+\mymin=\count1479
+\mymax=\count1480
+\mymin=\count1481
+\mymax=\count1482
+\mymin=\count1483
+\mymax=\count1484
+\mymin=\count1485
+\mymax=\count1486
+\mymin=\count1487
+\mymax=\count1488
+\mymin=\count1489
+\mymax=\count1490
+\mymin=\count1491
+\mymax=\count1492
+\mymin=\count1493
+\mymax=\count1494
+\mymin=\count1495
+\mymax=\count1496
+\mymin=\count1497
+\mymax=\count1498
+\mymin=\count1499
+\mymax=\count1500
+\mymin=\count1501
+\mymax=\count1502
+ [23
+
+]
+\mymin=\count1503
+\mymax=\count1504
+\mymin=\count1505
+\mymax=\count1506
+\mymin=\count1507
+\mymax=\count1508
+\mymin=\count1509
+\mymax=\count1510
+\mymin=\count1511
+\mymax=\count1512
+\mymin=\count1513
+\mymax=\count1514
+\mymin=\count1515
+\mymax=\count1516
+\mymin=\count1517
+\mymax=\count1518
+\mymin=\count1519
+\mymax=\count1520
+\mymin=\count1521
+\mymax=\count1522
+\mymin=\count1523
+\mymax=\count1524
+\mymin=\count1525
+\mymax=\count1526
+\mymin=\count1527
+\mymax=\count1528
+\mymin=\count1529
+\mymax=\count1530
+\mymin=\count1531
+\mymax=\count1532
+\mymin=\count1533
+\mymax=\count1534
+\mymin=\count1535
+\mymax=\count1536
+\mymin=\count1537
+\mymax=\count1538
+\mymin=\count1539
+\mymax=\count1540
+\mymin=\count1541
+\mymax=\count1542
+\mymin=\count1543
+\mymax=\count1544
+\mymin=\count1545
+\mymax=\count1546
+\mymin=\count1547
+\mymax=\count1548
+\mymin=\count1549
+\mymax=\count1550
  [24
+
+]
+\mymin=\count1551
+\mymax=\count1552
+\mymin=\count1553
+\mymax=\count1554
+\mymin=\count1555
+\mymax=\count1556
+\mymin=\count1557
+\mymax=\count1558
+\mymin=\count1559
+\mymax=\count1560
+\mymin=\count1561
+\mymax=\count1562
+\mymin=\count1563
+\mymax=\count1564
+\mymin=\count1565
+\mymax=\count1566
+\mymin=\count1567
+\mymax=\count1568
+\mymin=\count1569
+\mymax=\count1570
+\mymin=\count1571
+\mymax=\count1572
+\mymin=\count1573
+\mymax=\count1574
+\mymin=\count1575
+\mymax=\count1576
+\mymin=\count1577
+\mymax=\count1578
+\mymin=\count1579
+\mymax=\count1580
+\mymin=\count1581
+\mymax=\count1582
+\mymin=\count1583
+\mymax=\count1584
+\mymin=\count1585
+\mymax=\count1586
+\mymin=\count1587
+\mymax=\count1588
+\mymin=\count1589
+\mymax=\count1590
+\mymin=\count1591
+\mymax=\count1592
+\mymin=\count1593
+\mymax=\count1594
+\mymin=\count1595
+\mymax=\count1596
+\mymin=\count1597
+\mymax=\count1598
+ [25
+
+]
+\mymin=\count1599
+\mymax=\count1600
+\mymin=\count1601
+\mymax=\count1602
+\mymin=\count1603
+\mymax=\count1604
+\mymin=\count1605
+\mymax=\count1606
+\mymin=\count1607
+\mymax=\count1608
+\mymin=\count1609
+\mymax=\count1610
+\mymin=\count1611
+\mymax=\count1612
+\mymin=\count1613
+\mymax=\count1614
+\mymin=\count1615
+\mymax=\count1616
+\mymin=\count1617
+\mymax=\count1618
+\mymin=\count1619
+\mymax=\count1620
+\mymin=\count1621
+\mymax=\count1622
+\mymin=\count1623
+\mymax=\count1624
+\mymin=\count1625
+\mymax=\count1626
+\mymin=\count1627
+\mymax=\count1628
+\mymin=\count1629
+\mymax=\count1630
+\mymin=\count1631
+\mymax=\count1632
+\mymin=\count1633
+\mymax=\count1634
+\mymin=\count1635
+\mymax=\count1636
+\mymin=\count1637
+\mymax=\count1638
+\mymin=\count1639
+\mymax=\count1640
+\mymin=\count1641
+\mymax=\count1642
+\mymin=\count1643
+\mymax=\count1644
+\mymin=\count1645
+\mymax=\count1646
+ [26
+
+]
+\mymin=\count1647
+\mymax=\count1648
+\mymin=\count1649
+\mymax=\count1650
+\mymin=\count1651
+\mymax=\count1652
+\mymin=\count1653
+\mymax=\count1654
+\mymin=\count1655
+\mymax=\count1656
+\mymin=\count1657
+\mymax=\count1658
+\mymin=\count1659
+\mymax=\count1660
+\mymin=\count1661
+\mymax=\count1662
+\mymin=\count1663
+\mymax=\count1664
+\mymin=\count1665
+\mymax=\count1666
+\mymin=\count1667
+\mymax=\count1668
+\mymin=\count1669
+\mymax=\count1670
+\mymin=\count1671
+\mymax=\count1672
+\mymin=\count1673
+\mymax=\count1674
+\mymin=\count1675
+\mymax=\count1676
+\mymin=\count1677
+\mymax=\count1678
+\mymin=\count1679
+\mymax=\count1680
+\mymin=\count1681
+\mymax=\count1682
+\mymin=\count1683
+\mymax=\count1684
+\mymin=\count1685
+\mymax=\count1686
+\mymin=\count1687
+\mymax=\count1688
+\mymin=\count1689
+\mymax=\count1690
+\mymin=\count1691
+\mymax=\count1692
+\mymin=\count1693
+\mymax=\count1694
+ [27
+
+] [28
+
+]
+\mymin=\count1695
+\mymax=\count1696
+\mymin=\count1697
+\mymax=\count1698
+\mymin=\count1699
+\mymax=\count1700
+\mymin=\count1701
+\mymax=\count1702
+\mymin=\count1703
+\mymax=\count1704
+\mymin=\count1705
+\mymax=\count1706
+\mymin=\count1707
+\mymax=\count1708
+\mymin=\count1709
+\mymax=\count1710
+\mymin=\count1711
+\mymax=\count1712
+\mymin=\count1713
+\mymax=\count1714
+\mymin=\count1715
+\mymax=\count1716
+\mymin=\count1717
+\mymax=\count1718
+\mymin=\count1719
+\mymax=\count1720
+\mymin=\count1721
+\mymax=\count1722
+\mymin=\count1723
+\mymax=\count1724
+\mymin=\count1725
+\mymax=\count1726
+\mymin=\count1727
+\mymax=\count1728
+\mymin=\count1729
+\mymax=\count1730
+\mymin=\count1731
+\mymax=\count1732
+\mymin=\count1733
+\mymax=\count1734
+\mymin=\count1735
+\mymax=\count1736
+\mymin=\count1737
+\mymax=\count1738
+\mymin=\count1739
+\mymax=\count1740
+\mymin=\count1741
+\mymax=\count1742
+ [29
+
+] (./Mid-Term-2.bbl)
+\mymin=\count1743
+\mymax=\count1744
+\mymin=\count1745
+\mymax=\count1746
+\mymin=\count1747
+\mymax=\count1748
+\mymin=\count1749
+\mymax=\count1750
+\mymin=\count1751
+\mymax=\count1752
+\mymin=\count1753
+\mymax=\count1754
+\mymin=\count1755
+\mymax=\count1756
+\mymin=\count1757
+\mymax=\count1758
+\mymin=\count1759
+\mymax=\count1760
+\mymin=\count1761
+\mymax=\count1762
+\mymin=\count1763
+\mymax=\count1764
+\mymin=\count1765
+\mymax=\count1766
+\mymin=\count1767
+\mymax=\count1768
+\mymin=\count1769
+\mymax=\count1770
+\mymin=\count1771
+\mymax=\count1772
+\mymin=\count1773
+\mymax=\count1774
+\mymin=\count1775
+\mymax=\count1776
+\mymin=\count1777
+\mymax=\count1778
+\mymin=\count1779
+\mymax=\count1780
+\mymin=\count1781
+\mymax=\count1782
+\mymin=\count1783
+\mymax=\count1784
+\mymin=\count1785
+\mymax=\count1786
+\mymin=\count1787
+\mymax=\count1788
+\mymin=\count1789
+\mymax=\count1790
+ [30
 
 ]
 \tf@nav=\write5
@@ -2336,18 +2834,18 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
  (./Mid-Term-2.aux) ) 
 Here is how much of TeX's memory you used:
- 37883 strings out of 480247
- 797132 string characters out of 5896151
+ 37916 strings out of 480247
+ 797868 string characters out of 5896151
  1109368 words of memory out of 5000000
- 55020 multiletter control sequences out of 15000+600000
- 529868 words of font info for 154 fonts, out of 8000000 for 9000
+ 55046 multiletter control sequences out of 15000+600000
+ 535595 words of font info for 160 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,18n,122p,478b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Mid-Term-2.pdf (24 pages, 125973 bytes).
+Output written on Mid-Term-2.pdf (30 pages, 137909 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
 
