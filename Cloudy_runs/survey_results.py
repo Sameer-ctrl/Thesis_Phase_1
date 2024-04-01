@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from roman import toRoman
 from io import StringIO
+from astropy.io import ascii
 
 
 plt.style.use('../Python/my_style.mpl')
@@ -11,6 +12,11 @@ b_BLA_th=40
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
 qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
+
+data=ascii.read('ionisation_modelling_sol.txt')
+
+qso_all=data['qso']
+z_abs_all=data['z_abs']
 
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
@@ -51,13 +57,13 @@ class abs_system():
         file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
 
         with open(file) as f:
-            data=f.read()
-            data=data.replace('A','')
-            # print(data)
+            text=f.read()
+            text=text.replace('A','')
+            # print(text)
             # print('\n')
 
         with open('temp_param_file.txt','w') as f:
-            f.write(data)
+            f.write(text)
 
         param_file=loadtxt('temp_param_file.txt',dtype=str,comments=('>','#'))
 
@@ -130,7 +136,37 @@ class abs_system():
         self.ion_obj=ion_obj_dict
         self.ions=ions_all[ions_all!='HI']
         self.n_ions=len(self.ions)
-        # print(f'{qso} : {z_abs} : {self.ions} : {self.n_ions}')
+
+
+        mask=logical_and(qso_all==qso,z_abs_all==z_abs)
+        data_abs=data[mask]
+
+        NHi_abs=data_abs['NHi']
+
+        sol={}
+
+        for n in unique(NHi_abs):
+
+            NHi_mask=NHi_abs==n
+
+            nH_abs_masked=data_abs['nH'][NHi_mask]
+            err_nH_abs_masked=data_abs['err_nH'][NHi_mask]
+            Z_abs_masked=data_abs['Z'][NHi_mask]
+            err_Z_abs_masked=data_abs['err_Z'][NHi_mask]
+            case_abs_masked=data_abs['case'][NHi_mask]
+
+            for i,c in enumerate(case_abs_masked):
+                
+                if c=='exc':
+                    sol_exc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+
+                else:
+                    sol_inc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+
+            sol[n]=[sol_exc,sol_inc]
+    
+        self.ion_modelling_sol=sol
+
 
 absorbers=[
             abs_system('3c263',0.140756),
@@ -152,25 +188,104 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
-for a in absorbers:
+# for a in absorbers:
 
-    BLA=a.BLA_obj
-    Ovi=a.ion_obj['OVI']
+#     BLA=a.BLA_obj
+#     Ovi=a.ion_obj['OVI']
     
-    v_BLA=[x[0] for x in BLA.v]
-    v_err_BLA=[x[1] for x in BLA.v]
+#     v_BLA=[x[0] for x in BLA.v]
+#     v_err_BLA=[x[1] for x in BLA.v]
 
-    v_Ovi=[x[0] for x in Ovi.v]
-    v_err_Ovi=[x[1] for x in Ovi.v]
+#     v_Ovi=[x[0] for x in Ovi.v]
+#     v_err_Ovi=[x[1] for x in Ovi.v]
 
-    plt.title(f'{a.qso_label} (z_abs={a.z_abs})')
-    plt.errorbar(v_BLA,10*ones(len(v_BLA)),0,v_err_BLA,label='BLA',fmt='o',capsize=3)
-    plt.errorbar(v_Ovi,9*ones(len(v_Ovi)),0,v_err_Ovi,label='OVI',fmt='o',capsize=3)
-    plt.legend()
-    plt.ylim(0,11)
-    plt.show()
+#     plt.title(f'{a.qso_label} (z_abs={a.z_abs})')
+#     plt.errorbar(v_BLA,10*ones(len(v_BLA)),0,v_err_BLA,label='BLA',fmt='o',capsize=3)
+#     plt.errorbar(v_Ovi,9*ones(len(v_Ovi)),0,v_err_Ovi,label='OVI',fmt='o',capsize=3)
+#     plt.legend()
+#     plt.ylim(0,11)
+#     plt.show()
+
+ion_model_sol=[a.ion_modelling_sol for a in absorbers]
+
+NHi=zeros(int(len(data)/2))
+
+nH_exc=zeros(int(len(data)/2))
+err_nH_exc=zeros(int(len(data)/2))
+Z_exc=zeros(int(len(data)/2))
+err_Z_exc=zeros(int(len(data)/2))
+
+nH_inc=zeros(int(len(data)/2))
+err_nH_inc=zeros(int(len(data)/2))
+Z_inc=zeros(int(len(data)/2))
+err_Z_inc=zeros(int(len(data)/2))
+
+k=0
+
+for i,abs_sol in enumerate(ion_model_sol):
+
+    for n in abs_sol:
+        exc,inc=abs_sol[n]
+        
+        NHi[k]=n
+
+        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
+
+        k+=1
+
+plt.figure()
+
+plt.subplot(121)
+plt.scatter(nH_exc,Z_exc,c=NHi,cmap='jet')
+plt.xlabel(r'$\mathbf{log \ n_H}$')
+plt.ylabel(r'$\mathbf{log \ Z}$')
+plt.colorbar()
+
+plt.subplot(122)
+plt.scatter(nH_inc,Z_inc,c=NHi,cmap='jet')
+plt.xlabel(r'$\mathbf{log \ n_H}$')
+plt.ylabel(r'$\mathbf{log \ Z}$')
+plt.colorbar()
 
 
+plt.figure()
+
+plt.subplot(121)
+plt.scatter(nH_exc,NHi)
+plt.xlabel(r'$\mathbf{log \ n_H}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+plt.subplot(122)
+plt.scatter(nH_inc,NHi)
+plt.xlabel(r'$\mathbf{log \ n_H}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+
+plt.figure()
+
+plt.subplot(121)
+plt.scatter(Z_exc,NHi)
+plt.xlabel(r'$\mathbf{log \ Z}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+plt.subplot(122)
+plt.scatter(Z_inc,NHi)
+plt.xlabel(r'$\mathbf{log \ Z}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+
+# plt.figure()
+
+# plt.subplot(121)
+# plt.hist(nH_exc,bins=4)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+
+# plt.subplot(122)
+# plt.hist(nH_inc,bins=4)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+
+plt.show()
 
 
 

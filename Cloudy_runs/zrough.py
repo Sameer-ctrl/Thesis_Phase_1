@@ -11,16 +11,58 @@ import warnings
 warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
+data=ascii.read('ionisation_modelling_sol.txt')
 
-a=[True, True, True]
+qso=data['qso']
+z_abs=data['z_abs']
+# NHi=data['NHi']
+# nH=data['nH']
+# err_nH=data['err_nH']
+# Z=data['Z']
+# err_Z=data['err_Z']
+# case=data['case']
 
-print(all(a))
 
+def ion_sol(q,z):
 
+    mask=logical_and(qso==q,z_abs==z)
+    data_abs=data[mask]
 
+    NHi_abs=data_abs['NHi']
 
+    sol={}
 
+    for n in unique(NHi_abs):
 
+        NHi_mask=NHi_abs==n
+
+        nH_abs_masked=data_abs['nH'][NHi_mask]
+        err_nH_abs_masked=data_abs['err_nH'][NHi_mask]
+        Z_abs_masked=data_abs['Z'][NHi_mask]
+        err_Z_abs_masked=data_abs['err_Z'][NHi_mask]
+        case_abs_masked=data_abs['case'][NHi_mask]
+
+        for i,c in enumerate(case_abs_masked):
+            
+            if c=='exc':
+                sol_exc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+
+            else:
+                sol_inc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+
+        sol[n]=[sol_exc,sol_inc]
+    
+    return sol
+
+# q='pg1216'      
+# z=0.282286
+
+# ion_sol(q,z)
+
+a={15.1: [[-2.13, 0.15, 0.65, 0.22], [-3.86, 0.02, -0.37, 0.03]], 16.4: [[-2.08, 0.43, -0.37, 0.59], [-3.68, 0.02, -1.55, 0.04]]}
+
+for i in a:
+    print(i)
 
 
 quit()
