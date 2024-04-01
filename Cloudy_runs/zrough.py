@@ -11,58 +11,98 @@ import warnings
 warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
-data=ascii.read('ionisation_modelling_sol.txt')
 
-qso=data['qso']
-z_abs=data['z_abs']
-# NHi=data['NHi']
-# nH=data['nH']
-# err_nH=data['err_nH']
-# Z=data['Z']
-# err_Z=data['err_Z']
-# case=data['case']
+hdu=fits.open(f'scaling_approx/scaling_Z_col_density_param.fits')
+data=Table(hdu[1].data)
+
+# ions=['C+', 'C+2', 'C+3', 'N+2', 'N+4', 'O', 'O+2', 'O+5', 'Si+', 'Si+2', 'Si+3']
+
+def ion_label(ion,ion_font_size=25,radicle_font_size=17):
+
+    a=ion.split('+')
+
+    if len(a)>1:
+
+        if a[1]!='':
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+
+        else:
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
+
+    else:
+
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
 
 
-def ion_sol(q,z):
 
-    mask=logical_and(qso==q,z_abs==z)
-    data_abs=data[mask]
 
-    NHi_abs=data_abs['NHi']
+ions=['C+2', 'Si+2','N+2', 'N+4', 'O+5']
 
-    sol={}
+Z=data['log_Z']
 
-    for n in unique(NHi_abs):
+plt.figure(figsize=(16,10))
 
-        NHi_mask=NHi_abs==n
+for i in ions:
+    plt.plot(Z,log10(data[i]),label=ion_label(i,ion_font_size=23,radicle_font_size=16),ls='--')
+    plt.scatter(Z,log10(data[i]))
 
-        nH_abs_masked=data_abs['nH'][NHi_mask]
-        err_nH_abs_masked=data_abs['err_nH'][NHi_mask]
-        Z_abs_masked=data_abs['Z'][NHi_mask]
-        err_Z_abs_masked=data_abs['err_Z'][NHi_mask]
-        case_abs_masked=data_abs['case'][NHi_mask]
+plt.ylabel(f'$\mathbf{{log \ [N}}$'+r'$\mathbf{ \ {cm}^{-2}}]$',labelpad=15,fontsize=30)
+plt.xlabel(f'$\mathbf{{log \ [Z/Z_\odot]}}$',labelpad=15,fontsize=30)
+plt.xticks(fontsize=25)
+plt.yticks(fontsize=25)
+plt.legend()
+plt.savefig('scaling.png')
+plt.show()
 
-        for i,c in enumerate(case_abs_masked):
+
+
+
+
+
+
+
+
+quit()
+# data=ascii.read('ionisation_modelling_sol.txt')
+
+# qso=data['qso']
+# z_abs=data['z_abs']
+
+# def ion_sol(q,z):
+
+#     mask=logical_and(qso==q,z_abs==z)
+#     data_abs=data[mask]
+
+#     NHi_abs=data_abs['NHi']
+
+#     sol={}
+
+#     for n in unique(NHi_abs):
+
+#         NHi_mask=NHi_abs==n
+
+#         nH_abs_masked=data_abs['nH'][NHi_mask]
+#         err_nH_abs_masked=data_abs['err_nH'][NHi_mask]
+#         Z_abs_masked=data_abs['Z'][NHi_mask]
+#         err_Z_abs_masked=data_abs['err_Z'][NHi_mask]
+#         case_abs_masked=data_abs['case'][NHi_mask]
+
+#         for i,c in enumerate(case_abs_masked):
             
-            if c=='exc':
-                sol_exc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+#             if c=='exc':
+#                 sol_exc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
 
-            else:
-                sol_inc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
+#             else:
+#                 sol_inc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
 
-        sol[n]=[sol_exc,sol_inc]
+#         sol[n]=[sol_exc,sol_inc]
     
-    return sol
+#     return sol
 
-# q='pg1216'      
-# z=0.282286
+# # q='pg1216'      
+# # z=0.282286
 
-# ion_sol(q,z)
-
-a={15.1: [[-2.13, 0.15, 0.65, 0.22], [-3.86, 0.02, -0.37, 0.03]], 16.4: [[-2.08, 0.43, -0.37, 0.59], [-3.68, 0.02, -1.55, 0.04]]}
-
-for i in a:
-    print(i)
+# # ion_sol(q,z)
 
 
 quit()

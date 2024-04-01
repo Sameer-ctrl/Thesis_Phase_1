@@ -1,4 +1,4 @@
-\documentclass[aspectratio=169,draft]{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathabx}
@@ -555,7 +555,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \includegraphics[width=10cm]{Figures/NHi_bHi_distribution.png}
   \vspace*{-1mm}
   \caption{Distribution of \ion{H}{i} column densities and Doppler parameters.}
 \end{figure}
@@ -567,7 +567,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \includegraphics[width=9cm]{Figures/NHi_vs_bHi.png}
   \vspace*{-1mm}
   \caption{\ion{H}{i} column density vs. Doppler parameter}
 \end{figure}
@@ -579,7 +579,7 @@ SC19B161} % (optional, for multiple authors)
 
   \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=9cm]{Figures/placeholder.png}
+    \includegraphics[width=9cm]{Figures/bHi_vs_BOvi.png}
     \vspace*{-1mm}
     \caption{\emph{b}(\ion{O}{vi}) vs. \emph{b}(\ion{H}{i})}
   \end{figure}
@@ -634,11 +634,13 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}{\huge{{\textbf{}}}}
 
+\vspace*{-5mm}
+
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \includegraphics[width=10cm]{Figures/scaling.png}
   \vspace*{-1mm}
-  \caption{Column density of ion vs. Hydrogen densities at various metallcities }
+  \caption{Column densities of various ions at different metallcity. N(\ion{H}{i})=$10^{14} \ \text{cm}^{-2}$ and $n_H=10^{-3} \ \text{cm}^{-3}$}
 \end{figure}
 
 \end{frame}
@@ -649,44 +651,23 @@ SC19B161} % (optional, for multiple authors)
 \uncover<1->{
   \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/placeholder.png}
+  \includegraphics[width=9cm]{Figures/Z_vs_nH.png}
   \vspace*{-1mm}
-  \caption{Distribution of no. of metal ions in the absorber systems}
+  \caption{Ionisation modelling solutions for both excluding and including \ion{O}{vi} cases.}
 \end{figure}
 }
   
 \end{frame}
 
 
-\begin{frame}{\huge{{\textbf{Results}}}}
-
-\uncover<1->{
-  \begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=9cm]{Figures/placeholder.png}
-  \vspace*{-1mm}
-  \caption{Distribution of no. of metal ions in the absorber systems}
-\end{figure}
-}
-  
-\end{frame}
-
-
-\begin{frame}[plain]{}
+\begin{frame}[noframenumbering]{}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=12cm]{Figures/placeholder.png}
+  \includegraphics[width=9cm]{Figures/NHi_vs_nH.png}
   \vspace*{-1mm}
-  \caption{System plot of the absorber system towards LOS of }
+  \caption{$n_H$ vs. N(\ion{H}{i}) for both excluding and including \ion{O}{vi} cases.}
 \end{figure}  
-
-
-\begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
-  
-   \uncover<1->{\node at (0.05,0.92) {\LARGE{\textbf{I}}} ;}
-   
-\end{tikzpicture}
 
 \end{frame}
 
@@ -695,13 +676,64 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=10cm]{Figures/placeholder.png}
+  \includegraphics[width=9cm]{Figures/NHi_vs_Z.png}
   \vspace*{-1mm}
-  \caption{Observed and predicted column densities of the ions.}
+  \caption{$Z$ vs. N(\ion{H}{i}) for both excluding and including \ion{O}{vi} cases.}
 \end{figure}  
 
 
 \end{frame}
+
+
+\begin{frame}{}
+
+\section{Towards \textit{the end}}
+
+\vspace*{1cm}
+
+{\huge{\textbf{Towards \textit{the end}}}}
+
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Ongoing and Future Work}}}}
+
+  \uncover<1->{\begin{itemize}
+    \uncover<2->{\item Voigt profile fitting : 6} 
+    \uncover<3->{\item Ionisation modelling : 12}
+    \uncover<4->{\item Exploring the survey results} 
+    \uncover<5->{\item \textit{Finally}, calculating $\Omega_b$}
+  \end{itemize}
+  }
+    
+  \end{frame}
+
+
+
+%% ----------- References ---------- 
+
+\begin{frame}<presentation:0>[noframenumbering]
+
+  {\cite{Lehner-2007} \cite{Richter-2006} \cite{savage-2014} \cite{danforth-2016} \cite{acharya_khaire}}
+      
+  \end{frame}
+      
+  % \end{frame}
+  
+  
+  \begin{frame}
+  \renewcommand{\bibfont}{\footnotesize}
+  \frametitle{\huge{\textbf{References}}}
+  
+  \bibliographystyle{mnras}
+  \bibliography{References}
+  
+  \end{frame}
+  
+  
+  % \end{markdown}
+  
+  \end{document}
 
 
 
@@ -964,28 +996,28 @@ SC19B161} % (optional, for multiple authors)
 
 
 
-%% ----------- References ---------- 
+% %% ----------- References ---------- 
 
-\begin{frame}<presentation:0>[noframenumbering]
+% \begin{frame}<presentation:0>[noframenumbering]
 
-{\cite{Fukugita-1998} \cite{Shull} \cite{cen-ostriker-1999} \cite{tepper-2013} \cite{savage-2014} \cite{danforth-2016} \cite{acharya_khaire}}
+% {\cite{Fukugita-1998} \cite{Shull} \cite{cen-ostriker-1999} \cite{tepper-2013} \cite{savage-2014} \cite{danforth-2016} \cite{acharya_khaire}}
     
-\end{frame}
+% \end{frame}
     
+% % \end{frame}
+
+
+% \begin{frame}
+% \renewcommand{\bibfont}{\footnotesize}
+% \frametitle{\huge{\textbf{References}}}
+
+% \bibliographystyle{mnras}
+% \bibliography{References}
+
 % \end{frame}
 
 
-\begin{frame}
-\renewcommand{\bibfont}{\footnotesize}
-\frametitle{\huge{\textbf{References}}}
+% % \end{markdown}
 
-\bibliographystyle{mnras}
-\bibliography{References}
-
-\end{frame}
-
-
-% \end{markdown}
-
-\end{document}
+% \end{document}
 

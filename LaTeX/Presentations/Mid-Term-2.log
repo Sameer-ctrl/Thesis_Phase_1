@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  29 MAR 2024 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  1 APR 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,7 +305,6 @@ File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `draft' set `true' on input line 4073.
 Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
 Package hyperref Info: Option `implicit' set `false' on input line 4073.
@@ -1237,11 +1236,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-
-Package hyperref Warning: Draft mode on.
-
 Package hyperref Info: Link coloring OFF on input line 309.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -1253,6 +1249,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 309.
 LaTeX Info: Redefining \pageref on input line 309.
 LaTeX Info: Redefining \nameref on input line 309.
+ (./Mid-Term-2.out) (./Mid-Term-2.out)
+\@outlinefile=\write5
+\openout5 = `Mid-Term-2.out'.
+
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
@@ -1357,6 +1357,10 @@ Package caption Info: End \AtBeginDocument code.
 \mymax=\count444
 \mymin=\count445
 \mymax=\count446
+\mymin=\count447
+\mymax=\count448
+\mymin=\count449
+\mymax=\count450
 LaTeX Font Info:    Trying to load font information for U+zeur on input line 348.
  (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1376,13 +1380,14 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 Overfull \vbox (14.00206pt too high) detected at line 348
  []
 
+<IIST.png, id=70, 317.185pt x 317.185pt>
+File: IIST.png Graphic file (type png)
+<use IIST.png>
+Package pdftex.def Info: IIST.png  used on input line 348.
+(pdftex.def)             Requested size: 28.44861pt x 28.45274pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\mymin=\count447
-\mymax=\count448
-\mymin=\count449
-\mymax=\count450
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./IIST.png>]
 \mymin=\count451
 \mymax=\count452
 \mymin=\count453
@@ -1427,14 +1432,6 @@ Overfull \vbox (14.00206pt too high) detected at line 348
 \mymax=\count492
 \mymin=\count493
 \mymax=\count494
- [2
-
-]
-<Figures/Baryon_distribution.png, id=60, 505.28775pt x 426.99525pt>
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 434.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
 \mymin=\count495
 \mymax=\count496
 \mymin=\count497
@@ -1443,6 +1440,14 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count500
 \mymin=\count501
 \mymax=\count502
+ [2
+
+]
+<Figures/Baryon_distribution.png, id=137, 505.28775pt x 426.99525pt>
+File: Figures/Baryon_distribution.png Graphic file (type png)
+<use Figures/Baryon_distribution.png>
+Package pdftex.def Info: Figures/Baryon_distribution.png  used on input line 434.
+(pdftex.def)             Requested size: 142.26378pt x 120.21591pt.
 \mymin=\count503
 \mymax=\count504
 \mymin=\count505
@@ -1483,10 +1488,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count540
 \mymin=\count541
 \mymax=\count542
- [3
-
-]
-<Figures/BLA-individual.png, id=70, 821.0675pt x 404.51125pt>
 \mymin=\count543
 \mymax=\count544
 \mymin=\count545
@@ -1499,6 +1500,14 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count552
 \mymin=\count553
 \mymax=\count554
+ [3
+
+ <./Figures/Baryon_distribution.png>]
+<Figures/BLA-individual.png, id=172, 821.0675pt x 404.51125pt>
+File: Figures/BLA-individual.png Graphic file (type png)
+<use Figures/BLA-individual.png>
+Package pdftex.def Info: Figures/BLA-individual.png  used on input line 463.
+(pdftex.def)             Requested size: 170.71652pt x 84.10425pt.
 \mymin=\count555
 \mymax=\count556
 \mymin=\count557
@@ -1535,15 +1544,6 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \mymax=\count588
 \mymin=\count589
 \mymax=\count590
- [4
-
-]
-<Figures/PG0003+158-z=0.347579-sys-plot.png, id=75, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
- |  [] 
- []
-
 \mymin=\count591
 \mymax=\count592
 \mymin=\count593
@@ -1560,6 +1560,19 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count604
 \mymin=\count605
 \mymax=\count606
+ [4
+
+ <./Figures/BLA-individual.png (PNG copy)>]
+<Figures/PG0003+158-z=0.347579-sys-plot.png, id=202, 2384.91pt x 1634.2656pt>
+File: Figures/PG0003+158-z=0.347579-sys-plot.png Graphic file (type png)
+<use Figures/PG0003+158-z=0.347579-sys-plot.png>
+Package pdftex.def Info: Figures/PG0003+158-z=0.347579-sys-plot.png  used on input line 494.
+(pdftex.def)             Requested size: 227.62204pt x 155.95508pt.
+
+Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
+ |  [] 
+ []
+
 \mymin=\count607
 \mymax=\count608
 \mymin=\count609
@@ -1592,10 +1605,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count636
 \mymin=\count637
 \mymax=\count638
-[5
-
-]
-<Figures/metal-ions.png, id=80, 1162.8243pt x 624.4128pt>
 \mymin=\count639
 \mymax=\count640
 \mymin=\count641
@@ -1616,6 +1625,14 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count656
 \mymin=\count657
 \mymax=\count658
+[5
+
+ <./Figures/PG0003+158-z=0.347579-sys-plot.png>]
+<Figures/metal-ions.png, id=233, 1162.8243pt x 624.4128pt>
+File: Figures/metal-ions.png Graphic file (type png)
+<use Figures/metal-ions.png>
+Package pdftex.def Info: Figures/metal-ions.png  used on input line 523.
+(pdftex.def)             Requested size: 199.16928pt x 106.9491pt.
 \mymin=\count659
 \mymax=\count660
 \mymin=\count661
@@ -1644,9 +1661,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count684
 \mymin=\count685
 \mymax=\count686
- [6
-
-]
 \mymin=\count687
 \mymax=\count688
 \mymin=\count689
@@ -1671,6 +1685,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count708
 \mymin=\count709
 \mymax=\count710
+ [6
+
+ <./Figures/metal-ions.png>]
 \mymin=\count711
 \mymax=\count712
 \mymin=\count713
@@ -1695,9 +1712,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count732
 \mymin=\count733
 \mymax=\count734
- [7
-
-]
 \mymin=\count735
 \mymax=\count736
 \mymin=\count737
@@ -1726,6 +1740,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count760
 \mymin=\count761
 \mymax=\count762
+ [7
+
+]
 \mymin=\count763
 \mymax=\count764
 \mymin=\count765
@@ -1746,9 +1763,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count780
 \mymin=\count781
 \mymax=\count782
- [8
-
-]
 \mymin=\count783
 \mymax=\count784
 \mymin=\count785
@@ -1781,6 +1795,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count812
 \mymin=\count813
 \mymax=\count814
+ [8
+
+]
 \mymin=\count815
 \mymax=\count816
 \mymin=\count817
@@ -1797,9 +1814,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count828
 \mymin=\count829
 \mymax=\count830
- [9
-
-]
 \mymin=\count831
 \mymax=\count832
 \mymin=\count833
@@ -1836,6 +1850,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count864
 \mymin=\count865
 \mymax=\count866
+ [9
+
+]
 \mymin=\count867
 \mymax=\count868
 \mymin=\count869
@@ -1848,10 +1865,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count876
 \mymin=\count877
 \mymax=\count878
- [10
-
-]
-<Figures/placeholder.png, id=102, 1217.54875pt x 561.09625pt>
 \mymin=\count879
 \mymax=\count880
 \mymin=\count881
@@ -1892,6 +1905,18 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count916
 \mymin=\count917
 \mymax=\count918
+ [10
+
+]
+<Figures/NHi_bHi_distribution.png, id=382, 794.97pt x 492.8814pt>
+File: Figures/NHi_bHi_distribution.png Graphic file (type png)
+<use Figures/NHi_bHi_distribution.png>
+Package pdftex.def Info: Figures/NHi_bHi_distribution.png  used on input line 563.
+(pdftex.def)             Requested size: 284.52756pt x 176.40681pt.
+
+Overfull \vbox (10.90564pt too high) detected at line 563
+ []
+
 \mymin=\count919
 \mymax=\count920
 \mymin=\count921
@@ -1900,9 +1925,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count924
 \mymin=\count925
 \mymax=\count926
- [11
-
-]
 \mymin=\count927
 \mymax=\count928
 \mymin=\count929
@@ -1947,13 +1969,22 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count968
 \mymin=\count969
 \mymax=\count970
+[11
+
+ <./Figures/NHi_bHi_distribution.png>]
+<Figures/NHi_vs_bHi.png, id=413, 534.0753pt x 358.4592pt>
+File: Figures/NHi_vs_bHi.png Graphic file (type png)
+<use Figures/NHi_vs_bHi.png>
+Package pdftex.def Info: Figures/NHi_vs_bHi.png  used on input line 575.
+(pdftex.def)             Requested size: 256.0748pt x 171.87248pt.
+
+Overfull \vbox (6.3713pt too high) detected at line 575
+ []
+
 \mymin=\count971
 \mymax=\count972
 \mymin=\count973
 \mymax=\count974
- [12
-
-]
 \mymin=\count975
 \mymax=\count976
 \mymin=\count977
@@ -2002,9 +2033,18 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1020
 \mymin=\count1021
 \mymax=\count1022
- [13
+[12
 
-]
+ <./Figures/NHi_vs_bHi.png>]
+<Figures/bHi_vs_BOvi.png, id=444, 522.5121pt x 351.9549pt>
+File: Figures/bHi_vs_BOvi.png Graphic file (type png)
+<use Figures/bHi_vs_BOvi.png>
+Package pdftex.def Info: Figures/bHi_vs_BOvi.png  used on input line 587.
+(pdftex.def)             Requested size: 256.0748pt x 172.48625pt.
+
+Overfull \vbox (6.98508pt too high) detected at line 587
+ []
+
 \mymin=\count1023
 \mymax=\count1024
 \mymin=\count1025
@@ -2053,13 +2093,13 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1068
 \mymin=\count1069
 \mymax=\count1070
- [14
-
-]
 \mymin=\count1071
 \mymax=\count1072
 \mymin=\count1073
 \mymax=\count1074
+[13
+
+ <./Figures/bHi_vs_BOvi.png>]
 \mymin=\count1075
 \mymax=\count1076
 \mymin=\count1077
@@ -2104,9 +2144,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1116
 \mymin=\count1117
 \mymax=\count1118
- [15
-
-]
 \mymin=\count1119
 \mymax=\count1120
 \mymin=\count1121
@@ -2115,6 +2152,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1124
 \mymin=\count1125
 \mymax=\count1126
+ [14
+
+]
 \mymin=\count1127
 \mymax=\count1128
 \mymin=\count1129
@@ -2155,9 +2195,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1164
 \mymin=\count1165
 \mymax=\count1166
- [16
-
-]
 \mymin=\count1167
 \mymax=\count1168
 \mymin=\count1169
@@ -2170,6 +2207,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1176
 \mymin=\count1177
 \mymax=\count1178
+ [15
+
+]
 \mymin=\count1179
 \mymax=\count1180
 \mymin=\count1181
@@ -2206,9 +2246,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1212
 \mymin=\count1213
 \mymax=\count1214
- [17
-
-]
 \mymin=\count1215
 \mymax=\count1216
 \mymin=\count1217
@@ -2225,6 +2262,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1228
 \mymin=\count1229
 \mymax=\count1230
+ [16
+
+]
 \mymin=\count1231
 \mymax=\count1232
 \mymin=\count1233
@@ -2257,9 +2297,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1260
 \mymin=\count1261
 \mymax=\count1262
- [18
-
-]
 \mymin=\count1263
 \mymax=\count1264
 \mymin=\count1265
@@ -2280,6 +2317,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1280
 \mymin=\count1281
 \mymax=\count1282
+ [17
+
+]
 \mymin=\count1283
 \mymax=\count1284
 \mymin=\count1285
@@ -2308,9 +2348,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1308
 \mymin=\count1309
 \mymax=\count1310
- [19
-
-]
 \mymin=\count1311
 \mymax=\count1312
 \mymin=\count1313
@@ -2335,6 +2372,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1332
 \mymin=\count1333
 \mymax=\count1334
+ [18
+
+]
 \mymin=\count1335
 \mymax=\count1336
 \mymin=\count1337
@@ -2359,9 +2399,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1356
 \mymin=\count1357
 \mymax=\count1358
- [20
-
-]
 \mymin=\count1359
 \mymax=\count1360
 \mymin=\count1361
@@ -2390,6 +2427,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1384
 \mymin=\count1385
 \mymax=\count1386
+ [19
+
+]
 \mymin=\count1387
 \mymax=\count1388
 \mymin=\count1389
@@ -2410,9 +2450,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1404
 \mymin=\count1405
 \mymax=\count1406
- [21
-
-]
 \mymin=\count1407
 \mymax=\count1408
 \mymin=\count1409
@@ -2445,6 +2482,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1436
 \mymin=\count1437
 \mymax=\count1438
+ [20
+
+]
 \mymin=\count1439
 \mymax=\count1440
 \mymin=\count1441
@@ -2461,9 +2501,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1452
 \mymin=\count1453
 \mymax=\count1454
- [22
-
-]
 \mymin=\count1455
 \mymax=\count1456
 \mymin=\count1457
@@ -2500,6 +2537,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1488
 \mymin=\count1489
 \mymax=\count1490
+ [21
+
+]
 \mymin=\count1491
 \mymax=\count1492
 \mymin=\count1493
@@ -2512,9 +2552,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1500
 \mymin=\count1501
 \mymax=\count1502
- [23
-
-]
 \mymin=\count1503
 \mymax=\count1504
 \mymin=\count1505
@@ -2555,6 +2592,9 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1540
 \mymin=\count1541
 \mymax=\count1542
+ [22
+
+]
 \mymin=\count1543
 \mymax=\count1544
 \mymin=\count1545
@@ -2563,9 +2603,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1548
 \mymin=\count1549
 \mymax=\count1550
- [24
-
-]
 \mymin=\count1551
 \mymax=\count1552
 \mymin=\count1553
@@ -2610,13 +2647,13 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1592
 \mymin=\count1593
 \mymax=\count1594
+ [23
+
+]
 \mymin=\count1595
 \mymax=\count1596
 \mymin=\count1597
 \mymax=\count1598
- [25
-
-]
 \mymin=\count1599
 \mymax=\count1600
 \mymin=\count1601
@@ -2665,9 +2702,18 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1644
 \mymin=\count1645
 \mymax=\count1646
- [26
+ [24
 
 ]
+<Figures/scaling.png, id=803, 987.2082pt x 647.5392pt>
+File: Figures/scaling.png Graphic file (type png)
+<use Figures/scaling.png>
+Package pdftex.def Info: Figures/scaling.png  used on input line 646.
+(pdftex.def)             Requested size: 284.52756pt x 186.62552pt.
+
+Overfull \vbox (7.30997pt too high) detected at line 646
+ []
+
 \mymin=\count1647
 \mymax=\count1648
 \mymin=\count1649
@@ -2716,15 +2762,22 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1692
 \mymin=\count1693
 \mymax=\count1694
- [27
-
-] [28
-
-]
 \mymin=\count1695
 \mymax=\count1696
 \mymin=\count1697
 \mymax=\count1698
+[25
+
+ <./Figures/scaling.png>]
+<Figures/Z_vs_nH.png, id=838, 985.0401pt x 641.0349pt>
+File: Figures/Z_vs_nH.png Graphic file (type png)
+<use Figures/Z_vs_nH.png>
+Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 660.
+(pdftex.def)             Requested size: 256.0748pt x 166.64557pt.
+
+Overfull \vbox (1.1444pt too high) detected at line 660
+ []
+
 \mymin=\count1699
 \mymax=\count1700
 \mymin=\count1701
@@ -2769,9 +2822,6 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1740
 \mymin=\count1741
 \mymax=\count1742
- [29
-
-] (./Mid-Term-2.bbl)
 \mymin=\count1743
 \mymax=\count1744
 \mymin=\count1745
@@ -2780,6 +2830,14 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1748
 \mymin=\count1749
 \mymax=\count1750
+[26
+
+ <./Figures/Z_vs_nH.png>]
+<Figures/NHi_vs_nH.png, id=869, 972.0315pt x 641.0349pt>
+File: Figures/NHi_vs_nH.png Graphic file (type png)
+<use Figures/NHi_vs_nH.png>
+Package pdftex.def Info: Figures/NHi_vs_nH.png  used on input line 672.
+(pdftex.def)             Requested size: 256.0748pt x 168.87573pt.
 \mymin=\count1751
 \mymax=\count1752
 \mymin=\count1753
@@ -2820,32 +2878,497 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 \mymax=\count1788
 \mymin=\count1789
 \mymax=\count1790
+\mymin=\count1791
+\mymax=\count1792
+\mymin=\count1793
+\mymax=\count1794
+\mymin=\count1795
+\mymax=\count1796
+\mymin=\count1797
+\mymax=\count1798
+\mymin=\count1799
+\mymax=\count1800
+\mymin=\count1801
+\mymax=\count1802
+ [27
+
+ <./Figures/NHi_vs_nH.png>]
+<Figures/NHi_vs_Z.png, id=900, 961.9137pt x 641.0349pt>
+File: Figures/NHi_vs_Z.png Graphic file (type png)
+<use Figures/NHi_vs_Z.png>
+Package pdftex.def Info: Figures/NHi_vs_Z.png  used on input line 685.
+(pdftex.def)             Requested size: 256.0748pt x 170.64616pt.
+\mymin=\count1803
+\mymax=\count1804
+\mymin=\count1805
+\mymax=\count1806
+\mymin=\count1807
+\mymax=\count1808
+\mymin=\count1809
+\mymax=\count1810
+\mymin=\count1811
+\mymax=\count1812
+\mymin=\count1813
+\mymax=\count1814
+\mymin=\count1815
+\mymax=\count1816
+\mymin=\count1817
+\mymax=\count1818
+\mymin=\count1819
+\mymax=\count1820
+\mymin=\count1821
+\mymax=\count1822
+\mymin=\count1823
+\mymax=\count1824
+\mymin=\count1825
+\mymax=\count1826
+\mymin=\count1827
+\mymax=\count1828
+\mymin=\count1829
+\mymax=\count1830
+\mymin=\count1831
+\mymax=\count1832
+\mymin=\count1833
+\mymax=\count1834
+\mymin=\count1835
+\mymax=\count1836
+\mymin=\count1837
+\mymax=\count1838
+\mymin=\count1839
+\mymax=\count1840
+\mymin=\count1841
+\mymax=\count1842
+\mymin=\count1843
+\mymax=\count1844
+\mymin=\count1845
+\mymax=\count1846
+\mymin=\count1847
+\mymax=\count1848
+\mymin=\count1849
+\mymax=\count1850
+\mymin=\count1851
+\mymax=\count1852
+\mymin=\count1853
+\mymax=\count1854
+ [28
+
+ <./Figures/NHi_vs_Z.png>]
+\mymin=\count1855
+\mymax=\count1856
+\mymin=\count1857
+\mymax=\count1858
+\mymin=\count1859
+\mymax=\count1860
+\mymin=\count1861
+\mymax=\count1862
+\mymin=\count1863
+\mymax=\count1864
+\mymin=\count1865
+\mymax=\count1866
+\mymin=\count1867
+\mymax=\count1868
+\mymin=\count1869
+\mymax=\count1870
+\mymin=\count1871
+\mymax=\count1872
+\mymin=\count1873
+\mymax=\count1874
+\mymin=\count1875
+\mymax=\count1876
+\mymin=\count1877
+\mymax=\count1878
+\mymin=\count1879
+\mymax=\count1880
+\mymin=\count1881
+\mymax=\count1882
+\mymin=\count1883
+\mymax=\count1884
+\mymin=\count1885
+\mymax=\count1886
+\mymin=\count1887
+\mymax=\count1888
+\mymin=\count1889
+\mymax=\count1890
+\mymin=\count1891
+\mymax=\count1892
+\mymin=\count1893
+\mymax=\count1894
+\mymin=\count1895
+\mymax=\count1896
+\mymin=\count1897
+\mymax=\count1898
+\mymin=\count1899
+\mymax=\count1900
+\mymin=\count1901
+\mymax=\count1902
+\mymin=\count1903
+\mymax=\count1904
+\mymin=\count1905
+\mymax=\count1906
+ [29
+
+]
+\mymin=\count1907
+\mymax=\count1908
+\mymin=\count1909
+\mymax=\count1910
+\mymin=\count1911
+\mymax=\count1912
+\mymin=\count1913
+\mymax=\count1914
+\mymin=\count1915
+\mymax=\count1916
+\mymin=\count1917
+\mymax=\count1918
+\mymin=\count1919
+\mymax=\count1920
+\mymin=\count1921
+\mymax=\count1922
+\mymin=\count1923
+\mymax=\count1924
+\mymin=\count1925
+\mymax=\count1926
+\mymin=\count1927
+\mymax=\count1928
+\mymin=\count1929
+\mymax=\count1930
+\mymin=\count1931
+\mymax=\count1932
+\mymin=\count1933
+\mymax=\count1934
+\mymin=\count1935
+\mymax=\count1936
+\mymin=\count1937
+\mymax=\count1938
+\mymin=\count1939
+\mymax=\count1940
+\mymin=\count1941
+\mymax=\count1942
+\mymin=\count1943
+\mymax=\count1944
+\mymin=\count1945
+\mymax=\count1946
+\mymin=\count1947
+\mymax=\count1948
+\mymin=\count1949
+\mymax=\count1950
+\mymin=\count1951
+\mymax=\count1952
+\mymin=\count1953
+\mymax=\count1954
+\mymin=\count1955
+\mymax=\count1956
+\mymin=\count1957
+\mymax=\count1958
  [30
 
 ]
-\tf@nav=\write5
-\openout5 = `Mid-Term-2.nav'.
+\mymin=\count1959
+\mymax=\count1960
+\mymin=\count1961
+\mymax=\count1962
+\mymin=\count1963
+\mymax=\count1964
+\mymin=\count1965
+\mymax=\count1966
+\mymin=\count1967
+\mymax=\count1968
+\mymin=\count1969
+\mymax=\count1970
+\mymin=\count1971
+\mymax=\count1972
+\mymin=\count1973
+\mymax=\count1974
+\mymin=\count1975
+\mymax=\count1976
+\mymin=\count1977
+\mymax=\count1978
+\mymin=\count1979
+\mymax=\count1980
+\mymin=\count1981
+\mymax=\count1982
+\mymin=\count1983
+\mymax=\count1984
+\mymin=\count1985
+\mymax=\count1986
+\mymin=\count1987
+\mymax=\count1988
+\mymin=\count1989
+\mymax=\count1990
+\mymin=\count1991
+\mymax=\count1992
+\mymin=\count1993
+\mymax=\count1994
+\mymin=\count1995
+\mymax=\count1996
+\mymin=\count1997
+\mymax=\count1998
+\mymin=\count1999
+\mymax=\count2000
+\mymin=\count2001
+\mymax=\count2002
+\mymin=\count2003
+\mymax=\count2004
+\mymin=\count2005
+\mymax=\count2006
+\mymin=\count2007
+\mymax=\count2008
+\mymin=\count2009
+\mymax=\count2010
+ [31
 
-\tf@toc=\write6
-\openout6 = `Mid-Term-2.toc'.
+]
+\mymin=\count2011
+\mymax=\count2012
+\mymin=\count2013
+\mymax=\count2014
+\mymin=\count2015
+\mymax=\count2016
+\mymin=\count2017
+\mymax=\count2018
+\mymin=\count2019
+\mymax=\count2020
+\mymin=\count2021
+\mymax=\count2022
+\mymin=\count2023
+\mymax=\count2024
+\mymin=\count2025
+\mymax=\count2026
+\mymin=\count2027
+\mymax=\count2028
+\mymin=\count2029
+\mymax=\count2030
+\mymin=\count2031
+\mymax=\count2032
+\mymin=\count2033
+\mymax=\count2034
+\mymin=\count2035
+\mymax=\count2036
+\mymin=\count2037
+\mymax=\count2038
+\mymin=\count2039
+\mymax=\count2040
+\mymin=\count2041
+\mymax=\count2042
+\mymin=\count2043
+\mymax=\count2044
+\mymin=\count2045
+\mymax=\count2046
+\mymin=\count2047
+\mymax=\count2048
+\mymin=\count2049
+\mymax=\count2050
+\mymin=\count2051
+\mymax=\count2052
+\mymin=\count2053
+\mymax=\count2054
+\mymin=\count2055
+\mymax=\count2056
+\mymin=\count2057
+\mymax=\count2058
+\mymin=\count2059
+\mymax=\count2060
+\mymin=\count2061
+\mymax=\count2062
+ [32
 
-\tf@snm=\write7
-\openout7 = `Mid-Term-2.snm'.
+]
+\mymin=\count2063
+\mymax=\count2064
+\mymin=\count2065
+\mymax=\count2066
+\mymin=\count2067
+\mymax=\count2068
+\mymin=\count2069
+\mymax=\count2070
+\mymin=\count2071
+\mymax=\count2072
+\mymin=\count2073
+\mymax=\count2074
+\mymin=\count2075
+\mymax=\count2076
+\mymin=\count2077
+\mymax=\count2078
+\mymin=\count2079
+\mymax=\count2080
+\mymin=\count2081
+\mymax=\count2082
+\mymin=\count2083
+\mymax=\count2084
+\mymin=\count2085
+\mymax=\count2086
+\mymin=\count2087
+\mymax=\count2088
+\mymin=\count2089
+\mymax=\count2090
+\mymin=\count2091
+\mymax=\count2092
+\mymin=\count2093
+\mymax=\count2094
+\mymin=\count2095
+\mymax=\count2096
+\mymin=\count2097
+\mymax=\count2098
+\mymin=\count2099
+\mymax=\count2100
+\mymin=\count2101
+\mymax=\count2102
+\mymin=\count2103
+\mymax=\count2104
+\mymin=\count2105
+\mymax=\count2106
+\mymin=\count2107
+\mymax=\count2108
+\mymin=\count2109
+\mymax=\count2110
+\mymin=\count2111
+\mymax=\count2112
+\mymin=\count2113
+\mymax=\count2114
+ [33
 
- (./Mid-Term-2.aux) ) 
+]
+\mymin=\count2115
+\mymax=\count2116
+\mymin=\count2117
+\mymax=\count2118
+\mymin=\count2119
+\mymax=\count2120
+\mymin=\count2121
+\mymax=\count2122
+\mymin=\count2123
+\mymax=\count2124
+\mymin=\count2125
+\mymax=\count2126
+\mymin=\count2127
+\mymax=\count2128
+\mymin=\count2129
+\mymax=\count2130
+\mymin=\count2131
+\mymax=\count2132
+\mymin=\count2133
+\mymax=\count2134
+\mymin=\count2135
+\mymax=\count2136
+\mymin=\count2137
+\mymax=\count2138
+\mymin=\count2139
+\mymax=\count2140
+\mymin=\count2141
+\mymax=\count2142
+\mymin=\count2143
+\mymax=\count2144
+\mymin=\count2145
+\mymax=\count2146
+\mymin=\count2147
+\mymax=\count2148
+\mymin=\count2149
+\mymax=\count2150
+\mymin=\count2151
+\mymax=\count2152
+\mymin=\count2153
+\mymax=\count2154
+\mymin=\count2155
+\mymax=\count2156
+\mymin=\count2157
+\mymax=\count2158
+\mymin=\count2159
+\mymax=\count2160
+\mymin=\count2161
+\mymax=\count2162
+\mymin=\count2163
+\mymax=\count2164
+\mymin=\count2165
+\mymax=\count2166
+ [34
+
+] (./Mid-Term-2.bbl
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1.
+
+)
+\mymin=\count2167
+\mymax=\count2168
+\mymin=\count2169
+\mymax=\count2170
+\mymin=\count2171
+\mymax=\count2172
+\mymin=\count2173
+\mymax=\count2174
+\mymin=\count2175
+\mymax=\count2176
+\mymin=\count2177
+\mymax=\count2178
+\mymin=\count2179
+\mymax=\count2180
+\mymin=\count2181
+\mymax=\count2182
+\mymin=\count2183
+\mymax=\count2184
+\mymin=\count2185
+\mymax=\count2186
+\mymin=\count2187
+\mymax=\count2188
+\mymin=\count2189
+\mymax=\count2190
+\mymin=\count2191
+\mymax=\count2192
+\mymin=\count2193
+\mymax=\count2194
+\mymin=\count2195
+\mymax=\count2196
+\mymin=\count2197
+\mymax=\count2198
+\mymin=\count2199
+\mymax=\count2200
+\mymin=\count2201
+\mymax=\count2202
+\mymin=\count2203
+\mymax=\count2204
+\mymin=\count2205
+\mymax=\count2206
+\mymin=\count2207
+\mymax=\count2208
+\mymin=\count2209
+\mymax=\count2210
+\mymin=\count2211
+\mymax=\count2212
+\mymin=\count2213
+\mymax=\count2214
+\mymin=\count2215
+\mymax=\count2216
+\mymin=\count2217
+\mymax=\count2218
+ [35
+
+]
+\tf@nav=\write6
+\openout6 = `Mid-Term-2.nav'.
+
+\tf@toc=\write7
+\openout7 = `Mid-Term-2.toc'.
+
+\tf@snm=\write8
+\openout8 = `Mid-Term-2.snm'.
+
+ (./Mid-Term-2.aux)
+Package rerunfilecheck Info: File `Mid-Term-2.out' has not changed.
+(rerunfilecheck)             Checksum: 50B8C727988F7D0E8EF7DC768178283D;647.
+ ) 
 Here is how much of TeX's memory you used:
- 37916 strings out of 480247
- 797868 string characters out of 5896151
- 1109368 words of memory out of 5000000
- 55046 multiletter control sequences out of 15000+600000
- 535595 words of font info for 160 fonts, out of 8000000 for 9000
+ 38060 strings out of 480247
+ 799597 string characters out of 5896151
+ 1114299 words of memory out of 5000000
+ 55093 multiletter control sequences out of 15000+600000
+ 540496 words of font info for 168 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,18n,122p,478b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Mid-Term-2.pdf (30 pages, 137909 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Mid-Term-2.pdf (35 pages, 2774161 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1230 PDF objects out of 1440 (max. 8388607)
+ 1097 compressed objects within 11 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

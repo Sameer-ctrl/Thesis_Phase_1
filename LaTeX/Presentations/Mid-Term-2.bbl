@@ -22,21 +22,22 @@
 Acharya A.,  Khaire V.,  2021, \mn@doi [\mnras] {10.1093/mnras/stab3316}, 509,
   5559
 
-\bibitem[\protect\citeauthoryear{{Cen} \& {Ostriker}}{{Cen} \&
-  {Ostriker}}{1999}]{cen-ostriker-1999}
-{Cen} R.,  {Ostriker} J.~P.,  1999, \mn@doi [\apj] {10.1086/306949}, \href
-  {https://ui.adsabs.harvard.edu/abs/1999ApJ...514....1C} {514, 1}
-
 \bibitem[\protect\citeauthoryear{Danforth et~al.,}{Danforth
   et~al.}{2016}]{danforth-2016}
 Danforth C.~W.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/817/2/111},
   817, 111
 
-\bibitem[\protect\citeauthoryear{{Fukugita}, {Hogan}  \& {Peebles}}{{Fukugita}
-  et~al.}{1998}]{Fukugita-1998}
-{Fukugita} M.,  {Hogan} C.~J.,   {Peebles} P.~J.~E.,  1998, \mn@doi [\apj]
-  {10.1086/306025}, \href
-  {https://ui.adsabs.harvard.edu/abs/1998ApJ...503..518F} {503, 518}
+\bibitem[\protect\citeauthoryear{{Lehner}, {Savage}, {Richter}, {Sembach},
+  {Tripp}  \& {Wakker}}{{Lehner} et~al.}{2007}]{Lehner-2007}
+{Lehner} N.,  {Savage} B.~D.,  {Richter} P.,  {Sembach} K.~R.,  {Tripp} T.~M.,
+   {Wakker} B.~P.,  2007, \mn@doi [\apj] {10.1086/511749}, \href
+  {https://ui.adsabs.harvard.edu/abs/2007ApJ...658..680L} {658, 680}
+
+\bibitem[\protect\citeauthoryear{{Richter}, {Savage}, {Sembach}  \&
+  {Tripp}}{{Richter} et~al.}{2006}]{Richter-2006}
+{Richter} P.,  {Savage} B.~D.,  {Sembach} K.~R.,   {Tripp} T.~M.,  2006,
+  \mn@doi [\aap] {10.1051/0004-6361:20053636}, \href
+  {https://ui.adsabs.harvard.edu/abs/2006A&A...445..827R} {445, 827}
 
 \bibitem[\protect\citeauthoryear{{Savage}, {Kim}, {Wakker}, {Keeney}, {Shull},
   {Stocke}  \& {Green}}{{Savage} et~al.}{2014}]{savage-2014}
@@ -44,18 +45,6 @@ Danforth C.~W.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/817/2/111},
   {Stocke} J.~T.,   {Green} J.~C.,  2014, \mn@doi [\apjs]
   {10.1088/0067-0049/212/1/8}, \href
   {https://ui.adsabs.harvard.edu/abs/2014ApJS..212....8S} {212, 8}
-
-\bibitem[\protect\citeauthoryear{{Shull}, {Smith}  \& {Danforth}}{{Shull}
-  et~al.}{2012}]{Shull}
-{Shull} J.~M.,  {Smith} B.~D.,   {Danforth} C.~W.,  2012, \mn@doi [\apj]
-  {10.1088/0004-637X/759/1/23}, \href
-  {https://ui.adsabs.harvard.edu/abs/2012ApJ...759...23S} {759, 23}
-
-\bibitem[\protect\citeauthoryear{{Tepper-Garc{\'\i}a}, {Richter}  \&
-  {Schaye}}{{Tepper-Garc{\'\i}a} et~al.}{2013}]{tepper-2013}
-{Tepper-Garc{\'\i}a} T.,  {Richter} P.,   {Schaye} J.,  2013, \mn@doi [\mnras]
-  {10.1093/mnras/stt1712}, \href
-  {https://ui.adsabs.harvard.edu/abs/2013MNRAS.436.2063T} {436, 2063}
 
 \makeatother
 \end{thebibliography}

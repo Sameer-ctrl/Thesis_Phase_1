@@ -43,15 +43,20 @@
 \headcommand {\beamer@framepages {27}{27}}
 \headcommand {\slideentry {3}{0}{6}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {3}{0}{7}{29/29}{}{0}}
+\headcommand {\beamer@sectionpages {2}{28}}
+\headcommand {\beamer@subsectionpages {2}{28}}
+\headcommand {\sectionentry {4}{Towards \textit {the end}}{29}{Towards \textit {the end}}{0}}
+\headcommand {\slideentry {4}{0}{0}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\beamer@sectionpages {2}{29}}
-\headcommand {\beamer@subsectionpages {2}{29}}
-\headcommand {\sectionentry {4}{\translate {References}}{30}{\translate {References}}{0}}
-\headcommand {\slideentry {4}{0}{0}{30/30}{}{0}}
-\headcommand {\beamer@framepages {30}{30}}
-\headcommand {\beamer@partpages {1}{30}}
-\headcommand {\beamer@subsectionpages {2}{30}}
-\headcommand {\beamer@sectionpages {2}{30}}
-\headcommand {\beamer@documentpages {30}}
+\headcommand {\slideentry {4}{0}{1}{30/34}{}{0}}
+\headcommand {\beamer@framepages {30}{34}}
+\headcommand {\beamer@sectionpages {2}{34}}
+\headcommand {\beamer@subsectionpages {2}{34}}
+\headcommand {\sectionentry {5}{\translate {References}}{35}{\translate {References}}{0}}
+\headcommand {\slideentry {5}{0}{0}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\beamer@partpages {1}{35}}
+\headcommand {\beamer@subsectionpages {2}{35}}
+\headcommand {\beamer@sectionpages {2}{35}}
+\headcommand {\beamer@documentpages {35}}
 \headcommand {\gdef \inserttotalframenumber {14}}

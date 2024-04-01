@@ -234,46 +234,64 @@ for i,abs_sol in enumerate(ion_model_sol):
 
         k+=1
 
-plt.figure()
+# plt.figure(figsize=(16,10))
+
+# plt.subplot(121)
+# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.scatter(nH_exc,Z_exc)
+# plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+# plt.ylabel(r'$\mathbf{log \ Z}$')
+# # plt.colorbar()
+
+# plt.subplot(122)
+# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.scatter(nH_inc,Z_inc)
+# plt.errorbar(nH_inc,Z_inc,xerr=err_nH_inc,yerr=err_Z_inc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+# plt.ylabel(r'$\mathbf{log \ Z}$')
+# # plt.colorbar()
+
+# plt.subplots_adjust(wspace=0.34)
+# plt.savefig('Z_vs_nH.png')
+
+
+# plt.figure(figsize=(16,10))
+
+# plt.subplot(121)
+# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.scatter(nH_exc,NHi)
+# plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+# plt.subplot(122)
+# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.scatter(nH_inc,NHi)
+# plt.errorbar(nH_inc,NHi,xerr=err_nH_inc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ n_H}$')
+# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+# plt.subplots_adjust(wspace=0.34)
+# plt.savefig('NHi_vs_nH.png')
+
+
+plt.figure(figsize=(16,10))
 
 plt.subplot(121)
-plt.scatter(nH_exc,Z_exc,c=NHi,cmap='jet')
-plt.xlabel(r'$\mathbf{log \ n_H}$')
-plt.ylabel(r'$\mathbf{log \ Z}$')
-plt.colorbar()
-
-plt.subplot(122)
-plt.scatter(nH_inc,Z_inc,c=NHi,cmap='jet')
-plt.xlabel(r'$\mathbf{log \ n_H}$')
-plt.ylabel(r'$\mathbf{log \ Z}$')
-plt.colorbar()
-
-
-plt.figure()
-
-plt.subplot(121)
-plt.scatter(nH_exc,NHi)
-plt.xlabel(r'$\mathbf{log \ n_H}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-plt.subplot(122)
-plt.scatter(nH_inc,NHi)
-plt.xlabel(r'$\mathbf{log \ n_H}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-
-plt.figure()
-
-plt.subplot(121)
-plt.scatter(Z_exc,NHi)
+plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
 plt.xlabel(r'$\mathbf{log \ Z}$')
 plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
 plt.subplot(122)
-plt.scatter(Z_inc,NHi)
+plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
 plt.xlabel(r'$\mathbf{log \ Z}$')
 plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
+plt.subplots_adjust(wspace=0.34)
+plt.savefig('NHi_vs_Z.png')
 
 # plt.figure()
 
@@ -356,6 +374,7 @@ class BLA():
         self.b_H_err=b_H_err
         self.n_OVI=n_OVI
         self.b_OVI=b_OVI
+        self.b_OVI_err=b_OVI_err
         self.n_ions=n_ions
         self.is_BLA=bla
 
@@ -384,14 +403,16 @@ b_H_err=zeros(len(absorbers))
 n_H=zeros(len(absorbers))
 n_H_err=zeros(len(absorbers))
 b_OVI=zeros(len(absorbers))
+b_OVI_err=zeros(len(absorbers))
 n_OVI=zeros(len(absorbers))
 n_ions=zeros(len(absorbers))
 is_BLA=zeros(len(absorbers))
-print(a.ions)
+
 for i,a in enumerate(absorbers):
     b_H[i]=a.b_H
     b_H_err[i]=a.b_H_err
     b_OVI[i]=a.b_OVI
+    b_OVI_err[i]=a.b_OVI_err
     n_H[i]=a.nH
     n_H_err[i]=a.nH_err
     n_OVI[i]=a.n_OVI
@@ -414,48 +435,59 @@ fit=curve_fit(f,b_H_fit,n_H_fit)
 print(fit[0])
 
 
-plt.figure()
+# plt.figure(figsize=(8,5))
 
-plt.scatter(b_H,b_OVI)
-plt.plot(array([0,150]),array([0,150]),ls='--')
-plt.vlines(40,-10,170,ls='--',color='red')
-plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
-plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
-plt.ylim(bottom=-5,top=160)
-plt.savefig('bHi_vs_BOvi.png')
+# plt.scatter(b_H,b_OVI,c='red')
+# plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
+# plt.plot(array([0,150]),array([0,150]),ls='--')
+# plt.plot(array([0,165]),array([0,165/4]),ls='--')
+# plt.vlines(40,-10,170,ls='--',color='green')
+# plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+# plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+# plt.ylim(bottom=0,top=160)
+# plt.xlim(0,170)
+# plt.savefig('bHi_vs_BOvi_1.png')
 # plt.show()
-quit()
+# quit()
 
 
-plt.figure()
+# plt.figure(figsize=(13,7))
 
-plt.subplot(121)
-plt.title(r'$\mathbf{Column \ density}$',fontsize=25)
-plt.hist(n_H,bins=7)
-plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
+# plt.subplot(121)
+# plt.title(r'$\mathbf{Column \ density}$',fontsize=25)
+# plt.hist(n_H,bins=7)
+# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
 
-plt.subplot(122)
-plt.title(r'$\mathbf{Doppler \ parameter}$',fontsize=25)
-plt.hist(b_H,bins='auto')
-plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
+# plt.subplot(122)
+# plt.title(r'$\mathbf{Doppler \ parameter}$',fontsize=25)
+# plt.hist(b_H,bins='auto')
+# plt.xlabel(f'$\mathbf{{b \ (}}$'+ion_label('H')+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=15)
+# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
 
 
-plt.figure()
+# plt.subplots_adjust(wspace=0.34)
 
-plt.vlines(40,13,16,ls='--',color='black',lw=3)
-plt.scatter(b_H,n_H,label='H',s=70)
+# plt.savefig('NHi_vs_bHi.png')
+
+
+plt.figure(figsize=(8,5))
+
+plt.hlines(40,13,16,ls='--',color='black',lw=3)
+# plt.scatter(n_H,b_H,label='H',s=70)
+plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red')
 # plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--')
 
-plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-plt.ylim(13.35,15.9)
+# plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
+# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+plt.xlim(13.35,15.9)
 
 # plt.scatter(n_H,b_H,label='H',c=is_BLA)
 # plt.plot(f(array([42,100]),fit[0][0],fit[0][1]),[42,100],ls='--')
 # plt.ylabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+plt.ylabel(f'$\mathbf{{b \ (}}$'+ion_label('H')+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=15)
+plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+plt.savefig('NHi_vs_bHi.png')
 plt.show()
 
 
