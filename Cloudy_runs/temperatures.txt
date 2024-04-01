@@ -1,0 +1,175 @@
+qso=3c263
+z_abs=0.140756
+
+Δv = 11 (out)
+bHi, err_bHi, bOvi, err_bOvi = [62,3,30,2]
+logT = 5.28 ± 0.05
+b_NT = 27 ± 2
+
+------------------------------------------------
+
+qso=pks0637
+z_abs=0.161064
+
+Δv = 8 (out)
+bHi, err_bHi, bOvi, err_bOvi = [162,21,48,5]
+logT = 6.19 ± 0.16
+b_NT = 27 ± 13
+
+------------------------------------------------
+
+qso=pks0637
+z_abs=0.417539
+
+Δv = 18 (out)
+bHi, err_bHi, bOvi, err_bOvi = [46,4,42,6]
+logT = 4.36 ± 0.11
+b_NT = 42 ± 6
+
+------------------------------------------------
+
+qso=pg1424
+z_abs=0.147104
+
+Δv = in
+bHi, err_bHi, bOvi, err_bOvi = [29,2,16,6]
+logT = 4.58 ± 0.13
+b_NT = 15 ± 7
+
+------------------------------------------------
+
+qso=pg0003
+z_abs=0.347579
+
+Δv = in
+bHi, err_bHi, bOvi, err_bOvi = [62,3,30,2]
+logT = 5.28 ± 0.05
+b_NT = 27 ± 2
+
+------------------------------------------------
+
+qso=pg0003
+z_abs=0.386089
+
+Δv = 2 (out)
+bHi, err_bHi, bOvi, err_bOvi = [40,4,25,4]
+logT = 4.80 ± 0.11
+b_NT = 24 ± 5
+
+Δv = 7 (out)
+bHi, err_bHi, bOvi, err_bOvi = [29,0,25,3]
+logT = 4.15 ± 0.07
+b_NT = 25 ± 3
+
+------------------------------------------------
+
+qso=pg0003
+z_abs=0.421923
+
+Δv = 14 (out)
+bHi, err_bHi, bOvi, err_bOvi = [64,3,27,1]
+logT = 5.34 ± 0.05
+b_NT = 22 ± 1
+
+NOTE: Has one nearby HI also with b=26, which aligns more with OVI than the current component taken to calculate T.
+
+------------------------------------------------
+
+qso=pg1216
+z_abs=0.282286
+
+Δv = 9 (out)
+bHi, err_bHi, bOvi, err_bOvi = [22,1,12,5]
+logT = 4.34 ± 0.13
+b_NT = 11 ± 6
+
+------------------------------------------------
+
+qso=s135712
+z_abs=0.097869
+
+No aligned HI-OVI pair
+
+------------------------------------------------
+
+qso=1es1553
+z_abs=0.187764
+
+Δv = 10 (out)
+bHi, err_bHi, bOvi, err_bOvi = [37,3,28,5]
+logT = 4.58 ± 0.11
+b_NT = 27 ± 5
+
+
+------------------------------------------------
+
+qso=sbs1108
+z_abs=0.463207
+
+b_Ovi > b_Hi
+
+------------------------------------------------
+
+qso=pg1222
+z_abs=0.378389
+
+Δv = in
+bHi, err_bHi, bOvi, err_bOvi = [52,4,34,13]
+logT = 5.00 ± 0.17
+b_NT = 32 ± 15
+
+Δv = 12 (out)
+bHi, err_bHi, bOvi, err_bOvi = [43,1,29,13]
+logT = 4.81 ± 0.19
+b_NT = 28 ± 14
+
+------------------------------------------------
+
+qso=pg1116
+z_abs=0.138527
+
+Δv = in
+bHi, err_bHi, bOvi, err_bOvi = [71,14,35,3]
+logT = 5.39 ± 0.21
+b_NT = 31 ± 4
+
+NOTE : Has one close Hi comp also, but its b is less than that of OVI
+
+------------------------------------------------
+
+qso=h1821
+z_abs=0.170006
+
+OVI aligned with BLA has not reliable doppler parameter value.
+Have one more pair but b vlue of OVI is greater than that of HI
+
+------------------------------------------------
+
+qso=h1821
+z_abs=0.224981
+
+Δv = 8 (out)
+bHi, err_bHi, bOvi, err_bOvi = [84,13,45,1]
+logT = 5.51 ± 0.16
+b_NT = 41 ± 2
+
+------------------------------------------------
+
+qso=pg1121
+z_abs=0.192393
+
+Δv = in
+bHi, err_bHi, bOvi, err_bOvi = [60,6,11,16]
+logT = 5.35 ± 0.14
+b_NT = nan ± nan
+
+NOTE : b_Hi > 4b_Ovi, so b_NT is not real
+
+------------------------------------------------
+
+qso=pks0405
+z_abs=0.167125
+
+non-alignmnet or b_Ovi > b_Hi 
+
+------------------------------------------------

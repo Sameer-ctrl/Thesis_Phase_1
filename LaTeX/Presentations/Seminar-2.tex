@@ -1,0 +1,1165 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx}
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{natbib}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{pgfpages}
+\usepackage{pifont}
+
+
+\makeatletter
+\def\sectionentry#1#2#3#4#5{% section number, section title, page
+%
+\newcount\mymin%
+\mymin=2
+\ifnum\c@section=1%
+    \mymin=3
+\fi%
+\ifnum\c@section=2%
+    \mymin=2
+\fi%
+%
+\newcount\mymax%
+\mymax=2
+\ifnum\c@section=\beamer@sectionmax%
+    \mymax=3
+\fi%
+\ifnum\c@section=\numexpr\beamer@sectionmax-1%
+    \mymax=2
+\fi%
+%
+    \ifnum\numexpr\c@section-#1<\mymax%
+        \ifnum\numexpr#1-\c@section<\mymin%
+            \ifnum#5=\c@part%
+                \beamer@section@set@min@width
+                \box\beamer@sectionbox\hskip1.875ex plus 1fill%
+                \beamer@xpos=0\relax%
+                \beamer@ypos=1\relax%
+                \setbox\beamer@sectionbox=
+                \hbox{
+                    \def\insertsectionhead{#2}%
+                    \def\insertsectionheadnumber{#1}%
+                    \def\insertpartheadnumber{#5}%
+
+                    {%
+                        \usebeamerfont{section in head/foot}\usebeamercolor[fg]{section in head/foot}%
+                        \ifnum\c@section=#1%
+                            \hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot}}}%
+                        \else%
+                            \hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}%
+                        \fi%    
+                    }%
+                }%
+                \ht\beamer@sectionbox=1.875ex%
+                \dp\beamer@sectionbox=0.75ex%
+            \fi%
+        \fi%
+    \fi%
+    \ignorespaces%
+}
+
+\def\slideentry#1#2#3#4#5#6{%
+	%section number, subsection number, slide number, first/last frame, page number, part number
+	%
+	\newcount\mymin%
+	\mymin=2
+	\ifnum\c@section=1%
+		\mymin=3
+	\fi%
+	\ifnum\c@section=2%
+		\mymin=2
+	\fi%
+		%
+	\newcount\mymax%
+	\mymax=2
+	\ifnum\c@section=\beamer@sectionmax%
+		\mymax=3
+	\fi%
+	\ifnum\c@section=\numexpr\beamer@sectionmax-1%
+		\mymax=2
+	\fi%
+	%
+	\ifnum\numexpr\c@section-#1<\mymax%
+		\ifnum\numexpr#1-\c@section<\mymin%
+		  \ifnum#6=\c@part\ifnum#2>0\ifnum#3>0%
+		    \ifbeamer@compress%
+		      \advance\beamer@xpos by1\relax%
+		    \else%
+		      \beamer@xpos=#3\relax%
+		      \beamer@ypos=#2\relax%
+		    \fi%
+		  \hbox to 0pt{%
+		    \beamer@tempdim=-\beamer@vboxoffset%
+		    \advance\beamer@tempdim by-\beamer@boxsize%
+		    \multiply\beamer@tempdim by\beamer@ypos%
+		    \advance\beamer@tempdim by -.05cm%
+		    \raise\beamer@tempdim\hbox{%
+		      \beamer@tempdim=\beamer@boxsize%
+		      \multiply\beamer@tempdim by\beamer@xpos%
+		      \advance\beamer@tempdim by -\beamer@boxsize%
+		      \advance\beamer@tempdim by 1pt%
+		      \kern\beamer@tempdim
+		      \global\beamer@section@min@dim\beamer@tempdim
+		      \hbox{\beamer@link(#4){%
+		          \usebeamerfont{mini frame}%
+		          \ifnum\c@section=#1%
+		            \ifnum\c@subsection=#2%
+		              \usebeamercolor[fg]{mini frame}%
+		              \ifnum\c@subsectionslide=#3%
+		                \usebeamertemplate{mini frame}%\beamer@minislidehilight%
+		              \else%
+		                \usebeamertemplate{mini frame in current subsection}%\beamer@minisliderowhilight%
+		              \fi%
+		            \else%
+		              \usebeamercolor{mini frame}%
+		              %\color{fg!50!bg}%
+		              \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+		            \fi%
+		          \else%
+		            \usebeamercolor{mini frame}%
+		            %\color{fg!50!bg}%
+		            \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+		          \fi%
+		        }}}\hskip-10cm plus 1fil%
+		  }\fi\fi%
+		  \else%
+		  \fakeslideentry{#1}{#2}{#3}{#4}{#5}{#6}%
+		 \fi%
+		\fi%
+	\fi%
+	\ignorespaces%
+}
+\makeatother
+
+
+
+
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\scriptsize}
+\setbeamercovered{transparent}
+
+
+%% Load the markdown package
+\usepackage[citations,footnotes,definitionLists,hashEnumerators,smartEllipses,tightLists=false,pipeTables,tableCaptions,hybrid]{markdown}
+%%begin novalidate
+\markdownSetup{rendererPrototypes={
+ link = {\href{#2}{#1}},
+ headingOne = {\section{#1}},
+ headingTwo = {\subsection{#1}},
+ headingThree = {\begin{frame}\frametitle{#1}},
+ headingFour = {\begin{block}{#1}},
+ horizontalRule = {\end{block}}
+}}
+%%end novalidate
+
+\usetheme{Dresden}
+\usefonttheme{serif}
+\usecolortheme{rose}
+
+
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \scriptsize{\insertnavigation{\paperwidth}}
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \inserttitle \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+
+\author[Sameer Patidar]{\Large{Sameer Patidar}
+\\ 
+\vspace*{0.5mm}
+SC19B161} % (optional, for multiple authors)
+% {A.~B.~Arthur\inst{1} \and J.~Doe\inst{2}}
+
+\institute[Indian Institute of Space Science and Technology] % (optional)
+{
+  \Large{Dual Degree (Astronomy and Astrophysics)} \\\\
+\vspace{1mm}
+  \Large{Indian Institute of Space Science and Technology}
+}
+\logo{\includegraphics[height=1cm]{IIST.png}}
+
+\begin{document}
+
+% TITLE OF THE PRESENTATION
+
+\newcommand{\titleofpresentation}{Magnetic Fields and Relativistic Electrons fill entire Galaxy Cluster ?}
+
+\date{\large{}}
+\title{\LARGE{\textbf{\titleofpresentation}} 
+\\
+\vspace*{3mm}
+\LARGE{\textbf{Seminar-II}}
+}
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+    \end{beamercolorbox}%
+  }
+  
+}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \textbf{\titleofpresentation} \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+\logo{}
+
+\begin{frame}
+\frametitle{\huge{{\textbf{Outline}}}}
+\tableofcontents
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=2.75ex]{palette tertiary}%
+    \scriptsize{\textbf{\insertnavigation{\paperwidth}}}
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{footline}{%
+\leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.1ex,dp=1ex]{palette secondary}%
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex]{palette tertiary}%
+     \hspace{2.5mm} \textbf{\titleofpresentation} \hfill{} \textbf{\insertframenumber} \hspace{2.5mm}
+    \end{beamercolorbox}%
+  } 
+}
+
+
+\begin{markdown}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# Seminar-I : Overview
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Seminar-I : Overview}}}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### \huge{{\textbf{Seminar-I : Overview}}}
+
+\begin{itemize}
+    \item[-] Galaxy Clusters
+    \item[-] Emissions from Galaxy Clusters
+    \item[-] Diffuse Radio Emission from Galaxy Clusters
+    \item[-] Acceleration Mechanisms
+    \item[-] Classification of Cluster Radio Sources
+    \item[-] Cluster Magnetic Fields
+\end{itemize}
+
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# Motivation
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Motivation}}}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### \huge{{\textbf{Motivation}}}
+
+
+\begin{itemize}
+            \uncover<1->{\item Diffuse synchrotron emission in disturbed galaxy clusters}
+            \begin{itemize}
+                \uncover<2->{\item[-] Radio sources : central halos and peripheral relics}
+                \uncover<3->{\item[-] Shocks and turbulence can accelerate particles to relativistic energies and amplify the magnetic fields in central cubic Mpc.} 
+            \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \uncover<4->{\item Cosmological simulations predicts that these mechanisms extend to much larger scales}
+\end{itemize}
+             
+            
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# Observations
+
+
+\begin{columns}
+    \begin{column}{0.4\textwidth} 
+        \vspace{1mm}
+        \huge{\textbf{Observations}} 
+    \end{column}
+    \begin{column}{0.6\textwidth}
+        \vspace{8mm}
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=6cm]{Figures/Seminar-2/LOFAR_Superterp.jpg}
+          \vspace*{-1mm}
+          \caption{The LOFAR 'superterp', part of the core of the extended telescope located in the Netherlands. Credits : LOFAR/ASTRON.}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### \huge{{\textbf{Observations}}}
+
+
+\begin{columns}
+    \begin{column}{0.6\textwidth} 
+         \begin{itemize}
+             \item Observed galaxy cluster Abell 2255 (z=0.08)
+             \item Deep observations at 49 and 145 MHz with LOFAR 
+                \begin{itemize}
+                    \item[-] Low Band Antenna (LBA)
+                    \item[-] High Band Antenna (HBA)
+                \end{itemize} 
+            \item 145 MHz : $\times 60$ lower noise and $\times 25$ angular resolution than WSRT at 150 Mhz
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=4cm]{Figures/Seminar-2/Abell2255_1000.jpeg}
+          \vspace*{-1mm}
+          \caption{SDSS image of Abell 2255 cluster. Credits : Sloan Digital Sky Survey V}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+             
+            
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# Results from LOFAR
+
+\begin{frame}{}
+
+\vspace*{1.5cm}
+
+{\huge{\textbf{Results from LOFAR}}}
+
+\begin{itemize}
+    \item[-] \Large{Images}
+    \item[-] \Large{Spectral Maps}
+\end{itemize}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain]{}
+
+% \uncover<1->{\item Diffuse synchrotron emission in disturbed galaxy clusters}
+
+\begin{columns}
+    \begin{column}{0.3\textwidth} 
+         \begin{itemize}
+             \item {\textbf{Central region}}
+                \begin{itemize}
+                    \item[-] Halo
+                    \item[-] Relic
+                    \item[-] AGNs
+                \end{itemize} 
+             \item Envelope
+             \item Relics in peripheral regions 
+             \\\\ \vspace{16mm} \hspace{-4mm}
+             \scriptsize{
+             Yellow : 145 MHz - High Res. \\\\ \hspace{-3mm}
+             Magenta : 49 MHz - Low Res.\\\\ \hspace{-3mm}
+             Blue : X-ray (0.1 to 2.4 keV)}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+         \vspace{-2mm}
+          \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=8cm]{Figures/Seminar-2/Composite image.jpg}
+          \vspace*{-3mm}
+          \caption{Composite image of Abell 2255 cluster. Credits :  A. Botteon et al. (2022)}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+    
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain,noframenumbering]{}
+
+
+\begin{columns}
+    \begin{column}{0.3\textwidth} 
+         \begin{itemize}
+             \item {\textbf{Central region}}
+                \begin{itemize}
+                    \item[-] Halo
+                    \item[-] Relic
+                    \item[-] AGNs
+                \end{itemize} 
+             \item Envelope
+             \item Relics in peripheral regions 
+             \\\\ \vspace{16mm} \hspace{-4mm}
+             \scriptsize{
+             Yellow : 145 MHz - High Res. \\\\ \hspace{-3mm}
+             Magenta : 49 MHz - Low Res.\\\\ \hspace{-3mm}
+             Blue : X-ray (0.1 to 2.4 keV)}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+         \vspace{-2mm}
+          \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=11cm]{Figures/Seminar-2/High res.png}
+          \vspace*{-1mm}
+          \caption{Highest-resolution LOFAR images (a) LBA 49 MHz  (11.5" $\times$ 8:2") \& (b) HBA 145 MHz (4.7" $\times$ 3.5") . Credits :  A. Botteon et al. (2022)}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain,noframenumbering]{}
+
+\begin{columns}
+    \begin{column}{0.3\textwidth} 
+         \begin{itemize}
+             \item Central region
+                \begin{itemize}
+                    \item[-] Halo
+                    \item[-] Relic
+                    \item[-] AGNs
+                \end{itemize} 
+             \item {\textbf{Envelope}}
+             \item Relics in peripheral regions 
+             \\\\ \vspace{16mm} \hspace{-4mm}
+             \scriptsize{
+             Yellow : 145 MHz - High Res. \\\\ \hspace{-3mm}
+             Magenta : 49 MHz - Low Res.\\\\ \hspace{-3mm}
+             Blue : X-ray (0.1 to 2.4 keV)}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+         \vspace{-2mm}
+          \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=8cm]{Figures/Seminar-2/Composite image.jpg}
+          \vspace*{-3mm}
+          \caption{Composite image of Abell 2255 cluster. Credits :  A. Botteon et al. (2022)}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+    
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain,noframenumbering]{}
+
+
+\begin{columns}
+    \begin{column}{0.3\textwidth} 
+         \begin{itemize}
+             \item Central region
+                \begin{itemize}
+                    \item[-] Halo
+                    \item[-] Relic
+                    \item[-] AGNs
+                \end{itemize} 
+             \item {\textbf{Envelope}}
+             \item Relics in peripheral regions 
+             \\\\ \vspace{16mm} \hspace{-4mm}
+             \scriptsize{
+             Yellow : 145 MHz - High Res. \\\\ \hspace{-3mm}
+             Magenta : 49 MHz - Low Res.\\\\ \hspace{-3mm}
+             Blue : X-ray (0.1 to 2.4 keV)}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+         \vspace{-2mm}
+          \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=8cm]{Figures/Seminar-2/49 Mhz low.png}
+          \vspace*{-3mm}
+          \caption{LOFAR LBA 49 MHz radio image. Resolution : 20.0" $\times$ 12.2". Credits :  A. Botteon et al. (2022)}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain,noframenumbering]{}
+
+\begin{columns}
+    \begin{column}{0.31\textwidth} 
+         \begin{itemize}
+             \item Central region
+                \begin{itemize}
+                    \item[-] Halo
+                    \item[-] Relic
+                    \item[-] AGNs
+                \end{itemize} 
+             \item Envelope
+             \item {\textbf{Relics in peripheral regions}} 
+             \\\\ \vspace{16mm} \hspace{-4mm}
+             \scriptsize{
+             Yellow : 145 MHz - High Res. \\\\ \hspace{-3mm}
+             Magenta : 49 MHz - Low Res.\\\\ \hspace{-3mm}
+             Blue : X-ray (0.1 to 2.4 keV)}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+         \vspace{-2mm}
+          \begin{figure}[!htbp]
+          \centering
+          \includegraphics[width=8cm]{Figures/Seminar-2/Composite image.jpg}
+          \vspace*{-3mm}
+          \caption{Composite image of Abell 2255 cluster. Credits :  A. Botteon et al. (2022)}
+          \label{}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+    
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}{\huge{\textbf{Spectral Index Maps}}}
+
+\begin{columns}
+    \begin{column}{0.6\textwidth} 
+         \begin{itemize}
+             \item Computed spectral index on pixel basis $^{\*}$
+             \item Surface brightness threshold of $2\sigma$ or $3\sigma$ 
+             \item Different spectral maps :
+                \begin{itemize}
+                    \item[-] At 12.5" with discrete sources
+                    \item[-] At 60" with discrete sources subtracted
+                    \item[-] At 35" with discrete sources subtracted $^{\*}$
+                \end{itemize} 
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+    \begin{center}
+        \includegraphics[width=6cm]{Figures/Seminar-2/spec_index.png}
+    \end{center}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain]
+
+
+\begin{tikzpicture}[remember picture, overlay]
+\vspace{-10mm}
+\node[above=-81mm] at (current page.north) (A)
+{ 
+    \includegraphics[height=7.8cm]{Figures/Seminar-2/Spec index map 1-2.png}
+};
+\end{tikzpicture}
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \vspace{71mm}
+    \caption{Spectral index maps. (a) and (b) are at common resolution of 60" and 35" respectively with discrete sources subtracted. Credits : A. Botteon et al. (2022)}
+    \label{}
+\end{figure}
+    
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}[plain]
+
+
+\begin{tikzpicture}[remember picture, overlay]
+\vspace{-10mm}
+\node[above=-75mm] at (current page.north) (A)
+{ 
+    \includegraphics[height=7cm]{Figures/Seminar-2/Spec index map 1.png}
+};
+\end{tikzpicture}
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \vspace{67mm}
+    \caption{Images and spectral index map. The images have a common resolution of 12.5" with discrete sources. Credits : A. Botteon et al. (2022)}
+    \label{}
+\end{figure}
+    
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### \huge{\textbf{Spectral Index Maps}}
+
+\begin{columns}
+    \begin{column}{0.6\textwidth} 
+         \begin{itemize}
+             \item Different peaks
+             \item Flat-spectrum : acceleration of $\text{e}^-$ near shock fronts
+             \item Steeper spectrum : acceleration by turbulence
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=6cm]{Figures/Seminar-2/Spec index histrogram.png}
+        \vspace{-6mm}
+        \caption{Spectral index histogram. Credits : A. Botteon et al. (2022)}
+        \label{}
+    \end{figure}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# Magnetic Fields
+
+\begin{frame}{}
+
+\vspace*{1.5cm}
+
+{\huge{\textbf{Magnetic Fields}}}
+\\\\
+\begin{itemize}
+    \item[-] \Large{Constraints}
+    \item[-] \Large{Origin}
+\end{itemize}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+
+### \huge{\textbf{Constraints}}
+
+\begin{itemize}
+              \uncover<1->{\item Magnetic field can be estimated from observed synchrotron radiation}
+              \uncover<1->{\item 
+              \begin{tikzpicture}[remember picture, overlay]
+                    \vspace{-10mm}
+                    \node[above=-45mm,left=-27mm] at (current page.north) (A)
+                    { 
+                        \includegraphics[width=9cm]{Figures/Seminar-2/B_constraint.png}
+                    };
+             \end{tikzpicture}}
+              \uncover<3->{\item Lower limit of few 0.1$\mu$G}  
+\end{itemize}
+
+
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+### \huge{\textbf{Origin}}
+
+\begin{itemize}
+              \uncover<1->{\item Extragalactic magnetic fields may have primordial origin}
+              \begin{itemize}
+                  \uncover<2->{\item[-] Lower limit derived $\sim$ 250 times larger than upper limit of such field} 
+                  \uncover<3->{\item[-] Atleast an order of magnitude larger than value expected from compression of such field}
+              \end{itemize}
+              \uncover<4->{\item $\mu$G fields can be produced from small-scale turbulent dynamo amplification in central regions} 
+\end{itemize}
+
+
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+# Origin of Observed Radio Emission
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Origin of Observed Radio Emission}}}
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+### {\huge{\textbf{Origin of Observed Radio Emission}}}
+
+\begin{itemize}
+             \uncover<1->{\item Sources of relativistic particles ?}
+             \begin{itemize}
+                  \uncover<2->{\item[-] Accelerated from thermal matter ?}
+                  \uncover<3->{\item[-] Accelerated from preexisting suprathermal particles ?} 
+             \end{itemize} 
+             \uncover<4->{\item Energy of thermal matter $\sim$ keVs}
+             \uncover<5->{\item Minimum KE of $\text{e}^-$ : 20-30 MeV}
+             \uncover<6->{\item Spectrum can't extend at energies $\leq$ several MeV}
+            
+\end{itemize}
+
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+### {\huge{\textbf{Origin of Observed Radio Emission}}}
+
+\begin{itemize}
+             \uncover<1->{\item \textbf{Electrons are accelerated from preexisting pool of suprathermal particles}}
+             \uncover<2->{\item Cooling time of e$^-$ in galaxy clusters :
+                            \begin{itemize}
+                                \item[-] Coulumb losses at lower energies
+                                \item[-] Radiative losses at higher energies
+                            \end{itemize}
+                         }
+             \uncover<3->{\item These e$^-$ can get accumulated in ICM}
+\end{itemize}
+
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+### {\huge{\textbf{Origin of Observed Radio Emission}}}
+
+\begin{itemize}
+             \uncover<1->{\item Sources of seed e$^-$ :}
+                        \begin{itemize}
+                            \uncover<2->{\item[-] Shocks during cluster's assembly}
+                            \uncover<3->{\item[-] Individual galaxies :}
+                            \begin{itemize}
+                                \uncover<4->{\item[\ding{226}] Through AGN outflows} 
+                                \uncover<5->{\item[\ding{226}] Star formation activities like stellar winds or SNe} 
+                            \end{itemize}
+                        \end{itemize}
+             \uncover<6->{\item Outermost diffuse radio emission : Products of shock waves}
+             \uncover<7->{\item These can produce emission via reacceleration mechanisms or adiabatic compression processes}
+\end{itemize}
+
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+### {\huge{\textbf{Acceleration Efficiency}}}
+
+\begin{center}
+    \includegraphics[width=7cm]{Figures/Seminar-2/efficiency.png}
+\end{center}
+
+- To get observed radio emission, 
+\begin{tikzpicture}[remember picture, overlay]
+                    \vspace{-10mm}
+                    \node[above=-66mm,left=-35mm] at (current page.north) (A)
+                    { 
+                        \includegraphics[width=4cm]{Figures/Seminar-2/efficeincy_Sum.png}
+                    };
+\end{tikzpicture}
+- Efficiency similar to Magneto-Hydrodynamics turbulence
+
+
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+
+
+# Numerical Simulations
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Numerical Simulations}}}
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### {\huge{\textbf{Numerical Simulations}}}
+
+
+- z=0.02 snapshot of high resolution cosmological simulation of massive galaxy cluster was analysed
+- Simulated cluster : $M_{200}=8.65\times {10}^{14} \ M_\odot$  within $r_{200}=1.96$ Mpc
+- Abell 2255 : $M_{200}=10.33\times {10}^{14} \ M_\odot$  within $r_{200}=2.03$ Mpc
+
+
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+# Conclusions
+
+\vspace*{2.7cm}
+
+{\huge{\textbf{Conclusions}}}
+
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+### {\huge{\textbf{Conclusions}}}
+
+\begin{itemize}
+        \uncover<1->{
+                \item Cosmic rays and Magnetic fields exist at large distances from cluster centre
+                \item Energy is efficiently converted into non-thermal components
+                \item Energy budget of non-thermal components and the magnetic fields is constrained
+                }
+            \\\\ \vspace{5mm}
+        \uncover<2->{\textbf{\LARGE{So, magnetic fields and relativistic electrons do fill an entire galaxy cluster
+}}}
+\end{itemize}
+
+
+\end{frame}
+
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\begin{frame}<0>[noframenumbering]
+
+{\cite{Andrea} ,\cite{Botteon_2020}, \cite{},\cite{Weeren},\cite{Brunetti}}
+    
+\end{frame}
+
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+
+\begin{frame}{\huge{\textbf{References}}}
+\renewcommand{\bibfont}{\footnotesize}
+% \frametitle{\huge{\textbf{References}}}
+
+\bibliographystyle{myunsrt}
+\bibliography{refs}
+
+\end{frame}
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+# 
+
+
+\begin{frame}{}
+  \centering \Huge
+  \textbf{\emph{Such good times...}}
+\end{frame}
+% In the End, we are Cosmic Dust...
+
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------
+
+\end{markdown}
+
+\end{document}
+
+
+
+% ---------------Column-----------------
+
+% \begin{columns}
+%     \begin{column}{0.6\textwidth} 
+%          \begin{itemize}
+%              \uncover<1->{\item Largest virialised objects in the universe} 
+%             \uncover<2->{\item Masses upto $\sim 10^{16} M_{\odot}$ }
+%             \uncover<3->{\item ICM - $10^7-10^8 \ \ K$} 
+%             \uncover<4->{\item Elongated filaments of galaxies span region between clusters}
+%             \uncover<5->{\item WHIM pervades these filaments} 
+%             \uncover<6->{\item Dynamical state - Relaxed and Merging clusters} 
+%         \end{itemize}
+%     \end{column}
+%     \begin{column}{0.4\textwidth}
+%         \begin{figure}[!htbp]
+%           \centering
+%           \includegraphics[width=5cm]{Figures/Cluster MACS J1206.2-0847.jpg}
+%           \vspace*{-1mm}
+%           \caption{HST image showing the galaxy cluster MACS J1206. Credits: NASA, ESA, M. Postman (STScI) and the CLASH Team}
+%           \label{}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+
+
+% -----------Figure Placing------------
+
+% \begin{tikzpicture}[remember picture, overlay]
+% \node[right=-1mm] at (current page.west) (A)
+% {
+%     \includegraphics[width=16cm]{Figures/Abell 2744 Emission.png}
+%     \vspace*{-1mm}
+% };
+% \end{tikzpicture}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics{}
+%     \vspace*{50mm}
+%     \caption{The galaxy cluster Abell 2744. Credits : Medezinski et al. (2016), Merten et al. (2011), Lotz et al. (2017), R. J. van Weeren et al. (2019).}
+%     \label{}
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ### Projected Profit
+
+% 1. And the answer is...
+% 2. $f(x)=\sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n$
+%     #. How do we _know_ that?
+%     #. __Maths!__
+
+% \end{frame}
+
+% ### Testing blocks
+
+% #### This is a block!
+
+% - Here is some content.
+% - Here's more contents.
+
+% ---
+
+% \end{frame}
+
+
+% ### Citations
+
+% - This is a citation [@novotny:2017]
+% - Works like `natbib` syntax [see @novotny:2019 p.26]
+
+% \end{frame}
+
+
+% ### Pipe Tables
+
+% - Use `pipeTables` and `tableCaptions` options
+% - Available since `markdown` v2.8.0
+
+% | Right | Left | Default | Center |
+% |------:|:-----|---------|:------:| 
+% |  12   |  12  |  12     |   12   | 
+% | 123   |  123 |   123   |  123   | 
+% |   1   |    1 |     1   |    1   | 
+
+%   : Demonstration of pipe table syntax.
+  
+% \end{frame}
+
+% %%novalidate
+
+% \end{markdown}
+
+% \begin{frame}
+% \renewcommand{\bibfont}{\footnotesize}
+% \frametitle{Bibliography}
+
+% \bibliographystyle{apalike}
+% \bibliography{refs}
+
+% \end{frame}
+
+
+
+% \end{document}

@@ -1,10 +1,34 @@
 from curses.ascii import isupper
 from astropy.io import ascii
+from astropy.io import fits
+from astropy.table import Table
 from numpy import *
 import subprocess
 import matplotlib.pyplot as plt
 import os
 
+
+qso='pg1222'
+
+file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
+
+
+hdu=fits.open(file)
+data=Table(hdu[1].data)
+wave=data['WAVE']
+flux=data['FLUX']
+
+plt.step(wave,flux,label='CIV 1548')
+plt.step(wave*(1548.2041/1550.7812),flux,label='CIV 1550',ls='--')
+plt.legend()
+plt.show()
+
+
+
+
+
+
+quit()
 
 # def tick_pos():
 

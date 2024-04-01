@@ -6,11 +6,11 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='pg1216'
+qso='rxj0439'
 spec=f'{qso}_cont_norm.asc'
-z_absorber=0.006390
+z_abs=0.005602
 v_sep_lim=300
-ion='CII'
+ion='HI'
 
 lsf_files=os.listdir('Data/COS_LSF')
 
@@ -23,7 +23,7 @@ col_names_linelist=['WAVELENGTH','LINE_ID','z_ABS','SIGLEVEL','S/N','EQW','EQW_E
 data_linelist.rename_columns(data_linelist.colnames,col_names_linelist)
 
 
-v_absorber=3e5*(((1+z_absorber)**2-1)/((1+z_absorber)**2+1))
+v_absorber=3e5*(((1+z_abs)**2-1)/((1+z_abs)**2+1))
 
 z1=sqrt((1+((v_absorber-v_sep_lim)/3e5))/(1-((v_absorber-v_sep_lim)/3e5)))-1
 z2=sqrt((1+((v_absorber+v_sep_lim)/3e5))/(1-((v_absorber+v_sep_lim)/3e5)))-1
@@ -200,6 +200,9 @@ for i in range(n):
     plt.ylim(0,1.3)
 
 os.system('rm vpfit_chunk*')
+
+if not os.path.exists(f'z={z_abs}/VPfit_chunks'):
+    os.makedirs(f'z={z_abs}/VPfit_chunks')
 
 plt.show()
 

@@ -4,7 +4,14 @@ from scipy.optimize import curve_fit
 from roman import toRoman
 from io import StringIO
 
+
 plt.style.use('../Python/my_style.mpl')
+
+b_BLA_th=40
+
+qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
+qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
+
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
@@ -22,8 +29,204 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
         return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
 
+v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))
+err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
 
 
+class ion():
+
+    def __init__(self,name,v,b,logN):
+
+        self.ion=name
+        self.v=[x for x in v]
+        self.b=[x for x in b]
+        self.logN=[x for x in logN]
+        self.comp=len(v)
+
+
+class abs_system():
+
+    def __init__(self,qso,z_abs,cont_mark='*'):
+
+        file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
+
+        with open(file) as f:
+            data=f.read()
+            data=data.replace('A','')
+            # print(data)
+            # print('\n')
+
+        with open('temp_param_file.txt','w') as f:
+            f.write(data)
+
+        param_file=loadtxt('temp_param_file.txt',dtype=str,comments=('>','#'))
+
+        ions=param_file[:,0]
+        mask=[]
+
+        for i in ions:
+            mask.append(cont_mark not in i)  
+
+        ions=ions[mask]
+        z=param_file[:,1].astype(float)[mask]
+        z_err=param_file[:,2].astype(float)[mask]
+        b=param_file[:,3].astype(float)[mask]
+        b_err=param_file[:,4].astype(float)[mask]
+        logN=param_file[:,5].astype(float)[mask]
+        logN_err=param_file[:,6].astype(float)[mask]
+
+        v_abs=v_z(z_abs)
+        v=zeros(len(ions))
+        v_err=zeros(len(ions))
+
+        for i in range(len(ions)):
+
+            v[i]=round(v_z(z[i])-v_abs)
+            v_err[i]=round(err_vz(z[i],z_err[i]))
+
+        ions_all=unique(ions)
+        ion_obj_dict={}
+
+        for i in ions_all:
+            mask=ions==i
+            v_ion=v[mask]
+            v_err_ion=v_err[mask]
+            b_ion=b[mask]
+            b_err_ion=b_err[mask]
+            logN_ion=logN[mask]
+            logN_err_ion=logN_err[mask]
+
+            v_obj=[]
+            b_obj=[]
+            logN_obj=[]
+
+            for j in range(len(v_ion)):
+                v_obj.append([v_ion[j],v_err_ion[j]])
+                b_obj.append([round(b_ion[j]),round(b_err_ion[j])])
+                logN_obj.append([round(logN_ion[j],2),round(logN_err_ion[j],2)])
+
+            obj=ion(i,v=v_obj,b=b_obj,logN=logN_obj)
+            ion_obj_dict[i]=obj
+
+        v_BLA_obj=[]
+        b_BLA_obj=[]
+        logN_BLA_obj=[]
+
+        v_HI=ion_obj_dict['HI'].v
+        b_HI=ion_obj_dict['HI'].b
+        logN_HI=ion_obj_dict['HI'].logN
+
+        for i,b_val in enumerate(b_HI):
+
+            if b_val[0]>=b_BLA_th:
+                v_BLA_obj.append(v_HI[i])
+                b_BLA_obj.append(b_HI[i])
+                logN_BLA_obj.append(logN_HI[i])
+    
+        self.BLA_obj=ion('HI',v=v_BLA_obj,b=b_BLA_obj,logN=logN_BLA_obj)
+
+        self.qso_label=qso_dict[qso]
+        self.z_abs=z_abs
+        self.ion_obj=ion_obj_dict
+        self.ions=ions_all[ions_all!='HI']
+        self.n_ions=len(self.ions)
+        # print(f'{qso} : {z_abs} : {self.ions} : {self.n_ions}')
+
+absorbers=[
+            abs_system('3c263',0.140756),
+            abs_system('pks0637',0.161064),
+            abs_system('pks0637',0.417539),
+            abs_system('pg1424',0.147104),
+            abs_system('pg0003',0.347579),                        
+            abs_system('pg0003',0.386089),
+            abs_system('pg0003',0.421923),
+            abs_system('pg1216',0.282286),
+            abs_system('s135712',0.097869),
+            abs_system('1es1553',0.187764),
+            abs_system('sbs1108',0.463207),
+            abs_system('pg1222',0.378389),
+            abs_system('pg1116',0.138527),
+            abs_system('h1821',0.170006),
+            abs_system('h1821',0.224981),
+            abs_system('pg1121',0.192393),
+            abs_system('pks0405',0.167125)
+           ]
+
+for a in absorbers:
+
+    BLA=a.BLA_obj
+    Ovi=a.ion_obj['OVI']
+    
+    v_BLA=[x[0] for x in BLA.v]
+    v_err_BLA=[x[1] for x in BLA.v]
+
+    v_Ovi=[x[0] for x in Ovi.v]
+    v_err_Ovi=[x[1] for x in Ovi.v]
+
+    plt.title(f'{a.qso_label} (z_abs={a.z_abs})')
+    plt.errorbar(v_BLA,10*ones(len(v_BLA)),0,v_err_BLA,label='BLA',fmt='o',capsize=3)
+    plt.errorbar(v_Ovi,9*ones(len(v_Ovi)),0,v_err_Ovi,label='OVI',fmt='o',capsize=3)
+    plt.legend()
+    plt.ylim(0,11)
+    plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quit()
 
 class BLA():
 
@@ -69,7 +272,7 @@ b_OVI=zeros(len(absorbers))
 n_OVI=zeros(len(absorbers))
 n_ions=zeros(len(absorbers))
 is_BLA=zeros(len(absorbers))
-
+print(a.ions)
 for i,a in enumerate(absorbers):
     b_H[i]=a.b_H
     b_H_err[i]=a.b_H_err
@@ -94,6 +297,20 @@ def f(x,m,c):
 
 fit=curve_fit(f,b_H_fit,n_H_fit)
 print(fit[0])
+
+
+plt.figure()
+
+plt.scatter(b_H,b_OVI)
+plt.plot(array([0,150]),array([0,150]),ls='--')
+plt.vlines(40,-10,170,ls='--',color='red')
+plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylim(bottom=-5,top=160)
+plt.savefig('bHi_vs_BOvi.png')
+# plt.show()
+quit()
+
 
 plt.figure()
 

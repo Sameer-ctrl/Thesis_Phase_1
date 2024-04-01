@@ -18,16 +18,16 @@ atom_data=loadtxt('../Python/Data/lines_system_plots.txt',dtype=str)
 
 line_atom=atom_data[:,0]
 wave_rest=atom_data[:,1].astype(float)
-f_osc=atom_data[:,2].astype(float)
+f_atom=atom_data[:,2].astype(float)
 
 rest_wave={}
 f={}
 
 for i in range(len(line_atom)):
     rest_wave.update({line_atom[i]:wave_rest[i]})
-    f.update({line_atom[i]:f_osc[i]})
+    f.update({line_atom[i]:f_atom[i]})
 
-lines=['SiII_1193','SiII_1190']
+lines=['SiII_1193','SiII_1190','SiII_1260','SiII_1304','SiII_1526']
 vlim=[-100,100]
 
 
