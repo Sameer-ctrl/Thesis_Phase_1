@@ -138,8 +138,7 @@ for i,j in enumerate(d2t_dr2):
         k+=1
 
 col_density.add_column(log_Te,name='log_Te')
-            
- 
+             
 col_density.add_column(param_data,name='parameters')
 print(col_density.colnames,'\n')
 col_density.write(f'scaling_approx/scaling_Z_col_density_param.fits',overwrite=True)

@@ -1,0 +1,25 @@
+TABLE KS19 redshift = z_abs scale = 1 Q = 18 
+abundances "solar_GASS10.abn" 
+element helium abundance 0.08156498 linear 
+hden nH log
+metals Z log 
+stop column density NHi neutral H 
+stop temperature 100 K linear
+save temperature "run_name_temp.txt" no hash 
+save species column density "run_name_col_density.txt" no hash 
+"H" 
+"H+" 
+"C+" 
+"C+2" 
+"C+3" 
+"N+2" 
+"N+4" 
+"O" 
+"O+2" 
+"O+5" 
+"O+6" 
+"Si+" 
+"Si+2" 
+"Si+3" 
+"Si+4" 
+end
