@@ -1,0 +1,25 @@
+TABLE KS19 redshift = 0.167125 scale = 1 Q = 18 
+abundances "solar_GASS10.abn" 
+element helium abundance 0.08156498 linear 
+hden -2.73 log
+metals -0.18 log 
+stop column density 15.98 neutral H 
+stop temperature 100 K linear
+save temperature "pks0405_0.167125_15.98_temp.txt" no hash 
+save species column density "pks0405_0.167125_15.98_col_density.txt" no hash 
+"H" 
+"H+" 
+"C+" 
+"C+2" 
+"C+3" 
+"N+2" 
+"N+4" 
+"O" 
+"O+2" 
+"O+5" 
+"O+6" 
+"Si+" 
+"Si+2" 
+"Si+3" 
+"Si+4" 
+end

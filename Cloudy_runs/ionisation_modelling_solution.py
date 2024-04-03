@@ -213,7 +213,7 @@ absorbers=[
 
 def cloudy_run_sol():
 
-    for a in absorbers:
+    for a in absorbers[-4:-3]:
 
         qso_los=a.qso
         z_abs=a.z_abs
@@ -240,14 +240,14 @@ def cloudy_run_sol():
             
             cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
-            print(f'\nCloudy running in ionisation_modelling_solution : {qso_los} : {z_abs} : {N} \n')
+            print(f'Cloudy running in ionisation_modelling_solution : {qso_los} : {z_abs} : {N}')
             os.system(cloudy_run_command)
 
             sleep(1)
 
             os.remove(f'{run_name}.out')
 
-            print('----------- Writing output files ------------- \n')
+            print('----------- Writing output files -------------')
 
 
             with open(f'{run_name}_col_density.txt') as f:
@@ -268,7 +268,7 @@ def cloudy_run_sol():
 
             log_Te=zeros(len(col_density))
             k=0
-
+            
             for i,j in enumerate(d2t_dr2):
                 if j==0:
                     log_Te[k]=round(log10(Te[i]),3)
@@ -287,7 +287,7 @@ def cloudy_run_sol():
             ascii.write(col_density,f'output_txt/{run_name}_col_density_param.txt',format='ecsv',overwrite=True)
                 
 
-            print('----------- Output files written -------------')
+            print('----------- Output files written -------------\n')
             os.chdir(cwd)
 
 
