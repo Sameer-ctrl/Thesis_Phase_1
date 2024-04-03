@@ -486,7 +486,7 @@ T_all=8*m*((b_H*1000)**2-(b_OVI*1000)**2)/(15*k)
 
 T_aligned=[5.28,6.19,4.36,4.58,5.28,4.80,5.34,4.34,4.58,5.00,5.39,5.51,5.35]
 
-n=6
+# n=6
 
 # plt.figure(figsize=(8,5))
 
@@ -516,20 +516,39 @@ n=6
 # fit=curve_fit(f,b_H_fit,n_H_fit)
 # print(fit[0])
 
+danforth_b=[[49.9,61.9], [58.5,49.2], [50.7,40.9], [100,50.5], [100,39.4], [86.7,26.3], [48.0,30.2], [45.7,25.8], [46.2,61.2], [78.6,59.9], [48.2,15.3], [61.4,34.3], [58,100], [55.2,45.9], [83.7,56.9], [55.1,17.1], [80.8,36.8]]
 
-# plt.figure(figsize=(8,5))
+danforth_N=[[14.66,13.89], [15.16,13.75], [15.01,14.48], [13.36,14.06], [13.73,14.23], [13.46,13.74], [14.57,14.29], [14.09,14.27], [16.25,14.49], [13.9,13.96], [13.83,13.85], [13.54,14.0], [13.68,13.8], [15.16,14.25], [13.54,13.76], [14.7,13.41], [13.47,13.86]]
 
-# plt.scatter(b_H,b_OVI,c='red')
-# plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
-# plt.plot(array([0,150]),array([0,150]),ls='--')
-# plt.plot(array([0,165]),array([0,165/4]),ls='--')
-# plt.vlines(40,-10,170,ls='--',color='green')
-# plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
-# plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
-# plt.ylim(bottom=0,top=160)
-# plt.xlim(0,170)
-# plt.savefig('bHi_vs_BOvi_1.png')
-# plt.show()
+
+danforth_b_Hi=[]
+danforth_b_Ovi=[]
+danforth_N_Hi=[]
+danforth_N_Ovi=[]
+
+for i,b in enumerate(danforth_b):
+    
+    danforth_b_Hi.append(b[0])
+    danforth_b_Ovi.append(b[1])
+
+    danforth_N_Hi.append(danforth_N[i][0])
+    danforth_N_Ovi.append(danforth_N[i][1])
+
+
+plt.figure(figsize=(8,5))
+
+plt.scatter(b_H,b_OVI,c='red')
+plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
+plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
+plt.plot(array([0,150]),array([0,150]),ls='--')
+plt.plot(array([0,165]),array([0,165/4]),ls='--')
+plt.vlines(40,-10,170,ls='--',color='green')
+plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.ylim(bottom=0,top=160)
+plt.xlim(0,170)
+plt.savefig('bHi_vs_BOvi_danforth.png')
+
 # quit()
 
 
@@ -553,24 +572,19 @@ n=6
 # plt.savefig('NHi_vs_bHi.png')
 
 
-# plt.figure(figsize=(8,5))
+plt.figure(figsize=(8,5))
 
-# plt.hlines(40,13,16,ls='--',color='black',lw=3)
-# plt.scatter(n_H,b_H,label='H',s=70)
-# plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red')
-# plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--')
+plt.hlines(40,13,16,ls='--',color='black',lw=3)
+plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red',label=r'$\mathbf{Our \ measurements}$')
+plt.scatter(danforth_N_Hi,danforth_b_Hi,c='grey',label=r'$\mathbf{Danforth \ et. \ al \ (2016)}$')
 
-# plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-# plt.xlim(13.35,15.9)
+plt.xlim(13.2,15.9)
 
-# plt.scatter(n_H,b_H,label='H',c=is_BLA)
-# plt.plot(f(array([42,100]),fit[0][0],fit[0][1]),[42,100],ls='--')
-# plt.ylabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-# plt.ylabel(f'$\mathbf{{b \ (}}$'+ion_label('H')+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=15)
-# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-# plt.savefig('NHi_vs_bHi.png')
-# plt.show()
+plt.ylabel(f'$\mathbf{{b \ (}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=10,fontsize=20)
+plt.legend()
+plt.savefig('NHi_vs_bHi_danforth.png')
+plt.show()
 
 
 

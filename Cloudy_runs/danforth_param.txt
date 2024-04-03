@@ -31,15 +31,6 @@ pks0637 : 0.161068
 None
 
 
-pks0637 : 0.161068
- Z_SYS   DELTAV_SYS WAVELENGTH LINE_ID   z_ABS   SIGLEVEL SNR  EQW EQW_ERR BVALUE BVALUE_ERR LOGN_lower_limit  LOGN LOGN_ERR FLAG_FIT LCOD NUM_SYS_LINES NUM_METAL_LINES
--------- ---------- ---------- -------- -------- -------- ---- --- ------- ------ ---------- ---------------- ----- -------- -------- ---- ------------- ---------------
-0.161068       71.0    1411.15 Lya 1215 0.160819     11.2 28.0 116      16  100.0        1.0                0 13.36     0.06        1    0             7               4
-0.161068       71.0    1411.45 Lya 1215 0.161068     86.5 24.0 691      18   48.5        1.2                1 14.95     0.04        1    9             7               4
-0.161068       71.0    1198.11 OVI 1032 0.161062      9.4 14.0 121      19   50.5        5.4                0 14.06     0.06        0    0             7               4
-None
-
-
 pks0637 : 0.417573
  Z_SYS   DELTAV_SYS WAVELENGTH LINE_ID   z_ABS   SIGLEVEL SNR  EQW EQW_ERR BVALUE BVALUE_ERR LOGN_lower_limit  LOGN LOGN_ERR FLAG_FIT LCOD NUM_SYS_LINES NUM_METAL_LINES
 -------- ---------- ---------- -------- -------- -------- ---- --- ------- ------ ---------- ---------------- ----- -------- -------- ---- ------------- ---------------
