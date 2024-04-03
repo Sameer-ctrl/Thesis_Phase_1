@@ -234,6 +234,8 @@ for i,abs_sol in enumerate(ion_model_sol):
 
         k+=1
 
+
+
 # plt.figure(figsize=(16,10))
 
 # plt.subplot(121)
@@ -276,22 +278,22 @@ for i,abs_sol in enumerate(ion_model_sol):
 # plt.savefig('NHi_vs_nH.png')
 
 
-plt.figure(figsize=(16,10))
+# plt.figure(figsize=(16,10))
 
-plt.subplot(121)
-plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-plt.xlabel(r'$\mathbf{log \ Z}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+# plt.subplot(121)
+# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ Z}$')
+# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
-plt.subplot(122)
-plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
-plt.xlabel(r'$\mathbf{log \ Z}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+# plt.subplot(122)
+# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ Z}$')
+# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
-plt.subplots_adjust(wspace=0.34)
-plt.savefig('NHi_vs_Z.png')
+# plt.subplots_adjust(wspace=0.34)
+# plt.savefig('NHi_vs_Z.png')
 
 # plt.figure()
 
@@ -303,7 +305,7 @@ plt.savefig('NHi_vs_Z.png')
 # plt.hist(nH_inc,bins=4)
 # plt.xlabel(r'$\mathbf{log \ n_H}$')
 
-plt.show()
+# plt.show()
 
 
 
