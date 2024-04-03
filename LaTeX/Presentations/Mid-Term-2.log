@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  1 APR 2024 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  2 APR 2024 14:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3365,7 +3365,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  128i,18n,122p,478b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Mid-Term-2.pdf (35 pages, 2774161 bytes).
+Output written on Mid-Term-2.pdf (35 pages, 2775312 bytes).
 PDF statistics:
  1230 PDF objects out of 1440 (max. 8388607)
  1097 compressed objects within 11 object streams
