@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from roman import toRoman
 from io import StringIO
-from astropy.io import ascii
+from astropy.io import ascii,fits
+from astropy.table import Table
 from time import sleep
 
 
@@ -213,7 +214,7 @@ absorbers=[
 
 def cloudy_run_sol():
 
-    for a in absorbers[-4:-3]:
+    for a in absorbers:
 
         qso_los=a.qso
         z_abs=a.z_abs
@@ -261,7 +262,7 @@ def cloudy_run_sol():
 
             temp_file=f'{run_name}_temp.txt'
 
-            data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
+            data_temp=genfromtxt(temp_file,delimiter=[11,11,10,10,10])
 
             Te=data_temp[:,1]
             d2t_dr2=data_temp[:,4]
@@ -291,4 +292,29 @@ def cloudy_run_sol():
             os.chdir(cwd)
 
 
-cloudy_run_sol()
+def join_data():
+
+    file1='3c263_0.140756_14.49_col_density_param.fits'
+
+    hdu=fits.open(f'ionisation_modelling_solution/output_fits/{file1}')
+    data=Table(hdu[1].data)
+
+    files=os.listdir('ionisation_modelling_solution/output_fits')
+
+    for f in files:
+
+        if f!=file1:
+        
+            hdu1=fits.open(f'ionisation_modelling_solution/output_fits/{f}')
+            data1=Table(hdu1[1].data)
+            data=vstack([data,data1])
+            
+    data=Table(data)
+    data.write(f'ionisation_modelling_solution/ionisation_modelling_solution_joined_col_density_param.fits',overwrite=True)
+
+
+
+# cloudy_run_sol()
+# join_data()
+            
+

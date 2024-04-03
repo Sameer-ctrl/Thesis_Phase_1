@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from roman import toRoman
 from io import StringIO
-from astropy.io import ascii
+from astropy.io import ascii,fits
+from astropy.table import Table
+from scipy.constants import * 
 
 
 plt.style.use('../Python/my_style.mpl')
@@ -168,25 +170,25 @@ class abs_system():
         self.ion_modelling_sol=sol
 
 
-absorbers=[
-            abs_system('3c263',0.140756),
-            abs_system('pks0637',0.161064),
-            abs_system('pks0637',0.417539),
-            abs_system('pg1424',0.147104),
-            abs_system('pg0003',0.347579),                        
-            abs_system('pg0003',0.386089),
-            abs_system('pg0003',0.421923),
-            abs_system('pg1216',0.282286),
-            abs_system('s135712',0.097869),
-            abs_system('1es1553',0.187764),
-            abs_system('sbs1108',0.463207),
-            abs_system('pg1222',0.378389),
-            abs_system('pg1116',0.138527),
-            abs_system('h1821',0.170006),
-            abs_system('h1821',0.224981),
-            abs_system('pg1121',0.192393),
-            abs_system('pks0405',0.167125)
-           ]
+# absorbers=[
+#             abs_system('3c263',0.140756),
+#             abs_system('pks0637',0.161064),
+#             abs_system('pks0637',0.417539),
+#             abs_system('pg1424',0.147104),
+#             abs_system('pg0003',0.347579),                        
+#             abs_system('pg0003',0.386089),
+#             abs_system('pg0003',0.421923),
+#             abs_system('pg1216',0.282286),
+#             abs_system('s135712',0.097869),
+#             abs_system('1es1553',0.187764),
+#             abs_system('sbs1108',0.463207),
+#             abs_system('pg1222',0.378389),
+#             abs_system('pg1116',0.138527),
+#             abs_system('h1821',0.170006),
+#             abs_system('h1821',0.224981),
+#             abs_system('pg1121',0.192393),
+#             abs_system('pks0405',0.167125)
+#            ]
 
 # for a in absorbers:
 
@@ -206,33 +208,90 @@ absorbers=[
 #     plt.ylim(0,11)
 #     plt.show()
 
-ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 
-NHi=zeros(int(len(data)/2))
 
-nH_exc=zeros(int(len(data)/2))
-err_nH_exc=zeros(int(len(data)/2))
-Z_exc=zeros(int(len(data)/2))
-err_Z_exc=zeros(int(len(data)/2))
+# ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 
-nH_inc=zeros(int(len(data)/2))
-err_nH_inc=zeros(int(len(data)/2))
-Z_inc=zeros(int(len(data)/2))
-err_Z_inc=zeros(int(len(data)/2))
+# NHi=zeros(int(len(data)/2))
 
-k=0
+# nH_exc=zeros(int(len(data)/2))
+# err_nH_exc=zeros(int(len(data)/2))
+# Z_exc=zeros(int(len(data)/2))
+# err_Z_exc=zeros(int(len(data)/2))
 
-for i,abs_sol in enumerate(ion_model_sol):
+# nH_inc=zeros(int(len(data)/2))
+# err_nH_inc=zeros(int(len(data)/2))
+# Z_inc=zeros(int(len(data)/2))
+# err_Z_inc=zeros(int(len(data)/2))
 
-    for n in abs_sol:
-        exc,inc=abs_sol[n]
+# k=0
+
+# for i,abs_sol in enumerate(ion_model_sol):
+
+#     for n in abs_sol:
+#         exc,inc=abs_sol[n]
         
-        NHi[k]=n
+#         NHi[k]=n
 
-        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
-        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
+#         nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+#         nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
 
-        k+=1
+#         k+=1
+
+
+
+# hdu=fits.open(f'ionisation_modelling_solution/ionisation_modelling_solution_joined_col_density_param.fits')
+# data=Table(hdu[1].data)
+
+# nH=data['log_nH']
+# Z=data['log_Z']
+# NHi=data['NHi']
+
+# NH=log10(data['H+']+(10**NHi))
+
+# l=(10**(NH-nH))*(3.24e-19)/1000    #kpc
+# f_Hi=10**NHi/data['H+']
+
+
+# plt.figure()
+# plt.hist(nH,bins=5,histtype='step',linewidth=2)
+
+# plt.figure()
+# plt.hist(Z,bins=6,histtype='step',linewidth=2)
+
+
+# plt.subplot(221)
+# plt.title('nH')
+# plt.scatter(nH,NH,c=log10(l),cmap='jet')
+# plt.colorbar()
+
+
+# plt.subplot(222)
+# plt.title('Z')
+# plt.scatter(Z,NH)
+
+# plt.subplot(223)
+# plt.title('NHi')
+# plt.scatter(NHi,NH,c=log(f_Hi),cmap='jet')
+# plt.colorbar()
+
+# plt.subplot(224)
+# plt.title('L')
+# plt.scatter(l,NH)
+# plt.xscale('log')
+
+# plt.figure()
+
+# plt.scatter(nH,Z,c=NHi,cmap='jet')
+# plt.colorbar()
+
+T_all=[]
+
+
+
+
+
+
 
 
 
@@ -361,7 +420,7 @@ for i,abs_sol in enumerate(ion_model_sol):
 
 
 
-quit()
+# quit()
 
 class BLA():
 
@@ -421,20 +480,41 @@ for i,a in enumerate(absorbers):
     n_ions=a.n_ions
     is_BLA[i]=a.is_BLA
 
-b_H_fit=[]
-n_H_fit=[]
+m=m_p+m_e
 
-for i in range(len(n_H)):
+T_all=8*m*((b_H*1000)**2-(b_OVI*1000)**2)/(15*k)
 
-    if 100>=b_H[i]>45:
-        b_H_fit.append(b_H[i])
-        n_H_fit.append(n_H[i])
+T_aligned=[5.28,6.19,4.36,4.58,5.28,4.80,5.34,4.34,4.58,5.00,5.39,5.51,5.35]
 
-def f(x,m,c):
-    return (m*x)+c
+n=6
 
-fit=curve_fit(f,b_H_fit,n_H_fit)
-print(fit[0])
+# plt.figure(figsize=(8,5))
+
+# plt.hist(T_aligned,bins=n,histtype='step',label=r'$\mathbf{aligned}$',color='red',linewidth=2)
+# plt.hist(log10(T_all),bins=n,histtype='step',label=r'$\mathbf{all}$',color='green',linewidth=2,linestyle='--')
+# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',labelpad=15)
+# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
+# plt.legend(loc='upper left')
+# plt.xticks(fontsize=18)
+# plt.yticks(fontsize=18)
+# plt.savefig('Files_n_figures/T_histogram.png')
+
+# plt.show()
+
+# b_H_fit=[]
+# n_H_fit=[]
+
+# for i in range(len(n_H)):
+
+#     if 100>=b_H[i]>45:
+#         b_H_fit.append(b_H[i])
+#         n_H_fit.append(n_H[i])
+
+# def f(x,m,c):
+#     return (m*x)+c
+
+# fit=curve_fit(f,b_H_fit,n_H_fit)
+# print(fit[0])
 
 
 # plt.figure(figsize=(8,5))
@@ -473,24 +553,24 @@ print(fit[0])
 # plt.savefig('NHi_vs_bHi.png')
 
 
-plt.figure(figsize=(8,5))
+# plt.figure(figsize=(8,5))
 
-plt.hlines(40,13,16,ls='--',color='black',lw=3)
+# plt.hlines(40,13,16,ls='--',color='black',lw=3)
 # plt.scatter(n_H,b_H,label='H',s=70)
-plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red')
+# plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red')
 # plt.plot([42,100],f(array([42,100]),fit[0][0],fit[0][1]),ls='--')
 
 # plt.xlabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
 # plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-plt.xlim(13.35,15.9)
+# plt.xlim(13.35,15.9)
 
 # plt.scatter(n_H,b_H,label='H',c=is_BLA)
 # plt.plot(f(array([42,100]),fit[0][0],fit[0][1]),[42,100],ls='--')
 # plt.ylabel(r'$\mathbf{b} \ \mathbf{(km \ \ s^{-1})}$',labelpad=15)
-plt.ylabel(f'$\mathbf{{b \ (}}$'+ion_label('H')+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=15)
-plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
-plt.savefig('NHi_vs_bHi.png')
-plt.show()
+# plt.ylabel(f'$\mathbf{{b \ (}}$'+ion_label('H')+r'$\mathbf{) \ [km \ {s}^{-1}}]$',labelpad=15)
+# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H')+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15)
+# plt.savefig('NHi_vs_bHi.png')
+# plt.show()
 
 
 

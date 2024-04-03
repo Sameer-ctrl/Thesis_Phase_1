@@ -38,7 +38,7 @@ def write_param(qso,z_abs,run_name,parameters,temp=False):
 
             temp_file=f'{run_name}_temp.txt'
             
-            data_temp=genfromtxt(f'{qso}/z={z_abs}/{run_name}/{temp_file}',delimiter=[11,11,9,10,10])
+            data_temp=genfromtxt(f'{qso}/z={z_abs}/{run_name}/{temp_file}',delimiter=[11,11,10,10,10])
 
             Te=data_temp[:,1]
             d2t_dr2=data_temp[:,4]
@@ -120,7 +120,7 @@ param_data=tuple(zip(*param_data))
 
 temp_file=f'scaling_approx/scaling_temp.txt'
             
-data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
+data_temp=genfromtxt(temp_file,delimiter=[11,11,10,10,10])
 
 Te=data_temp[:,1]
 d2t_dr2=data_temp[:,4]

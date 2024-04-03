@@ -160,7 +160,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
         if save_temp==True:
 
-            data_temp=genfromtxt(temp_file,delimiter=[11,11,9,10,10])
+            data_temp=genfromtxt(temp_file,delimiter=[11,11,10,10,10])
 
             Te=data_temp[:,1]
             d2t_dr2=data_temp[:,4]
