@@ -170,25 +170,25 @@ class abs_system():
         self.ion_modelling_sol=sol
 
 
-# absorbers=[
-#             abs_system('3c263',0.140756),
-#             abs_system('pks0637',0.161064),
-#             abs_system('pks0637',0.417539),
-#             abs_system('pg1424',0.147104),
-#             abs_system('pg0003',0.347579),                        
-#             abs_system('pg0003',0.386089),
-#             abs_system('pg0003',0.421923),
-#             abs_system('pg1216',0.282286),
-#             abs_system('s135712',0.097869),
-#             abs_system('1es1553',0.187764),
-#             abs_system('sbs1108',0.463207),
-#             abs_system('pg1222',0.378389),
-#             abs_system('pg1116',0.138527),
-#             abs_system('h1821',0.170006),
-#             abs_system('h1821',0.224981),
-#             abs_system('pg1121',0.192393),
-#             abs_system('pks0405',0.167125)
-#            ]
+absorbers=[
+            abs_system('3c263',0.140756),
+            abs_system('pks0637',0.161064),
+            abs_system('pks0637',0.417539),
+            abs_system('pg1424',0.147104),
+            abs_system('pg0003',0.347579),                        
+            abs_system('pg0003',0.386089),
+            abs_system('pg0003',0.421923),
+            abs_system('pg1216',0.282286),
+            abs_system('s135712',0.097869),
+            abs_system('1es1553',0.187764),
+            abs_system('sbs1108',0.463207),
+            abs_system('pg1222',0.378389),
+            abs_system('pg1116',0.138527),
+            abs_system('h1821',0.170006),
+            abs_system('h1821',0.224981),
+            abs_system('pg1121',0.192393),
+            abs_system('pks0405',0.167125)
+           ]
 
 # for a in absorbers:
 
@@ -210,33 +210,33 @@ class abs_system():
 
 
 
-# ion_model_sol=[a.ion_modelling_sol for a in absorbers]
+ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 
-# NHi=zeros(int(len(data)/2))
+NHi=zeros(int(len(data)/2))
 
-# nH_exc=zeros(int(len(data)/2))
-# err_nH_exc=zeros(int(len(data)/2))
-# Z_exc=zeros(int(len(data)/2))
-# err_Z_exc=zeros(int(len(data)/2))
+nH_exc=zeros(int(len(data)/2))
+err_nH_exc=zeros(int(len(data)/2))
+Z_exc=zeros(int(len(data)/2))
+err_Z_exc=zeros(int(len(data)/2))
 
-# nH_inc=zeros(int(len(data)/2))
-# err_nH_inc=zeros(int(len(data)/2))
-# Z_inc=zeros(int(len(data)/2))
-# err_Z_inc=zeros(int(len(data)/2))
+nH_inc=zeros(int(len(data)/2))
+err_nH_inc=zeros(int(len(data)/2))
+Z_inc=zeros(int(len(data)/2))
+err_Z_inc=zeros(int(len(data)/2))
 
-# k=0
+k=0
 
-# for i,abs_sol in enumerate(ion_model_sol):
+for i,abs_sol in enumerate(ion_model_sol):
 
-#     for n in abs_sol:
-#         exc,inc=abs_sol[n]
+    for n in abs_sol:
+        exc,inc=abs_sol[n]
         
-#         NHi[k]=n
+        NHi[k]=n
 
-#         nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
-#         nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
+        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
 
-#         k+=1
+        k+=1
 
 
 
@@ -259,51 +259,65 @@ class abs_system():
 # plt.figure()
 # plt.hist(Z,bins=6,histtype='step',linewidth=2)
 
+# plt.figure()
+
+# plt.suptitle('N(H) = N(Hi) + N(Hii)')
 
 # plt.subplot(221)
-# plt.title('nH')
-# plt.scatter(nH,NH,c=log10(l),cmap='jet')
-# plt.colorbar()
+# plt.xlabel('nH')
+# plt.ylabel('N(H)')
+# plt.scatter(nH,NH)
+# # plt.colorbar()
 
 
 # plt.subplot(222)
-# plt.title('Z')
+# plt.xlabel('Z')
+# plt.ylabel('N(H)')
 # plt.scatter(Z,NH)
 
 # plt.subplot(223)
-# plt.title('NHi')
-# plt.scatter(NHi,NH,c=log(f_Hi),cmap='jet')
-# plt.colorbar()
+# plt.xlabel('N(Hi)')
+# plt.ylabel('N(H)')
+# plt.scatter(NHi,NH)
+# # plt.colorbar()
 
 # plt.subplot(224)
-# plt.title('L')
+# plt.xlabel('line of sight thickness (kpc)')
+# plt.ylabel('N(H)')
 # plt.scatter(l,NH)
 # plt.xscale('log')
 
-# plt.figure()
+# plt.show()
 
-# plt.scatter(nH,Z,c=NHi,cmap='jet')
-# plt.colorbar()
+# categories=[r'$\mathbf{Unexplained}$',r'$\mathbf{Explained}$', r'$\mathbf{Uncertain}$']
+# counts=[22,1,3]
 
-T_all=[]
+# plt.figure(figsize=(8,5))
+
+# plt.bar(categories,counts,width=0.3)
+
+# plt.xlabel(r'$\mathbf{Case}$',labelpad=15)
+# plt.ylabel(r'$\mathbf{No. \ of \ components}$',labelpad=15)
+# plt.tick_params(axis='x',bottom=False)
+# plt.ylim(0,25.8)
+# plt.savefig('Ovi_cases.png')
+# plt.show()
 
 
 
-
-
-
+# quit()
 
 
 
 # plt.figure(figsize=(16,10))
 
-# plt.subplot(121)
-# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.subplot(121)
+# # plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
 # # plt.scatter(nH_exc,Z_exc)
 # plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
 # plt.xlabel(r'$\mathbf{log \ n_H}$')
 # plt.ylabel(r'$\mathbf{log \ Z}$')
-# # plt.colorbar()
+# plt.colorbar()
 
 # plt.subplot(122)
 # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
@@ -316,17 +330,20 @@ T_all=[]
 # plt.subplots_adjust(wspace=0.34)
 # plt.savefig('Z_vs_nH.png')
 
+# plt.figure()
+plt.figure(figsize=(16,10))
 
-# plt.figure(figsize=(16,10))
-
-# plt.subplot(121)
+plt.subplot(121)
 # plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# # plt.scatter(nH_exc,NHi)
-# plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
-# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+# plt.scatter(nH_exc,NHi)
+plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,fmt='o',capsize=3)
+plt.xlabel(r'$\mathbf{log \ n_H}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
-# plt.subplot(122)
+plt.subplot(122)
+plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
+plt.xlabel(r'$\mathbf{log \ Z}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
 # # plt.scatter(nH_inc,NHi)
 # plt.errorbar(nH_inc,NHi,xerr=err_nH_inc,fmt='o',capsize=3)
@@ -334,16 +351,18 @@ T_all=[]
 # plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
 # plt.subplots_adjust(wspace=0.34)
-# plt.savefig('NHi_vs_nH.png')
+plt.savefig('NHi_vs_nH_Z.png')
 
+plt.show()
+quit()
 
-# plt.figure(figsize=(16,10))
+plt.figure(figsize=(16,10))
 
 # plt.subplot(121)
 # plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ Z}$')
-# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
+plt.xlabel(r'$\mathbf{log \ Z}$')
+plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
 # plt.subplot(122)
 # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
@@ -352,7 +371,7 @@ T_all=[]
 # plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
 # plt.subplots_adjust(wspace=0.34)
-# plt.savefig('NHi_vs_Z.png')
+plt.savefig('NHi_vs_Z.png')
 
 # plt.figure()
 
@@ -364,7 +383,9 @@ T_all=[]
 # plt.hist(nH_inc,bins=4)
 # plt.xlabel(r'$\mathbf{log \ n_H}$')
 
-# plt.show()
+plt.show()
+
+quit()
 
 
 
@@ -540,16 +561,20 @@ plt.figure(figsize=(8,5))
 plt.scatter(b_H,b_OVI,c='red')
 plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
 plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
-plt.plot(array([0,150]),array([0,150]),ls='--')
-plt.plot(array([0,165]),array([0,165/4]),ls='--')
+plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=15,radicle_font_size=11)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=15,radicle_font_size=11)+')')
+plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=15,radicle_font_size=11)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=15,radicle_font_size=11)+')')
 plt.vlines(40,-10,170,ls='--',color='green')
 plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
 plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
 plt.ylim(bottom=0,top=160)
+plt.legend(fontsize=15)
 plt.xlim(0,170)
+plt.annotate('b_nt=0',(137,33) ,xytext=(140,10),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=15,c='#c02424',weight='bold')
 plt.savefig('bHi_vs_BOvi_danforth.png')
 
-# quit()
+plt.show()
+
+quit()
 
 
 # plt.figure(figsize=(13,7))

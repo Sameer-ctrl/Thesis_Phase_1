@@ -341,7 +341,7 @@ for i,line in enumerate(lines):
         plt.tick_params('y', labelsize=35)
 
     if i < n-n_col:
-        plt.tick_params('x', labelbottom=False)
+        
     
     else:
         plt.tick_params('x', labelbottom=True,labelsize=35)
