@@ -26,15 +26,17 @@
 \headcommand {\beamer@framepages {12}{12}}
 \headcommand {\slideentry {2}{0}{4}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {2}{13}}
-\headcommand {\beamer@subsectionpages {2}{13}}
-\headcommand {\sectionentry {3}{Ionisation Modelling}{14}{Ionisation Modelling}{0}}
-\headcommand {\slideentry {3}{0}{0}{14/14}{}{0}}
+\headcommand {\slideentry {2}{0}{5}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {3}{0}{1}{15/19}{}{0}}
-\headcommand {\beamer@framepages {15}{19}}
-\headcommand {\slideentry {3}{0}{2}{20/24}{}{0}}
-\headcommand {\beamer@framepages {20}{24}}
+\headcommand {\beamer@sectionpages {2}{14}}
+\headcommand {\beamer@subsectionpages {2}{14}}
+\headcommand {\sectionentry {3}{Ionisation Modelling}{15}{Ionisation Modelling}{0}}
+\headcommand {\slideentry {3}{0}{0}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {3}{0}{1}{16/20}{}{0}}
+\headcommand {\beamer@framepages {16}{20}}
+\headcommand {\slideentry {3}{0}{2}{21/24}{}{0}}
+\headcommand {\beamer@framepages {21}{24}}
 \headcommand {\slideentry {3}{0}{3}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
 \headcommand {\slideentry {3}{0}{4}{26/26}{}{0}}
@@ -43,20 +45,31 @@
 \headcommand {\beamer@framepages {27}{27}}
 \headcommand {\slideentry {3}{0}{6}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@sectionpages {2}{28}}
-\headcommand {\beamer@subsectionpages {2}{28}}
-\headcommand {\sectionentry {4}{Towards \textit {the end}}{29}{Towards \textit {the end}}{0}}
-\headcommand {\slideentry {4}{0}{0}{29/29}{}{0}}
+\headcommand {\slideentry {3}{0}{7}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {4}{0}{1}{30/34}{}{0}}
-\headcommand {\beamer@framepages {30}{34}}
-\headcommand {\beamer@sectionpages {2}{34}}
-\headcommand {\beamer@subsectionpages {2}{34}}
-\headcommand {\sectionentry {5}{\translate {References}}{35}{\translate {References}}{0}}
-\headcommand {\slideentry {5}{0}{0}{35/35}{}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@partpages {1}{35}}
-\headcommand {\beamer@subsectionpages {2}{35}}
-\headcommand {\beamer@sectionpages {2}{35}}
-\headcommand {\beamer@documentpages {35}}
+\headcommand {\slideentry {3}{0}{8}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@sectionpages {2}{30}}
+\headcommand {\beamer@subsectionpages {2}{30}}
+\headcommand {\sectionentry {4}{Towards \textit {the end}}{31}{Towards \textit {the end}}{0}}
+\headcommand {\slideentry {4}{0}{0}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {4}{0}{1}{32/36}{}{0}}
+\headcommand {\beamer@framepages {32}{36}}
+\headcommand {\slideentry {4}{0}{2}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@sectionpages {2}{37}}
+\headcommand {\beamer@subsectionpages {2}{37}}
+\headcommand {\sectionentry {5}{\translate {References}}{38}{\translate {References}}{0}}
+\headcommand {\slideentry {5}{0}{0}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@sectionpages {2}{38}}
+\headcommand {\beamer@subsectionpages {2}{38}}
+\headcommand {\sectionentry {6}{\textit {The End}}{39}{\textit {The End}}{0}}
+\headcommand {\slideentry {6}{0}{1}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@subsectionpages {39}{39}}
+\headcommand {\beamer@sectionpages {39}{39}}
+\headcommand {\beamer@documentpages {39}}
 \headcommand {\gdef \inserttotalframenumber {14}}

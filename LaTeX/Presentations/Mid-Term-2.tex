@@ -567,7 +567,7 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/NHi_vs_bHi.png}
+  \includegraphics[width=9cm]{Figures/NHi_vs_bHi_danforth.png}
   \vspace*{-1mm}
   \caption{\ion{H}{i} column density vs. Doppler parameter}
 \end{figure}
@@ -577,14 +577,26 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}[noframenumbering]{\huge{{\textbf{Insights}}}}
 
-  \begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=9cm]{Figures/bHi_vs_BOvi.png}
-    \vspace*{-1mm}
-    \caption{\emph{b}(\ion{O}{vi}) vs. \emph{b}(\ion{H}{i})}
-  \end{figure}
-  
-  \end{frame}
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/bHi_vs_BOvi_danforth.png}
+  \vspace*{-1mm}
+  \caption{\emph{b}(\ion{O}{vi}) vs. \emph{b}(\ion{H}{i}). Grey filled circles are measurements from Danforth et. al 2016.}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\huge{{\textbf{Insights}}}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/T_histogram.png}
+  \vspace*{-1mm}
+  \caption{Distribution of temperature calculated from Doppler parameters of \ion{H}{i} and \ion{O}{vi} lines.}
+\end{figure}
+
+\end{frame}
 
 
 \begin{frame}{}
@@ -618,71 +630,92 @@ SC19B161} % (optional, for multiple authors)
 \end{frame}
 
 
-\begin{frame}{\huge{{\textbf{Scaling approximation}}}}
-
-\uncover<1->{\begin{itemize}
-  \uncover<2->{\item 2d CLOUDY models : computationally expensive} 
-  \uncover<3->{\item Scale column density with metallcity}
-  \uncover<4->{\item N($n_H,Z$) = N($n_H,Z_0$) + log($Z/Z_0$)} 
-  \uncover<5->{\item $Z_0=0.1Z\odot$}
-\end{itemize}
-}
-
-
-\end{frame}
-
-
-\begin{frame}{\huge{{\textbf{}}}}
-
-\vspace*{-5mm}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=10cm]{Figures/scaling.png}
-  \vspace*{-1mm}
-  \caption{Column densities of various ions at different metallcity. N(\ion{H}{i})=$10^{14} \ \text{cm}^{-2}$ and $n_H=10^{-3} \ \text{cm}^{-3}$}
-\end{figure}
-
-\end{frame}
-
 
 \begin{frame}{\huge{{\textbf{Results}}}}
 
-\uncover<1->{
-  \begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=9cm]{Figures/Z_vs_nH.png}
-  \vspace*{-1mm}
-  \caption{Ionisation modelling solutions for both excluding and including \ion{O}{vi} cases.}
-\end{figure}
+\uncover<1->{\begin{itemize}
+  \uncover<2->{\item 16 \ion{O}{vi} absorbers} 
+  \uncover<3->{\item 26 components}
+  \uncover<4->{\item Origin of \ion{O}{vi}}
+\end{itemize}
 }
-  
+
 \end{frame}
 
 
-\begin{frame}[noframenumbering]{}
+\begin{frame}[noframenumbering]{\textbf{Solutions}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=9cm]{Figures/Z_vs_nH.png}
+  \vspace*{-1mm}
+  \caption{Ionisation modelling solutions ($\text{n}_\text{H}, Z$) for all 26 components.}
+\end{figure} 
+
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\textbf{+ve correlation}}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=9cm]{Figures/NHi_vs_nH.png}
   \vspace*{-1mm}
-  \caption{$n_H$ vs. N(\ion{H}{i}) for both excluding and including \ion{O}{vi} cases.}
+  \caption{Variation of N(\ion{H}{i}) with $\text{n}_\text{H}$}
 \end{figure}  
 
 \end{frame}
 
 
-\begin{frame}[noframenumbering]{}
+\begin{frame}[noframenumbering]{\textbf{\ion{O}{vi}} cases}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=9cm]{Figures/NHi_vs_Z.png}
+  \includegraphics[width=9cm]{Figures/Ovi_cases.png}
   \vspace*{-1mm}
-  \caption{$Z$ vs. N(\ion{H}{i}) for both excluding and including \ion{O}{vi} cases.}
+  \caption{\ion{O}{vi} column density predictions.}
 \end{figure}  
 
+\end{frame}
+
+
+
+\begin{frame}[noframenumbering]{\textbf{Ex-1}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=10cm]{Figures/s135712-z=0.097869-compII.png}
+  \vspace*{-1mm}
+  \caption{N(\ion{H}{i})=16.49 cm$^{-2}$}
+\end{figure}  
 
 \end{frame}
+
+
+\begin{frame}[noframenumbering]{\textbf{Ex-2}}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=10cm]{Figures/1es1553-z=0.187764-compI.png}
+  \vspace*{-1mm}
+  \caption{N(\ion{H}{i})=12.76 cm$^{-2}$}
+\end{figure}  
+
+\end{frame}
+
+
+\begin{frame}[noframenumbering]{\textbf{Ex-3}}
+
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=10cm]{Figures/pks0405-z=0.167125-compII.png}
+    \vspace*{-1mm}
+    \caption{N(\ion{H}{i})=13.46 cm$^{-2}$}
+  \end{figure}  
+  
+  \end{frame}
+
 
 
 \begin{frame}{}
@@ -698,11 +731,24 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}{\huge{{\textbf{Ongoing and Future Work}}}}
 
+\uncover<1->{\begin{itemize}
+  \uncover<2->{\item Voigt profile fitting : 6} 
+  \uncover<3->{\item Ionisation modelling : 12}
+  \uncover<4->{\item Exploring the survey results} 
+  \uncover<5->{\item \textit{Finally}, calculating $\Omega_b (BLA)$}
+\end{itemize}
+}
+  
+\end{frame}
+
+
+\begin{frame}{\huge{{\textbf{Summary}}}}
+
   \uncover<1->{\begin{itemize}
-    \uncover<2->{\item Voigt profile fitting : 6} 
-    \uncover<3->{\item Ionisation modelling : 12}
-    \uncover<4->{\item Exploring the survey results} 
-    \uncover<5->{\item \textit{Finally}, calculating $\Omega_b (BLA)$}
+    \item Voigt profile fitting : 22 absorbers -  Voigt profiles
+    \item Ionisation modelling : 16 absorbers - 26 components 
+    \item \ion{O}{vi} couldn't be explained with photoionization models   
+    \item BLA survey towards completion
   \end{itemize}
   }
     
@@ -714,26 +760,64 @@ SC19B161} % (optional, for multiple authors)
 
 \begin{frame}<presentation:0>[noframenumbering]
 
-  {\cite{Lehner-2007} \cite{Richter-2006} \cite{savage-2014} \cite{danforth-2016} \cite{acharya_khaire}}
-      
-  \end{frame}
-      
-  % \end{frame}
-  
-  
-  \begin{frame}
-  \renewcommand{\bibfont}{\footnotesize}
-  \frametitle{\huge{\textbf{References}}}
-  
-  \bibliographystyle{mnras}
-  \bibliography{References}
-  
-  \end{frame}
-  
-  
-  % \end{markdown}
-  
-  \end{document}
+{\cite{Lehner-2007} \cite{Richter-2006} \cite{savage-2014} \cite{danforth-2016} \cite{acharya_khaire}}
+    
+\end{frame}
+    
+% \end{frame}
+
+
+\begin{frame}
+\renewcommand{\bibfont}{\footnotesize}
+\frametitle{\huge{\textbf{References}}}
+
+\bibliographystyle{mnras}
+\bibliography{References}
+
+\end{frame}
+
+\section{\textit{The End}}
+
+\begin{frame}{}
+  \centering \Huge
+  \textbf{\emph{So much universe, and so little time...}}
+\end{frame}
+
+
+% \end{markdown}
+
+\end{document}
+
+
+
+
+% \begin{frame}{\huge{{\textbf{Scaling approximation}}}}
+
+% \uncover<1->{\begin{itemize}
+%   \uncover<2->{\item 2d CLOUDY models : computationally expensive} 
+%   \uncover<3->{\item Scale column density with metallcity}
+%   \uncover<4->{\item N($n_H,Z$) = N($n_H,Z_0$) + log($Z/Z_0$)} 
+%   \uncover<5->{\item $Z_0=0.1Z\odot$}
+% \end{itemize}
+% }
+
+
+% \end{frame}
+
+
+% \begin{frame}{\huge{{\textbf{}}}}
+
+% \vspace*{-5mm}
+
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=10cm]{Figures/scaling.png}
+%   \vspace*{-1mm}
+%   \caption{Column densities of various ions at different metallcity. N(\ion{H}{i})=$10^{14} \ \text{cm}^{-2}$ and $n_H=10^{-3} \ \text{cm}^{-3}$}
+% \end{figure}
+
+% \end{frame}
+
 
 
 

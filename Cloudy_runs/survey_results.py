@@ -57,7 +57,7 @@ class abs_system():
     def __init__(self,qso,z_abs,cont_mark='*'):
 
         file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
-
+        
         with open(file) as f:
             text=f.read()
             text=text.replace('A','')
@@ -144,6 +144,7 @@ class abs_system():
         data_abs=data[mask]
 
         NHi_abs=data_abs['NHi']
+        # err_NHi_abs=data_abs['err_NHi']
 
         sol={}
 
@@ -151,12 +152,13 @@ class abs_system():
 
             NHi_mask=NHi_abs==n
 
+            err_NHi_abs_masked=data_abs['err_NHi'][NHi_mask]
             nH_abs_masked=data_abs['nH'][NHi_mask]
             err_nH_abs_masked=data_abs['err_nH'][NHi_mask]
             Z_abs_masked=data_abs['Z'][NHi_mask]
             err_Z_abs_masked=data_abs['err_Z'][NHi_mask]
             case_abs_masked=data_abs['case'][NHi_mask]
-
+            
             for i,c in enumerate(case_abs_masked):
                 
                 if c=='exc':
@@ -165,7 +167,7 @@ class abs_system():
                 else:
                     sol_inc=[nH_abs_masked[i],err_nH_abs_masked[i],Z_abs_masked[i],err_Z_abs_masked[i]]
 
-            sol[n]=[sol_exc,sol_inc]
+            sol[n]=[sol_exc,sol_inc,err_NHi_abs_masked[0]]
     
         self.ion_modelling_sol=sol
 
@@ -213,6 +215,7 @@ absorbers=[
 ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 
 NHi=zeros(int(len(data)/2))
+err_NHi=zeros(int(len(data)/2))
 
 nH_exc=zeros(int(len(data)/2))
 err_nH_exc=zeros(int(len(data)/2))
@@ -224,19 +227,19 @@ err_nH_inc=zeros(int(len(data)/2))
 Z_inc=zeros(int(len(data)/2))
 err_Z_inc=zeros(int(len(data)/2))
 
-k=0
+# k=0
 
-for i,abs_sol in enumerate(ion_model_sol):
+# for i,abs_sol in enumerate(ion_model_sol):
 
-    for n in abs_sol:
-        exc,inc=abs_sol[n]
+#     for n in abs_sol:
+#         exc,inc,err_NHi_comp=abs_sol[n]
         
-        NHi[k]=n
+#         NHi[k]=n
+#         err_NHi[k]=err_NHi_comp
+#         nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+#         nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
 
-        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
-        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
-
-        k+=1
+#         k+=1
 
 
 
@@ -252,12 +255,16 @@ for i,abs_sol in enumerate(ion_model_sol):
 # l=(10**(NH-nH))*(3.24e-19)/1000    #kpc
 # f_Hi=10**NHi/data['H+']
 
+'nH-Z histogram'
 
 # plt.figure()
 # plt.hist(nH,bins=5,histtype='step',linewidth=2)
 
 # plt.figure()
 # plt.hist(Z,bins=6,histtype='step',linewidth=2)
+
+
+'NH-vs nH,Z,l,NHi'
 
 # plt.figure()
 
@@ -288,6 +295,9 @@ for i,abs_sol in enumerate(ion_model_sol):
 # plt.xscale('log')
 
 # plt.show()
+        
+
+'OVI cases'
 
 # categories=[r'$\mathbf{Unexplained}$',r'$\mathbf{Explained}$', r'$\mathbf{Uncertain}$']
 # counts=[22,1,3]
@@ -303,75 +313,44 @@ for i,abs_sol in enumerate(ion_model_sol):
 # plt.savefig('Ovi_cases.png')
 # plt.show()
 
+'nH-Z'
 
+# plt.figure(figsize=(8,5))
 
-# quit()
+# plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=20)
+# plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=20)
+# plt.savefig('Z_vs_nH.png')
+# plt.show()
 
+'NHi vs nH'
 
+# plt.figure(figsize=(8,5))
+
+# plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,yerr=err_NHi,fmt='o',capsize=3)
+# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=20)
+# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=20)
+# plt.savefig('NHi_vs_nH.png')
+# plt.show()
+
+'NHi vs Z'
 
 # plt.figure(figsize=(16,10))
 
 # # plt.subplot(121)
 # # plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# # plt.scatter(nH_exc,Z_exc)
-# plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
-# plt.ylabel(r'$\mathbf{log \ Z}$')
-# plt.colorbar()
-
-# plt.subplot(122)
-# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# # plt.scatter(nH_inc,Z_inc)
-# plt.errorbar(nH_inc,Z_inc,xerr=err_nH_inc,yerr=err_Z_inc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
-# plt.ylabel(r'$\mathbf{log \ Z}$')
-# # plt.colorbar()
-
-# plt.subplots_adjust(wspace=0.34)
-# plt.savefig('Z_vs_nH.png')
-
-# plt.figure()
-plt.figure(figsize=(16,10))
-
-plt.subplot(121)
-# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# plt.scatter(nH_exc,NHi)
-plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,fmt='o',capsize=3)
-plt.xlabel(r'$\mathbf{log \ n_H}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-plt.subplot(122)
-plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-plt.xlabel(r'$\mathbf{log \ Z}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# # plt.scatter(nH_inc,NHi)
-# plt.errorbar(nH_inc,NHi,xerr=err_nH_inc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
-# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-# plt.subplots_adjust(wspace=0.34)
-plt.savefig('NHi_vs_nH_Z.png')
-
-plt.show()
-quit()
-
-plt.figure(figsize=(16,10))
-
-# plt.subplot(121)
-# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-plt.xlabel(r'$\mathbf{log \ Z}$')
-plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-# plt.subplot(122)
-# plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
+# plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
 # plt.xlabel(r'$\mathbf{log \ Z}$')
 # plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
 
-# plt.subplots_adjust(wspace=0.34)
-plt.savefig('NHi_vs_Z.png')
+# # plt.subplot(122)
+# # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# # plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
+# # plt.xlabel(r'$\mathbf{log \ Z}$')
+# # plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+
+# # plt.subplots_adjust(wspace=0.34)
+# plt.savefig('NHi_vs_Z.png')
 
 # plt.figure()
 
@@ -383,9 +362,8 @@ plt.savefig('NHi_vs_Z.png')
 # plt.hist(nH_inc,bins=4)
 # plt.xlabel(r'$\mathbf{log \ n_H}$')
 
-plt.show()
+# plt.show()
 
-quit()
 
 
 
@@ -503,25 +481,24 @@ for i,a in enumerate(absorbers):
 
 m=m_p+m_e
 
-T_all=8*m*((b_H*1000)**2-(b_OVI*1000)**2)/(15*k)
-
+T_all=((8*m)/(15*k))*((b_H*1000)**2-(b_OVI*1000)**2)
 T_aligned=[5.28,6.19,4.36,4.58,5.28,4.80,5.34,4.34,4.58,5.00,5.39,5.51,5.35]
 
-# n=6
+n=6
+
+'T-histogram'
 
 # plt.figure(figsize=(8,5))
 
 # plt.hist(T_aligned,bins=n,histtype='step',label=r'$\mathbf{aligned}$',color='red',linewidth=2)
 # plt.hist(log10(T_all),bins=n,histtype='step',label=r'$\mathbf{all}$',color='green',linewidth=2,linestyle='--')
-# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',labelpad=15)
-# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15)
+# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',labelpad=15,fontsize=20)
+# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15,fontsize=20)
 # plt.legend(loc='upper left')
-# plt.xticks(fontsize=18)
-# plt.yticks(fontsize=18)
 # plt.savefig('Files_n_figures/T_histogram.png')
 
 # plt.show()
-
+# quit()
 # b_H_fit=[]
 # n_H_fit=[]
 
@@ -556,20 +533,23 @@ for i,b in enumerate(danforth_b):
     danforth_N_Ovi.append(danforth_N[i][1])
 
 
-plt.figure(figsize=(8,5))
+plt.figure(figsize=(16,10))
 
 plt.scatter(b_H,b_OVI,c='red')
 plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
 plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
-plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=15,radicle_font_size=11)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=15,radicle_font_size=11)+')')
-plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=15,radicle_font_size=11)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=15,radicle_font_size=11)+')')
-plt.vlines(40,-10,170,ls='--',color='green')
-plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
-plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=10,fontsize=20)
+plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+plt.vlines(40,-10,170,ls='--',color='green',lw=2)
+plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
+plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
 plt.ylim(bottom=0,top=160)
-plt.legend(fontsize=15)
+plt.legend(loc='upper left',fontsize=20)
 plt.xlim(0,170)
-plt.annotate('b_nt=0',(137,33) ,xytext=(140,10),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=15,c='#c02424',weight='bold')
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+plt.annotate(r'$\mathbf{b_{nt}=0}$',(120,29) ,xytext=(100,9),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
+plt.annotate(r'$\mathbf{b_{th}=0}$',(120,121) ,xytext=(100,135),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
 plt.savefig('bHi_vs_BOvi_danforth.png')
 
 plt.show()
