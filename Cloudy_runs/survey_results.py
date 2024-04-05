@@ -533,28 +533,28 @@ for i,b in enumerate(danforth_b):
     danforth_N_Ovi.append(danforth_N[i][1])
 
 
-plt.figure(figsize=(16,10))
+# plt.figure(figsize=(16,10))
 
-plt.scatter(b_H,b_OVI,c='red')
-plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
-plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
-plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
-plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
-plt.vlines(40,-10,170,ls='--',color='green',lw=2)
-plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
-plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
-plt.ylim(bottom=0,top=160)
-plt.legend(loc='upper left',fontsize=20)
-plt.xlim(0,170)
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
-plt.annotate(r'$\mathbf{b_{nt}=0}$',(120,29) ,xytext=(100,9),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
-plt.annotate(r'$\mathbf{b_{th}=0}$',(120,121) ,xytext=(100,135),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
-plt.savefig('bHi_vs_BOvi_danforth.png')
+# plt.scatter(b_H,b_OVI,c='red')
+# plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
+# plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
+# plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+# plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+# plt.vlines(40,-10,170,ls='--',color='green',lw=2)
+# plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
+# plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
+# plt.ylim(bottom=0,top=160)
+# plt.legend(loc='upper left',fontsize=20)
+# plt.xlim(0,170)
+# plt.xticks(fontsize=20)
+# plt.yticks(fontsize=20)
+# plt.annotate(r'$\mathbf{b_{nt}=0}$',(120,29) ,xytext=(100,9),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
+# plt.annotate(r'$\mathbf{b_{th}=0}$',(120,121) ,xytext=(100,135),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
+# plt.savefig('bHi_vs_BOvi_danforth.png')
 
-plt.show()
+# plt.show()
 
-quit()
+# quit()
 
 
 # plt.figure(figsize=(13,7))
@@ -581,7 +581,7 @@ plt.figure(figsize=(8,5))
 
 plt.hlines(40,13,16,ls='--',color='black',lw=3)
 plt.errorbar(n_H,b_H,xerr=n_H_err,yerr=b_H_err,fmt='o',capsize=3,c='red',label=r'$\mathbf{Our \ measurements}$')
-plt.scatter(danforth_N_Hi,danforth_b_Hi,c='grey',label=r'$\mathbf{Danforth \ et. \ al \ (2016)}$')
+plt.scatter(danforth_N_Hi,danforth_b_Hi,c='grey',label=r'$\mathbf{Danforth \ et \ al. \ (2016)}$')
 
 plt.xlim(13.2,15.9)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  5 APR 2024 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  5 APR 2024 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,7 +1478,7 @@ Package pdftex.def Info: IIST.png  used on input line 348.
 <Figures/Baryon_distribution.png, id=143, 505.28775pt x 426.99525pt>
 File: Figures/Baryon_distribution.png Graphic file (type png)
 <use Figures/Baryon_distribution.png>
-Package pdftex.def Info: Figures/Baryon_distribution.png  used on input line 434.
+Package pdftex.def Info: Figures/Baryon_distribution.png  used on input line 440.
 (pdftex.def)             Requested size: 142.26378pt x 120.21591pt.
 \mymin=\count535
 \mymax=\count536
@@ -1554,7 +1554,7 @@ Package pdftex.def Info: Figures/Baryon_distribution.png  used on input line 434
 <Figures/BLA-individual.png, id=178, 821.0675pt x 404.51125pt>
 File: Figures/BLA-individual.png Graphic file (type png)
 <use Figures/BLA-individual.png>
-Package pdftex.def Info: Figures/BLA-individual.png  used on input line 463.
+Package pdftex.def Info: Figures/BLA-individual.png  used on input line 476.
 (pdftex.def)             Requested size: 170.71652pt x 84.10425pt.
 \mymin=\count603
 \mymax=\count604
@@ -1630,10 +1630,10 @@ Package pdftex.def Info: Figures/BLA-individual.png  used on input line 463.
 <Figures/PG0003+158-z=0.347579-sys-plot.png, id=208, 2384.91pt x 1634.2656pt>
 File: Figures/PG0003+158-z=0.347579-sys-plot.png Graphic file (type png)
 <use Figures/PG0003+158-z=0.347579-sys-plot.png>
-Package pdftex.def Info: Figures/PG0003+158-z=0.347579-sys-plot.png  used on input line 494.
+Package pdftex.def Info: Figures/PG0003+158-z=0.347579-sys-plot.png  used on input line 513.
 (pdftex.def)             Requested size: 227.62204pt x 155.95508pt.
 
-Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
+Overfull \hbox (10.61633pt too wide) in paragraph at lines 513--513
  |  [] 
  []
 
@@ -1711,7 +1711,7 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
 <Figures/metal-ions.png, id=239, 1162.8243pt x 624.4128pt>
 File: Figures/metal-ions.png Graphic file (type png)
 <use Figures/metal-ions.png>
-Package pdftex.def Info: Figures/metal-ions.png  used on input line 523.
+Package pdftex.def Info: Figures/metal-ions.png  used on input line 549.
 (pdftex.def)             Requested size: 199.16928pt x 106.9491pt.
 \mymin=\count739
 \mymax=\count740
@@ -2071,10 +2071,10 @@ Package pdftex.def Info: Figures/metal-ions.png  used on input line 523.
 <Figures/NHi_bHi_distribution.png, id=388, 794.97pt x 492.8814pt>
 File: Figures/NHi_bHi_distribution.png Graphic file (type png)
 <use Figures/NHi_bHi_distribution.png>
-Package pdftex.def Info: Figures/NHi_bHi_distribution.png  used on input line 563.
+Package pdftex.def Info: Figures/NHi_bHi_distribution.png  used on input line 589.
 (pdftex.def)             Requested size: 284.52756pt x 176.40681pt.
 
-Overfull \vbox (10.90564pt too high) detected at line 563
+Overfull \vbox (10.90564pt too high) detected at line 589
  []
 
 \mymin=\count1079
@@ -2151,10 +2151,10 @@ Overfull \vbox (10.90564pt too high) detected at line 563
 <Figures/NHi_vs_bHi_danforth.png, id=419, 522.5121pt x 346.896pt>
 File: Figures/NHi_vs_bHi_danforth.png Graphic file (type png)
 <use Figures/NHi_vs_bHi_danforth.png>
-Package pdftex.def Info: Figures/NHi_vs_bHi_danforth.png  used on input line 575.
+Package pdftex.def Info: Figures/NHi_vs_bHi_danforth.png  used on input line 601.
 (pdftex.def)             Requested size: 256.0748pt x 170.00699pt.
 
-Overfull \vbox (4.50581pt too high) detected at line 575
+Overfull \vbox (4.50581pt too high) detected at line 601
  []
 
 \mymin=\count1147
@@ -2231,15 +2231,15 @@ Overfull \vbox (4.50581pt too high) detected at line 575
 <Figures/b.png, id=450, 268.75406pt x 234.8775pt>
 File: Figures/b.png Graphic file (type png)
 <use Figures/b.png>
-Package pdftex.def Info: Figures/b.png  used on input line 607.
+Package pdftex.def Info: Figures/b.png  used on input line 633.
 (pdftex.def)             Requested size: 71.13188pt x 62.16339pt.
 <Figures/bHi_vs_BOvi_danforth.png, id=451, 991.5444pt x 652.5981pt>
 File: Figures/bHi_vs_BOvi_danforth.png Graphic file (type png)
 <use Figures/bHi_vs_BOvi_danforth.png>
-Package pdftex.def Info: Figures/bHi_vs_BOvi_danforth.png  used on input line 607.
+Package pdftex.def Info: Figures/bHi_vs_BOvi_danforth.png  used on input line 633.
 (pdftex.def)             Requested size: 256.0748pt x 168.5363pt.
 
-Overfull \vbox (8.84459pt too high) detected at line 607
+Overfull \vbox (8.84459pt too high) detected at line 633
  []
 
 \mymin=\count1215
@@ -2316,20 +2316,20 @@ Overfull \vbox (8.84459pt too high) detected at line 607
 <Figures/T.png, id=484, 471.26062pt x 127.97812pt>
 File: Figures/T.png Graphic file (type png)
 <use Figures/T.png>
-Package pdftex.def Info: Figures/T.png  used on input line 640.
+Package pdftex.def Info: Figures/T.png  used on input line 666.
 (pdftex.def)             Requested size: 99.58464pt x 27.04218pt.
 
-Overfull \hbox (19.91815pt too wide) in paragraph at lines 640--640
+Overfull \hbox (19.91815pt too wide) in paragraph at lines 666--666
  [] 
  []
 
 <Figures/T_histogram.png, id=485, 514.5624pt x 350.5095pt>
 File: Figures/T_histogram.png Graphic file (type png)
 <use Figures/T_histogram.png>
-Package pdftex.def Info: Figures/T_histogram.png  used on input line 640.
+Package pdftex.def Info: Figures/T_histogram.png  used on input line 666.
 (pdftex.def)             Requested size: 256.0748pt x 174.44138pt.
 
-Overfull \vbox (6.21384pt too high) detected at line 640
+Overfull \vbox (6.21384pt too high) detected at line 666
  []
 
 \mymin=\count1283
@@ -3116,7 +3116,7 @@ Overfull \vbox (6.21384pt too high) detected at line 640
 <Figures/Z_vs_nH.png, id=813, 549.9747pt x 351.9549pt>
 File: Figures/Z_vs_nH.png Graphic file (type png)
 <use Figures/Z_vs_nH.png>
-Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 697.
+Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 723.
 (pdftex.def)             Requested size: 256.0748pt x 163.87215pt.
 \mymin=\count2031
 \mymax=\count2032
@@ -3192,10 +3192,10 @@ Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 697.
 <Figures/NHi_vs_nH.png, id=847, 535.5207pt x 351.9549pt>
 File: Figures/NHi_vs_nH.png Graphic file (type png)
 <use Figures/NHi_vs_nH.png>
-Package pdftex.def Info: Figures/NHi_vs_nH.png  used on input line 709.
+Package pdftex.def Info: Figures/NHi_vs_nH.png  used on input line 735.
 (pdftex.def)             Requested size: 256.0748pt x 168.30272pt.
 
-Overfull \vbox (2.80154pt too high) detected at line 709
+Overfull \vbox (2.80154pt too high) detected at line 735
  []
 
 \mymin=\count2099
@@ -3272,10 +3272,10 @@ Overfull \vbox (2.80154pt too high) detected at line 709
 <Figures/Ovi_cases.png, id=878, 521.7894pt x 354.123pt>
 File: Figures/Ovi_cases.png Graphic file (type png)
 <use Figures/Ovi_cases.png>
-Package pdftex.def Info: Figures/Ovi_cases.png  used on input line 721.
+Package pdftex.def Info: Figures/Ovi_cases.png  used on input line 747.
 (pdftex.def)             Requested size: 256.0748pt x 173.79195pt.
 
-Overfull \vbox (8.29077pt too high) detected at line 721
+Overfull \vbox (8.29077pt too high) detected at line 747
  []
 
 \mymin=\count2167
@@ -3352,10 +3352,10 @@ Overfull \vbox (8.29077pt too high) detected at line 721
 <Figures/s135712-z=0.097869-compII.png, id=909, 992.9898pt x 610.6815pt>
 File: Figures/s135712-z=0.097869-compII.png Graphic file (type png)
 <use Figures/s135712-z=0.097869-compII.png>
-Package pdftex.def Info: Figures/s135712-z=0.097869-compII.png  used on input line 734.
+Package pdftex.def Info: Figures/s135712-z=0.097869-compII.png  used on input line 760.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 734
+Overfull \vbox (9.88867pt too high) detected at line 760
  []
 
 \mymin=\count2235
@@ -3432,10 +3432,10 @@ Overfull \vbox (9.88867pt too high) detected at line 734
 <Figures/1es1553-z=0.187764-compI.png, id=942, 992.9898pt x 610.6815pt>
 File: Figures/1es1553-z=0.187764-compI.png Graphic file (type png)
 <use Figures/1es1553-z=0.187764-compI.png>
-Package pdftex.def Info: Figures/1es1553-z=0.187764-compI.png  used on input line 746.
+Package pdftex.def Info: Figures/1es1553-z=0.187764-compI.png  used on input line 772.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 746
+Overfull \vbox (9.88867pt too high) detected at line 772
  []
 
 \mymin=\count2303
@@ -3512,10 +3512,10 @@ Overfull \vbox (9.88867pt too high) detected at line 746
 <Figures/pks0405-z=0.167125-compII.png, id=973, 992.9898pt x 610.6815pt>
 File: Figures/pks0405-z=0.167125-compII.png Graphic file (type png)
 <use Figures/pks0405-z=0.167125-compII.png>
-Package pdftex.def Info: Figures/pks0405-z=0.167125-compII.png  used on input line 758.
+Package pdftex.def Info: Figures/pks0405-z=0.167125-compII.png  used on input line 784.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 758
+Overfull \vbox (9.88867pt too high) detected at line 784
  []
 
 \mymin=\count2371
@@ -4020,7 +4020,7 @@ pdfTeX warning: pdflatex (file ./Figures/Sameer_ASI2024_914.pdf): PDF inclusion:
 <Figures/Sameer_ASI2024_914.pdf, id=1181, 2384.91pt x 3179.88pt>
 File: Figures/Sameer_ASI2024_914.pdf Graphic file (type pdf)
 <use Figures/Sameer_ASI2024_914.pdf>
-Package pdftex.def Info: Figures/Sameer_ASI2024_914.pdf  used on input line 815.
+Package pdftex.def Info: Figures/Sameer_ASI2024_914.pdf  used on input line 841.
 (pdftex.def)             Requested size: 162.18062pt x 216.20956pt.
 \mymin=\count2847
 \mymax=\count2848
@@ -4314,7 +4314,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 <Figures/H1821+643_z=0.170006_sys_plot.png, id=1376, 2384.91pt x 1641.7335pt>
 File: Figures/H1821+643_z=0.170006_sys_plot.png Graphic file (type png)
 <use Figures/H1821+643_z=0.170006_sys_plot.png>
-Package pdftex.def Info: Figures/H1821+643_z=0.170006_sys_plot.png  used on input line 886.
+Package pdftex.def Info: Figures/H1821+643_z=0.170006_sys_plot.png  used on input line 912.
 (pdftex.def)             Requested size: 199.16928pt x 137.10304pt.
 \mymin=\count3119
 \mymax=\count3120
@@ -4401,15 +4401,15 @@ Package rerunfilecheck Info: File `Mid-Term-2.out' has not changed.
 (rerunfilecheck)             Checksum: A1C3108AF6AB4EF5B568BF26160B251A;728.
  ) 
 Here is how much of TeX's memory you used:
- 38148 strings out of 480247
- 801765 string characters out of 5896151
- 1114299 words of memory out of 5000000
- 55158 multiletter control sequences out of 15000+600000
+ 38156 strings out of 480247
+ 801939 string characters out of 5896151
+ 1115481 words of memory out of 5000000
+ 55166 multiletter control sequences out of 15000+600000
  547340 words of font info for 176 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,18n,122p,478b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Mid-Term-2.pdf (41 pages, 5084947 bytes).
+Output written on Mid-Term-2.pdf (41 pages, 5085437 bytes).
 PDF statistics:
  1489 PDF objects out of 1728 (max. 8388607)
  1322 compressed objects within 14 object streams
