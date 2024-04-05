@@ -1,78 +1,77 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  4 APR 2024 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  5 APR 2024 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/Presentations/Mid-Term-2
-(/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/Presentations/Mid-Term-2.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
-Document Class: beamer 2022/01/21 v3.65 A class for typesetting presentations
+**/home/sameer/Thesis_Phase_1/LaTeX/Presentations/Mid-Term-2
+(/home/sameer/Thesis_Phase_1/LaTeX/Presentations/Mid-Term-2.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count185
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count167
 )
-\beamer@tempbox=\box50
-\beamer@tempcount=\count186
-\c@beamerpauses=\count187
+\beamer@tempbox=\box45
+\beamer@tempcount=\count168
+\c@beamerpauses=\count169
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
-\beamer@slideinframe=\count188
-\beamer@minimum=\count189
-\beamer@decode@box=\box51
+\beamer@slideinframe=\count170
+\beamer@minimum=\count171
+\beamer@decode@box=\box46
 )
-\beamer@commentbox=\box52
-\beamer@modecount=\count190
+\beamer@commentbox=\box47
+\beamer@modecount=\count172
 ) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\headdp=\dimen138
-\footheight=\dimen139
-\sidebarheight=\dimen140
-\beamer@tempdim=\dimen141
-\beamer@finalheight=\dimen142
-\beamer@animht=\dimen143
-\beamer@animdp=\dimen144
-\beamer@animwd=\dimen145
-\beamer@leftmargin=\dimen146
-\beamer@rightmargin=\dimen147
-\beamer@leftsidebar=\dimen148
-\beamer@rightsidebar=\dimen149
-\beamer@boxsize=\dimen150
-\beamer@vboxoffset=\dimen151
-\beamer@descdefault=\dimen152
-\beamer@descriptionwidth=\dimen153
+\headdp=\dimen134
+\footheight=\dimen135
+\sidebarheight=\dimen136
+\beamer@tempdim=\dimen137
+\beamer@finalheight=\dimen138
+\beamer@animht=\dimen139
+\beamer@animdp=\dimen140
+\beamer@animwd=\dimen141
+\beamer@leftmargin=\dimen142
+\beamer@rightmargin=\dimen143
+\beamer@leftsidebar=\dimen144
+\beamer@rightsidebar=\dimen145
+\beamer@boxsize=\dimen146
+\beamer@vboxoffset=\dimen147
+\beamer@descdefault=\dimen148
+\beamer@descriptionwidth=\dimen149
 \beamer@lastskip=\skip47
-\beamer@areabox=\box53
-\beamer@animcurrent=\box54
-\beamer@animshowbox=\box55
-\beamer@sectionbox=\box56
-\beamer@logobox=\box57
-\beamer@linebox=\box58
-\beamer@sectioncount=\count191
-\beamer@subsubsectionmax=\count192
-\beamer@subsectionmax=\count193
-\beamer@sectionmax=\count194
-\beamer@totalheads=\count195
-\beamer@headcounter=\count196
-\beamer@partstartpage=\count197
-\beamer@sectionstartpage=\count198
-\beamer@subsectionstartpage=\count199
-\beamer@animationtempa=\count266
-\beamer@animationtempb=\count267
-\beamer@xpos=\count268
-\beamer@ypos=\count269
-\beamer@ypos@offset=\count270
-\beamer@showpartnumber=\count271
-\beamer@currentsubsection=\count272
-\beamer@coveringdepth=\count273
-\beamer@sectionadjust=\count274
-\beamer@toclastsection=\count275
-\beamer@tocsectionnumber=\count276
+\beamer@areabox=\box48
+\beamer@animcurrent=\box49
+\beamer@animshowbox=\box50
+\beamer@sectionbox=\box51
+\beamer@logobox=\box52
+\beamer@linebox=\box53
+\beamer@sectioncount=\count173
+\beamer@subsubsectionmax=\count174
+\beamer@subsectionmax=\count175
+\beamer@sectionmax=\count176
+\beamer@totalheads=\count177
+\beamer@headcounter=\count178
+\beamer@partstartpage=\count179
+\beamer@sectionstartpage=\count180
+\beamer@subsectionstartpage=\count181
+\beamer@animationtempa=\count182
+\beamer@animationtempb=\count183
+\beamer@xpos=\count184
+\beamer@ypos=\count185
+\beamer@ypos@offset=\count186
+\beamer@showpartnumber=\count187
+\beamer@currentsubsection=\count188
+\beamer@coveringdepth=\count189
+\beamer@sectionadjust=\count190
+\beamer@tocsectionnumber=\count191
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks14
 ))
 \beamer@paperwidth=\skip48
 \beamer@paperheight=\skip49
@@ -81,192 +80,192 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count277
-\Gm@cntv=\count278
-\c@Gm@tempcnt=\count279
-\Gm@bindingoffset=\dimen154
-\Gm@wd@mp=\dimen155
-\Gm@odd@mp=\dimen156
-\Gm@even@mp=\dimen157
-\Gm@layoutwidth=\dimen158
-\Gm@layoutheight=\dimen159
-\Gm@layouthoffset=\dimen160
-\Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks17
+\Gm@cnth=\count192
+\Gm@cntv=\count193
+\c@Gm@tempcnt=\count194
+\Gm@bindingoffset=\dimen150
+\Gm@wd@mp=\dimen151
+\Gm@odd@mp=\dimen152
+\Gm@even@mp=\dimen153
+\Gm@layoutwidth=\dimen154
+\Gm@layoutheight=\dimen155
+\Gm@layouthoffset=\dimen156
+\Gm@layoutvoffset=\dimen157
+\Gm@dimlist=\toks15
+) (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 105.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen162
-\Gin@req@width=\dimen163
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks18
-\pgfutil@tempdima=\dimen164
-\pgfutil@tempdimb=\dimen165
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen160
+\pgfutil@tempdimb=\dimen161
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box59
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+\pgfutil@abb=\box54
+ (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks19
-\pgfkeys@temptoks=\toks20
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks21
+\pgfkeys@tmptoks=\toks19
 ))
-\pgf@x=\dimen166
-\pgf@y=\dimen167
-\pgf@xa=\dimen168
-\pgf@ya=\dimen169
-\pgf@xb=\dimen170
-\pgf@yb=\dimen171
-\pgf@xc=\dimen172
-\pgf@yc=\dimen173
-\pgf@xd=\dimen174
-\pgf@yd=\dimen175
+\pgf@x=\dimen162
+\pgf@y=\dimen163
+\pgf@xa=\dimen164
+\pgf@ya=\dimen165
+\pgf@xb=\dimen166
+\pgf@yb=\dimen167
+\pgf@xc=\dimen168
+\pgf@yc=\dimen169
+\pgf@xd=\dimen170
+\pgf@yd=\dimen171
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count280
-\c@pgf@countb=\count281
-\c@pgf@countc=\count282
-\c@pgf@countd=\count283
-\t@pgf@toka=\toks22
-\t@pgf@tokb=\toks23
-\t@pgf@tokc=\toks24
-\pgf@sys@id@count=\count284
+\c@pgf@counta=\count195
+\c@pgf@countb=\count196
+\c@pgf@countc=\count197
+\c@pgf@countd=\count198
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+\pgf@sys@id@count=\count199
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
 Driver file for pgf: pgfsys-pdftex.def
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count285
-\pgfsyssoftpath@bigbuffer@items=\count286
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count266
+\pgfsyssoftpath@bigbuffer@items=\count267
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen176
-\pgfmath@count=\count287
-\pgfmath@box=\box60
-\pgfmath@toks=\toks25
-\pgfmath@stack@operand=\toks26
-\pgfmath@stack@operation=\toks27
+\pgfmath@dimen=\dimen172
+\pgfmath@count=\count268
+\pgfmath@box=\box55
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count288
+\c@pgfmathroundto@lastzeros=\count269
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen177
-\pgf@picmaxx=\dimen178
-\pgf@picminy=\dimen179
-\pgf@picmaxy=\dimen180
-\pgf@pathminx=\dimen181
-\pgf@pathmaxx=\dimen182
-\pgf@pathminy=\dimen183
-\pgf@pathmaxy=\dimen184
-\pgf@xx=\dimen185
-\pgf@xy=\dimen186
-\pgf@yx=\dimen187
-\pgf@yy=\dimen188
-\pgf@zx=\dimen189
-\pgf@zy=\dimen190
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen173
+\pgf@picmaxx=\dimen174
+\pgf@picminy=\dimen175
+\pgf@picmaxy=\dimen176
+\pgf@pathminx=\dimen177
+\pgf@pathmaxx=\dimen178
+\pgf@pathminy=\dimen179
+\pgf@pathmaxy=\dimen180
+\pgf@xx=\dimen181
+\pgf@xy=\dimen182
+\pgf@yx=\dimen183
+\pgf@yy=\dimen184
+\pgf@zx=\dimen185
+\pgf@zy=\dimen186
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen191
-\pgf@path@lasty=\dimen192
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen187
+\pgf@path@lasty=\dimen188
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen193
-\pgf@shorten@start@additional=\dimen194
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen189
+\pgf@shorten@start@additional=\dimen190
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box61
-\pgf@hbox=\box62
-\pgf@layerbox@main=\box63
-\pgf@picture@serial@count=\count289
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count270
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen195
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen191
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen196
-\pgf@pt@y=\dimen197
-\pgf@pt@temp=\dimen198
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen192
+\pgf@pt@y=\dimen193
+\pgf@pt@temp=\dimen194
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen199
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen195
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen256
-\pgf@sys@shading@range@num=\count290
-\pgf@shadingcount=\count291
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen196
+\pgf@sys@shading@range@num=\count271
+\pgf@shadingcount=\count272
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box64
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box59
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
-\XC@nummixins=\count292
-\XC@countmixins=\count293
-) (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
- (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+\XC@nummixins=\count273
+\XC@countmixins=\count274
+) (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
+) (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
@@ -283,63 +282,57 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen257
-\Hy@linkcounter=\count294
-\Hy@pagecounter=\count295
+\@linkdim=\dimen197
+\Hy@linkcounter=\count275
+\Hy@pagecounter=\count276
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
 ) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count296
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
-Package hyperref Info: Option `implicit' set `false' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+\Hy@SavedSpaceFactor=\count277
+\pdfmajorversion=\count278
+Package hyperref Info: Option `bookmarks' set `true' on input line 4421.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4421.
+Package hyperref Info: Option `implicit' set `false' on input line 4421.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count297
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count279
  (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen258
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen198
  (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count298
-\Field@Width=\dimen259
-\Fld@charsize=\dimen260
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
-\Hy@abspage=\count299
+\Fld@menulength=\count280
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+\Hy@abspage=\count281
 
 
 Package hyperref Message: Stopped early.
@@ -347,13 +340,12 @@ Package hyperref Message: Stopped early.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
- (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
-with kernel methods
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 )
-\Fld@listcount=\count300
-\c@bookmark@seq@number=\count301
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -364,7 +356,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks28
+\@emptytoks=\toks26
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -373,151 +365,146 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
 Package: sansmathaccent 2020/01/31
  (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
- (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
- (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
-Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
-))))) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
-Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+))) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
 )) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
-\beamer@argscount=\count302
+\beamer@argscount=\count284
 \beamer@lastskipcover=\skip50
-\beamer@trivlistdepth=\count303
+\beamer@trivlistdepth=\count285
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
-\c@lecture=\count304
-\c@part=\count305
-\c@section=\count306
-\c@subsection=\count307
-\c@subsubsection=\count308
+\c@lecture=\count286
+\c@part=\count287
+\c@section=\count288
+\c@subsection=\count289
+\c@subsubsection=\count290
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
-\beamer@framebox=\box65
-\beamer@frametitlebox=\box66
-\beamer@zoombox=\box67
-\beamer@zoomcount=\count309
-\beamer@zoomframecount=\count310
-\beamer@frametextheight=\dimen261
-\c@subsectionslide=\count311
+\beamer@framebox=\box60
+\beamer@frametitlebox=\box61
+\beamer@zoombox=\box62
+\beamer@zoomcount=\count291
+\beamer@zoomframecount=\count292
+\beamer@frametextheight=\dimen257
+\c@subsectionslide=\count293
 \beamer@frametopskip=\skip51
 \beamer@framebottomskip=\skip52
 \beamer@frametopskipautobreak=\skip53
 \beamer@framebottomskipautobreak=\skip54
-\beamer@envbody=\toks29
-\framewidth=\dimen262
-\c@framenumber=\count312
+\beamer@envbody=\toks27
+\framewidth=\dimen258
+\c@framenumber=\count294
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
-\beamer@splitbox=\box68
-\beamer@autobreakcount=\count313
-\beamer@autobreaklastheight=\dimen263
-\beamer@frametitletoks=\toks30
-\beamer@framesubtitletoks=\toks31
+\beamer@splitbox=\box63
+\beamer@autobreakcount=\count295
+\beamer@autobreaklastheight=\dimen259
+\beamer@frametitletoks=\toks28
+\beamer@framesubtitletoks=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
-\beamer@footins=\box69
+\beamer@footins=\box64
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
-\beamer@frameboxcopy=\box70
+\beamer@frameboxcopy=\box65
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
-\beamer@sbttoks=\toks32
+\beamer@sbttoks=\toks30
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
-\bmb@box=\box71
-\bmb@colorbox=\box72
-\bmb@boxwidth=\dimen264
-\bmb@boxheight=\dimen265
-\bmb@prevheight=\dimen266
-\bmb@temp=\dimen267
-\bmb@dima=\dimen268
-\bmb@dimb=\dimen269
-\bmb@prevheight=\dimen270
+\bmb@box=\box66
+\bmb@colorbox=\box67
+\bmb@boxshadow=\box68
+\bmb@boxshadowball=\box69
+\bmb@boxshadowballlarge=\box70
+\bmb@temp=\dimen260
+\bmb@dima=\dimen261
+\bmb@dimb=\dimen262
+\bmb@prevheight=\dimen263
 )
-\beamer@blockheadheight=\dimen271
+\beamer@blockheadheight=\dimen264
 )) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks33
+\@enLab=\toks31
 )
-\beamer@bibiconwidth=\skip55
-\c@figure=\count314
-\c@table=\count315
-\abovecaptionskip=\skip56
-\belowcaptionskip=\skip57
+\c@figure=\count296
+\c@table=\count297
+\abovecaptionskip=\skip55
+\belowcaptionskip=\skip56
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
-\beamer@section@min@dim=\dimen272
+\beamer@section@min@dim=\dimen265
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip58
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2021/08/26 v2.01 AMS text
+Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks34
-\ex@=\dimen273
+\@emptytoks=\toks32
+\ex@=\dimen266
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen274
+\pmbraise@=\dimen267
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2021/08/26 v2.02 operator names
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count316
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count317
-\leftroot@=\count318
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count319
-\DOTSCASE@=\count320
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box73
-\strutbox@=\box74
-\big@size=\dimen275
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count321
-\c@MaxMatrixCols=\count322
+\inf@bad=\count298
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count299
+\leftroot@=\count300
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count301
+\DOTSCASE@=\count302
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box71
+\strutbox@=\box72
+\big@size=\dimen268
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count303
+\c@MaxMatrixCols=\count304
 \dotsspace@=\muskip17
-\c@parentequation=\count323
-\dspbrk@lvl=\count324
-\tag@help=\toks35
-\row@=\count325
-\column@=\count326
-\maxfields@=\count327
-\andhelp@=\toks36
-\eqnshift@=\dimen276
-\alignsep@=\dimen277
-\tagshift@=\dimen278
-\tagwidth@=\dimen279
-\totwidth@=\dimen280
-\lineht@=\dimen281
-\@envbody=\toks37
-\multlinegap=\skip59
-\multlinetaggap=\skip60
-\mathdisplay@stack=\toks38
-LaTeX Info: Redefining \[ on input line 2938.
-LaTeX Info: Redefining \] on input line 2939.
+\c@parentequation=\count305
+\dspbrk@lvl=\count306
+\tag@help=\toks33
+\row@=\count307
+\column@=\count308
+\maxfields@=\count309
+\andhelp@=\toks34
+\eqnshift@=\dimen269
+\alignsep@=\dimen270
+\tagshift@=\dimen271
+\tagwidth@=\dimen272
+\totwidth@=\dimen273
+\lineht@=\dimen274
+\@envbody=\toks35
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks39
-\thm@bodyfont=\toks40
-\thm@headfont=\toks41
-\thm@notefont=\toks42
-\thm@headpunct=\toks43
-\thm@preskip=\skip61
-\thm@postskip=\skip62
-\thm@headsep=\skip63
-\dth@everypar=\toks44
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip60
+\thm@postskip=\skip61
+\thm@headsep=\skip62
+\dth@everypar=\toks42
 )
-\c@theorem=\count328
+\c@theorem=\count310
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
-\beamer@dima=\dimen282
-\beamer@dimb=\dimen283
+\beamer@dima=\dimen275
+\beamer@dimb=\dimen276
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks43
+\inpenc@posthook=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/generic/mathabx/mathabx.sty
 Package: mathabx 2003/07/29 v0.0 Non-standard LaTeX package mathabx
 \symmatha=\mathgroup6
@@ -761,11 +748,11 @@ LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 683.
 LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 684.
 LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 686.
 LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 688.
-\mayacnter=\count329
-\mayacnta=\count330
-\mayacntb=\count331
-\mayacntc=\count332
-\mayawidth=\dimen284
+\mayacnter=\count311
+\mayacnta=\count312
+\mayacntb=\count313
+\mayacntc=\count314
+\mayawidth=\dimen277
 LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
 LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
 LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
@@ -795,130 +782,130 @@ LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
 )) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathpazo.sty
-Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup9
 ) (/usr/share/texlive/texmf-dist/tex/latex/eulervm/eulervm.sty
 Package: eulervm 2005/01/11 v4.0 (WaS)
 ) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip64
-\bibsep=\skip65
+\bibhang=\skip63
+\bibsep=\skip64
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count333
+\c@NAT@ctr=\count315
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip66
-\f@nch@O@elh=\skip67
-\f@nch@O@erh=\skip68
-\f@nch@O@olh=\skip69
-\f@nch@O@orh=\skip70
-\f@nch@O@elf=\skip71
-\f@nch@O@erf=\skip72
-\f@nch@O@olf=\skip73
-\f@nch@O@orf=\skip74
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+\f@nch@headwidth=\skip65
+\f@nch@O@elh=\skip66
+\f@nch@O@erh=\skip67
+\f@nch@O@olh=\skip68
+\f@nch@O@orh=\skip69
+\f@nch@O@elf=\skip70
+\f@nch@O@erf=\skip71
+\f@nch@O@olf=\skip72
+\f@nch@O@orf=\skip73
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box75
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box73
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen285
-\pgf@nodesepend=\dimen286
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen278
+\pgf@nodesepend=\dimen279
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen287
-\pgffor@skip=\dimen288
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen280
+\pgffor@skip=\dimen281
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count334
-\pgfplotmarksize=\dimen289
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count316
+\pgfplotmarksize=\dimen282
 )
-\tikz@lastx=\dimen290
-\tikz@lasty=\dimen291
-\tikz@lastxsaved=\dimen292
-\tikz@lastysaved=\dimen293
-\tikz@lastmovetox=\dimen294
-\tikz@lastmovetoy=\dimen295
-\tikzleveldistance=\dimen296
-\tikzsiblingdistance=\dimen297
-\tikz@figbox=\box76
-\tikz@figbox@bg=\box77
-\tikz@tempbox=\box78
-\tikz@tempbox@bg=\box79
-\tikztreelevel=\count335
-\tikznumberofchildren=\count336
-\tikznumberofcurrentchild=\count337
-\tikz@fig@count=\count338
+\tikz@lastx=\dimen283
+\tikz@lasty=\dimen284
+\tikz@lastxsaved=\dimen285
+\tikz@lastysaved=\dimen286
+\tikz@lastmovetox=\dimen287
+\tikz@lastmovetoy=\dimen288
+\tikzleveldistance=\dimen289
+\tikzsiblingdistance=\dimen290
+\tikz@figbox=\box74
+\tikz@figbox@bg=\box75
+\tikz@tempbox=\box76
+\tikz@tempbox@bg=\box77
+\tikztreelevel=\count317
+\tikznumberofchildren=\count318
+\tikznumberofcurrentchild=\count319
+\tikz@fig@count=\count320
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count339
-\pgfmatrixcurrentcolumn=\count340
-\pgf@matrix@numberofcolumns=\count341
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count321
+\pgfmatrixcurrentcolumn=\count322
+\pgf@matrix@numberofcolumns=\count323
 )
-\tikz@expandcount=\count342
+\tikz@expandcount=\count324
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen298
-\captionmargin@=\dimen299
-\captionwidth=\dimen300
-\caption@tempdima=\dimen301
-\caption@indent=\dimen302
-\caption@parindent=\dimen303
-\caption@hangindent=\dimen304
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen291
+\captionmargin@=\dimen292
+\captionwidth=\dimen293
+\caption@tempdima=\dimen294
+\caption@indent=\dimen295
+\caption@parindent=\dimen296
+\caption@hangindent=\dimen297
 Package caption Info: beamer document class detected.
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-beamer.sto
-File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the beamer document classes (AR)
-))
-\c@caption@flags=\count343
-\c@continuedfloat=\count344
+)
+\c@caption@flags=\count325
+\c@continuedfloat=\count326
+Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 )
-\c@subfigure=\count345
-\c@subtable=\count346
+\c@subfigure=\count327
+\c@subtable=\count328
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfpages.sty
 Package: pgfpages 2011/01/05 ver 0.02
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count347
-\calc@Bcount=\count348
-\calc@Adimen=\dimen305
-\calc@Bdimen=\dimen306
-\calc@Askip=\skip75
-\calc@Bskip=\skip76
+\calc@Acount=\count329
+\calc@Bcount=\count330
+\calc@Adimen=\dimen298
+\calc@Bdimen=\dimen299
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count349
-\calc@Cskip=\skip77
+\calc@Ccount=\count331
+\calc@Cskip=\skip76
 )
-\pgf@logicalpages=\count350
-\pgf@firstshipout=\count351
-\pgf@lastshipout=\count352
-\pgf@currentshipout=\count353
-\pgf@cpn=\count354
-\pgf@shipoutnextto=\count355
-\pgfphysicalheight=\dimen307
-\pgfphysicalwidth=\dimen308
-\pgfpages@shipoutbox=\box80
+\pgf@logicalpages=\count332
+\pgf@firstshipout=\count333
+\pgf@lastshipout=\count334
+\pgf@currentshipout=\count335
+\pgf@cpn=\count336
+\pgf@shipoutnextto=\count337
+\pgfphysicalheight=\dimen300
+\pgfphysicalwidth=\dimen301
+\pgfpages@shipoutbox=\box78
 ) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
@@ -927,241 +914,239 @@ LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
-Package: animate 2022/01/31 PDF & SVG animations from files and inline graphics
+Package: animate 2019/12/03 PDF & SVG animations from files and inline graphics
  (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
  (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks49
-\XKV@tempa@toks=\toks50
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
 )
-\XKV@depth=\count356
+\XKV@depth=\count338
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
-Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+Package: zref-abspage 2019/11/29 v2.28 Module abspage for zref (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
-Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
-Package zref Info: New property list: main on input line 764.
-Package zref Info: New property: default on input line 765.
-Package zref Info: New property: page on input line 766.
+Package: zref-base 2019/11/29 v2.28 Module base for zref (HO)
+Package zref Info: New property list: main on input line 763.
+Package zref Info: New property: default on input line 764.
+Package zref Info: New property: page on input line 765.
 )
-\c@abspage=\count357
+\c@abspage=\count339
 Package zref Info: New property: abspage on input line 66.
-) (/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-01-21 L3 programming layer (loader) 
- (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count358
-\l__pdf_internal_box=\box81
-))
-Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+) (/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count340
+\l__pdf_internal_box=\box79
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
 )
-Package: pdfbase 2021/09/12 v0.53 driver independent access to low-level PDF features
-\g_pbs_page_int=\count359
-\g_pbs_oc_int=\count360
+Package: pdfbase 2020/01/27 v0.36 driver independent access to low-level PDF features
+\g_pbs_page_int=\count341
+\g_pbs_oc_int=\count342
 ) (/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
-Package: ocgbase 2021/06/11 v0.20 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count361
+Package: ocgbase 2019/11/04 v0.17 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count343
 )
-\@anim@box=\box82
-\@anim@measbox=\box83
-\@anim@tmpdima=\dimen309
-\@anim@tmpdimb=\dimen310
-\@anim@num=\count362
-\@anim@curframe=\count363
-\@anim@curframe@zb=\count364
-\@anim@resizeflags=\count365
-\@anim@skipfram=\count366
-\@anim@mulframecnt=\count367
+\@anim@box=\box80
+\@anim@measbox=\box81
+\@anim@tmpdima=\dimen302
+\@anim@tmpdimb=\dimen303
+\@anim@num=\count344
+\@anim@curframe=\count345
+\@anim@curframe@zb=\count346
+\@anim@resizeflags=\count347
+\@anim@skipfram=\count348
+\@anim@mulframecnt=\count349
 \@anim@@tmlnfile=\read3
-\@anim@tmpcnt=\count368
-\c@@anim@ltxcnt=\count369
-\@anim@curlayer=\count370
-\@anim@lineno=\count371
-\@anim@curfield=\count372
-\@anim@@resizeflags=\count373
+\@anim@tmpcnt=\count350
+\c@@anim@ltxcnt=\count351
+\@anim@curlayer=\count352
+\@anim@lineno=\count353
+\@anim@curfield=\count354
+\@anim@@resizeflags=\count355
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
  (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks51
-\verbatim@line=\toks52
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks49
+\verbatim@line=\toks50
 \verbatim@in@stream=\read4
 ) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box84
-\tcb@upperbox=\box85
-\tcb@lowerbox=\box86
-\tcb@phantombox=\box87
-\c@tcbbreakpart=\count374
-\c@tcblayer=\count375
-\c@tcolorbox@number=\count376
+\tcb@titlebox=\box82
+\tcb@upperbox=\box83
+\tcb@lowerbox=\box84
+\tcb@phantombox=\box85
+\c@tcbbreakpart=\count356
+\c@tcblayer=\count357
+\tcolorbox@number=\count358
+\tcb@temp=\box86
+\tcb@temp=\box87
 \tcb@temp=\box88
 \tcb@temp=\box89
-\tcb@temp=\box90
-\tcb@temp=\box91
+\tcb@out=\write5
+\tcb@record@out=\write6
  (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '5.0.2'
-\c@tcbrastercolumn=\count377
-\c@tcbrasterrow=\count378
-\c@tcbrasternum=\count379
-\c@tcbraster=\count380
+Library (tcolorbox): 'tcbraster.code.tex' version '4.22'
+\c@tcbrastercolumn=\count359
+\c@tcbrasterrow=\count360
+\c@tcbraster=\count361
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '5.0.2'
-\tcb@waterbox=\box92
+Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
+\tcb@waterbox=\box90
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '5.0.2'
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfcol.sty
-Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
-)
-Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box93
-\tcb@totalupperbox=\box94
-\tcb@totallowerbox=\box95
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.22'
+\tcb@testbox=\box91
+\tcb@totalupperbox=\box92
+\tcb@totallowerbox=\box93
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
-Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.22'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
-Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.22'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
-Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
-\tcbfitdim=\dimen311
-\tcb@lowerfitdim=\dimen312
-\tcb@upperfitdim=\dimen313
-\tcb@cur@hbadness=\count381
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.22'
+\tcbfitdim=\dimen304
+\tcb@lowerfitdim=\dimen305
+\tcb@upperfitdim=\dimen306
+\tcb@cur@hbadness=\count362
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
-Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.22'
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2022-01-12 L3 Experimental document command parser
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count363
+\g__xparse_grabber_int=\count364
+\l__xparse_m_args_int=\count365
+\l__xparse_v_nesting_int=\count366
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
-Library (tcolorbox): 'tcblistingsutf8.code.tex' version '5.0.2'
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
-Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count382
-\lst@gtempboxa=\box96
-\lst@token=\toks53
-\lst@length=\count383
-\lst@currlwidth=\dimen314
-\lst@column=\count384
-\lst@pos=\count385
-\lst@lostspace=\dimen315
-\lst@width=\dimen316
-\lst@newlines=\count386
-\lst@lineno=\count387
-\lst@maxwidth=\dimen317
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count367
+\lst@gtempboxa=\box94
+\lst@token=\toks51
+\lst@length=\count368
+\lst@currlwidth=\dimen307
+\lst@column=\count369
+\lst@pos=\count370
+\lst@lostspace=\dimen308
+\lst@width=\dimen309
+\lst@newlines=\count371
+\lst@lineno=\count372
+\lst@maxwidth=\dimen310
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count388
-\lst@skipnumbers=\count389
-\lst@framebox=\box97
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count373
+\lst@skipnumbers=\count374
+\lst@framebox=\box95
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
+File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
-Library (tcolorbox): 'tcblistingscore.code.tex' version '5.0.2'
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.22'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.22'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.22'
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
-\c@tcblisting=\count390
-)) (/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
-Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+\c@tcblisting=\count375
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
-Library (tcolorbox): 'tcbexternal.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.22'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
-Library (tcolorbox): 'tcbmagazine.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.22'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
-Library (tcolorbox): 'tcbvignette.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.22'
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
-File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
-Library (tcolorbox): 'tcbposter.code.tex' version '5.0.2'
+Library (tcolorbox): 'tcbposter.code.tex' version '4.22'
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodepartlowerbox=\box98
-\pgfnodeparttwobox=\box99
-\pgfnodepartthreebox=\box100
-\pgfnodepartfourbox=\box101
-\pgfnodeparttwentybox=\box102
-\pgfnodepartnineteenbox=\box103
-\pgfnodeparteighteenbox=\box104
-\pgfnodepartseventeenbox=\box105
-\pgfnodepartsixteenbox=\box106
-\pgfnodepartfifteenbox=\box107
-\pgfnodepartfourteenbox=\box108
-\pgfnodepartthirteenbox=\box109
-\pgfnodeparttwelvebox=\box110
-\pgfnodepartelevenbox=\box111
-\pgfnodeparttenbox=\box112
-\pgfnodepartninebox=\box113
-\pgfnodeparteightbox=\box114
-\pgfnodepartsevenbox=\box115
-\pgfnodepartsixbox=\box116
-\pgfnodepartfivebox=\box117
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box96
+\pgfnodeparttwobox=\box97
+\pgfnodepartthreebox=\box98
+\pgfnodepartfourbox=\box99
+\pgfnodeparttwentybox=\box100
+\pgfnodepartnineteenbox=\box101
+\pgfnodeparteighteenbox=\box102
+\pgfnodepartseventeenbox=\box103
+\pgfnodepartsixteenbox=\box104
+\pgfnodepartfifteenbox=\box105
+\pgfnodepartfourteenbox=\box106
+\pgfnodepartthirteenbox=\box107
+\pgfnodeparttwelvebox=\box108
+\pgfnodepartelevenbox=\box109
+\pgfnodeparttenbox=\box110
+\pgfnodepartninebox=\box111
+\pgfnodeparteightbox=\box112
+\pgfnodepartsevenbox=\box113
+\pgfnodepartsixbox=\box114
+\pgfnodepartfivebox=\box115
 )))
-\marginwidth=\skip78
+\marginwidth=\skip77
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemeDresden.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthememiniframes.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty)
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 296.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 296.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 296.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 296.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 296.
 
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 309.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
-File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (./Mid-Term-2.aux)
+(./Mid-Term-2.aux)
 \openout1 = `Mid-Term-2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 309.
@@ -1180,9 +1165,10 @@ LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 309.
 LaTeX Font Info:    ... okay on input line 309.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 309.
 LaTeX Font Info:    ... okay on input line 309.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 309.
-LaTeX Font Info:    ... okay on input line 309.
-
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 309.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1219,39 +1205,40 @@ LaTeX Font Info:    ... okay on input line 309.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count391
-\scratchdimen=\dimen318
-\scratchbox=\box118
-\nofMPsegments=\count392
-\nofMParguments=\count393
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count394
-\MPscratchDim=\dimen319
-\MPnumerator=\count395
-\makeMPintoPDFobject=\count396
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count376
+\scratchdimen=\dimen311
+\scratchbox=\box116
+\nofMPsegments=\count377
+\nofMParguments=\count378
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count379
+\MPscratchDim=\dimen312
+\MPnumerator=\count380
+\makeMPintoPDFobject=\count381
+\everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
+)) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box117
 Package hyperref Info: Link coloring OFF on input line 309.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count397
+\c@section@level=\count382
 )
 LaTeX Info: Redefining \ref on input line 309.
 LaTeX Info: Redefining \pageref on input line 309.
 LaTeX Info: Redefining \nameref on input line 309.
  (./Mid-Term-2.out) (./Mid-Term-2.out)
-\@outlinefile=\write5
-\openout5 = `Mid-Term-2.out'.
+\@outlinefile=\write7
+\openout7 = `Mid-Term-2.out'.
 
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
@@ -1307,72 +1294,68 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count398
+\c@lstlisting=\count383
  (./Mid-Term-2.nav)
-\mymin=\count399
-\mymax=\count400
-\mymin=\count401
-\mymax=\count402
-\mymin=\count403
-\mymax=\count404
-\mymin=\count405
-\mymax=\count406
-\mymin=\count407
-\mymax=\count408
-\mymin=\count409
-\mymax=\count410
-\mymin=\count411
-\mymax=\count412
-\mymin=\count413
-\mymax=\count414
-\mymin=\count415
-\mymax=\count416
-\mymin=\count417
-\mymax=\count418
-\mymin=\count419
-\mymax=\count420
-\mymin=\count421
-\mymax=\count422
-\mymin=\count423
-\mymax=\count424
-\mymin=\count425
-\mymax=\count426
-\mymin=\count427
-\mymax=\count428
-\mymin=\count429
-\mymax=\count430
-\mymin=\count431
-\mymax=\count432
-\mymin=\count433
-\mymax=\count434
-\mymin=\count435
-\mymax=\count436
-\mymin=\count437
-\mymax=\count438
-\mymin=\count439
-\mymax=\count440
-\mymin=\count441
-\mymax=\count442
-\mymin=\count443
-\mymax=\count444
-\mymin=\count445
-\mymax=\count446
-\mymin=\count447
-\mymax=\count448
-\mymin=\count449
-\mymax=\count450
-\mymin=\count451
-\mymax=\count452
-\mymin=\count453
-\mymax=\count454
-\mymin=\count455
-\mymax=\count456
-\mymin=\count457
-\mymax=\count458
-\mymin=\count459
-\mymax=\count460
-\mymin=\count461
-\mymax=\count462
+\mymin=\count384
+\mymax=\count385
+\mymin=\count386
+\mymax=\count387
+\mymin=\count388
+\mymax=\count389
+\mymin=\count390
+\mymax=\count391
+\mymin=\count392
+\mymax=\count393
+\mymin=\count394
+\mymax=\count395
+\mymin=\count396
+\mymax=\count397
+\mymin=\count398
+\mymax=\count399
+\mymin=\count400
+\mymax=\count401
+\mymin=\count402
+\mymax=\count403
+\mymin=\count404
+\mymax=\count405
+\mymin=\count406
+\mymax=\count407
+\mymin=\count408
+\mymax=\count409
+\mymin=\count410
+\mymax=\count411
+\mymin=\count412
+\mymax=\count413
+\mymin=\count414
+\mymax=\count415
+\mymin=\count416
+\mymax=\count417
+\mymin=\count418
+\mymax=\count419
+\mymin=\count420
+\mymax=\count421
+\mymin=\count422
+\mymax=\count423
+\mymin=\count424
+\mymax=\count425
+\mymin=\count426
+\mymax=\count427
+\mymin=\count428
+\mymax=\count429
+\mymin=\count430
+\mymax=\count431
+\mymin=\count432
+\mymax=\count433
+\mymin=\count434
+\mymax=\count435
+\mymin=\count436
+\mymax=\count437
+\mymin=\count438
+\mymax=\count439
+\mymin=\count440
+\mymax=\count441
+\mymin=\count442
+\mymax=\count443
 LaTeX Font Info:    Trying to load font information for U+zeur on input line 348.
  (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1392,7 +1375,7 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 Overfull \vbox (14.00206pt too high) detected at line 348
  []
 
-<IIST.png, id=74, 317.185pt x 317.185pt>
+<IIST.png, id=70, 317.185pt x 317.185pt>
 File: IIST.png Graphic file (type png)
 <use IIST.png>
 Package pdftex.def Info: IIST.png  used on input line 348.
@@ -1400,218 +1383,206 @@ Package pdftex.def Info: IIST.png  used on input line 348.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./IIST.png>]
-\mymin=\count463
-\mymax=\count464
-\mymin=\count465
-\mymax=\count466
-\mymin=\count467
-\mymax=\count468
-\mymin=\count469
-\mymax=\count470
-\mymin=\count471
-\mymax=\count472
-\mymin=\count473
-\mymax=\count474
-\mymin=\count475
-\mymax=\count476
-\mymin=\count477
-\mymax=\count478
-\mymin=\count479
-\mymax=\count480
-\mymin=\count481
-\mymax=\count482
-\mymin=\count483
-\mymax=\count484
-\mymin=\count485
-\mymax=\count486
-\mymin=\count487
-\mymax=\count488
-\mymin=\count489
-\mymax=\count490
-\mymin=\count491
-\mymax=\count492
-\mymin=\count493
-\mymax=\count494
-\mymin=\count495
-\mymax=\count496
-\mymin=\count497
-\mymax=\count498
-\mymin=\count499
-\mymax=\count500
-\mymin=\count501
-\mymax=\count502
-\mymin=\count503
-\mymax=\count504
-\mymin=\count505
-\mymax=\count506
-\mymin=\count507
-\mymax=\count508
-\mymin=\count509
-\mymax=\count510
-\mymin=\count511
-\mymax=\count512
-\mymin=\count513
-\mymax=\count514
-\mymin=\count515
-\mymax=\count516
-\mymin=\count517
-\mymax=\count518
-\mymin=\count519
-\mymax=\count520
-\mymin=\count521
-\mymax=\count522
-\mymin=\count523
-\mymax=\count524
-\mymin=\count525
-\mymax=\count526
+\mymin=\count444
+\mymax=\count445
+\mymin=\count446
+\mymax=\count447
+\mymin=\count448
+\mymax=\count449
+\mymin=\count450
+\mymax=\count451
+\mymin=\count452
+\mymax=\count453
+\mymin=\count454
+\mymax=\count455
+\mymin=\count456
+\mymax=\count457
+\mymin=\count458
+\mymax=\count459
+\mymin=\count460
+\mymax=\count461
+\mymin=\count462
+\mymax=\count463
+\mymin=\count464
+\mymax=\count465
+\mymin=\count466
+\mymax=\count467
+\mymin=\count468
+\mymax=\count469
+\mymin=\count470
+\mymax=\count471
+\mymin=\count472
+\mymax=\count473
+\mymin=\count474
+\mymax=\count475
+\mymin=\count476
+\mymax=\count477
+\mymin=\count478
+\mymax=\count479
+\mymin=\count480
+\mymax=\count481
+\mymin=\count482
+\mymax=\count483
+\mymin=\count484
+\mymax=\count485
+\mymin=\count486
+\mymax=\count487
+\mymin=\count488
+\mymax=\count489
+\mymin=\count490
+\mymax=\count491
+\mymin=\count492
+\mymax=\count493
+\mymin=\count494
+\mymax=\count495
+\mymin=\count496
+\mymax=\count497
+\mymin=\count498
+\mymax=\count499
+\mymin=\count500
+\mymax=\count501
+\mymin=\count502
+\mymax=\count503
  [2
 
 ]
-<Figures/Baryon_distribution.png, id=142, 505.28775pt x 426.99525pt>
+<Figures/Baryon_distribution.png, id=137, 505.28775pt x 426.99525pt>
 File: Figures/Baryon_distribution.png Graphic file (type png)
 <use Figures/Baryon_distribution.png>
 Package pdftex.def Info: Figures/Baryon_distribution.png  used on input line 434.
 (pdftex.def)             Requested size: 142.26378pt x 120.21591pt.
-\mymin=\count527
-\mymax=\count528
-\mymin=\count529
-\mymax=\count530
-\mymin=\count531
-\mymax=\count532
-\mymin=\count533
-\mymax=\count534
-\mymin=\count535
-\mymax=\count536
-\mymin=\count537
-\mymax=\count538
-\mymin=\count539
-\mymax=\count540
-\mymin=\count541
-\mymax=\count542
-\mymin=\count543
-\mymax=\count544
-\mymin=\count545
-\mymax=\count546
-\mymin=\count547
-\mymax=\count548
-\mymin=\count549
-\mymax=\count550
-\mymin=\count551
-\mymax=\count552
-\mymin=\count553
-\mymax=\count554
-\mymin=\count555
-\mymax=\count556
-\mymin=\count557
-\mymax=\count558
-\mymin=\count559
-\mymax=\count560
-\mymin=\count561
-\mymax=\count562
-\mymin=\count563
-\mymax=\count564
-\mymin=\count565
-\mymax=\count566
-\mymin=\count567
-\mymax=\count568
-\mymin=\count569
-\mymax=\count570
-\mymin=\count571
-\mymax=\count572
-\mymin=\count573
-\mymax=\count574
-\mymin=\count575
-\mymax=\count576
-\mymin=\count577
-\mymax=\count578
-\mymin=\count579
-\mymax=\count580
-\mymin=\count581
-\mymax=\count582
-\mymin=\count583
-\mymax=\count584
-\mymin=\count585
-\mymax=\count586
-\mymin=\count587
-\mymax=\count588
-\mymin=\count589
-\mymax=\count590
+\mymin=\count504
+\mymax=\count505
+\mymin=\count506
+\mymax=\count507
+\mymin=\count508
+\mymax=\count509
+\mymin=\count510
+\mymax=\count511
+\mymin=\count512
+\mymax=\count513
+\mymin=\count514
+\mymax=\count515
+\mymin=\count516
+\mymax=\count517
+\mymin=\count518
+\mymax=\count519
+\mymin=\count520
+\mymax=\count521
+\mymin=\count522
+\mymax=\count523
+\mymin=\count524
+\mymax=\count525
+\mymin=\count526
+\mymax=\count527
+\mymin=\count528
+\mymax=\count529
+\mymin=\count530
+\mymax=\count531
+\mymin=\count532
+\mymax=\count533
+\mymin=\count534
+\mymax=\count535
+\mymin=\count536
+\mymax=\count537
+\mymin=\count538
+\mymax=\count539
+\mymin=\count540
+\mymax=\count541
+\mymin=\count542
+\mymax=\count543
+\mymin=\count544
+\mymax=\count545
+\mymin=\count546
+\mymax=\count547
+\mymin=\count548
+\mymax=\count549
+\mymin=\count550
+\mymax=\count551
+\mymin=\count552
+\mymax=\count553
+\mymin=\count554
+\mymax=\count555
+\mymin=\count556
+\mymax=\count557
+\mymin=\count558
+\mymax=\count559
+\mymin=\count560
+\mymax=\count561
+\mymin=\count562
+\mymax=\count563
  [3
 
  <./Figures/Baryon_distribution.png>]
-<Figures/BLA-individual.png, id=177, 821.0675pt x 404.51125pt>
+<Figures/BLA-individual.png, id=172, 821.0675pt x 404.51125pt>
 File: Figures/BLA-individual.png Graphic file (type png)
 <use Figures/BLA-individual.png>
 Package pdftex.def Info: Figures/BLA-individual.png  used on input line 463.
 (pdftex.def)             Requested size: 170.71652pt x 84.10425pt.
-\mymin=\count591
-\mymax=\count592
-\mymin=\count593
-\mymax=\count594
-\mymin=\count595
-\mymax=\count596
-\mymin=\count597
-\mymax=\count598
-\mymin=\count599
-\mymax=\count600
-\mymin=\count601
-\mymax=\count602
-\mymin=\count603
-\mymax=\count604
-\mymin=\count605
-\mymax=\count606
-\mymin=\count607
-\mymax=\count608
-\mymin=\count609
-\mymax=\count610
-\mymin=\count611
-\mymax=\count612
-\mymin=\count613
-\mymax=\count614
-\mymin=\count615
-\mymax=\count616
-\mymin=\count617
-\mymax=\count618
-\mymin=\count619
-\mymax=\count620
-\mymin=\count621
-\mymax=\count622
-\mymin=\count623
-\mymax=\count624
-\mymin=\count625
-\mymax=\count626
-\mymin=\count627
-\mymax=\count628
-\mymin=\count629
-\mymax=\count630
-\mymin=\count631
-\mymax=\count632
-\mymin=\count633
-\mymax=\count634
-\mymin=\count635
-\mymax=\count636
-\mymin=\count637
-\mymax=\count638
-\mymin=\count639
-\mymax=\count640
-\mymin=\count641
-\mymax=\count642
-\mymin=\count643
-\mymax=\count644
-\mymin=\count645
-\mymax=\count646
-\mymin=\count647
-\mymax=\count648
-\mymin=\count649
-\mymax=\count650
-\mymin=\count651
-\mymax=\count652
-\mymin=\count653
-\mymax=\count654
+\mymin=\count564
+\mymax=\count565
+\mymin=\count566
+\mymax=\count567
+\mymin=\count568
+\mymax=\count569
+\mymin=\count570
+\mymax=\count571
+\mymin=\count572
+\mymax=\count573
+\mymin=\count574
+\mymax=\count575
+\mymin=\count576
+\mymax=\count577
+\mymin=\count578
+\mymax=\count579
+\mymin=\count580
+\mymax=\count581
+\mymin=\count582
+\mymax=\count583
+\mymin=\count584
+\mymax=\count585
+\mymin=\count586
+\mymax=\count587
+\mymin=\count588
+\mymax=\count589
+\mymin=\count590
+\mymax=\count591
+\mymin=\count592
+\mymax=\count593
+\mymin=\count594
+\mymax=\count595
+\mymin=\count596
+\mymax=\count597
+\mymin=\count598
+\mymax=\count599
+\mymin=\count600
+\mymax=\count601
+\mymin=\count602
+\mymax=\count603
+\mymin=\count604
+\mymax=\count605
+\mymin=\count606
+\mymax=\count607
+\mymin=\count608
+\mymax=\count609
+\mymin=\count610
+\mymax=\count611
+\mymin=\count612
+\mymax=\count613
+\mymin=\count614
+\mymax=\count615
+\mymin=\count616
+\mymax=\count617
+\mymin=\count618
+\mymax=\count619
+\mymin=\count620
+\mymax=\count621
+\mymin=\count622
+\mymax=\count623
  [4
 
  <./Figures/BLA-individual.png (PNG copy)>]
-<Figures/PG0003+158-z=0.347579-sys-plot.png, id=207, 2384.91pt x 1634.2656pt>
+<Figures/PG0003+158-z=0.347579-sys-plot.png, id=202, 2384.91pt x 1634.2656pt>
 File: Figures/PG0003+158-z=0.347579-sys-plot.png Graphic file (type png)
 <use Figures/PG0003+158-z=0.347579-sys-plot.png>
 Package pdftex.def Info: Figures/PG0003+158-z=0.347579-sys-plot.png  used on input line 494.
@@ -1621,414 +1592,390 @@ Overfull \hbox (10.61633pt too wide) in paragraph at lines 494--494
  |  [] 
  []
 
-\mymin=\count655
-\mymax=\count656
-\mymin=\count657
-\mymax=\count658
-\mymin=\count659
-\mymax=\count660
-\mymin=\count661
-\mymax=\count662
-\mymin=\count663
-\mymax=\count664
-\mymin=\count665
-\mymax=\count666
-\mymin=\count667
-\mymax=\count668
-\mymin=\count669
-\mymax=\count670
-\mymin=\count671
-\mymax=\count672
-\mymin=\count673
-\mymax=\count674
-\mymin=\count675
-\mymax=\count676
-\mymin=\count677
-\mymax=\count678
-\mymin=\count679
-\mymax=\count680
-\mymin=\count681
-\mymax=\count682
-\mymin=\count683
-\mymax=\count684
-\mymin=\count685
-\mymax=\count686
-\mymin=\count687
-\mymax=\count688
-\mymin=\count689
-\mymax=\count690
-\mymin=\count691
-\mymax=\count692
-\mymin=\count693
-\mymax=\count694
-\mymin=\count695
-\mymax=\count696
-\mymin=\count697
-\mymax=\count698
-\mymin=\count699
-\mymax=\count700
-\mymin=\count701
-\mymax=\count702
-\mymin=\count703
-\mymax=\count704
-\mymin=\count705
-\mymax=\count706
-\mymin=\count707
-\mymax=\count708
-\mymin=\count709
-\mymax=\count710
-\mymin=\count711
-\mymax=\count712
-\mymin=\count713
-\mymax=\count714
-\mymin=\count715
-\mymax=\count716
-\mymin=\count717
-\mymax=\count718
+\mymin=\count624
+\mymax=\count625
+\mymin=\count626
+\mymax=\count627
+\mymin=\count628
+\mymax=\count629
+\mymin=\count630
+\mymax=\count631
+\mymin=\count632
+\mymax=\count633
+\mymin=\count634
+\mymax=\count635
+\mymin=\count636
+\mymax=\count637
+\mymin=\count638
+\mymax=\count639
+\mymin=\count640
+\mymax=\count641
+\mymin=\count642
+\mymax=\count643
+\mymin=\count644
+\mymax=\count645
+\mymin=\count646
+\mymax=\count647
+\mymin=\count648
+\mymax=\count649
+\mymin=\count650
+\mymax=\count651
+\mymin=\count652
+\mymax=\count653
+\mymin=\count654
+\mymax=\count655
+\mymin=\count656
+\mymax=\count657
+\mymin=\count658
+\mymax=\count659
+\mymin=\count660
+\mymax=\count661
+\mymin=\count662
+\mymax=\count663
+\mymin=\count664
+\mymax=\count665
+\mymin=\count666
+\mymax=\count667
+\mymin=\count668
+\mymax=\count669
+\mymin=\count670
+\mymax=\count671
+\mymin=\count672
+\mymax=\count673
+\mymin=\count674
+\mymax=\count675
+\mymin=\count676
+\mymax=\count677
+\mymin=\count678
+\mymax=\count679
+\mymin=\count680
+\mymax=\count681
+\mymin=\count682
+\mymax=\count683
 [5
 
  <./Figures/PG0003+158-z=0.347579-sys-plot.png>]
-<Figures/metal-ions.png, id=238, 1162.8243pt x 624.4128pt>
+<Figures/metal-ions.png, id=233, 1162.8243pt x 624.4128pt>
 File: Figures/metal-ions.png Graphic file (type png)
 <use Figures/metal-ions.png>
 Package pdftex.def Info: Figures/metal-ions.png  used on input line 523.
 (pdftex.def)             Requested size: 199.16928pt x 106.9491pt.
-\mymin=\count719
-\mymax=\count720
-\mymin=\count721
-\mymax=\count722
-\mymin=\count723
-\mymax=\count724
-\mymin=\count725
-\mymax=\count726
-\mymin=\count727
-\mymax=\count728
-\mymin=\count729
-\mymax=\count730
-\mymin=\count731
-\mymax=\count732
-\mymin=\count733
-\mymax=\count734
-\mymin=\count735
-\mymax=\count736
-\mymin=\count737
-\mymax=\count738
-\mymin=\count739
-\mymax=\count740
-\mymin=\count741
-\mymax=\count742
-\mymin=\count743
-\mymax=\count744
-\mymin=\count745
-\mymax=\count746
-\mymin=\count747
-\mymax=\count748
-\mymin=\count749
-\mymax=\count750
-\mymin=\count751
-\mymax=\count752
-\mymin=\count753
-\mymax=\count754
-\mymin=\count755
-\mymax=\count756
-\mymin=\count757
-\mymax=\count758
-\mymin=\count759
-\mymax=\count760
-\mymin=\count761
-\mymax=\count762
-\mymin=\count763
-\mymax=\count764
-\mymin=\count765
-\mymax=\count766
-\mymin=\count767
-\mymax=\count768
-\mymin=\count769
-\mymax=\count770
-\mymin=\count771
-\mymax=\count772
-\mymin=\count773
-\mymax=\count774
-\mymin=\count775
-\mymax=\count776
-\mymin=\count777
-\mymax=\count778
-\mymin=\count779
-\mymax=\count780
-\mymin=\count781
-\mymax=\count782
+\mymin=\count684
+\mymax=\count685
+\mymin=\count686
+\mymax=\count687
+\mymin=\count688
+\mymax=\count689
+\mymin=\count690
+\mymax=\count691
+\mymin=\count692
+\mymax=\count693
+\mymin=\count694
+\mymax=\count695
+\mymin=\count696
+\mymax=\count697
+\mymin=\count698
+\mymax=\count699
+\mymin=\count700
+\mymax=\count701
+\mymin=\count702
+\mymax=\count703
+\mymin=\count704
+\mymax=\count705
+\mymin=\count706
+\mymax=\count707
+\mymin=\count708
+\mymax=\count709
+\mymin=\count710
+\mymax=\count711
+\mymin=\count712
+\mymax=\count713
+\mymin=\count714
+\mymax=\count715
+\mymin=\count716
+\mymax=\count717
+\mymin=\count718
+\mymax=\count719
+\mymin=\count720
+\mymax=\count721
+\mymin=\count722
+\mymax=\count723
+\mymin=\count724
+\mymax=\count725
+\mymin=\count726
+\mymax=\count727
+\mymin=\count728
+\mymax=\count729
+\mymin=\count730
+\mymax=\count731
+\mymin=\count732
+\mymax=\count733
+\mymin=\count734
+\mymax=\count735
+\mymin=\count736
+\mymax=\count737
+\mymin=\count738
+\mymax=\count739
+\mymin=\count740
+\mymax=\count741
+\mymin=\count742
+\mymax=\count743
  [6
 
  <./Figures/metal-ions.png>]
-\mymin=\count783
-\mymax=\count784
-\mymin=\count785
-\mymax=\count786
-\mymin=\count787
-\mymax=\count788
-\mymin=\count789
-\mymax=\count790
-\mymin=\count791
-\mymax=\count792
-\mymin=\count793
-\mymax=\count794
-\mymin=\count795
-\mymax=\count796
-\mymin=\count797
-\mymax=\count798
-\mymin=\count799
-\mymax=\count800
-\mymin=\count801
-\mymax=\count802
-\mymin=\count803
-\mymax=\count804
-\mymin=\count805
-\mymax=\count806
-\mymin=\count807
-\mymax=\count808
-\mymin=\count809
-\mymax=\count810
-\mymin=\count811
-\mymax=\count812
-\mymin=\count813
-\mymax=\count814
-\mymin=\count815
-\mymax=\count816
-\mymin=\count817
-\mymax=\count818
-\mymin=\count819
-\mymax=\count820
-\mymin=\count821
-\mymax=\count822
-\mymin=\count823
-\mymax=\count824
-\mymin=\count825
-\mymax=\count826
-\mymin=\count827
-\mymax=\count828
-\mymin=\count829
-\mymax=\count830
-\mymin=\count831
-\mymax=\count832
-\mymin=\count833
-\mymax=\count834
-\mymin=\count835
-\mymax=\count836
-\mymin=\count837
-\mymax=\count838
-\mymin=\count839
-\mymax=\count840
-\mymin=\count841
-\mymax=\count842
-\mymin=\count843
-\mymax=\count844
-\mymin=\count845
-\mymax=\count846
+\mymin=\count744
+\mymax=\count745
+\mymin=\count746
+\mymax=\count747
+\mymin=\count748
+\mymax=\count749
+\mymin=\count750
+\mymax=\count751
+\mymin=\count752
+\mymax=\count753
+\mymin=\count754
+\mymax=\count755
+\mymin=\count756
+\mymax=\count757
+\mymin=\count758
+\mymax=\count759
+\mymin=\count760
+\mymax=\count761
+\mymin=\count762
+\mymax=\count763
+\mymin=\count764
+\mymax=\count765
+\mymin=\count766
+\mymax=\count767
+\mymin=\count768
+\mymax=\count769
+\mymin=\count770
+\mymax=\count771
+\mymin=\count772
+\mymax=\count773
+\mymin=\count774
+\mymax=\count775
+\mymin=\count776
+\mymax=\count777
+\mymin=\count778
+\mymax=\count779
+\mymin=\count780
+\mymax=\count781
+\mymin=\count782
+\mymax=\count783
+\mymin=\count784
+\mymax=\count785
+\mymin=\count786
+\mymax=\count787
+\mymin=\count788
+\mymax=\count789
+\mymin=\count790
+\mymax=\count791
+\mymin=\count792
+\mymax=\count793
+\mymin=\count794
+\mymax=\count795
+\mymin=\count796
+\mymax=\count797
+\mymin=\count798
+\mymax=\count799
+\mymin=\count800
+\mymax=\count801
+\mymin=\count802
+\mymax=\count803
  [7
 
 ]
-\mymin=\count847
-\mymax=\count848
-\mymin=\count849
-\mymax=\count850
-\mymin=\count851
-\mymax=\count852
-\mymin=\count853
-\mymax=\count854
-\mymin=\count855
-\mymax=\count856
-\mymin=\count857
-\mymax=\count858
-\mymin=\count859
-\mymax=\count860
-\mymin=\count861
-\mymax=\count862
-\mymin=\count863
-\mymax=\count864
-\mymin=\count865
-\mymax=\count866
-\mymin=\count867
-\mymax=\count868
-\mymin=\count869
-\mymax=\count870
-\mymin=\count871
-\mymax=\count872
-\mymin=\count873
-\mymax=\count874
-\mymin=\count875
-\mymax=\count876
-\mymin=\count877
-\mymax=\count878
-\mymin=\count879
-\mymax=\count880
-\mymin=\count881
-\mymax=\count882
-\mymin=\count883
-\mymax=\count884
-\mymin=\count885
-\mymax=\count886
-\mymin=\count887
-\mymax=\count888
-\mymin=\count889
-\mymax=\count890
-\mymin=\count891
-\mymax=\count892
-\mymin=\count893
-\mymax=\count894
-\mymin=\count895
-\mymax=\count896
-\mymin=\count897
-\mymax=\count898
-\mymin=\count899
-\mymax=\count900
-\mymin=\count901
-\mymax=\count902
-\mymin=\count903
-\mymax=\count904
-\mymin=\count905
-\mymax=\count906
-\mymin=\count907
-\mymax=\count908
-\mymin=\count909
-\mymax=\count910
+\mymin=\count804
+\mymax=\count805
+\mymin=\count806
+\mymax=\count807
+\mymin=\count808
+\mymax=\count809
+\mymin=\count810
+\mymax=\count811
+\mymin=\count812
+\mymax=\count813
+\mymin=\count814
+\mymax=\count815
+\mymin=\count816
+\mymax=\count817
+\mymin=\count818
+\mymax=\count819
+\mymin=\count820
+\mymax=\count821
+\mymin=\count822
+\mymax=\count823
+\mymin=\count824
+\mymax=\count825
+\mymin=\count826
+\mymax=\count827
+\mymin=\count828
+\mymax=\count829
+\mymin=\count830
+\mymax=\count831
+\mymin=\count832
+\mymax=\count833
+\mymin=\count834
+\mymax=\count835
+\mymin=\count836
+\mymax=\count837
+\mymin=\count838
+\mymax=\count839
+\mymin=\count840
+\mymax=\count841
+\mymin=\count842
+\mymax=\count843
+\mymin=\count844
+\mymax=\count845
+\mymin=\count846
+\mymax=\count847
+\mymin=\count848
+\mymax=\count849
+\mymin=\count850
+\mymax=\count851
+\mymin=\count852
+\mymax=\count853
+\mymin=\count854
+\mymax=\count855
+\mymin=\count856
+\mymax=\count857
+\mymin=\count858
+\mymax=\count859
+\mymin=\count860
+\mymax=\count861
+\mymin=\count862
+\mymax=\count863
  [8
 
 ]
-\mymin=\count911
-\mymax=\count912
-\mymin=\count913
-\mymax=\count914
-\mymin=\count915
-\mymax=\count916
-\mymin=\count917
-\mymax=\count918
-\mymin=\count919
-\mymax=\count920
-\mymin=\count921
-\mymax=\count922
-\mymin=\count923
-\mymax=\count924
-\mymin=\count925
-\mymax=\count926
-\mymin=\count927
-\mymax=\count928
-\mymin=\count929
-\mymax=\count930
-\mymin=\count931
-\mymax=\count932
-\mymin=\count933
-\mymax=\count934
-\mymin=\count935
-\mymax=\count936
-\mymin=\count937
-\mymax=\count938
-\mymin=\count939
-\mymax=\count940
-\mymin=\count941
-\mymax=\count942
-\mymin=\count943
-\mymax=\count944
-\mymin=\count945
-\mymax=\count946
-\mymin=\count947
-\mymax=\count948
-\mymin=\count949
-\mymax=\count950
-\mymin=\count951
-\mymax=\count952
-\mymin=\count953
-\mymax=\count954
-\mymin=\count955
-\mymax=\count956
-\mymin=\count957
-\mymax=\count958
-\mymin=\count959
-\mymax=\count960
-\mymin=\count961
-\mymax=\count962
-\mymin=\count963
-\mymax=\count964
-\mymin=\count965
-\mymax=\count966
-\mymin=\count967
-\mymax=\count968
-\mymin=\count969
-\mymax=\count970
-\mymin=\count971
-\mymax=\count972
-\mymin=\count973
-\mymax=\count974
+\mymin=\count864
+\mymax=\count865
+\mymin=\count866
+\mymax=\count867
+\mymin=\count868
+\mymax=\count869
+\mymin=\count870
+\mymax=\count871
+\mymin=\count872
+\mymax=\count873
+\mymin=\count874
+\mymax=\count875
+\mymin=\count876
+\mymax=\count877
+\mymin=\count878
+\mymax=\count879
+\mymin=\count880
+\mymax=\count881
+\mymin=\count882
+\mymax=\count883
+\mymin=\count884
+\mymax=\count885
+\mymin=\count886
+\mymax=\count887
+\mymin=\count888
+\mymax=\count889
+\mymin=\count890
+\mymax=\count891
+\mymin=\count892
+\mymax=\count893
+\mymin=\count894
+\mymax=\count895
+\mymin=\count896
+\mymax=\count897
+\mymin=\count898
+\mymax=\count899
+\mymin=\count900
+\mymax=\count901
+\mymin=\count902
+\mymax=\count903
+\mymin=\count904
+\mymax=\count905
+\mymin=\count906
+\mymax=\count907
+\mymin=\count908
+\mymax=\count909
+\mymin=\count910
+\mymax=\count911
+\mymin=\count912
+\mymax=\count913
+\mymin=\count914
+\mymax=\count915
+\mymin=\count916
+\mymax=\count917
+\mymin=\count918
+\mymax=\count919
+\mymin=\count920
+\mymax=\count921
+\mymin=\count922
+\mymax=\count923
  [9
 
 ]
-\mymin=\count975
-\mymax=\count976
-\mymin=\count977
-\mymax=\count978
-\mymin=\count979
-\mymax=\count980
-\mymin=\count981
-\mymax=\count982
-\mymin=\count983
-\mymax=\count984
-\mymin=\count985
-\mymax=\count986
-\mymin=\count987
-\mymax=\count988
-\mymin=\count989
-\mymax=\count990
-\mymin=\count991
-\mymax=\count992
-\mymin=\count993
-\mymax=\count994
-\mymin=\count995
-\mymax=\count996
-\mymin=\count997
-\mymax=\count998
-\mymin=\count999
-\mymax=\count1000
-\mymin=\count1001
-\mymax=\count1002
-\mymin=\count1003
-\mymax=\count1004
-\mymin=\count1005
-\mymax=\count1006
-\mymin=\count1007
-\mymax=\count1008
-\mymin=\count1009
-\mymax=\count1010
-\mymin=\count1011
-\mymax=\count1012
-\mymin=\count1013
-\mymax=\count1014
-\mymin=\count1015
-\mymax=\count1016
-\mymin=\count1017
-\mymax=\count1018
-\mymin=\count1019
-\mymax=\count1020
-\mymin=\count1021
-\mymax=\count1022
-\mymin=\count1023
-\mymax=\count1024
-\mymin=\count1025
-\mymax=\count1026
-\mymin=\count1027
-\mymax=\count1028
-\mymin=\count1029
-\mymax=\count1030
-\mymin=\count1031
-\mymax=\count1032
-\mymin=\count1033
-\mymax=\count1034
-\mymin=\count1035
-\mymax=\count1036
-\mymin=\count1037
-\mymax=\count1038
+\mymin=\count924
+\mymax=\count925
+\mymin=\count926
+\mymax=\count927
+\mymin=\count928
+\mymax=\count929
+\mymin=\count930
+\mymax=\count931
+\mymin=\count932
+\mymax=\count933
+\mymin=\count934
+\mymax=\count935
+\mymin=\count936
+\mymax=\count937
+\mymin=\count938
+\mymax=\count939
+\mymin=\count940
+\mymax=\count941
+\mymin=\count942
+\mymax=\count943
+\mymin=\count944
+\mymax=\count945
+\mymin=\count946
+\mymax=\count947
+\mymin=\count948
+\mymax=\count949
+\mymin=\count950
+\mymax=\count951
+\mymin=\count952
+\mymax=\count953
+\mymin=\count954
+\mymax=\count955
+\mymin=\count956
+\mymax=\count957
+\mymin=\count958
+\mymax=\count959
+\mymin=\count960
+\mymax=\count961
+\mymin=\count962
+\mymax=\count963
+\mymin=\count964
+\mymax=\count965
+\mymin=\count966
+\mymax=\count967
+\mymin=\count968
+\mymax=\count969
+\mymin=\count970
+\mymax=\count971
+\mymin=\count972
+\mymax=\count973
+\mymin=\count974
+\mymax=\count975
+\mymin=\count976
+\mymax=\count977
+\mymin=\count978
+\mymax=\count979
+\mymin=\count980
+\mymax=\count981
+\mymin=\count982
+\mymax=\count983
  [10
 
 ]
-<Figures/NHi_bHi_distribution.png, id=387, 794.97pt x 492.8814pt>
+<Figures/NHi_bHi_distribution.png, id=382, 794.97pt x 492.8814pt>
 File: Figures/NHi_bHi_distribution.png Graphic file (type png)
 <use Figures/NHi_bHi_distribution.png>
 Package pdftex.def Info: Figures/NHi_bHi_distribution.png  used on input line 563.
@@ -2037,74 +1984,70 @@ Package pdftex.def Info: Figures/NHi_bHi_distribution.png  used on input line 56
 Overfull \vbox (10.90564pt too high) detected at line 563
  []
 
-\mymin=\count1039
-\mymax=\count1040
-\mymin=\count1041
-\mymax=\count1042
-\mymin=\count1043
-\mymax=\count1044
-\mymin=\count1045
-\mymax=\count1046
-\mymin=\count1047
-\mymax=\count1048
-\mymin=\count1049
-\mymax=\count1050
-\mymin=\count1051
-\mymax=\count1052
-\mymin=\count1053
-\mymax=\count1054
-\mymin=\count1055
-\mymax=\count1056
-\mymin=\count1057
-\mymax=\count1058
-\mymin=\count1059
-\mymax=\count1060
-\mymin=\count1061
-\mymax=\count1062
-\mymin=\count1063
-\mymax=\count1064
-\mymin=\count1065
-\mymax=\count1066
-\mymin=\count1067
-\mymax=\count1068
-\mymin=\count1069
-\mymax=\count1070
-\mymin=\count1071
-\mymax=\count1072
-\mymin=\count1073
-\mymax=\count1074
-\mymin=\count1075
-\mymax=\count1076
-\mymin=\count1077
-\mymax=\count1078
-\mymin=\count1079
-\mymax=\count1080
-\mymin=\count1081
-\mymax=\count1082
-\mymin=\count1083
-\mymax=\count1084
-\mymin=\count1085
-\mymax=\count1086
-\mymin=\count1087
-\mymax=\count1088
-\mymin=\count1089
-\mymax=\count1090
-\mymin=\count1091
-\mymax=\count1092
-\mymin=\count1093
-\mymax=\count1094
-\mymin=\count1095
-\mymax=\count1096
-\mymin=\count1097
-\mymax=\count1098
-\mymin=\count1099
-\mymax=\count1100
-\mymin=\count1101
-\mymax=\count1102
+\mymin=\count984
+\mymax=\count985
+\mymin=\count986
+\mymax=\count987
+\mymin=\count988
+\mymax=\count989
+\mymin=\count990
+\mymax=\count991
+\mymin=\count992
+\mymax=\count993
+\mymin=\count994
+\mymax=\count995
+\mymin=\count996
+\mymax=\count997
+\mymin=\count998
+\mymax=\count999
+\mymin=\count1000
+\mymax=\count1001
+\mymin=\count1002
+\mymax=\count1003
+\mymin=\count1004
+\mymax=\count1005
+\mymin=\count1006
+\mymax=\count1007
+\mymin=\count1008
+\mymax=\count1009
+\mymin=\count1010
+\mymax=\count1011
+\mymin=\count1012
+\mymax=\count1013
+\mymin=\count1014
+\mymax=\count1015
+\mymin=\count1016
+\mymax=\count1017
+\mymin=\count1018
+\mymax=\count1019
+\mymin=\count1020
+\mymax=\count1021
+\mymin=\count1022
+\mymax=\count1023
+\mymin=\count1024
+\mymax=\count1025
+\mymin=\count1026
+\mymax=\count1027
+\mymin=\count1028
+\mymax=\count1029
+\mymin=\count1030
+\mymax=\count1031
+\mymin=\count1032
+\mymax=\count1033
+\mymin=\count1034
+\mymax=\count1035
+\mymin=\count1036
+\mymax=\count1037
+\mymin=\count1038
+\mymax=\count1039
+\mymin=\count1040
+\mymax=\count1041
+\mymin=\count1042
+\mymax=\count1043
 [11
 
  <./Figures/NHi_bHi_distribution.png>]
-<Figures/NHi_vs_bHi_danforth.png, id=418, 522.5121pt x 346.896pt>
+<Figures/NHi_vs_bHi_danforth.png, id=413, 522.5121pt x 346.896pt>
 File: Figures/NHi_vs_bHi_danforth.png Graphic file (type png)
 <use Figures/NHi_vs_bHi_danforth.png>
 Package pdftex.def Info: Figures/NHi_vs_bHi_danforth.png  used on input line 575.
@@ -2113,1981 +2056,1895 @@ Package pdftex.def Info: Figures/NHi_vs_bHi_danforth.png  used on input line 575
 Overfull \vbox (4.50581pt too high) detected at line 575
  []
 
-\mymin=\count1103
-\mymax=\count1104
-\mymin=\count1105
-\mymax=\count1106
-\mymin=\count1107
-\mymax=\count1108
-\mymin=\count1109
-\mymax=\count1110
-\mymin=\count1111
-\mymax=\count1112
-\mymin=\count1113
-\mymax=\count1114
-\mymin=\count1115
-\mymax=\count1116
-\mymin=\count1117
-\mymax=\count1118
-\mymin=\count1119
-\mymax=\count1120
-\mymin=\count1121
-\mymax=\count1122
-\mymin=\count1123
-\mymax=\count1124
-\mymin=\count1125
-\mymax=\count1126
-\mymin=\count1127
-\mymax=\count1128
-\mymin=\count1129
-\mymax=\count1130
-\mymin=\count1131
-\mymax=\count1132
-\mymin=\count1133
-\mymax=\count1134
-\mymin=\count1135
-\mymax=\count1136
-\mymin=\count1137
-\mymax=\count1138
-\mymin=\count1139
-\mymax=\count1140
-\mymin=\count1141
-\mymax=\count1142
-\mymin=\count1143
-\mymax=\count1144
-\mymin=\count1145
-\mymax=\count1146
-\mymin=\count1147
-\mymax=\count1148
-\mymin=\count1149
-\mymax=\count1150
-\mymin=\count1151
-\mymax=\count1152
-\mymin=\count1153
-\mymax=\count1154
-\mymin=\count1155
-\mymax=\count1156
-\mymin=\count1157
-\mymax=\count1158
-\mymin=\count1159
-\mymax=\count1160
-\mymin=\count1161
-\mymax=\count1162
-\mymin=\count1163
-\mymax=\count1164
-\mymin=\count1165
-\mymax=\count1166
+\mymin=\count1044
+\mymax=\count1045
+\mymin=\count1046
+\mymax=\count1047
+\mymin=\count1048
+\mymax=\count1049
+\mymin=\count1050
+\mymax=\count1051
+\mymin=\count1052
+\mymax=\count1053
+\mymin=\count1054
+\mymax=\count1055
+\mymin=\count1056
+\mymax=\count1057
+\mymin=\count1058
+\mymax=\count1059
+\mymin=\count1060
+\mymax=\count1061
+\mymin=\count1062
+\mymax=\count1063
+\mymin=\count1064
+\mymax=\count1065
+\mymin=\count1066
+\mymax=\count1067
+\mymin=\count1068
+\mymax=\count1069
+\mymin=\count1070
+\mymax=\count1071
+\mymin=\count1072
+\mymax=\count1073
+\mymin=\count1074
+\mymax=\count1075
+\mymin=\count1076
+\mymax=\count1077
+\mymin=\count1078
+\mymax=\count1079
+\mymin=\count1080
+\mymax=\count1081
+\mymin=\count1082
+\mymax=\count1083
+\mymin=\count1084
+\mymax=\count1085
+\mymin=\count1086
+\mymax=\count1087
+\mymin=\count1088
+\mymax=\count1089
+\mymin=\count1090
+\mymax=\count1091
+\mymin=\count1092
+\mymax=\count1093
+\mymin=\count1094
+\mymax=\count1095
+\mymin=\count1096
+\mymax=\count1097
+\mymin=\count1098
+\mymax=\count1099
+\mymin=\count1100
+\mymax=\count1101
+\mymin=\count1102
+\mymax=\count1103
 [12
 
  <./Figures/NHi_vs_bHi_danforth.png>]
-<Figures/bHi_vs_BOvi_danforth.png, id=449, 991.5444pt x 652.5981pt>
+<Figures/b.png, id=444, 268.75406pt x 234.8775pt>
+File: Figures/b.png Graphic file (type png)
+<use Figures/b.png>
+Package pdftex.def Info: Figures/b.png  used on input line 607.
+(pdftex.def)             Requested size: 71.13188pt x 62.16339pt.
+<Figures/bHi_vs_BOvi_danforth.png, id=445, 991.5444pt x 652.5981pt>
 File: Figures/bHi_vs_BOvi_danforth.png Graphic file (type png)
 <use Figures/bHi_vs_BOvi_danforth.png>
-Package pdftex.def Info: Figures/bHi_vs_BOvi_danforth.png  used on input line 587.
+Package pdftex.def Info: Figures/bHi_vs_BOvi_danforth.png  used on input line 607.
 (pdftex.def)             Requested size: 256.0748pt x 168.5363pt.
+\mymin=\count1104
+\mymax=\count1105
+\mymin=\count1106
+\mymax=\count1107
+\mymin=\count1108
+\mymax=\count1109
+\mymin=\count1110
+\mymax=\count1111
+\mymin=\count1112
+\mymax=\count1113
+\mymin=\count1114
+\mymax=\count1115
+\mymin=\count1116
+\mymax=\count1117
+\mymin=\count1118
+\mymax=\count1119
+\mymin=\count1120
+\mymax=\count1121
+\mymin=\count1122
+\mymax=\count1123
+\mymin=\count1124
+\mymax=\count1125
+\mymin=\count1126
+\mymax=\count1127
+\mymin=\count1128
+\mymax=\count1129
+\mymin=\count1130
+\mymax=\count1131
+\mymin=\count1132
+\mymax=\count1133
+\mymin=\count1134
+\mymax=\count1135
+\mymin=\count1136
+\mymax=\count1137
+\mymin=\count1138
+\mymax=\count1139
+\mymin=\count1140
+\mymax=\count1141
+\mymin=\count1142
+\mymax=\count1143
+\mymin=\count1144
+\mymax=\count1145
+\mymin=\count1146
+\mymax=\count1147
+\mymin=\count1148
+\mymax=\count1149
+\mymin=\count1150
+\mymax=\count1151
+\mymin=\count1152
+\mymax=\count1153
+\mymin=\count1154
+\mymax=\count1155
+\mymin=\count1156
+\mymax=\count1157
+\mymin=\count1158
+\mymax=\count1159
+\mymin=\count1160
+\mymax=\count1161
+\mymin=\count1162
+\mymax=\count1163
+ [13
 
-Overfull \vbox (3.03513pt too high) detected at line 587
+ <./Figures/b.png> <./Figures/bHi_vs_BOvi_danforth.png>]
+<Figures/T.png, id=478, 471.26062pt x 127.97812pt>
+File: Figures/T.png Graphic file (type png)
+<use Figures/T.png>
+Package pdftex.def Info: Figures/T.png  used on input line 640.
+(pdftex.def)             Requested size: 99.58464pt x 27.04218pt.
+
+Overfull \hbox (19.91815pt too wide) in paragraph at lines 640--640
+ [] 
  []
 
-\mymin=\count1167
-\mymax=\count1168
-\mymin=\count1169
-\mymax=\count1170
-\mymin=\count1171
-\mymax=\count1172
-\mymin=\count1173
-\mymax=\count1174
-\mymin=\count1175
-\mymax=\count1176
-\mymin=\count1177
-\mymax=\count1178
-\mymin=\count1179
-\mymax=\count1180
-\mymin=\count1181
-\mymax=\count1182
-\mymin=\count1183
-\mymax=\count1184
-\mymin=\count1185
-\mymax=\count1186
-\mymin=\count1187
-\mymax=\count1188
-\mymin=\count1189
-\mymax=\count1190
-\mymin=\count1191
-\mymax=\count1192
-\mymin=\count1193
-\mymax=\count1194
-\mymin=\count1195
-\mymax=\count1196
-\mymin=\count1197
-\mymax=\count1198
-\mymin=\count1199
-\mymax=\count1200
-\mymin=\count1201
-\mymax=\count1202
-\mymin=\count1203
-\mymax=\count1204
-\mymin=\count1205
-\mymax=\count1206
-\mymin=\count1207
-\mymax=\count1208
-\mymin=\count1209
-\mymax=\count1210
-\mymin=\count1211
-\mymax=\count1212
-\mymin=\count1213
-\mymax=\count1214
-\mymin=\count1215
-\mymax=\count1216
-\mymin=\count1217
-\mymax=\count1218
-\mymin=\count1219
-\mymax=\count1220
-\mymin=\count1221
-\mymax=\count1222
-\mymin=\count1223
-\mymax=\count1224
-\mymin=\count1225
-\mymax=\count1226
-\mymin=\count1227
-\mymax=\count1228
-\mymin=\count1229
-\mymax=\count1230
-[13
-
- <./Figures/bHi_vs_BOvi_danforth.png>]
-<Figures/T_histogram.png, id=481, 514.5624pt x 350.5095pt>
+<Figures/T_histogram.png, id=479, 514.5624pt x 350.5095pt>
 File: Figures/T_histogram.png Graphic file (type png)
 <use Figures/T_histogram.png>
-Package pdftex.def Info: Figures/T_histogram.png  used on input line 599.
+Package pdftex.def Info: Figures/T_histogram.png  used on input line 640.
 (pdftex.def)             Requested size: 256.0748pt x 174.44138pt.
 
-Overfull \vbox (8.9402pt too high) detected at line 599
+Overfull \vbox (6.21384pt too high) detected at line 640
  []
 
-\mymin=\count1231
-\mymax=\count1232
-\mymin=\count1233
-\mymax=\count1234
-\mymin=\count1235
-\mymax=\count1236
-\mymin=\count1237
-\mymax=\count1238
-\mymin=\count1239
-\mymax=\count1240
-\mymin=\count1241
-\mymax=\count1242
-\mymin=\count1243
-\mymax=\count1244
-\mymin=\count1245
-\mymax=\count1246
-\mymin=\count1247
-\mymax=\count1248
-\mymin=\count1249
-\mymax=\count1250
-\mymin=\count1251
-\mymax=\count1252
-\mymin=\count1253
-\mymax=\count1254
-\mymin=\count1255
-\mymax=\count1256
-\mymin=\count1257
-\mymax=\count1258
-\mymin=\count1259
-\mymax=\count1260
-\mymin=\count1261
-\mymax=\count1262
-\mymin=\count1263
-\mymax=\count1264
-\mymin=\count1265
-\mymax=\count1266
-\mymin=\count1267
-\mymax=\count1268
-\mymin=\count1269
-\mymax=\count1270
-\mymin=\count1271
-\mymax=\count1272
-\mymin=\count1273
-\mymax=\count1274
-\mymin=\count1275
-\mymax=\count1276
-\mymin=\count1277
-\mymax=\count1278
-\mymin=\count1279
-\mymax=\count1280
-\mymin=\count1281
-\mymax=\count1282
-\mymin=\count1283
-\mymax=\count1284
-\mymin=\count1285
-\mymax=\count1286
-\mymin=\count1287
-\mymax=\count1288
-\mymin=\count1289
-\mymax=\count1290
-\mymin=\count1291
-\mymax=\count1292
-\mymin=\count1293
-\mymax=\count1294
+\mymin=\count1164
+\mymax=\count1165
+\mymin=\count1166
+\mymax=\count1167
+\mymin=\count1168
+\mymax=\count1169
+\mymin=\count1170
+\mymax=\count1171
+\mymin=\count1172
+\mymax=\count1173
+\mymin=\count1174
+\mymax=\count1175
+\mymin=\count1176
+\mymax=\count1177
+\mymin=\count1178
+\mymax=\count1179
+\mymin=\count1180
+\mymax=\count1181
+\mymin=\count1182
+\mymax=\count1183
+\mymin=\count1184
+\mymax=\count1185
+\mymin=\count1186
+\mymax=\count1187
+\mymin=\count1188
+\mymax=\count1189
+\mymin=\count1190
+\mymax=\count1191
+\mymin=\count1192
+\mymax=\count1193
+\mymin=\count1194
+\mymax=\count1195
+\mymin=\count1196
+\mymax=\count1197
+\mymin=\count1198
+\mymax=\count1199
+\mymin=\count1200
+\mymax=\count1201
+\mymin=\count1202
+\mymax=\count1203
+\mymin=\count1204
+\mymax=\count1205
+\mymin=\count1206
+\mymax=\count1207
+\mymin=\count1208
+\mymax=\count1209
+\mymin=\count1210
+\mymax=\count1211
+\mymin=\count1212
+\mymax=\count1213
+\mymin=\count1214
+\mymax=\count1215
+\mymin=\count1216
+\mymax=\count1217
+\mymin=\count1218
+\mymax=\count1219
+\mymin=\count1220
+\mymax=\count1221
+\mymin=\count1222
+\mymax=\count1223
 [14
 
- <./Figures/T_histogram.png>]
-\mymin=\count1295
-\mymax=\count1296
-\mymin=\count1297
-\mymax=\count1298
-\mymin=\count1299
-\mymax=\count1300
-\mymin=\count1301
-\mymax=\count1302
-\mymin=\count1303
-\mymax=\count1304
-\mymin=\count1305
-\mymax=\count1306
-\mymin=\count1307
-\mymax=\count1308
-\mymin=\count1309
-\mymax=\count1310
-\mymin=\count1311
-\mymax=\count1312
-\mymin=\count1313
-\mymax=\count1314
-\mymin=\count1315
-\mymax=\count1316
-\mymin=\count1317
-\mymax=\count1318
-\mymin=\count1319
-\mymax=\count1320
-\mymin=\count1321
-\mymax=\count1322
-\mymin=\count1323
-\mymax=\count1324
-\mymin=\count1325
-\mymax=\count1326
-\mymin=\count1327
-\mymax=\count1328
-\mymin=\count1329
-\mymax=\count1330
-\mymin=\count1331
-\mymax=\count1332
-\mymin=\count1333
-\mymax=\count1334
-\mymin=\count1335
-\mymax=\count1336
-\mymin=\count1337
-\mymax=\count1338
-\mymin=\count1339
-\mymax=\count1340
-\mymin=\count1341
-\mymax=\count1342
-\mymin=\count1343
-\mymax=\count1344
-\mymin=\count1345
-\mymax=\count1346
-\mymin=\count1347
-\mymax=\count1348
-\mymin=\count1349
-\mymax=\count1350
-\mymin=\count1351
-\mymax=\count1352
-\mymin=\count1353
-\mymax=\count1354
-\mymin=\count1355
-\mymax=\count1356
-\mymin=\count1357
-\mymax=\count1358
+ <./Figures/T.png> <./Figures/T_histogram.png>]
+\mymin=\count1224
+\mymax=\count1225
+\mymin=\count1226
+\mymax=\count1227
+\mymin=\count1228
+\mymax=\count1229
+\mymin=\count1230
+\mymax=\count1231
+\mymin=\count1232
+\mymax=\count1233
+\mymin=\count1234
+\mymax=\count1235
+\mymin=\count1236
+\mymax=\count1237
+\mymin=\count1238
+\mymax=\count1239
+\mymin=\count1240
+\mymax=\count1241
+\mymin=\count1242
+\mymax=\count1243
+\mymin=\count1244
+\mymax=\count1245
+\mymin=\count1246
+\mymax=\count1247
+\mymin=\count1248
+\mymax=\count1249
+\mymin=\count1250
+\mymax=\count1251
+\mymin=\count1252
+\mymax=\count1253
+\mymin=\count1254
+\mymax=\count1255
+\mymin=\count1256
+\mymax=\count1257
+\mymin=\count1258
+\mymax=\count1259
+\mymin=\count1260
+\mymax=\count1261
+\mymin=\count1262
+\mymax=\count1263
+\mymin=\count1264
+\mymax=\count1265
+\mymin=\count1266
+\mymax=\count1267
+\mymin=\count1268
+\mymax=\count1269
+\mymin=\count1270
+\mymax=\count1271
+\mymin=\count1272
+\mymax=\count1273
+\mymin=\count1274
+\mymax=\count1275
+\mymin=\count1276
+\mymax=\count1277
+\mymin=\count1278
+\mymax=\count1279
+\mymin=\count1280
+\mymax=\count1281
+\mymin=\count1282
+\mymax=\count1283
  [15
 
 ]
-\mymin=\count1359
-\mymax=\count1360
-\mymin=\count1361
-\mymax=\count1362
-\mymin=\count1363
-\mymax=\count1364
-\mymin=\count1365
-\mymax=\count1366
-\mymin=\count1367
-\mymax=\count1368
-\mymin=\count1369
-\mymax=\count1370
-\mymin=\count1371
-\mymax=\count1372
-\mymin=\count1373
-\mymax=\count1374
-\mymin=\count1375
-\mymax=\count1376
-\mymin=\count1377
-\mymax=\count1378
-\mymin=\count1379
-\mymax=\count1380
-\mymin=\count1381
-\mymax=\count1382
-\mymin=\count1383
-\mymax=\count1384
-\mymin=\count1385
-\mymax=\count1386
-\mymin=\count1387
-\mymax=\count1388
-\mymin=\count1389
-\mymax=\count1390
-\mymin=\count1391
-\mymax=\count1392
-\mymin=\count1393
-\mymax=\count1394
-\mymin=\count1395
-\mymax=\count1396
-\mymin=\count1397
-\mymax=\count1398
-\mymin=\count1399
-\mymax=\count1400
-\mymin=\count1401
-\mymax=\count1402
-\mymin=\count1403
-\mymax=\count1404
-\mymin=\count1405
-\mymax=\count1406
-\mymin=\count1407
-\mymax=\count1408
-\mymin=\count1409
-\mymax=\count1410
-\mymin=\count1411
-\mymax=\count1412
-\mymin=\count1413
-\mymax=\count1414
-\mymin=\count1415
-\mymax=\count1416
-\mymin=\count1417
-\mymax=\count1418
-\mymin=\count1419
-\mymax=\count1420
-\mymin=\count1421
-\mymax=\count1422
+\mymin=\count1284
+\mymax=\count1285
+\mymin=\count1286
+\mymax=\count1287
+\mymin=\count1288
+\mymax=\count1289
+\mymin=\count1290
+\mymax=\count1291
+\mymin=\count1292
+\mymax=\count1293
+\mymin=\count1294
+\mymax=\count1295
+\mymin=\count1296
+\mymax=\count1297
+\mymin=\count1298
+\mymax=\count1299
+\mymin=\count1300
+\mymax=\count1301
+\mymin=\count1302
+\mymax=\count1303
+\mymin=\count1304
+\mymax=\count1305
+\mymin=\count1306
+\mymax=\count1307
+\mymin=\count1308
+\mymax=\count1309
+\mymin=\count1310
+\mymax=\count1311
+\mymin=\count1312
+\mymax=\count1313
+\mymin=\count1314
+\mymax=\count1315
+\mymin=\count1316
+\mymax=\count1317
+\mymin=\count1318
+\mymax=\count1319
+\mymin=\count1320
+\mymax=\count1321
+\mymin=\count1322
+\mymax=\count1323
+\mymin=\count1324
+\mymax=\count1325
+\mymin=\count1326
+\mymax=\count1327
+\mymin=\count1328
+\mymax=\count1329
+\mymin=\count1330
+\mymax=\count1331
+\mymin=\count1332
+\mymax=\count1333
+\mymin=\count1334
+\mymax=\count1335
+\mymin=\count1336
+\mymax=\count1337
+\mymin=\count1338
+\mymax=\count1339
+\mymin=\count1340
+\mymax=\count1341
+\mymin=\count1342
+\mymax=\count1343
  [16
 
 ]
-\mymin=\count1423
-\mymax=\count1424
-\mymin=\count1425
-\mymax=\count1426
-\mymin=\count1427
-\mymax=\count1428
-\mymin=\count1429
-\mymax=\count1430
-\mymin=\count1431
-\mymax=\count1432
-\mymin=\count1433
-\mymax=\count1434
-\mymin=\count1435
-\mymax=\count1436
-\mymin=\count1437
-\mymax=\count1438
-\mymin=\count1439
-\mymax=\count1440
-\mymin=\count1441
-\mymax=\count1442
-\mymin=\count1443
-\mymax=\count1444
-\mymin=\count1445
-\mymax=\count1446
-\mymin=\count1447
-\mymax=\count1448
-\mymin=\count1449
-\mymax=\count1450
-\mymin=\count1451
-\mymax=\count1452
-\mymin=\count1453
-\mymax=\count1454
-\mymin=\count1455
-\mymax=\count1456
-\mymin=\count1457
-\mymax=\count1458
-\mymin=\count1459
-\mymax=\count1460
-\mymin=\count1461
-\mymax=\count1462
-\mymin=\count1463
-\mymax=\count1464
-\mymin=\count1465
-\mymax=\count1466
-\mymin=\count1467
-\mymax=\count1468
-\mymin=\count1469
-\mymax=\count1470
-\mymin=\count1471
-\mymax=\count1472
-\mymin=\count1473
-\mymax=\count1474
-\mymin=\count1475
-\mymax=\count1476
-\mymin=\count1477
-\mymax=\count1478
-\mymin=\count1479
-\mymax=\count1480
-\mymin=\count1481
-\mymax=\count1482
-\mymin=\count1483
-\mymax=\count1484
-\mymin=\count1485
-\mymax=\count1486
+\mymin=\count1344
+\mymax=\count1345
+\mymin=\count1346
+\mymax=\count1347
+\mymin=\count1348
+\mymax=\count1349
+\mymin=\count1350
+\mymax=\count1351
+\mymin=\count1352
+\mymax=\count1353
+\mymin=\count1354
+\mymax=\count1355
+\mymin=\count1356
+\mymax=\count1357
+\mymin=\count1358
+\mymax=\count1359
+\mymin=\count1360
+\mymax=\count1361
+\mymin=\count1362
+\mymax=\count1363
+\mymin=\count1364
+\mymax=\count1365
+\mymin=\count1366
+\mymax=\count1367
+\mymin=\count1368
+\mymax=\count1369
+\mymin=\count1370
+\mymax=\count1371
+\mymin=\count1372
+\mymax=\count1373
+\mymin=\count1374
+\mymax=\count1375
+\mymin=\count1376
+\mymax=\count1377
+\mymin=\count1378
+\mymax=\count1379
+\mymin=\count1380
+\mymax=\count1381
+\mymin=\count1382
+\mymax=\count1383
+\mymin=\count1384
+\mymax=\count1385
+\mymin=\count1386
+\mymax=\count1387
+\mymin=\count1388
+\mymax=\count1389
+\mymin=\count1390
+\mymax=\count1391
+\mymin=\count1392
+\mymax=\count1393
+\mymin=\count1394
+\mymax=\count1395
+\mymin=\count1396
+\mymax=\count1397
+\mymin=\count1398
+\mymax=\count1399
+\mymin=\count1400
+\mymax=\count1401
+\mymin=\count1402
+\mymax=\count1403
  [17
 
 ]
-\mymin=\count1487
-\mymax=\count1488
-\mymin=\count1489
-\mymax=\count1490
-\mymin=\count1491
-\mymax=\count1492
-\mymin=\count1493
-\mymax=\count1494
-\mymin=\count1495
-\mymax=\count1496
-\mymin=\count1497
-\mymax=\count1498
-\mymin=\count1499
-\mymax=\count1500
-\mymin=\count1501
-\mymax=\count1502
-\mymin=\count1503
-\mymax=\count1504
-\mymin=\count1505
-\mymax=\count1506
-\mymin=\count1507
-\mymax=\count1508
-\mymin=\count1509
-\mymax=\count1510
-\mymin=\count1511
-\mymax=\count1512
-\mymin=\count1513
-\mymax=\count1514
-\mymin=\count1515
-\mymax=\count1516
-\mymin=\count1517
-\mymax=\count1518
-\mymin=\count1519
-\mymax=\count1520
-\mymin=\count1521
-\mymax=\count1522
-\mymin=\count1523
-\mymax=\count1524
-\mymin=\count1525
-\mymax=\count1526
-\mymin=\count1527
-\mymax=\count1528
-\mymin=\count1529
-\mymax=\count1530
-\mymin=\count1531
-\mymax=\count1532
-\mymin=\count1533
-\mymax=\count1534
-\mymin=\count1535
-\mymax=\count1536
-\mymin=\count1537
-\mymax=\count1538
-\mymin=\count1539
-\mymax=\count1540
-\mymin=\count1541
-\mymax=\count1542
-\mymin=\count1543
-\mymax=\count1544
-\mymin=\count1545
-\mymax=\count1546
-\mymin=\count1547
-\mymax=\count1548
-\mymin=\count1549
-\mymax=\count1550
+\mymin=\count1404
+\mymax=\count1405
+\mymin=\count1406
+\mymax=\count1407
+\mymin=\count1408
+\mymax=\count1409
+\mymin=\count1410
+\mymax=\count1411
+\mymin=\count1412
+\mymax=\count1413
+\mymin=\count1414
+\mymax=\count1415
+\mymin=\count1416
+\mymax=\count1417
+\mymin=\count1418
+\mymax=\count1419
+\mymin=\count1420
+\mymax=\count1421
+\mymin=\count1422
+\mymax=\count1423
+\mymin=\count1424
+\mymax=\count1425
+\mymin=\count1426
+\mymax=\count1427
+\mymin=\count1428
+\mymax=\count1429
+\mymin=\count1430
+\mymax=\count1431
+\mymin=\count1432
+\mymax=\count1433
+\mymin=\count1434
+\mymax=\count1435
+\mymin=\count1436
+\mymax=\count1437
+\mymin=\count1438
+\mymax=\count1439
+\mymin=\count1440
+\mymax=\count1441
+\mymin=\count1442
+\mymax=\count1443
+\mymin=\count1444
+\mymax=\count1445
+\mymin=\count1446
+\mymax=\count1447
+\mymin=\count1448
+\mymax=\count1449
+\mymin=\count1450
+\mymax=\count1451
+\mymin=\count1452
+\mymax=\count1453
+\mymin=\count1454
+\mymax=\count1455
+\mymin=\count1456
+\mymax=\count1457
+\mymin=\count1458
+\mymax=\count1459
+\mymin=\count1460
+\mymax=\count1461
+\mymin=\count1462
+\mymax=\count1463
  [18
 
 ]
-\mymin=\count1551
-\mymax=\count1552
-\mymin=\count1553
-\mymax=\count1554
-\mymin=\count1555
-\mymax=\count1556
-\mymin=\count1557
-\mymax=\count1558
-\mymin=\count1559
-\mymax=\count1560
-\mymin=\count1561
-\mymax=\count1562
-\mymin=\count1563
-\mymax=\count1564
-\mymin=\count1565
-\mymax=\count1566
-\mymin=\count1567
-\mymax=\count1568
-\mymin=\count1569
-\mymax=\count1570
-\mymin=\count1571
-\mymax=\count1572
-\mymin=\count1573
-\mymax=\count1574
-\mymin=\count1575
-\mymax=\count1576
-\mymin=\count1577
-\mymax=\count1578
-\mymin=\count1579
-\mymax=\count1580
-\mymin=\count1581
-\mymax=\count1582
-\mymin=\count1583
-\mymax=\count1584
-\mymin=\count1585
-\mymax=\count1586
-\mymin=\count1587
-\mymax=\count1588
-\mymin=\count1589
-\mymax=\count1590
-\mymin=\count1591
-\mymax=\count1592
-\mymin=\count1593
-\mymax=\count1594
-\mymin=\count1595
-\mymax=\count1596
-\mymin=\count1597
-\mymax=\count1598
-\mymin=\count1599
-\mymax=\count1600
-\mymin=\count1601
-\mymax=\count1602
-\mymin=\count1603
-\mymax=\count1604
-\mymin=\count1605
-\mymax=\count1606
-\mymin=\count1607
-\mymax=\count1608
-\mymin=\count1609
-\mymax=\count1610
-\mymin=\count1611
-\mymax=\count1612
-\mymin=\count1613
-\mymax=\count1614
+\mymin=\count1464
+\mymax=\count1465
+\mymin=\count1466
+\mymax=\count1467
+\mymin=\count1468
+\mymax=\count1469
+\mymin=\count1470
+\mymax=\count1471
+\mymin=\count1472
+\mymax=\count1473
+\mymin=\count1474
+\mymax=\count1475
+\mymin=\count1476
+\mymax=\count1477
+\mymin=\count1478
+\mymax=\count1479
+\mymin=\count1480
+\mymax=\count1481
+\mymin=\count1482
+\mymax=\count1483
+\mymin=\count1484
+\mymax=\count1485
+\mymin=\count1486
+\mymax=\count1487
+\mymin=\count1488
+\mymax=\count1489
+\mymin=\count1490
+\mymax=\count1491
+\mymin=\count1492
+\mymax=\count1493
+\mymin=\count1494
+\mymax=\count1495
+\mymin=\count1496
+\mymax=\count1497
+\mymin=\count1498
+\mymax=\count1499
+\mymin=\count1500
+\mymax=\count1501
+\mymin=\count1502
+\mymax=\count1503
+\mymin=\count1504
+\mymax=\count1505
+\mymin=\count1506
+\mymax=\count1507
+\mymin=\count1508
+\mymax=\count1509
+\mymin=\count1510
+\mymax=\count1511
+\mymin=\count1512
+\mymax=\count1513
+\mymin=\count1514
+\mymax=\count1515
+\mymin=\count1516
+\mymax=\count1517
+\mymin=\count1518
+\mymax=\count1519
+\mymin=\count1520
+\mymax=\count1521
+\mymin=\count1522
+\mymax=\count1523
  [19
 
 ]
-\mymin=\count1615
-\mymax=\count1616
-\mymin=\count1617
-\mymax=\count1618
-\mymin=\count1619
-\mymax=\count1620
-\mymin=\count1621
-\mymax=\count1622
-\mymin=\count1623
-\mymax=\count1624
-\mymin=\count1625
-\mymax=\count1626
-\mymin=\count1627
-\mymax=\count1628
-\mymin=\count1629
-\mymax=\count1630
-\mymin=\count1631
-\mymax=\count1632
-\mymin=\count1633
-\mymax=\count1634
-\mymin=\count1635
-\mymax=\count1636
-\mymin=\count1637
-\mymax=\count1638
-\mymin=\count1639
-\mymax=\count1640
-\mymin=\count1641
-\mymax=\count1642
-\mymin=\count1643
-\mymax=\count1644
-\mymin=\count1645
-\mymax=\count1646
-\mymin=\count1647
-\mymax=\count1648
-\mymin=\count1649
-\mymax=\count1650
-\mymin=\count1651
-\mymax=\count1652
-\mymin=\count1653
-\mymax=\count1654
-\mymin=\count1655
-\mymax=\count1656
-\mymin=\count1657
-\mymax=\count1658
-\mymin=\count1659
-\mymax=\count1660
-\mymin=\count1661
-\mymax=\count1662
-\mymin=\count1663
-\mymax=\count1664
-\mymin=\count1665
-\mymax=\count1666
-\mymin=\count1667
-\mymax=\count1668
-\mymin=\count1669
-\mymax=\count1670
-\mymin=\count1671
-\mymax=\count1672
-\mymin=\count1673
-\mymax=\count1674
-\mymin=\count1675
-\mymax=\count1676
-\mymin=\count1677
-\mymax=\count1678
+\mymin=\count1524
+\mymax=\count1525
+\mymin=\count1526
+\mymax=\count1527
+\mymin=\count1528
+\mymax=\count1529
+\mymin=\count1530
+\mymax=\count1531
+\mymin=\count1532
+\mymax=\count1533
+\mymin=\count1534
+\mymax=\count1535
+\mymin=\count1536
+\mymax=\count1537
+\mymin=\count1538
+\mymax=\count1539
+\mymin=\count1540
+\mymax=\count1541
+\mymin=\count1542
+\mymax=\count1543
+\mymin=\count1544
+\mymax=\count1545
+\mymin=\count1546
+\mymax=\count1547
+\mymin=\count1548
+\mymax=\count1549
+\mymin=\count1550
+\mymax=\count1551
+\mymin=\count1552
+\mymax=\count1553
+\mymin=\count1554
+\mymax=\count1555
+\mymin=\count1556
+\mymax=\count1557
+\mymin=\count1558
+\mymax=\count1559
+\mymin=\count1560
+\mymax=\count1561
+\mymin=\count1562
+\mymax=\count1563
+\mymin=\count1564
+\mymax=\count1565
+\mymin=\count1566
+\mymax=\count1567
+\mymin=\count1568
+\mymax=\count1569
+\mymin=\count1570
+\mymax=\count1571
+\mymin=\count1572
+\mymax=\count1573
+\mymin=\count1574
+\mymax=\count1575
+\mymin=\count1576
+\mymax=\count1577
+\mymin=\count1578
+\mymax=\count1579
+\mymin=\count1580
+\mymax=\count1581
+\mymin=\count1582
+\mymax=\count1583
  [20
 
 ]
-\mymin=\count1679
-\mymax=\count1680
-\mymin=\count1681
-\mymax=\count1682
-\mymin=\count1683
-\mymax=\count1684
-\mymin=\count1685
-\mymax=\count1686
-\mymin=\count1687
-\mymax=\count1688
-\mymin=\count1689
-\mymax=\count1690
-\mymin=\count1691
-\mymax=\count1692
-\mymin=\count1693
-\mymax=\count1694
-\mymin=\count1695
-\mymax=\count1696
-\mymin=\count1697
-\mymax=\count1698
-\mymin=\count1699
-\mymax=\count1700
-\mymin=\count1701
-\mymax=\count1702
-\mymin=\count1703
-\mymax=\count1704
-\mymin=\count1705
-\mymax=\count1706
-\mymin=\count1707
-\mymax=\count1708
-\mymin=\count1709
-\mymax=\count1710
-\mymin=\count1711
-\mymax=\count1712
-\mymin=\count1713
-\mymax=\count1714
-\mymin=\count1715
-\mymax=\count1716
-\mymin=\count1717
-\mymax=\count1718
-\mymin=\count1719
-\mymax=\count1720
-\mymin=\count1721
-\mymax=\count1722
-\mymin=\count1723
-\mymax=\count1724
-\mymin=\count1725
-\mymax=\count1726
-\mymin=\count1727
-\mymax=\count1728
-\mymin=\count1729
-\mymax=\count1730
-\mymin=\count1731
-\mymax=\count1732
-\mymin=\count1733
-\mymax=\count1734
-\mymin=\count1735
-\mymax=\count1736
-\mymin=\count1737
-\mymax=\count1738
-\mymin=\count1739
-\mymax=\count1740
-\mymin=\count1741
-\mymax=\count1742
+\mymin=\count1584
+\mymax=\count1585
+\mymin=\count1586
+\mymax=\count1587
+\mymin=\count1588
+\mymax=\count1589
+\mymin=\count1590
+\mymax=\count1591
+\mymin=\count1592
+\mymax=\count1593
+\mymin=\count1594
+\mymax=\count1595
+\mymin=\count1596
+\mymax=\count1597
+\mymin=\count1598
+\mymax=\count1599
+\mymin=\count1600
+\mymax=\count1601
+\mymin=\count1602
+\mymax=\count1603
+\mymin=\count1604
+\mymax=\count1605
+\mymin=\count1606
+\mymax=\count1607
+\mymin=\count1608
+\mymax=\count1609
+\mymin=\count1610
+\mymax=\count1611
+\mymin=\count1612
+\mymax=\count1613
+\mymin=\count1614
+\mymax=\count1615
+\mymin=\count1616
+\mymax=\count1617
+\mymin=\count1618
+\mymax=\count1619
+\mymin=\count1620
+\mymax=\count1621
+\mymin=\count1622
+\mymax=\count1623
+\mymin=\count1624
+\mymax=\count1625
+\mymin=\count1626
+\mymax=\count1627
+\mymin=\count1628
+\mymax=\count1629
+\mymin=\count1630
+\mymax=\count1631
+\mymin=\count1632
+\mymax=\count1633
+\mymin=\count1634
+\mymax=\count1635
+\mymin=\count1636
+\mymax=\count1637
+\mymin=\count1638
+\mymax=\count1639
+\mymin=\count1640
+\mymax=\count1641
+\mymin=\count1642
+\mymax=\count1643
  [21
 
 ]
-\mymin=\count1743
-\mymax=\count1744
-\mymin=\count1745
-\mymax=\count1746
-\mymin=\count1747
-\mymax=\count1748
-\mymin=\count1749
-\mymax=\count1750
-\mymin=\count1751
-\mymax=\count1752
-\mymin=\count1753
-\mymax=\count1754
-\mymin=\count1755
-\mymax=\count1756
-\mymin=\count1757
-\mymax=\count1758
-\mymin=\count1759
-\mymax=\count1760
-\mymin=\count1761
-\mymax=\count1762
-\mymin=\count1763
-\mymax=\count1764
-\mymin=\count1765
-\mymax=\count1766
-\mymin=\count1767
-\mymax=\count1768
-\mymin=\count1769
-\mymax=\count1770
-\mymin=\count1771
-\mymax=\count1772
-\mymin=\count1773
-\mymax=\count1774
-\mymin=\count1775
-\mymax=\count1776
-\mymin=\count1777
-\mymax=\count1778
-\mymin=\count1779
-\mymax=\count1780
-\mymin=\count1781
-\mymax=\count1782
-\mymin=\count1783
-\mymax=\count1784
-\mymin=\count1785
-\mymax=\count1786
-\mymin=\count1787
-\mymax=\count1788
-\mymin=\count1789
-\mymax=\count1790
-\mymin=\count1791
-\mymax=\count1792
-\mymin=\count1793
-\mymax=\count1794
-\mymin=\count1795
-\mymax=\count1796
-\mymin=\count1797
-\mymax=\count1798
-\mymin=\count1799
-\mymax=\count1800
-\mymin=\count1801
-\mymax=\count1802
-\mymin=\count1803
-\mymax=\count1804
-\mymin=\count1805
-\mymax=\count1806
+\mymin=\count1644
+\mymax=\count1645
+\mymin=\count1646
+\mymax=\count1647
+\mymin=\count1648
+\mymax=\count1649
+\mymin=\count1650
+\mymax=\count1651
+\mymin=\count1652
+\mymax=\count1653
+\mymin=\count1654
+\mymax=\count1655
+\mymin=\count1656
+\mymax=\count1657
+\mymin=\count1658
+\mymax=\count1659
+\mymin=\count1660
+\mymax=\count1661
+\mymin=\count1662
+\mymax=\count1663
+\mymin=\count1664
+\mymax=\count1665
+\mymin=\count1666
+\mymax=\count1667
+\mymin=\count1668
+\mymax=\count1669
+\mymin=\count1670
+\mymax=\count1671
+\mymin=\count1672
+\mymax=\count1673
+\mymin=\count1674
+\mymax=\count1675
+\mymin=\count1676
+\mymax=\count1677
+\mymin=\count1678
+\mymax=\count1679
+\mymin=\count1680
+\mymax=\count1681
+\mymin=\count1682
+\mymax=\count1683
+\mymin=\count1684
+\mymax=\count1685
+\mymin=\count1686
+\mymax=\count1687
+\mymin=\count1688
+\mymax=\count1689
+\mymin=\count1690
+\mymax=\count1691
+\mymin=\count1692
+\mymax=\count1693
+\mymin=\count1694
+\mymax=\count1695
+\mymin=\count1696
+\mymax=\count1697
+\mymin=\count1698
+\mymax=\count1699
+\mymin=\count1700
+\mymax=\count1701
+\mymin=\count1702
+\mymax=\count1703
  [22
 
 ]
-\mymin=\count1807
-\mymax=\count1808
-\mymin=\count1809
-\mymax=\count1810
-\mymin=\count1811
-\mymax=\count1812
-\mymin=\count1813
-\mymax=\count1814
-\mymin=\count1815
-\mymax=\count1816
-\mymin=\count1817
-\mymax=\count1818
-\mymin=\count1819
-\mymax=\count1820
-\mymin=\count1821
-\mymax=\count1822
-\mymin=\count1823
-\mymax=\count1824
-\mymin=\count1825
-\mymax=\count1826
-\mymin=\count1827
-\mymax=\count1828
-\mymin=\count1829
-\mymax=\count1830
-\mymin=\count1831
-\mymax=\count1832
-\mymin=\count1833
-\mymax=\count1834
-\mymin=\count1835
-\mymax=\count1836
-\mymin=\count1837
-\mymax=\count1838
-\mymin=\count1839
-\mymax=\count1840
-\mymin=\count1841
-\mymax=\count1842
-\mymin=\count1843
-\mymax=\count1844
-\mymin=\count1845
-\mymax=\count1846
-\mymin=\count1847
-\mymax=\count1848
-\mymin=\count1849
-\mymax=\count1850
-\mymin=\count1851
-\mymax=\count1852
-\mymin=\count1853
-\mymax=\count1854
-\mymin=\count1855
-\mymax=\count1856
-\mymin=\count1857
-\mymax=\count1858
-\mymin=\count1859
-\mymax=\count1860
-\mymin=\count1861
-\mymax=\count1862
-\mymin=\count1863
-\mymax=\count1864
-\mymin=\count1865
-\mymax=\count1866
-\mymin=\count1867
-\mymax=\count1868
-\mymin=\count1869
-\mymax=\count1870
+\mymin=\count1704
+\mymax=\count1705
+\mymin=\count1706
+\mymax=\count1707
+\mymin=\count1708
+\mymax=\count1709
+\mymin=\count1710
+\mymax=\count1711
+\mymin=\count1712
+\mymax=\count1713
+\mymin=\count1714
+\mymax=\count1715
+\mymin=\count1716
+\mymax=\count1717
+\mymin=\count1718
+\mymax=\count1719
+\mymin=\count1720
+\mymax=\count1721
+\mymin=\count1722
+\mymax=\count1723
+\mymin=\count1724
+\mymax=\count1725
+\mymin=\count1726
+\mymax=\count1727
+\mymin=\count1728
+\mymax=\count1729
+\mymin=\count1730
+\mymax=\count1731
+\mymin=\count1732
+\mymax=\count1733
+\mymin=\count1734
+\mymax=\count1735
+\mymin=\count1736
+\mymax=\count1737
+\mymin=\count1738
+\mymax=\count1739
+\mymin=\count1740
+\mymax=\count1741
+\mymin=\count1742
+\mymax=\count1743
+\mymin=\count1744
+\mymax=\count1745
+\mymin=\count1746
+\mymax=\count1747
+\mymin=\count1748
+\mymax=\count1749
+\mymin=\count1750
+\mymax=\count1751
+\mymin=\count1752
+\mymax=\count1753
+\mymin=\count1754
+\mymax=\count1755
+\mymin=\count1756
+\mymax=\count1757
+\mymin=\count1758
+\mymax=\count1759
+\mymin=\count1760
+\mymax=\count1761
+\mymin=\count1762
+\mymax=\count1763
  [23
 
 ]
-\mymin=\count1871
-\mymax=\count1872
-\mymin=\count1873
-\mymax=\count1874
-\mymin=\count1875
-\mymax=\count1876
-\mymin=\count1877
-\mymax=\count1878
-\mymin=\count1879
-\mymax=\count1880
-\mymin=\count1881
-\mymax=\count1882
-\mymin=\count1883
-\mymax=\count1884
-\mymin=\count1885
-\mymax=\count1886
-\mymin=\count1887
-\mymax=\count1888
-\mymin=\count1889
-\mymax=\count1890
-\mymin=\count1891
-\mymax=\count1892
-\mymin=\count1893
-\mymax=\count1894
-\mymin=\count1895
-\mymax=\count1896
-\mymin=\count1897
-\mymax=\count1898
-\mymin=\count1899
-\mymax=\count1900
-\mymin=\count1901
-\mymax=\count1902
-\mymin=\count1903
-\mymax=\count1904
-\mymin=\count1905
-\mymax=\count1906
-\mymin=\count1907
-\mymax=\count1908
-\mymin=\count1909
-\mymax=\count1910
-\mymin=\count1911
-\mymax=\count1912
-\mymin=\count1913
-\mymax=\count1914
-\mymin=\count1915
-\mymax=\count1916
-\mymin=\count1917
-\mymax=\count1918
-\mymin=\count1919
-\mymax=\count1920
-\mymin=\count1921
-\mymax=\count1922
-\mymin=\count1923
-\mymax=\count1924
-\mymin=\count1925
-\mymax=\count1926
-\mymin=\count1927
-\mymax=\count1928
-\mymin=\count1929
-\mymax=\count1930
-\mymin=\count1931
-\mymax=\count1932
-\mymin=\count1933
-\mymax=\count1934
+\mymin=\count1764
+\mymax=\count1765
+\mymin=\count1766
+\mymax=\count1767
+\mymin=\count1768
+\mymax=\count1769
+\mymin=\count1770
+\mymax=\count1771
+\mymin=\count1772
+\mymax=\count1773
+\mymin=\count1774
+\mymax=\count1775
+\mymin=\count1776
+\mymax=\count1777
+\mymin=\count1778
+\mymax=\count1779
+\mymin=\count1780
+\mymax=\count1781
+\mymin=\count1782
+\mymax=\count1783
+\mymin=\count1784
+\mymax=\count1785
+\mymin=\count1786
+\mymax=\count1787
+\mymin=\count1788
+\mymax=\count1789
+\mymin=\count1790
+\mymax=\count1791
+\mymin=\count1792
+\mymax=\count1793
+\mymin=\count1794
+\mymax=\count1795
+\mymin=\count1796
+\mymax=\count1797
+\mymin=\count1798
+\mymax=\count1799
+\mymin=\count1800
+\mymax=\count1801
+\mymin=\count1802
+\mymax=\count1803
+\mymin=\count1804
+\mymax=\count1805
+\mymin=\count1806
+\mymax=\count1807
+\mymin=\count1808
+\mymax=\count1809
+\mymin=\count1810
+\mymax=\count1811
+\mymin=\count1812
+\mymax=\count1813
+\mymin=\count1814
+\mymax=\count1815
+\mymin=\count1816
+\mymax=\count1817
+\mymin=\count1818
+\mymax=\count1819
+\mymin=\count1820
+\mymax=\count1821
+\mymin=\count1822
+\mymax=\count1823
  [24
 
 ]
-<Figures/Z_vs_nH.png, id=808, 549.9747pt x 351.9549pt>
+<Figures/Z_vs_nH.png, id=807, 549.9747pt x 351.9549pt>
 File: Figures/Z_vs_nH.png Graphic file (type png)
 <use Figures/Z_vs_nH.png>
-Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 656.
+Package pdftex.def Info: Figures/Z_vs_nH.png  used on input line 697.
 (pdftex.def)             Requested size: 256.0748pt x 163.87215pt.
-\mymin=\count1935
-\mymax=\count1936
-\mymin=\count1937
-\mymax=\count1938
-\mymin=\count1939
-\mymax=\count1940
-\mymin=\count1941
-\mymax=\count1942
-\mymin=\count1943
-\mymax=\count1944
-\mymin=\count1945
-\mymax=\count1946
-\mymin=\count1947
-\mymax=\count1948
-\mymin=\count1949
-\mymax=\count1950
-\mymin=\count1951
-\mymax=\count1952
-\mymin=\count1953
-\mymax=\count1954
-\mymin=\count1955
-\mymax=\count1956
-\mymin=\count1957
-\mymax=\count1958
-\mymin=\count1959
-\mymax=\count1960
-\mymin=\count1961
-\mymax=\count1962
-\mymin=\count1963
-\mymax=\count1964
-\mymin=\count1965
-\mymax=\count1966
-\mymin=\count1967
-\mymax=\count1968
-\mymin=\count1969
-\mymax=\count1970
-\mymin=\count1971
-\mymax=\count1972
-\mymin=\count1973
-\mymax=\count1974
-\mymin=\count1975
-\mymax=\count1976
-\mymin=\count1977
-\mymax=\count1978
-\mymin=\count1979
-\mymax=\count1980
-\mymin=\count1981
-\mymax=\count1982
-\mymin=\count1983
-\mymax=\count1984
-\mymin=\count1985
-\mymax=\count1986
-\mymin=\count1987
-\mymax=\count1988
-\mymin=\count1989
-\mymax=\count1990
-\mymin=\count1991
-\mymax=\count1992
-\mymin=\count1993
-\mymax=\count1994
-\mymin=\count1995
-\mymax=\count1996
-\mymin=\count1997
-\mymax=\count1998
+\mymin=\count1824
+\mymax=\count1825
+\mymin=\count1826
+\mymax=\count1827
+\mymin=\count1828
+\mymax=\count1829
+\mymin=\count1830
+\mymax=\count1831
+\mymin=\count1832
+\mymax=\count1833
+\mymin=\count1834
+\mymax=\count1835
+\mymin=\count1836
+\mymax=\count1837
+\mymin=\count1838
+\mymax=\count1839
+\mymin=\count1840
+\mymax=\count1841
+\mymin=\count1842
+\mymax=\count1843
+\mymin=\count1844
+\mymax=\count1845
+\mymin=\count1846
+\mymax=\count1847
+\mymin=\count1848
+\mymax=\count1849
+\mymin=\count1850
+\mymax=\count1851
+\mymin=\count1852
+\mymax=\count1853
+\mymin=\count1854
+\mymax=\count1855
+\mymin=\count1856
+\mymax=\count1857
+\mymin=\count1858
+\mymax=\count1859
+\mymin=\count1860
+\mymax=\count1861
+\mymin=\count1862
+\mymax=\count1863
+\mymin=\count1864
+\mymax=\count1865
+\mymin=\count1866
+\mymax=\count1867
+\mymin=\count1868
+\mymax=\count1869
+\mymin=\count1870
+\mymax=\count1871
+\mymin=\count1872
+\mymax=\count1873
+\mymin=\count1874
+\mymax=\count1875
+\mymin=\count1876
+\mymax=\count1877
+\mymin=\count1878
+\mymax=\count1879
+\mymin=\count1880
+\mymax=\count1881
+\mymin=\count1882
+\mymax=\count1883
  [25
 
  <./Figures/Z_vs_nH.png>]
-<Figures/NHi_vs_nH.png, id=842, 535.5207pt x 351.9549pt>
+<Figures/NHi_vs_nH.png, id=841, 535.5207pt x 351.9549pt>
 File: Figures/NHi_vs_nH.png Graphic file (type png)
 <use Figures/NHi_vs_nH.png>
-Package pdftex.def Info: Figures/NHi_vs_nH.png  used on input line 668.
+Package pdftex.def Info: Figures/NHi_vs_nH.png  used on input line 709.
 (pdftex.def)             Requested size: 256.0748pt x 168.30272pt.
 
-Overfull \vbox (2.80154pt too high) detected at line 668
+Overfull \vbox (2.80154pt too high) detected at line 709
  []
 
-\mymin=\count1999
-\mymax=\count2000
-\mymin=\count2001
-\mymax=\count2002
-\mymin=\count2003
-\mymax=\count2004
-\mymin=\count2005
-\mymax=\count2006
-\mymin=\count2007
-\mymax=\count2008
-\mymin=\count2009
-\mymax=\count2010
-\mymin=\count2011
-\mymax=\count2012
-\mymin=\count2013
-\mymax=\count2014
-\mymin=\count2015
-\mymax=\count2016
-\mymin=\count2017
-\mymax=\count2018
-\mymin=\count2019
-\mymax=\count2020
-\mymin=\count2021
-\mymax=\count2022
-\mymin=\count2023
-\mymax=\count2024
-\mymin=\count2025
-\mymax=\count2026
-\mymin=\count2027
-\mymax=\count2028
-\mymin=\count2029
-\mymax=\count2030
-\mymin=\count2031
-\mymax=\count2032
-\mymin=\count2033
-\mymax=\count2034
-\mymin=\count2035
-\mymax=\count2036
-\mymin=\count2037
-\mymax=\count2038
-\mymin=\count2039
-\mymax=\count2040
-\mymin=\count2041
-\mymax=\count2042
-\mymin=\count2043
-\mymax=\count2044
-\mymin=\count2045
-\mymax=\count2046
-\mymin=\count2047
-\mymax=\count2048
-\mymin=\count2049
-\mymax=\count2050
-\mymin=\count2051
-\mymax=\count2052
-\mymin=\count2053
-\mymax=\count2054
-\mymin=\count2055
-\mymax=\count2056
-\mymin=\count2057
-\mymax=\count2058
-\mymin=\count2059
-\mymax=\count2060
-\mymin=\count2061
-\mymax=\count2062
+\mymin=\count1884
+\mymax=\count1885
+\mymin=\count1886
+\mymax=\count1887
+\mymin=\count1888
+\mymax=\count1889
+\mymin=\count1890
+\mymax=\count1891
+\mymin=\count1892
+\mymax=\count1893
+\mymin=\count1894
+\mymax=\count1895
+\mymin=\count1896
+\mymax=\count1897
+\mymin=\count1898
+\mymax=\count1899
+\mymin=\count1900
+\mymax=\count1901
+\mymin=\count1902
+\mymax=\count1903
+\mymin=\count1904
+\mymax=\count1905
+\mymin=\count1906
+\mymax=\count1907
+\mymin=\count1908
+\mymax=\count1909
+\mymin=\count1910
+\mymax=\count1911
+\mymin=\count1912
+\mymax=\count1913
+\mymin=\count1914
+\mymax=\count1915
+\mymin=\count1916
+\mymax=\count1917
+\mymin=\count1918
+\mymax=\count1919
+\mymin=\count1920
+\mymax=\count1921
+\mymin=\count1922
+\mymax=\count1923
+\mymin=\count1924
+\mymax=\count1925
+\mymin=\count1926
+\mymax=\count1927
+\mymin=\count1928
+\mymax=\count1929
+\mymin=\count1930
+\mymax=\count1931
+\mymin=\count1932
+\mymax=\count1933
+\mymin=\count1934
+\mymax=\count1935
+\mymin=\count1936
+\mymax=\count1937
+\mymin=\count1938
+\mymax=\count1939
+\mymin=\count1940
+\mymax=\count1941
+\mymin=\count1942
+\mymax=\count1943
 [26
 
  <./Figures/NHi_vs_nH.png>]
-<Figures/Ovi_cases.png, id=873, 521.7894pt x 354.123pt>
+<Figures/Ovi_cases.png, id=872, 521.7894pt x 354.123pt>
 File: Figures/Ovi_cases.png Graphic file (type png)
 <use Figures/Ovi_cases.png>
-Package pdftex.def Info: Figures/Ovi_cases.png  used on input line 680.
+Package pdftex.def Info: Figures/Ovi_cases.png  used on input line 721.
 (pdftex.def)             Requested size: 256.0748pt x 173.79195pt.
 
-Overfull \vbox (8.29077pt too high) detected at line 680
+Overfull \vbox (8.29077pt too high) detected at line 721
  []
 
-\mymin=\count2063
-\mymax=\count2064
-\mymin=\count2065
-\mymax=\count2066
-\mymin=\count2067
-\mymax=\count2068
-\mymin=\count2069
-\mymax=\count2070
-\mymin=\count2071
-\mymax=\count2072
-\mymin=\count2073
-\mymax=\count2074
-\mymin=\count2075
-\mymax=\count2076
-\mymin=\count2077
-\mymax=\count2078
-\mymin=\count2079
-\mymax=\count2080
-\mymin=\count2081
-\mymax=\count2082
-\mymin=\count2083
-\mymax=\count2084
-\mymin=\count2085
-\mymax=\count2086
-\mymin=\count2087
-\mymax=\count2088
-\mymin=\count2089
-\mymax=\count2090
-\mymin=\count2091
-\mymax=\count2092
-\mymin=\count2093
-\mymax=\count2094
-\mymin=\count2095
-\mymax=\count2096
-\mymin=\count2097
-\mymax=\count2098
-\mymin=\count2099
-\mymax=\count2100
-\mymin=\count2101
-\mymax=\count2102
-\mymin=\count2103
-\mymax=\count2104
-\mymin=\count2105
-\mymax=\count2106
-\mymin=\count2107
-\mymax=\count2108
-\mymin=\count2109
-\mymax=\count2110
-\mymin=\count2111
-\mymax=\count2112
-\mymin=\count2113
-\mymax=\count2114
-\mymin=\count2115
-\mymax=\count2116
-\mymin=\count2117
-\mymax=\count2118
-\mymin=\count2119
-\mymax=\count2120
-\mymin=\count2121
-\mymax=\count2122
-\mymin=\count2123
-\mymax=\count2124
-\mymin=\count2125
-\mymax=\count2126
+\mymin=\count1944
+\mymax=\count1945
+\mymin=\count1946
+\mymax=\count1947
+\mymin=\count1948
+\mymax=\count1949
+\mymin=\count1950
+\mymax=\count1951
+\mymin=\count1952
+\mymax=\count1953
+\mymin=\count1954
+\mymax=\count1955
+\mymin=\count1956
+\mymax=\count1957
+\mymin=\count1958
+\mymax=\count1959
+\mymin=\count1960
+\mymax=\count1961
+\mymin=\count1962
+\mymax=\count1963
+\mymin=\count1964
+\mymax=\count1965
+\mymin=\count1966
+\mymax=\count1967
+\mymin=\count1968
+\mymax=\count1969
+\mymin=\count1970
+\mymax=\count1971
+\mymin=\count1972
+\mymax=\count1973
+\mymin=\count1974
+\mymax=\count1975
+\mymin=\count1976
+\mymax=\count1977
+\mymin=\count1978
+\mymax=\count1979
+\mymin=\count1980
+\mymax=\count1981
+\mymin=\count1982
+\mymax=\count1983
+\mymin=\count1984
+\mymax=\count1985
+\mymin=\count1986
+\mymax=\count1987
+\mymin=\count1988
+\mymax=\count1989
+\mymin=\count1990
+\mymax=\count1991
+\mymin=\count1992
+\mymax=\count1993
+\mymin=\count1994
+\mymax=\count1995
+\mymin=\count1996
+\mymax=\count1997
+\mymin=\count1998
+\mymax=\count1999
+\mymin=\count2000
+\mymax=\count2001
+\mymin=\count2002
+\mymax=\count2003
 [27
 
  <./Figures/Ovi_cases.png>]
-<Figures/s135712-z=0.097869-compII.png, id=904, 992.9898pt x 610.6815pt>
+<Figures/s135712-z=0.097869-compII.png, id=903, 992.9898pt x 610.6815pt>
 File: Figures/s135712-z=0.097869-compII.png Graphic file (type png)
 <use Figures/s135712-z=0.097869-compII.png>
-Package pdftex.def Info: Figures/s135712-z=0.097869-compII.png  used on input line 693.
+Package pdftex.def Info: Figures/s135712-z=0.097869-compII.png  used on input line 734.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 693
+Overfull \vbox (9.88867pt too high) detected at line 734
  []
 
-\mymin=\count2127
-\mymax=\count2128
-\mymin=\count2129
-\mymax=\count2130
-\mymin=\count2131
-\mymax=\count2132
-\mymin=\count2133
-\mymax=\count2134
-\mymin=\count2135
-\mymax=\count2136
-\mymin=\count2137
-\mymax=\count2138
-\mymin=\count2139
-\mymax=\count2140
-\mymin=\count2141
-\mymax=\count2142
-\mymin=\count2143
-\mymax=\count2144
-\mymin=\count2145
-\mymax=\count2146
-\mymin=\count2147
-\mymax=\count2148
-\mymin=\count2149
-\mymax=\count2150
-\mymin=\count2151
-\mymax=\count2152
-\mymin=\count2153
-\mymax=\count2154
-\mymin=\count2155
-\mymax=\count2156
-\mymin=\count2157
-\mymax=\count2158
-\mymin=\count2159
-\mymax=\count2160
-\mymin=\count2161
-\mymax=\count2162
-\mymin=\count2163
-\mymax=\count2164
-\mymin=\count2165
-\mymax=\count2166
-\mymin=\count2167
-\mymax=\count2168
-\mymin=\count2169
-\mymax=\count2170
-\mymin=\count2171
-\mymax=\count2172
-\mymin=\count2173
-\mymax=\count2174
-\mymin=\count2175
-\mymax=\count2176
-\mymin=\count2177
-\mymax=\count2178
-\mymin=\count2179
-\mymax=\count2180
-\mymin=\count2181
-\mymax=\count2182
-\mymin=\count2183
-\mymax=\count2184
-\mymin=\count2185
-\mymax=\count2186
-\mymin=\count2187
-\mymax=\count2188
-\mymin=\count2189
-\mymax=\count2190
+\mymin=\count2004
+\mymax=\count2005
+\mymin=\count2006
+\mymax=\count2007
+\mymin=\count2008
+\mymax=\count2009
+\mymin=\count2010
+\mymax=\count2011
+\mymin=\count2012
+\mymax=\count2013
+\mymin=\count2014
+\mymax=\count2015
+\mymin=\count2016
+\mymax=\count2017
+\mymin=\count2018
+\mymax=\count2019
+\mymin=\count2020
+\mymax=\count2021
+\mymin=\count2022
+\mymax=\count2023
+\mymin=\count2024
+\mymax=\count2025
+\mymin=\count2026
+\mymax=\count2027
+\mymin=\count2028
+\mymax=\count2029
+\mymin=\count2030
+\mymax=\count2031
+\mymin=\count2032
+\mymax=\count2033
+\mymin=\count2034
+\mymax=\count2035
+\mymin=\count2036
+\mymax=\count2037
+\mymin=\count2038
+\mymax=\count2039
+\mymin=\count2040
+\mymax=\count2041
+\mymin=\count2042
+\mymax=\count2043
+\mymin=\count2044
+\mymax=\count2045
+\mymin=\count2046
+\mymax=\count2047
+\mymin=\count2048
+\mymax=\count2049
+\mymin=\count2050
+\mymax=\count2051
+\mymin=\count2052
+\mymax=\count2053
+\mymin=\count2054
+\mymax=\count2055
+\mymin=\count2056
+\mymax=\count2057
+\mymin=\count2058
+\mymax=\count2059
+\mymin=\count2060
+\mymax=\count2061
+\mymin=\count2062
+\mymax=\count2063
 [28
 
  <./Figures/s135712-z=0.097869-compII.png>]
-<Figures/1es1553-z=0.187764-compI.png, id=937, 992.9898pt x 610.6815pt>
+<Figures/1es1553-z=0.187764-compI.png, id=936, 992.9898pt x 610.6815pt>
 File: Figures/1es1553-z=0.187764-compI.png Graphic file (type png)
 <use Figures/1es1553-z=0.187764-compI.png>
-Package pdftex.def Info: Figures/1es1553-z=0.187764-compI.png  used on input line 705.
+Package pdftex.def Info: Figures/1es1553-z=0.187764-compI.png  used on input line 746.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 705
+Overfull \vbox (9.88867pt too high) detected at line 746
  []
 
-\mymin=\count2191
-\mymax=\count2192
-\mymin=\count2193
-\mymax=\count2194
-\mymin=\count2195
-\mymax=\count2196
-\mymin=\count2197
-\mymax=\count2198
-\mymin=\count2199
-\mymax=\count2200
-\mymin=\count2201
-\mymax=\count2202
-\mymin=\count2203
-\mymax=\count2204
-\mymin=\count2205
-\mymax=\count2206
-\mymin=\count2207
-\mymax=\count2208
-\mymin=\count2209
-\mymax=\count2210
-\mymin=\count2211
-\mymax=\count2212
-\mymin=\count2213
-\mymax=\count2214
-\mymin=\count2215
-\mymax=\count2216
-\mymin=\count2217
-\mymax=\count2218
-\mymin=\count2219
-\mymax=\count2220
-\mymin=\count2221
-\mymax=\count2222
-\mymin=\count2223
-\mymax=\count2224
-\mymin=\count2225
-\mymax=\count2226
-\mymin=\count2227
-\mymax=\count2228
-\mymin=\count2229
-\mymax=\count2230
-\mymin=\count2231
-\mymax=\count2232
-\mymin=\count2233
-\mymax=\count2234
-\mymin=\count2235
-\mymax=\count2236
-\mymin=\count2237
-\mymax=\count2238
-\mymin=\count2239
-\mymax=\count2240
-\mymin=\count2241
-\mymax=\count2242
-\mymin=\count2243
-\mymax=\count2244
-\mymin=\count2245
-\mymax=\count2246
-\mymin=\count2247
-\mymax=\count2248
-\mymin=\count2249
-\mymax=\count2250
-\mymin=\count2251
-\mymax=\count2252
-\mymin=\count2253
-\mymax=\count2254
+\mymin=\count2064
+\mymax=\count2065
+\mymin=\count2066
+\mymax=\count2067
+\mymin=\count2068
+\mymax=\count2069
+\mymin=\count2070
+\mymax=\count2071
+\mymin=\count2072
+\mymax=\count2073
+\mymin=\count2074
+\mymax=\count2075
+\mymin=\count2076
+\mymax=\count2077
+\mymin=\count2078
+\mymax=\count2079
+\mymin=\count2080
+\mymax=\count2081
+\mymin=\count2082
+\mymax=\count2083
+\mymin=\count2084
+\mymax=\count2085
+\mymin=\count2086
+\mymax=\count2087
+\mymin=\count2088
+\mymax=\count2089
+\mymin=\count2090
+\mymax=\count2091
+\mymin=\count2092
+\mymax=\count2093
+\mymin=\count2094
+\mymax=\count2095
+\mymin=\count2096
+\mymax=\count2097
+\mymin=\count2098
+\mymax=\count2099
+\mymin=\count2100
+\mymax=\count2101
+\mymin=\count2102
+\mymax=\count2103
+\mymin=\count2104
+\mymax=\count2105
+\mymin=\count2106
+\mymax=\count2107
+\mymin=\count2108
+\mymax=\count2109
+\mymin=\count2110
+\mymax=\count2111
+\mymin=\count2112
+\mymax=\count2113
+\mymin=\count2114
+\mymax=\count2115
+\mymin=\count2116
+\mymax=\count2117
+\mymin=\count2118
+\mymax=\count2119
+\mymin=\count2120
+\mymax=\count2121
+\mymin=\count2122
+\mymax=\count2123
 [29
 
  <./Figures/1es1553-z=0.187764-compI.png>]
-<Figures/pks0405-z=0.167125-compII.png, id=968, 992.9898pt x 610.6815pt>
+<Figures/pks0405-z=0.167125-compII.png, id=967, 992.9898pt x 610.6815pt>
 File: Figures/pks0405-z=0.167125-compII.png Graphic file (type png)
 <use Figures/pks0405-z=0.167125-compII.png>
-Package pdftex.def Info: Figures/pks0405-z=0.167125-compII.png  used on input line 717.
+Package pdftex.def Info: Figures/pks0405-z=0.167125-compII.png  used on input line 758.
 (pdftex.def)             Requested size: 284.52756pt x 174.97786pt.
 
-Overfull \vbox (9.88867pt too high) detected at line 717
+Overfull \vbox (9.88867pt too high) detected at line 758
  []
 
-\mymin=\count2255
-\mymax=\count2256
-\mymin=\count2257
-\mymax=\count2258
-\mymin=\count2259
-\mymax=\count2260
-\mymin=\count2261
-\mymax=\count2262
-\mymin=\count2263
-\mymax=\count2264
-\mymin=\count2265
-\mymax=\count2266
-\mymin=\count2267
-\mymax=\count2268
-\mymin=\count2269
-\mymax=\count2270
-\mymin=\count2271
-\mymax=\count2272
-\mymin=\count2273
-\mymax=\count2274
-\mymin=\count2275
-\mymax=\count2276
-\mymin=\count2277
-\mymax=\count2278
-\mymin=\count2279
-\mymax=\count2280
-\mymin=\count2281
-\mymax=\count2282
-\mymin=\count2283
-\mymax=\count2284
-\mymin=\count2285
-\mymax=\count2286
-\mymin=\count2287
-\mymax=\count2288
-\mymin=\count2289
-\mymax=\count2290
-\mymin=\count2291
-\mymax=\count2292
-\mymin=\count2293
-\mymax=\count2294
-\mymin=\count2295
-\mymax=\count2296
-\mymin=\count2297
-\mymax=\count2298
-\mymin=\count2299
-\mymax=\count2300
-\mymin=\count2301
-\mymax=\count2302
-\mymin=\count2303
-\mymax=\count2304
-\mymin=\count2305
-\mymax=\count2306
-\mymin=\count2307
-\mymax=\count2308
-\mymin=\count2309
-\mymax=\count2310
-\mymin=\count2311
-\mymax=\count2312
-\mymin=\count2313
-\mymax=\count2314
-\mymin=\count2315
-\mymax=\count2316
-\mymin=\count2317
-\mymax=\count2318
+\mymin=\count2124
+\mymax=\count2125
+\mymin=\count2126
+\mymax=\count2127
+\mymin=\count2128
+\mymax=\count2129
+\mymin=\count2130
+\mymax=\count2131
+\mymin=\count2132
+\mymax=\count2133
+\mymin=\count2134
+\mymax=\count2135
+\mymin=\count2136
+\mymax=\count2137
+\mymin=\count2138
+\mymax=\count2139
+\mymin=\count2140
+\mymax=\count2141
+\mymin=\count2142
+\mymax=\count2143
+\mymin=\count2144
+\mymax=\count2145
+\mymin=\count2146
+\mymax=\count2147
+\mymin=\count2148
+\mymax=\count2149
+\mymin=\count2150
+\mymax=\count2151
+\mymin=\count2152
+\mymax=\count2153
+\mymin=\count2154
+\mymax=\count2155
+\mymin=\count2156
+\mymax=\count2157
+\mymin=\count2158
+\mymax=\count2159
+\mymin=\count2160
+\mymax=\count2161
+\mymin=\count2162
+\mymax=\count2163
+\mymin=\count2164
+\mymax=\count2165
+\mymin=\count2166
+\mymax=\count2167
+\mymin=\count2168
+\mymax=\count2169
+\mymin=\count2170
+\mymax=\count2171
+\mymin=\count2172
+\mymax=\count2173
+\mymin=\count2174
+\mymax=\count2175
+\mymin=\count2176
+\mymax=\count2177
+\mymin=\count2178
+\mymax=\count2179
+\mymin=\count2180
+\mymax=\count2181
+\mymin=\count2182
+\mymax=\count2183
 [30
 
  <./Figures/pks0405-z=0.167125-compII.png>]
-\mymin=\count2319
-\mymax=\count2320
-\mymin=\count2321
-\mymax=\count2322
-\mymin=\count2323
-\mymax=\count2324
-\mymin=\count2325
-\mymax=\count2326
-\mymin=\count2327
-\mymax=\count2328
-\mymin=\count2329
-\mymax=\count2330
-\mymin=\count2331
-\mymax=\count2332
-\mymin=\count2333
-\mymax=\count2334
-\mymin=\count2335
-\mymax=\count2336
-\mymin=\count2337
-\mymax=\count2338
-\mymin=\count2339
-\mymax=\count2340
-\mymin=\count2341
-\mymax=\count2342
-\mymin=\count2343
-\mymax=\count2344
-\mymin=\count2345
-\mymax=\count2346
-\mymin=\count2347
-\mymax=\count2348
-\mymin=\count2349
-\mymax=\count2350
-\mymin=\count2351
-\mymax=\count2352
-\mymin=\count2353
-\mymax=\count2354
-\mymin=\count2355
-\mymax=\count2356
-\mymin=\count2357
-\mymax=\count2358
-\mymin=\count2359
-\mymax=\count2360
-\mymin=\count2361
-\mymax=\count2362
-\mymin=\count2363
-\mymax=\count2364
-\mymin=\count2365
-\mymax=\count2366
-\mymin=\count2367
-\mymax=\count2368
-\mymin=\count2369
-\mymax=\count2370
-\mymin=\count2371
-\mymax=\count2372
-\mymin=\count2373
-\mymax=\count2374
-\mymin=\count2375
-\mymax=\count2376
-\mymin=\count2377
-\mymax=\count2378
-\mymin=\count2379
-\mymax=\count2380
-\mymin=\count2381
-\mymax=\count2382
+\mymin=\count2184
+\mymax=\count2185
+\mymin=\count2186
+\mymax=\count2187
+\mymin=\count2188
+\mymax=\count2189
+\mymin=\count2190
+\mymax=\count2191
+\mymin=\count2192
+\mymax=\count2193
+\mymin=\count2194
+\mymax=\count2195
+\mymin=\count2196
+\mymax=\count2197
+\mymin=\count2198
+\mymax=\count2199
+\mymin=\count2200
+\mymax=\count2201
+\mymin=\count2202
+\mymax=\count2203
+\mymin=\count2204
+\mymax=\count2205
+\mymin=\count2206
+\mymax=\count2207
+\mymin=\count2208
+\mymax=\count2209
+\mymin=\count2210
+\mymax=\count2211
+\mymin=\count2212
+\mymax=\count2213
+\mymin=\count2214
+\mymax=\count2215
+\mymin=\count2216
+\mymax=\count2217
+\mymin=\count2218
+\mymax=\count2219
+\mymin=\count2220
+\mymax=\count2221
+\mymin=\count2222
+\mymax=\count2223
+\mymin=\count2224
+\mymax=\count2225
+\mymin=\count2226
+\mymax=\count2227
+\mymin=\count2228
+\mymax=\count2229
+\mymin=\count2230
+\mymax=\count2231
+\mymin=\count2232
+\mymax=\count2233
+\mymin=\count2234
+\mymax=\count2235
+\mymin=\count2236
+\mymax=\count2237
+\mymin=\count2238
+\mymax=\count2239
+\mymin=\count2240
+\mymax=\count2241
+\mymin=\count2242
+\mymax=\count2243
  [31
 
 ]
-\mymin=\count2383
-\mymax=\count2384
-\mymin=\count2385
-\mymax=\count2386
-\mymin=\count2387
-\mymax=\count2388
-\mymin=\count2389
-\mymax=\count2390
-\mymin=\count2391
-\mymax=\count2392
-\mymin=\count2393
-\mymax=\count2394
-\mymin=\count2395
-\mymax=\count2396
-\mymin=\count2397
-\mymax=\count2398
-\mymin=\count2399
-\mymax=\count2400
-\mymin=\count2401
-\mymax=\count2402
-\mymin=\count2403
-\mymax=\count2404
-\mymin=\count2405
-\mymax=\count2406
-\mymin=\count2407
-\mymax=\count2408
-\mymin=\count2409
-\mymax=\count2410
-\mymin=\count2411
-\mymax=\count2412
-\mymin=\count2413
-\mymax=\count2414
-\mymin=\count2415
-\mymax=\count2416
-\mymin=\count2417
-\mymax=\count2418
-\mymin=\count2419
-\mymax=\count2420
-\mymin=\count2421
-\mymax=\count2422
-\mymin=\count2423
-\mymax=\count2424
-\mymin=\count2425
-\mymax=\count2426
-\mymin=\count2427
-\mymax=\count2428
-\mymin=\count2429
-\mymax=\count2430
-\mymin=\count2431
-\mymax=\count2432
-\mymin=\count2433
-\mymax=\count2434
-\mymin=\count2435
-\mymax=\count2436
-\mymin=\count2437
-\mymax=\count2438
-\mymin=\count2439
-\mymax=\count2440
-\mymin=\count2441
-\mymax=\count2442
-\mymin=\count2443
-\mymax=\count2444
-\mymin=\count2445
-\mymax=\count2446
+\mymin=\count2244
+\mymax=\count2245
+\mymin=\count2246
+\mymax=\count2247
+\mymin=\count2248
+\mymax=\count2249
+\mymin=\count2250
+\mymax=\count2251
+\mymin=\count2252
+\mymax=\count2253
+\mymin=\count2254
+\mymax=\count2255
+\mymin=\count2256
+\mymax=\count2257
+\mymin=\count2258
+\mymax=\count2259
+\mymin=\count2260
+\mymax=\count2261
+\mymin=\count2262
+\mymax=\count2263
+\mymin=\count2264
+\mymax=\count2265
+\mymin=\count2266
+\mymax=\count2267
+\mymin=\count2268
+\mymax=\count2269
+\mymin=\count2270
+\mymax=\count2271
+\mymin=\count2272
+\mymax=\count2273
+\mymin=\count2274
+\mymax=\count2275
+\mymin=\count2276
+\mymax=\count2277
+\mymin=\count2278
+\mymax=\count2279
+\mymin=\count2280
+\mymax=\count2281
+\mymin=\count2282
+\mymax=\count2283
+\mymin=\count2284
+\mymax=\count2285
+\mymin=\count2286
+\mymax=\count2287
+\mymin=\count2288
+\mymax=\count2289
+\mymin=\count2290
+\mymax=\count2291
+\mymin=\count2292
+\mymax=\count2293
+\mymin=\count2294
+\mymax=\count2295
+\mymin=\count2296
+\mymax=\count2297
+\mymin=\count2298
+\mymax=\count2299
+\mymin=\count2300
+\mymax=\count2301
+\mymin=\count2302
+\mymax=\count2303
  [32
 
 ]
-\mymin=\count2447
-\mymax=\count2448
-\mymin=\count2449
-\mymax=\count2450
-\mymin=\count2451
-\mymax=\count2452
-\mymin=\count2453
-\mymax=\count2454
-\mymin=\count2455
-\mymax=\count2456
-\mymin=\count2457
-\mymax=\count2458
-\mymin=\count2459
-\mymax=\count2460
-\mymin=\count2461
-\mymax=\count2462
-\mymin=\count2463
-\mymax=\count2464
-\mymin=\count2465
-\mymax=\count2466
-\mymin=\count2467
-\mymax=\count2468
-\mymin=\count2469
-\mymax=\count2470
-\mymin=\count2471
-\mymax=\count2472
-\mymin=\count2473
-\mymax=\count2474
-\mymin=\count2475
-\mymax=\count2476
-\mymin=\count2477
-\mymax=\count2478
-\mymin=\count2479
-\mymax=\count2480
-\mymin=\count2481
-\mymax=\count2482
-\mymin=\count2483
-\mymax=\count2484
-\mymin=\count2485
-\mymax=\count2486
-\mymin=\count2487
-\mymax=\count2488
-\mymin=\count2489
-\mymax=\count2490
-\mymin=\count2491
-\mymax=\count2492
-\mymin=\count2493
-\mymax=\count2494
-\mymin=\count2495
-\mymax=\count2496
-\mymin=\count2497
-\mymax=\count2498
-\mymin=\count2499
-\mymax=\count2500
-\mymin=\count2501
-\mymax=\count2502
-\mymin=\count2503
-\mymax=\count2504
-\mymin=\count2505
-\mymax=\count2506
-\mymin=\count2507
-\mymax=\count2508
-\mymin=\count2509
-\mymax=\count2510
+\mymin=\count2304
+\mymax=\count2305
+\mymin=\count2306
+\mymax=\count2307
+\mymin=\count2308
+\mymax=\count2309
+\mymin=\count2310
+\mymax=\count2311
+\mymin=\count2312
+\mymax=\count2313
+\mymin=\count2314
+\mymax=\count2315
+\mymin=\count2316
+\mymax=\count2317
+\mymin=\count2318
+\mymax=\count2319
+\mymin=\count2320
+\mymax=\count2321
+\mymin=\count2322
+\mymax=\count2323
+\mymin=\count2324
+\mymax=\count2325
+\mymin=\count2326
+\mymax=\count2327
+\mymin=\count2328
+\mymax=\count2329
+\mymin=\count2330
+\mymax=\count2331
+\mymin=\count2332
+\mymax=\count2333
+\mymin=\count2334
+\mymax=\count2335
+\mymin=\count2336
+\mymax=\count2337
+\mymin=\count2338
+\mymax=\count2339
+\mymin=\count2340
+\mymax=\count2341
+\mymin=\count2342
+\mymax=\count2343
+\mymin=\count2344
+\mymax=\count2345
+\mymin=\count2346
+\mymax=\count2347
+\mymin=\count2348
+\mymax=\count2349
+\mymin=\count2350
+\mymax=\count2351
+\mymin=\count2352
+\mymax=\count2353
+\mymin=\count2354
+\mymax=\count2355
+\mymin=\count2356
+\mymax=\count2357
+\mymin=\count2358
+\mymax=\count2359
+\mymin=\count2360
+\mymax=\count2361
+\mymin=\count2362
+\mymax=\count2363
  [33
 
 ]
-\mymin=\count2511
-\mymax=\count2512
-\mymin=\count2513
-\mymax=\count2514
-\mymin=\count2515
-\mymax=\count2516
-\mymin=\count2517
-\mymax=\count2518
-\mymin=\count2519
-\mymax=\count2520
-\mymin=\count2521
-\mymax=\count2522
-\mymin=\count2523
-\mymax=\count2524
-\mymin=\count2525
-\mymax=\count2526
-\mymin=\count2527
-\mymax=\count2528
-\mymin=\count2529
-\mymax=\count2530
-\mymin=\count2531
-\mymax=\count2532
-\mymin=\count2533
-\mymax=\count2534
-\mymin=\count2535
-\mymax=\count2536
-\mymin=\count2537
-\mymax=\count2538
-\mymin=\count2539
-\mymax=\count2540
-\mymin=\count2541
-\mymax=\count2542
-\mymin=\count2543
-\mymax=\count2544
-\mymin=\count2545
-\mymax=\count2546
-\mymin=\count2547
-\mymax=\count2548
-\mymin=\count2549
-\mymax=\count2550
-\mymin=\count2551
-\mymax=\count2552
-\mymin=\count2553
-\mymax=\count2554
-\mymin=\count2555
-\mymax=\count2556
-\mymin=\count2557
-\mymax=\count2558
-\mymin=\count2559
-\mymax=\count2560
-\mymin=\count2561
-\mymax=\count2562
-\mymin=\count2563
-\mymax=\count2564
-\mymin=\count2565
-\mymax=\count2566
-\mymin=\count2567
-\mymax=\count2568
-\mymin=\count2569
-\mymax=\count2570
-\mymin=\count2571
-\mymax=\count2572
-\mymin=\count2573
-\mymax=\count2574
+\mymin=\count2364
+\mymax=\count2365
+\mymin=\count2366
+\mymax=\count2367
+\mymin=\count2368
+\mymax=\count2369
+\mymin=\count2370
+\mymax=\count2371
+\mymin=\count2372
+\mymax=\count2373
+\mymin=\count2374
+\mymax=\count2375
+\mymin=\count2376
+\mymax=\count2377
+\mymin=\count2378
+\mymax=\count2379
+\mymin=\count2380
+\mymax=\count2381
+\mymin=\count2382
+\mymax=\count2383
+\mymin=\count2384
+\mymax=\count2385
+\mymin=\count2386
+\mymax=\count2387
+\mymin=\count2388
+\mymax=\count2389
+\mymin=\count2390
+\mymax=\count2391
+\mymin=\count2392
+\mymax=\count2393
+\mymin=\count2394
+\mymax=\count2395
+\mymin=\count2396
+\mymax=\count2397
+\mymin=\count2398
+\mymax=\count2399
+\mymin=\count2400
+\mymax=\count2401
+\mymin=\count2402
+\mymax=\count2403
+\mymin=\count2404
+\mymax=\count2405
+\mymin=\count2406
+\mymax=\count2407
+\mymin=\count2408
+\mymax=\count2409
+\mymin=\count2410
+\mymax=\count2411
+\mymin=\count2412
+\mymax=\count2413
+\mymin=\count2414
+\mymax=\count2415
+\mymin=\count2416
+\mymax=\count2417
+\mymin=\count2418
+\mymax=\count2419
+\mymin=\count2420
+\mymax=\count2421
+\mymin=\count2422
+\mymax=\count2423
  [34
 
 ]
-\mymin=\count2575
-\mymax=\count2576
-\mymin=\count2577
-\mymax=\count2578
-\mymin=\count2579
-\mymax=\count2580
-\mymin=\count2581
-\mymax=\count2582
-\mymin=\count2583
-\mymax=\count2584
-\mymin=\count2585
-\mymax=\count2586
-\mymin=\count2587
-\mymax=\count2588
-\mymin=\count2589
-\mymax=\count2590
-\mymin=\count2591
-\mymax=\count2592
-\mymin=\count2593
-\mymax=\count2594
-\mymin=\count2595
-\mymax=\count2596
-\mymin=\count2597
-\mymax=\count2598
-\mymin=\count2599
-\mymax=\count2600
-\mymin=\count2601
-\mymax=\count2602
-\mymin=\count2603
-\mymax=\count2604
-\mymin=\count2605
-\mymax=\count2606
-\mymin=\count2607
-\mymax=\count2608
-\mymin=\count2609
-\mymax=\count2610
-\mymin=\count2611
-\mymax=\count2612
-\mymin=\count2613
-\mymax=\count2614
-\mymin=\count2615
-\mymax=\count2616
-\mymin=\count2617
-\mymax=\count2618
-\mymin=\count2619
-\mymax=\count2620
-\mymin=\count2621
-\mymax=\count2622
-\mymin=\count2623
-\mymax=\count2624
-\mymin=\count2625
-\mymax=\count2626
-\mymin=\count2627
-\mymax=\count2628
-\mymin=\count2629
-\mymax=\count2630
-\mymin=\count2631
-\mymax=\count2632
-\mymin=\count2633
-\mymax=\count2634
-\mymin=\count2635
-\mymax=\count2636
-\mymin=\count2637
-\mymax=\count2638
+\mymin=\count2424
+\mymax=\count2425
+\mymin=\count2426
+\mymax=\count2427
+\mymin=\count2428
+\mymax=\count2429
+\mymin=\count2430
+\mymax=\count2431
+\mymin=\count2432
+\mymax=\count2433
+\mymin=\count2434
+\mymax=\count2435
+\mymin=\count2436
+\mymax=\count2437
+\mymin=\count2438
+\mymax=\count2439
+\mymin=\count2440
+\mymax=\count2441
+\mymin=\count2442
+\mymax=\count2443
+\mymin=\count2444
+\mymax=\count2445
+\mymin=\count2446
+\mymax=\count2447
+\mymin=\count2448
+\mymax=\count2449
+\mymin=\count2450
+\mymax=\count2451
+\mymin=\count2452
+\mymax=\count2453
+\mymin=\count2454
+\mymax=\count2455
+\mymin=\count2456
+\mymax=\count2457
+\mymin=\count2458
+\mymax=\count2459
+\mymin=\count2460
+\mymax=\count2461
+\mymin=\count2462
+\mymax=\count2463
+\mymin=\count2464
+\mymax=\count2465
+\mymin=\count2466
+\mymax=\count2467
+\mymin=\count2468
+\mymax=\count2469
+\mymin=\count2470
+\mymax=\count2471
+\mymin=\count2472
+\mymax=\count2473
+\mymin=\count2474
+\mymax=\count2475
+\mymin=\count2476
+\mymax=\count2477
+\mymin=\count2478
+\mymax=\count2479
+\mymin=\count2480
+\mymax=\count2481
+\mymin=\count2482
+\mymax=\count2483
  [35
 
 ]
-\mymin=\count2639
-\mymax=\count2640
-\mymin=\count2641
-\mymax=\count2642
-\mymin=\count2643
-\mymax=\count2644
-\mymin=\count2645
-\mymax=\count2646
-\mymin=\count2647
-\mymax=\count2648
-\mymin=\count2649
-\mymax=\count2650
-\mymin=\count2651
-\mymax=\count2652
-\mymin=\count2653
-\mymax=\count2654
-\mymin=\count2655
-\mymax=\count2656
-\mymin=\count2657
-\mymax=\count2658
-\mymin=\count2659
-\mymax=\count2660
-\mymin=\count2661
-\mymax=\count2662
-\mymin=\count2663
-\mymax=\count2664
-\mymin=\count2665
-\mymax=\count2666
-\mymin=\count2667
-\mymax=\count2668
-\mymin=\count2669
-\mymax=\count2670
-\mymin=\count2671
-\mymax=\count2672
-\mymin=\count2673
-\mymax=\count2674
-\mymin=\count2675
-\mymax=\count2676
-\mymin=\count2677
-\mymax=\count2678
-\mymin=\count2679
-\mymax=\count2680
-\mymin=\count2681
-\mymax=\count2682
-\mymin=\count2683
-\mymax=\count2684
-\mymin=\count2685
-\mymax=\count2686
-\mymin=\count2687
-\mymax=\count2688
-\mymin=\count2689
-\mymax=\count2690
-\mymin=\count2691
-\mymax=\count2692
-\mymin=\count2693
-\mymax=\count2694
-\mymin=\count2695
-\mymax=\count2696
-\mymin=\count2697
-\mymax=\count2698
-\mymin=\count2699
-\mymax=\count2700
-\mymin=\count2701
-\mymax=\count2702
+\mymin=\count2484
+\mymax=\count2485
+\mymin=\count2486
+\mymax=\count2487
+\mymin=\count2488
+\mymax=\count2489
+\mymin=\count2490
+\mymax=\count2491
+\mymin=\count2492
+\mymax=\count2493
+\mymin=\count2494
+\mymax=\count2495
+\mymin=\count2496
+\mymax=\count2497
+\mymin=\count2498
+\mymax=\count2499
+\mymin=\count2500
+\mymax=\count2501
+\mymin=\count2502
+\mymax=\count2503
+\mymin=\count2504
+\mymax=\count2505
+\mymin=\count2506
+\mymax=\count2507
+\mymin=\count2508
+\mymax=\count2509
+\mymin=\count2510
+\mymax=\count2511
+\mymin=\count2512
+\mymax=\count2513
+\mymin=\count2514
+\mymax=\count2515
+\mymin=\count2516
+\mymax=\count2517
+\mymin=\count2518
+\mymax=\count2519
+\mymin=\count2520
+\mymax=\count2521
+\mymin=\count2522
+\mymax=\count2523
+\mymin=\count2524
+\mymax=\count2525
+\mymin=\count2526
+\mymax=\count2527
+\mymin=\count2528
+\mymax=\count2529
+\mymin=\count2530
+\mymax=\count2531
+\mymin=\count2532
+\mymax=\count2533
+\mymin=\count2534
+\mymax=\count2535
+\mymin=\count2536
+\mymax=\count2537
+\mymin=\count2538
+\mymax=\count2539
+\mymin=\count2540
+\mymax=\count2541
+\mymin=\count2542
+\mymax=\count2543
  [36
 
 ]
-\mymin=\count2703
-\mymax=\count2704
-\mymin=\count2705
-\mymax=\count2706
-\mymin=\count2707
-\mymax=\count2708
-\mymin=\count2709
-\mymax=\count2710
-\mymin=\count2711
-\mymax=\count2712
-\mymin=\count2713
-\mymax=\count2714
-\mymin=\count2715
-\mymax=\count2716
-\mymin=\count2717
-\mymax=\count2718
-\mymin=\count2719
-\mymax=\count2720
-\mymin=\count2721
-\mymax=\count2722
-\mymin=\count2723
-\mymax=\count2724
-\mymin=\count2725
-\mymax=\count2726
-\mymin=\count2727
-\mymax=\count2728
-\mymin=\count2729
-\mymax=\count2730
-\mymin=\count2731
-\mymax=\count2732
-\mymin=\count2733
-\mymax=\count2734
-\mymin=\count2735
-\mymax=\count2736
-\mymin=\count2737
-\mymax=\count2738
-\mymin=\count2739
-\mymax=\count2740
-\mymin=\count2741
-\mymax=\count2742
-\mymin=\count2743
-\mymax=\count2744
-\mymin=\count2745
-\mymax=\count2746
-\mymin=\count2747
-\mymax=\count2748
-\mymin=\count2749
-\mymax=\count2750
-\mymin=\count2751
-\mymax=\count2752
-\mymin=\count2753
-\mymax=\count2754
-\mymin=\count2755
-\mymax=\count2756
-\mymin=\count2757
-\mymax=\count2758
-\mymin=\count2759
-\mymax=\count2760
-\mymin=\count2761
-\mymax=\count2762
-\mymin=\count2763
-\mymax=\count2764
-\mymin=\count2765
-\mymax=\count2766
+\mymin=\count2544
+\mymax=\count2545
+\mymin=\count2546
+\mymax=\count2547
+\mymin=\count2548
+\mymax=\count2549
+\mymin=\count2550
+\mymax=\count2551
+\mymin=\count2552
+\mymax=\count2553
+\mymin=\count2554
+\mymax=\count2555
+\mymin=\count2556
+\mymax=\count2557
+\mymin=\count2558
+\mymax=\count2559
+\mymin=\count2560
+\mymax=\count2561
+\mymin=\count2562
+\mymax=\count2563
+\mymin=\count2564
+\mymax=\count2565
+\mymin=\count2566
+\mymax=\count2567
+\mymin=\count2568
+\mymax=\count2569
+\mymin=\count2570
+\mymax=\count2571
+\mymin=\count2572
+\mymax=\count2573
+\mymin=\count2574
+\mymax=\count2575
+\mymin=\count2576
+\mymax=\count2577
+\mymin=\count2578
+\mymax=\count2579
+\mymin=\count2580
+\mymax=\count2581
+\mymin=\count2582
+\mymax=\count2583
+\mymin=\count2584
+\mymax=\count2585
+\mymin=\count2586
+\mymax=\count2587
+\mymin=\count2588
+\mymax=\count2589
+\mymin=\count2590
+\mymax=\count2591
+\mymin=\count2592
+\mymax=\count2593
+\mymin=\count2594
+\mymax=\count2595
+\mymin=\count2596
+\mymax=\count2597
+\mymin=\count2598
+\mymax=\count2599
+\mymin=\count2600
+\mymax=\count2601
+\mymin=\count2602
+\mymax=\count2603
  [37
 
 ] (./Mid-Term-2.bbl
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1.
 
 )
-\mymin=\count2767
-\mymax=\count2768
-\mymin=\count2769
-\mymax=\count2770
-\mymin=\count2771
-\mymax=\count2772
-\mymin=\count2773
-\mymax=\count2774
-\mymin=\count2775
-\mymax=\count2776
-\mymin=\count2777
-\mymax=\count2778
-\mymin=\count2779
-\mymax=\count2780
-\mymin=\count2781
-\mymax=\count2782
-\mymin=\count2783
-\mymax=\count2784
-\mymin=\count2785
-\mymax=\count2786
-\mymin=\count2787
-\mymax=\count2788
-\mymin=\count2789
-\mymax=\count2790
-\mymin=\count2791
-\mymax=\count2792
-\mymin=\count2793
-\mymax=\count2794
-\mymin=\count2795
-\mymax=\count2796
-\mymin=\count2797
-\mymax=\count2798
-\mymin=\count2799
-\mymax=\count2800
-\mymin=\count2801
-\mymax=\count2802
-\mymin=\count2803
-\mymax=\count2804
-\mymin=\count2805
-\mymax=\count2806
-\mymin=\count2807
-\mymax=\count2808
-\mymin=\count2809
-\mymax=\count2810
-\mymin=\count2811
-\mymax=\count2812
-\mymin=\count2813
-\mymax=\count2814
-\mymin=\count2815
-\mymax=\count2816
-\mymin=\count2817
-\mymax=\count2818
-\mymin=\count2819
-\mymax=\count2820
-\mymin=\count2821
-\mymax=\count2822
-\mymin=\count2823
-\mymax=\count2824
-\mymin=\count2825
-\mymax=\count2826
-\mymin=\count2827
-\mymax=\count2828
-\mymin=\count2829
-\mymax=\count2830
+\mymin=\count2604
+\mymax=\count2605
+\mymin=\count2606
+\mymax=\count2607
+\mymin=\count2608
+\mymax=\count2609
+\mymin=\count2610
+\mymax=\count2611
+\mymin=\count2612
+\mymax=\count2613
+\mymin=\count2614
+\mymax=\count2615
+\mymin=\count2616
+\mymax=\count2617
+\mymin=\count2618
+\mymax=\count2619
+\mymin=\count2620
+\mymax=\count2621
+\mymin=\count2622
+\mymax=\count2623
+\mymin=\count2624
+\mymax=\count2625
+\mymin=\count2626
+\mymax=\count2627
+\mymin=\count2628
+\mymax=\count2629
+\mymin=\count2630
+\mymax=\count2631
+\mymin=\count2632
+\mymax=\count2633
+\mymin=\count2634
+\mymax=\count2635
+\mymin=\count2636
+\mymax=\count2637
+\mymin=\count2638
+\mymax=\count2639
+\mymin=\count2640
+\mymax=\count2641
+\mymin=\count2642
+\mymax=\count2643
+\mymin=\count2644
+\mymax=\count2645
+\mymin=\count2646
+\mymax=\count2647
+\mymin=\count2648
+\mymax=\count2649
+\mymin=\count2650
+\mymax=\count2651
+\mymin=\count2652
+\mymax=\count2653
+\mymin=\count2654
+\mymax=\count2655
+\mymin=\count2656
+\mymax=\count2657
+\mymin=\count2658
+\mymax=\count2659
+\mymin=\count2660
+\mymax=\count2661
+\mymin=\count2662
+\mymax=\count2663
  [38
 
 ]
-\mymin=\count2831
-\mymax=\count2832
-\mymin=\count2833
-\mymax=\count2834
-\mymin=\count2835
-\mymax=\count2836
-\mymin=\count2837
-\mymax=\count2838
-\mymin=\count2839
-\mymax=\count2840
-\mymin=\count2841
-\mymax=\count2842
-\mymin=\count2843
-\mymax=\count2844
-\mymin=\count2845
-\mymax=\count2846
-\mymin=\count2847
-\mymax=\count2848
-\mymin=\count2849
-\mymax=\count2850
-\mymin=\count2851
-\mymax=\count2852
-\mymin=\count2853
-\mymax=\count2854
-\mymin=\count2855
-\mymax=\count2856
-\mymin=\count2857
-\mymax=\count2858
-\mymin=\count2859
-\mymax=\count2860
-\mymin=\count2861
-\mymax=\count2862
-\mymin=\count2863
-\mymax=\count2864
-\mymin=\count2865
-\mymax=\count2866
-\mymin=\count2867
-\mymax=\count2868
-\mymin=\count2869
-\mymax=\count2870
-\mymin=\count2871
-\mymax=\count2872
-\mymin=\count2873
-\mymax=\count2874
-\mymin=\count2875
-\mymax=\count2876
-\mymin=\count2877
-\mymax=\count2878
-\mymin=\count2879
-\mymax=\count2880
-\mymin=\count2881
-\mymax=\count2882
-\mymin=\count2883
-\mymax=\count2884
-\mymin=\count2885
-\mymax=\count2886
-\mymin=\count2887
-\mymax=\count2888
-\mymin=\count2889
-\mymax=\count2890
-\mymin=\count2891
-\mymax=\count2892
-\mymin=\count2893
-\mymax=\count2894
+\mymin=\count2664
+\mymax=\count2665
+\mymin=\count2666
+\mymax=\count2667
+\mymin=\count2668
+\mymax=\count2669
+\mymin=\count2670
+\mymax=\count2671
+\mymin=\count2672
+\mymax=\count2673
+\mymin=\count2674
+\mymax=\count2675
+\mymin=\count2676
+\mymax=\count2677
+\mymin=\count2678
+\mymax=\count2679
+\mymin=\count2680
+\mymax=\count2681
+\mymin=\count2682
+\mymax=\count2683
+\mymin=\count2684
+\mymax=\count2685
+\mymin=\count2686
+\mymax=\count2687
+\mymin=\count2688
+\mymax=\count2689
+\mymin=\count2690
+\mymax=\count2691
+\mymin=\count2692
+\mymax=\count2693
+\mymin=\count2694
+\mymax=\count2695
+\mymin=\count2696
+\mymax=\count2697
+\mymin=\count2698
+\mymax=\count2699
+\mymin=\count2700
+\mymax=\count2701
+\mymin=\count2702
+\mymax=\count2703
+\mymin=\count2704
+\mymax=\count2705
+\mymin=\count2706
+\mymax=\count2707
+\mymin=\count2708
+\mymax=\count2709
+\mymin=\count2710
+\mymax=\count2711
+\mymin=\count2712
+\mymax=\count2713
+\mymin=\count2714
+\mymax=\count2715
+\mymin=\count2716
+\mymax=\count2717
+\mymin=\count2718
+\mymax=\count2719
+\mymin=\count2720
+\mymax=\count2721
+\mymin=\count2722
+\mymax=\count2723
  [39
 
 ]
-\tf@nav=\write6
-\openout6 = `Mid-Term-2.nav'.
+\tf@nav=\write8
+\openout8 = `Mid-Term-2.nav'.
 
-\tf@toc=\write7
-\openout7 = `Mid-Term-2.toc'.
+\tf@toc=\write9
+\openout9 = `Mid-Term-2.toc'.
 
-\tf@snm=\write8
-\openout8 = `Mid-Term-2.snm'.
+\tf@snm=\write10
+\openout10 = `Mid-Term-2.snm'.
 
- (./Mid-Term-2.aux)
-Package rerunfilecheck Info: File `Mid-Term-2.out' has not changed.
-(rerunfilecheck)             Checksum: A1C3108AF6AB4EF5B568BF26160B251A;728.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 829.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 829.
+ (./Mid-Term-2.aux
+
+Package pdfbase Warning: Rerun to get internal references right!
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 829.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 829.
+
+
+Package rerunfilecheck Warning: File `Mid-Term-2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Mid-Term-2.out':
+(rerunfilecheck)             Before: D65B1D3768154FD9B4DEDDDCCE95B269;256
+(rerunfilecheck)             After:  89E71B18DC8CDC708BD7AE6A5EB89ED7;298.
  ) 
 Here is how much of TeX's memory you used:
- 38108 strings out of 480247
- 800878 string characters out of 5896151
- 1114299 words of memory out of 5000000
- 55130 multiletter control sequences out of 15000+600000
- 545992 words of font info for 172 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 128i,18n,122p,478b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33804 strings out of 481239
+ 702029 string characters out of 5920376
+ 1031433 words of memory out of 5000000
+ 48162 multiletter control sequences out of 15000+600000
+ 609071 words of font info for 168 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 65i,18n,108p,848b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Mid-Term-2.pdf (39 pages, 3579727 bytes).
+Output written on Mid-Term-2.pdf (39 pages, 3592915 bytes).
 PDF statistics:
- 1357 PDF objects out of 1440 (max. 8388607)
- 1214 compressed objects within 13 object streams
+ 1344 PDF objects out of 1440 (max. 8388607)
+ 1209 compressed objects within 13 object streams
  90 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 312 words of extra memory for PDF output out of 10000 (max. 10000000)
 
