@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='rxj0439'
-z_abs=0.005568
+qso='pg1259'
+z_abs=0.046284
 vlim=350
 n_col=3
 lw1=1.5
@@ -21,7 +21,7 @@ qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
 qso_label=qso_dict[qso]
 
 
-file_path=f'../VPfit/{qso}/z={z_abs}/VPfit_chunks'
+file_path=f'../VPfit/{qso}/z={z_abs:.6f}/VPfit_chunks'
 files=os.listdir(f'{file_path}')
 
 data=loadtxt('Data/rest_wave.txt',dtype=str)
@@ -104,8 +104,8 @@ print(lines)
 # lines=['HI_1215', 'HI_1025', 'HI_972', 'OVI_1032', 'OVI_1038','CIII_977' , 'CII_1036' ,'SiIII_1206', 'SiII_1260']
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
-line_vshift['SiIV_1402']=5
-line_vshift['CIV_1550']=-10
+# line_vshift['SiIV_1402']=5
+# line_vshift['CIV_1550']=-10
 # line_vshift['HI_1215']=-10
 # line_vshift['HI_972']=4
 # line_vshift['OVI_1038']=3
@@ -303,9 +303,9 @@ fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #
 fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
-plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot.png')
+plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot.png')
 
 
 

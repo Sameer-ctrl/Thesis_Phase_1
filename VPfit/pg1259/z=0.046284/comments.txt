@@ -1,0 +1,12 @@
+CIV:
+	Nice fit. Fitted with 2 comp. CIV 1548 is contaminated from Lya from z=0.332751
+	Unknown contamination on left in CIV 1548
+
+SiIV:
+	Good fit. Weak line. SiIV 1402 contaminated by Lyb from z=0.431499, currently not fitted.
+
+SiIII:
+	Average fit. Fitted with two comp.  First component looks asymmetric, tried fitting it with one more comp but couldn't be fitted nicely.
+
+HI:
+	Nice fit. Fitted with 4 comp. Fitted one comp on outside on left. Main profile is fitted with 3 comp. 

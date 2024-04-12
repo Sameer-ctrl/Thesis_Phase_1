@@ -1,0 +1,11 @@
+FeII:
+	Good fit. Continuum is not defined much clearly around the line.
+
+CII:
+	Good fit. Fitted with 3 comp
+
+SiII:
+	Good fit. Fitted with 2 comp
+
+HI:
+	Good fit. Fixed redshift from CII fit, large error in col density of 3rd comp ~ 1.3 dex

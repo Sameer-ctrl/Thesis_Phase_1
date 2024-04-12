@@ -7,12 +7,12 @@ import os
 plt.style.use('my_style.mpl')
 
 
-qso='rxj0439'
-z_abs=0.005568
+qso='pg1259'
+z_abs=0.046284
 vlim=350
 n_col=6
 lw1=1.5
-vlim_aod=[-100,120]
+vlim_aod=[-100,100]
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
 wave_spec=spec['WAVE']
@@ -24,7 +24,7 @@ qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
 qso_label=qso_dict[qso]
 
 
-file_path=f'../VPfit/{qso}/z={z_abs}/VPfit_chunks'
+file_path=f'../VPfit/{qso}/z={z_abs:.6f}/VPfit_chunks'
 files=os.listdir(f'{file_path}')
 data=loadtxt('Data/lines_system_plots.txt',dtype=str)
 
@@ -341,7 +341,7 @@ for i,line in enumerate(lines):
         plt.tick_params('y', labelsize=35)
 
     if i < n-n_col:
-        
+        plt.tick_params('x', labelbottom=False)
     
     else:
         plt.tick_params('x', labelbottom=True,labelsize=35)
@@ -354,10 +354,10 @@ fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #
 fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
-plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/sys_plots_full/{qso_label}_z={z_abs}_sys_plot_full.png')
-# plt.savefig(f'../VPfit/{qso}/z={z_abs}/{qso_label}_z={z_abs}_sys_plot_full.png')
-# plt.savefig(f'{qso_label}_z={z_abs}_sys_plot_full.png')
+plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+plt.savefig(f'Files_n_figures/sys_plots_full/{qso_label}_z={z_abs:.6f}_sys_plot_full.png')
+# plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot_full.png')
+# plt.savefig(f'{qso_label}_z={z_abs:.6f}_sys_plot_full.png')
 
 
 
