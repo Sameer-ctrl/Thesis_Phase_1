@@ -7,23 +7,49 @@ from scipy.interpolate import interp2d,interp1d
 import pickle
 import matplotlib.pyplot as plt
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 plt.style.use('Files_n_figures/my_style.mpl')
 
-def ion_label(ion,state):
+# def ion_label(ion,state):
 
-    # return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
-    return f'{{\\fontsize{{45pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
-    # return f'{{\\fontsize{{30pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{20pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+#     # return f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{ion}}}$}} {{\\fontsize{{17pt}}{{3em}}\selectfont{{}}$\mathbf{{{state}}}$}}'
+
+def ion_label(ion,ion_font_size=25,radicle_font_size=17):
+
+    a=ion.split('+')
+
+    if len(a)>1:
+
+        if a[1]!='':
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(int(a[1])+1)}}}$}}'
+
+        else:
+            return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(2)}}}$}}'
+
+    else:
+
+        return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
+
+
+
+
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
-ions_roman=[ion_label('Si','III'),ion_label('Si','II'),ion_label('C','III'),ion_label('C','II'),ion_label('O','VI')]
-observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.72,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+ions_roman=[ion_label('Si+2'),ion_label('Si+'),ion_label('C+2'),ion_label('C+'),ion_label('O+5')]
+
+
+# observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.72,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+observations={'Si+2':[12.90,0.02+0.15],'Si+':[12.90,0.16+0.18], 'C+2':[13.88,0.01+0.09],'C+':[13.65,0.19+0.14], 'O+5':[13.92,0.01+0.05]}
+
 
 interp_func_dict={}
 
 for i in observations.keys():
 
-    with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+    with open(f'Interp_2d_func_Danforth/{i}_quintic.pkl','rb') as pickle_file:
         f=pickle.load(pickle_file)
     
     interp_func_dict[i]=f
@@ -65,6 +91,7 @@ for i,a in enumerate(Z_global):
 
     chi_sq_exc[i],chi_sq_inc[i]=chi_sq_func(nH_global,a)
     y[len(nH_global)*i:len(nH_global)*(i+1)]=a
+observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.72,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
 
 
 def model(chi_sq,name,c):
@@ -142,29 +169,29 @@ def plot_samples(m,c,n=50,i1=1,i2=1):
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-plt.figure(figsize=(20,10))
+plt.figure(figsize=(16,10))
 
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
 plt.clf()
 
 
-plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=ion_label('Observed',''))
+plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=r'$\mathbf{Observed}$')
 plot_samples(m1,'orange',n=100)
-m1=model(chi_sq_exc,ion_label('Excluding','')+ion_label('O','VI'),'orange')
+m1=model(chi_sq_exc,r'$\mathbf{Excluding \ }$'+ion_label('O+5'),'orange')
 plot_samples(m2,'green',n=100)
-m2=model(chi_sq_inc,ion_label('Including','')+ion_label('O','VI'),'green')
+m2=model(chi_sq_inc,r'$\mathbf{Including \ }$'+ion_label('O+5'),'green')
 # plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
 # plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
-plt.xticks(xaxis,ions_roman,fontsize=30,)
-plt.yticks(fontsize=35)
-plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=45)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=45)
+plt.xticks(xaxis,ions_roman,fontsize=20)
+plt.yticks(fontsize=20)
+plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=30)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
 # plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
-plt.legend()
-plt.savefig('Observed_and_predicted-ASI.png')
+plt.legend(loc='lower left',fontsize=25)
+plt.savefig('Observed_and_predicted.png')
 
-# plt.show()
+plt.show()
 
 
 

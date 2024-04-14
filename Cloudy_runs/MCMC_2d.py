@@ -10,20 +10,21 @@ from io import StringIO
 import sys
 import pickle
 
-# plt.style.use('../Python/my_style.mpl')
+plt.style.use('../Python/my_style.mpl')
 
 lognH_range=[-5,0]
 logZ_range=[-3,2]
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
 
-observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+# observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.81,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
+observations={'Si+2':[12.90,0.02+0.18],'Si+':[12.90,0.16+0.15], 'C+2':[13.88,0.01+0.09],'C+':[13.65,0.19+0.14], 'O+5':[13.92,0.01+0.05]}
 
 interp_func_dict={}
 
 for i in observations.keys():
 
-    with open(f'Interp_2d_func/{i}_quintic.pkl','rb') as pickle_file:
+    with open(f'Interp_2d_func_Danforth/{i}_quintic.pkl','rb') as pickle_file:
         f=pickle.load(pickle_file)
 
     interp_func_dict[i]=f
@@ -101,8 +102,10 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
 ions_to_use1=['Si+', 'Si+2','C+', 'C+2']
 ions_to_use2=['Si+', 'Si+2','C+', 'C+2','O+5']
 
-flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1)
-flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1])
+nsteps=5000
+
+flat_samples_exc_OVI=start_MCMC_samples(ions_to_use1,nsteps=nsteps)
+flat_samples_inc_OVI=start_MCMC_samples(ions_to_use2,guess=[-3.32,0.2,0.08,0.1],nsteps=nsteps)
 
 
 def sol_write(q):
