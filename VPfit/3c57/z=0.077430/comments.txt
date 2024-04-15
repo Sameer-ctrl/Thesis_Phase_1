@@ -1,0 +1,15 @@
+CIV:
+	CIV 1550 is contaminated with galactic AlII 1670 in the core and by Lya from z=0.373570 on left . So used only CIV 1548 to fit.
+
+NV:
+	Both 1238 and 1242 couldn't be fitted together. NV 1238 is contaminated from galactic CII 1334 line and NV 1242 is contaminated from CIII 977 from z=0.0.369949 and possibly from Fe II 1144 from z=0.169577.
+	just fitting NV 1242 doesn't fit 1238 at all.
+
+SiIV:
+	Good fit. Fitted with 2 comp. SiIV 1402 is contaminated with FeII 1144 from z=0.320102 (self identified), without which the fit of SiIV 1402 was not good and expected.
+
+SiIII:
+	Good fit. 
+
+HI: 
+	Good fit. Fitted with 2 comp. Contaminated by Lyb from z=0.278165 on right.

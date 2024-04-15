@@ -1,4 +1,0 @@
-CIV:
-	CIV 1550 is contaminated with galactic AlII 1670 in the core and by Lya from z=0.373570 on left . So used only CIV 1548 to fit.
-
-

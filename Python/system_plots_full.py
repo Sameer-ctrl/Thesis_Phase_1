@@ -8,7 +8,7 @@ plt.style.use('my_style.mpl')
 
 
 qso='3c57'
-z_abs=0.077493
+z_abs=0.077430
 vlim=350
 n_col=6
 lw1=1.5

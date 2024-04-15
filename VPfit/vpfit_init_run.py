@@ -10,8 +10,7 @@ qso='3c57'
 spec=f'{qso}_cont_norm.asc'
 z_abs=0.077493
 v_sep_lim=300
-ion='NV'
-# 'SiIV', 'NV', 'CIV'
+ion='SiIII'
 
 lsf_files=os.listdir('Data/COS_LSF')
 

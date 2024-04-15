@@ -11,32 +11,44 @@ from roman import toRoman
 plt.style.use('Files_n_figures/my_style.mpl')
 
 
-hdu=fits.open('Data/component_II_nH_col_density_param.fits')
+hdu=fits.open('pg0003/z=0.347579/component_II/component_II_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
-mask=data['H']!=0
-data=data[mask]
-
 nH=data['log_nH']
-ions=['Si+', 'Si+2','C+', 'C+2', 'O+5']
-ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
+col_den_OVI=log10(data['O+5'])
 
-obs_OVI=14.26   
 
-ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
+f=interp1d(nH,col_den_OVI)
 
-for i,ion in enumerate(ions):
-    plt.plot(nH,log10(data[ion]),label=ions_label[i],ls=ls[i])
+obs_OVI=14.25  
 
-plt.hlines(obs_OVI,xmin=-6.5,xmax=-4.5065,color='black',ls='--')
-plt.vlines(-4.5065,ymin=1.35,ymax=obs_OVI,color='black',ls='--')
-plt.legend()
-plt.xlim(left=-5.25)
-plt.ylim(bottom=5.22)
-plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
-plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
+plt.scatter(nH,col_den_OVI)
+plt.hlines(obs_OVI,-5,-2)
+plt.plot(linspace(-5,-2.5,5000),f(linspace(-5,-2.5,5000)))
+plt.show()
+quit()
+ 
+
+
+# ions=['Si+', 'Si+2','C+', 'C+2', 'O+5']
+# ions_label=[f'Si {toRoman(2)}', f'Si {toRoman(3)}',f'C {toRoman(2)}', f'C {toRoman(3)}',f'O {toRoman(6)}']
+
+
+# ls=['dashed','dashdot','dotted',(0, (3, 5, 1, 5, 1, 5)),'solid']
+
+# for i,ion in enumerate(ions):
+#     plt.plot(nH,log10(data[ion]),label=ions_label[i],ls=ls[i])
+
+# plt.hlines(obs_OVI,xmin=-6.5,xmax=-4.5065,color='black',ls='--')
+# plt.vlines(-4.5065,ymin=1.35,ymax=obs_OVI,color='black',ls='--')
+# plt.legend()
+# plt.xlim(left=-5.25)
+# plt.ylim(bottom=5.22)
+# plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
+# plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
 
 plt.show()
+
 
 quit()
 
@@ -139,7 +151,6 @@ quit()
 # plt.ylabel(r'$\mathbf{log \ [N \ {cm}^{-2}]}$',labelpad=15)
 # plt.show()
 # quit()
-
 
 
 f=interp1d(T,col_den_OVI,kind='cubic')
