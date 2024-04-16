@@ -8,7 +8,45 @@ import matplotlib.pyplot as plt
 import os
 
 
-qso='pg1222'
+'finding contamination missed by Danforth'
+
+
+qso='p1103'
+z_abs=0.003967
+cen_wave_rest=1215.6701
+
+x=(z_abs+1)*cen_wave_rest
+
+data=loadtxt('../Python/Data/rest_wave.txt',dtype=str)
+
+data_sys=ascii.read(f'../Python/Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt')
+
+z_sys=unique(data_sys['col1'])
+# print(z_sys)
+line_atom=data[:,0]
+wave_atom=data[:,1].astype(float)
+
+for i,w in enumerate(wave_atom):
+    z=(x-w)/w
+
+    arg_min=argmin(abs(z_sys-z))
+    close_z=z_sys[arg_min]
+
+    if 0<=z<=0.9:
+
+        if abs(z-close_z)*1e6<1000:
+
+            print(f'{line_atom[i]} : {z:.6f}  : {close_z:.6f}  : {abs(z-close_z)*1e6:.6f}')
+
+
+
+
+
+
+quit()
+
+
+qso='p1103'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 
@@ -18,8 +56,12 @@ data=Table(hdu[1].data)
 wave=data['WAVE']
 flux=data['FLUX']
 
+z=0.077419
+
+cen_wave_obs=1393.76018*(1+z)
+
 plt.step(wave,flux,label='CIV 1548')
-plt.step(wave*(1548.2041/1550.7812),flux,label='CIV 1550',ls='--')
+plt.step(wave*(1548.2041/1550.7812)-0.061,flux,label='CIV 1550',ls='--')
 plt.legend()
 plt.show()
 

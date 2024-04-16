@@ -1,5 +1,5 @@
 SiII:
-	Good fit. Narrow line (b~4 km/s)
+	Good fit. Narrow line (b~4 km/s), large error in col density, error using chi-sq = 0.18
 
 SiIII:
 	Good fit. Narrow line (b~10 km/s)
