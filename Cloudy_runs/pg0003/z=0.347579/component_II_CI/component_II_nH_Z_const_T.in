@@ -4,7 +4,7 @@ element helium abundance 0.08156498 linear
 hden -5 log vary 
 grid range from -5 to 0 with 0.02 dex step 
 metals -1 log vary
-grid range from -3 to 2 with 0.04 dex step 
+grid range from -2 to 1 with 0.04 dex step 
 constant temperature 5.30 log
 stop column density 14.20 neutral H 
 stop temperature 20 K linear 
