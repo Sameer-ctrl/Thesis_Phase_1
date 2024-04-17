@@ -102,9 +102,9 @@ def join_data():
 # write_param(qso,z_abs,run_name,parameters,temp=True)
 
 
-parameters=['log_Z']
-grid=loadtxt(f'scaling_approx/scaling_grid.txt',dtype=str)
-col_density=ascii.read(f'scaling_approx/scaling_col_density.txt')
+parameters=['log_nH']
+grid=loadtxt(f'pg0003/z=0.347579/component_II/component_II_nH_grid.txt',dtype=str)
+col_density=ascii.read(f'pg0003/z=0.347579/component_II/component_II_nH_col_density.txt')
 n=len(parameters)
 
 param_data=[]
@@ -117,30 +117,29 @@ for i in range(n):
     
 param_data=tuple(zip(*param_data))
 
-
-temp_file=f'scaling_approx/scaling_temp.txt'
+# temp_file=f'scaling_approx/scaling_temp.txt'
             
-data_temp=genfromtxt(temp_file,delimiter=[11,11,10,10,10])
+# data_temp=genfromtxt(temp_file,delimiter=[11,11,10,10,10])
 
-Te=data_temp[:,1]
-d2t_dr2=data_temp[:,4]
+# Te=data_temp[:,1]
+# d2t_dr2=data_temp[:,4]
 
 
-log_Te=zeros(len(col_density))
-k=0
+# log_Te=zeros(len(col_density))
+# k=0
 
-for i,j in enumerate(d2t_dr2):
+# for i,j in enumerate(d2t_dr2):
     
-    if j==0:
-        # print(k,Te[i],i)
-        log_Te[k]=round(log10(Te[i]),3)
+#     if j==0:
+#         # print(k,Te[i],i)
+#         log_Te[k]=round(log10(Te[i]),3)
     
-        k+=1
+#         k+=1
 
-col_density.add_column(log_Te,name='log_Te')
+# col_density.add_column(log_Te,name='log_Te')
              
 col_density.add_column(param_data,name='parameters')
 print(col_density.colnames,'\n')
-col_density.write(f'scaling_approx/scaling_Z_col_density_param.fits',overwrite=True)
-ascii.write(col_density,f'scaling_approx/scaling_Z_col_density_param.txt',format='ecsv',overwrite=True)
+col_density.write(f'pg0003/z=0.347579/component_II/component_II_nH_col_density_param.fits',overwrite=True)
+ascii.write(col_density,f'pg0003/z=0.347579/component_II/component_II_nH_col_density_param.txt',format='ecsv',overwrite=True)
 

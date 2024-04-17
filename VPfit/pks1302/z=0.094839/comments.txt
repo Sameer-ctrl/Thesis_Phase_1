@@ -1,0 +1,13 @@
+SiIII:
+	Nice fit. Fitted with two comp.
+
+SiII:
+	Good fit. Tried fitting two comp alos, but didn't get good fit.
+
+CII:
+	Nice fit. Fitted with 2 comp.
+
+HI:
+	Nice fit. Fitted with 3 comp. Fixed the redshifts of two comp from SiIII fit.
+
+NOTE : OVI 1038 is just covered a little, but since its on the edge, spectra is not good there.

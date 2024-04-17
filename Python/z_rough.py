@@ -307,7 +307,7 @@ quit()
 
 'equivalent width'
 
-
+#column density 
 # hdu_unbin=fits.open('Data/PG0003+158_unbinned.fits')
 # hdu_bin=fits.open('Data/PG0003+158_rebinned.fits')
 
@@ -346,9 +346,7 @@ quit()
 #             w=(ions[i][1]-ions[i][0])-(integral/mean(cont_slice))
 
 #             eq_w.append(w)
-
-#         return eq_w
-
+#column density 
 
 
 # ions={'Ha':[1636.55,1639.225],'Hb':[1381.1,1383.264],'OVI_1031':[1389.856,1391.254],'OVI_1037':[1397.816,1398.877],'CII':[1396.727,1396.995],'CIII':[1310.485,1311.182],'SiII':[1698.778,1699.039],'SiIII':[1626.068,1626.403]}
@@ -356,7 +354,7 @@ quit()
 
 # spec_unbin=Spectrum(hdu_unbin)
 # spec_bin=Spectrum(hdu_bin)
-
+#column density 
 
 # plt.step(spec_bin.wave,spec_bin.flux)
 # plt.show()
@@ -366,7 +364,7 @@ quit()
 # eq_w_unbin=array(spec_unbin.eqw(ions))
 # eq_w_bin=array(spec_bin.eqw(ions))
 
-# diff=eq_w_bin-eq_w_unbin
+# diff=eq_w_bin-eq_w_unbin#column density 
 
 # x=linspace(1,len(ions),len(ions))
 

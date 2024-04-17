@@ -6,7 +6,7 @@ from astropy.table import Table,Column
 from numpy import *
 import os
 
-qso='pks1302'
+qso='p1103'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -22,6 +22,7 @@ err=data['ERR']
 
 spec = XSpectrum1D.from_tuple((wave,flux,err))
 spec.fit_continuum(kind='QSO', redshift=z)
+
 
 cont=spec.co
 

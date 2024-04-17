@@ -5,6 +5,9 @@ from numpy import *
 from scipy.interpolate import interp2d,interp1d
 import pickle
 
+
+
+
 def extrapolate_OVI():
 
     hdu=fits.open(f'pg0003/z=0.347579/nH_Z/component_III_nH_Z_col_density_param.fits')
@@ -33,9 +36,10 @@ def extrapolate_OVI():
 
         mask=log_Z_2d==z
 
-        if z>=0.64 and z<=0.88 :
+        if z>=0.64 and z<=0.88 or z==0.44 or z==0.40:
             nH=log_nH_2d[mask][:-1]
             col_den_OVI_masked=col_den_OVI[mask][:-1]
+
         
         else:
             nH=log_nH_2d[mask]
@@ -43,6 +47,12 @@ def extrapolate_OVI():
         
 
         f=interp1d(nH,col_den_OVI_masked,fill_value='extrapolate',kind='quadratic')
+
+        # nH_plot=linspace(-5,0,1000)
+        # plt.title(f'{z}')
+        # plt.scatter(nH,col_den_OVI_masked,c='red',s=50)
+        # plt.plot(nH_plot,f(nH_plot),c='green')
+        # plt.show()
 
         logZ=z*ones(len(nH_2d_unique))
         col_den=f(nH_2d_unique)
@@ -58,8 +68,7 @@ def extrapolate_OVI():
     col_den_col=Column(name='O+5',data=array(col_den_table).flatten())
 
     table.add_columns([nH_col,Z_col,col_den_col])
-    table.write('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits')
-
+    table.write('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits',overwrite=True)
 
 
     
@@ -80,39 +89,38 @@ def interpolate_OVI(kind='quintic'):
 
 
 # extrapolate_OVI()
-interpolate_OVI(kind='cubic')
 
-quit()
+'check extrapolation'
+
+# hdu=fits.open('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits')
+# data=Table(hdu[1].data)
+
+# i='O+5'
+
+# log_nH=data['log_nH']
+# log_Z=data['log_Z']
+# log_col_den=data[i]
 
 
-# plt.scatter(nH_col,Z_col,c=col_den_col)
+# plt.scatter(log_nH,log_Z,c=log_col_den)
 # plt.colorbar()
 # plt.show()
-
-# fig=plt.figure()
-# ax=plt.axes(projection ='3d')   
-
-# ax.scatter(nH_col,Z_col,col_den_col,label='interp1')
-# ax.scatter(x,y,col_den,label='interpolated')
-# ax.scatter(x,y,col_den1,label='interpolated2')
-# ax.set_xlabel('nH')
-# ax.set_ylabel('Z')
-# ax.set_zlabel('col den')
-# plt.legend()
-
-# plt.show()
+# quit()
+# kind='quintic'
 
 
+# interpolate_OVI(kind='quintic')
 
 
 hdu=fits.open('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits')
 data=Table(hdu[1].data)
 
+i='O+5'
+
 log_nH=data['log_nH']
 log_Z=data['log_Z']
-log_col_den=data['O+5']
+log_col_den=data[i]
 
-kind='quintic'
 
 
 def col_vs_z(nH):
@@ -125,9 +133,7 @@ def col_vs_z(nH):
     plt.scatter(Z,log_col_den,label=f'{nH}',marker='D')  
 
 
-i='O+5'
-
-with open(f'Interp_2d_func_new/O+5_quintic.pkl','rb') as pickle_file:
+with open(f'Interp_2d_func_new/{i}_quintic.pkl','rb') as pickle_file:
     f=pickle.load(pickle_file)
 
 
@@ -169,7 +175,7 @@ fig=plt.figure()
 ax=plt.axes(projection ='3d')   
 
 ax.scatter(log_nH,log_Z,log_col_den,label='interp1')
-# ax.scatter(x,y,col_den,label='interpolated')
+ax.scatter(x,y,col_den,label='interpolated')
 # ax.scatter(x,y,col_den1,label='interpolated2')
 ax.set_xlabel('nH')
 ax.set_ylabel('Z')

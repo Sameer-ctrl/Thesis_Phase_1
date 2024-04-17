@@ -111,3 +111,28 @@ plt.legend()
 plt.title(i)
 plt.savefig(i+'.png')
 # plt.show()
+
+
+quit()
+
+m1=model(chi_sq_exc,r'$\mathbf{Excluding}$'+ion_label('O+5'),'orange')
+m2=model(chi_sq_inc,r'$\mathbf{Including}$'+ion_label('O+5'),'green')
+plt.clf()
+
+
+plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=r'$\mathbf{Observed}$')
+plot_samples(m1,'orange',n=100)
+m1=model(chi_sq_exc,r'$\mathbf{Excluding}$'+ion_label('O+5'),'orange')
+# plot_samples(m2,'green',n=100)
+# m2=model(chi_sq_inc,r'$\mathbf{Including}$'+ion_label('O+5'),'green')
+# plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
+# plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
+plt.xticks(xaxis,ions_roman,fontsize=20)
+plt.yticks(fontsize=20)
+plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=25)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=25)
+# plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
+plt.legend()
+# plt.savefig('Observed_and_predicted-ASI.png')
+
+plt.show()
