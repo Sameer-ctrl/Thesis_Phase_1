@@ -1,0 +1,15 @@
+OI:
+	Good fit. Fitted with 2 comp. large b value for comp II b~50 km/s.
+
+CII : 
+	Good fit. Fitted with 2 comp. Unknown contamination on left.
+
+SiII:
+	Good fit. Fitted with 2 comp. Used SiII 1526, 1260 and 1190 to fit.
+	Used only SiII 1260 to fit the first component, as it's not much prominent in others.
+	SiII 1193 contaminated from galactic NI 1199 and 1200 lines so excluded from fit
+	SiII 1304 contaminated from geocoronal Lya emission.
+
+HI:
+	Average fit. Fitted with 4 comp, redshift of two comp fixed from CII fit and one from SiII fit. Contaminated with OVI 1038 (self-identified) from z=0.179960, and hint of OVI 1032 is also there at the same redshift.
+	However, left wing still couldn't be fitted.

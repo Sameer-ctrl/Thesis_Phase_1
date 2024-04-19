@@ -1,7 +1,0 @@
-!%% pg1216_cont_norm.asc 1 1535.4 1537.3 pfinst=LSF/cos_G160M_lsf_1536_ltpos_3.dat !
-!%% pg1216_cont_norm.asc 2 1267.3 1269.3 pfinst=LSF/cos_G130M_lsf_1268_ltpos_3.dat !
-!%% pg1216_cont_norm.asc 3 1199.423 1201.825 pfinst=LSF/cos_G130M_lsf_1202_ltpos_3.dat !
-%% pg1216_cont_norm.asc 4 1197.2 1198.6 pfinst=LSF/cos_G130M_lsf_1198_ltpos_3.dat !
- !SiII     0.0061017968    0.0000112296    23.55345      5.74275  12.535910    0.058115  0 ! 
- SiII     0.0063120029    0.0000108065     2.31769     11.69457  13.776203    7.678951  0 ! 
- SiII     0.0063666247    0.0000354431     5.99926     17.33961  12.854098    0.333702  0 !

@@ -6,7 +6,7 @@ from astropy.table import Table,Column
 from numpy import *
 import os
 
-qso='p1103'
+qso='pg0832'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')

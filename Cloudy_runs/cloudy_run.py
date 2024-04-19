@@ -98,14 +98,20 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
     lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,miscalleneous_command,save_grid,save_Temp,save_hyd,save_col_den]
 
-    os.mkdir(f'{qso}/z={z_abs}/{run_name}')
-    file=open(f'{qso}/z={z_abs}/{run_name}/{run_name}.in','w+')
+    if len(metal==1):
+        path=f'{qso}/z={z_abs}/logZ={metal[0]}/{run_name}'
+    
+    else:
+        path=f'{qso}/z={z_abs}/{run_name}'
+
+    os.mkdir(path)
+    file=open(f'{path}/{run_name}.in','w+')
     file.writelines(lines)
     file.write('end')
     file.close()
 
 
-    file=open(f'{qso}/z={z_abs}/{run_name}/{run_name}.in','r')
+    file=open(f'{path}/{run_name}.in','r')
 
     print('-------------Cloudy input file------------- \n')
     print(file.read())
@@ -120,11 +126,11 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
     if True:
     # if a=='y':
 
-        os.chdir(f'{qso}/z={z_abs}/{run_name}')
+        os.chdir(f'{path}')
 
         cloudy_run_command=f'{cloudy_path} -r {run_name}'
 
-        print(f'\nCloudy running in {qso}/z={z_abs}/{run_name} ... \n')
+        print(f'\nCloudy running in {path} ... \n')
         os.system(cloudy_run_command)
 
         sleep(1)
@@ -192,32 +198,181 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
     else:
 
-        os.system(f'rm -rf {qso}/z={z_abs}/{run_name}')
+        os.system(f'rm -rf {path}')
         print('Cloudy run terminated...')
 
 
 # run_name='component_III_PI_nH'
 
-qso='pg1116'
-z_abs=0.138527
+# qso='pg1116'
+# z_abs=0.138527
 
-if not os.path.exists(f'{qso}/z={z_abs}'):
-    os.makedirs(f'{qso}/z={z_abs}')
+# if not os.path.exists(f'{qso}/z={z_abs}'):
+#     os.makedirs(f'{qso}/z={z_abs}')
     
-hden=[-5,1,0.02]
-metal=[1]
+# hden=[-5,1,0.02]
+# metal=[-1]
+# temp=None
+# redshift=[0.138495,0.138506,0.138645]
+# stop_nH=[14.97,13.6,16.04]
+
+# ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4','Fe+','Al+']
+
+# for i in range(len(stop_nH)):
+
+#     run_name=f'component_{toRoman(i+1)}_PI_nH'
+#     run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=False, delete_temp_file=True, delete_out_file=True)
+
+#     sleep(30)
+
+
+'batch mode'
+
+
+class ion():
+
+    def __init__(self,name,z,b,logN):
+
+        self.ion=name
+        self.z=[x for x in z]
+        self.b=[x for x in b]
+        self.logN=[x for x in logN]
+        self.comp=len(z)
+
+
+class abs_system():
+
+    def __init__(self,qso,z_abs,cont_mark='*'):
+
+        file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
+        
+        with open(file) as f:
+            text=f.read()
+            text=text.replace('A','')
+
+        with open('temp_param_file.txt','w') as f:
+            f.write(text)
+
+        param_file=loadtxt('temp_param_file.txt',dtype=str,comments=('>','#'))
+
+        ions=param_file[:,0]
+        mask=[]
+
+        for i in ions:
+            mask.append(cont_mark not in i)  
+
+        ions=ions[mask]
+        z=param_file[:,1].astype(float)[mask]
+        z_err=param_file[:,2].astype(float)[mask]
+        b=param_file[:,3].astype(float)[mask]
+        b_err=param_file[:,4].astype(float)[mask]
+        logN=param_file[:,5].astype(float)[mask]
+        logN_err=param_file[:,6].astype(float)[mask]
+
+        ions_all=unique(ions)
+        ion_obj_dict={}
+
+        for i in ions_all:
+            mask=ions==i
+            z_ion=z[mask]
+            z_err_ion=z_err[mask]
+            b_ion=b[mask]
+            b_err_ion=b_err[mask]
+            logN_ion=logN[mask]
+            logN_err_ion=logN_err[mask]
+
+            z_obj=[]
+            b_obj=[]
+            logN_obj=[]
+
+            for j in range(len(z_ion)):
+                z_obj.append([round(z_ion[j],6),round(z_err_ion[j],6)])
+                b_obj.append([round(b_ion[j]),round(b_err_ion[j])])
+                logN_obj.append([round(logN_ion[j],2),round(logN_err_ion[j],2)])
+
+            obj=ion(i,z=z_obj,b=b_obj,logN=logN_obj)
+            ion_obj_dict[i]=obj
+
+        self.qso=qso
+        self.z_abs=z_abs
+        self.ion_obj=ion_obj_dict
+        self.ions=ions_all[ions_all!='HI']
+        self.n_ions=len(self.ions)
+
+
+absorbers=[
+            abs_system('he0056',0.043265),
+            abs_system('pg1216',0.006328),
+            abs_system('3c263',0.063397),
+            abs_system('pg1222',0.054479),
+            abs_system('rxj0439',0.005568),                        
+            abs_system('uks0242',0.063850),
+            abs_system('pg1259',0.046284),
+            abs_system('pks1302',0.094839),
+            abs_system('3c57',0.077430),
+            abs_system('p1103',0.003934),
+            abs_system('phl1811',0.080928),
+           ]
+
+n=0
+
+hden=[-5,-3,1]
+metal=[-1]
 temp=None
-redshift=[0.138495,0.138506,0.138645]
-stop_nH=[14.97,13.6,16.04]
 
-ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4']
+ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4','Fe+','Al+']
 
-for i in range(len(stop_nH)):
 
-    run_name=f'component_{toRoman(i+1)}_PI_nH'
-    run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=False, delete_temp_file=True, delete_out_file=True)
+for a in absorbers[:2]:
 
-    sleep(30)
+    qso=a.qso
+    z_abs=a.z_abs
+    redshift=[x[0] for x in a.ion_obj['HI'].z]
+    stop_nH=[x[0] for x in a.ion_obj['HI'].logN]
+
+    if not os.path.exists(f'{qso}/z={z_abs}/logZ={metal[0]}'):
+        os.makedirs(f'{qso}/z={z_abs}/logZ={metal[0]}')
+        
+  
+    for i in range(len(stop_nH)):
+
+        run_name=f'component_{toRoman(i+1)}_PI_nH'
+        run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=True, delete_temp_file=True, delete_out_file=True)
+
+        sleep(30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
