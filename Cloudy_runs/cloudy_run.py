@@ -98,13 +98,15 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
     lines=[uv_b,abundance,hden_line,metal_line,temp_line,stop_criteria_nH,miscalleneous_command,save_grid,save_Temp,save_hyd,save_col_den]
 
-    if len(metal==1):
+    if len(metal)==1:
         path=f'{qso}/z={z_abs}/logZ={metal[0]}/{run_name}'
     
     else:
         path=f'{qso}/z={z_abs}/{run_name}'
 
-    os.mkdir(path)
+    if not os.path.exists(path):
+        os.makedirs(path)
+
     file=open(f'{path}/{run_name}.in','w+')
     file.writelines(lines)
     file.write('end')
@@ -113,9 +115,9 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
 
     file=open(f'{path}/{run_name}.in','r')
 
-    print('-------------Cloudy input file------------- \n')
-    print(file.read())
-    print('\n--------------------------------------- \n')
+    # print('-------------Cloudy input file------------- \n')
+    # print(file.read())
+    # print('\n--------------------------------------- \n')
 
     if n>=1:
         print(f'Grid parameters : {grid_parameters}')
@@ -193,7 +195,7 @@ def run_cloudy(run_name, hden, metal, temp, redshift, stop_nH, ions, qso, z_abs,
         col_density.write(f'../{run_name}_col_density_param.fits',overwrite=True)
             
 
-        print('----------- Output files written -------------')
+        print('----------- Output files written -------------\n')
         os.chdir(cwd)
 
     else:
@@ -314,21 +316,22 @@ absorbers=[
             abs_system('phl1811',0.080928),
            ]
 
-n=0
 
-hden=[-5,-3,1]
+hden=[-5,1,0.02]
 metal=[-1]
 temp=None
 
 ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4','Fe+','Al+']
 
 
-for a in absorbers[:2]:
+for a in absorbers:
 
     qso=a.qso
     z_abs=a.z_abs
     redshift=[x[0] for x in a.ion_obj['HI'].z]
     stop_nH=[x[0] for x in a.ion_obj['HI'].logN]
+
+    print(f'{qso} : {z_abs} \n')
 
     if not os.path.exists(f'{qso}/z={z_abs}/logZ={metal[0]}'):
         os.makedirs(f'{qso}/z={z_abs}/logZ={metal[0]}')
@@ -337,9 +340,11 @@ for a in absorbers[:2]:
     for i in range(len(stop_nH)):
 
         run_name=f'component_{toRoman(i+1)}_PI_nH'
-        run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=True, delete_temp_file=True, delete_out_file=True)
+        run_cloudy(run_name, hden, metal, temp, redshift[i], stop_nH[i], ions, qso, z_abs, stop_T=50, save_temp=False, delete_temp_file=True, delete_out_file=True)
 
         sleep(30)
+
+    print(f'---------------------------------------------------------------------------')
 
 
 
