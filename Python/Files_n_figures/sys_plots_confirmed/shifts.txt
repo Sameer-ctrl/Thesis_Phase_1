@@ -41,6 +41,23 @@ line_vshift['SiIII_1206']=8
 
 new:
 
+line_vshift['HI_1215']=-2
+line_vshift['HI_972']=2
+line_vshift['HI_949']=-3
+line_vshift['HI_930']=-3
+line_vshift['HI_926']=-3
+line_vshift['HI_923']=-3
+line_vshift['HI_920']=-2
+line_vshift['HI_918']=-2
+line_vshift['OVI_1038']=-3
+line_vshift['OVI_1032']=-1
+line_vshift['SiIII_1206']=-3
+line_vshift['SiII_1260']=-2
+line_vshift['CII_1036']=-2
+line_vshift['CIII_977']=-2
+
+
+
 line_vshift['CII_1036']=-5
 line_vshift['HI_1215']=-3
 line_vshift['HI_916']=-4

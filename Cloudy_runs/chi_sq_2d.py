@@ -38,7 +38,7 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
 
 ions=['Si+2', 'Si+','C+2', 'C+','O+5']
-ions_roman=[ion_label('Si+2'),ion_label('Si+'),ion_label('C+2'),ion_label('C+'),ion_label('O+5')]
+ions_roman=[ion_label('Si+2',ion_font_size=35,radicle_font_size=23),ion_label('Si+',ion_font_size=35,radicle_font_size=23),ion_label('C+2',ion_font_size=35,radicle_font_size=23),ion_label('C+',ion_font_size=35,radicle_font_size=23),ion_label('O+5',ion_font_size=35,radicle_font_size=23)]
 
 
 # observations={'Si+2':[12.87,0.08],'Si+':[13.19,0.41], 'C+2':[13.72,0.04],'C+':[14.21,0.39], 'O+5':[13.91,0.04]}
@@ -169,7 +169,7 @@ def plot_samples(m,c,n=50,i1=1,i2=1):
 
 xaxis=linspace(1,len(ions_roman),len(ions_roman))
 
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(16,10),dpi=300)
 
 m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
@@ -183,15 +183,17 @@ plot_samples(m2,'green',n=100)
 m2=model(chi_sq_inc,r'$\mathbf{Including \ }$'+ion_label('O+5'),'green')
 # plt.text(1,9,r'Excluding OVI : log nH = -2.24$\pm$0.03 \ \ \ \ \ \  log Z = -0.31$\pm$0.06 \ \ \ \ \ \ $\chi^{2}=4.268$')
 # plt.text(1,8.5,r'Including OVI : log nH = -3.88$\pm$0.02 \ \ \ \ \ \ log Z = -1.51$\pm$0.03 \ \ \ \ \ \ $\chi^{2}=275.666$')
-plt.xticks(xaxis,ions_roman,fontsize=20)
-plt.yticks(fontsize=20)
-plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=15,fontsize=30)
-plt.xlabel(r'$\mathbf{Ions}$',labelpad=15,fontsize=30)
+plt.xticks(xaxis,ions_roman,fontsize=30)
+plt.yticks([8,9,10,11,12,13,14,15],fontsize=30)
+plt.ylabel(r'$\mathbf{log \ [N \ ({cm}^{-2})]}$',labelpad=25,fontsize=40)
+plt.xlabel(r'$\mathbf{Ions}$',labelpad=18,fontsize=40)
 # plt.title(r'Solution using $\chi^{2}$ minimization',pad=15)
 plt.legend(loc='lower left',fontsize=25)
-plt.savefig('Observed_and_predicted.png')
+plt.ylim(7.11,15.28)
 
-plt.show()
+plt.savefig('Observed_and_predicted_Danforth.png')
+
+# plt.show()
 
 
 
