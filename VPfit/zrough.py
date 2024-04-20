@@ -11,11 +11,12 @@ import os
 'finding contamination missed by Danforth'
 
 
-qso='p1103'
-z_abs=0.003967
-cen_wave_rest=1215.6701
+qso='pg1216'
+# z_abs=0.08092
+# cen_wave_rest=1550.7812
 
-x=(z_abs+1)*cen_wave_rest
+# x=(z_abs+1)*cen_wave_rest
+x=1224.3
 
 data=loadtxt('../Python/Data/rest_wave.txt',dtype=str)
 
@@ -39,14 +40,8 @@ for i,w in enumerate(wave_atom):
             print(f'{line_atom[i]} : {z:.6f}  : {close_z:.6f}  : {abs(z-close_z)*1e6:.6f}')
 
 
-
-
-
-
 quit()
-
-
-qso='p1103'
+qso='pg0832'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 
@@ -56,12 +51,12 @@ data=Table(hdu[1].data)
 wave=data['WAVE']
 flux=data['FLUX']
 
-z=0.077419
+# z=0.077419
 
-cen_wave_obs=1393.76018*(1+z)
+# cen_wave_obs=1393.76018*(1+z)
 
-plt.step(wave,flux,label='CIV 1548')
-plt.step(wave*(1548.2041/1550.7812)-0.061,flux,label='CIV 1550',ls='--')
+plt.step(wave,flux,label='SiIV 1393')
+plt.step(wave*(1393.76018/1402.77291),flux,label='SiIV 1402',ls='--')
 plt.legend()
 plt.show()
 
