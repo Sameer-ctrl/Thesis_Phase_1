@@ -6,10 +6,11 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 
-qso='p1103'
-z_abs=0.003975
+qso='pg0832'
+z_abs=0.017520
 v_sep_lim=300
 ion='HI'
+#'CII*', 'SiIII', 'CII'
 
 spec=f'{qso}_cont_norm.asc'
 
@@ -202,8 +203,8 @@ for i in range(n):
 
 os.system('rm vpfit_chunk*')
 
-if not os.path.exists(f'z={z_abs}/VPfit_chunks'):
-    os.makedirs(f'z={z_abs}/VPfit_chunks')
+if not os.path.exists(f'z={z_abs:.6f}/VPfit_chunks'):
+    os.makedirs(f'z={z_abs:.6f}/VPfit_chunks')
 
 plt.show()
 

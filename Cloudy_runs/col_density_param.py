@@ -102,9 +102,9 @@ def join_data():
 # write_param(qso,z_abs,run_name,parameters,temp=True)
 
 
-parameters=['log_nH']
-grid=loadtxt(f'pg0003/z=0.347579/component_II/component_II_nH_grid.txt',dtype=str)
-col_density=ascii.read(f'pg0003/z=0.347579/component_II/component_II_nH_col_density.txt')
+parameters=['log_nH','log_Z']
+grid=loadtxt(f'pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_grid.txt',dtype=str)
+col_density=ascii.read(f'pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_col_density.txt')
 n=len(parameters)
 
 param_data=[]
@@ -140,6 +140,6 @@ param_data=tuple(zip(*param_data))
              
 col_density.add_column(param_data,name='parameters')
 print(col_density.colnames,'\n')
-col_density.write(f'pg0003/z=0.347579/component_II/component_II_nH_col_density_param.fits',overwrite=True)
-ascii.write(col_density,f'pg0003/z=0.347579/component_II/component_II_nH_col_density_param.txt',format='ecsv',overwrite=True)
+col_density.write(f'pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits',overwrite=True)
+ascii.write(col_density,f'pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_col_density_param.txt',format='ecsv',overwrite=True)
 

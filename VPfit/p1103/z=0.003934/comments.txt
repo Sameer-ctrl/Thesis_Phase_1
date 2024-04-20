@@ -1,0 +1,19 @@
+SiIII:
+	Good fit. Narrow line b~4 km/s, error in col density calculated from chi-sq, otherwise was 0.26
+	Has OVI 1032 contamination on left from z=0.172768 
+
+SiIV:
+	Nice fit.
+
+CIV:
+	Good fit. CIV 1548 seems to have some unidentified contamination on the wings.
+
+NV:
+	Good fit. Large b ~ 52 km/s.
+
+HI:
+	Good fit. Fitted with 3 comp. None of them are BLA.
+
+
+
+

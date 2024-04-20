@@ -1,0 +1,28 @@
+OI:
+	Good fit. Contaminated with Lya from z=0.157852. There is some unknown contamination on the right also.
+
+CII:
+	Nice fit. Fitted with single comp. Could be fitted with 2 also, which fits the right wing well, but b is small ~3 km/s for one of the  comp. 
+
+NII:
+	Nice fit.
+
+CIV:
+	Nice fit. Fitted with 2 comp
+
+SiII:
+	Good fit. When fitting with single comp, all lines couldn't be fitted together. Only 1526 and 1304 could be fitted together, and the doublet 1190 and 1193 could be fitted together alone. Then fitted two comp, then all line scould be fitted together but b values are small for both comp b~ 3,4 km/s.
+	SiII 1260 contaminated frm Lya from z=0.120353 and 0.120489 so excluded from fit. 
+	SiII 1190 is contaminated from Lya from z=0.057991 and 0.058278
+	SiII 1526 could be possibly contaminated from SiIV 1402 from z~0.176543.
+
+SiIV:
+	Nice fit.
+
+FeII:
+	Good fit. FeII 1144 contaminated with OVI 1038 from z=0.191547, 0.191930, 0.192214
+
+HI:
+	Good fit. Fitted with 4 comp, two single comp profiles and one 2 comp profile. Getting large b ~ 126 km/s for one of the comp.
+
+

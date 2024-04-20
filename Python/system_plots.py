@@ -5,9 +5,11 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='3c57'
-z_abs=0.077430
+qso='pg1216'
+z_abs=0.006328
 vlim=350
+# xticks_val=[-600,-400,-200,0,200,400,600]
+xticks_val=[-300,-200,-100,0,100,200,300]
 n_col=3
 lw1=1.5
 
@@ -271,7 +273,7 @@ def abs_line_plot(line):
     plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     # plt.text(-260,0.21,f'{{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{40pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     plt.yticks([0,0.5,1,1.5])
-    plt.xticks([-300,-200,-100,0,100,200,300])
+    plt.xticks(xticks_val)
     
 
 fig=plt.figure(figsize=(40,20),dpi=300)

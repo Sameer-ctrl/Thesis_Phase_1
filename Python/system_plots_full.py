@@ -7,9 +7,11 @@ import os
 plt.style.use('my_style.mpl')
 
 
-qso='p1103'
-z_abs=0.003975
+qso='pg1216'
+z_abs=0.006328
 vlim=350
+# xticks_val=[-600,-400,-200,0,200,400,600]
+xticks_val=[-300,-200,-100,0,100,200,300]
 n_col=6
 lw1=1.5
 vlim_aod=[-100,100]
