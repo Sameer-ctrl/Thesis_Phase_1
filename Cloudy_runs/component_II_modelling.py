@@ -5,13 +5,82 @@ import matplotlib.pyplot as plt
 from astropy.table import Table
 from roman import toRoman
 from scipy.interpolate import interp2d,interp1d
+from scipy.optimize import fsolve
 from roman import toRoman
 
 
 plt.style.use('Files_n_figures/my_style.mpl')
 
 
-hdu=fits.open('pg0003/z=0.347579/component_II/component_II_nH_col_density_param.fits')
+'component II CIE'
+
+hdu=fits.open('pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
+data=Table(hdu[1].data)
+
+nH=data['log_nH']
+Z=data['log_Z']
+col_den_OVI=log10(data['O+5'])
+
+obs_OVI=14.25 
+
+
+nH_plot=arange(-5,0.01,0.1)
+i=0
+
+n_sol=[]
+Z_sol_plot=[]
+
+for n in nH_plot:
+    i+=1
+    n=round(n,2)
+    mask=nH==n
+
+    mask_Z=Z[mask]
+    mask_col_den_OVI=col_den_OVI[mask]
+
+    f=interp1d(mask_Z,mask_col_den_OVI,kind='quadratic')
+
+    func=lambda x : f(x)-obs_OVI
+
+    Z_sol=fsolve(func,-0.5)[0]
+    n_sol.append(n)
+    Z_sol_plot.append(Z_sol)
+
+plt.figure(figsize=(16,10),dpi=300)  
+
+l=3.5
+
+plt.scatter(n_sol,Z_sol_plot,s=130)
+plt.plot(n_sol,Z_sol_plot,ls='--',lw=2)
+plt.vlines(-3,-2,-0.6,color='black',ls='--',lw=l)
+plt.hlines(-0.595,-6,-3,color='black',ls='--',lw=l)
+plt.yticks([-1.2,-1.0,-0.8,-0.6,-0.4],fontsize=30)
+plt.xticks(fontsize=30)
+plt.xlabel(r'$\mathbf{log \ [n_H \ ({cm}^{-3})]}$',labelpad=15,fontsize=40)
+plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=40)
+plt.xlim(-5.25,0.25)
+plt.ylim(-1.383,-0.37)
+
+plt.savefig('comp_II_CIE_Danforth.png')
+
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+quit()
+
+'component II PI based on comp III metallicity'
+
+
+hdu=fits.open('pg0003/z=0.347579/component_II_PI/component_II_nH_col_density_param.fits')
 data=Table(hdu[1].data)
 
 nH=data['log_nH']
@@ -26,6 +95,7 @@ plt.scatter(nH,col_den_OVI)
 plt.hlines(obs_OVI,-5,-2)
 plt.plot(linspace(-5,-2.5,5000),f(linspace(-5,-2.5,5000)))
 plt.show()
+
 quit()
  
 
@@ -47,7 +117,7 @@ quit()
 # plt.xlabel(r'$log \ [n_H \ ({cm}^{-3})]$',labelpad=15)
 # plt.ylabel(r'$log \ [N \ ({cm}^{-2})]$',labelpad=15)
 
-plt.show()
+# plt.show()
 
 
 quit()

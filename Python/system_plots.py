@@ -5,12 +5,12 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg1216'
-z_abs=0.006328
+qso='pg0003'
+z_abs=0.347586
 vlim=350
 # xticks_val=[-600,-400,-200,0,200,400,600]
 xticks_val=[-300,-200,-100,0,100,200,300]
-n_col=3
+n_col=1
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -99,13 +99,27 @@ def tick_pos(file):
 
     return array(tick_wave)
 
-lines=lines_all()
-print(lines)
+# lines=lines_all()
+# print(lines)
 # quit()
 # lines=['HI_1215', 'OVI_1032','CIII_977', 'HI_1025' , 'OVI_1038', 'CII_1036', 'HI_972' ,'SiIII_1206', 'SiII_1260']
-# lines=['HI_1215', 'HI_1025', 'HI_972', 'OVI_1032', 'OVI_1038','CIII_977' , 'CII_1036' ,'SiIII_1206', 'SiII_1260']
+lines=['CIII_977' , 'CII_1036' ,'SiIII_1206', 'SiII_1260', 'OVI_1038','OVI_1032', 'HI_949' ,'HI_972', 'HI_1025','HI_1215', ]
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
+line_vshift['HI_1215']=-2
+line_vshift['HI_972']=2
+line_vshift['HI_949']=-3
+line_vshift['HI_930']=-3
+line_vshift['HI_926']=-3
+line_vshift['HI_923']=-3
+line_vshift['HI_920']=-2
+line_vshift['HI_918']=-2
+line_vshift['OVI_1038']=-3
+line_vshift['OVI_1032']=-1
+line_vshift['SiIII_1206']=-3
+line_vshift['SiII_1260']=-2
+line_vshift['CII_1036']=-2
+line_vshift['CIII_977']=-2
 # line_vshift['SiIV_1402']=5
 # line_vshift['CIV_1550']=-10
 # line_vshift['HI_1215']=-10
@@ -124,22 +138,6 @@ line_vshift=dict(zip(lines,zeros(n)))
 # line_vshift['SiII_1193']=-6
 # line_vshift['SiII_1190']=-5
 # line_vshift['HI_972']=-10
-# line_vshift['HI_1215']=-3
-# line_vshift['HI_916']=-4
-# line_vshift['HI_917']=-3
-# line_vshift['HI_918']=-2
-# line_vshift['HI_972']=-1
-# line_vshift['HI_949']=-1
-# line_vshift['HI_937']=-3
-# line_vshift['HI_930']=-4
-# line_vshift['HI_926']=-4
-# line_vshift['HI_923']=-2
-# line_vshift['HI_920']=-2
-# line_vshift['Ly14']=-1
-# line_vshift['Ly15']=-3
-# line_vshift['Ly16']=-3
-# line_vshift['SiII_1193']=-3
-# line_vshift['SiIII_1206']=-5
 
 
 # lines=['HI_1215','OVI_1032', 'CIII_977','HI_1025','OVI_1038', 'CII_1036',  'HI_972'  
@@ -268,7 +266,7 @@ def abs_line_plot(line):
     
 
     plt.xlim(-vlim,vlim)
-    plt.ylim(-0.1,1.6)
+    plt.ylim(-0.2,1.7)
     line_name=line_label(line)
     plt.text(-260,0.21,f'{{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{35pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
     # plt.text(-260,0.21,f'{{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[0]}}}$}} {{\\fontsize{{40pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[1]}}}$}} {{\\fontsize{{50pt}}{{3em}}\selectfont{{}}$\mathbf{{{line_name[2]}}}$}}')
@@ -276,8 +274,8 @@ def abs_line_plot(line):
     plt.xticks(xticks_val)
     
 
-fig=plt.figure(figsize=(40,20),dpi=300)
-# fig=plt.figure(figsize=(20,20),dpi=300)
+# fig=plt.figure(figsize=(40,20),dpi=300)
+fig=plt.figure(figsize=(20,40),dpi=300)
 
 ax1=plt.subplot(int(ceil(n/n_col)),n_col,1)
 
@@ -289,26 +287,37 @@ for i,line in enumerate(lines):
         plt.tick_params('y', labelleft=False)
 
     else:
-        plt.tick_params('y', labelsize=35)
+        plt.tick_params('y', labelsize=40)
 
     if i < n-n_col:
         plt.tick_params('x', labelbottom=False)
     
     else:
-        plt.tick_params('x', labelbottom=True,labelsize=35)
+        plt.tick_params('x', labelbottom=True,labelsize=40)
 
     if i!=n-1:
         ax=plt.subplot(int(ceil(n/n_col)),n_col,i+2,sharex=ax1, sharey=ax1)
 
 
-fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
-plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
-plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs:.6f}_sys_plot.png')
-plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+# fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
+# fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+# plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
+# plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
+# plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+# # plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+# # plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+# plt.savefig(f'{qso_label}_z={z_abs:.6f}_sys_plot.png')
 
+
+
+'single column'
+
+fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=0.02)  #y=0.18  (y=0 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.01, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
+plt.legend(bbox_to_anchor=(0.51,1.01),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
+plt.text(0.30, 1.04, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+plt.savefig(f'{qso_label}_z={z_abs:.6f}_sys_plot.png')
 
 
 

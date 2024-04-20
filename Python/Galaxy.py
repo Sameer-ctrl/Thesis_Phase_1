@@ -9,17 +9,16 @@ from astropy.coordinates import SkyCoord
 plt.style.use('my_style.mpl')
 
 cosmo=FlatLambdaCDM(H0=69.6,Om0=0.3,Tcmb0=2.725)
-z_abs=0.347579
+z_abs=0.347586
 
 
-data=loadtxt('tom_shanks_data.txt')
-z=data[0:,2].astype(float)
-r=data[0:,7].astype(float)
-# print(z)
-# print(r)
+# data=loadtxt('tom_shanks_data.txt')
+# z=data[0:,2].astype(float)
+# r=data[0:,7].astype(float)
 
-dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
-k=array([0.1,0.15,0.28,0.44,0.54])
+
+# dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
+# k=array([0.1,0.15,0.28,0.44,0.54])
 
 # def L_by_Lstar(m_I,M_star,z):
 
@@ -47,7 +46,6 @@ dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
 
 # print(dA_scale*60)
 
-data=loadtxt('Data/gal_data.txt',dtype=str)
 data=loadtxt('Data/gal_data.txt',dtype=str)
 
 
@@ -115,11 +113,11 @@ def circle(r,x0,y0,label):
     x=x0+(r*cos(theta))
     y=y0+(r*sin(theta))
 
-    plt.plot(x,y,ls='--',label=label)
+    plt.plot(x,y,ls='--',label=label,lw=3.5)
 
 # print(abs(v))
 
-plt.figure(figsize=(16,13))
+plt.figure(figsize=(16,13),dpi=300)
 
 plt.scatter((ra-ra_qso)*60,(dec-dec_qso)*60,s=600,c=abs(v),cmap='jet')
 
@@ -127,19 +125,19 @@ plt.scatter((ra-ra_qso)*60,(dec-dec_qso)*60,s=600,c=abs(v),cmap='jet')
 #     plt.text((ra[i]-ra_qso)*60,(dec[i]-dec_qso)*60,s=f'{i+1}')
 
 cb=plt.colorbar(label=r'$\mathbf{\Delta v \ (km \ s^{-1})}$')
-cb.ax.tick_params(labelsize=35)
+cb.ax.tick_params(labelsize=30)
 cb.set_label(r'$\mathbf{\Delta v \ (km \ s^{-1})}$',labelpad=40,fontsize=45)
 circle(500/dA_scale.value,0,0,r'$\mathbf{500 \ kpc}$')
 circle(1000/dA_scale.value,0,0,r'$\mathbf{1 \ Mpc}$')
 # circle(5000/dA_scale.value,0,0,'5 Mpc')
 plt.scatter(0,0,s=900,c='black',marker='X')
 plt.legend(fontsize=33,loc='lower right')
-plt.xlim(-10,10)
-plt.ylim(-15,5)
+plt.xlim(-10.5,10.5)
+plt.ylim(-15.5,5.5)
 plt.xticks(fontsize=30)
 plt.yticks(fontsize=30)
-plt.xlabel(r'$\mathbf{\alpha-{\alpha}_{QSO} \ [arc \ min]}$',fontsize=45,labelpad=15)
-plt.ylabel(r'$\mathbf{\delta-{\delta}_{QSO} \ [arc \ min]}$',fontsize=45)
+plt.xlabel(r'$\mathbf{\alpha-{\alpha}_{QSO} \ [arc \ min]}$',fontsize=45,labelpad=20)
+plt.ylabel(r'$\mathbf{\delta-{\delta}_{QSO} \ [arc \ min]}$',fontsize=45,labelpad=20)
 plt.savefig('galaxy_environment.png')
 # plt.show()
 
