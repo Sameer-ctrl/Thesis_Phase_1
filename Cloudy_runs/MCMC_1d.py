@@ -13,8 +13,9 @@ plt.style.use('../Python/my_style.mpl')
 
 
 qso='pks0405'
-comp='II'
 z_abs=0.167125
+comp='II'
+
 
 ions=['C+2','N+4','Si+3','O+5']
 col_den_dict=[[13.45,0.02],[13.32,0.08],[12.61,0.06],[14.05,0.10]]

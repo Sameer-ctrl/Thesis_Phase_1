@@ -262,7 +262,7 @@ pks1302 : 3   : #   :
 3c57 : 3(+1)  : #   :
 p1103 : 4     : #   :
 phl1811 : 7   : #   :
-pg0832 : 10   : * (Lya remaining)  (CII*)   :
+pg0832 : 10   : * (Lya remaining)  (CII*)   :  cloudy run remaining
 
 
 
