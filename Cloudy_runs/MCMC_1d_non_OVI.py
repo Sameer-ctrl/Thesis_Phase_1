@@ -12,24 +12,26 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='3c263'
-z_abs=0.063397
-comp='IV'
+qso='phl1811'
+z_abs=0.080928
+comp='III'
 
 
-ions=['C+','C+3','Si+','Si+2','Si+3']
-col_den_dict=[[13.37,0.04],[13.86,0.04],[12.29,0.06],[12.91,0.04],[13.57,0.02]]
+ions=['O','N+','C+','C+3','Si+','Si+3','Fe+']
+col_den_dict=[[14.29,0.05],[14.06,0.03],[14.15,0.02],[13.93,0.04],[13.33,0.08],[13.46,0.03],[13.7,0.07]]
+
 
 non_detc_ions=[]
 non_detc_col_den=[]
 
-N_Hi=16.46
+N_Hi=18.02
 logZ_ref=-1
 
 observations=dict(zip(ions,col_den_dict))
 non_detections=dict(zip(non_detc_ions,non_detc_col_den))
 
-ions_to_use1=ions
+# ions_to_use1=array(ions)
+ions_to_use1=array(ions)[[2,3,4,5]]
 
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
@@ -209,12 +211,9 @@ sol=sol_write(quantiles1)
 print(f'\nSolution : {sol}')
 
 
-
-
 print('\n')
 print(f'N(\ion{{H}}{{I}}) = {N_Hi}   \\\ \n')
-print(f'Solution : $n_H$ = {sol[0]} $\pm$ {max([sol[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol[3]} $\pm$ {max([sol[4:]])[0]}\n')
-print(f'\\\\\\\\')
+print(f'Solution : $n_H$ = {sol[0]} $\pm$ {max([sol[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol[3]} $\pm$ {max([sol[4:]])[0]} \\newline  \n')
 # print(r'\newpage')
 # print('')
 # print(r'\textbf{Non-detections}')
@@ -268,5 +267,5 @@ plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
-plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png')
+plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_ions.png')
 plt.show()

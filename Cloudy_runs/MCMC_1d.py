@@ -12,18 +12,18 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='pks0405'
-z_abs=0.167125
+qso='p1103'
+z_abs=0.003934
 comp='II'
 
 
-ions=['C+2','N+4','Si+3','O+5']
-col_den_dict=[[13.45,0.02],[13.32,0.08],[12.61,0.06],[14.05,0.10]]
+ions=['C+3','Si+3','N+4','Si+2']
+col_den_dict=[[14.26,0.04],[12.96,0.06],[13.65,0.05],[15.02,0.22]]
 
-non_detc_ions=['N+4']
-non_detc_col_den=[12.6]
+non_detc_ions=[]
+non_detc_col_den=[]
 
-N_Hi=17.70
+N_Hi=16.29
 logZ_ref=-1
 
 observations=dict(zip(ions,col_den_dict))
@@ -222,18 +222,18 @@ print(f'Including OVI : {sol2}\n')
 
 
 
-# print('\n')
-# print('N(\ion{H}{I})=   \\\ \n')
-# print(f'Excluding \ion{{O}}{{vi}} : $n_H$ = {sol1[0]} $\pm$ {max([sol1[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol1[3]} $\pm$ {max([sol1[4:]])[0]}\n')
-# print(f'Including \ion{{O}}{{vi}} : $n_H$ = {sol2[0]} $\pm$ {max([sol2[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol2[3]} $\pm$ {max([sol2[4:]])[0]}')
-# print(f'\\\\\\\\')
+print('\n')
+print(f'N(\ion{{H}}{{I}})= {N_Hi}  \\\ \n')
+print(f'Excluding \ion{{O}}{{vi}} : $n_H$ = {sol1[0]} $\pm$ {max([sol1[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol1[3]} $\pm$ {max([sol1[4:]])[0]}\n')
+print(f'Including \ion{{O}}{{vi}} : $n_H$ = {sol2[0]} $\pm$ {max([sol2[1:3]])[0]} \hspace{{10mm}} $Z$ = {sol2[3]} $\pm$ {max([sol2[4:]])[0]}')
+print(f'\\\\\\\\')
 print(r'\newpage')
 print('')
-print(r'\textbf{Non-detections}')
+# print(r'\textbf{Non-detections}')
 print('')
 print(r'\begin{figure}')
 print('    \centering')
-print(f'    \includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_non_detection.png}}')
+print(f'    \includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png}}')
 print(f'    \caption{{N(\ion{{H}}{{i}})={N_Hi}, log $Z_{{ref}}$={logZ_ref}}}')
 print(r'\end{figure}')
 # print(f'\includegraphics[width=1\linewidth]{{Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png}}\n')
@@ -262,8 +262,8 @@ for i in inds:
         plt.plot(x,int_col_den2,c='green',alpha=0.1)
     
     else:
-        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label=f'Model samples (excluding {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})')
-        plt.plot(x,int_col_den2,c='green',alpha=0.4,label=f'Model samples (including {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})')
+        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label=f'Model samples (excluding {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})')
+        plt.plot(x,int_col_den2,c='green',alpha=0.4,label=f'Model samples (including {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})')
 
 
 median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0])+sol1[3]-logZ_ref for i in list(observations.keys())+list(non_detections.keys())])
@@ -281,14 +281,14 @@ print(f'reduced chi-sq including OVI : {chi_sq_inc/(5-2)}')
 
 
 plt.errorbar(x[:len(ions)],obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
-plt.errorbar(x[len(ions):],non_detc_col_den,yerr=0.25,xerr=0.1,uplims=1,fmt='o',label='Non-detections')
-plt.plot(x,median_col_den_exc_OVI,label=f'median solution (excluding {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='orange')
-plt.plot(x,median_col_den_inc_OVI,label=f'median solution (including {ion_label("O+5",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='green')
+# plt.errorbar(x[len(ions):],non_detc_col_den,yerr=0.25,xerr=0.1,uplims=1,fmt='o',label='Non-detections')
+plt.plot(x,median_col_den_exc_OVI,label=f'median solution (excluding {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='orange')
+plt.plot(x,median_col_den_inc_OVI,label=f'median solution (including {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='green')
 plt.xticks(x,ions_roman,fontsize=20)
 plt.yticks(fontsize=20)
 plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
-# plt.savefig(f'../LaTeX/BLA Survey results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_non_detection.png')
+plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_SiIII.png')
 plt.show()

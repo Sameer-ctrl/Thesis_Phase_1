@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  20 APR 2024 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  21 APR 2024 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -87,6 +87,25 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen150
+\captionmargin@=\dimen151
+\captionwidth=\dimen152
+\caption@tempdima=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count198
+\c@continuedfloat=\count199
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count266
+\c@subtable=\count267
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip51
@@ -97,20 +116,20 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
-\ex@=\dimen150
+\ex@=\dimen157
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen151
+\pmbraise@=\dimen158
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count198
+\inf@bad=\count268
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count199
-\leftroot@=\count266
+\uproot@=\count269
+\leftroot@=\count270
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count267
-\DOTSCASE@=\count268
+\classnum@=\count271
+\DOTSCASE@=\count272
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -145,59 +164,31 @@ or  <return>  to continue without it.
 
 \Mathstrutbox@=\box50
 \strutbox@=\box51
-\big@size=\dimen152
+\big@size=\dimen159
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
+\macc@depth=\count273
+\c@MaxMatrixCols=\count274
 \dotsspace@=\muskip16
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
+\c@parentequation=\count275
+\dspbrk@lvl=\count276
 \tag@help=\toks19
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
+\row@=\count277
+\column@=\count278
+\maxfields@=\count279
 \andhelp@=\toks20
-\eqnshift@=\dimen153
-\alignsep@=\dimen154
-\tagshift@=\dimen155
-\tagwidth@=\dimen156
-\totwidth@=\dimen157
-\lineht@=\dimen158
+\eqnshift@=\dimen160
+\alignsep@=\dimen161
+\tagshift@=\dimen162
+\tagwidth@=\dimen163
+\totwidth@=\dimen164
+\lineht@=\dimen165
 \@envbody=\toks21
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup5
-\symAMSb=\mathgroup6
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen159
-\captionmargin@=\dimen160
-\captionwidth=\dimen161
-\caption@tempdima=\dimen162
-\caption@indent=\dimen163
-\caption@parindent=\dimen164
-\caption@hangindent=\dimen165
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count276
-\c@continuedfloat=\count277
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count278
-\c@subtable=\count279
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
@@ -234,7 +225,28 @@ LaTeX Font Info:    ... okay on input line 21.
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
@@ -277,14 +289,6 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 23.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: No \author given.
@@ -1134,356 +1138,315 @@ Underfull \hbox (badness 10000) in paragraph at lines 1694--1695
  []
 
 
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1698: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 1696--1697
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1698 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1699: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1699 \begin
-             {figure}[!htbp]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
-<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png, id=357, 1000.9395pt x 615.7404pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1702--1704
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1702--1704
+
+ []
+
 [85
 
 
-] [86]
-<System-Plots/3C263_z=0.063397_sys_plot.png, id=364, 2384.91pt x 1634.2656pt>
+]
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png, id=360, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png, id=361, 1000.9395pt x 615.7404pt>
+ [86] [87]
+<System-Plots/3C263_z=0.063397_sys_plot.png, id=368, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1714--1717
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1730--1733
  []|  [] |
  []
 
-[87]
-Underfull \hbox (badness 10000) in paragraph at lines 1750--1751
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 1766--1767
 
  []
 
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1754: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1754 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=372, 1000.9395pt x 615.7404pt>
+[89
 
 
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1755: LaTeX Error: There's no line here to end.
+] [90]
+<System-Plots/PG1222+216_z=0.054479_sys_plot.png, id=380, 2384.91pt x 1634.2656pt>
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1755 \begin
-             {figure}[!htbp]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=368, 1000.9395pt x 615.7404pt>
-[88
-
-
-] [89]
-<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=375, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1772--1775
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1784--1787
  []|  [] |
  []
 
-[90]
-Underfull \hbox (badness 10000) in paragraph at lines 1801--1802
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1822
 
  []
 
 
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1805: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 1823--1825
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1805 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1806: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1827
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1806 
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
-<Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png, id=380, 1000.9395pt x 615.7404pt>
-[91
+
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1831--1832
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1833--1835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1838
+
+ []
+
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png, id=384, 1000.9395pt x 615.7404pt>
+[92
 
 
 ]
-<System-Plots/UKS0242-724_z=0.063850_sys_plot.png, id=384, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png, id=388, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png, id=389, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png, id=390, 1000.9395pt x 615.7404pt>
+ [93] [94] [95] [96]
+<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=404, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1823--1826
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1874--1877
  []|  [] |
  []
 
-[92]
-Underfull \hbox (badness 10000) in paragraph at lines 1856--1857
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 1903--1904
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1858--1859
+Underfull \hbox (badness 10000) in paragraph at lines 1905--1906
 
  []
 
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=388, 1000.9395pt x 615.7404pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1860--1867
-
- []
-
-[93
-
-
-] [94]
-<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=395, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1878--1881
- []|  [] |
- []
-
-[95]
-Underfull \hbox (badness 10000) in paragraph at lines 1911--1912
-
- []
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1915: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1915 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1916: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1916 \begin
-             {figure}[!htbp]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=399, 1000.9395pt x 615.7404pt>
-[96
-
-
-] [97]
-<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=407, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1932--1935
- []|  [] |
- []
-
-[98]
-Underfull \hbox (badness 10000) in paragraph at lines 1964--1965
-
- []
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1968: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1968 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:1969: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1969 
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=411, 1000.9395pt x 615.7404pt>
-[99
-
-
-] [100]
-<System-Plots/3C57_z=0.077430_sys_plot.png, id=419, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1985--1988
- []|  [] |
- []
-
-[101]
-Underfull \hbox (badness 10000) in paragraph at lines 2015--2016
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
-
- []
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:2021: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2021 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:2022: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2022 
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=423, 1000.9395pt x 615.7404pt>
-[102
-
-
-] [103]
-<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=431, 2384.91pt x 1634.2656pt>
-
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 2037--2040
- []|  [] |
- []
-
-[104]
-Underfull \hbox (badness 10000) in paragraph at lines 2067--2068
-
- []
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:2071: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2071 \\\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/sameer/Documents/Sameer/Thesis_Phase_1/LaTeX/BLA_Survey_results/Ionisation-Modelling-Results.tex:2072: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2072 \begin
-             {figure}[!htbp]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=435, 1000.9395pt x 615.7404pt>
-[105
+<Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png, id=408, 1000.9395pt x 615.7404pt>
+[98
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2085--2086
+<System-Plots/UKS0242-724_z=0.063850_sys_plot.png, id=412, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1923--1926
+ []|  [] |
+ []
+
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 1956--1957
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2095--2096
+Underfull \hbox (badness 10000) in paragraph at lines 1958--1959
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2095--2096
+Underfull \hbox (badness 10000) in paragraph at lines 1960--1961
 
  []
 
-<Distribution_NH_b.png, id=439, 1141.866pt x 612.1269pt>
-<NH_vs_b_1.png, id=440, 1164.9924pt x 589.0005pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1962--1963
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1966--1967
+
+ []
+
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=416, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png, id=417, 1010.3346pt x 615.7404pt>
+[100
+
+
+] [101] [102]
+<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=429, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1993--1996
+ []|  [] |
+ []
+
+[103]
+Underfull \hbox (badness 10000) in paragraph at lines 2026--2027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2028--2029
+
+ []
+
+<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=433, 1000.9395pt x 615.7404pt>
+[104
+
+
+] [105]
+<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=440, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2046--2049
+ []|  [] |
+ []
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 2078--2079
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2080--2081
+
+ []
+
+<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=444, 1000.9395pt x 615.7404pt>
+[107
+
+
+] [108]
+<System-Plots/3C57_z=0.077430_sys_plot.png, id=452, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2097--2100
+ []|  [] |
+ []
+
+[109]
+Underfull \hbox (badness 10000) in paragraph at lines 2127--2128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2129--2130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2131--2132
+
+ []
+
+<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=456, 1000.9395pt x 615.7404pt>
+[110
+
+
+] [111]
+<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=463, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2147--2150
+ []|  [] |
+ []
+
+[112]
+Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2181--2182
+
+ []
+
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=467, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png, id=468, 1000.9395pt x 615.7404pt>
+[113
+
+
+] [114] [115]
+<System-Plots/PHL1811_z=0.080928_sys_plot.png, id=479, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2208--2211
+ []|  [] |
+ []
+
+[116]
+Underfull \hbox (badness 10000) in paragraph at lines 2245--2246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2249--2250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2254
+
+ []
+
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png, id=483, 1010.3346pt x 615.7404pt>
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png, id=484, 1000.9395pt x 615.7404pt>
+[117
+
+
+] [118] [119]
+Underfull \hbox (badness 10000) in paragraph at lines 2274--2275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2284--2285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2284--2285
+
+ []
+
+<Distribution_NH_b.png, id=494, 1141.866pt x 612.1269pt>
+<NH_vs_b_1.png, id=495, 1164.9924pt x 589.0005pt>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[106] [107] (./Ionisation-Modelling-Results.aux)
+[120] [121] (./Ionisation-Modelling-Results.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5368 strings out of 480247
- 109913 string characters out of 5896151
- 374360 words of memory out of 5000000
- 23168 multiletter control sequences out of 15000+600000
- 483557 words of font info for 83 fonts, out of 8000000 for 9000
+ 5427 strings out of 480247
+ 118448 string characters out of 5896151
+ 382159 words of memory out of 5000000
+ 23207 multiletter control sequences out of 15000+600000
+ 480669 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,12n,63p,385b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,67p,464b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Ionisation-Modelling-Results.pdf (108 pages, 199923 bytes).
+Output written on Ionisation-Modelling-Results.pdf (122 pages, 208715 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
+ 565 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 496 words of extra memory for PDF output out of 10000 (max. 10000000)
 

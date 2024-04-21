@@ -254,14 +254,14 @@ Remaining - ions > 2 :
 he0056 : 3    : #   :   *  
 pg1216 : 3    : #*  :  Done : OI couldn't be explained 
 3c263 : 5     : #   :  Done : Not good fit
-pg1222 : 3    : #*  :  
+pg1222 : 3    : #*  :  Done : Confusion on line-fits
 rxj0439 : 3   : #   :  Done
 uks0242 : 3   : #   :  Done : FeII couldn't be explained
 pg1259 : 3    : #   :  Done
 pks1302 : 3   : #   :  Done
 3c57 : 3(+1)  : #   :  Done
 p1103 : 4     : #   :  Done : SiIII couldn't be explained
-phl1811 : 7   : #   :
+phl1811 : 7   : #   :  Done : Not good solution
 pg0832 : 10   : * (Lya remaining)  (CII*)   :  cloudy run remaining
 
 
