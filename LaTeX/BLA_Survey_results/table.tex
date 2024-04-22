@@ -1,0 +1,468 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{fixltx2e}
+\usepackage{geometry}
+\usepackage{wasysym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}
+
+\title{Thesis Phase-1}
+\author{Sameer Patidar}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{center}
+    \hspace*{-20mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}   & \head{Wavelength (\AA)}   & \head{Component} & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} & \multicolumn{2}{c}{\head{z}} &  &  \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}  & \multicolumn{1}{l}{}       & \multicolumn{1}{l}{} & Previous     & Current       & Previous     & Current       & Previous    & Current        \tabularnewline
+       \tabularnewline \hline \tabularnewline
+\multirow{3}{*}{H I}  & \multirow{3}{*}{918-1215}  & I                    & 36.02      & 41.19    & 13.3       & 13.41    & 0.3467236 & 0.3467642 \tabularnewline
+                      &                            & II                   & 62.97      & 75.37    & 14.17      & 14.17    & 0.3475791 & 0.3475635 \tabularnewline
+                      &                            & III                  & 14.7       & 19.98    & 15.99      & 15.86    & 0.3479031 & 0.3479106 \tabularnewline
+                      \tabularnewline
+\multirow{2}{*}{O VI} & \multirow{2}{*}{1031,1037} & II                   & 30.67      & 35.14    & 14.12      & 14.22    & 0.3475768 & 0.3475656 \tabularnewline
+                      &                            & III                  & 14.83      & 17.74    & 13.79      & 13.84    & 0.3478797 & 0.3478733 \tabularnewline
+                      \tabularnewline
+C II                  & 1036                       & III                  & 3.03       & 9.83     & 13.93      & 13.49    & 0.3478839 & 0.3478848 \tabularnewline
+\tabularnewline
+C III                 & 977                        & III                  & 23.78      & 28.27    & 13.62      & 13.65    & 0.3479198 & 0.3479217 \tabularnewline
+\tabularnewline
+Si II                 & 1260                       & III                  & 4.85       & 7.58     & 13.25      & 12.53    & 0.3479144 & 0.3478963 \tabularnewline
+\tabularnewline
+Si III                & 1206                       & III                  & 1.76       & 13.24    & 14.69      & 12.69    & 0.3479446 & 0.3479106  \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{landscape}
+
+\begin{center}
+    \vspace*{20mm}
+    \hspace*{-40mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}   & \head{Wavelength (\AA)}   & \head{Component} & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} & \multicolumn{2}{c}{\head{z}} & \multicolumn{2}{c}{$\mathbf{\chi^{2}}$} &  \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}  & \multicolumn{1}{l}{}       & \multicolumn{1}{l}{} & Rebinned     & Oversampled       & Rebinned     & Oversampled       & Rebinned    & Oversampled   & Rebinned     & Oversampled     \tabularnewline
+       \tabularnewline \hline \tabularnewline
+\multirow{3}{*}{H I}  & \multirow{3}{*}{918-1215}  & I                    & 38.13 $\pm$ 6.46      & 41.19 $\pm$ 8.05    & 13.46 $\pm$ 0.05       & 13.41 $\pm$ 0.07    & 0.3467764 & 0.3467642 & 2.297 &  2.735 \tabularnewline
+                      &                            & II                   & 73.67 $\pm$ 3.41      & 75.37 $\pm$ 5.68   & 14.31 $\pm$ 0.02      & 14.17 $\pm$ 0.03    & 0.3477092 & 0.3475635 & 2.297 & 2.735  \tabularnewline
+                      &                            & III                  & 16.20 $\pm$ 0.32       & 19.98 $\pm$ 0.26   & 16.10 $\pm$ 0.02      & 15.86 $\pm$ 0.01   & 0.3479117 & 0.3479106  & 2.297 & 2.735 \tabularnewline
+                      \tabularnewline
+\multirow{2}{*}{O VI} & \multirow{2}{*}{1031,1037} & II                   & 29.63 $\pm$ 2.04      & 35.14 $\pm$ 1.22    & 14.26 $\pm$ 0.09      & 14.22  $\pm$ 0.02   & 0.3475794 & 0.3475656  & 1.342 & 1.261 \tabularnewline
+                      &                            & III                  & 13.24 $\pm$ 2.41      & 17.74 $\pm$ 1.56    & 13.91 $\pm$ 0.04      & 13.84 $\pm$ 0.03    & 0.3478844 & 0.3478733 & 1.342 & 1.261 \tabularnewline
+                      \tabularnewline
+C II                  & 1036                       & III                  & 3.09 $\pm$ 28.05       & 9.83 $\pm$ 1.64    & 14.21 $\pm$ 16.55      & 13.49 $\pm$ 0.05    & 0.3478948 & 0.3478848 & 1.061 & 0.928 \tabularnewline
+\tabularnewline
+C III                 & 977                        & III                  & 22.56 $\pm$ 2.10      & 28.27 $\pm$ 1.45    & 13.81 $\pm$ 0.04      & 13.65 $\pm$ 0.03    & 0.3479229 & 0.3479217 & 1.497 & 1.273 \tabularnewline
+\tabularnewline
+Si II                 & 1260                       & III                  & 3.24 $\pm$ 22.81       & 7.58 $\pm$ 1.75     & 13.19 $\pm$ 12.32      & 12.53 $\pm$ 0.07   & 0.3479007 & 0.3478963 & 1.511 & 1.060 \tabularnewline
+\tabularnewline
+Si III                & 1206                       & III                  & 9.71 $\pm$ 12.20       & 13.24 $\pm$ 2.14    & 12.87 $\pm$ 1.19      & 12.69  $\pm$ 0.06  & 0.3479145 & 0.3479106 & 3.505 & 1.770  \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+
+\end{landscape}
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{landscape}
+
+\begin{center}
+    \vspace*{20mm}
+    \hspace*{-48mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}   & \head{Wavelength (\AA)}   & \head{Component} & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} & \multicolumn{2}{c}{\head{z (v [(km s\textsuperscript{\mathbf{$-1$}})])}} & \multicolumn{2}{c}{$\mathbf{\chi^{2}}$} &  \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}  & \multicolumn{1}{l}{}       & \multicolumn{1}{l}{} & Rebinned     & Oversampled       & Rebinned     & Oversampled       & Rebinned    & Oversampled   & Rebinned     & Oversampled     \tabularnewline
+       \tabularnewline \hline \tabularnewline
+\multirow{3}{*}{H I}  & \multirow{3}{*}{918-1215}  & I                    & 38.13 $\pm$ 6.46      & 41.19 $\pm$ 8.05    & 13.46 $\pm$ 0.05       & 13.41 $\pm$ 0.07    & 0.3467764 (-179) & 0.3467642 (-172) & 2.44 &  2.73 \tabularnewline
+                      &                            & II                   & 62.49 $\pm$ 2.92      & 75.37 $\pm$ 5.68   & 14.13 $\pm$ 0.02      & 14.17 $\pm$ 0.03    & 0.3475849 (1) & 0.3475635 (-3) & 2.44 & 2.73  \tabularnewline
+                      &                            & III                  & 16.20 $\pm$ 0.32       & 19.98 $\pm$ 0.26   & 16.10 $\pm$ 0.02      & 15.86 $\pm$ 0.01   & 0.3479117 (74) & 0.3479106 (75)  & 2.44 & 2.73 \tabularnewline
+                      \tabularnewline
+\multirow{2}{*}{O VI} & \multirow{2}{*}{1031,1037} & II                   & 29.63 $\pm$ 2.04      & 35.14 $\pm$ 1.22    & 14.26 $\pm$ 0.09      & 14.22  $\pm$ 0.02   & 0.3475794 (0) & 0.3475656 (0)  & 1.34 & 1.26 \tabularnewline
+                      &                            & III                  & 13.24 $\pm$ 2.41      & 17.74 $\pm$ 1.56    & 13.91 $\pm$ 0.04      & 13.84 $\pm$ 0.03    & 0.3478844 (67) & 0.3478733 (66) & 1.34 & 1.26 \tabularnewline
+                      \tabularnewline
+C II                  & 1036                       & III                  & 3.09 $\pm$ 28.05       & 9.83 $\pm$ 1.64    & 14.21 $\pm$ 16.55      & 13.49 $\pm$ 0.05    & 0.3478948 (70) & 0.3478848 (86) & 1.11 & 0.93 \tabularnewline
+\tabularnewline
+C III                 & 977                        & III                  & 22.56 $\pm$ 2.10      & 28.27 $\pm$ 1.45    & 13.81 $\pm$ 0.04      & 13.65 $\pm$ 0.03    & 0.3479229 (76) & 0.3479217 (77) & 1.50 & 1.27 \tabularnewline
+\tabularnewline
+Si II                 & 1260                       & III                  & 3.24 $\pm$ 22.81       & 7.58 $\pm$ 1.75     & 13.19 $\pm$ 12.32      & 12.53 $\pm$ 0.07   & 0.3479007 (71) & 0.3478963 (86) & 1.51 & 1.06 \tabularnewline
+\tabularnewline
+Si III                & 1206                       & III                  & 9.71 $\pm$ 12.20       & 13.24 $\pm$ 2.14    & 12.87 $\pm$ 1.19      & 12.69  $\pm$ 0.06  & 0.3479145 (75) & 0.3479106 (86) & 3.56 & 1.77  \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+
+\end{landscape}
+
+\newpage
+
+\begin{center}
+    \hspace*{-20mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Line}   & \head{VPFIT}  & \head{\mathbf{$\chi ^ 2$}} & \head{Continuum} \\ \tabularnewline
+      \hline \tabularnewline
+
+HI 1	&  0.05  &			0.04		&	0.07  \tabularnewline
+HI 2	&  0.02  &			0.02		&	0.04 \tabularnewline
+HI 3	&  0.02  &			0.02		&	0.03 \tabularnewline
+OVI 1	&  0.09  &			0.02		&	0.03 \tabularnewline
+OVI 2	&  0.04  &			0.03		&	0.01 \tabularnewline
+CII	    &  16.55  &			0.20		&	0.19	\tabularnewline		
+CIII 2	&   0.04 &			0.03		&	0.01	\tabularnewline		
+SiII	&  12.32  &			0.25		&	0.16 \tabularnewline
+SiIII	&  1.19  &			0.06		&	0.02 \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+\newpage
+
+
+\thispagestyle{empty}
+
+\begin{landscape}
+
+\begin{center}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Component}   & \head{Ions} & \head{log N(HI)}  & \head{log N(H)} & \head{log n\textsubscript{H}} & \head{log Z/$\mathbf{\text{Z}_{\astrosun}}$} & \head{L} & \head{T} & \head{P/K} \\ \tabularnewline 
+      \head{}   & \head{} & \head{$\mathbf{({cm}^{-2})$}}  & \head{$\mathbf{({cm}^{-2})}$} & \head{$\mathbf{({cm}^{-3})}$} & \head{} & \head{(kpc)} & \head{(K)} & \head{$\mathbf{({cm}^{-3} \ K)}$} \\ \tabularnewline
+      \hline \tabularnewline
+
+II	&  HI, OVI  &	14.13 &	18.93 & -4.83 & -1.06 & 188 & $4\times 10^4$ & 0.6  \\ \tabularnewline
+III	&  HI, OVI, CII, CIII, SiII, SiIII  & 16.10 &	19.17 & -3.29 & -1.06 & 9 & $2\times 10^4$ & 10.4 \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+\end{landscape}
+
+
+\newpage
+
+
+\thispagestyle{empty}
+
+\begin{landscape}
+
+\begin{center}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Component}   & \head{Ions} & \head{log N(HI)}  & \head{log N(H)} & \head{log n\textsubscript{H}} & \head{log Z/$\mathbf{\text{Z}_{\astrosun}}$} & \head{L} & \head{T} & \head{P/K} \\ \tabularnewline 
+      \head{}   & \head{} & \head{$\mathbf{({cm}^{-2})$}}  & \head{$\mathbf{({cm}^{-2})}$} & \head{$\mathbf{({cm}^{-3})}$} & \head{} & \head{(kpc)} & \head{(K)} & \head{$\mathbf{({cm}^{-3} \ K)}$} \\ \tabularnewline
+      \hline \tabularnewline
+
+II	&  HI, OVI  &	14.13 &	18.24 & -4.37 & -0.06 & 13.3 & $2\times 10^4$ & 0.9  \\ \tabularnewline
+III	&  HI, OVI, CII, CIII, SiII, SiIII  & 16.10 &	18.05 & -2.42 & -0.06 & 0.1 & $8.7\times 10^3$ & 33.1 \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+\end{landscape}
+
+
+\newpage
+
+
+\begin{landscape}
+
+\begin{center}
+    \vspace*{20mm}
+    \hspace*{-40mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} }
+        \hline \hline \tabularnewline
+       % \head{Ion}   & \head{Wavelength (\AA)}   & \head{Component}  & \head{b (km s\textsuperscript{\mathbf{$-1$}})} & \head{log[N \mathbf{{cm}^{-2}}]} & \head{z} 
+      % \head{Ion}   & \head{Wavelength (\AA)}   & \head{Component} & \multicolumn{1}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{1}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} & \multicolumn{1}{c}{\head{z}}  \\ \tabularnewline
+\hline \tabularnewline \tabularnewline
+\multirow{3}{*}{H I}  & \multirow{3}{*}{918-1215}  & I   & 38.13 $\pm$ 6.46 & 13.46 $\pm$ 0.05  & 0.3467764 \tabularnewline
+                      &                            & II  & 73.67 $\pm$ 3.41 & 14.31 $\pm$ 0.02  & 0.3477092 \tabularnewline
+                      &                            & III & 16.20 $\pm$ 0.32 & 16.10 $\pm$ 0.02  & 0.3479117 \tabularnewline \tabularnewline 
+\multirow{2}{*}{O VI} & \multirow{2}{*}{1031,1037} & II  & 29.63 $\pm$ 2.04 & 14.26 $\pm$ 0.09  & 0.3475794 \tabularnewline
+                      &                            & III & 13.24 $\pm$ 2.41 & 13.91 $\pm$ 0.04  & 0.3478844 \tabularnewline \tabularnewline   
+C II                  & 1036                       & III & 3.09 $\pm$ 28.05 & 14.21 $\pm$ 16.55 & 0.3478948 \tabularnewline \tabularnewline
+C III                 & 977                        & III & 22.56 $\pm$ 2.10 & 13.81 $\pm$ 0.04  & 0.3479229 \tabularnewline \tabularnewline
+Si II                 & 1260                       & III & 3.24 $\pm$ 22.81 & 13.19 $\pm$ 12.32 & 0.3479007 \tabularnewline \tabularnewline
+Si III                & 1206                       & III & 9.71 $\pm$ 12.20 & 12.87 $\pm$ 1.19  & 0.3479145 \tabularnewline \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{bias}
+\end{center}
+
+
+\end{landscape}
+
+
+\begin{center}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{\emph{b} (km s$^{-1}$)} &\head{Systems with no. of metal lines $\geq$ 3} &\head{Systems with no. of distinct metal ions $\geq$ 3} \\ \tabularnewline
+      \hline \tabularnewline
+
+ $>$ 40   &  62  & 43 \\  \tabularnewline
+ $>$ 45   &  42  & 29 \\ \tabularnewline
+  $>$ 50   &  25  & 19 \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{}
+    \label{}
+\end{center}
+
+\newpage
+
+\begin{center}
+\textbf{\large{3C 263 ($\text{z}_\text{abs}=0.14072$)}}
+\vspace{1mm}
+\end{center} 
+
+\begin{center}
+    \hspace*{-20mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}    & \multicolumn{2}{c}{\head{v (km s\textsuperscript{\mathbf{$-1$}})}}  & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}   & Savage et al.     & Our       & Savage et al.     & Our       & Savage et al.    & Our        \tabularnewline
+       \tabularnewline \hline \tabularnewline
+
+\ion{H}{i}      &   7 $\pm$ 1    &    9 $\pm$ 1    &    28 $\pm$ 1    &     28 $\pm$ 1    &    14.51 $\pm$ 0.03      &    14.49 $\pm$ 0.02    \\
+\ion{H}{i}      &  -7 $\pm$ 7    &   -5 $\pm$ 1    &    87 $\pm$ 15   &     87 $\pm$ 10   &    13.47 $\pm$ 0.10      &    13.49 $\pm$ 0.06    \\
+\ion{O}{vi}     &   0 $\pm$ 6    &    9 $\pm$ 2    &    33 $\pm$ 12   &     26 $\pm$ 4    &    13.60 $\pm$ 0.09      &    13.63 $\pm$ 0.04    \\
+\ion{Si}{iii}   &      -         &   -8 $\pm$ 8    &         -        &     35 $\pm$ 11   &            -             &    12.39 $\pm$ 0.09    \\
+\ion{C}{iv}     &      -         &    6 $\pm$ 4    &         -        &     42 $\pm$ 1    &            -             &    13.73 $\pm$ 0.05    \\
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\begin{center}
+\textbf{\large{H 1821 +643 ($\text{z}_\text{abs}=0.22497$)}}
+\vspace{1mm}
+\end{center} 
+
+\begin{center}
+    \hspace*{-20mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}    & \multicolumn{2}{c}{\head{v (km s\textsuperscript{\mathbf{$-1$}})}}  & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}   & Savage et al.     & Our       & Savage et al.     & Our       & Savage et al.    & Our        \tabularnewline
+       \tabularnewline \hline \tabularnewline
+
+\ion{H}{i}      &   -103 $\pm$ 8   &    -113 $\pm$ 4   &    35 $\pm$ 6   &     26 $\pm$ 5    &    13.97 $\pm$ 0.13      &    13.70 $\pm$ 0.07    \\
+\ion{H}{i}      &  -40 $\pm$ 2    &   -28 $\pm$ 1    &    26 $\pm$ 2   &     38 $\pm$ 2   &    15.24 $\pm$ 0.03      &    15.23 $\pm$ 0.02    \\
+\ion{H}{i}      &  -23 $\pm$ 17    &   27 $\pm$ 1    &    95 $\pm$ 11   &     16 $\pm$ 1   &    13.94 $\pm$ 0.17      &    15.08 $\pm$ 0.03    \\
+\ion{H}{i}      &  18 $\pm$ 2    &   81 $\pm$ 1    &    18 $\pm$ 1   &     5 $\pm$ 11   &    15.28 $\pm$ 0.03      &    12.81 $\pm$ 0.36    \\
+\ion{H}{i}      &  293 $\pm$ 3    &   278 $\pm$ 1   &    58 $\pm$ 4   &     59 $\pm$ 10   &    13.51 $\pm$ 0.02      &    13.48 $\pm$ 0.06    \\
+\ion{O}{vi}     &   0 $\pm$ 1    &    2 $\pm$ 1    &    45 $\pm$ 1   &     45 $\pm$ 1    &    14.25 $\pm$ 0.01      &    14.24 $\pm$ 0.01    \\
+\ion{O}{vi}     &   60 $\pm$ 1    &    60 $\pm$ 2   &    5 $\pm$ 2    &     1 $\pm$ 3    &    13.11 $\pm$ 0.04      &    13.23 $\pm$ 0.70    \\
+\ion{O}{vi}     &   343 $\pm$ 1    &    333 $\pm$ 1  &    16 $\pm$ 1   &     13 $\pm$ 2    &    13.48 $\pm$ 0.01      &    13.42 $\pm$ 0.03    \\
+\ion{Si}{iii}   &      -         &   -4 $\pm$ 4    &         -        &     35 $\pm$ 7   &            -             &    12.80 $\pm$ 0.06   \\
+\ion{C}{iii}     &      -         &    4 $\pm$ 1    &         -        &     45 $\pm$ 1    &            -             &    13.97 $\pm$ 0.01   \\
+\ion{C}{iii}     &      -         &    86 $\pm$ 3    &         -        &     13 $\pm$ 6    &            -             &    12.47 $\pm$ 0.09   \\
+\ion{C}{iii}     &      -         &    357 $\pm$ 8    &         -        &     20 $\pm$ 13    &            -             &    12.13 $\pm$ 0.15   \\
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+\end{center}
+
+
+
+\newpage
+
+
+
+\begin{center}
+
+\begin{table}
+\centering
+\label{tab:physical_param}
+\begin{tabular}{A{2cm} A{2cm} A{2cm} }
+        \hline \hline \tabularnewline \tabularnewline
+        
+      \Large \head{Component}   & \Large \head{Ions} & \Large \head{$\mathbf{\Delta v \ (\text{km \ s}^{-1})}$} \\ \tabularnewline 
+      \hline \tabularnewline
+
+\Large I    &  \Large \ion{H}{i}                          & \Large -163        \\ \tabularnewline
+\Large II    &  \Large{  \ion{H}{i}, \ion{O}{vi}}             &  \Large  0         \\ \tabularnewline
+\Large III    & \Large  \ion{H}{i}, \ion{O}{vi}, \ion{C}{ii}, \ion{C}{iii}, \ion{Si}{ii}, \ion{Si}{iii} & \Large   65 \\ 
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+{\large Table 1 : Component structure of the absorber system. Reference velocity at z = 0.34758}
+\end{table}
+
+\end{center}
+
+\newpage
+
+\begin{center}
+
+
+\begin{table}
+\begin{tabular}{A{1cm} A{1cm} A{1cm} A{1cm} A{1cm}}
+        \hline \hline \tabularnewline
+       \head{Line} & \head{Component} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]} 
+       \tabularnewline \tabularnewline \hline \tabularnewline 
+\multirow{3}{*}{\ion{H}{i} 918-1215}   & I    & \hspace*{-4.5mm} -163 $\pm$ 4  & 38 $\pm$ 6 & 13.46 $\pm$ 0.05  \tabularnewline
+                                       & II   & \hspace*{1mm} 1 $\pm$ 1  & 62 $\pm$ 3 & 14.13 $\pm$ 0.02 \tabularnewline
+                                       & III  & 68 $\pm$ 1  & 16 $\pm$ 1 & 16.10 $\pm$ 0.02  \tabularnewline \tabularnewline
+\multirow{2}{*}{\ion{O}{vi} 1032,1038} & II   & \hspace*{1mm} 0 $\pm$ 1  & 30 $\pm$ 2 & 14.26 $\pm$ 0.09    \tabularnewline
+                                       & III  & 62 $\pm$ 1  & 13 $\pm$ 2 & 13.91 $\pm$ 0.04   \tabularnewline \tabularnewline   
+\ion{C}{ii} 1036                       & III  & 64 $\pm$ 1  & \hspace*{3mm} 3 $\pm$ 28 & 
+\hspace*{1mm} 14.21 $\pm$ 16.55   \tabularnewline \tabularnewline
+\ion{C}{iii} 977                       & III  & 70 $\pm$ 1  & 23 $\pm$ 2 & 13.81 $\pm$ 0.04   \tabularnewline \tabularnewline
+\ion{Si}{ii} 1260                      & III & 65 $\pm$ 1  & \hspace*{3mm} 3 $\pm$ 23 & \hspace*{1mm} 13.19 $\pm$ 12.32  \tabularnewline \tabularnewline
+\ion{Si}{iii} 1206                     & III & 68 $\pm$ 2  & \hspace*{1.1mm} 10 $\pm$ 12 &  12.87 $\pm$ 1.19   \tabularnewline \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+\end{table}
+
+\end{center}
+
+\large{\noindent Table 2 : Parameters from Voigt profile fitting of the absorption lines. Velocity is taken to be zero at z = 0.347579. Patidar et al. (in prep)}
+
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{landscape}
+
+
+\begin{table}
+\label{tab:physical_param}
+\hspace*{-25mm}
+\begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Component} & \head{Model}  & \head{log N(H)} & \head{log n\textsubscript{H}} & \head{log Z/$\mathbf{\text{Z}_{\odot}}$} & \head{Size} & \head{T} & \head{P/K} \\ \tabularnewline 
+      \head{}  & \head{} & \head{$\mathbf{({cm}^{-2})}$}  & \head{$\mathbf{({cm}^{-3})}$} & \head{} & \head{(kpc)} & \head{(K)} & \head{$\mathbf{({cm}^{-3} \ K)}$} \\ \tabularnewline
+      \hline \tabularnewline
+
+I                                                          &  -  &    -    &   -   &  -    &  -    &   $\leq \ 8.7 \times 10^4$  & -  \\ \tabularnewline
+
+\multirow{2}{*}{II}  & PIE &  18.45  & -4.51 & -0.31 & 29.47  & $2.5 \times 10^4$   & 0.77  \\
+                 & Hybrid & \lesssim 19.62  &  $\gtrsim$ -3   & $\gtrsim$ -0.4  & $\lesssim$ 13.35  & $1.9 \times 10^5$   & $\gtrsim$ 194.98  \\ \tabularnewline
+                                  
+\multirow{2}{*}{III}  & PIE (All ions) &  19.87 & -3.88 & -1.51 & 180.75 & $2.8 \times 10^4$ & 3.68 \\
+& PIE (Excluding \ion{O}{vi}) &  17.92 & -2.24 & -0.31 & 0.05 & $1.0 \times 10^4$ & 59.02 \\ 
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+\end{table}
+\large{\noindent \hspace*{-20mm} Table 3 : Physical properties of the absorbers based on Voigt profile measurement \\and CLOUDY ionisation modelling. Patidar et al. (in prep)}
+
+
+\end{landscape}
+
+% \caption{Physical properties of the absorbers based on Voigt profile measurement and CLOUDY ionisation modelling. The PIE solution for absorber at z $\sim$ 0.34758 is based on the excluding \ion{O}{vi} case PIE solution of the absorber at z $\sim$ 0.34790.}
+
+
+
+\newpage
+
+
+\begin{landscape}
+\thispagestyle{empty}
+    
+\begin{table}
+\centering
+\begin{tabular}{cccccccccc}
+        \hline \hline \tabularnewline
+        
+      \head{Absorber}   & \head{Ions} & \head{log N({\text{H\,\small{\textsc{\uppercase{i}}}}})} & \head{Model}  & \head{log N(H)} & \head{log n\textsubscript{H}} & \head{log Z/$\mathbf{\text{Z}_{\odot}}$} & \head{Size} & \head{T} & \head{P/K} \\ \tabularnewline 
+      \head{}   & \head{} & \head{$\mathbf{({cm}^{-2})}$} & \head{}  & \head{$\mathbf{({cm}^{-2})}$} & \head{$\mathbf{({cm}^{-3})}$} & \head{} & \head{(kpc)} & \head{(K)} & \head{$\mathbf{({cm}^{-3} \ K)}$} \\ \tabularnewline
+      \hline \tabularnewline
+
+z $\sim$ 0.34678                  &      \ion{H}{i}                          &  13.46                 &  -  &    -    &   -   &  -    &  -    &  $\leq \ 8.7 \times 10^4$  & -  \\ \tabularnewline
+
+\multirow{2}{*}{z $\sim$ 0.34758} & \multirow{2}{*}{\ion{H}{i}, \ion{O}{vi}} & \multirow{2}{*}{14.13} & PIE &  18.45  & -4.51 & -0.31 & 29.47  & $2.5 \times 10^4$   & 0.77  \\
+                                  &                                          &                        & Hybrid & $\lesssim$ 19.62  &  $\gtrsim$ -3   & $\gtrsim$ -0.4  & $\lesssim$ 13.35  & $1.9 \times 10^5$   & $\gtrsim $ 194.98  \\ \tabularnewline
+                                  
+\multirow{2}{*}{z $\sim$ 0.34790} & \multirow{2}{*}{\ion{H}{i}, \ion{O}{vi}, \ion{C}{ii}, \ion{C}{iii}, \ion{Si}{ii}, \ion{Si}{iii}} & \multirow{2}{*}{16.10} & PIE (All ions) &  19.87 & -3.88 & -1.51 & 180.75 & $2.8 \times 10^4$ & 3.68 \\
+                   &                    &                    & PIE (Excluding \ion{O}{vi}) &  17.92 & -2.24 & -0.31 & 0.05 & $1.0 \times 10^4$ & 59.02 \\ 
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+\label{tab:physical_param}
+\end{table}
+
+\end{landscape}
+
+
+
+
+
+\end{document}
+
+\begin{center}
+    \hspace*{-20mm}
+    \begin{tabular}{A{2cm} A{2cm} A{2cm} A{2cm}}
+        \hline \hline \tabularnewline
+        
+      \head{Ion}    & \multicolumn{2}{c}{\head{v (km s\textsuperscript{\mathbf{$-1$}})}}  & \multicolumn{2}{c}{\head{b (km s\textsuperscript{\mathbf{$-1$}})}} & \multicolumn{2}{c}{\head{log[N \mathbf{{cm}^{-2}}]}} \\ \tabularnewline
+\hline \tabularnewline
+       \multicolumn{1}{l}{}   & Savage et al.     & Our       & Savage et al.     & Our       & Savage et al.    & Our        \tabularnewline
+       \tabularnewline \hline \tabularnewline
+
+        \tabularnewline \hline \hline \tabularnewline
+    \end{tabular}
+    \captionof{table}
+    \caption{3C 263 ($z_{abs}=$)}
+    \label{bias}
+\end{center}

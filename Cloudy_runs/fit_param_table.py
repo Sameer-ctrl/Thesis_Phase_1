@@ -1,10 +1,10 @@
 from numpy import *
 import os
 
-qso='h1821'
-z_abs=0.224981
+qso='phl1811'
+z_abs=0.080928
 
-file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
+file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
 qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
@@ -58,8 +58,13 @@ for i in range(len(ions)):
     v_err[i]=round(err_vz(z[i],z_err[i]))
 
 
+sys_plot_name=f'{qso_label}_z={z_abs:.6f}_sys_plot.png'
+
+os.system(f'cp ../Python/Files_n_figures/sys_plots/{sys_plot_name} ../LaTeX/BLA_Survey_results/System-Plots/')
+
+
 print('\\newpage\n\n\\begin{landscape}\n\n\\begin{figure}\n    \centering\n    \\vspace{-20mm}\n    \hspace*{-35mm}\n    \captionsetup{oneside,margin={0cm,35mm}}')
-print(f'    \includegraphics[width=1.25\linewidth]{{System-Plots/{qso_label}_z={z_abs}_sys_plot.png}}\n\end{{figure}}\n\n\end{{landscape}}\n\n')
+print(f'    \includegraphics[width=1.25\linewidth]{{System-Plots/{qso_label}_z={z_abs:.6f}_sys_plot.png}}\n\end{{figure}}\n\n\end{{landscape}}\n\n')
 print('\\begin{center} \n\n\\begin{tabular}{cccc} \n\n    \hline \hline \\tabularnewline \n    \head{Ion} & \head{v (km s\\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\\textsuperscript{$\mathbf{-2}$}]}\n    \\tabularnewline \\tabularnewline \hline \\tabularnewline \n ')
 
         
