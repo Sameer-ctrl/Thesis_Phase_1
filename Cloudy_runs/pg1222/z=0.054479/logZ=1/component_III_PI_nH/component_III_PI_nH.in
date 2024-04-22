@@ -1,0 +1,30 @@
+TABLE KS19 redshift = 0.05448 scale = 1 Q = 18 
+abundances "solar_GASS10.abn" 
+element helium abundance 0.08156498 linear 
+hden -5 log vary 
+grid range from -5 to 1 with 0.02 dex step 
+metals 1 log 
+stop column density 17.9 neutral H 
+stop temperature 50 K linear 
+save grid "component_III_PI_nH_grid.txt" last no hash 
+save species column density "component_III_PI_nH_col_density.txt" no hash 
+"H" 
+"H+" 
+"C+" 
+"C+2" 
+"C+3" 
+"N+" 
+"N+2" 
+"N+4" 
+"O" 
+"O+2" 
+"O+5" 
+"O+6" 
+"P+" 
+"Si+" 
+"Si+2" 
+"Si+3" 
+"Si+4" 
+"Fe+" 
+"Al+" 
+end
