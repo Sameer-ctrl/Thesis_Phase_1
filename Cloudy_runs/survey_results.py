@@ -177,7 +177,7 @@ absorbers=[
             abs_system('pks0637',0.161064),
             abs_system('pks0637',0.417539),
             abs_system('pg1424',0.147104),
-            abs_system('pg0003',0.347579),                        
+            abs_system('pg0003',0.347586),                        
             abs_system('pg0003',0.386089),
             abs_system('pg0003',0.421923),
             abs_system('pg1216',0.282286),
@@ -316,13 +316,14 @@ err_Z_inc=zeros(int(len(data)/2))
 
 'nH-Z'
 
-# plt.figure(figsize=(8,5))
+# plt.figure(figsize=(16,10))
 
 # plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
 # plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=20)
 # plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=20)
 # plt.savefig('Z_vs_nH.png')
 # plt.show()
+# quit()
 
 'NHi vs nH'
 
@@ -336,13 +337,16 @@ err_Z_inc=zeros(int(len(data)/2))
 
 'NHi vs Z'
 
-# plt.figure(figsize=(16,10))
+# plt.figure(figsize=(8,5))
 
-# # plt.subplot(121)
-# # plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
+# plt.subplot(121)
+# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
 # plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ Z}$')
-# plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
+# plt.xlabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=20)
+# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=20)
+# plt.savefig('Files_n_figures/NHi_vs_Z.png')
+# plt.show()
+# quit()
 
 # # plt.subplot(122)
 # # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))

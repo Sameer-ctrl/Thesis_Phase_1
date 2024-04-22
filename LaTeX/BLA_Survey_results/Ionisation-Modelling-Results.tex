@@ -5,7 +5,7 @@
 \usepackage{pdflscape}
 \usepackage{fixltx2e}
 \usepackage{geometry}
-\usepackage{wasysym}
+\usepackage[nointegrals]{wasysym}
 % \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -350,12 +350,12 @@ Including \ion{O}{vi} : $n_H$ = -3.96 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.07 $\pm$
 \newpage
 
 \begin{figure}[!h]
-    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png}
+    \includegraphics[width=0.8\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png}
     \caption{N(\ion{H}{i})=15.44}
 \end{figure}
 
 \begin{figure}[!b]
-    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png}
+    \includegraphics[width=0.8\linewidth]{Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png}
     \caption{N(\ion{H}{i})=14.88}
 \end{figure}
 
@@ -1648,6 +1648,9 @@ Including \ion{O}{vi} : $n_H$ = -3.27 $\pm$ 0.03 \hspace{10mm} $Z$ = -0.33 $\pm$
 \end{center}
 
 
+Ionisation modelling to be done.
+
+
 \newpage
 
 \begin{landscape}
@@ -1700,25 +1703,43 @@ Tried excluding \ion{O}{i} also, still not good solution. \\
 Excluding \ion{O}{i} : $n_H$ = -2.10 $\pm$ 0.25 \hspace{10mm} $Z$ = 1.84 $\pm$ 0.14
 
 Including \ion{O}{i} : $n_H$ = -1.90 $\pm$ 0.07 \hspace{10mm} $Z$ = 1.97 $\pm$ 0.05
-\\\\
+
+log $Z_{ref}$=1 \\
+
+Solution : $n_H$ = -2.69 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.97 $\pm$ 0.04 \newline  
+
+Excluding \ion{O}{i} : $n_H$ = -2.87 $\pm$ 1.32 \hspace{10mm} $Z$ = 1.82 $\pm$ 0.29
+
+Including \ion{O}{i} : $n_H$ = -2.69 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.97 $\pm$ 0.04
+
 \newpage
 
 
-\begin{figure}
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png}
+    \caption{N(\ion{H}{i})=14.79, shows solution excluding \ion{O}{i}, log $Z_{ref}$=-1}
+\end{figure}
+
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png}
     \caption{N(\ion{H}{i})=14.79, log $Z_{ref}$=-1}
 \end{figure}
 
 
-
-\begin{figure}[!htbp]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png}
-    \caption{N(\ion{H}{i})=14.79, log $Z_{ref}$=-1}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png}
+    \caption{N(\ion{H}{i})=14.79, shows solution excluding \ion{O}{i}, log $Z_{ref}$=1}
 \end{figure}
 
-
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png}
+    \caption{N(\ion{H}{i})=14.79, log $Z_{ref}$=1}
+\end{figure}
 
 \newpage
 
@@ -1765,7 +1786,9 @@ Including \ion{O}{i} : $n_H$ = -1.90 $\pm$ 0.07 \hspace{10mm} $Z$ = 1.97 $\pm$ 0
 
 N(\ion{H}{I}) = 16.46   \\ 
 
-Solution : $n_H$ = -3.72 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.99 $\pm$ 0.02 \newline
+Solution : $n_H$ = -3.72 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.99 $\pm$ 0.02 \\  
+
+
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png}
@@ -1818,12 +1841,14 @@ Solution : $n_H$ = -3.72 $\pm$ 0.02 \hspace{10mm} $Z$ = -0.99 $\pm$ 0.02 \newlin
 
 \end{center}
 
-In table last two rows are from fits without BLA (fixed redshift). Look comments \\
+In table last two rows are from fits without BLA (fixed redshift). \\
 
 N(\ion{H}{I}) = 14.08 \\
-Solution : $n_H$ = -3.45 $\pm$ 0.06 \hspace{10mm} $Z$ = 1.25 $\pm$ 0.05 \\
+Solution : $n_H$ = -3.45 $\pm$ 0.06 \hspace{10mm} $Z$ = 1.25 $\pm$ 0.05 \\  
 
-NOTE : logZ above 1  \\
+log $Z_{ref}=1$ : \\
+
+Solution : $n_H$ = -3.85 $\pm$ 0.04 \hspace{10mm} $Z$ = 1.92 $\pm$ 0.06 \newline  
 
 N(\ion{H}{I}) = 17.91   \\ 
 Solution : $n_H$ = -3.86 $\pm$ 0.08 \hspace{10mm} $Z$ = -2.91 $\pm$ 0.07 \newline  
@@ -1838,26 +1863,36 @@ Solution : $n_H$ = -3.73 $\pm$ 0.08 \hspace{10mm} $Z$ = -2.36 $\pm$ 0.06 \newlin
 
 
 
-\begin{figure}[!htbp]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png}
+    \includegraphics[width=0.7\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png}
     \caption{N(\ion{H}{i})=14.08, log $Z_{ref}$=-1}
 \end{figure}
 
-\begin{figure}[!htbp]
+
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png}
+    \includegraphics[width=0.7\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png}
+    \caption{N(\ion{H}{i})=14.08, log $Z_{ref}$=1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png}
     \caption{N(\ion{H}{i})=17.91, log $Z_{ref}$=-1}
 \end{figure}
 
+With non-BLA fits
 
-\begin{figure}[!htbp]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png}
+    \includegraphics[width=0.8\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png}
     \caption{N(\ion{H}{i})=17.90, log $Z_{ref}$=-1}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png}
     \caption{N(\ion{H}{i})=17.91, log $Z_{ref}$=-1}
@@ -1965,23 +2000,46 @@ Excluding \ion{Fe}{ii} : $n_H$ = -1.8 $\pm$ 0.55 \hspace{10mm} $Z$ = 1.54 $\pm$ 
 
 Including \ion{Fe}{ii} : $n_H$ = -1.28 $\pm$ 0.11 \hspace{10mm} $Z$ = 1.96 $\pm$ 0.07 \\
 
-NOTE : Excluding \ion{Fe}{II} MCMC hints towards 2 sol. Didn't converge satisfactorily.
+NOTE : Excluding \ion{Fe}{II} MCMC hints towards 2 sol. Didn't converge satisfactorily.  \\
+
+log $Z_{ref}=1$ : \\
+
+Solution : $n_H$ = -2.23 $\pm$ 0.13 \hspace{10mm} $Z$ = 1.92 $\pm$ 0.10 \newline  
+
+Excluding \ion{Fe}{ii} : $n_H$ = -2.42 $\pm$ 0.58 \hspace{10mm} $Z$ = 1.69 $\pm$ 0.42
+
+Including \ion{Fe}{ii} : $n_H$ = -2.23 $\pm$ 0.13 \hspace{10mm} $Z$ = 1.92 $\pm$ 0.10 \\
+
+NOTE : Same note as above.
+
+\newpage
 
 
-\begin{figure}
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png}
+    \caption{N(\ion{H}{i})=14.61, shows solution with excluding \ion{Fe}{ii}, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png}
     \caption{N(\ion{H}{i})=14.61, log $Z_{ref}$=-1}
 \end{figure}
 
-\begin{figure}[!htbp]
+
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png}
-    \caption{N(\ion{H}{i})=14.61, log $Z_{ref}$=-1}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png}
+    \caption{N(\ion{H}{i})=14.61, shows solution with excluding \ion{Fe}{ii}, log $Z_{ref}$=1}
 \end{figure}
 
 
-
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png}
+    \caption{N(\ion{H}{i})=14.61, log $Z_{ref}$=1}
+\end{figure}
 
 \newpage
 
@@ -2027,13 +2085,13 @@ N(\ion{H}{I}) = 17.79   \\
 
 Solution : $n_H$ = -4.23 $\pm$ 0.04 \hspace{10mm} $Z$ = -3.18 $\pm$ 0.04 \newline
 
+NOTE : Used logZ range from -4 because of low Z
+
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=1\linewidth,draft]{Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png}
+    \includegraphics[width=0.8\linewidth]{Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png}
     \caption{N(\ion{H}{i})=17.79, log $Z_{ref}$=-1}
 \end{figure}
-
-NOTE : Used logZ range from -4 because of low Z
 
 
 \newpage
@@ -2079,10 +2137,24 @@ N(\ion{H}{I}) = 14.96   \\
 
 Solution : $n_H$ = -2.65 $\pm$ 0.06 \hspace{10mm} $Z$ = 0.62 $\pm$ 0.06 \newline
 
-\begin{figure}[!htbp]
+log $Z_{ref}=1$ \\
+
+Solution : $n_H$ = -4.14 $\pm$ 0.04 \hspace{10mm} $Z$ = 0.64 $\pm$ 0.03 \newline  
+
+NOTE : Density changed considerably in the two cases.
+
+\newpage
+
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png}
     \caption{N(\ion{H}{i})=14.96, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png}
+    \caption{N(\ion{H}{i})=14.96, log $Z_{ref}$=1}
 \end{figure}
 
 
@@ -2128,12 +2200,22 @@ N(\ion{H}{I}) = 13.30   \\
 
 Solution : $n_H$ = -3.73 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.38 $\pm$ 0.05 \\
 
-NOTE : logZ above 1. \newline
+log $Z_{ref}=1$ \\
 
-\begin{figure}[!htbp]
+Solution : $n_H$ = -4.04 $\pm$ 0.04 \hspace{10mm} $Z$ = 1.98 $\pm$ 0.03 \newline  
+
+\newpage
+
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png}
     \caption{N(\ion{H}{i})=13.30, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png}
+    \caption{N(\ion{H}{i})=13.3, log $Z_{ref}$=1}
 \end{figure}
 
 
@@ -2184,16 +2266,18 @@ Excluding \ion{Si}{iii} : $n_H$ = -4.24 $\pm$ 0.03 \hspace{10mm} $Z$ = -1.19 $\p
 
 Including \ion{Si}{iii} : $n_H$ = -4.17 $\pm$ 0.03 \hspace{10mm} $Z$ = -1.08 $\pm$ 0.04
 
-\begin{figure}[!htbp]
+\newpage
+
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png}
     \caption{N(\ion{H}{i})=16.29, log $Z_{ref}$=-1}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png}
-    \caption{N(\ion{H}{i})=16.29, log $Z_{ref}$=-1}
+    \includegraphics[width=0.9\linewidth]{Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png}
+    \caption{N(\ion{H}{i})=16.29, shows excluding \ion{Si}{iii} case, log $Z_{ref}$=-1}
 \end{figure}
 
 
@@ -2252,24 +2336,25 @@ Using \ion{C}{ii}, \ion{C}{iv}, \ion{Si}{ii} and \ion{Si}{iv} :
 
 Solution : $n_H$ = -3.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -1.7 $\pm$ 0.02 \newline 
 
-\begin{figure}[!htbp]
+\newpage
+
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png}
+    \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png}
     \caption{N(\ion{H}{i})=18.02, all ions, log $Z_{ref}$=-1}
 \end{figure}
 
-
-\begin{figure}[!htbp]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png}
+    \includegraphics[width=0.85\linewidth]{Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png}
     \caption{N(\ion{H}{i})=18.02, \ion{C}{ii}, \ion{C}{iv}, \ion{Si}{ii} and \ion{Si}{iv}, log $Z_{ref}$=-1}
 \end{figure}
 
-
-
 \newpage
 
-\large{\textbf{Some statistics}}
+{\Large{\textbf{Some statistics}} }\\
+
+\ion{O}{vi} absorbers \\ 
 
 Total no. of absorbers : 16 \\
 
@@ -2283,18 +2368,57 @@ BLA -ve or tentative : 2 - one has \emph{b} values of 23, 9 and other absorber h
 
 For, one absorber ionisation state (PG0003 $z_{abs}$=0.386089) couldn't be inferred. \\\\
 
+\newpage
 
-\begin{figure}[h]
+\begin{figure}[!t]
 \centering
-\includegraphics[width=\linewidth]{Distribution_NH_b.png}
+\includegraphics[width=0.8\linewidth]{Distribution_NH_b.png}
 \caption{Distribution of column density and doppler parameters of the Lyman lines in the 17 absorbers}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!b]
 \centering
-\includegraphics[width=\linewidth]{NH_vs_b_1.png}
-\caption{Column desnity v/s doppler parameter. Vertical black dashed line shows the doppler parameter of 40 km s$^{-1}$}
+\includegraphics[width=0.8\linewidth]{Result_plots/NHi_vs_bHi_danforth.png}
+\caption{ Doppler parameter vs. Column density. Horizontal black dashed line shows the doppler parameter of 40 km s$^{-1}$}
 \end{figure}
+
+\newpage
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Result_plots/bHi_vs_BOvi_danforth.png}
+\caption{\emph{b}(\ion{O}{vi}) vs. \emph{b}(\ion{H}{i}). Grey filled circles are measurements from Danforth et al. (2016).}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{Result_plots/T_histogram.png}
+\caption{Distribution of temperature calculated from Doppler parameters of \ion{H}{i} and \ion{O}{vi} lines.}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Result_plots/Z_vs_nH.png}
+\caption{Ionisation modelling solutions ($\text{n}_\text{H}, Z$) for all 26 components of \ion{O}{vi} absorbers.}
+\end{figure} 
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Result_plots/Ovi_cases.png}
+\caption{\ion{O}{vi} column density predictions.}
+\end{figure}  
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Result_plots/NHi_vs_nH.png}
+\caption{Variation of N(\ion{H}{i}) with $\text{n}_\text{H}$}
+\end{figure}  
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Result_plots/NHi_vs_Z.png}
+\caption{Variation of N(\ion{H}{i}) with $Z$}
+\end{figure}  
 
 
 

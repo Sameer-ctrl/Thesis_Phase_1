@@ -12,19 +12,18 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='p1103'
-z_abs=0.003934
-comp='II'
+qso='uks0242'
+z_abs=0.063850
+comp='I'
 
-
-ions=['C+3','Si+3','N+4','Si+2']
-col_den_dict=[[14.26,0.04],[12.96,0.06],[13.65,0.05],[15.02,0.22]]
+ions=['C+','Si+','Fe+']
+col_den_dict=[[13.46,0.11],[12.6,0.05],[13.49,0.14]]
 
 non_detc_ions=[]
 non_detc_col_den=[]
 
-N_Hi=16.29
-logZ_ref=-1
+N_Hi=14.61
+logZ_ref=1
 
 observations=dict(zip(ions,col_den_dict))
 non_detections=dict(zip(non_detc_ions,non_detc_col_den))
@@ -262,8 +261,8 @@ for i in inds:
         plt.plot(x,int_col_den2,c='green',alpha=0.1)
     
     else:
-        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label=f'Model samples (excluding {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})')
-        plt.plot(x,int_col_den2,c='green',alpha=0.4,label=f'Model samples (including {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})')
+        plt.plot(x,int_col_den1,c='orange',alpha=0.4,label=f'Model samples (excluding {ion_label("O",ion_font_size=15,radicle_font_size=10)})')
+        plt.plot(x,int_col_den2,c='green',alpha=0.4,label=f'Model samples (including {ion_label("O",ion_font_size=15,radicle_font_size=10)})')
 
 
 median_col_den_exc_OVI=array([interp_func_dict[i](sol1[0])+sol1[3]-logZ_ref for i in list(observations.keys())+list(non_detections.keys())])
@@ -282,13 +281,13 @@ print(f'reduced chi-sq including OVI : {chi_sq_inc/(5-2)}')
 
 plt.errorbar(x[:len(ions)],obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label='Observed')
 # plt.errorbar(x[len(ions):],non_detc_col_den,yerr=0.25,xerr=0.1,uplims=1,fmt='o',label='Non-detections')
-plt.plot(x,median_col_den_exc_OVI,label=f'median solution (excluding {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='orange')
-plt.plot(x,median_col_den_inc_OVI,label=f'median solution (including {ion_label("Si+2",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='green')
+plt.plot(x,median_col_den_exc_OVI,label=f'median solution (excluding {ion_label("O",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='orange')
+plt.plot(x,median_col_den_inc_OVI,label=f'median solution (including {ion_label("O",ion_font_size=15,radicle_font_size=10)})',ls='--',lw=3,color='green')
 plt.xticks(x,ions_roman,fontsize=20)
 plt.yticks(fontsize=20)
 plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
-plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_SiIII.png')
+# plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_FeII.png')
 plt.show()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  21 APR 2024 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  22 APR 2024 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -133,35 +133,6 @@ LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-
-
-/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty:659: LaTeX Error: Command \iint already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.659 ...d{\iint}{\DOTSI\protect\MultiIntegral{2}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty:660: LaTeX Error: Command \iiint already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.660 ...{\iiint}{\DOTSI\protect\MultiIntegral{3}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 \Mathstrutbox@=\box50
 \strutbox@=\box51
 \big@size=\dimen159
@@ -1123,37 +1094,37 @@ Overfull \hbox (42.14558pt too wide) in paragraph at lines 1622--1625
 ]
 <System-Plots/PG1216+069_z=0.006328_sys_plot.png, id=352, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1658--1661
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1661--1664
  []|  [] |
  []
 
 [84]
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
+Underfull \hbox (badness 10000) in paragraph at lines 1695--1696
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1695
+Underfull \hbox (badness 10000) in paragraph at lines 1697--1698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1696--1697
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1702--1704
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1702--1704
+Underfull \hbox (badness 10000) in paragraph at lines 1709--1710
 
  []
 
@@ -1163,290 +1134,366 @@ Underfull \hbox (badness 10000) in paragraph at lines 1702--1704
 ]
 <Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png, id=360, 1000.9395pt x 615.7404pt>
 <Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png, id=361, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png, id=362, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png, id=363, 1000.9395pt x 615.7404pt>
  [86] [87]
-<System-Plots/3C263_z=0.063397_sys_plot.png, id=368, 2384.91pt x 1634.2656pt>
+<System-Plots/3C263_z=0.063397_sys_plot.png, id=370, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1730--1733
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1751--1754
  []|  [] |
  []
 
 [88]
-Underfull \hbox (badness 10000) in paragraph at lines 1766--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
 
  []
 
-<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=372, 1000.9395pt x 615.7404pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1789--1790
+
+ []
+
+<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=374, 1000.9395pt x 615.7404pt>
 [89
 
 
 ] [90]
-<System-Plots/PG1222+216_z=0.054479_sys_plot.png, id=380, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1222+216_z=0.054479_sys_plot.png, id=382, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1784--1787
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1807--1810
  []|  [] |
  []
 
 [91]
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1822
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1845
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1823--1825
+Underfull \hbox (badness 10000) in paragraph at lines 1846--1848
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1826--1827
+Underfull \hbox (badness 10000) in paragraph at lines 1849--1850
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1828--1830
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1852
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1831--1832
+Underfull \hbox (badness 10000) in paragraph at lines 1853--1855
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1833--1835
+Underfull \hbox (badness 10000) in paragraph at lines 1856--1857
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1836--1838
+Underfull \hbox (badness 10000) in paragraph at lines 1858--1860
 
  []
 
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png, id=384, 1000.9395pt x 615.7404pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1861--1863
+
+ []
+
 [92
 
 
 ]
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png, id=388, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png, id=389, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png, id=390, 1000.9395pt x 615.7404pt>
- [93] [94] [95] [96]
-<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=404, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png, id=389, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png, id=390, 1000.9395pt x 615.7404pt>
+ [93]
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png, id=394, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png, id=395, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png, id=396, 1000.9395pt x 615.7404pt>
+ [94] [95]
+<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=403, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1874--1877
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1909--1912
  []|  [] |
  []
 
-[97]
-Underfull \hbox (badness 10000) in paragraph at lines 1903--1904
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1905--1906
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1941
 
  []
 
 <Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png, id=408, 1000.9395pt x 615.7404pt>
-[98
+[97
 
 
 ]
 <System-Plots/UKS0242-724_z=0.063850_sys_plot.png, id=412, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1923--1926
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 1958--1961
  []|  [] |
  []
 
-[99]
-Underfull \hbox (badness 10000) in paragraph at lines 1956--1957
+[98]
+Underfull \hbox (badness 10000) in paragraph at lines 1991--1992
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1958--1959
+Underfull \hbox (badness 10000) in paragraph at lines 1993--1994
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1960--1961
+Underfull \hbox (badness 10000) in paragraph at lines 1995--1996
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1962--1963
+Underfull \hbox (badness 10000) in paragraph at lines 1997--1998
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1966--1967
+Underfull \hbox (badness 10000) in paragraph at lines 2001--2002
 
  []
 
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=416, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png, id=417, 1010.3346pt x 615.7404pt>
-[100
+
+Underfull \hbox (badness 10000) in paragraph at lines 2003--2004
+
+ []
 
 
-] [101] [102]
-<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=429, 2384.91pt x 1634.2656pt>
+Underfull \hbox (badness 10000) in paragraph at lines 2005--2006
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 1993--1996
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2007--2008
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2012
+
+ []
+
+[99
+
+
+]
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png, id=419, 1010.3346pt x 615.7404pt>
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=420, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png, id=421, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png, id=422, 1000.9395pt x 615.7404pt>
+ [100] [101]
+<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=430, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2051--2054
  []|  [] |
  []
 
-[103]
-Underfull \hbox (badness 10000) in paragraph at lines 2026--2027
+[102]
+Underfull \hbox (badness 10000) in paragraph at lines 2084--2085
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2028--2029
+Underfull \hbox (badness 10000) in paragraph at lines 2086--2087
 
  []
 
-<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=433, 1000.9395pt x 615.7404pt>
-[104
+<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=435, 1000.9395pt x 615.7404pt>
+[103
 
 
-] [105]
-<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=440, 2384.91pt x 1634.2656pt>
+]
+<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=439, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 2046--2049
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2104--2107
  []|  [] |
  []
 
-[106]
-Underfull \hbox (badness 10000) in paragraph at lines 2078--2079
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 2136--2137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2080--2081
+Underfull \hbox (badness 10000) in paragraph at lines 2138--2139
 
  []
 
-<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=444, 1000.9395pt x 615.7404pt>
-[107
+
+Underfull \hbox (badness 10000) in paragraph at lines 2140--2141
+
+ []
 
 
-] [108]
-<System-Plots/3C57_z=0.077430_sys_plot.png, id=452, 2384.91pt x 1634.2656pt>
+Underfull \hbox (badness 10000) in paragraph at lines 2142--2143
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 2097--2100
+ []
+
+[105
+
+
+]
+<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=446, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png, id=447, 1000.9395pt x 615.7404pt>
+ [106]
+<System-Plots/3C57_z=0.077430_sys_plot.png, id=451, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2169--2172
  []|  [] |
  []
 
-[109]
-Underfull \hbox (badness 10000) in paragraph at lines 2127--2128
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 2199--2200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2129--2130
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2131--2132
+Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
 
  []
 
-<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=456, 1000.9395pt x 615.7404pt>
-[110
+
+Underfull \hbox (badness 10000) in paragraph at lines 2205--2206
+
+ []
+
+[108
 
 
-] [111]
-<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=463, 2384.91pt x 1634.2656pt>
+]
+<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=459, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png, id=460, 1000.9395pt x 615.7404pt>
+ [109]
+<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=464, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 2147--2150
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2229--2232
  []|  [] |
  []
 
-[112]
-Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 2259--2260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
+Underfull \hbox (badness 10000) in paragraph at lines 2261--2262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2181--2182
+Underfull \hbox (badness 10000) in paragraph at lines 2263--2264
 
  []
 
-<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=467, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png, id=468, 1000.9395pt x 615.7404pt>
-[113
+[111
 
 
-] [114] [115]
-<System-Plots/PHL1811_z=0.080928_sys_plot.png, id=479, 2384.91pt x 1634.2656pt>
+]
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=471, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png, id=472, 1000.9395pt x 615.7404pt>
+ [112]
+<System-Plots/PHL1811_z=0.080928_sys_plot.png, id=476, 2384.91pt x 1634.2656pt>
 
-Overfull \hbox (42.14558pt too wide) in paragraph at lines 2208--2211
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2292--2295
  []|  [] |
+ []
+
+[113]
+Underfull \hbox (badness 10000) in paragraph at lines 2329--2330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2333--2334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2337--2338
+
+ []
+
+[114
+
+
+]
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png, id=484, 1010.3346pt x 615.7404pt>
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png, id=485, 1000.9395pt x 615.7404pt>
+
+
+LaTeX Warning: Text page 115 contains only floats.
+
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 2355--2356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2357--2358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2359--2360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2370
+
  []
 
 [116]
-Underfull \hbox (badness 10000) in paragraph at lines 2245--2246
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2249--2250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2254
-
- []
-
-<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png, id=483, 1010.3346pt x 615.7404pt>
-<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png, id=484, 1000.9395pt x 615.7404pt>
-[117
-
-
-] [118] [119]
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2284--2285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2284--2285
-
- []
-
-<Distribution_NH_b.png, id=494, 1141.866pt x 612.1269pt>
-<NH_vs_b_1.png, id=495, 1164.9924pt x 589.0005pt>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[120] [121] (./Ionisation-Modelling-Results.aux)
+<Distribution_NH_b.png, id=492, 1141.866pt x 612.1269pt>
+<Result_plots/NHi_vs_bHi_danforth.png, id=493, 522.5121pt x 346.896pt>
+<Result_plots/bHi_vs_BOvi_danforth.png, id=494, 991.5444pt x 652.5981pt>
+<Result_plots/T_histogram.png, id=495, 514.5624pt x 350.5095pt>
+<Result_plots/Z_vs_nH.png, id=496, 549.9747pt x 351.9549pt>
+<Result_plots/Ovi_cases.png, id=497, 521.7894pt x 354.123pt>
+<Result_plots/NHi_vs_nH.png, id=498, 535.5207pt x 351.9549pt>
+<Result_plots/NHi_vs_Z.png, id=499, 438.6789pt x 344.7279pt>
+ [117] [118] [119] [120] (./Ionisation-Modelling-Results.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5427 strings out of 480247
- 118448 string characters out of 5896151
- 382159 words of memory out of 5000000
- 23207 multiletter control sequences out of 15000+600000
- 480669 words of font info for 69 fonts, out of 8000000 for 9000
+ 5498 strings out of 480247
+ 122207 string characters out of 5896151
+ 382197 words of memory out of 5000000
+ 23266 multiletter control sequences out of 15000+600000
+ 479397 words of font info for 65 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,67p,464b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Ionisation-Modelling-Results.pdf (122 pages, 208715 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Ionisation-Modelling-Results.pdf (121 pages, 203030 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
+ 570 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 496 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 561 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,26 +12,25 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='phl1811'
-z_abs=0.080928
-comp='III'
+qso='3c57'
+z_abs=0.077430
+comp='I'
 
 
-ions=['O','N+','C+','C+3','Si+','Si+3','Fe+']
-col_den_dict=[[14.29,0.05],[14.06,0.03],[14.15,0.02],[13.93,0.04],[13.33,0.08],[13.46,0.03],[13.7,0.07]]
-
+ions=['C+3','Si+2','Si+3']
+col_den_dict=[[13.43,0.08],[12.67,0.06],[12.54,0.09]]
 
 non_detc_ions=[]
 non_detc_col_den=[]
 
-N_Hi=18.02
-logZ_ref=-1
+N_Hi=13.30
+logZ_ref=1
 
 observations=dict(zip(ions,col_den_dict))
 non_detections=dict(zip(non_detc_ions,non_detc_col_den))
 
-# ions_to_use1=array(ions)
-ions_to_use1=array(ions)[[2,3,4,5]]
+ions_to_use=array(ions)
+# ions_to_use=array(ions)[[2,3,4,5]]
 
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
@@ -171,7 +170,7 @@ def start_MCMC_samples(ions_to_use, guess=None, discard_tau=True, nwalkers=50, n
     return flat_samples
 
 
-flat_samples=start_MCMC_samples(ions_to_use1,discard_tau=True,nsteps=5000)
+flat_samples=start_MCMC_samples(ions_to_use,discard_tau=True,nsteps=5000)
 
 
 def sol_write(q):
@@ -267,5 +266,5 @@ plt.ylabel(r'$\mathbf{log \ (N \ {cm}^{-2})}$',labelpad=15)
 plt.xlabel(r'$\mathbf{Ions}$',labelpad=15)
 plt.legend()
 plt.title(f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs})}}$',fontsize=30)
-plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}_ions.png')
+plt.savefig(f'../LaTeX/BLA_Survey_results/Ionisation-Modelling-Plots/{qso}-z={z_abs}-comp{comp}_logZ={logZ_ref}.png')
 plt.show()
