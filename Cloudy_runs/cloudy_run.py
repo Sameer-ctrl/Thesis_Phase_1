@@ -302,23 +302,31 @@ class abs_system():
         self.n_ions=len(self.ions)
 
 
+# absorbers=[
+#             abs_system('he0056',0.043265),
+#             abs_system('pg1216',0.006328),
+#             abs_system('3c263',0.063397),
+#             abs_system('pg1222',0.054479),
+#             abs_system('rxj0439',0.005568),                        
+#             abs_system('uks0242',0.063850),
+#             abs_system('pg1259',0.046284),
+#             abs_system('pks1302',0.094839),
+#             abs_system('3c57',0.077430),
+#             abs_system('p1103',0.003934),
+#             abs_system('phl1811',0.080928),
+#            ]
+
 absorbers=[
-            abs_system('he0056',0.043265),
             abs_system('pg1216',0.006328),
-            abs_system('3c263',0.063397),
             abs_system('pg1222',0.054479),
-            abs_system('rxj0439',0.005568),                        
             abs_system('uks0242',0.063850),
-            abs_system('pg1259',0.046284),
             abs_system('pks1302',0.094839),
             abs_system('3c57',0.077430),
-            abs_system('p1103',0.003934),
-            abs_system('phl1811',0.080928),
            ]
 
 
 hden=[-5,1,0.02]
-metal=[-1]
+metal=[1]
 temp=None
 
 ions=['H', 'H+', 'C+','C+2', 'C+3', 'N+', 'N+2', 'N+4', 'O','O+2','O+5','O+6','P+','Si+', 'Si+2', 'Si+3','Si+4','Fe+','Al+']
