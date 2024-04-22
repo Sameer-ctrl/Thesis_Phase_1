@@ -1,0 +1,797 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{fixltx2e}
+\usepackage{geometry}
+\usepackage{wasysym}
+% \usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}
+
+\title{\textbf{Voigt profile fitting results} \\ 
+ {Non \ion{O}{vi} absorbers}}
+% \date{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{System plots} 
+
+\begin{itemize}
+    \item Velocity taken to be 0 at $z_{abs}$ given on the title of the plots
+    \item Blue dashed curves are the individual components and orange dashed curves are the contamination
+\end{itemize}
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/HE0056-3622_z=0.043265_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{iii}   &    27 $\pm$ 6   &    34 $\pm$ 9    &     12.37 $\pm$ 0.07 \\
+    \ion{N}{v}   &    -26 $\pm$ 4   &    1 $\pm$ 8    &     13.42 $\pm$ 0.46 \\
+    \ion{C}{iv}   &    30 $\pm$ 2   &    31 $\pm$ 0    &     13.64 $\pm$ 0.03 \\
+    \ion{H}{i}   &    0 $\pm$ 3   &    85 $\pm$ 6    &     14.02 $\pm$ 0.07 \\
+    \ion{H}{i}   &    12 $\pm$ 1   &    32 $\pm$ 4    &     15.3 $\pm$ 0.1 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center} 
+
+
+\textbf{Comments}  \\
+
+SiIII :  \\  \hspace*{1.5cm}
+	Good fit. Little broad b $\sim$ 33 km/s \\
+
+NV :  \\  \hspace*{1.5cm}
+	Good fit. Very narrow line b $\sim$ 1 km/s. So very large errors. Errors got from freezing the parameters. NV 1242 is non detection. \\
+
+CIV :  \\  \hspace*{1.5cm} 
+	Nice fit. A little hint of two component, but couldn't fit 2. Currently fitted with 1.\\
+
+HI :  \\  \hspace*{1.5cm}
+	Nice fit. Contaminated from NV 1242 from z=0.020021. Saturated, other transitions are not covered in COS. Fitted with two components. \\
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PG1216+069_z=0.006328_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{O}{i}   &    8 $\pm$ 2   &    7 $\pm$ 5    &     14.07 $\pm$ 0.16 \\
+    \ion{O}{i}   &    25 $\pm$ 12   &    50 $\pm$ 13    &     14.0 $\pm$ 0.11 \\
+    \ion{C}{ii}   &    0 $\pm$ 3   &    7 $\pm$ 5    &     13.98 $\pm$ 0.08 \\
+    \ion{C}{ii}   &    24 $\pm$ 19   &    17 $\pm$ 6    &     13.43 $\pm$ 0.09 \\
+    \ion{Si}{ii}   &    -68 $\pm$ 4   &    21 $\pm$ 6    &     12.51 $\pm$ 0.06 \\
+    \ion{Si}{ii}   &    6 $\pm$ 1   &    18 $\pm$ 0    &     13.2 $\pm$ 0.02 \\
+    \ion{H}{i}   &    -233 $\pm$ 110   &    95 $\pm$ 15    &     13.56 $\pm$ 0.06 \\
+    \ion{H}{i}   &    -68 $\pm$ 0   &    81 $\pm$ 8    &     14.76 $\pm$ 0.12 \\
+    \ion{H}{i}   &    0 $\pm$ 0   &    106 $\pm$ 15    &     14.79 $\pm$ 0.08 \\
+    \ion{H}{i}   &    24 $\pm$ 0   &    20 $\pm$ 12    &     19.09 $\pm$ 0.03 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center} 
+
+
+\textbf{Comments}  \\
+
+
+OI :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp. large b value for comp II b $\sim$ 50 km/s. \\
+
+CII  :  \\  \hspace*{1.5cm} 
+        Good fit. Fitted with 2 comp. Unknown contamination on left. \\
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp. Used SiII 1526, 1260 and 1190 to fit. \\
+        Used only SiII 1260 to fit the first component, as it's not much prominent in others. \\
+        SiII 1193 contaminated from galactic NI 1199 and 1200 lines so excluded from fit \\
+        SiII 1304 contaminated from geocoronal Lya emission. \\
+
+HI :  \\  \hspace*{1.5cm}
+        Average fit. Fitted with 4 comp, redshift of two comp fixed from CII fit and one from SiII fit. Contaminated with OVI 1038 (self-identified) from z=0.179960, and hint of OVI 1032 is also there at the same redshift. \\
+        However, left wing still couldn't be fitted.
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/3C263_z=0.063397_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{ii}   &    26 $\pm$ 2   &    8 $\pm$ 4    &     12.29 $\pm$ 0.06 \\
+    \ion{Si}{iii}   &    -39 $\pm$ 1   &    21 $\pm$ 2    &     12.64 $\pm$ 0.03 \\
+    \ion{Si}{iii}   &    34 $\pm$ 1   &    12 $\pm$ 1    &     12.91 $\pm$ 0.04 \\
+    \ion{Si}{iv}   &    25 $\pm$ 1   &    22 $\pm$ 0    &     13.57 $\pm$ 0.02 \\
+    \ion{C}{iv}   &    -35 $\pm$ 1   &    12 $\pm$ 3    &     13.42 $\pm$ 0.06 \\
+    \ion{C}{iv}   &    0 $\pm$ 2   &    13 $\pm$ 3    &     13.63 $\pm$ 0.06 \\
+    \ion{C}{iv}   &    38 $\pm$ 2   &    17 $\pm$ 2    &     13.86 $\pm$ 0.04 \\
+    \ion{C}{ii}   &    34 $\pm$ 2   &    17 $\pm$ 3    &     13.37 $\pm$ 0.04 \\
+    \ion{H}{i}   &    -146 $\pm$ 2   &    25 $\pm$ 2    &     13.87 $\pm$ 0.04 \\
+    \ion{H}{i}   &    -35 $\pm$ 0   &    50 $\pm$ 6    &     14.88 $\pm$ 0.12 \\
+    \ion{H}{i}   &    0 $\pm$ 0   &    54 $\pm$ 6    &     14.42 $\pm$ 0.2 \\
+    \ion{H}{i}   &    38 $\pm$ 0   &    12 $\pm$ 3    &     16.46 $\pm$ 0.13 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}  
+
+
+\textbf{Comments}  \\
+
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit.  \\
+
+SiIII :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 2 comp. Has HI 937 on right, currently not fitted. \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Good fit.  \\
+        SiIV 1393  : contaminated by Lya from z=0.218048, 0.218991 and 0.219161 \\ 
+        SiIV 1402  : contaminated by Lyb from z=0.453629 and 0.453969, CIII 977 from z=0.527982 and 0.528336  \\ 
+
+CIV :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 3 comp.  \\ 
+
+CII :  \\  \hspace*{1.5cm}
+        Good fit. CII 1036 is out of coverage.  \\ 
+
+HI :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 4 componets. Redshift of the three components in the saturated part are fixed from CIII 977 line.  \\ 
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PG1222+216_z=0.054479_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{iii}   &    -12 $\pm$ 3   &    20 $\pm$ 3    &     13.19 $\pm$ 0.05 \\
+    \ion{Si}{iii}   &    40 $\pm$ 5   &    27 $\pm$ 5    &     13.04 $\pm$ 0.07 \\
+    \ion{Si}{iv}   &    0 $\pm$ 1   &    25 $\pm$ 8    &     12.89 $\pm$ 0.08 \\
+    \ion{Si}{iv}   &    41 $\pm$ 4   &    10 $\pm$ 7    &     12.39 $\pm$ 0.13 \\
+    \ion{C}{iv}   &    -2 $\pm$ 1   &    29 $\pm$ 6    &     13.55 $\pm$ 0.1 \\
+    \ion{C}{iv}   &    41 $\pm$ 8   &    34 $\pm$ 6    &     13.5 $\pm$ 0.11 \\
+    \ion{C}{iv}   &    182 $\pm$ 10   &    26 $\pm$ 15    &     12.86 $\pm$ 0.15 \\
+    \ion{C}{ii}   &    7 $\pm$ 4   &    26 $\pm$ 6    &     13.51 $\pm$ 0.07 \\
+    \ion{C}{ii}   &    51 $\pm$ 4   &    10 $\pm$ 6    &     12.98 $\pm$ 0.09 \\
+    \ion{H}{i}   &    -12 $\pm$ 23   &    74 $\pm$ 11    &     14.08 $\pm$ 0.15 \\
+    \ion{H}{i}   &    5 $\pm$ 4   &    24 $\pm$ 3    &     17.91 $\pm$ 0.15 \\
+                 &                &                  &                     \\
+    \ion{H}{i}   &    0 $\pm$ 0   &    23 $\pm$ 1    &     17.9 $\pm$ 0.14 \\
+    \ion{H}{i}   &    41 $\pm$ 0   &    13 $\pm$ 2    &     17.22 $\pm$ 0.19 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}   
+
+In table last two rows are from fits without BLA (fixed redshift). Look comments \\
+
+
+\textbf{Comments}  \\
+
+
+SiIII :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 2 comp. Contaminated with HI 923. \\ 
+
+SiIV :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with two components. SiIV 1402 comp 2 is weak. Lines need to be shifted. Not shifted while fitting        \\
+
+CIV :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 3 comp. The right side feature shows a possibility of further substructure, tried fitting it with 2 comp also, fits were not much better, so going with 1 comp.       \\            
+
+CII :  \\  \hspace*{1.5cm}
+        Nice fit. CII 1036 is not covered. Fitted with 2 comp. Contaminated by OVI 1032 from z=0.363300  \\
+
+HI :  \\  \hspace*{1.5cm}
+        Good fit. Contaminated from OVI 1032 from z=0.241833 on left and HI 930 from z=0.378411 on right.  \\
+        Fitted with two comp. One comp has high col density of  $\sim$ 17.9  \\
+
+        Fitted with redshift fixed from SiIV also, in this case we don't get BLA but narrlow lines with high col densities of  $\sim$  17.9 and 17.2  \\
+        In VPfit\_chunks, files are those fits which had BLA  \\
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{iii}   &    16 $\pm$ 1   &    11 $\pm$ 3    &     13.01 $\pm$ 0.12 \\
+    \ion{Si}{iv}   &    -3 $\pm$ 4   &    20 $\pm$ 6    &     12.77 $\pm$ 0.08 \\
+    \ion{C}{iv}   &    4 $\pm$ 3   &    13 $\pm$ 5    &     13.5 $\pm$ 0.07 \\
+    \ion{H}{i}   &    0 $\pm$ 2   &    53 $\pm$ 6    &     14.3 $\pm$ 0.09 \\
+    \ion{H}{i}   &    5 $\pm$ 3   &    15 $\pm$ 6    &     16.11 $\pm$ 0.26 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center} 
+
+
+\textbf{Comments}  \\
+
+
+SiIII :  \\  \hspace*{1.5cm}
+        Nice fit. Near geo coronal Lyman emission. Contaminated with CIII 977 from z=0.242393 and z=0.242580.  \\
+        Had to change nchext to 5 in VPsetup.  \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Not much strong line. Fitted only SiIV 1393 line, SiIV 1402 seems to be non-detection.  \\
+
+CIV :  \\  \hspace*{1.5cm}
+        Good fit. \\
+
+HI :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with two comp, which are very close. \\
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/UKS0242-724_z=0.063850_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Fe}{ii}   &    -90 $\pm$ 4   &    9 $\pm$ 9    &     13.49 $\pm$ 0.14 \\
+    \ion{C}{ii}   &    -84 $\pm$ 2   &    7 $\pm$ 5    &     13.46 $\pm$ 0.11 \\
+    \ion{C}{ii}   &    0 $\pm$ 3   &    3 $\pm$ 7    &     13.55 $\pm$ 0.16 \\
+    \ion{C}{ii}   &    24 $\pm$ 5   &    9 $\pm$ 6    &     13.32 $\pm$ 0.1 \\
+    \ion{Si}{ii}   &    -78 $\pm$ 3   &    25 $\pm$ 5    &     12.6 $\pm$ 0.05 \\
+    \ion{Si}{ii}   &    10 $\pm$ 2   &    15 $\pm$ 4    &     12.52 $\pm$ 0.06 \\
+    \ion{H}{i}   &    -84 $\pm$ 0   &    30 $\pm$ 5    &     14.61 $\pm$ 0.06 \\
+    \ion{H}{i}   &    0 $\pm$ 0   &    46 $\pm$ 6    &     15.17 $\pm$ 0.1 \\
+    \ion{H}{i}   &    24 $\pm$ 0   &    19 $\pm$ 6    &     15.34 $\pm$ 1.33 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center} 
+
+
+\textbf{Comments}  \\
+
+
+FeII :  \\  \hspace*{1.5cm}
+        Good fit. Continuum is not defined much clearly around the line. \\
+
+CII :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 3 comp \\
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp \\
+
+HI :  \\  \hspace*{1.5cm}
+        Good fit. Fixed redshift from CII fit, large error in col density of 3rd comp  $\sim$  1.3 dex \\
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PG1259+593_z=0.046284_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{C}{iv}   &    -34 $\pm$ 2   &    31 $\pm$ 3    &     13.7 $\pm$ 0.03 \\
+    \ion{C}{iv}   &    42 $\pm$ 2   &    16 $\pm$ 3    &     13.56 $\pm$ 0.05 \\
+    \ion{Si}{iv}   &    -43 $\pm$ 4   &    35 $\pm$ 6    &     12.67 $\pm$ 0.05 \\
+    \ion{Si}{iii}   &    -50 $\pm$ 2   &    29 $\pm$ 3    &     12.87 $\pm$ 0.03 \\
+    \ion{Si}{iii}   &    67 $\pm$ 3   &    40 $\pm$ 5    &     12.78 $\pm$ 0.04 \\
+    \ion{H}{i}   &    -590 $\pm$ 8   &    47 $\pm$ 12    &     12.79 $\pm$ 0.08 \\
+    \ion{H}{i}   &    -23 $\pm$ 7   &    26 $\pm$ 3    &     17.79 $\pm$ 0.07 \\
+    \ion{H}{i}   &    0 $\pm$ 5   &    61 $\pm$ 7    &     14.86 $\pm$ 0.06 \\
+    \ion{H}{i}   &    140 $\pm$ 3   &    27 $\pm$ 4    &     13.43 $\pm$ 0.07 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}  
+
+
+\textbf{Comments}  \\
+
+
+CIV :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 2 comp. CIV 1548 is contaminated from Lya from z=0.332751  \\
+        Unknown contamination on left in CIV 1548 \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Good fit. Weak line. SiIV 1402 contaminated by Lyb from z=0.431499, currently not fitted. \\
+
+SiIII :  \\  \hspace*{1.5cm}
+        Average fit. Fitted with two comp.  First component looks asymmetric, tried fitting it with one more comp but couldn't be fitted nicely. \\
+
+HI :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 4 comp. Fitted one comp on outside on left. Main profile is fitted with 3 comp.  \\
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PKS1302-102_z=0.094839_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{iii}   &    0 $\pm$ 2   &    22 $\pm$ 3    &     12.82 $\pm$ 0.04 \\
+    \ion{Si}{iii}   &    45 $\pm$ 3   &    16 $\pm$ 4    &     12.48 $\pm$ 0.08 \\
+    \ion{Si}{ii}   &    11 $\pm$ 5   &    34 $\pm$ 7    &     12.48 $\pm$ 0.06 \\
+    \ion{C}{ii}   &    7 $\pm$ 8   &    21 $\pm$ 8    &     13.27 $\pm$ 0.09 \\
+    \ion{C}{ii}   &    46 $\pm$ 4   &    10 $\pm$ 5    &     13.25 $\pm$ 0.09 \\
+    \ion{H}{i}   &    -229 $\pm$ 1   &    29 $\pm$ 2    &     14.81 $\pm$ 0.14 \\
+    \ion{H}{i}   &    0 $\pm$ 0   &    46 $\pm$ 2    &     14.96 $\pm$ 0.1 \\
+    \ion{H}{i}   &    45 $\pm$ 0   &    31 $\pm$ 4    &     14.25 $\pm$ 0.14 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}   
+
+
+\textbf{Comments}  \\
+
+
+SiIII :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with two comp.  \\
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit. Tried fitting two comp alos, but didn't get good fit.  \\
+
+CII :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 2 comp.  \\
+
+HI :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 3 comp. Fixed the redshifts of two comp from SiIII fit.  \\
+
+NOTE  :  \\  \hspace*{1.5cm} OVI 1038 is just covered a little, but since its on the edge, spectra is not good there.  \\
+
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/3C57_z=0.077430_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{C}{iv}   &    -12 $\pm$ 6   &    32 $\pm$ 9    &     13.43 $\pm$ 0.08 \\
+    \ion{Si}{iv}   &    -4 $\pm$ 4   &    7 $\pm$ 6    &     12.54 $\pm$ 0.09 \\
+    \ion{Si}{iv}   &    37 $\pm$ 4   &    22 $\pm$ 6    &     12.92 $\pm$ 0.07 \\
+    \ion{Si}{iii}   &    -38 $\pm$ 5   &    34 $\pm$ 7    &     12.67 $\pm$ 0.06 \\
+    \ion{H}{i}   &    -50 $\pm$ 2   &    8 $\pm$ 4    &     13.3 $\pm$ 0.08 \\
+    \ion{H}{i}   &    0 $\pm$ 4   &    50 $\pm$ 4    &     13.86 $\pm$ 0.04 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}  
+
+
+\textbf{Comments}  \\
+
+
+CIV :  \\  \hspace*{1.5cm}
+        CIV 1550 is contaminated with galactic AlII 1670 in the core and by Lya from z=0.373570 on left . So used only CIV 1548 to fit.  \\
+
+NV :  \\  \hspace*{1.5cm}
+        Both 1238 and 1242 couldn't be fitted together. NV 1238 is contaminated from galactic CII 1334 line and NV 1242 is contaminated from CIII 977 from z=0.0.369949 and possibly from Fe II 1144 from z=0.169577. \\
+        just fitting NV 1242 doesn't fit 1238 at all.  \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp. SiIV 1402 is contaminated with FeII 1144 from z=0.320102 (self identified), without which the fit of SiIV 1402 was not good and expected.  \\
+
+SiIII :  \\  \hspace*{1.5cm} 
+        Good fit.  \\
+
+HI :  \\  \hspace*{1.5cm} 
+        Good fit. Fitted with 2 comp. Contaminated by Lyb from z=0.278165 on right.  \\
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{Si}{iii}   &    23 $\pm$ 3   &    4 $\pm$ 3    &     15.02 $\pm$ 0.22 \\
+    \ion{Si}{iv}   &    13 $\pm$ 3   &    23 $\pm$ 5    &     12.96 $\pm$ 0.06 \\
+    \ion{N}{v}   &    22 $\pm$ 5   &    52 $\pm$ 8    &     13.65 $\pm$ 0.05 \\
+    \ion{C}{iv}   &    10 $\pm$ 1   &    24 $\pm$ 2    &     14.26 $\pm$ 0.04 \\
+    \ion{H}{i}   &    -68 $\pm$ 6   &    10 $\pm$ 7    &     13.37 $\pm$ 0.09 \\
+    \ion{H}{i}   &    0 $\pm$ 12   &    19 $\pm$ 2    &     16.29 $\pm$ 0.19 \\
+    \ion{H}{i}   &    60 $\pm$ 27   &    28 $\pm$ 4    &     13.95 $\pm$ 0.05 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}  
+
+
+\textbf{Comments}  \\
+
+
+SiIII :  \\  \hspace*{1.5cm}
+        Good fit. Narrow line b $\sim$ 4 km/s, error in col density calculated from chi-sq, otherwise was 0.26  \\
+        Has OVI 1032 contamination on left from z=0.172768  \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Nice fit.  \\
+
+CIV :  \\  \hspace*{1.5cm}
+        Good fit. CIV 1548 seems to have some unidentified contamination on the wings.  \\
+
+NV :  \\  \hspace*{1.5cm}
+        Good fit. Large b  $\sim$  52 km/s.  \\
+
+HI :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 3 comp. None of them are BLA.  \\
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PHL1811_z=0.080928_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{O}{i}   &    -6 $\pm$ 1   &    15 $\pm$ 2    &     14.29 $\pm$ 0.05 \\
+    \ion{C}{ii}   &    -1 $\pm$ 1   &    16 $\pm$ 1    &     14.15 $\pm$ 0.02 \\
+    \ion{N}{ii}   &    -1 $\pm$ 1   &    13 $\pm$ 1    &     14.06 $\pm$ 0.03 \\
+    \ion{C}{iv}   &    -49 $\pm$ 2   &    16 $\pm$ 3    &     13.38 $\pm$ 0.04 \\
+    \ion{C}{iv}   &    -1 $\pm$ 1   &    11 $\pm$ 1    &     13.93 $\pm$ 0.04 \\
+    \ion{Si}{iv}   &    -2 $\pm$ 1   &    11 $\pm$ 1    &     13.46 $\pm$ 0.03 \\
+    \ion{Fe}{ii}   &    -4 $\pm$ 1   &    7 $\pm$ 3    &     13.7 $\pm$ 0.07 \\
+    \ion{Si}{ii}   &    -10 $\pm$ 1   &    3 $\pm$ 1    &     14.24 $\pm$ 0.07 \\
+    \ion{Si}{ii}   &    7 $\pm$ 1   &    4 $\pm$ 1    &     13.33 $\pm$ 0.08 \\
+    \ion{H}{i}   &    -875 $\pm$ 1   &    32 $\pm$ 1    &     14.6 $\pm$ 0.06 \\
+    \ion{H}{i}   &    -528 $\pm$ 0   &    30 $\pm$ 2    &     15.38 $\pm$ 0.05 \\
+    \ion{H}{i}   &    -34 $\pm$ 1   &    29 $\pm$ 1    &     18.02 $\pm$ 0.11 \\
+    \ion{H}{i}   &    0 $\pm$ 19   &    126 $\pm$ 23    &     13.62 $\pm$ 0.07 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}   
+
+
+\textbf{Comments}  \\
+
+
+OI :  \\  \hspace*{1.5cm}
+        Good fit. Contaminated with Lya from z=0.157852. There is some unknown contamination on the right also.  \\
+
+CII :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with single comp. Could be fitted with 2 also, which fits the right wing well, but b is small  $\sim$ 3 km/s for one of the  comp.  \\
+
+NII :  \\  \hspace*{1.5cm}
+        Nice fit.  \\
+
+CIV :  \\  \hspace*{1.5cm}
+        Nice fit. Fitted with 2 comp  \\
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit. When fitting with single comp, all lines couldn't be fitted together. Only 1526 and 1304 could be fitted together, and the doublet 1190 and 1193 could be fitted together alone. Then fitted two comp, then all line scould be fitted together but b values are small for both comp b $\sim$  3,4 km/s. \\ 
+        SiII 1260 contaminated frm Lya from z=0.120353 and 0.120489 so excluded from fit.  \\
+        SiII 1190 is contaminated from Lya from z=0.057991 and 0.058278 \\
+        SiII 1526 could be possibly contaminated from SiIV 1402 from z $\sim$ 0.176543. \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Nice fit.  \\
+
+FeII :  \\  \hspace*{1.5cm}
+        Good fit. FeII 1144 contaminated with OVI 1038 from z=0.191547, 0.191930, 0.192214  \\
+
+HI :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 4 comp, two single comp profiles and one 2 comp profile. Getting large b  $\sim$  126 km/s for one of the comp.  \\
+
+
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+    \centering
+    \vspace{-20mm}
+    \hspace*{-35mm}
+    \captionsetup{oneside,margin={0cm,35mm}}
+    \includegraphics[width=1.25\linewidth]{System-Plots/PG0832+251_z=0.017505_sys_plot.png}
+\end{figure}
+
+\end{landscape}
+
+
+\begin{center} 
+
+\begin{tabular}{cccc} 
+
+    \hline \hline \tabularnewline 
+    \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
+    \tabularnewline \tabularnewline \hline \tabularnewline 
+ 
+    \ion{l}{ii}   &    -58 $\pm$ 7   &    21 $\pm$ 6    &     12.76 $\pm$ 0.08 \\
+    \ion{l}{ii}   &    -16 $\pm$ 4   &    12 $\pm$ 4    &     13.04 $\pm$ 0.11 \\
+    \ion{O}{i}   &    -50 $\pm$ 2   &    4 $\pm$ 2    &     15.28 $\pm$ 0.41 \\
+    \ion{O}{i}   &    -11 $\pm$ 1   &    7 $\pm$ 3    &     15.76 $\pm$ 0.28 \\
+    \ion{Fe}{ii}   &    -12 $\pm$ 1   &    12 $\pm$ 3    &     14.16 $\pm$ 0.07 \\
+    \ion{Si}{iv}   &    -43 $\pm$ 8   &    39 $\pm$ 6    &     13.72 $\pm$ 0.1 \\
+    \ion{Si}{iv}   &    3 $\pm$ 3   &    21 $\pm$ 3    &     13.68 $\pm$ 0.11 \\
+    \ion{Si}{iv}   &    88 $\pm$ 1   &    120 $\pm$ 15    &     13.46 $\pm$ 0.05 \\
+    \ion{C}{iv}   &    -57 $\pm$ 2   &    4 $\pm$ 1    &     17.26 $\pm$ 0.12 \\
+    \ion{C}{iv}   &    0 $\pm$ 3   &    31 $\pm$ 3    &     14.59 $\pm$ 0.08 \\
+    \ion{C}{iv}   &    78 $\pm$ 1   &    15 $\pm$ 3    &     14.45 $\pm$ 0.07 \\
+    \ion{C}{iv}   &    166 $\pm$ 3   &    51 $\pm$ 4    &     14.31 $\pm$ 0.03 \\
+    \ion{Si}{ii}   &    -25 $\pm$ 1   &    38 $\pm$ 2    &     14.29 $\pm$ 0.06 \\
+    \ion{Si}{ii}   &    -11 $\pm$ 4   &    15 $\pm$ 2    &     14.02 $\pm$ 0.13 \\
+    \ion{Si}{ii}   &    198 $\pm$ 4   &    13 $\pm$ 7    &     12.7 $\pm$ 0.09 \\
+    \ion{Si}{iii}   &    -21 $\pm$ 2   &    38 $\pm$ 7    &     14.67 $\pm$ 0.06 \\
+    \ion{Si}{iii}   &    77 $\pm$ 17   &    130 $\pm$ 14    &     13.48 $\pm$ 0.07 \\
+    \ion{N}{v}   &    84 $\pm$ 6   &    23 $\pm$ 7    &     13.53 $\pm$ 0.08 \\
+    \ion{C}{ii}   &    -23 $\pm$ 1   &    43 $\pm$ 3    &     15.2 $\pm$ 0.1 \\
+    \ion{C}{ii*}   &    -78 $\pm$ 3   &    10 $\pm$ 0    &     13.7 $\pm$ 0.08 \\
+
+    \tabularnewline \hline \hline \tabularnewline 
+
+\end{tabular}
+
+\end{center}  
+ 
+ 
+\textbf{Comments}  \\
+
+
+AlII :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp. Danforth has given just one comp, clearly a two comp structure is there, could not find any other possible contamination, sofitted two comp.  \\
+
+OI :  \\  \hspace*{1.5cm} 
+        Good fit. Fitted with 2 comp. Same issue of 1 comp vs 2 comp as for AlII  \\
+
+FeII :  \\  \hspace*{1.5cm}
+        Good fit. FeII 1608 is contaminated from NV 1242 (self identified) from z=0.316648. Fe II 1144 also seems to be contaminated from some unknown contamination.  \\
+
+SiIV :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 3 comp. Third component is very broad b $\sim$ 120 km/s.  \\
+
+CIV :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 4 comp. Lot of substructure, maybe even further is possible. CIV 1550 is contaminated with Lya from z=0.299318.  \\
+
+SiII :  \\  \hspace*{1.5cm}
+        Good fit. Fitted with 2 comp. SiII 1260 is fitted with 3 comp, third comp is not there in other lines.  \\
+        SiII 1193 is contaminated from geocornal Lya emission so excluded from fit. \\
+        SiII 1260 is contaminated from Lya from z=0.054086 \\
+
+SiIII :  \\  \hspace*{1.5cm}
+        Average fit. Fitted with 2 comp, one comp is very broad b $\sim$ 130 km/s. \\
+
+NV :  \\  \hspace*{1.5cm}
+        Average fit  :  Highly contaminated  \\
+        NV 1238 contaminated with galactic SiII 1260 lines (2 comp) and galactic SII 1259.  \\
+        NV 1242 contaminated with Lyb from z=0.233056 and Lya from z=0.040917.  \\
+
+CII :  \\  \hspace*{1.5cm}
+        Average fit. Contaminated with OI from z=0.043138.   \\
+        CII* 1335 doublet is also there from z=0.017241. Currently saved as 2nd comp of the line.  \\
+
+HI :  \\  \hspace*{1.5cm}
+
+
+
+
+
+
+
+
+\end{document}
+

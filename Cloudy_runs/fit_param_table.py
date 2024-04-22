@@ -1,8 +1,8 @@
 from numpy import *
 import os
 
-qso='phl1811'
-z_abs=0.080928
+qso='pg0832'
+z_abs=0.017505
 
 file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
 
