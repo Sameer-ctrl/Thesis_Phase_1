@@ -60,7 +60,7 @@ for i in range(len(ions)):
 
 sys_plot_name=f'{qso_label}_z={z_abs:.6f}_sys_plot.png'
 
-os.system(f'cp ../Python/Files_n_figures/sys_plots/{sys_plot_name} ../LaTeX/BLA_Survey_results/System-Plots/')
+# os.system(f'cp ../Python/Files_n_figures/sys_plots/{sys_plot_name} ../LaTeX/BLA_Survey_results/System-Plots/')
 
 
 print('\\newpage\n\n\\begin{landscape}\n\n\\begin{figure}\n    \centering\n    \\vspace{-20mm}\n    \hspace*{-35mm}\n    \captionsetup{oneside,margin={0cm,35mm}}')
