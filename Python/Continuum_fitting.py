@@ -6,7 +6,7 @@ from astropy.table import Table,Column
 from numpy import *
 import os
 
-qso='pg0832'
+qso='pg0003'
 
 file=f'Data/IGM_Danforth_Data/Spectra/{qso}_spec.fits'
 file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -33,10 +33,10 @@ flux_col=Column(name='FLUX',data=flux/cont)
 err_col=Column(name='ERROR',data=err/cont)
 
 tab.add_columns([wave_col,flux_col,err_col])
-tab.write(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc', format='ascii', overwrite=True)
-tab.write(f'../VPfit/{qso}/{qso}_cont_norm.asc', format='ascii', overwrite=True)
+# tab.write(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc', format='ascii', overwrite=True)
+# tab.write(f'../VPfit/{qso}/{qso}_cont_norm.asc', format='ascii', overwrite=True)
 
-os.system(f'cp _knots.jsn  ../VPfit/{qso}')
+# os.system(f'cp _knots.jsn  ../VPfit/{qso}')
 
 plt.step(wave,flux,label='spectrum')
 plt.plot(wave,spec.co,label='continuum')
