@@ -134,6 +134,7 @@ class abs_system():
         self.BLA_obj=ion('HI',v=v_BLA_obj,b=b_BLA_obj,logN=logN_BLA_obj)
 
         self.qso_label=qso_dict[qso]
+        self.qso=qso
         self.z_abs=z_abs
         self.ion_obj=ion_obj_dict
         self.ions=ions_all[ions_all!='HI']
@@ -192,7 +193,13 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
+wave_dict={}
 
+for a in absorbers:
+    wave_dict[a.qso]=round((1+a.z_abs)*(1215.6701),3)
+
+print(wave_dict)
+quit()
 # for a in absorbers:
 
 #     BLA=a.BLA_obj
