@@ -5,8 +5,6 @@ from astropy.io import ascii,fits
 import matplotlib.pyplot as plt
 from astropy.table import Table,Column
 
-lyman_alpha={'3c263': 1386.783, 'pks0637': 1723.26, 'pg1424': 1394.5, 'pg0003': 1728.589, 'pg1216': 1558.837, 's135712': 1334.647, '1es1553': 1443.929, 'sbs1108': 1778.777, 'pg1222': 1675.666, 'pg1116': 1384.073, 'h1821': 1489.173, 'pg1121': 1449.557, 'pks0405': 1418.839}
-
 selected_plot = None
 selected_points = []
 
@@ -70,7 +68,6 @@ def write_exclude_wave(qso):
             plt.clf()  # Clear the current figure
 
             plt.step(wave,flux)
-            plt.vlines(lyman_alpha[qso],-1,5,ls='--',lw=3)
 
             if selected_points:
                 
@@ -96,7 +93,6 @@ def write_exclude_wave(qso):
     ax.set_xlabel('Wavelength')
     ax.set_ylabel('Flux')
     plt.step(wave,flux)
-    plt.vlines(lyman_alpha[qso],-1,5,ls='--',lw=3)
     cid=fig.canvas.mpl_connect('key_press_event', onclick)
 
     plt.show()
@@ -181,25 +177,8 @@ def plot_excluded_region(qso,y=1.25,dy=0.1):
     plt.show()
         
 
-qso='pg1121'
+qso='pg1259'
 
-
-# pks0405 : *
-# pg1116  : *
-# sbs1108 : *
-# pg1121  : *
-# s135712 : 5
-# pg1424  : 4
-# pg1222  : 4
-# pg0003  : 4,3
-# pks0637 : 3,3
-# h1821   : 3,3
-# 1es1553 : 3
-# 3c263   : 3
-# pg1216  : 3
-
-
-write_exclude_wave(qso)
-redshift_path(qso)
-# plot_excluded_region(qso)
- 
+# write_exclude_wave(qso)
+# redshift_path(qso)
+plot_excluded_region(qso)
