@@ -5,7 +5,9 @@ from astropy.io import ascii,fits
 import matplotlib.pyplot as plt
 from astropy.table import Table,Column
 
-lyman_alpha={'3c263': 1386.783, 'pks0637': 1723.26, 'pg1424': 1394.5, 'pg0003': 1728.589, 'pg1216': 1558.837, 's135712': 1334.647, '1es1553': 1443.929, 'sbs1108': 1778.777, 'pg1222': 1675.666, 'pg1116': 1384.073, 'h1821': 1489.173, 'pg1121': 1449.557, 'pks0405': 1418.839}
+lyman_alpha={'3c263': [1386.783], 'pks0637': [1411.471,1723.26], 'pg1424': [1394.5], 'pg0003': [1638.22,1685.027,1728.589], 'pg1216': [1558.837], 's135712': [1334.647], '1es1553': [1443.929], 'sbs1108': [1778.777], 'pg1222': [1675.666], 'pg1116': [1384.073], 'h1821': [1422.341,1489.173], 'pg1121': [1449.557], 'pks0405': [1418.839]}
+
+use_existing_points=None
 
 selected_plot = None
 selected_points = []
@@ -23,16 +25,6 @@ def write_exclude_wave(qso):
     wave=data['WAVE']
     flux=data['FLUX']
 
-    # selected_points = []
-    # selected_plot = None
-
-    # selected_x = []
-    # selected_y = []
-
-    # x_min, x_max, y_min, y_max = None, None, None, None
-
-    # i=0
-
     def onclick(event): 
 
         global i, selected_points
@@ -48,15 +40,20 @@ def write_exclude_wave(qso):
 
         if event.key=='d':
             i-=1
-            print(f'{i} - D : {selected_points[-1][0]}, {selected_points[-1][1]}')
-            selected_points.pop()
+
+            distances = [abs(point[0] - event.xdata) for point in selected_points]
+            min_distance_index = argmin(distances)
+
+            print(f'{i} - D : {selected_points[min_distance_index][0]}, {selected_points[min_distance_index][1]}')
+
+            selected_points.pop(min_distance_index)
             
         update_plot(event.key)
 
 
     def update_plot(key=0):
 
-        global selected_plot, x_min, x_max, y_min, y_max
+        global selected_plot, x_min, x_max, y_min, y_max, selected_points, use_existing_points, i
 
         if key=='q':
             plt.show(block=False)
@@ -67,15 +64,17 @@ def write_exclude_wave(qso):
                 x_min, x_max = plt.xlim()
                 y_min, y_max = plt.ylim()
 
-            plt.clf()  # Clear the current figure
+            plt.clf()  
 
             plt.step(wave,flux)
-            plt.vlines(lyman_alpha[qso],-1,5,ls='--',lw=3)
+
+            for w in lyman_alpha[qso]:
+
+                plt.vlines(w,-1,5,ls='--',lw=3)
 
             if selected_points:
                 
                 x_values, y_values = zip(*selected_points)
-
                 selected_plot = plt.scatter(x_values, y_values, color='red')
 
                 if len(selected_points)>1:
@@ -90,12 +89,32 @@ def write_exclude_wave(qso):
 
             plt.draw()
 
-
     fig,ax=plt.subplots()
 
     ax.set_xlabel('Wavelength')
     ax.set_ylabel('Flux')
     plt.step(wave,flux)
+
+    if os.path.exists(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc'):
+        use_existing_points=input('Already excluded points exist, want to use them ? (y/n) ')
+
+        if use_existing_points=='y' or use_existing_points=='':
+                        
+            exist_excluded_wave=ascii.read(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc')
+            exist_wave_l=exist_excluded_wave['WAVE1']
+            exist_wave_r=exist_excluded_wave['WAVE2']
+            y_exist=1.25
+            i=len(exist_excluded_wave)
+
+            for ind in range(len(exist_wave_l)):
+
+                selected_points.append((exist_wave_l[ind],y_exist))
+                selected_points.append((exist_wave_r[ind],y_exist))
+
+                plt.hlines(y_exist,exist_wave_l[ind],exist_wave_r[ind],color='green',lw=2)
+                plt.scatter(exist_wave_l[ind],y_exist,color='red',)
+                plt.scatter(exist_wave_r[ind],y_exist,color='red',)
+
     plt.vlines(lyman_alpha[qso],-1,5,ls='--',lw=3)
     cid=fig.canvas.mpl_connect('key_press_event', onclick)
 
@@ -181,25 +200,14 @@ def plot_excluded_region(qso,y=1.25,dy=0.1):
     plt.show()
         
 
-qso='pg1121'
+qso='pg1216'
+
+qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
 
 
-# pks0405 : *
-# pg1116  : *
-# sbs1108 : *
-# pg1121  : *
-# s135712 : 5
-# pg1424  : 4
-# pg1222  : 4
-# pg0003  : 4,3
-# pks0637 : 3,3
-# h1821   : 3,3
-# 1es1553 : 3
-# 3c263   : 3
-# pg1216  : 3
-
-
-write_exclude_wave(qso)
-redshift_path(qso)
+# write_exclude_wave(qso)
 # plot_excluded_region(qso)
+
+redshift_path(qso)
+
  

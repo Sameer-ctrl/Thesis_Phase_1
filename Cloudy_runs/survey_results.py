@@ -193,10 +193,10 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
-wave_dict={}
+wave_dict=[]
 
 for a in absorbers:
-    wave_dict[a.qso]=round((1+a.z_abs)*(1215.6701),3)
+    wave_dict.append(a.qso)
 
 print(wave_dict)
 quit()
