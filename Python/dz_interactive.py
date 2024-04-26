@@ -4,6 +4,10 @@ import os
 from astropy.io import ascii,fits
 import matplotlib.pyplot as plt
 from astropy.table import Table,Column
+import matplotlib
+
+
+# matplotlib.rcParams['backend']='TkAgg'
 
 lyman_alpha={'3c263': [1386.783], 'pks0637': [1411.471,1723.26], 'pg1424': [1394.5], 'pg0003': [1638.22,1685.027,1728.589], 'pg1216': [1558.837], 's135712': [1334.647], '1es1553': [1443.929], 'sbs1108': [1778.777], 'pg1222': [1675.666], 'pg1116': [1384.073], 'h1821': [1422.341,1489.173], 'pg1121': [1449.557], 'pks0405': [1418.839]}
 
@@ -200,14 +204,12 @@ def plot_excluded_region(qso,y=1.25,dy=0.1):
     plt.show()
         
 
+# qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
 qso='pg1216'
 
-qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
-
-
-# write_exclude_wave(qso)
+write_exclude_wave(qso)
 # plot_excluded_region(qso)
 
-redshift_path(qso)
+# redshift_path(qso)
 
  
