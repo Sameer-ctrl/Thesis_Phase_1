@@ -31,7 +31,7 @@ CII:
 	CII* 1335 doublet is also there from z=0.017241. Currently saved as 2nd comp of the line.
 
 HI:
-	
+	Good fit .Fitted with 5 comp. Comp IV col density has large error ~ 0.98 dex, comp II is very broad b~115 km/s
 
 
 

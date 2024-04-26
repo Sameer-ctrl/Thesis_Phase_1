@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  22 APR 2024 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  26 APR 2024 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,57 +1443,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 2337--2338
 LaTeX Warning: Text page 115 contains only floats.
 
 [115]
-Underfull \hbox (badness 10000) in paragraph at lines 2355--2356
+<System-Plots/PG0832+251_z=0.017505_sys_plot.png, id=489, 2384.91pt x 1634.2656pt>
+
+Overfull \hbox (42.14558pt too wide) in paragraph at lines 2361--2364
+ []|  [] |
+ []
+
+[116] [117
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2419--2420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2357--2358
+Underfull \hbox (badness 10000) in paragraph at lines 2421--2422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2360
+Underfull \hbox (badness 10000) in paragraph at lines 2423--2424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2369--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2433--2434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2369--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2433--2434
 
  []
 
-[116]
-<Distribution_NH_b.png, id=492, 1141.866pt x 612.1269pt>
-<Result_plots/NHi_vs_bHi_danforth.png, id=493, 522.5121pt x 346.896pt>
-<Result_plots/bHi_vs_BOvi_danforth.png, id=494, 991.5444pt x 652.5981pt>
-<Result_plots/T_histogram.png, id=495, 514.5624pt x 350.5095pt>
-<Result_plots/Z_vs_nH.png, id=496, 549.9747pt x 351.9549pt>
-<Result_plots/Ovi_cases.png, id=497, 521.7894pt x 354.123pt>
-<Result_plots/NHi_vs_nH.png, id=498, 535.5207pt x 351.9549pt>
-<Result_plots/NHi_vs_Z.png, id=499, 438.6789pt x 344.7279pt>
- [117] [118] [119] [120] (./Ionisation-Modelling-Results.aux)
+[118]
+<Distribution_NH_b.png, id=499, 1141.866pt x 612.1269pt>
+<Result_plots/NHi_vs_bHi_danforth.png, id=500, 522.5121pt x 346.896pt>
+<Result_plots/bHi_vs_BOvi_danforth.png, id=501, 991.5444pt x 652.5981pt>
+<Result_plots/T_histogram.png, id=502, 514.5624pt x 350.5095pt>
+<Result_plots/Z_vs_nH.png, id=503, 549.9747pt x 351.9549pt>
+<Result_plots/Ovi_cases.png, id=504, 521.7894pt x 354.123pt>
+<Result_plots/NHi_vs_nH.png, id=505, 535.5207pt x 351.9549pt>
+<Result_plots/NHi_vs_Z.png, id=506, 438.6789pt x 344.7279pt>
+ [119] [120] [121] [122] (./Ionisation-Modelling-Results.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5498 strings out of 480247
- 122207 string characters out of 5896151
+ 5504 strings out of 480247
+ 122503 string characters out of 5896151
  382197 words of memory out of 5000000
- 23266 multiletter control sequences out of 15000+600000
+ 23271 multiletter control sequences out of 15000+600000
  479397 words of font info for 65 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,67p,464b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Ionisation-Modelling-Results.pdf (121 pages, 203030 bytes).
+Output written on Ionisation-Modelling-Results.pdf (123 pages, 205112 bytes).
 PDF statistics:
- 570 PDF objects out of 1000 (max. 8388607)
- 306 compressed objects within 4 object streams
+ 577 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 561 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 566 words of extra memory for PDF output out of 10000 (max. 10000000)
 
