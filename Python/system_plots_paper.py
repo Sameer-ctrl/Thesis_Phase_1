@@ -355,7 +355,7 @@ for i,line in enumerate(lines):
 
 'single column'
 
-fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=0.02)  #y=0.18  (y=0 for lyman)
+fig.supxlabel(r'$\mathbf{v} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=0.02)  #y=0.18  (y=0 for lyman)
 fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.01, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
 plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
 plt.legend(bbox_to_anchor=(0.51,1.01),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
