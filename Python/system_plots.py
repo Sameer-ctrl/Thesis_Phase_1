@@ -5,8 +5,8 @@ import os
 
 plt.style.use('my_style.mpl')
 
-qso='pg0832'
-z_abs=0.017505
+qso='pg1222'
+z_abs=0.378389
 vlim=350
 # xticks_val=[-600,-400,-200,0,200,400,600]
 xticks_val=[-300,-200,-100,0,100,200,300]
