@@ -2360,7 +2360,7 @@ Solution : $n_H$ = -3.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -1.7 $\pm$ 0.02 \newline
     \vspace{-20mm}
     \hspace*{-35mm}
     \captionsetup{oneside,margin={0cm,35mm}}
-    \includegraphics[width=1.25\linewidth]{System-Plots/PG0832+251_z=0.017505_sys_plot.png}
+    \includegraphics[width=1.25\linewidth,draft=False]{System-Plots/PG0832+251_z=0.017505_sys_plot.png}
 \end{figure}
 
 \end{landscape}
@@ -2374,8 +2374,8 @@ Solution : $n_H$ = -3.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -1.7 $\pm$ 0.02 \newline
     \head{Ion} & \head{v (km s\textsuperscript{$\mathbf{-1}$})} & \head{b (km s\textsuperscript{$\mathbf{-1}$})} & \head{log [N cm\textsuperscript{$\mathbf{-2}$}]}
     \tabularnewline \tabularnewline \hline \tabularnewline 
  
-    \ion{l}{ii}   &    -58 $\pm$ 7   &    21 $\pm$ 6    &     12.76 $\pm$ 0.08 \\
-    \ion{l}{ii}   &    -16 $\pm$ 4   &    12 $\pm$ 4    &     13.04 $\pm$ 0.11 \\
+    \ion{Al}{ii}   &    -58 $\pm$ 7   &    21 $\pm$ 6    &     12.76 $\pm$ 0.08 \\
+    \ion{Al}{ii}   &    -16 $\pm$ 4   &    12 $\pm$ 4    &     13.04 $\pm$ 0.11 \\
     \ion{O}{i}   &    -50 $\pm$ 2   &    4 $\pm$ 2    &     15.28 $\pm$ 0.41 \\
     \ion{O}{i}   &    -11 $\pm$ 1   &    7 $\pm$ 3    &     15.76 $\pm$ 0.28 \\
     \ion{Fe}{ii}   &    -12 $\pm$ 1   &    12 $\pm$ 3    &     14.16 $\pm$ 0.07 \\
@@ -2409,8 +2409,128 @@ Solution : $n_H$ = -3.44 $\pm$ 0.02 \hspace{10mm} $Z$ = -1.7 $\pm$ 0.02 \newline
 \ion{C}{ii*} : it's a line not contamination.
 
 
+N(\ion{H}{I}) = 15.82  \\ 
+
+Solution : $n_H$ = -4.09 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.4 $\pm$ 0.07 \newline  
+
+Excluding \ion{O}{i} : \\
+
+Solution : -4.20 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.42 $\pm$ 0.07 \newline
+
+Excluding \ion{Al}{ii} : \\
+
+$n_H$ = -4.93 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.70 $\pm$ 0.11 \newline
+
+NOTE : MCMC samples going below log $n_H \ < 5$, not good solution
+
+log $Z_{ref}$=1 \\
+
+Solution : $n_H$ = -4.21 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.67 $\pm$ 0.06 \newline  
+
+Excluding \ion{O}{i} : \\
+
+Solution : $n_H$ = -4.35 $\pm$ 0.05 \hspace{10mm} $Z$ = 1.61 $\pm$ 0.06
+
+Excluding \ion{Al}{ii} : \\
+
+Solution : $n_H$ = -4.93 $\pm$ 0.04 \hspace{10mm} $Z$ = 1.33 $\pm$ 0.09
+
+NOTE : MCMC samples going below log $n_H \ < 5$, not good solution
+
+N(\ion{H}{I}) = 14.79   \\ 
+
+Solution : $n_H$ = -3.09 $\pm$ 0.02 \hspace{10mm} $Z$ = 2.0 $\pm$ 0.0 \newline  
+
+Excluding \ion{O}{i}, \ion{Fe}{II} and \ion{Al}{ii} \\
+
+Solution : $n_H$ = -3.34 $\pm$ 0.03 \hspace{10mm} $Z$ = 1.99 $\pm$ 0.02 \\
+
+log $Z_{ref}$=1 \\
+
+Solution : $n_H$ = -3.74 $\pm$ 0.02 \hspace{10mm} $Z$ = 2.0 $\pm$ 0.0 \newline  
+
+Excluding \ion{O}{i}, \ion{Fe}{II} and \ion{Al}{ii} \\
+
+Solution : $n_H$ = -4.11 $\pm$ 0.02 \hspace{10mm} $Z$ = 2.0 $\pm$ 0.01
+
+NOTE : log Z coming 2
+
+N(\ion{H}{I}) = 18.22   \\ 
+
+Solution : $n_H$ = -4.68 $\pm$ 0.07 \hspace{10mm} $Z$ = -2.97 $\pm$ 0.08 \newline  
+
+NOTE : Used logZ range from -4 beacuse of low Z \\
 
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png}
+    \caption{N(\ion{H}{i})=15.82, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png}
+    \caption{N(\ion{H}{i})=15.82, log $Z_{ref}$=1}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png}
+    \caption{N(\ion{H}{i})=15.82, excluding \ion{O}{I} log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png}
+    \caption{N(\ion{H}{i})=15.82, excluding \ion{O}{I} log $Z_{ref}$=1}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png}
+    \caption{N(\ion{H}{i})=15.82, excluding \ion{Al}{ii} log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png}
+    \caption{N(\ion{H}{i})=15.82, excluding \ion{Al}{ii} log $Z_{ref}$=1}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png}
+    \caption{N(\ion{H}{i})=14.79, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png}
+    \caption{N(\ion{H}{i})=14.79, log $Z_{ref}$=1}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png}
+    \caption{N(\ion{H}{i})=14.79, excluding \ion{O}{i}, \ion{Fe}{II} and \ion{Al}{ii}, log $Z_{ref}$=-1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png}
+    \caption{N(\ion{H}{i})=14.79, excluding \ion{O}{i}, \ion{Fe}{II} and \ion{Al}{ii}, log $Z_{ref}$=1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png}
+    \caption{N(\ion{H}{i})=18.22, log $Z_{ref}$=-1}
+\end{figure}
 
 
 

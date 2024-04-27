@@ -12,18 +12,18 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='3c57'
-z_abs=0.077430
-comp='I'
+qso='pg0832'
+z_abs=0.017505
+comp='II' 
 
 
-ions=['C+3','Si+2','Si+3']
-col_den_dict=[[13.43,0.08],[12.67,0.06],[12.54,0.09]]
+ions=['C+','C+3','Si+','Si+2','Si+3','O','Fe+','Al+']
+col_den_dict=[[15.2,0.1],[14.59,0.08],[14.02,0.13],[14.67,0.06],[13.68,0.11],[15.76,0.28],[14.16,0.07],[13.04,0.11]]
 
 non_detc_ions=[]
 non_detc_col_den=[]
 
-N_Hi=13.30
+N_Hi=14.79
 logZ_ref=1
 
 observations=dict(zip(ions,col_den_dict))
@@ -42,7 +42,7 @@ data=Table(hdu[1].data)
 
 log_nH=data['log_nH']
 lognH_range=[-5,1]
-logZ_range=[-3,2]
+logZ_range=[-4,2]
 
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
