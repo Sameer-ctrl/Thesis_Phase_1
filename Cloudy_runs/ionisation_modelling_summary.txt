@@ -1,0 +1,156 @@
+3c263 : 0.14
+
+-BLA  : 1
+-OVI  : CI
+-comp : 1
+
+pks0637 : 0.16
+
+-BLA  : 2
+-OVI  : CI
+-comp : 1
+
+pks0637 : 0.41
+
+-BLA  : 2
+-OVI  : CI
+-comp : 1
+
+pg1424 : 0.14
+
+-BLA  : 1 (b=40)
+-OVI  : CI,CI
+-comp : 2
+
+pg0003 : 0.347
+
+-BLA  : 1
+-OVI  : CI
+-comp : 1
+
+pg0003 : 0.38
+
+-BLA  : 1 (b=40)
+-OVI  : Uncertain*
+-comp : 1
+
+NOTE : * - not good solution.
+
+pg0003 : 0.42
+
+-BLA  : 2
+-OVI  : CI
+-comp : 1
+
+NOTE : Used broad component for modelling, has close (delta v = 14 km/s) narrow component also
+
+pg1216 : 0.28
+
+-BLA  : 2
+-OVI  : CI,CI
+-comp : 2(1*)
+
+NOTE : Modelled for two comp but, one was with broad and for this component one ion was used from other comp. So effectively 1 comp.
+* - effectively
+
+s135712 : 0.09
+
+-BLA  : 1
+-OVI  : CI,CI
+-comp : 2
+
+NOTE : One of the modelled comp is broad
+
+1es1553 : 0.18
+
+-BLA  : 1 
+-OVI  : CI,PI
+-comp : 2
+
+NOTE : One of the modelled comp is broad, in which OVI is overproduced unlike other systems so far where OVI is underproduced
+
+sbs1108 : 0.46
+
+-BLA  : 0 (max b is 22)
+-OVI  : CI, Uncertain (tentative)*
+-comp : 2
+
+NOTE : One of the modelled comp is broad
+* : Too many ions (7), though 3 of the ions could be explained, and OVI is underproduced so could be tentatively CI also.
+
+pg1222 : 0.37
+
+-BLA  : 3 (two are at v= -353 and -227)*
+-OVI  : CI
+-comp : 1
+
+NOTE : Modelled comp is broad
+* HI fits are preliminary
+
+pg1116 : 0.13
+
+-BLA  : 1
+-OVI  : Uncertain*
+-comp : 1
+
+NOTE : modelled comp is broad, but has nearby narrow comp (delta v =3)
+* - too many ions (8) - however, OVI is still underproduced, so could be tentatively CI
+
+h1821 : 0.17
+
+-BLA  : 1
+-OVI  : CI,CI*
+-comp : 2
+
+NOTE : modelled comp is broad, which shows CI, and the other narrower comp, one of the ions is separated by 70 km/s from HI.
+And ions in both the component are not aligned very well.
+* - predicted OVI col density is just little (~0.2 dex) less than observed.
+
+h1821 : 0.22
+
+-BLA  : 2 (one at v=276)
+-OVI  : CI,CI
+-comp : 2
+
+NOTE : little ambiguity on ion alignment could be there
+
+
+pg1121 : 0.19
+
+-BLA  : 1
+-OVI  : CI,CI
+-comp : 2
+
+NOTE : One of the modelled comp is broad, both the solution are not much good, but could be said that it is CI.
+
+pks0405 : 0.167
+
+-BLA  : 1 (at v=-158)
+-OVI  : CI, Uncertain*
+-comp : 2
+
+* - not a good solution
+
+
+Summary : 
+
+OVI Uncertain : 4 (2 tentatively CI, 2 not good solution)
+OVI CI : 20
+OVI PI : 1
+BLA -ve : 1 (2 have b=40) 
+
+
+Uncertain cases :
+
+pg0003 : 0.38 : b=40 : not good solution
+sbs1108 : 0.46 : max b is 22 : but one comp is CI and other is tentatively CI (too many ions)
+pg1116 : 0.13 : BLA 1 : tentatively CI (too many ions)
+pks0405 : 0.167 : BLA 1 : One comp is CI, other is not good solution
+
+PI case :
+
+1es1553 : 0.18 : 2 comp, one is CI and one is PI
+
+
+
+
