@@ -193,13 +193,7 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
-wave_dict=[]
 
-for a in absorbers:
-    wave_dict.append(a.qso)
-
-print(wave_dict)
-quit()
 # for a in absorbers:
 
 #     BLA=a.BLA_obj
@@ -437,7 +431,7 @@ class BLA():
 
     def __init__(self,qso,z_abs,nH,nH_err,b_H,b_H_err,n_OVI,n_OVI_err,b_OVI,b_OVI_err,n_ions,bla):
 
-        self.los=qso
+        self.qso=qso
         self.z=z_abs
         self.name=f'{qso}_z={z_abs}'
         self.nH=nH
@@ -456,7 +450,7 @@ absorbers=[
     BLA('pks0637',0.161064,13.60,0.06,162,21,14.02,0.03,48,5,3,True),
     BLA('pks0637',0.417539,14.61,0.07,46,4,14.19,0.05,42,6,3,True),
     BLA('pg1424',0.147104,15.44,0.14,29,2,13.73,0.11,16,6,4,False),
-    BLA('pg0003',0.347579,14.20,0.02,63,1,14.25,0.02,30,2,5,True),                        
+    BLA('pg0003',0.347586,14.20,0.02,63,1,14.25,0.02,30,2,5,True),                        
     BLA('pg0003',0.386089,14.1,0.05,40,4,13.71,0.06,25,4,4,False),
     BLA('pg0003',0.421923,14.17,0.04,64,3,14.27,0.02,27,1,3,True),
     BLA('pg1216',0.282286,15.1,0.05,52,3,13.93,0.05,58,9,3,True),
@@ -479,6 +473,7 @@ b_OVI_err=zeros(len(absorbers))
 n_OVI=zeros(len(absorbers))
 n_ions=zeros(len(absorbers))
 is_BLA=zeros(len(absorbers))
+qso=[]
 
 for i,a in enumerate(absorbers):
     b_H[i]=a.b_H
@@ -491,6 +486,13 @@ for i,a in enumerate(absorbers):
     n_ions=a.n_ions
     is_BLA[i]=a.is_BLA
 
+    qso.append(a.qso)
+
+print(qso)
+print(list(b_H))
+print(list(n_H))
+
+quit()
 m=m_p+m_e
 
 T_all=((8*m)/(15*k))*((b_H*1000)**2-(b_OVI*1000)**2)

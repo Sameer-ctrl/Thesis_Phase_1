@@ -150,6 +150,8 @@ def write_exclude_wave(qso):
     tab.add_columns([wave_exc_l_col,wave_exc_r_col])
     tab.write(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc', format='ascii', overwrite=True)
 
+v_z=lambda z : 3e5*(((1+z)**2-1)/((1+z)**2+1))  # v at z
+z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
 
 def redshift_path(qso,wave_min=1220,v_lim=5000):
 
@@ -163,9 +165,6 @@ def redshift_path(qso,wave_min=1220,v_lim=5000):
 
     wave_l=excluded_wave['WAVE1']
     wave_r=excluded_wave['WAVE2']
-
-    v_z=lambda z : 3e5*(((1+z)**2-1)/((1+z)**2+1))  # v at z
-    z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
 
     z_lim=z_v(v_z(z_em)-v_lim)
 
@@ -207,9 +206,9 @@ def plot_excluded_region(qso,y=1.25,dy=0.1):
 # qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
 qso='pg1216'
 
-write_exclude_wave(qso)
+# write_exclude_wave(qso)
 # plot_excluded_region(qso)
 
-# redshift_path(qso)
+redshift_path(qso)
 
  
