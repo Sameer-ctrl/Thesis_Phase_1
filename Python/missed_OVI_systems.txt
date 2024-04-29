@@ -1,0 +1,51 @@
+pg1424
+OVI and ions : 0.146789 : ['OVI 1032', 'OVI 1038', 'CIV 1548', 'SiIV 1393', 'SiIII 1206', 'OVI 1032', 'NV 1238', 'NV 1242', 'CIV 1548', 'CIV 1550', 'SiIV 1393', 'SiIII 1206'] : {'SiIII', 'OVI', 'NV', 'SiIV', 'CIV'} : 5
+
+sbs1108
+OVI and ions : 0.463201 : ['OVI 1032', 'OVI 1038', 'OI 988', 'NIII 989', 'NIII 989', 'CIII 977', 'CII 1036', 'SiIII 1206', 'SiIII 1206', 'SiII 1193', 'SiII 1190'] : {'NIII', 'SiIII', 'OVI', 'OI', 'CIII', 'CII', 'SiII'} : 7
+
+pks0405
+OVI and ions : 0.167125 : ['OVI 1032', 'NV 1238', 'NV 1242', 'OVI 1032', 'OVI 1038', 'NV 1242', 'CIII 977', 'SiIV 1393', 'SiIV 1402', 'OVI 1032', 'OVI 1038', 'NV 1238', 'CII 1334', 'CII 1036', 'SiIII 1206', 'SiII 1190', 'OVI 1032', 'OVI 1038', 'OI 1302', 'NV 1238', 'NV 1242', 'NIII 989', 'NIII 989', 'NII 1083', 'NII 1083', 'CIII 977', 'CII 1334', 'CII 1036', 'SiIV 1393', 'SiIV 1402', 'SiIII 1206', 'SiII 1526', 'SiII 1304', 'SiII 1260', 'SiII 1260', 'SiII 1193', 'SiII 1193', 'SiII 1190'] : {'NIII', 'SiIII', 'OVI', 'OI', 'CIII', 'NII', 'NV', 'CII', 'SiIV', 'SiII'} : 10
+
+pks0637
+OVI and ions : 0.161068 : ['OVI 1032', 'OVI 1038', 'NV 1238', 'SiIII 1206'] : {'OVI', 'SiIII', 'NV'} : 3
+OVI and ions : 0.417573 : ['OVI 1032', 'OVI 1038', 'CIII 977', 'SiIII 1206'] : {'OVI', 'CIII', 'SiIII'} : 3
+
+pg0003
+OVI and ions : 0.386094 : ['OVI 1032', 'OVI 1032', 'OVI 1038', 'OVI 1038', 'OIII 832', 'NV 1238', 'CIII 977'] : {'OVI', 'CIII', 'OIII', 'NV'} : 4
+OVI and ions : 0.421880 : ['OVI 1032', 'OVI 1038', 'OIII 832', 'CIII 977'] : {'OVI', 'CIII', 'OIII'} : 3
+OVI and ions : 0.347758
+OVI and ions : 0.365706
+
+s135712
+OVI and ions : 0.097767 : ['OVI 1038', 'CIV 1548', 'CIV 1548', 'CIV 1550', 'CII 1334', 'CII 1036', 'SiIV 1393', 'SiIV 1393', 'SiIV 1402', 'SiIV 1402', 'SiIII 1206', 'SiIII 1206'] : {'SiIII', 'OVI', 'CII', 'SiIV', 'CIV'} : 5
+
+pg1216
+OVI and ions : 0.282195 : ['OVI 1032', 'OVI 1032', 'OVI 1038', 'CIII 977', 'CIII 977', 'SiIII 1206'] : {'OVI', 'CIII', 'SiIII'} : 3
+
+1es1553
+OVI and ions : 0.187731 : ['OVI 1032', 'OVI 1038', 'NV 1238', 'NV 1242', 'CIII 977', 'OVI 1032', 'OVI 1038', 'NV 1238', 'NV 1242', 'CIII 977'] : {'OVI', 'CIII', 'NV'} : 3
+
+pg1222
+OVI and ions : 0.378600 : ['OVI 1032', 'OVI 1032', 'OVI 1038', 'CIII 977', 'OVI 1032', 'OVI 1038', 'CIII 977', 'OVI 1032', 'OVI 1032', 'OVI 1038', 'OVI 1038', 'OIII 832', 'CIII 977', 'CIII 977', 'SiIII 1206'] : {'OVI', 'CIII', 'SiIII', 'OIII'} : 4
+OVI and ions : 0.423067 : ['CIII 977', 'CII 1036', 'SiIII 1206', 'NII 915', 'OVI 1032', 'OVI 1038', 'OIII 832', 'NIII 989', 'CIII 977', 'CII 1036', 'CII 903', 'SiIII 1206', 'SiII 1260', 'SiII 1193', 'SiII 1190', 'OII 832', 'OII 833', 'OII 834', 'OVI 1032', 'OVI 1038', 'CIII 977'] : {'NIII', 'SiIII', 'OVI', 'OII', 'CIII', 'NII', 'CII', 'SiII', 'OIII'} : 9
+OVI and ions : 0.349616
+
+h1821
+OVI and ions : 0.170062 : ['OVI 1032', 'NV 1238', 'NV 1242', 'SiIII 1206', 'OVI 1032'] : {'OVI', 'SiIII', 'NV'} : 3
+OVI and ions : 0.224832 : ['OVI 1032', 'OVI 1032', 'OVI 1038', 'OVI 1038', 'CIII 977', 'CIII 977', 'SiIII 1206', 'OVI 1032', 'OVI 1038'] : {'OVI', 'CIII', 'SiIII'} : 3
+
+3c263
+OVI and ions : 0.140754 : ['OVI 1032', 'OVI 1038', 'CIV 1548', 'CIV 1550', 'SiIII 1206'] : {'OVI', 'CIV', 'SiIII'} : 3
+OVI and ions : 0.1136
+OVI and ions : 0.4464
+
+pg1121
+OVI and ions : 0.192434 : ['OVI 1032', 'CIII 977', 'CII 1334', 'CII 1036', 'SiIV 1393', 'SiIII 1206', 'SiII 1260', 'SiII 1193', 'SiII 1190'] : {'SiIII', 'OVI', 'CIII', 'CII', 'SiIV', 'SiII'} : 6
+
+pg1116
+OVI and ions : 0.138527 : ['OVI 1032', 'OVI 1038', 'NV 1238', 'NII 1083', 'CIV 1548', 'CIV 1550', 'CII 1334', 'CII 1036', 'SiIV 1393', 'SiIII 1206', 'SiII 1260', 'SiII 1260', 'SiII 1193', 'SiII 1190', 'PII 1152'] : {'SiIII', 'PII', 'OVI', 'NII', 'NV', 'CII', 'SiIV', 'CIV', 'SiII'} : 9
+OVI and ions : 0.166907
+
+rxj2154
+OVI and ions : 0.156863 : ['OVI 1032', 'OVI 1038', 'SiIII 1206', 'OVI 1032', 'NV 1238'] : {'OVI', 'SiIII', 'NV'} : 3
