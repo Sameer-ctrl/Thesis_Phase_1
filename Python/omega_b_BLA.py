@@ -39,8 +39,6 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
         return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{a[0]}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{toRoman(1)}}}$}}'
 
 
-
-
 class ion():
 
     def __init__(self,name,v,b,logN):
@@ -243,15 +241,22 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
-BLA_dict={}
+qso=unique([a.qso for a in absorbers])
+
+BLA_dict={q:[[],[]] for q in qso}
+
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
-    print(a.qso)
-    print(BLA_obj.b)
-    print(BLA_obj.logN,'\n')
+    b=BLA_obj.b
+    logN=BLA_obj.logN
 
-quit()
+    for i in range(len(b)):
+        BLA_dict[a.qso][0].append(b[i][0])
+        BLA_dict[a.qso][1].append(logN[i][0])
+
+BLA_dict.pop('sbs1108')
+
 h=0.7
 H0=100*h    #km/s/ Mpc
 mu=1.3
