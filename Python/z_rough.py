@@ -9,6 +9,8 @@ v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))  # v at z
 err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
 z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
 
+print(v_z(0.158645)-v_z(0.156863))
+
 def integrand_X(z,omega_m=0.31,omega_lambda=0.69):
 
     return ((1+z)**2)/sqrt(omega_lambda+(omega_m*((1+z)**3)))
@@ -106,19 +108,13 @@ def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
 
     return delta_X,dz_unblocked,dzb,dz
 
-qso=unique(['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405'])
+# qso=unique(['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405'])
 
-for q in qso:
-    print(redshift_path_lambda_CDM(q),redshift_path_qo(q)[0])
+# for q in qso:
 
-# print(redshift_path_qo(qso)[0])
+#     print(redshift_path_lambda_CDM(q),redshift_path_qo(q)[0])
 
-
-
-
-
-
-quit()
+# quit()
 
 # files=os.listdir('Files_n_figures/sys_plots')
 # files=sorted(files)

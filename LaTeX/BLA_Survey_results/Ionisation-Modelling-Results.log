@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  27 APR 2024 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  30 APR 2024 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,12 +268,16 @@ LaTeX Warning: No \author given.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 <System-Plots/3C263_z=0.140756_sys_plot.png, id=17, 2384.91pt x 1634.2656pt>
+File: System-Plots/3C263_z=0.140756_sys_plot.png Graphic file (type png)
+<use System-Plots/3C263_z=0.140756_sys_plot.png>
+Package pdftex.def Info: System-Plots/3C263_z=0.140756_sys_plot.png  used on input line 55.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 53--56
- []|  [] |
+ []|  [] 
  []
 
-[2]
+[2 <./System-Plots/3C263_z=0.140756_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
@@ -303,22 +307,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
 ]
 <Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=-1.png, id=28, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=-1.png  used on input line 99.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
 <Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1.png, id=29, 992.9898pt x 610.6815pt>
- [4]
-<Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png, id=33, 992.9898pt x 610.6815pt>
- [5]
+File: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1.png  used on input line 105.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [4 <./Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=-1.png> <./Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1.png>]
+<Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png, id=35, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png  used on input line 115.
+(pdftex.def)             Requested size: 430.00462pt x 264.45158pt.
+ [5 <./Ionisation-Modelling-Plots/3c263-z=0.140756-compI_logZ=1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
 [6]
-<System-Plots/PKS0637-752_z=0.161064_sys_plot.png, id=41, 2384.91pt x 1634.2656pt>
+<System-Plots/PKS0637-752_z=0.161064_sys_plot.png, id=44, 2384.91pt x 1634.2656pt>
+File: System-Plots/PKS0637-752_z=0.161064_sys_plot.png Graphic file (type png)
+<use System-Plots/PKS0637-752_z=0.161064_sys_plot.png>
+Package pdftex.def Info: System-Plots/PKS0637-752_z=0.161064_sys_plot.png  used on input line 146.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 144--147
- []|  [] |
+ []|  [] 
  []
 
-[7]
+[7 <./System-Plots/PKS0637-752_z=0.161064_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
@@ -347,11 +367,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
 
 ]
-<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png, id=48, 1178.001pt x 637.4214pt>
-<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png, id=49, 1001.6622pt x 610.6815pt>
- [9]
-<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png, id=53, 992.9898pt x 610.6815pt>
- [10]
+<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png, id=52, 1178.001pt x 637.4214pt>
+File: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png  used on input line 189.
+(pdftex.def)             Requested size: 365.50655pt x 197.77367pt.
+<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png, id=53, 1001.6622pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png  used on input line 195.
+(pdftex.def)             Requested size: 365.50655pt x 222.83633pt.
+ [9 <./Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=-1.png> <./Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1.png>]
+<Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png, id=59, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png  used on input line 205.
+(pdftex.def)             Requested size: 430.00462pt x 264.45158pt.
+ [10 <./Ionisation-Modelling-Plots/pks0637-z=0.161064-compI_logZ=1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
@@ -362,13 +394,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--214
  []
 
 [11]
-<System-Plots/PKS0637-752_z=0.417539_sys_plot.png, id=61, 2384.91pt x 1634.2656pt>
+<System-Plots/PKS0637-752_z=0.417539_sys_plot.png, id=68, 2384.91pt x 1634.2656pt>
+File: System-Plots/PKS0637-752_z=0.417539_sys_plot.png Graphic file (type png)
+<use System-Plots/PKS0637-752_z=0.417539_sys_plot.png>
+Package pdftex.def Info: System-Plots/PKS0637-752_z=0.417539_sys_plot.png  used on input line 234.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 232--235
- []|  [] |
+ []|  [] 
  []
 
-[12]
+[12 <./System-Plots/PKS0637-752_z=0.417539_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
@@ -378,7 +414,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
-<Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png, id=66, 992.9898pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png, id=74, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png  used on input line 267.
+(pdftex.def)             Requested size: 430.00462pt x 264.45158pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 265--268
 
@@ -387,9 +427,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--268
 [13
 
 
-]
-<Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png, id=70, 992.9898pt x 610.6815pt>
- [14]
+ <./Ionisation-Modelling-Plots/pks0637-z=0.417539-compI.png>]
+<Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png, id=79, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png  used on input line 277.
+(pdftex.def)             Requested size: 430.00462pt x 264.45158pt.
+ [14 <./Ionisation-Modelling-Plots/pks0637-z=0.417539-compI_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 285--287
 
  []
@@ -400,13 +444,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--287
  []
 
 [15]
-<System-Plots/PG1424+240_z=0.147104_sys_plot.png, id=77, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1424+240_z=0.147104_sys_plot.png, id=87, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1424+240_z=0.147104_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1424+240_z=0.147104_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1424+240_z=0.147104_sys_plot.png  used on input line 305.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 303--306
- []|  [] |
+ []|  [] 
  []
 
-[16]
+[16 <./System-Plots/PG1424+240_z=0.147104_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
@@ -440,12 +488,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--349
 
 
 ]
-<Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png, id=84, 1168.6059pt x 637.4214pt>
-<Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png, id=85, 992.9898pt x 610.6815pt>
- [18]
-<Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png, id=90, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png, id=91, 992.9898pt x 610.6815pt>
- [19]
+<Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png, id=95, 1168.6059pt x 637.4214pt>
+File: Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png  used on input line 353.
+(pdftex.def)             Requested size: 344.005pt x 187.6389pt.
+<Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png, id=96, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png  used on input line 358.
+(pdftex.def)             Requested size: 344.005pt x 211.56126pt.
+ [18 <./Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII.png> <./Ionisation-Modelling-Plots/pg1424-z=0.147104-compII.png>]
+<Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png, id=103, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png  used on input line 368.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png, id=104, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png  used on input line 374.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [19 <./Ionisation-Modelling-Plots/pg1424-z=0.147104-compIII_logZ=-1_non_detection.png> <./Ionisation-Modelling-Plots/pg1424-z=0.147104-compII_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
@@ -456,18 +520,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--384
  []
 
 [20]
-<System-Plots/PG0003+158_z=0.386089_sys_plot.png, id=98, 2384.91pt x 1634.2656pt>
+<System-Plots/PG0003+158_z=0.386089_sys_plot.png, id=113, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG0003+158_z=0.386089_sys_plot.png Graphic file (type png)
+<use System-Plots/PG0003+158_z=0.386089_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG0003+158_z=0.386089_sys_plot.png  used on input line 403.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 401--404
- []|  [] |
+ []|  [] 
  []
 
-[21]
+[21 <./System-Plots/PG0003+158_z=0.386089_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-<Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png, id=102, 992.9898pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png, id=118, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png  used on input line 436.
+(pdftex.def)             Requested size: 430.00462pt x 264.45158pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 434--437
 
@@ -476,9 +548,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--437
 [22
 
 
-]
-<Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png, id=106, 978.5358pt x 610.6815pt>
- [23]
+ <./Ionisation-Modelling-Plots/pg0003-z=0.386089-compI.png>]
+<Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png, id=123, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png  used on input line 445.
+(pdftex.def)             Requested size: 430.00462pt x 268.35591pt.
+ [23 <./Ionisation-Modelling-Plots/pg0003-z=0.386089-compI_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
@@ -489,13 +565,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--455
  []
 
 [24]
-<System-Plots/PG0003+158_z=0.421923_sys_plot.png, id=114, 2384.91pt x 1634.2656pt>
+<System-Plots/PG0003+158_z=0.421923_sys_plot.png, id=132, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG0003+158_z=0.421923_sys_plot.png Graphic file (type png)
+<use System-Plots/PG0003+158_z=0.421923_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG0003+158_z=0.421923_sys_plot.png  used on input line 473.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 471--474
- []|  [] |
+ []|  [] 
  []
 
-[25]
+[25 <./System-Plots/PG0003+158_z=0.421923_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
@@ -505,7 +585,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 503--504
 
  []
 
-<Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png, id=118, 978.5358pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png, id=137, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png  used on input line 507.
+(pdftex.def)             Requested size: 430.00462pt x 268.35591pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 505--508
 
@@ -514,9 +598,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 505--508
 [26
 
 
-]
-<Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png, id=122, 978.5358pt x 610.6815pt>
- [27]
+ <./Ionisation-Modelling-Plots/pg0003-z=0.421923-compII.png>]
+<Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png, id=142, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png  used on input line 516.
+(pdftex.def)             Requested size: 430.00462pt x 268.35591pt.
+ [27 <./Ionisation-Modelling-Plots/pg0003-z=0.421923-compII_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 523--525
 
  []
@@ -527,13 +615,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 523--525
  []
 
 [28]
-<System-Plots/PG1216+069_z=0.282286_sys_plot.png, id=129, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1216+069_z=0.282286_sys_plot.png, id=150, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1216+069_z=0.282286_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1216+069_z=0.282286_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1216+069_z=0.282286_sys_plot.png  used on input line 545.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 543--546
- []|  [] |
+ []|  [] 
  []
 
-[29]
+[29 <./System-Plots/PG1216+069_z=0.282286_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
@@ -567,16 +659,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
 
 ]
-<Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png, id=137, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png, id=138, 978.5358pt x 610.6815pt>
- [31]
-<Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png, id=142, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png, id=143, 978.5358pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png, id=159, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png  used on input line 596.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+<Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png, id=160, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png  used on input line 602.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [31 <./Ionisation-Modelling-Plots/pg1216-z=0.282286-compI.png> <./Ionisation-Modelling-Plots/pg1216-z=0.282286-compII.png>]
+<Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png, id=166, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png  used on input line 613.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+<Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png, id=167, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png  used on input line 619.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32]
+[32 <./Ionisation-Modelling-Plots/pg1216-z=0.282286-compI_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 626--628
 
  []
@@ -586,15 +694,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 626--628
 
  []
 
-[33]
-<System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png, id=150, 2384.91pt x 1634.2656pt>
+[33 <./Ionisation-Modelling-Plots/pg1216-z=0.282286-compII_logZ=-1_non_detection.png>]
+<System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png, id=176, 2384.91pt x 1634.2656pt>
 File: System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png Graphic file (type png)
 <use System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png>
 Package pdftex.def Info: System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png  used on input line 647.
 (pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 645--648
- []|  [] |
+ []|  [] 
  []
 
 [34 <./System-Plots/SDSSJ135712.61+170444_z=0.097869_sys_plot.png>]
@@ -631,14 +739,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 701--702
 
 
 ]
-<Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png, id=158, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png, id=159, 992.9898pt x 610.6815pt>
- [36]
-<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png, id=164, 992.9898pt x 610.6815pt>
- [37]
-<Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png, id=168, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png, id=169, 992.9898pt x 610.6815pt>
- [38]
+<Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png, id=184, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png  used on input line 710.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png, id=185, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png  used on input line 716.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [36 <./Ionisation-Modelling-Plots/s135712-z=0.097869-compII.png> <./Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=-1.png>]
+<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png, id=192, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png  used on input line 724.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [37 <./Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1.png>]
+<Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png, id=197, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png  used on input line 735.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png, id=198, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png  used on input line 741.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [38 <./Ionisation-Modelling-Plots/s135712-z=0.097869-compII_logZ=-1_non_detection.png> <./Ionisation-Modelling-Plots/s135712-z=0.097869-compIII_logZ=1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 747--749
 
  []
@@ -649,13 +777,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 747--749
  []
 
 [39]
-<System-Plots/1ES1553+113_z=0.187764_sys_plot.png, id=176, 2384.91pt x 1634.2656pt>
+<System-Plots/1ES1553+113_z=0.187764_sys_plot.png, id=207, 2384.91pt x 1634.2656pt>
+File: System-Plots/1ES1553+113_z=0.187764_sys_plot.png Graphic file (type png)
+<use System-Plots/1ES1553+113_z=0.187764_sys_plot.png>
+Package pdftex.def Info: System-Plots/1ES1553+113_z=0.187764_sys_plot.png  used on input line 768.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 766--769
- []|  [] |
+ []|  [] 
  []
 
-[40]
+[40 <./System-Plots/1ES1553+113_z=0.187764_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 800--801
 
  []
@@ -689,12 +821,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 812--814
 
 
 ]
-<Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png, id=183, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png, id=184, 992.9898pt x 610.6815pt>
- [42]
-<Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png, id=189, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png, id=190, 978.5358pt x 610.6815pt>
- [43]
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png, id=215, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png  used on input line 821.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png, id=216, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png  used on input line 827.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [42 <./Ionisation-Modelling-Plots/1es1553-z=0.187764-compI.png> <./Ionisation-Modelling-Plots/1es1553-z=0.187764-compII.png>]
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png, id=223, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png  used on input line 838.
+(pdftex.def)             Requested size: 344.005pt x 214.68288pt.
+<Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png, id=224, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png  used on input line 844.
+(pdftex.def)             Requested size: 344.005pt x 214.68288pt.
+ [43 <./Ionisation-Modelling-Plots/1es1553-z=0.187764-compI_logZ=1_non_detection.png> <./Ionisation-Modelling-Plots/1es1553-z=0.187764-compII_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 851--853
 
  []
@@ -705,13 +853,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 851--853
  []
 
 [44]
-<System-Plots/SBS1108+560_z=0.463207_sys_plot.png, id=197, 2384.91pt x 1634.2656pt>
+<System-Plots/SBS1108+560_z=0.463207_sys_plot.png, id=233, 2384.91pt x 1634.2656pt>
+File: System-Plots/SBS1108+560_z=0.463207_sys_plot.png Graphic file (type png)
+<use System-Plots/SBS1108+560_z=0.463207_sys_plot.png>
+Package pdftex.def Info: System-Plots/SBS1108+560_z=0.463207_sys_plot.png  used on input line 871.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 869--872
- []|  [] |
+ []|  [] 
  []
 
-[45]
+[45 <./System-Plots/SBS1108+560_z=0.463207_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 909--910
 
  []
@@ -765,12 +917,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 936--939
  []
 
 [47]
-<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png, id=207, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png, id=208, 978.5358pt x 610.6815pt>
- [48]
-<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png, id=213, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png, id=214, 978.5358pt x 610.6815pt>
- [49]
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png, id=244, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png  used on input line 946.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png, id=245, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png  used on input line 953.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [48 <./Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=-1.png> <./Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=-1.png>]
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png, id=252, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png  used on input line 961.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+<Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png, id=253, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png  used on input line 968.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [49 <./Ionisation-Modelling-Plots/sbs1108-z=0.463207-compIII_logZ=1.png> <./Ionisation-Modelling-Plots/sbs1108-z=0.463207-compII_logZ=1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 975--977
 
  []
@@ -781,18 +949,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 975--977
  []
 
 [50]
-<System-Plots/PG1222+216_z=0.378389_sys_plot.png, id=222, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1222+216_z=0.378389_sys_plot.png, id=263, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1222+216_z=0.378389_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1222+216_z=0.378389_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1222+216_z=0.378389_sys_plot.png  used on input line 997.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 995--998
- []|  [] |
+ []|  [] 
  []
 
-[51]
+[51 <./System-Plots/PG1222+216_z=0.378389_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
 
  []
 
-<Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png, id=226, 978.5358pt x 610.6815pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png, id=268, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png  used on input line 1042.
+(pdftex.def)             Requested size: 430.00462pt x 268.35591pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1040--1043
 
@@ -801,7 +977,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1040--1043
 [52
 
 
-] [53]
+] [53 <./Ionisation-Modelling-Plots/pg1222-z=0.378389-compVI.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1047--1049
 
  []
@@ -812,13 +988,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1047--1049
  []
 
 [54]
-<System-Plots/PG1116+215_z=0.138527_sys_plot.png, id=237, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1116+215_z=0.138527_sys_plot.png, id=280, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1116+215_z=0.138527_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1116+215_z=0.138527_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1116+215_z=0.138527_sys_plot.png  used on input line 1066.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1064--1067
- []|  [] |
+ []|  [] 
  []
 
-[55]
+[55 <./System-Plots/PG1116+215_z=0.138527_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
 
  []
@@ -847,9 +1027,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1107--1110
 
 
 ]
-<Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png, id=244, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png, id=245, 992.9898pt x 610.6815pt>
- [57]
+<Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png, id=288, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png  used on input line 1121.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png, id=289, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png  used on input line 1127.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [57 <./Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=-1.png> <./Ionisation-Modelling-Plots/pg1116-z=0.138527-compII_logZ=1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
 
  []
@@ -860,13 +1048,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
  []
 
 [58]
-<System-Plots/H1821+643_z=0.170006_sys_plot.png, id=252, 2384.91pt x 1634.2656pt>
+<System-Plots/H1821+643_z=0.170006_sys_plot.png, id=298, 2384.91pt x 1634.2656pt>
+File: System-Plots/H1821+643_z=0.170006_sys_plot.png Graphic file (type png)
+<use System-Plots/H1821+643_z=0.170006_sys_plot.png>
+Package pdftex.def Info: System-Plots/H1821+643_z=0.170006_sys_plot.png  used on input line 1154.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1152--1155
- []|  [] |
+ []|  [] 
  []
 
-[59]
+[59 <./System-Plots/H1821+643_z=0.170006_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1186--1187
 
  []
@@ -910,15 +1102,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
 
 
 ]
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png, id=260, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png, id=261, 992.9898pt x 610.6815pt>
- [61]
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png, id=265, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png, id=266, 992.9898pt x 610.6815pt>
- [62]
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png, id=270, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png, id=271, 992.9898pt x 610.6815pt>
- [63]
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png, id=307, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png  used on input line 1218.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png, id=308, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png  used on input line 1224.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [61 <./Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=-1.png> <./Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=-1.png>]
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png, id=314, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png  used on input line 1233.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png, id=315, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png  used on input line 1239.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [62 <./Ionisation-Modelling-Plots/h1821-z=0.170006-compII.png> <./Ionisation-Modelling-Plots/h1821-z=0.170006-compIII.png>]
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png, id=321, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png  used on input line 1250.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png, id=322, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png  used on input line 1256.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+ [63 <./Ionisation-Modelling-Plots/h1821-z=0.170006-compII_logZ=1_non_detection.png> <./Ionisation-Modelling-Plots/h1821-z=0.170006-compIII_logZ=1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1263--1265
 
  []
@@ -929,13 +1145,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1263--1265
  []
 
 [64]
-<System-Plots/H1821+643_z=0.224981_sys_plot.png, id=278, 2384.91pt x 1634.2656pt>
+<System-Plots/H1821+643_z=0.224981_sys_plot.png, id=331, 2384.91pt x 1634.2656pt>
+File: System-Plots/H1821+643_z=0.224981_sys_plot.png Graphic file (type png)
+<use System-Plots/H1821+643_z=0.224981_sys_plot.png>
+Package pdftex.def Info: System-Plots/H1821+643_z=0.224981_sys_plot.png  used on input line 1283.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1281--1284
- []|  [] |
+ []|  [] 
  []
 
-[65]
+[65 <./System-Plots/H1821+643_z=0.224981_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1319--1320
 
  []
@@ -959,12 +1179,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1329--1330
 
 
 ]
-<Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png, id=286, 1166.4378pt x 601.2864pt>
-<Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png, id=287, 1184.5053pt x 601.2864pt>
- [67]
-<Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png, id=291, 974.9223pt x 618.6312pt>
-<Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png, id=292, 985.7628pt x 618.6312pt>
- [68]
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png, id=340, 1166.4378pt x 601.2864pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png  used on input line 1338.
+(pdftex.def)             Requested size: 365.50655pt x 188.41533pt.
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png, id=341, 1184.5053pt x 601.2864pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png  used on input line 1344.
+(pdftex.def)             Requested size: 365.50655pt x 185.53441pt.
+ [67 <./Ionisation-Modelling-Plots/h1821-z=0.224981-compII.png> <./Ionisation-Modelling-Plots/h1821-z=0.224981-compIV.png>]
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png, id=347, 974.9223pt x 618.6312pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png  used on input line 1355.
+(pdftex.def)             Requested size: 344.005pt x 218.28935pt.
+<Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png, id=348, 985.7628pt x 618.6312pt>
+File: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png  used on input line 1361.
+(pdftex.def)             Requested size: 344.005pt x 215.88226pt.
+ [68 <./Ionisation-Modelling-Plots/h1821-z=0.224981-compII_logZ=-1_non_detection.png> <./Ionisation-Modelling-Plots/h1821-z=0.224981-compIV_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1370--1372
 
  []
@@ -975,13 +1211,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1370--1372
  []
 
 [69]
-<System-Plots/PG1121+422_z=0.192393_sys_plot.png, id=299, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1121+422_z=0.192393_sys_plot.png, id=357, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1121+422_z=0.192393_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1121+422_z=0.192393_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1121+422_z=0.192393_sys_plot.png  used on input line 1389.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1387--1390
- []|  [] |
+ []|  [] 
  []
 
-[70]
+[70 <./System-Plots/PG1121+422_z=0.192393_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1424--1425
 
  []
@@ -1010,14 +1250,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 1442--1443
 
 
 ]
-<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png, id=306, 1154.1519pt x 637.4214pt>
-<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png, id=307, 978.5358pt x 610.6815pt>
- [72]
-<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png, id=312, 978.5358pt x 610.6815pt>
- [73]
-<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png, id=316, 978.5358pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png, id=317, 978.5358pt x 610.6815pt>
- [74]
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png, id=365, 1154.1519pt x 637.4214pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png  used on input line 1451.
+(pdftex.def)             Requested size: 365.50655pt x 201.85869pt.
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png, id=366, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png  used on input line 1457.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [72 <./Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=-1.png> <./Ionisation-Modelling-Plots/pg1121-z=0.192393-compI.png>]
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png, id=373, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png  used on input line 1465.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [73 <./Ionisation-Modelling-Plots/pg1121-z=0.192393-compII.png>]
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png, id=378, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png  used on input line 1476.
+(pdftex.def)             Requested size: 344.005pt x 214.68288pt.
+<Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png, id=379, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png  used on input line 1482.
+(pdftex.def)             Requested size: 344.005pt x 214.68288pt.
+ [74 <./Ionisation-Modelling-Plots/pg1121-z=0.192393-compI_logZ=1_non_detection.png> <./Ionisation-Modelling-Plots/pg1121-z=0.192393-compII_logZ=-1_non_detection.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1489--1491
 
  []
@@ -1028,13 +1288,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1489--1491
  []
 
 [75]
-<System-Plots/PKS0405-123_z=0.167125_sys_plot.png, id=324, 2384.91pt x 1634.2656pt>
+<System-Plots/PKS0405-123_z=0.167125_sys_plot.png, id=388, 2384.91pt x 1634.2656pt>
+File: System-Plots/PKS0405-123_z=0.167125_sys_plot.png Graphic file (type png)
+<use System-Plots/PKS0405-123_z=0.167125_sys_plot.png>
+Package pdftex.def Info: System-Plots/PKS0405-123_z=0.167125_sys_plot.png  used on input line 1512.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1510--1513
- []|  [] |
+ []|  [] 
  []
 
-[76] [77
+[76 <./System-Plots/PKS0405-123_z=0.167125_sys_plot.png>] [77
 
 
 ]
@@ -1068,9 +1332,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1577--1579
  []
 
 [78]
-<Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png, id=335, 992.9898pt x 610.6815pt>
-<Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png, id=336, 978.5358pt x 610.6815pt>
- [79]
+<Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png, id=400, 992.9898pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png  used on input line 1586.
+(pdftex.def)             Requested size: 365.50655pt x 224.78384pt.
+<Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png, id=401, 978.5358pt x 610.6815pt>
+File: Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png  used on input line 1592.
+(pdftex.def)             Requested size: 365.50655pt x 228.10114pt.
+ [79 <./Ionisation-Modelling-Plots/pks0405-z=0.167125-compII.png> <./Ionisation-Modelling-Plots/pks0405-z=0.167125-compIV.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1599--1601
 
  []
@@ -1086,23 +1358,31 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 1612.
 
 [81]
-<System-Plots/HE0056-3622_z=0.043265_sys_plot.png, id=346, 2384.91pt x 1634.2656pt>
+<System-Plots/HE0056-3622_z=0.043265_sys_plot.png, id=413, 2384.91pt x 1634.2656pt>
+File: System-Plots/HE0056-3622_z=0.043265_sys_plot.png Graphic file (type png)
+<use System-Plots/HE0056-3622_z=0.043265_sys_plot.png>
+Package pdftex.def Info: System-Plots/HE0056-3622_z=0.043265_sys_plot.png  used on input line 1624.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1622--1625
- []|  [] |
+ []|  [] 
  []
 
-[82] [83
+[82 <./System-Plots/HE0056-3622_z=0.043265_sys_plot.png>] [83
 
 
 ]
-<System-Plots/PG1216+069_z=0.006328_sys_plot.png, id=353, 2384.91pt x 1634.2656pt>
+<System-Plots/PG1216+069_z=0.006328_sys_plot.png, id=421, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1216+069_z=0.006328_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1216+069_z=0.006328_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1216+069_z=0.006328_sys_plot.png  used on input line 1663.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1661--1664
- []|  [] |
+ []|  [] 
  []
 
-[84]
+[84 <./System-Plots/PG1216+069_z=0.006328_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1695--1696
 
  []
@@ -1136,18 +1416,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1709--1710
 
 
 ]
-<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png, id=361, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png, id=362, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png, id=363, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png, id=364, 1000.9395pt x 615.7404pt>
- [86] [87]
-<System-Plots/3C263_z=0.063397_sys_plot.png, id=371, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png, id=430, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png  used on input line 1720.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png, id=431, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png  used on input line 1727.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png, id=432, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png  used on input line 1734.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png, id=433, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png  used on input line 1740.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+ [86 <./Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1_OI.png> <./Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=-1.png>] [87 <./Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1_OI.png> <./Ionisation-Modelling-Plots/pg1216-z=0.006328-compIII_logZ=1.png>]
+<System-Plots/3C263_z=0.063397_sys_plot.png, id=444, 2384.91pt x 1634.2656pt>
+File: System-Plots/3C263_z=0.063397_sys_plot.png Graphic file (type png)
+<use System-Plots/3C263_z=0.063397_sys_plot.png>
+Package pdftex.def Info: System-Plots/3C263_z=0.063397_sys_plot.png  used on input line 1753.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1751--1754
- []|  [] |
+ []|  [] 
  []
 
-[88]
+[88 <./System-Plots/3C263_z=0.063397_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
 
  []
@@ -1157,18 +1457,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1789--1790
 
  []
 
-<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=375, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png, id=449, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png  used on input line 1794.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
 [89
 
 
-] [90]
-<System-Plots/PG1222+216_z=0.054479_sys_plot.png, id=383, 2384.91pt x 1634.2656pt>
+] [90 <./Ionisation-Modelling-Plots/3c263-z=0.063397-compIV_logZ=-1.png>]
+<System-Plots/PG1222+216_z=0.054479_sys_plot.png, id=458, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1222+216_z=0.054479_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1222+216_z=0.054479_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1222+216_z=0.054479_sys_plot.png  used on input line 1809.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1807--1810
- []|  [] |
+ []|  [] 
  []
 
-[91]
+[91 <./System-Plots/PG1222+216_z=0.054479_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1844--1845
 
  []
@@ -1212,20 +1520,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 1861--1863
 
 
 ]
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png, id=390, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png, id=391, 1000.9395pt x 615.7404pt>
- [93]
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png, id=395, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png, id=396, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png, id=397, 1000.9395pt x 615.7404pt>
- [94] [95]
-<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=404, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png, id=466, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png  used on input line 1868.
+(pdftex.def)             Requested size: 301.00192pt x 185.16513pt.
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png, id=467, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png  used on input line 1875.
+(pdftex.def)             Requested size: 301.00192pt x 185.16513pt.
+ [93 <./Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=-1.png> <./Ionisation-Modelling-Plots/pg1222-z=0.054479-compI_logZ=1.png>]
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png, id=473, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png  used on input line 1883.
+(pdftex.def)             Requested size: 344.005pt x 211.62265pt.
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png, id=474, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png  used on input line 1891.
+(pdftex.def)             Requested size: 344.005pt x 211.62265pt.
+<Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png, id=475, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png  used on input line 1897.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
+ [94 <./Ionisation-Modelling-Plots/pg1222-z=0.054479-compII_logZ=-1.png> <./Ionisation-Modelling-Plots/pg1222-z=0.054479-compIII_logZ=-1.png>] [95 <./Ionisation-Modelling-Plots/pg1222-z=0.054479-compIV_logZ=-1.png>]
+<System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png, id=485, 2384.91pt x 1634.2656pt>
+File: System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png Graphic file (type png)
+<use System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png>
+Package pdftex.def Info: System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png  used on input line 1911.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1909--1912
- []|  [] |
+ []|  [] 
  []
 
-[96]
+[96 <./System-Plots/RXJ0439.6-5311_z=0.005568_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1938--1939
 
  []
@@ -1235,18 +1567,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1940--1941
 
  []
 
-<Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png, id=409, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png, id=491, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png  used on input line 1945.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
 [97
 
 
-]
-<System-Plots/UKS0242-724_z=0.063850_sys_plot.png, id=413, 2384.91pt x 1634.2656pt>
+ <./Ionisation-Modelling-Plots/rxj0439-z=0.005568-compII_logZ=-1.png>]
+<System-Plots/UKS0242-724_z=0.063850_sys_plot.png, id=496, 2384.91pt x 1634.2656pt>
+File: System-Plots/UKS0242-724_z=0.063850_sys_plot.png Graphic file (type png)
+<use System-Plots/UKS0242-724_z=0.063850_sys_plot.png>
+Package pdftex.def Info: System-Plots/UKS0242-724_z=0.063850_sys_plot.png  used on input line 1960.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 1958--1961
- []|  [] |
+ []|  [] 
  []
 
-[98]
+[98 <./System-Plots/UKS0242-724_z=0.063850_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1991--1992
 
  []
@@ -1295,18 +1635,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 2011--2012
 
 
 ]
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png, id=421, 1010.3346pt x 615.7404pt>
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=422, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png, id=423, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png, id=424, 1000.9395pt x 615.7404pt>
- [100] [101]
-<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=431, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png, id=505, 1010.3346pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png  used on input line 2020.
+(pdftex.def)             Requested size: 387.00153pt x 235.85347pt.
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png, id=506, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png  used on input line 2026.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png, id=507, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png  used on input line 2033.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png, id=508, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png  used on input line 2040.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+ [100 <./Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1_FeII.png> <./Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=-1.png>] [101 <./Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1_FeII.png> <./Ionisation-Modelling-Plots/uks0242-z=0.06385-compI_logZ=1.png>]
+<System-Plots/PG1259+593_z=0.046284_sys_plot.png, id=519, 2384.91pt x 1634.2656pt>
+File: System-Plots/PG1259+593_z=0.046284_sys_plot.png Graphic file (type png)
+<use System-Plots/PG1259+593_z=0.046284_sys_plot.png>
+Package pdftex.def Info: System-Plots/PG1259+593_z=0.046284_sys_plot.png  used on input line 2053.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2051--2054
- []|  [] |
+ []|  [] 
  []
 
-[102]
+[102 <./System-Plots/PG1259+593_z=0.046284_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2084--2085
 
  []
@@ -1316,18 +1676,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 2086--2087
 
  []
 
-<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=436, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png, id=525, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png  used on input line 2092.
+(pdftex.def)             Requested size: 344.005pt x 211.62265pt.
 [103
 
 
-]
-<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=440, 2384.91pt x 1634.2656pt>
+ <./Ionisation-Modelling-Plots/pg1259-z=0.046284-compII_logZ=-1.png>]
+<System-Plots/PKS1302-102_z=0.094839_sys_plot.png, id=530, 2384.91pt x 1634.2656pt>
+File: System-Plots/PKS1302-102_z=0.094839_sys_plot.png Graphic file (type png)
+<use System-Plots/PKS1302-102_z=0.094839_sys_plot.png>
+Package pdftex.def Info: System-Plots/PKS1302-102_z=0.094839_sys_plot.png  used on input line 2106.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2104--2107
- []|  [] |
+ []|  [] 
  []
 
-[104]
+[104 <./System-Plots/PKS1302-102_z=0.094839_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2136--2137
 
  []
@@ -1351,16 +1719,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 2142--2143
 
 
 ]
-<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=447, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png, id=448, 1000.9395pt x 615.7404pt>
- [106]
-<System-Plots/3C57_z=0.077430_sys_plot.png, id=452, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png, id=538, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png  used on input line 2150.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png, id=539, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png  used on input line 2156.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+ [106 <./Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=-1.png> <./Ionisation-Modelling-Plots/pks1302-z=0.094839-compII_logZ=1.png>]
+<System-Plots/3C57_z=0.077430_sys_plot.png, id=545, 2384.91pt x 1634.2656pt>
+File: System-Plots/3C57_z=0.077430_sys_plot.png Graphic file (type png)
+<use System-Plots/3C57_z=0.077430_sys_plot.png>
+Package pdftex.def Info: System-Plots/3C57_z=0.077430_sys_plot.png  used on input line 2171.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2169--2172
- []|  [] |
+ []|  [] 
  []
 
-[107]
+[107 <./System-Plots/3C57_z=0.077430_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2199--2200
 
  []
@@ -1384,16 +1764,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 2205--2206
 
 
 ]
-<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=460, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png, id=461, 1000.9395pt x 615.7404pt>
- [109]
-<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=465, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png, id=554, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png  used on input line 2211.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png, id=555, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png  used on input line 2217.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+ [109 <./Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=-1.png> <./Ionisation-Modelling-Plots/3c57-z=0.07743-compI_logZ=1.png>]
+<System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png, id=561, 2384.91pt x 1634.2656pt>
+File: System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png Graphic file (type png)
+<use System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png>
+Package pdftex.def Info: System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png  used on input line 2231.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2229--2232
- []|  [] |
+ []|  [] 
  []
 
-[110]
+[110 <./System-Plots/PMNJ1103-2329_z=0.003934_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2259--2260
 
  []
@@ -1412,16 +1804,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 2263--2264
 
 
 ]
-<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=472, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png, id=473, 1000.9395pt x 615.7404pt>
- [112]
-<System-Plots/PHL1811_z=0.080928_sys_plot.png, id=477, 2384.91pt x 1634.2656pt>
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png, id=569, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png  used on input line 2273.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+<Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png, id=570, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png  used on input line 2279.
+(pdftex.def)             Requested size: 387.00153pt x 238.07079pt.
+ [112 <./Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1.png> <./Ionisation-Modelling-Plots/p1103-z=0.003934-compII_logZ=-1_SiIII.png>]
+<System-Plots/PHL1811_z=0.080928_sys_plot.png, id=576, 2384.91pt x 1634.2656pt>
+File: System-Plots/PHL1811_z=0.080928_sys_plot.png Graphic file (type png)
+<use System-Plots/PHL1811_z=0.080928_sys_plot.png>
+Package pdftex.def Info: System-Plots/PHL1811_z=0.080928_sys_plot.png  used on input line 2294.
+(pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2292--2295
- []|  [] |
+ []|  [] 
  []
 
-[113]
+[113 <./System-Plots/PHL1811_z=0.080928_sys_plot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2329--2330
 
  []
@@ -1440,21 +1844,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 2337--2338
 
 
 ]
-<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png, id=485, 1010.3346pt x 615.7404pt>
-<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png, id=486, 1000.9395pt x 615.7404pt>
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png, id=585, 1010.3346pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png  used on input line 2343.
+(pdftex.def)             Requested size: 365.50655pt x 222.75624pt.
+<Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png, id=586, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png  used on input line 2349.
+(pdftex.def)             Requested size: 365.50655pt x 224.85143pt.
 
 
 LaTeX Warning: Text page 115 contains only floats.
 
-[115]
-<System-Plots/PG0832+251_z=0.017505_sys_plot.png, id=490, 2384.91pt x 1634.2656pt>
+[115 <./Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1.png> <./Ionisation-Modelling-Plots/phl1811-z=0.080928-compIII_logZ=-1_ions.png>]
+<System-Plots/PG0832+251_z=0.017505_sys_plot.png, id=592, 2384.91pt x 1634.2656pt>
 File: System-Plots/PG0832+251_z=0.017505_sys_plot.png Graphic file (type png)
 <use System-Plots/PG0832+251_z=0.017505_sys_plot.png>
 Package pdftex.def Info: System-Plots/PG0832+251_z=0.017505_sys_plot.png  used on input line 2363.
 (pdftex.def)             Requested size: 695.5957pt x 476.643pt.
 
 Overfull \hbox (42.14558pt too wide) in paragraph at lines 2361--2364
- []|  [] |
+ []|  [] 
  []
 
 [116 <./System-Plots/PG0832+251_z=0.017505_sys_plot.png>]
@@ -1560,18 +1972,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 2462--2463
 
  []
 
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png, id=501, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png, id=502, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png, id=503, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png, id=504, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png, id=505, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png, id=506, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png, id=507, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png, id=508, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png, id=509, 1000.9395pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png, id=510, 986.4855pt x 615.7404pt>
-<Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png, id=511, 1000.9395pt x 615.7404pt>
-[119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png, id=603, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png  used on input line 2467.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png, id=604, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png  used on input line 2473.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png, id=605, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png  used on input line 2480.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png, id=606, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png  used on input line 2486.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png, id=607, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png  used on input line 2493.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png, id=608, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png  used on input line 2499.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png, id=609, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png  used on input line 2506.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png, id=610, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png  used on input line 2512.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png, id=611, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png  used on input line 2519.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png, id=612, 986.4855pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png  used on input line 2525.
+(pdftex.def)             Requested size: 430.00462pt x 268.39923pt.
+<Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png, id=613, 1000.9395pt x 615.7404pt>
+File: Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png Graphic file (type png)
+<use Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png>
+Package pdftex.def Info: Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png  used on input line 2531.
+(pdftex.def)             Requested size: 430.00462pt x 264.52832pt.
+[119 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1.png>] [120 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1.png>] [121 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_OI.png>] [122 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_OI.png>] [123 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=-1_AlII.png>] [124 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compI_logZ=1_AlII.png>] [125 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1.png>] [126 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1.png>] [127 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=-1_OI_FeII__AlII.png>] [128 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compII_logZ=1_OI_FeII__AlII.png>] [129 <./Ionisation-Modelling-Plots/pg0832-z=0.017505-compIII_logZ=-1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2539--2540
 
  []
@@ -1597,32 +2053,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 2553--2554
  []
 
 [130]
-<Distribution_NH_b.png, id=550, 1141.866pt x 612.1269pt>
-<Result_plots/NHi_vs_bHi_danforth.png, id=551, 522.5121pt x 346.896pt>
-<Result_plots/bHi_vs_BOvi_danforth.png, id=552, 991.5444pt x 652.5981pt>
-<Result_plots/T_histogram.png, id=553, 514.5624pt x 350.5095pt>
-<Result_plots/Z_vs_nH.png, id=554, 549.9747pt x 351.9549pt>
-<Result_plots/Ovi_cases.png, id=555, 521.7894pt x 354.123pt>
-<Result_plots/NHi_vs_nH.png, id=556, 535.5207pt x 351.9549pt>
-<Result_plots/NHi_vs_Z.png, id=557, 438.6789pt x 344.7279pt>
- [131] [132] [133] [134] (./Ionisation-Modelling-Results.aux)
+<Distribution_NH_b.png, id=663, 1141.866pt x 612.1269pt>
+File: Distribution_NH_b.png Graphic file (type png)
+<use Distribution_NH_b.png>
+Package pdftex.def Info: Distribution_NH_b.png  used on input line 2559.
+(pdftex.def)             Requested size: 344.005pt x 184.41472pt.
+<Result_plots/NHi_vs_bHi_danforth.png, id=664, 522.5121pt x 346.896pt>
+File: Result_plots/NHi_vs_bHi_danforth.png Graphic file (type png)
+<use Result_plots/NHi_vs_bHi_danforth.png>
+Package pdftex.def Info: Result_plots/NHi_vs_bHi_danforth.png  used on input line 2565.
+(pdftex.def)             Requested size: 344.005pt x 228.38568pt.
+<Result_plots/bHi_vs_BOvi_danforth.png, id=665, 991.5444pt x 652.5981pt>
+File: Result_plots/bHi_vs_BOvi_danforth.png Graphic file (type png)
+<use Result_plots/bHi_vs_BOvi_danforth.png>
+Package pdftex.def Info: Result_plots/bHi_vs_BOvi_danforth.png  used on input line 2573.
+(pdftex.def)             Requested size: 344.005pt x 226.41122pt.
+<Result_plots/T_histogram.png, id=666, 514.5624pt x 350.5095pt>
+File: Result_plots/T_histogram.png Graphic file (type png)
+<use Result_plots/T_histogram.png>
+Package pdftex.def Info: Result_plots/T_histogram.png  used on input line 2579.
+(pdftex.def)             Requested size: 301.00192pt x 205.04456pt.
+<Result_plots/Z_vs_nH.png, id=667, 549.9747pt x 351.9549pt>
+File: Result_plots/Z_vs_nH.png Graphic file (type png)
+<use Result_plots/Z_vs_nH.png>
+Package pdftex.def Info: Result_plots/Z_vs_nH.png  used on input line 2585.
+(pdftex.def)             Requested size: 344.005pt x 220.14313pt.
+<Result_plots/Ovi_cases.png, id=668, 521.7894pt x 354.123pt>
+File: Result_plots/Ovi_cases.png Graphic file (type png)
+<use Result_plots/Ovi_cases.png>
+Package pdftex.def Info: Result_plots/Ovi_cases.png  used on input line 2591.
+(pdftex.def)             Requested size: 344.005pt x 233.46793pt.
+<Result_plots/NHi_vs_nH.png, id=669, 535.5207pt x 351.9549pt>
+File: Result_plots/NHi_vs_nH.png Graphic file (type png)
+<use Result_plots/NHi_vs_nH.png>
+Package pdftex.def Info: Result_plots/NHi_vs_nH.png  used on input line 2597.
+(pdftex.def)             Requested size: 344.005pt x 226.09352pt.
+<Result_plots/NHi_vs_Z.png, id=670, 438.6789pt x 344.7279pt>
+File: Result_plots/NHi_vs_Z.png Graphic file (type png)
+<use Result_plots/NHi_vs_Z.png>
+Package pdftex.def Info: Result_plots/NHi_vs_Z.png  used on input line 2603.
+(pdftex.def)             Requested size: 344.005pt x 270.33847pt.
+ [131 <./Distribution_NH_b.png> <./Result_plots/NHi_vs_bHi_danforth.png>] [132 <./Result_plots/bHi_vs_BOvi_danforth.png> <./Result_plots/T_histogram.png>] [133 <./Result_plots/Z_vs_nH.png> <./Result_plots/Ovi_cases.png>] [134 <./Result_plots/NHi_vs_nH.png> <./Result_plots/NHi_vs_Z.png>] (./Ionisation-Modelling-Results.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5572 strings out of 480247
- 126978 string characters out of 5896151
- 382197 words of memory out of 5000000
- 23328 multiletter control sequences out of 15000+600000
- 479397 words of font info for 65 fonts, out of 8000000 for 9000
+ 5691 strings out of 480247
+ 134569 string characters out of 5896151
+ 382173 words of memory out of 5000000
+ 23448 multiletter control sequences out of 15000+600000
+ 479228 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,67p,464b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Ionisation-Modelling-Results.pdf (135 pages, 3167290 bytes).
+ 60i,12n,67p,464b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Ionisation-Modelling-Results.pdf (135 pages, 51107066 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
+ 745 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  621 words of extra memory for PDF output out of 10000 (max. 10000000)
 

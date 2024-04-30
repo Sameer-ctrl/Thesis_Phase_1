@@ -147,6 +147,9 @@ def write_exclude_wave(qso):
     wave_exc_l_col=Column(name='WAVE1',data=wave_exc_l)
     wave_exc_r_col=Column(name='WAVE2',data=wave_exc_r)
 
+    wave_exc_l_col=sort(wave_exc_l_col)
+    wave_exc_r_col=sort(wave_exc_r_col)
+
     tab.add_columns([wave_exc_l_col,wave_exc_r_col])
     tab.write(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc', format='ascii', overwrite=True)
 
