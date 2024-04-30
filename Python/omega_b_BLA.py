@@ -334,14 +334,17 @@ absorbers=[
            ]
 
 BLA_dict={}
+z_abs=[]
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
     b=BLA_obj.b
 
     if len(b)>0:
-
         BLA_dict[a.qso]=[[],[],[],[]]
+        z_abs.append(a.z_abs)
+
+z_abs=unique(z_abs)
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
@@ -368,7 +371,8 @@ for a in absorbers:
 
 
 qso=list(BLA_dict.keys())
-
+for q in qso:
+    print(q,redshift_path_lambda_CDM(q))
 
 h=0.7
 H0=100*h    #km/s/ Mpc
@@ -401,21 +405,37 @@ for i,q in enumerate(qso):
     omega_BLA_los.append(val*100)
     omega_BLA_los_err.append(err*100)
 
+# qso=['3c263', 'pks0637', 'pg1424', 'pg0003', 'pg1216', 's135712', '1es1553', 'pg1222', 'pg1116', 'h1821', 'pg1121', 'pks0405']
+# b_all=[87, 162, 45, 46, 40, 63, 40, 66, 64, 52, 53, 46, 51, 64, 52, 43, 71, 63, 84, 62, 60, 56]
+# N_all=[13.49, 13.6, 15.01, 14.61, 13.49, 14.2, 14.1, 13.37, 14.17, 15.1, 13.15, 15.01, 13.88, 13.54, 14.34, 15.43, 13.6, 13.68, 13.64, 13.48, 14.34, 13.09]
+# b_all_err=[10, 21, 1, 4, 3, 0, 4, 10, 3, 3, 10, 4, 1, 19, 4, 1, 14, 3, 13, 11, 6, 9]
+# N_all_err=[0.06, 0.06, 0.02, 0.07, 0.02, 0.02, 0.05, 0.05, 0.04, 0.05, 0.18, 0.16, 0.01, 0.11, 0.05, 0.04, 0.23, 0.02, 0.11, 0.06, 0.09, 0.06]
+
+
 omega_BLA_all, omega_BLA_all_err = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err)
-print(omega_BLA_all*100, omega_BLA_all_err*100)
+print(f'\u03A9 = {round(omega_BLA_all*100,2)} \u00B1 {round(omega_BLA_all_err*100,2)}')
 
-plt.figure()
+# plt.figure()
 
-plt.hist(omega_BLA_los,bins='auto')
-plt.xlabel('$\mathbf{\Omega_b(BLA) \ [\\times 10^{-2}]}$')
-plt.vlines(omega_BLA_all*100,0,8,ls='--',color='red')
+# plt.hist(omega_BLA_los,bins='auto',histtype='step')
+# plt.xlabel('$\mathbf{\Omega_b(BLA) \ [\\times 10^{-2}]}$')
+# plt.vlines(omega_BLA_all*100,0,8,ls='--',color='red')
 
 
-plt.figure()
+# plt.figure()
 
-plt.hist(omega_BLA_los_err,bins='auto')
-plt.xlabel('$\mathbf{\Delta(\Omega_b(BLA)) \ [\\times 10^{-2}]}$')
-plt.vlines(omega_BLA_all_err*100,0,8,ls='--',color='red')
+# plt.hist(omega_BLA_los_err,bins='auto',histtype='step')
+# plt.xlabel('$\mathbf{\Delta(\Omega_b(BLA)) \ [\\times 10^{-2}]}$')
+# plt.vlines(omega_BLA_all_err*100,0,8,ls='--',color='red')
+
+# plt.figure()
+
+# bin_size=0.05
+# bins=int((max(z_abs)-min(z_abs))/bin_size)
+
+# plt.hist(z_abs,histtype='step',bins=bins)
+# plt.xlabel('$\mathbf{z}$')
+
 
 # plt.figure()
 # plt.errorbar(qso,omega_BLA_los,yerr=omega_BLA_los_err,fmt='o',capsize=3,color='red')

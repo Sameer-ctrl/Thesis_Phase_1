@@ -314,6 +314,7 @@ class abs_system():
 #             abs_system('3c57',0.077430),
 #             abs_system('p1103',0.003934),
 #             abs_system('phl1811',0.080928),
+#             abs_system('pg0832',0.017505,cont_mark='^')
 #            ]
 
 # absorbers=[
@@ -324,10 +325,19 @@ class abs_system():
 #             abs_system('3c57',0.077430),
 #            ]
 
-absorbers=[
-            abs_system('pg0832',0.017505,cont_mark='^')
-           ]
+# absorbers=[
+#             abs_system('pg0832',0.017505,cont_mark='^')
+#            ]
 
+# qso=[a.qso for a in absorbers]
+
+# qso_dict={}
+
+# for a in absorbers:
+#     qso_dict[a.qso]=[round(1215.6701*(1+a.z_abs),3)]
+
+# print(qso_dict)
+# quit()
 
 hden=[-5,1,0.02]
 metal=[-1]

@@ -4,7 +4,7 @@ from numpy import *
 import matplotlib.pyplot as plt
 import matplotlib
 
-matplotlib.rcParams['backend']='TkAgg'
+# matplotlib.rcParams['backend']='TkAgg'
 
 
 col_names=['Z_SYS',  'DELTAV_SYS',  'WAVELENGTH',  'LINE_ID', 'z_ABS', 'SIGLEVEL', 'SNR', 'EQW', 'EQW_ERR', 'BVALUE', 'BVALUE_ERR', 'LOGN_lower_limit', 'LOGN', 'LOGN_ERR', 'FLAG_FIT', 'LCOD', 'NUM_SYS_LINES', 'NUM_METAL_LINES']
@@ -28,9 +28,12 @@ Class III   : BLA, OVI and other metal ions >=2
 
 files=os.listdir('Data/IGM_Danforth_Data/Systems')
 
+systems_dict={}
+
 for file in files:
         
     qso=file[:-16]
+    systems_dict[qso]=[]
     print(f'\n{qso}')
 
     data=ascii.read(f'Data/IGM_Danforth_Data/Systems/{file}')
@@ -73,6 +76,7 @@ for file in files:
             
             n_BLA_OVI+=1
             z_plot_BLA_OVI.append(z)
+            systems_dict[qso].append(z)
             print(f'BLA and OVI  : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
         
 
@@ -106,14 +110,14 @@ for file in files:
                 n_BLA_metal_ions+=1
                 i=1
 
-                print(f'Ions > 2     : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
+                # print(f'Ions > 2     : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
                 'systems with OVI and other distinct metal ions >= 2'
 
                 if 'OVI' in ions:
                     n_BLA_OVI_metal_ions+=1
                     z_plot_BLA_OVI_metal_ions.append(z)
-                    print(f'OVI and ions : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
+                    # print(f'OVI and ions : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
         n_los_BLA_ions+=i
 
@@ -126,7 +130,7 @@ for file in files:
     if any(a):
         n_los_BLA_OVI+=1
 
-        
+print(systems_dict)        
 
 print('\n----------------------------------\n')
 

@@ -39,6 +39,7 @@ def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
 v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))
 err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
+z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
 
 
 class ion():
@@ -56,7 +57,7 @@ class abs_system():
 
     def __init__(self,qso,z_abs,cont_mark='*'):
 
-        file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
+        file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
         
         with open(file) as f:
             text=f.read()
@@ -137,7 +138,7 @@ class abs_system():
         self.qso=qso
         self.z_abs=z_abs
         self.ion_obj=ion_obj_dict
-        self.ions=ions_all[ions_all!='HI']
+        self.ions=ions_all              #All ionn and HI objects
         self.n_ions=len(self.ions)
 
 
@@ -190,10 +191,111 @@ absorbers=[
             abs_system('h1821',0.170006),
             abs_system('h1821',0.224981),
             abs_system('pg1121',0.192393),
-            abs_system('pks0405',0.167125)
+            abs_system('pks0405',0.167125),
+            abs_system('he0056',0.043265),
+            abs_system('pg1216',0.006328),
+            abs_system('3c263',0.063397),
+            abs_system('pg1222',0.054479),
+            abs_system('rxj0439',0.005568),                        
+            abs_system('uks0242',0.063850),
+            abs_system('pg1259',0.046284),
+            abs_system('pks1302',0.094839),
+            abs_system('3c57',0.077430),
+            abs_system('p1103',0.003934),
+            abs_system('phl1811',0.080928),
+            abs_system('pg0832',0.017505,cont_mark='^')
            ]
 
 
+def col_den_distribution(ion,binsize=None):
+
+    ion_col_den=[]
+
+    for a in absorbers:
+        
+        ions=a.ions
+
+        if ion in ions:
+            ion_col_den+=[N[0] for N in a.ion_obj[ion].logN]
+
+    if binsize is None:
+        bins='auto'
+
+    else:
+        bin_size=binsize
+        bins=int((max(ion_col_den)-min(ion_col_den))/bin_size)
+
+    plt.title(f'{ion} : {len(ion_col_den)}')
+    plt.hist(ion_col_den,bins=bins,histtype='step')
+
+    return ion_col_den
+
+def z_ion(v_ion,z_abs):
+
+    v_abs=v_z(z_abs)
+
+    if not isinstance(v_ion, (list, tuple, type(array([])))):
+        v_z_ion=array([v_ion])+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val[0]
+
+    else:
+        v_z_ion=array(v_ion)+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val
+    
+
+def redshift_distribution(ion,binsize=None):
+
+    redshift=[]
+
+    for a in absorbers:
+        
+        ions=a.ions
+
+        if ion in ions:
+            redshift+=[z_ion((vel[0]),a.z_abs) for vel in a.ion_obj[ion].v]
+
+    if binsize is None:
+        bins='auto'
+
+    else:
+        bin_size=binsize
+        bins=int((max(redshift)-min(redshift))/bin_size)
+
+    plt.title(f'{ion} : {len(redshift)}')
+    plt.hist(redshift,bins=bins,histtype='step')
+
+    return redshift
+    
+
+ion='OVI'
+
+# col_den_distribution(ion)
+# redshift_distribution(ion)
+
+# plt.figure()
+
+# plt.subplot(121)
+ion_col_den=col_den_distribution(ion)
+
+# plt.subplot(122)
+redshift=redshift_distribution(ion)
+
+plt.clf()
+
+plt.figure()
+
+plt.hist2d(ion_col_den,redshift,cmap='jet')
+plt.colorbar()
+
+plt.show()
+
+
+
+quit()
 # for a in absorbers:
 
 #     BLA=a.BLA_obj
@@ -433,7 +535,7 @@ class BLA():
 
         self.qso=qso
         self.z=z_abs
-        self.name=f'{qso}_z={z_abs}'
+        self.name=f'{qso}_z={z_abs:.6f}'
         self.nH=nH
         self.nH_err=nH_err
         self.b_H=b_H
