@@ -1,10 +1,10 @@
 from  numpy import *
 from scipy.constants import *
-import os
-from astropy.io import ascii,fits
+from astropy.io import ascii
 import matplotlib.pyplot as plt
-from astropy.table import Table,Column
+from astropy.table import Table
 from scipy.integrate import quad
+from roman import toRoman
 
 plt.style.use('../Python/my_style.mpl')
 
