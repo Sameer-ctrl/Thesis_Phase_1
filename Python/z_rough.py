@@ -3,8 +3,122 @@ from astropy.io import fits,ascii
 from astropy.table import Table,Column
 import matplotlib.pyplot as plt
 from numpy import *
-from scipy.integrate import simpson
+from scipy.integrate import quad
 
+v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))  # v at z
+err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
+z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
+
+def integrand_X(z,omega_m=0.31,omega_lambda=0.69):
+
+    return ((1+z)**2)/sqrt(omega_lambda+(omega_m*((1+z)**3)))
+
+
+def redshift_path_lambda_CDM(qso,wave_min=1220,v_lim=5000):
+
+    file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
+    z_em=float(file_systems.readlines()[16].split(' ')[1])
+
+    data=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
+    wave=data['WAVE']
+
+    excluded_wave=ascii.read(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc')
+
+    rest_wave=1215.6701
+
+    wave_l=excluded_wave['WAVE1']
+    wave_l=sort(wave_l)
+    wave_r=excluded_wave['WAVE2']
+    wave_r=sort(wave_r)
+
+    z_l=(wave_l-rest_wave)/rest_wave
+    z_r=(wave_r-rest_wave)/rest_wave
+
+    z_lim=z_v(v_z(z_em)-v_lim)
+
+    zmax=round(min([z_lim,(wave[-1]-rest_wave)/rest_wave]),3)
+    zmin=round((wave_min-rest_wave)/rest_wave,6)
+
+    delta_X=0
+        
+    for i in range(len(excluded_wave)):
+
+        if z_r[i] >= zmin > z_l[i]:
+            a=0
+            break
+
+        elif z_l[i]>=zmin:
+            a=1
+            break
+
+    for j in range(i,len(excluded_wave)):
+
+        if j==len(excluded_wave)-1:
+            delta_X+=quad(integrand_X,z_r[j],zmax)[0]
+
+        else:
+            delta_X+=quad(integrand_X,z_r[j],z_l[j+1])[0]
+
+    if a==1:
+        delta_X+=quad(integrand_X,zmin,z_l[i])[0]
+
+    return round(delta_X,3)
+
+
+def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
+
+    file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
+    z_em=float(file_systems.readlines()[16].split(' ')[1])
+
+    data=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
+    wave=data['WAVE']
+
+    excluded_wave=ascii.read(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc')
+
+    wave_l=excluded_wave['WAVE1']
+    wave_r=excluded_wave['WAVE2']
+
+    z_lim=z_v(v_z(z_em)-v_lim)
+
+    rest_wave=1215.6701
+    wave_max=min([(1+z_lim)*rest_wave,wave[-1]])
+
+    dzb=0
+
+    for i in range(len(excluded_wave)):
+
+        if wave_l[i] >= wave_min:
+            dzb+=(wave_r[i]-wave_l[i])/rest_wave
+        
+        elif wave_r[i] >= wave_min > wave_l[i]:
+            dzb+=(wave_r[i]-wave_min)/rest_wave
+
+    dzb=round(dzb,3)
+
+    zmax=round((wave_max-rest_wave)/rest_wave,3)
+    zmin=round((wave_min-rest_wave)/rest_wave,3)
+
+    dz=zmax-zmin
+    dz_unblocked=round(dz-dzb,3)
+
+    delta_X=round(0.5*(((1+zmax-(dzb/2)))**2-((1+zmin+(dzb/2)))**2),3)
+    # print(delta_X,dz_unblocked,dzb,dz)
+
+    return delta_X,dz_unblocked,dzb,dz
+
+qso=unique(['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405'])
+
+for q in qso:
+    print(redshift_path_lambda_CDM(q),redshift_path_qo(q)[0])
+
+# print(redshift_path_qo(qso)[0])
+
+
+
+
+
+
+quit()
 
 # files=os.listdir('Files_n_figures/sys_plots')
 # files=sorted(files)

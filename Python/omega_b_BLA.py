@@ -4,23 +4,23 @@ import os
 from astropy.io import ascii,fits
 import matplotlib.pyplot as plt
 from astropy.table import Table,Column
+from scipy.integrate import quad
 
-mH=(proton_mass+electron_mass)
-
-v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))  # v at z
-err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
-z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
-
-b_BLA_th=40
+plt.style.use('../Python/my_style.mpl')
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
 qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))
 
 data=ascii.read('../Cloudy_runs/ionisation_modelling_sol.txt')
-
 qso_all=data['qso']
 z_abs_all=data['z_abs']
 
+v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))  # v at z
+err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
+z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
+
+def integrand_X(z,omega_m=0.31,omega_lambda=0.69):
+    return ((1+z)**2)/sqrt(omega_lambda+(omega_m*((1+z)**3)))
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
@@ -170,7 +170,7 @@ class abs_system():
     
         self.ion_modelling_sol=sol
 
-def redshift_path(qso,wave_min=1220,v_lim=5000):
+def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
 
     file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
     z_em=float(file_systems.readlines()[16].split(' ')[1])
@@ -211,15 +211,104 @@ def redshift_path(qso,wave_min=1220,v_lim=5000):
 
     return delta_X,dz_unblocked,dzb,dz
 
-def f_H(b):
+def redshift_path_lambda_CDM(qso,wave_min=1220,v_lim=5000):
+
+    file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
+    z_em=float(file_systems.readlines()[16].split(' ')[1])
+
+    data=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
+    wave=data['WAVE']
+
+    excluded_wave=ascii.read(f'Data/IGM_Danforth_Data/Excluded_wavelengths/{qso}_excluded_wavelength.asc')
+
+    rest_wave=1215.6701
+
+    wave_l=excluded_wave['WAVE1']
+    wave_l=sort(wave_l)
+    wave_r=excluded_wave['WAVE2']
+    wave_r=sort(wave_r)
+
+    z_l=(wave_l-rest_wave)/rest_wave
+    z_r=(wave_r-rest_wave)/rest_wave
+
+    z_lim=z_v(v_z(z_em)-v_lim)
+
+    zmax=round(min([z_lim,(wave[-1]-rest_wave)/rest_wave]),3)
+    zmin=round((wave_min-rest_wave)/rest_wave,6)
+
+    delta_X=0
+        
+    for i in range(len(excluded_wave)):
+
+        if z_r[i] >= zmin > z_l[i]:
+            a=0
+            break
+
+        elif z_l[i]>=zmin:
+            a=1
+            break
+
+    for j in range(i,len(excluded_wave)):
+
+        if j==len(excluded_wave)-1:
+            delta_X+=quad(integrand_X,z_r[j],zmax)[0]
+
+        else:
+            delta_X+=quad(integrand_X,z_r[j],z_l[j+1])[0]
+
+    if a==1:
+        delta_X+=quad(integrand_X,zmin,z_l[i])[0]
+
+    return round(delta_X,3)
+
+
+def f_H(b,x=100):
 
     'f_H=(HI+HII)/HI ~ HII/HI'
 
-    logT=log10(mH*((b*1000)**2)*(1/(2*Boltzmann)))
+    logT=log10(mH*((b*1000)**2)*(1/(2*Boltzmann))*((x/100)**2))
     log_fH=(5.4*logT)-(0.33*(logT**2))-13.9   # ref. Sutherland & Dopita 1993, Richter et al. 2004, Tracing baryons in WHIM using BLAs
 
-    return log_fH
+    return log_fH,logT
 
+def omega_BLA(qso,b,N,err_b,err_N):
+
+    if not isinstance(qso, (list, tuple, type(array([])))):
+        qso=array([qso])
+
+    if not isinstance(b, (list, tuple, type(array([])))):
+
+        b=array([b])
+        N=array([N])
+        err_b=array([err_b])
+        err_N=array([err_N])
+
+    if isinstance(b, (list, tuple)):
+        b=array(b)
+        
+    if isinstance(N, (list, tuple)):
+        N=array(N)
+
+    if isinstance(err_b, (list, tuple)):
+        err_b=array(err_b)
+        
+    if isinstance(err_N, (list, tuple)):
+        err_N=array(err_N)
+            
+    delta_X=sum([redshift_path_lambda_CDM(q) for q in unique(qso)])
+    fH, logT = f_H(b)
+    NH=sum(10**(fH+N))
+
+    omega_BLA_val=A*(NH/delta_X)
+
+    err_logT=2*(err_b/b)
+    err_fH=(5.4-(0.66*(logT)))*err_logT
+
+    err_omega_BLA=log(10)*(A/delta_X)*sqrt(sum((10**(2*(fH+N)))*(err_fH**2+err_N**2)))
+
+    return omega_BLA_val,err_omega_BLA
+
+b_BLA_th=40
 
 absorbers=[
             abs_system('3c263',0.140756),
@@ -241,86 +330,148 @@ absorbers=[
             abs_system('pks0405',0.167125)
            ]
 
-qso=unique([a.qso for a in absorbers])
-
-BLA_dict={q:[[],[]] for q in qso}
-
+BLA_dict={}
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
     b=BLA_obj.b
-    logN=BLA_obj.logN
 
-    for i in range(len(b)):
-        BLA_dict[a.qso][0].append(b[i][0])
-        BLA_dict[a.qso][1].append(logN[i][0])
+    if len(b)>0:
 
-BLA_dict.pop('sbs1108')
+        BLA_dict[a.qso]=[[],[],[],[]]
+
+for a in absorbers:
+    BLA_obj=a.BLA_obj
+    b=BLA_obj.b
+    N=BLA_obj.logN
+
+    if len(b)>0:
+
+        b_val=[]
+        b_err=[]
+        N_val=[]
+        N_err=[]
+
+        for i in range(len(b)):
+            b_val.append(b[i][0])
+            b_err.append(b[i][1])
+            N_val.append(N[i][0])
+            N_err.append(N[i][1])
+
+        BLA_dict[a.qso][0]+=b_val
+        BLA_dict[a.qso][1]+=N_val
+        BLA_dict[a.qso][2]+=b_err
+        BLA_dict[a.qso][3]+=N_err
+
+
+qso=list(BLA_dict.keys())
+
 
 h=0.7
 H0=100*h    #km/s/ Mpc
 mu=1.3
+mH=(proton_mass+electron_mass)   #kg
 
 rho_c=2*(H0**2)*(1/(8*pi*gravitational_constant))
+A=(mu*mH*H0)/(rho_c*speed_of_light)*(parsec*1e7)   #cm^2
 
-A=(mu*mH*H0)/(rho_c*speed_of_light)*(parsec*1e7)   # cm^2
+omega_BLA_los=[]
+omega_BLA_los_err=[]
 
-def omega_BLA(qso,b,N):
+b_all=[]
+b_all_err=[]
+N_all=[]
+N_all_err=[]
 
-    if not isinstance(qso, (list, tuple, type(array([])))):
-        qso=array([qso])
+for i,q in enumerate(qso):
+    
+    b_los, N_los, b_los_err, N_los_err = BLA_dict[q]
 
-    if not isinstance(b, (list, tuple, type(array([])))):
+    b_all+=b_los
+    N_all+=N_los
+    
+    b_all_err+=b_los_err
+    N_all_err+=N_los_err
 
-        b=array([b])
-        N=array([N])
+    val, err = omega_BLA(q,b_los,N_los,b_los_err,N_los_err)
 
-    if isinstance(b, (list, tuple)):
-        b=array(b)
-        
-    if isinstance(N, (list, tuple)):
-        N=array(N)
-            
-    print(type(b),type(N))
-    delta_X=sum([redshift_path(q)[0] for q in unique(qso)])
-    fH=f_H(b)
-    NH=sum(10**(fH+N))
+    omega_BLA_los.append(val*100)
+    omega_BLA_los_err.append(err*100)
 
-    return A*(NH/delta_X)
+omega_BLA_all, omega_BLA_all_err = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err)
+print(omega_BLA_all*100, omega_BLA_all_err*100)
+
+plt.figure()
+
+plt.hist(omega_BLA_los,bins='auto')
+plt.xlabel('$\mathbf{\Omega_b(BLA) \ [\\times 10^{-2}]}$')
+plt.vlines(omega_BLA_all*100,0,8,ls='--',color='red')
+
+
+plt.figure()
+
+plt.hist(omega_BLA_los_err,bins='auto')
+plt.xlabel('$\mathbf{\Delta(\Omega_b(BLA)) \ [\\times 10^{-2}]}$')
+plt.vlines(omega_BLA_all_err*100,0,8,ls='--',color='red')
+
+# plt.figure()
+# plt.errorbar(qso,omega_BLA_los,yerr=omega_BLA_los_err,fmt='o',capsize=3,color='red')
+# plt.hlines(omega_BLA_all*100,qso[0],qso[-1],lw=3,color='black')
+# plt.hlines((omega_BLA_all-omega_BLA_all_err)*100,qso[0],qso[-1],ls='--',lw=2,color='black')
+# plt.hlines((omega_BLA_all+omega_BLA_all_err)*100,qso[0],qso[-1],ls='--',lw=2,color='black')
+
+
+# plt.figure()
+
+# plt.hist(b_all)
+
+# plt.figure()
+
+# plt.hist(N_all)
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
 # b=array([87.0, 162.0, 46.0, 29.0, 63.0, 40.0, 64.0, 52.0, 46.0, 51.0, 16.0, 52.0, 71.0, 63.0, 84.0, 60.0, 26.0])
 # N=array([13.49, 13.6, 14.61, 15.44, 14.2, 14.1, 14.17, 15.1, 15.01, 13.88, 15.79, 14.34, 13.6, 13.68, 13.64, 14.34, 13.46])
-
-
-omega_BLA_all=omega_BLA(qso,b,N)*100
-print(omega_BLA_all)
-print(mH*((40*1000)**2)*(1/(2*Boltzmann)))
-
-omega_BLA_los=[]
-
-for i in range(len(qso)):
-    
-    los=[qso[i]]
-    b_los=array([b[i]])
-    N_los=array([N[i]])
-
-    omega_BLA_los.append(omega_BLA(los,b_los,N_los)*100)
-
-plt.figure()
-
-plt.hist(omega_BLA_los,bins='auto')
-plt.vlines(omega_BLA_all,0,7,ls='--',color='red')
-
-plt.figure()
-plt.scatter(qso,omega_BLA_los)
-plt.hlines(omega_BLA_all,qso[0],qso[-1])
-
-plt.figure()
-
-plt.plot(linspace(0,150,1000),f_H(linspace(0,150,1000)))
-
-plt.show()
-
-qso='pg0003'
