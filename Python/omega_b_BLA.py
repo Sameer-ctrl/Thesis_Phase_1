@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 from astropy.table import Table
 from scipy.integrate import quad
 from roman import toRoman
+import matplotlib
 
 plt.style.use('../Python/my_style.mpl')
+matplotlib.rcParams['backend']='TkAgg'
+
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
 qso_dict=dict(zip(qso_list[:,1],qso_list[:,0]))

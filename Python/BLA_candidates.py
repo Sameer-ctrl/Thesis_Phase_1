@@ -118,11 +118,11 @@ for file in files:
 
         n_los_BLA_ions+=i
 
-        plt.title(f'LOS : {qso}')
-        plt.scatter(z_plot_BLA_OVI,ones(len(z_plot_BLA_OVI)),label='BLA and OVI')
-        plt.scatter(z_plot_BLA_OVI_metal_ions,2*ones(len(z_plot_BLA_OVI_metal_ions)),label='BLA, OVI and metal ions')
-        plt.legend()
-        plt.show()
+        # plt.title(f'LOS : {qso}')
+        # plt.scatter(z_plot_BLA_OVI,ones(len(z_plot_BLA_OVI)),label='BLA and OVI')
+        # plt.scatter(z_plot_BLA_OVI_metal_ions,2*ones(len(z_plot_BLA_OVI_metal_ions)),label='BLA, OVI and metal ions')
+        # plt.legend()
+        # plt.show()
 
     if any(a):
         n_los_BLA_OVI+=1
