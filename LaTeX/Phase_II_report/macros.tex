@@ -1,0 +1,188 @@
+%----------------------------------------------------------------------
+%                     Chargement de quelques packages
+%----------------------------------------------------------------------
+
+% Si l'on produit le PDF avec pdflatex, ceci remplace la plupart
+% des polices EC par des polices CM, plus adaptees a la generation de PDF,
+% car ayant des equivalents PS :
+
+
+% If you produce the PDF with pdflatex, this replaces most
+% of EC fonts by CM fonts, more suited to PDF generation,
+% because having PS equivalents
+
+\usepackage[cyr]{aeguill}
+
+% pour les includegraphics
+\usepackage{graphicx}
+
+% mini "table of content"
+\usepackage[french]{minitoc}
+\usepackage[french]{babel}
+
+
+
+% couleur des liens et hyperref -> mettre à {0.0,0.0,0.0} pour avoir du noir
+%                               -> mettre à {0.2,0.2,0.2} pour avoir du gris foncé
+\usepackage{color}
+\definecolor{linkcolor}{rgb}{0.1,0.1,0.7}
+% \usepackage[hypertexnames=false]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=linkcolor,%
+    filecolor=linkcolor,%
+    linkcolor=linkcolor,%
+    urlcolor=linkcolor,%
+}
+
+% Pour les codes
+\usepackage{listings}
+\lstset{language=C++,basicstyle=\small}
+
+
+\usepackage{silence}
+
+\WarningFilter{minitoc(hints)}{W0023}
+\WarningFilter{minitoc(hints)}{W0024}
+\WarningFilter{minitoc(hints)}{W0028}
+\WarningFilter{minitoc(hints)}{W0030}
+\WarningFilter{hyperref}{bookmark level}
+
+\WarningFilter{blindtext}{} % this takes care of the `blindtext` messages
+
+%-------------------------------------------------------------------
+%  Surcharge de commandes pour les variables et page d'en-tête
+%-------------------------------------------------------------------
+
+\makeatletter
+
+%
+% les deux commandes suivantes sont entre \makeatletter
+% et \makeatother parce qu'elles utilisent des `@'.
+%
+
+\renewcommand{\@DFD}{ }
+
+
+\renewcommand{\@Lillehe@d}{\vspace{1cm}{\UseEntryFont{ThesisFirstPageHead}\noindent
+    \centerline{\if@logo@uhp@
+                    {\setbox0=\hbox{$\raise3.6cm\hbox{\UHPLogo}$}%
+                     \ht0=\baselineskip\box0}\hfill
+                \else
+                    IIST%
+                \fi}%
+    \@TL@cmn@head\\
+    \par
+    }%
+    }
+
+
+\newcommand\TheseLilleI{\renewcommand{\@ThesisFirstPageHead}{\@Lillehe@d}%
+                         \ThesisDiploma{{\UseEntryFont{ThesisDiploma}%
+                              \\[3mm]
+            {\UseEntryFont{ThesisSpecialty}( )}}}}
+
+\makeatother
+
+%-------------------------------------------------------------------
+%           Corrections pour les imprimantes recto-verso
+%                          (A AJUSTER)
+%-------------------------------------------------------------------
+
+%\ShiftOddPagesRight{-1mm}
+%\ShiftOddPagesDown{2.5mm}
+%\ShiftEvenPagesRight{0mm}
+%\ShiftEvenPagesDown{0mm}
+
+%-------------------------------------------------------------------
+%                Mise en page
+%-------------------------------------------------------------------
+
+%-------------------------------------------------------------------
+%                             interligne
+%-------------------------------------------------------------------
+\renewcommand{\baselinestretch}{1.3}
+
+%-------------------------------------------------------------------
+%                             Marges
+%-------------------------------------------------------------------
+
+% pour positionner les vraies marges:
+%\SetRealMargins{1mm}{1mm}
+
+%-------------------------------------------------------------------
+%                             En-tetes
+%-------------------------------------------------------------------
+%On n'utilise pas les logos
+%\DontShowLogos
+
+% Les en-tetes: quelques exemples
+%\UppercaseHeadings
+%\UnderlineHeadings
+%\newcommand\bfheadings[1]{{\bf #1}}
+%\FormatHeadingsWith{\bfheadings}
+%\FormatHeadingsWith{\uppercase}
+%\FormatHeadingsWith{\underline}
+\newcommand\upun[1]{\uppercase{\underline{\underline{#1}}}}
+\FormatHeadingsWith\upun
+
+\newcommand\itheadings[1]{\textit{#1}}
+\FormatHeadingsWith{\itheadings}
+
+% pour avoir un trait sous l'en-tete:
+\setlength{\HeadRuleWidth}{0.4pt}
+
+
+%-------------------------------------------------------------------
+%                         Les references
+%-------------------------------------------------------------------
+
+\NoChapterNumberInRef \NoChapterPrefix
+
+%-------------------------------------------------------------------
+%                           Brouillons
+%-------------------------------------------------------------------
+
+% ceci ajoute une marque `brouillon' et la date
+%\ThesisDraft
+
+
+
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+%-------------------------------------------------------------------
+%                          Encadrements
+%-------------------------------------------------------------------
+
+% encadre les chapitres dans la table des matieres:
+% (ces commandes doivent figurer apres \begin{document}
+
+%\FrameChaptersInToc
+%\FramePartsInToc
+
+
+%-------------------------------------------------------------------
+%            Reinitialisation de la numerotation des chapitres
+%-------------------------------------------------------------------
+
+% Si la commande suivante est presente,
+% elle doit figurer APRES \begin{document}
+% et avant la premiere commande \part
+\ResetChaptersAtParts
+
+%-------------------------------------------------------------------
+%               mini-tables des matieres par chapitre
+%-------------------------------------------------------------------
+
+% preparer les mini-tables des matieres par chapitre.
+% (commande de minitoc.sty)
+%\dominitoc
+
+\NewJuryCategory{Guidedby}{\Large{\it \textbf{ Guided by :}}}{\Large{\it \textbf{ Guided by:}}}
+\NewJuryCategory{EncadrantUniv}{\it Encadrant universitaire :}{\it Encadrant universitaire:} 
+
+\TheseLilleI
+
+
+

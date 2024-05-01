@@ -1,0 +1,110 @@
+\documentclass[12pt,oneside,noprintercorrection]{iut}
+% \usepackage[%  
+%     colorlinks=true,
+%     pdfborder={0 0 0},
+%     linkcolor=red
+% ]{hyperref}
+\usepackage{hyperref}
+\usepackage{courier}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+% \usepackage{mathabx}
+% \usepackage{mathpazo}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\newcommand\ion[2]{\text{#1\,\textsc{\lowercase{#2}}}}
+
+\input{macros}
+
+\begin{document}
+
+
+\begin{titlepage}
+\begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Finding Missing Baryons in Present Universe with Broad Ly$\mathbf{\alpha}$ Absorbers}
+        
+        \vspace{10mm}
+
+        \large{A mid-term report submitted by}
+        
+        \LARGE
+
+        \vspace{8mm}
+            
+        \textbf{Sameer Patidar \\ (SC19B161)}
+        \vspace{10mm}
+
+        \large{Under the guidance of} \\
+
+        \LARGE
+        
+        \vspace{8mm}
+
+        \textbf{Dr. Vikram Khaire and Dr. Anand Narayanan}
+
+        
+            
+        \vfill
+        % \vspace{0.8cm}
+            
+        \includegraphics[width=3cm]{IIST.png} \\
+        \vspace{0.7cm}  
+        \LARGE
+        \textbf{Indian Institute of Space Science and Technology}\\
+        % Country\\
+        % Date
+            
+    \end{center}
+
+\end{titlepage}
+
+\afterpage{\blankpage}
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+\chapter*{}
+
+\vspace*{-4cm}
+
+\section*{Introduction}
+
+The standard Big Bang model of our universe shows that less than 5\% of the total energy density of the universe is in the form of baryons. All the `ordinary' matter which we see around us is made up of these baryons. Cosmologists are interested in studying the distribution of these baryons to understand the evolution of the universe, formation of large scale structures, etc. So, understanding this component of the universe is crucial for our comprehension of the cosmos.
+
+\section*{The Missing Baryon Problem}
+
+While attempting the census of these baryons in the present universe, i.e at $z \sim 0$, cosmologists found that there is a shortfall from the total number obtained from the observations of Cosmic Microwave Background (CMB) and light element abundances predicted from big bang nucleosynthesis. There was a deficit of around 50\% at the time of first results from COBE satellite. With time the surveys got better, however, recent surveys still show a deficit of $\sim 30$\%. This came to be known as the missing baryon problem in the low redshift. At high redshift ($z>3$), nearly all the baryons have been accounted for, with around 3\% being collapsed in stars and galaxies and remaining $\sim97$\% are found in cool ($\sim10^4$ K) photo-ionised gas phase in the form of Ly$\alpha$ forest in intergalactic medium (IGM). 
+
+Cosmological simulations shows that these `missing' baryons are lying in very low density ($10^{-6}-10^{-4}$ cm$^{-3}$) and high temperature ($10^5-10^7$ K) gas phase in the IGM known as Warm Hot Intergalactic Medium (WHIM). Simulations also show that WHIM is mainly formed via shock-heating of the in-falling gas from the IGM on the large scale structures.
+
+\section*{Detecting WHIM}
+
+The WHIM is mainly detected with the help of quasars. The quasars are very bright sources of light, providing us an excellent source of background light. The matter in the intervening space between us and these quasars can leave absorption features in the spectra of these quasars, enabling us to `look' at this matter. The WHIM can be traced by highly ionised species like \ion{O}{vi-viii}, \ion{Ne}{viii}, etc. Apart from high temperature gas these lines lines can also arise from photo-ionised gas phases. So detecting these lines doesn't assure that we they are probing WHIM. Nevertheless, unavailability of high S/N X-ray data also makes it difficult to study WHIM using these lines. 
+\\\\
+Because of high temperatures of WHIM, the absorption lines can get thermally broadened. So detecting such broad features can show possibility of tracing high temperature gas phase. This gives us an another way of probing WHIM by using Broad Ly$\alpha$ absorbers (BLAs). Any Ly$\alpha$ absorption line with Doppler parameter (\emph{b}) \gtrsm 40-45 km $\text{s}^{-1}$ can be loosely called a BLA. As these features are broad they are very shallow as compared to narrower counterpart with same line strength. Thus high S/N data is required to detect BLAs. Detecting a BLA ensures that we are tracing WHIM. If a BLA is detected, then we can expect to see other highly ionised species. However, several narrow components can also blend together resulting in a broad feature. So, a careful modelling has to be done for such absorbers. If we find a candidate BLA in such features then we need to show that the other kinematically concurrent species are arising from a collisionally ionised gas phase. To do so, we need to model the ionisation conditions prevalent in the absorber cloud. We use ionisation code CLOUDY for this purpose.
+
+\section*{Plan for the Current Project}
+
+In the current project we would like to address the missing baryon problem with the help of BLAs. Currently, literature lacks comprehensive surveys of the BLAs on large datasets. We would be using high quality HST/\textit{COS} data to perform a large survey of BLAs. And then would found the contribution of BLAs to the total cosmic baryonic inventory ($\Omega_b$). Hopefully, allowing us to come closer to the number predicted by the standard Big Bang model.  
+
+\section*{Project so far}
+
+As first phase of the project we have studied one absorber system to get acquainted with the methodology of the project. We have chosen an absorber at $z\sim0.347$ along the line of sight of PG0003+158. It is a multi-component system having a BLA candidate. We have done the ionization modelling of the absorber system and found that the broad feature is indeed a BLA and tracing a high temperature gas phase.
+
+\end{document}
+
+
+
+
+
