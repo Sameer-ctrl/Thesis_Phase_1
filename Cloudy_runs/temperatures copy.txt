@@ -36,8 +36,6 @@ bHi, err_bHi, bOvi, err_bOvi = [29,2,16,6]
 logT = 4.58 ± 0.13
 b_NT = 15 ± 7
 
-NOTE : Broad component (b=40 km/s) at v=216 km/s
-
 ------------------------------------------------
 
 qso=pg0003
@@ -58,6 +56,11 @@ bHi, err_bHi, bOvi, err_bOvi = [40,4,25,4]
 logT = 4.80 ± 0.11
 b_NT = 24 ± 5
 
+------------------------------------------------
+
+qso=pg0003
+z_abs=0.386089
+
 Δv = 7 (out)
 bHi, err_bHi, bOvi, err_bOvi = [29,0,25,3]
 logT = 4.15 ± 0.07
@@ -73,8 +76,6 @@ bHi, err_bHi, bOvi, err_bOvi = [64,3,27,1]
 logT = 5.34 ± 0.05
 b_NT = 22 ± 1
 
-NOTE: Has one nearby HI also with b=26, which aligns more with OVI than the current component taken to calculate T.
-
 ------------------------------------------------
 
 qso=pg1216
@@ -87,13 +88,6 @@ b_NT = 11 ± 6
 
 ------------------------------------------------
 
-qso=s135712
-z_abs=0.097869
-
-No aligned HI-OVI pair
-
-------------------------------------------------
-
 qso=1es1553
 z_abs=0.187764
 
@@ -102,21 +96,15 @@ bHi, err_bHi, bOvi, err_bOvi = [37,3,28,5]
 logT = 4.58 ± 0.11
 b_NT = 27 ± 5
 
+------------------------------------------------
+
+qso=1es1553
+z_abs=0.187764
+
 Δv = 26 (out)
 bHi, err_bHi, bOvi, err_bOvi = [51,1,15,3]
 logT = 5.19 ± 0.04
 b_NT = 8 ± 6
-
-NOTE : This BLA (at v=-28) is more aligned with OVI at v=-42, but its b value is very small (3 km/s).
-So calculating from other OVI
-
-
-------------------------------------------------
-
-qso=sbs1108
-z_abs=0.463207
-
-b_Ovi > b_Hi
 
 ------------------------------------------------
 
@@ -128,12 +116,20 @@ bHi, err_bHi, bOvi, err_bOvi = [52,4,34,13]
 logT = 5.00 ± 0.17
 b_NT = 32 ± 15
 
+------------------------------------------------
+
+qso=pg1222
+z_abs=0.378389
+
 Δv = 12 (out)
 bHi, err_bHi, bOvi, err_bOvi = [43,1,29,13]
 logT = 4.81 ± 0.19
 b_NT = 28 ± 14
 
-calculating again with OVI at v=18 with same HI
+------------------------------------------------
+
+qso=pg1222
+z_abs=0.378389
 
 Δv = 20 (out)
 bHi, err_bHi, bOvi, err_bOvi = [43,1,18,7]
@@ -149,16 +145,6 @@ z_abs=0.138527
 bHi, err_bHi, bOvi, err_bOvi = [71,14,35,3]
 logT = 5.39 ± 0.21
 b_NT = 31 ± 4
-
-NOTE : Has one close Hi comp also, but its b is less than that of OVI
-
-------------------------------------------------
-
-qso=h1821
-z_abs=0.170006
-
-OVI aligned with BLA has not reliable doppler parameter value.
-Have one more pair but b vlue of OVI is greater than that of HI
 
 ------------------------------------------------
 
@@ -180,8 +166,6 @@ bHi, err_bHi, bOvi, err_bOvi = [60,6,11,16]
 logT = 5.35 ± 0.14
 b_NT = nan ± nan
 
-NOTE : b_Hi > 4b_Ovi, so b_NT is not real
-
 ------------------------------------------------
 
 qso=pks0405
@@ -191,7 +175,5 @@ z_abs=0.167125
 bHi, err_bHi, bOvi, err_bOvi = [56,9,41,3]
 logT = 4.97 ± 0.47
 b_NT = 40 ± 3
-
-NOTE : This OVI (v=-129) aligned with another HI (v=-127), but there b_Ovi > b_Hi, so calculated with BLA at v=-158 
 
 ------------------------------------------------

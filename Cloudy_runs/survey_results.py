@@ -215,6 +215,24 @@ absorbers=[
 # print(z)
 # quit()
 
+
+def z_ion(v_ion,z_abs):
+
+    v_abs=v_z(z_abs)
+
+    if not isinstance(v_ion, (list, tuple, type(array([])))):
+        v_z_ion=array([v_ion])+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val[0]
+
+    else:
+        v_z_ion=array(v_ion)+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val
+
+
 def col_den_distribution(ion,binsize=None):
 
     ion_col_den=[]
@@ -234,26 +252,10 @@ def col_den_distribution(ion,binsize=None):
         bins=int((max(ion_col_den)-min(ion_col_den))/bin_size)
 
     # plt.title(f'{ion} : {len(ion_col_den)}')
-    plt.hist(ion_col_den,bins=bins,histtype='step')
+    plt.hist(ion_col_den,bins=bins,histtype='step',lw=2.5)
 
     return ion_col_den
 
-def z_ion(v_ion,z_abs):
-
-    v_abs=v_z(z_abs)
-
-    if not isinstance(v_ion, (list, tuple, type(array([])))):
-        v_z_ion=array([v_ion])+v_abs
-        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
-
-        return z_ion_val[0]
-
-    else:
-        v_z_ion=array(v_ion)+v_abs
-        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
-
-        return z_ion_val
-    
 
 def redshift_distribution(ion,binsize=None):
 
@@ -274,7 +276,7 @@ def redshift_distribution(ion,binsize=None):
         bins=int((max(redshift)-min(redshift))/bin_size)
 
     # plt.title(f'{ion} : {len(redshift)}')
-    plt.hist(redshift,bins=bins,histtype='step')
+    plt.hist(redshift,bins=bins,histtype='step',lw=2.5)
 
     return redshift
     
@@ -295,12 +297,12 @@ plt.ylim(top=26)
 
 plt.subplot(122,sharey=ax)
 redshift=redshift_distribution(ion)
-plt.xlabel(r'\textbf{$z$}',labelpad=15)
+plt.xlabel(r'\textbf{$z$}',fontsize=30,labelpad=15)
 plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
 
 plt.subplots_adjust(wspace=0.29)
-# plt.savefig('HI_distribution_survey.png')
-# plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
+plt.savefig('HI_distribution_survey.png')
+plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
 
 # z_bins=[0,0.1,0.2,0.3,0.4,0.5]
 
