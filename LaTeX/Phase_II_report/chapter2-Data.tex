@@ -1,0 +1,27 @@
+\chapter{Data and Pre-processing}  \label{chap:data}
+
+\section{HST/COS data}
+
+To detect BLAs we require very high S/N spectroscopic data of the background quasars. As we aim to the probe the WHIM at low redshift and at low redshifts the Lyman-$\alpha$ and other Lyman transitions fall in the Far Ultra-Violet (FUV) region of the electromagnetic spectrum. So we need FUV data for our study. 
+
+We use FUV data from Cosmic Origins Spectrograph (COS) aboard Hubble Space Telescope (HST) as it provides us with highest S/N data compared to other FUV spectrographs like Space Telescope Imaging Spectrograph (STIS) which is also aboard HST. We use observations done in the FUV channel of COS with G130M and G160M gratings. The G130M grating gives a coverage of 900-1450 \AA \ with resolving power (R) of around 12,000-16,000, whereas G160M grating samples the wavelength between around 1360 and 1775 \AA \ and provide a resolving power of around 13,000-20,000. Together these gratings give coverage from around 1130 to 1790 \AA \ with a median resolution of R $\sim$ 17,000 (17.6 km s$^{-1}$).
+
+The FUV detector of the COS comprises of two segments viz. A and B. This results in gap in the spectra of objects under observation. G130M and G160M gratings give a gap of 14.3  and 18.1 \AA \ respectively. To overcome these gaps, different central wavelength settings are used for observations so that there are overlaps in the spectrum thus covering the gaps. The COS FUV data can be accessed through the Hubble Spectral Heritage Archive (HSLA)\footnote{https://archive.stsci.edu/missions-and-data/hsla} which provides all the raw and integrated COS FUV data publicly available in the Mikulsky Space Telescope Archive (MAST)\footnote{https://archive.stsci.edu/}. The HSLA hosts the observations of 799 quasars, AGNs and Seyferts.
+\\\\
+\citet{danforth-2016} has surveyed the low redshift IGM with the highest quality HST/COS data available in the HSLA. They have chosen 82 UV-bright AGNs with redshifts $z_{AGN}<0.85$ and spectra with typical S/N ratio $\gtrsim$ 15 per COS resolution element. We use these 82 lines of sight for our study.  
+
+\section{Pre-processing}
+
+% \subsection{Continuum fitting}
+
+The HST/COS data is over-sampled at 6 pixels per resolution element, so we re-sample the spectrum at an optimum binning of 2 pixels per resolution element. We use python package \emph{LINETOOLS}\footnote{https://github.com/linetools/linetools}, which uses simple linear interpolation and flux conservation, to rebin the spectrum. 
+\\
+A continuum is fitted to the spectrum after rebinning. To fit the continuum we again use the \emph{LINETOOLS} package, which places the knots at regions with no absorption and emission features at uniform spacing in wavelength along with interactive human input. The continuum is created by interpolating these knots with lower order polynomials. Then the spectrum is normalised by this continuum for fitting the Voigt profiles to the absorption lines.  
+
+
+
+
+
+
+
+
