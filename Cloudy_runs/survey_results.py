@@ -215,6 +215,7 @@ absorbers=[
 # print(z)
 # quit()
 
+
 def z_ion(v_ion,z_abs):
 
     v_abs=v_z(z_abs)
@@ -230,6 +231,7 @@ def z_ion(v_ion,z_abs):
         z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
 
         return z_ion_val
+
 
 def col_den_distribution(ion,binsize=None):
 
@@ -295,12 +297,12 @@ plt.ylim(top=26)
 
 plt.subplot(122,sharey=ax)
 redshift=redshift_distribution(ion)
-plt.xlabel(r'\textbf{$z$}',labelpad=15,fontsize=30)
+plt.xlabel(r'\textbf{$z$}',fontsize=30,labelpad=15)
 plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
 
 plt.subplots_adjust(wspace=0.29)
-# plt.savefig('HI_distribution_survey.png')
-# plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
+plt.savefig('HI_distribution_survey.png')
+plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
 
 # z_bins=[0,0.1,0.2,0.3,0.4,0.5]
 
