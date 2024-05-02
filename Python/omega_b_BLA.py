@@ -214,6 +214,16 @@ def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
 
     return delta_X,dz_unblocked,dzb,dz
 
+# dz=0
+
+# qso=['3c263','pks0637', 'pg1424', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'pg1121', 'pks0405','he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
+
+# for q in qso:
+#     dz+=redshift_path_qo(q)[1]
+
+# print(dz)
+# quit()
+
 def redshift_path_lambda_CDM(qso,wave_min=1220,v_lim=5000):
 
     file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')

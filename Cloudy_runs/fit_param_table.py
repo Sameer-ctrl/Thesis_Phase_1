@@ -75,15 +75,4 @@ print('\n    \\tabularnewline \hline \hline \\tabularnewline \n\n\end{tabular}\n
 
 
 
-    
-
-
-
-
-
-
-
-
-
-
 os.remove('temp_param_file.txt')

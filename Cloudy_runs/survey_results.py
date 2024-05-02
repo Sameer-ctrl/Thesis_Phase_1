@@ -6,6 +6,7 @@ from io import StringIO
 from astropy.io import ascii,fits
 from astropy.table import Table
 from scipy.constants import * 
+import os
 
 
 plt.style.use('../Python/my_style.mpl')
@@ -172,6 +173,7 @@ class abs_system():
             sol[n]=[sol_exc,sol_inc,err_NHi_abs_masked[0]]
     
         self.ion_modelling_sol=sol
+        os.remove('temp_param_file.txt')
 
 
 absorbers=[
@@ -206,6 +208,12 @@ absorbers=[
             abs_system('pg0832',0.017505,cont_mark='^')
            ]
 
+# qso=[a.qso for a in absorbers]
+# z=[f'{a.z_abs:.6f}' for a in absorbers]
+
+# print(qso)
+# print(z)
+# quit()
 
 def col_den_distribution(ion,binsize=None):
 
@@ -225,7 +233,7 @@ def col_den_distribution(ion,binsize=None):
         bin_size=binsize
         bins=int((max(ion_col_den)-min(ion_col_den))/bin_size)
 
-    plt.title(f'{ion} : {len(ion_col_den)}')
+    # plt.title(f'{ion} : {len(ion_col_den)}')
     plt.hist(ion_col_den,bins=bins,histtype='step')
 
     return ion_col_den
@@ -265,33 +273,55 @@ def redshift_distribution(ion,binsize=None):
         bin_size=binsize
         bins=int((max(redshift)-min(redshift))/bin_size)
 
-    plt.title(f'{ion} : {len(redshift)}')
+    # plt.title(f'{ion} : {len(redshift)}')
     plt.hist(redshift,bins=bins,histtype='step')
 
     return redshift
     
 
-ion='OVI'
+ion='HI'
 
 # col_den_distribution(ion)
 # redshift_distribution(ion)
 
+plt.figure(figsize=(16,10))
+
+plt.subplot(121)
+ion_col_den=col_den_distribution(ion)
+plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=25,radicle_font_size=17)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=25)
+plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
+
+
+plt.subplot(122)
+redshift=redshift_distribution(ion)
+plt.xlabel(r'\textbf{$z$}',labelpad=15)
+plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
+
+plt.subplots_adjust(wspace=0.29)
+plt.savefig('HI_distribution_survey.png')
+# z_bins=[0,0.1,0.2,0.3,0.4,0.5]
+
+# ion_col_den_bin=[]
+
+# for j in range(len(z_bins)-1):
+#     col_den_bin=[]
+#     for i in range(len(redshift)):
+#         if z_bins[j]<=redshift[i]<z_bins[j+1]:
+#             col_den_bin.append(ion_col_den[i])
+
+#     ion_col_den_bin.append(log10(sum(10**array(col_den_bin))/len(col_den_bin)))
+
+
+# plt.clf()
+
 # plt.figure()
 
-# plt.subplot(121)
-ion_col_den=col_den_distribution(ion)
+# z_bins=[0.05,0.15,0.25,0.35,0.45]
 
-# plt.subplot(122)
-redshift=redshift_distribution(ion)
+# plt.scatter(redshift,ion_col_den)
+# plt.scatter(z_bins,ion_col_den_bin)
 
-plt.clf()
-
-plt.figure()
-
-plt.hist2d(ion_col_den,redshift,cmap='jet')
-plt.colorbar()
-
-plt.show()
+# plt.show()
 
 
 

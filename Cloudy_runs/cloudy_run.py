@@ -301,6 +301,7 @@ class abs_system():
         self.ions=ions_all[ions_all!='HI']
         self.n_ions=len(self.ions)
 
+        os.remove('temp_param_file.txt')
 
 # absorbers=[
 #             abs_system('he0056',0.043265),
