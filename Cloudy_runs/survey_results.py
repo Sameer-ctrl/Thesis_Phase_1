@@ -284,21 +284,24 @@ ion='HI'
 # col_den_distribution(ion)
 # redshift_distribution(ion)
 
-plt.figure(figsize=(16,10))
+plt.figure(figsize=(16,8))
 
-plt.subplot(121)
+ax=plt.subplot(121)
 ion_col_den=col_den_distribution(ion)
 plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=25,radicle_font_size=17)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=25)
 plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
+plt.ylim(top=26)
 
 
-plt.subplot(122)
+plt.subplot(122,sharey=ax)
 redshift=redshift_distribution(ion)
 plt.xlabel(r'\textbf{$z$}',labelpad=15)
 plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
 
 plt.subplots_adjust(wspace=0.29)
-plt.savefig('HI_distribution_survey.png')
+# plt.savefig('HI_distribution_survey.png')
+# plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
+
 # z_bins=[0,0.1,0.2,0.3,0.4,0.5]
 
 # ion_col_den_bin=[]
