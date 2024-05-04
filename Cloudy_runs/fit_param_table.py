@@ -3,6 +3,7 @@ import os
 
 qso='pg0832'
 z_abs=0.017505
+fix_param_mark='A'
 
 file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
 
@@ -13,7 +14,7 @@ qso_label=qso_dict[qso]
 
 with open(file) as f:
     data=f.read()
-    data=data.replace('A','')
+    data=data.replace(fix_param_mark,'')
     print(data)
     print('\n')
 

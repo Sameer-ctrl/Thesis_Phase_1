@@ -206,12 +206,15 @@ def plot_excluded_region(qso,y=1.25,dy=0.1):
     plt.show()
         
 
-# qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
-# qso=['he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
-qso='pg1259'
+qso1=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
+qso2=['he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
+
+qso=qso1+qso2
+
+
 
 # write_exclude_wave(qso)
 # plot_excluded_region(qso)
-redshift_path(qso)
+# redshift_path(qso)
 
  
