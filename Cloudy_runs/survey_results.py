@@ -21,6 +21,20 @@ data=ascii.read('ionisation_modelling_sol.txt')
 qso_all=data['qso']
 z_abs_all=data['z_abs']
 
+def ion_label_old(ion,ion_font_size=25,radicle_font_size=17):
+
+    for i,s in enumerate(ion):
+        if s.isupper():
+            if i==0:
+                pass
+            else:
+                break
+
+    atom=ion[:i]
+    n=ion[i:]
+
+    return f'{{\\fontsize{{{ion_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{atom}}}$}} {{\\fontsize{{{radicle_font_size}pt}}{{3em}}\selectfont{{}}$\mathbf{{{n}}}$}}'
+
 
 def ion_label(ion,ion_font_size=25,radicle_font_size=17):
 
@@ -56,13 +70,13 @@ class ion():
 
 class abs_system():
 
-    def __init__(self,qso,z_abs,cont_mark='*'):
+    def __init__(self,qso,z_abs,cont_mark='*',fix_param_mark='A'):
 
         file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
         
         with open(file) as f:
             text=f.read()
-            text=text.replace('A','')
+            text=text.replace(fix_param_mark,'')
             # print(text)
             # print('\n')
 
@@ -205,7 +219,7 @@ absorbers=[
             abs_system('3c57',0.077430),
             abs_system('p1103',0.003934),
             abs_system('phl1811',0.080928),
-            abs_system('pg0832',0.017505,cont_mark='^')
+            abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
            ]
 
 # qso=[a.qso for a in absorbers]
@@ -250,11 +264,11 @@ def col_den_distribution(ion,binsize=None):
     else:
         bin_size=binsize
         bins=int((max(ion_col_den)-min(ion_col_den))/bin_size)
-
+    
     # plt.title(f'{ion} : {len(ion_col_den)}')
     plt.hist(ion_col_den,bins=bins,histtype='step',lw=2.5)
 
-    return ion_col_den
+    # return ion_col_den
 
 
 def redshift_distribution(ion,binsize=None):
@@ -278,55 +292,121 @@ def redshift_distribution(ion,binsize=None):
     # plt.title(f'{ion} : {len(redshift)}')
     plt.hist(redshift,bins=bins,histtype='step',lw=2.5)
 
-    return redshift
+    # return redshift
     
 
-ion='HI'
+'column density and redshift distribution of ions'
 
-# col_den_distribution(ion)
-# redshift_distribution(ion)
+def col_den_redshift_ion_distribution_plot(ion):
 
-plt.figure(figsize=(16,8))
+    plt.figure(figsize=(16,8))
 
-ax=plt.subplot(121)
-ion_col_den=col_den_distribution(ion)
-plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=25,radicle_font_size=17)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=25)
-plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
-plt.ylim(top=26)
-
-
-plt.subplot(122,sharey=ax)
-redshift=redshift_distribution(ion)
-plt.xlabel(r'\textbf{$z$}',fontsize=30,labelpad=15)
-plt.ylabel(r'$\mathbf{\mathcal{N}}$',fontsize=25,labelpad=15)
-
-plt.subplots_adjust(wspace=0.29)
-plt.savefig('HI_distribution_survey.png')
-plt.savefig('../LaTeX/Phase_II_report/Figures/HI_distribution_survey.png')
-
-# z_bins=[0,0.1,0.2,0.3,0.4,0.5]
-
-# ion_col_den_bin=[]
-
-# for j in range(len(z_bins)-1):
-#     col_den_bin=[]
-#     for i in range(len(redshift)):
-#         if z_bins[j]<=redshift[i]<z_bins[j+1]:
-#             col_den_bin.append(ion_col_den[i])
-
-#     ion_col_den_bin.append(log10(sum(10**array(col_den_bin))/len(col_den_bin)))
+    ax=plt.subplot(121)
+    col_den_distribution(ion,binsize=0.2)
+    plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label_old(ion,ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=30)
+    plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+    plt.yticks(fontsize=25)
+    plt.xticks(fontsize=25)
 
 
-# plt.clf()
+    plt.subplot(122,sharey=ax)
+    redshift_distribution(ion,binsize=0.07)
+    plt.xlabel(r'\textbf{$z$}',fontsize=35,labelpad=15)
+    plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+    plt.yticks(fontsize=25)
+    plt.xticks(fontsize=25)
 
-# plt.figure()
+    plt.subplots_adjust(wspace=0.29)
+    plt.savefig(f'{ion}_distribution_survey.png')
+    plt.savefig(f'../LaTeX/Phase_II_report/Figures/{ion}_distribution_survey.png')
 
-# z_bins=[0.05,0.15,0.25,0.35,0.45]
+# ion='NV'
+# col_den_redshift_ion_distribution_plot(ion)
 
-# plt.scatter(redshift,ion_col_den)
-# plt.scatter(z_bins,ion_col_den_bin)
+'metal ion distribution in systems and no. of components of all species'
 
-# plt.show()
+def ion_distribution_sys_comp():
+
+    ions_system=[]
+    ions_all=['CIV', 'OVI', 'SiIII',  'NV', 'CIII', 'SiIV',  'CII', 'SiII', 'OIII',  'NIII', 'OI', 'NII','PII', 'FeII', 'AlII','HI']
+
+    ions_comp_dict={i:0 for i in ions_all}
+
+    for a in absorbers:
+
+        ions=a.ions
+        ion_obj=a.ion_obj
+
+        for i in ions:
+            ions_comp_dict[i]+=len(ion_obj[i].v)
+
+        ions_system+=list(ions)
+
+
+    metal_ions=[]
+
+    for i in ions_system:
+        if i!='HI':
+            metal_ions.append(i)
+
+    n_sys=[13, 17, 23,  9, 11, 13, 13, 11,  3,  2,  5,  3,  1, 3,  1]
+    metal_ions=['CIV', 'OVI', 'SiIII',  'NV', 'CIII', 'SiIV',  'CII', 'SiII', 'OIII',  'NIII', 'OI', 'NII','PII', 'FeII', 'AlII']
+
+    metal_ions_system_dict={metal_ions[i]:n_sys[i] for i in range(len(n_sys))}
+    metal_ion_ticks=sort(metal_ions)
+    metal_ion_tick_label=[ion_label_old(i) for i in metal_ion_ticks]
+    n_sys=[metal_ions_system_dict[i] for i in metal_ion_ticks]
+
+    metal_ions_system_all=[]
+
+    for i,ion in enumerate(metal_ion_ticks):
+        metal_ions_system_all+=[ion]*n_sys[i]
+
+
+
+    ion_all_ticks=sort(ions_all)
+    ion_all_tick_label=[ion_label_old(i) for i in ion_all_ticks]
+    n_comp=[ions_comp_dict[i] for i in ion_all_ticks]
+
+    ions_comp_all=[]
+
+    for i,ion in enumerate(ion_all_ticks):
+        ions_comp_all+=[ion]*n_comp[i]
+
+    plt.figure(figsize=(18,9))
+
+    h=plt.hist(metal_ions_system_all,bins=len(metal_ion_ticks),rwidth=0.5)
+    x=h[1]
+    plt.xticks(x[:-1]+(((x[1]-x[0]))/2),metal_ion_tick_label)
+    plt.yticks(fontsize=25)
+    plt.ylim(0,26)
+    plt.xlabel(r'$\mathbf{Metal \ Ions}$',labelpad=20,fontsize=30)
+    plt.ylabel(r'$\mathbf{\mathcal{N}_{system}}$',fontsize=30,labelpad=15)
+    plt.savefig('metal-ion-system.png')
+    plt.savefig('../LaTeX/Phase_II_report/Figures/metal-ion-system.png')
+
+    plt.figure(figsize=(18,9))
+
+    h=plt.hist(ions_comp_all,bins=len(ion_all_ticks),rwidth=0.5)
+    x=h[1]
+    plt.xticks(x[:-1]+(((x[1]-x[0]))/2),ion_all_tick_label)
+    plt.yticks(fontsize=25)
+    plt.xlabel(r'$\mathbf{Ions}$',labelpad=20,fontsize=30)
+    plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+    plt.savefig('ion-component.png')
+    plt.savefig('../LaTeX/Phase_II_report/Figures/ion-component.png')
+
+
+    plt.show()
+
+
+# ion_distribution_sys_comp()
+
+
+
+
+
+
 
 
 
@@ -759,3 +839,33 @@ plt.show()
 
 
         
+
+
+
+
+'redshift binning'
+
+
+# z_bins=[0,0.1,0.2,0.3,0.4,0.5]
+
+# ion_col_den_bin=[]
+
+# for j in range(len(z_bins)-1):
+#     col_den_bin=[]
+#     for i in range(len(redshift)):
+#         if z_bins[j]<=redshift[i]<z_bins[j+1]:
+#             col_den_bin.append(ion_col_den[i])
+
+#     ion_col_den_bin.append(log10(sum(10**array(col_den_bin))/len(col_den_bin)))
+
+
+# plt.clf()
+
+# plt.figure()
+
+# z_bins=[0.05,0.15,0.25,0.35,0.45]
+
+# plt.scatter(redshift,ion_col_den)
+# plt.scatter(z_bins,ion_col_den_bin)
+
+# plt.show()

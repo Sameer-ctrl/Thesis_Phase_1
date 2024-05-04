@@ -8,6 +8,34 @@ from scipy.stats import poisson
 
 # print(poisson.ppf(0.67,2))
 
+qso1=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
+qso2=['he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
+
+qso=sort(unique(qso1+qso2))
+
+data=ascii.read('hlsp_igm_hst_cos_tab2.txt')
+
+los=data['Root']
+qso_name=data['Target_name']
+date=data['date']
+exp_G130M=data['exp_G130M']
+SN_G130M=data['SN_G130M']
+exp_G160M=data['exp_G160M']
+SN_G160M=data['SN_G160M']
+Program=data['Program']
+PI=data['PI']
+
+i=1
+for q in qso:
+    mask=los==q
+
+    print(f'{i}  &  {qso_name[mask].value[0]}  &  {exp_G130M[mask].value[0]:.1f}  &  {SN_G130M[mask].value[0]:.0f}  &  {exp_G160M[mask].value[0]:.1f}  &  {SN_G160M[mask].value[0]:.0f} \\\\')
+    i+=1
+
+
+
+quit()
+
 v_z=lambda z : 3e5*(((1+round(z,6))**2-1)/((1+round(z,6))**2+1))  # v at z
 err_vz=lambda z,z_err: 4*3e5*((1+round(z,6))/(((1+round(z,6))**2)+1)**2)*round(z_err,6)
 z_v=lambda v : sqrt((1+((v)/3e5))/(1-((v)/3e5)))-1      # z at v
