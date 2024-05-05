@@ -4,7 +4,7 @@ The foremost goal of the current study is to do a survey of BLAs over a large da
 
 \section{Shortlisting the BLA candidates} \label{sec:BLA-candidates}
 
-\citet{danforth-2016} have identified a total of 2611 absorber systems in their study of low redshift intergalactic medium. We need to find suitable candidates for our survey of BLAs from these 2611 absorbers.
+\citet{danforth-2016} have identified a total of 2611 absorber systems in their study of the low redshift intergalactic medium. We need to find suitable candidates for our survey of BLAs from these 2611 absorbers.
 
 We use two criterias to select BLA candidates for our survey. First, we look for broad Ly$\alpha$ lines in all the 2611 absorbers. For a Ly$\alpha$ line to be adjudged as `broad', we fix our threshold for \emph{b} value to be greater than 45 km s$^{-1}$ in the preliminary fitting done by \citet{danforth-2016}. Assuming a complete thermal broadening, $\emph{b}=45$ km s$^{-1}$ gives a temperature of $\approx 1.2 \times 10^5$ K, which lies in the lower ranges of the temperature of WHIM. By giving this constrain, we get 568 such systems in the complete data-set.
 
@@ -69,7 +69,7 @@ We have identified 28 additional BLA candidate systems for our survey. We need t
 
 The distribution of these quantities can give valuable insights towards our understanding of the intergalactic medium and the baryon content within IGM. As discussed in chapter \ref{chap:intro}, that \ion{O}{vi} is good tracer of WHIM. \ion{O}{vi} absorption is seen in 16 out of these remaining 16 absorbers. For the remaining 12 candidates, \ion{O}{vi} is not a non-detection. The \ion{O}{vi} 1032, 1038 lines fall out the coverage of the HST/COS FUV channel at redshifts below $\sim 0.093854$ and all these remaining 12 systems are at redshift below 0.093854. So \ion{O}{vi} is not covered in these systems. However, for one system which is along the LOS of PKS1302-102 at $z_{abs}=0.094864$, the \ion{O}{vi} 1038 line was just falling just on the edge of the spectrum where both S/N and sensitivity both low. So, \ion{O}{vi} absorption was not considered for this system. 
 
-We first model the ionisation conditions in the 16 \ion{O}{vi} absorbers and see if we can explain the origin of \ion{O}{vi} through photoionisation models using the similar method used for the absorber in chapter \ref{ch:PG0003}. For, the remaining 12 non-\ion{O}{vi} absorber, we model the ionisation conditions based on the ions detected to estimate the density and metallicity in these systems. 
+We first model the ionisation conditions in the 16 \ion{O}{vi} absorbers and see if we can explain the origin of \ion{O}{vi} through photoionisation models using the similar method used for the absorber in chapter \ref{ch:PG0003}. For, the remaining 12 non-\ion{O}{vi} absorber, we model the ionisation conditions based on the ions detected in the systems to estimate the density and metallicity in these systems. 
 
 Then, we will use the results from this survey to estimate the baryon content in BLAs and their contribution to cosmic closure density, $\Omega_b$, the details of which are described in the upcoming chapter.
 
@@ -78,10 +78,11 @@ The Voigt profile fitting and ionisation modelling results are given in appendix
 
 \section{Survey statistics}
 
+In this section, we discuss the statistics and results of the survey from Voigt profile fitting and ionisation modelling of the 29 absorber systems.
+
 \subsection{Voigt profile fitting}
 
-This survey of 29 absorbers spanned 22 lines of sight. These 22 lines of sight have total \ion{H}{i} (Lyman-$\alpha$) redshift pathlength of $\Delta z = 5.561$. A total of 413 absorption lines were identified and fitted with Voigt profiles. These 413 lines shown absorption from 15 different metal ions apart from \ion{H}{i} absorption. The figure \ref{fig:comp-distribution} shows the total number of components identified for each species.
-
+This survey of 29 absorbers spanned 22 lines of sight. These 22 lines of sight have total \ion{H}{i} (Lyman-$\alpha$) redshift pathlength of $\Delta z = 5.561$. A total of 413 absorption lines were identified and fitted with Voigt profiles. These 413 lines shown absorption from 15 different metal ions apart from \ion{H}{i} absorption. The figure \ref{fig:comp-distribution} shows the total number of components identified for each species. 
 
 \begin{figure}
     \centering
@@ -90,19 +91,34 @@ This survey of 29 absorbers spanned 22 lines of sight. These 22 lines of sight h
     \label{fig:comp-distribution}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{Figures/OVI_distribution_survey.png}
-    \caption{No. of components identified for \ion{H}{i} and different metal ions.}
-    \label{fig:comp-distribution}
-\end{figure}
+\subsubsection{H \hspace*{-0.5mm}{\sc i} absorbers}
+
+We have identified 97 \ion{H}{i} components in our survey across 29 absorbers. The figure \ref{fig:HI_distribution} shows the distribution of column densities and redshift of these 97 components. These components span seven orders of magnitude of column densities starting from $\sim 10^{13} \ \text{to} \ 10^{19} \ \text{cm}^{-2}$. We have many absorbers with the column densities in the range $10^{13} - 10^{15.5} \ \text{cm}^{-2}$ but current sample is incomplete at rare large column density systems. In our current sample, we see \ion{H}{i} absorption till $z \sim 0.45$. In redshift space also, we have more systems at lower redshifts ($z < 0.2$) and only few absorbers at higher redshifts.
 
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{Figures/HI_distribution_survey.png}
-    \caption{Left panel - distribution of \ion{H}{i} column densities, Right panel - distribution of redshift of \ion{H}{i} components}
+    \caption{Distribution of column densities (left panel) and redshift (right panel) of 97 \ion{H}{i} components.}
     \label{fig:HI_distribution}
 \end{figure}
+
+\subsubsection*{Distribution of Doppler parameters}
+
+The figure \ref{fig:b_HI_distribution} shows the distribution of Doppler \emph{b} parameters of the 97 \ion{H}{i} components. The vertical dashed line marks the cutoff for the line to be called as `BLA' at \emph{b}=40 km $\text{s}^{-1}$. Assuming a complete thermal broadening, $\emph{b}=40$ km s$^{-1}$ gives a temperature of $10^5$ K. Out of 97 components, 37(34) components have Doppler parameters in excess of 40(45) km $\text{s}^{-1}$. Some components show large Doppler widths of above 100 km $\text{s}^{-1}$, in this components only saturated Ly$\alpha$ lines are seen, making the identification of velocity substructures of these lines difficult. This results in the large \emph{b} values for these components. 
+
+We can estimate the temperature of the gas directly from the Doppler parameter if we have Doppler parameter of another species coming from the same phase. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/b_HI_distribution_survey.png}
+    \caption{Distribution of \emph{b} parameters of 97 \ion{H}{i} components.}
+    \label{fig:b_HI_distribution} 
+\end{figure}
+
+
+\subsubsection{Metal absorbers}
+
+
 
 \subsection{Ionisation modelling}
 

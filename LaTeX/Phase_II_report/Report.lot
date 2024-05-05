@@ -1,11 +1,31 @@
-\babel@toc {nil}{}\relax 
+\babel@toc {french}{}\relax 
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {xchapter}{Introduction}{1}{chapter.0.1}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Hunt for BLAs : The Survey}{7}{chapter.0.2}%
-\contentsline {table}{\numberline {2.1}{\ignorespaces Details of the 29 BLA candidate absorber system shortlisted for the survey.\relax }}{9}{table.caption.6}%
+\contentsline {xchapter}{Data and Pre-processing}{7}{chapter.0.2}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Appendix.1}{\ignorespaces COS observation details of the 22 sight lines selected for the survey. Table 2 of \citet {danforth-2016}.\relax }}{15}{table.caption.9}%
+\contentsline {xchapter}{Voigt Profile Fitting}{9}{chapter.0.3}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Modelling the Ionisation Conditions}{16}{chapter.0.4}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Absorber towards PG 0003+158}{20}{chapter.0.5}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Component structure of the absorber system. Reference velocity at z = 0.34758\relax }}{21}{table.caption.14}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameters from Voigt profile fitting of the absorption lines. Velocity is taken to be zero at the redshift of \text {O\,\textsc {\lowercase {vi}}} line of component II, i.e. z = 0.347579\relax }}{23}{table.caption.15}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Error calculated using $\chi ^2$ and the systematic uncertainty in column densities due to continuum fitting given in units of log[N ($\text {cm}^{-2}$)]\relax }}{25}{table.caption.17}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Column densities and corresponding 1-$\sigma $ errors of the ions used in PIE modelling of the component III\relax }}{29}{table.caption.19}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Cloudy modelling solutions for absorber at z $\sim $ 0.34790. In case of all ions $\chi ^2$ is calculated using the column densities of all the ions but for excluding \text {O\,\textsc {\lowercase {vi}}} ion case, $\chi ^2$ is calculated by excluding \text {O\,\textsc {\lowercase {vi}}} column density so as to show that this fits other ions very well.\relax }}{31}{table.caption.21}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Physical properties of the absorbers based on Voigt profile measurement and CLOUDY ionisation modelling. The PIE solution for absorber at z $\sim $ 0.34758 is based on the excluding \text {O\,\textsc {\lowercase {vi}}} case PIE solution of the absorber at z $\sim $ 0.34790.\relax }}{32}{table.caption.22}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Galaxies in the neighbourhood of the absorber system identified in VIMOS survey. Velocity is taken to be zero at z = 0.347579\relax }}{35}{table.caption.23}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Hunt for BLAs : The Survey}{38}{chapter.0.6}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Details of the 29 BLA candidate absorber system shortlisted for the survey.\relax }}{40}{table.caption.26}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Towards Thesis Phase II}{45}{chapter.0.7}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces 22 sight lines selected for the survey. Table 1 of \citet {danforth-2016}.\relax }}{66}{table.caption.48}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces COS observation details of the 22 sight lines selected for the survey. Table 2 of \citet {danforth-2016}.\relax }}{67}{table.caption.49}%

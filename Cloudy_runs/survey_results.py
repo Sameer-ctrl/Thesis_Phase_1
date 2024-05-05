@@ -247,6 +247,41 @@ def z_ion(v_ion,z_abs):
         return z_ion_val
 
 
+def b_distribution(ion,binsize=None):
+
+    b=[]
+
+    for a in absorbers:
+        
+        ions=a.ions
+
+        if ion in ions:
+            b+=[b_val[0] for b_val in a.ion_obj[ion].b]
+
+    # print(len(b))
+    # j=0
+    # for i in b:
+    #     if i >=37:
+    #         j+=1
+
+    # print(j)
+
+    if binsize is None:
+        bins='auto'
+
+    else:
+        bin_size=binsize
+        bins=int((max(b)-min(b))/bin_size)
+    
+    # plt.title(f'{ion} : {len(b)}')
+    plt.hist(b,bins=bins,histtype='step',lw=2.5)
+
+    plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [km \ {s}^{-1}}]$',fontsize=30,labelpad=15)
+    plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+    plt.yticks(fontsize=25)
+    plt.xticks(fontsize=25)
+
+
 def col_den_distribution(ion,binsize=None):
 
     ion_col_den=[]
@@ -322,6 +357,21 @@ def col_den_redshift_ion_distribution_plot(ion):
 
 # ion='NV'
 # col_den_redshift_ion_distribution_plot(ion)
+
+ion='HI'
+
+plt.figure(figsize=(16,8))
+b_distribution(ion)
+plt.vlines(40,0,40,ls='--',lw=2,color='black')
+plt.ylim(0,38)
+
+plt.savefig(f'b_{ion}_distribution_survey.png')
+plt.savefig(f'../LaTeX/Phase_II_report/Figures/b_{ion}_distribution_survey.png')
+
+# plt.show()
+
+
+
 
 'metal ion distribution in systems and no. of components of all species'
 

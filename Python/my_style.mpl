@@ -19,5 +19,6 @@ ytick.minor.width : 1.2
 #ytick.right: True
 axes.linewidth : 2
 savefig.bbox:tight
+savefig.dpi : 300
 #xtick.minor.visible:True
 #ytick.minor.visible:True
