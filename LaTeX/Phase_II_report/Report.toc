@@ -4,8 +4,9 @@
 \contentsline {section}{\numberline {1.1}Shortlisting the BLA candidates}{1}{section.0.1.1}%
 \contentsline {section}{\numberline {1.2}Survey methodology}{2}{section.0.1.2}%
 \contentsline {section}{\numberline {1.3}Survey statistics}{4}{section.0.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Voigt profile fitting}{4}{subsection.0.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.1.1}H \hspace *{-0.5mm}{\sc i} absorbers}{5}{subsubsection.0.1.3.1.1}%
+\contentsline {subsection}{\numberline {1.3.1}Voigt profile fitting}{5}{subsection.0.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}H \hspace *{-0.5mm}{\footnotesize I} absorbers}{5}{subsubsection.0.1.3.1.1}%
 \contentsline {subsubsection}{\numberline {1.3.1.2}Metal absorbers}{7}{subsubsection.0.1.3.1.2}%
-\contentsline {subsection}{\numberline {1.3.2}Ionisation modelling}{7}{subsection.0.1.3.2}%
-\contentsline {section}{\numberline {1.4}Survey so far}{7}{section.0.1.4}%
+\contentsline {subsection}{\numberline {1.3.2}Ionisation modelling}{11}{subsection.0.1.3.2}%
+\contentsline {section}{\numberline {1.4}Survey so far}{11}{section.0.1.4}%
+\contentsline {tlstarchapter}{References}{12}{chapter*.16}%

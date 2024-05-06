@@ -82,16 +82,16 @@ In this section, we discuss the statistics and results of the survey from Voigt 
 
 \subsection{Voigt profile fitting}
 
-This survey of 29 absorbers spanned 22 lines of sight. These 22 lines of sight have total \ion{H}{i} (Lyman-$\alpha$) redshift pathlength of $\Delta z = 5.561$. A total of 413 absorption lines were identified and fitted with Voigt profiles. These 413 lines shown absorption from 15 different metal ions apart from \ion{H}{i} absorption. The figure \ref{fig:comp-distribution} shows the total number of components identified for each species. 
+This survey of 29 absorbers spanned 22 lines of sight. These 22 lines of sight have total \ion{H}{i} (Lyman-$\alpha$) redshift pathlength of $\Delta z = 5.561$. A total of 413 absorption lines were identified and fitted with Voigt profiles. These 413 lines shown absorption from 15 different metal ions apart from \ion{H}{i} absorption. The figure \ref{fig:comp-distribution} shows the total number of components identified for each species. For studies similar to current one, it is very insightful to describe the line density per unit redshift ($d\mathcal{N}/dz$) and  bivariate distribution of the absorbers with respect to column density and redshift ($\partial ^2 \mathcal{N}/\partial N \ \partial z $) (see e.g. \citet{danforth-2016, Penton-2000, tilton_2012}). However, since our current sample is not statistically large, we don't describe these metrics while discussing the statistics of the survey.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/ion-component.png}
+    \includegraphics[width=\linewidth,draft=False]{Figures/ion-component.png}
     \caption{No. of components identified for \ion{H}{i} and different metal ions.}
     \label{fig:comp-distribution}
 \end{figure}
 
-\subsubsection{H \hspace*{-0.5mm}{\sc i} absorbers}
+\subsubsection{H \hspace*{-0.5mm}{\footnotesize I} absorbers}
 
 We have identified 97 \ion{H}{i} components in our survey across 29 absorbers. The figure \ref{fig:HI_distribution} shows the distribution of column densities and redshift of these 97 components. These components span seven orders of magnitude of column densities starting from $\sim 10^{13} \ \text{to} \ 10^{19} \ \text{cm}^{-2}$. We have many absorbers with the column densities in the range $10^{13} - 10^{15.5} \ \text{cm}^{-2}$ but current sample is incomplete at rare large column density systems. In our current sample, we see \ion{H}{i} absorption till $z \sim 0.45$. In redshift space also, we have more systems at lower redshifts ($z < 0.2$) and only few absorbers at higher redshifts.
 
@@ -104,7 +104,7 @@ We have identified 97 \ion{H}{i} components in our survey across 29 absorbers. T
 
 \subsubsection*{Distribution of Doppler parameters}
 
-The figure \ref{fig:b_HI_distribution} shows the distribution of Doppler \emph{b} parameters of the 97 \ion{H}{i} components. The vertical dashed line marks the cutoff for the line to be called as `BLA' at \emph{b}=40 km $\text{s}^{-1}$. Assuming a complete thermal broadening, $\emph{b}=40$ km s$^{-1}$ gives a temperature of $10^5$ K. Out of 97 components, 37(34) components have Doppler parameters in excess of 40(45) km $\text{s}^{-1}$. Some components show large Doppler widths of above 100 km $\text{s}^{-1}$, in this components only saturated Ly$\alpha$ lines are seen, making the identification of velocity substructures of these lines difficult. This results in the large \emph{b} values for these components. 
+The figure \ref{fig:b_HI_distribution} shows the distribution of Doppler \emph{b} parameters of the 97 \ion{H}{i} components. The vertical dashed line marks the cutoff for the line to be called as `BLA' at \emph{b}=40 km $\text{s}^{-1}$. Assuming a complete thermal broadening, $\emph{b}=40$ km s$^{-1}$ gives a temperature of $10^5$ K. Out of 97 components, 37(34) components have Doppler parameters in excess of 40(45) km $\text{s}^{-1}$. Some components show large Doppler widths of above 100 km $\text{s}^{-1}$, for this components only saturated Ly$\alpha$ lines are seen, making the identification of velocity substructures of these lines difficult. This results in the large \emph{b} values for these lines. 
 
 We can estimate the temperature of the gas directly from the Doppler parameter if we have Doppler parameter of another species coming from the same phase. 
 
@@ -116,7 +116,56 @@ We can estimate the temperature of the gas directly from the Doppler parameter i
 \end{figure}
 
 
+\subsubsection*{NH-bH plot}
+
 \subsubsection{Metal absorbers}
+
+We have identified absorption from total of 15 distinct metal ions in our survey. In this section we discuss the statistics of some prominent ions in our sample.
+
+\subsubsection*{O \hspace*{-0.5mm}{\footnotesize VI}}
+
+We identified 35 \ion{O}{vi} components in our survey across 17 absorber systems. \ion{O}{vi} is the most common ion after \ion{Si}{iii} (36 components) in our sample, owing to the strong doublet lines at $\lambda_\text{rest}=1031.927, \ 1037.616$  \AA, with fairly large oscillator strengths of 0.1329 and 0.0661 respectively and large cosmic abundance of Oxygen. The figure \ref{fig:OVI_distribution} shows the distribution of column densities and redshifts of these 35 components. The \ion{O}{vi} coverage starts from $z \sim 0.09$ in the HST/COS FUV G130M grating. Unlike \ion{H}{i}, we find \ion{O}{vi} columnd densities in narrow range of $\sim 10^{13} - 10^{14.5} \ \text{cm}^{-2}$. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/OVI_distribution_survey.png}
+    \caption{Distribution of column densities (left panel) and redshift (right panel) of 35 \ion{O}{vi} components.}
+    \label{fig:OVI_distribution}
+\end{figure}
+
+\ion{O}{vi} is a good tracer of WHIM at temperatures in range of $10^5 - 10^6$ K as its ionisation fraction peaks at around $10^{5.7}$ K in collisional ionisation \citep{Gnat-Sternberg-2007}. So, many studies of \ion{O}{vi} absorbers have been done in detail in the past. \citet{savage-2014} have studied 14 QSO sight lines comprising a total of 56 \ion{O}{vi} absorbers showing 85 \ion{O}{vi} components. They estimate the baryonic content in warm gas traced by \ion{O}{vi} as $\Omega_b(\ion{O}{vi})_\text{Warm}= (0.0019 \pm 0.0005) h^{-1}_{70}$.
+
+Studies exploring the correlations between star formation and \ion{O}{vi} have also been done. In their study, \citet{Tumlinson-2011,Tumlinson-2013} found strong correlation between the speciﬁc star formation rate and the presence of \ion{O}{vi}. They found that star-forming galaxies are surrounded by large halos ionised \ion{O}{vi} of sizes $sim 150$ kpc, which were not much prominent around galaxies with little to no star-formation.
+
+
+\subsubsection*{Si \hspace*{-0.5mm}{\footnotesize II}, Si \hspace*{-0.5mm}{\footnotesize III} and Si \hspace*{-0.5mm}{\footnotesize IV}}
+
+We find good number of Si absorbers in the form of \ion{Si}{ii}, \ion{Si}{iii} and \ion{Si}{iv} ions having 19, 36 and 20 components respectively. \ion{Si}{ii} shows a number of lines in the COS/FUV channel with $\lambda_\text{rest}=1526.707, 1304.371, 1260.422$ \AA \  and doublet at 1190.416, 1193.289 \AA. \ion{Si}{iii} has the most components among the metal ions in our sample because of very high oscillator strength of 1.669 at $\lambda_\text{rest}=1206.5$ \AA. And \ion{Si}{iv} shows doublet line at $\lambda_\text{rest}=1393.760,1402.772$ \AA. Figures \ref{fig:SiII_distribution}, \ref{fig:SiIII_distribution} and \ref{fig:SiIV_distribution} shows the distribution of column densities and redshifts of \ion{Si}{ii}, \ion{Si}{iii} and \ion{Si}{iv} respectively.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/SiII_distribution_survey.png}
+    \caption{Distribution of column densities (left panel) and redshift (right panel) of 19 \ion{Si}{ii} components.}
+    \label{fig:SiII_distribution}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/SiIII_distribution_survey.png}
+    \caption{Distribution of column densities (left panel) and redshift (right panel) of 36 \ion{Si}{iii} components.}
+    \label{fig:SiIII_distribution}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/SiIV_distribution_survey.png}
+    \caption{Distribution of column densities (left panel) and redshift (right panel) of 20 \ion{Si}{iv} components.}
+    \label{fig:SiIV_distribution}
+\end{figure}
+
+\subsubsection*{C \hspace*{-0.5mm}{\footnotesize II}, C \hspace*{-0.5mm}{\footnotesize III} and C \hspace*{-0.5mm}{\footnotesize IV}}
+
 
 
 

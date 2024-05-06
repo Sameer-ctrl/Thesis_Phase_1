@@ -281,6 +281,8 @@ def b_distribution(ion,binsize=None):
     plt.yticks(fontsize=25)
     plt.xticks(fontsize=25)
 
+    print(len(b))
+
 
 def col_den_distribution(ion,binsize=None):
 
@@ -358,15 +360,15 @@ def col_den_redshift_ion_distribution_plot(ion):
 # ion='NV'
 # col_den_redshift_ion_distribution_plot(ion)
 
-ion='HI'
+ion='SiIV'
 
-plt.figure(figsize=(16,8))
+# plt.figure(figsize=(16,8))
 b_distribution(ion)
-plt.vlines(40,0,40,ls='--',lw=2,color='black')
-plt.ylim(0,38)
+# plt.vlines(40,0,40,ls='--',lw=2,color='black')
+# plt.ylim(0,38)
 
-plt.savefig(f'b_{ion}_distribution_survey.png')
-plt.savefig(f'../LaTeX/Phase_II_report/Figures/b_{ion}_distribution_survey.png')
+# plt.savefig(f'b_{ion}_distribution_survey.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/b_{ion}_distribution_survey.png')
 
 # plt.show()
 
