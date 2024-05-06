@@ -55,13 +55,13 @@ class ion():
 
 class abs_system():
 
-    def __init__(self,qso,z_abs,cont_mark='*'):
+    def __init__(self,qso,z_abs,cont_mark='*',fix_param_mark='A'):
 
-        file=f'../VPfit/{qso}/z={z_abs}/fit_params.txt'
+        file=f'../VPfit/{qso}/z={z_abs:.6f}/fit_params.txt'
         
         with open(file) as f:
             text=f.read()
-            text=text.replace('A','')
+            text=text.replace(fix_param_mark,'')
             # print(text)
             # print('\n')
 
@@ -340,7 +340,19 @@ absorbers=[
             abs_system('h1821',0.170006),
             abs_system('h1821',0.224981),
             abs_system('pg1121',0.192393),
-            abs_system('pks0405',0.167125)
+            abs_system('pks0405',0.167125),
+            abs_system('he0056',0.043265),
+            # abs_system('pg1216',0.006328),
+            abs_system('3c263',0.063397),
+            abs_system('pg1222',0.054479),
+            abs_system('rxj0439',0.005568),                        
+            # abs_system('uks0242',0.063850),
+            abs_system('pg1259',0.046284),
+            abs_system('pks1302',0.094839),
+            abs_system('3c57',0.077430),
+            abs_system('p1103',0.003934),
+            abs_system('phl1811',0.080928),
+            # abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
            ]
 
 BLA_dict={}
@@ -379,10 +391,9 @@ for a in absorbers:
         BLA_dict[a.qso][2]+=b_err
         BLA_dict[a.qso][3]+=N_err
 
-
 qso=list(BLA_dict.keys())
-for q in qso:
-    print(q,redshift_path_lambda_CDM(q))
+# for q in qso:
+#     print(q,redshift_path_lambda_CDM(q))
 
 h=0.7
 H0=100*h    #km/s/ Mpc
@@ -414,6 +425,8 @@ for i,q in enumerate(qso):
 
     omega_BLA_los.append(val*100)
     omega_BLA_los_err.append(err*100)
+
+    print(q, round(val*100,2))
 
 # qso=['3c263', 'pks0637', 'pg1424', 'pg0003', 'pg1216', 's135712', '1es1553', 'pg1222', 'pg1116', 'h1821', 'pg1121', 'pks0405']
 # b_all=[87, 162, 45, 46, 40, 63, 40, 66, 64, 52, 53, 46, 51, 64, 52, 43, 71, 63, 84, 62, 60, 56]
@@ -462,7 +475,7 @@ print(f'\u03A9 = {round(omega_BLA_all*100,2)} \u00B1 {round(omega_BLA_all_err*10
 
 # plt.hist(N_all)
 
-plt.show()
+# plt.show()
 
 
 
