@@ -6,9 +6,10 @@ from astropy.table import Table
 from scipy.integrate import quad
 from roman import toRoman
 import matplotlib
+import os
 
 plt.style.use('../Python/my_style.mpl')
-matplotlib.rcParams['backend']='TkAgg'
+# matplotlib.rcParams['backend']='TkAgg'
 
 
 qso_list=loadtxt('../Python/Data/qso_list.txt',dtype=str)
@@ -172,6 +173,8 @@ class abs_system():
             sol[n]=[sol_exc,sol_inc,err_NHi_abs_masked[0]]
     
         self.ion_modelling_sol=sol
+
+        os.remove('temp_param_file.txt')
 
 def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
 
