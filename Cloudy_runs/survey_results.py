@@ -360,7 +360,7 @@ def col_den_redshift_ion_distribution_plot(ion):
 # ion='NV'
 # col_den_redshift_ion_distribution_plot(ion)
 
-ion='SiIV'
+ion='NV'
 
 # plt.figure(figsize=(16,8))
 b_distribution(ion)
