@@ -287,7 +287,7 @@ def f_H(b,x=100):
 
     return log_fH,logT
 
-def omega_BLA(qso,b,N,err_b,err_N):
+def omega_BLA(qso,b,N,err_b,err_N,T=None,err_T=None):
 
     if not isinstance(qso, (list, tuple, type(array([])))):
         qso=array([qso])
@@ -299,26 +299,51 @@ def omega_BLA(qso,b,N,err_b,err_N):
         err_b=array([err_b])
         err_N=array([err_N])
 
+        if T is not None:
+
+            T=array([T])
+            err_T=array([err_T])
+
     if isinstance(b, (list, tuple)):
         b=array(b)
         
     if isinstance(N, (list, tuple)):
         N=array(N)
 
+    if isinstance(T, (list, tuple)):
+        T=array(T)
+
     if isinstance(err_b, (list, tuple)):
         err_b=array(err_b)
         
     if isinstance(err_N, (list, tuple)):
         err_N=array(err_N)
+
+    if isinstance(err_T, (list, tuple)):
+        err_T=array(err_T)
             
     delta_X=sum([redshift_path_lambda_CDM(q) for q in unique(qso)])
-    fH, logT = f_H(b)
-    NH=sum(10**(fH+N))
 
-    omega_BLA_val=A*(NH/delta_X)
+    if T is None:
 
-    err_logT=2*(err_b/b)
-    err_fH=(5.4-(0.66*(logT)))*err_logT
+        fH, logT = f_H(b)
+        NH=sum(10**(fH+N))
+
+        omega_BLA_val=A*(NH/delta_X)
+
+        err_logT=2*(err_b/b)
+        err_fH=(5.4-(0.66*(logT)))*err_logT
+
+    else:
+        
+        logT=T
+        fH=(5.4*logT)-(0.33*(logT**2))-13.9
+        NH=sum(10**(fH+N))
+
+        omega_BLA_val=A*(NH/delta_X)
+
+        err_logT=err_T
+        err_fH=(5.4-(0.66*(logT)))*err_logT
 
     err_omega_BLA=log(10)*(A/delta_X)*sqrt(sum((10**(2*(fH+N)))*(err_fH**2+err_N**2)))
 
@@ -345,18 +370,31 @@ absorbers=[
             abs_system('pg1121',0.192393),
             abs_system('pks0405',0.167125),
             abs_system('he0056',0.043265),
-            # abs_system('pg1216',0.006328),
+            abs_system('pg1216',0.006328),     #
             abs_system('3c263',0.063397),
             abs_system('pg1222',0.054479),
             abs_system('rxj0439',0.005568),                        
-            # abs_system('uks0242',0.063850),
+            abs_system('uks0242',0.063850),    #
             abs_system('pg1259',0.046284),
             abs_system('pks1302',0.094839),
             abs_system('3c57',0.077430),
             abs_system('p1103',0.003934),
             abs_system('phl1811',0.080928),
-            # abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
+            abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')      #
            ]
+
+print([a.z_abs for a in absorbers])
+print([a.qso for a in absorbers])
+quit()
+# absorbers=[
+#             abs_system('pg0003',0.347586),                        
+#             abs_system('pg0003',0.386089),
+#             abs_system('1es1553',0.187764),
+#             abs_system('pg1222',0.378389),
+#             abs_system('pg1116',0.138527),
+#             abs_system('h1821',0.224981),
+#             abs_system('pg1121',0.192393),
+#            ]
 
 BLA_dict={}
 z_abs=[]
@@ -366,7 +404,7 @@ for a in absorbers:
     b=BLA_obj.b
 
     if len(b)>0:
-        BLA_dict[a.qso]=[[],[],[],[]]
+        BLA_dict[a.qso]=[[],[],[],[],[],[]]
         z_abs.append(a.z_abs)
 
 z_abs=unique(z_abs)
@@ -395,8 +433,11 @@ for a in absorbers:
         BLA_dict[a.qso][3]+=N_err
 
 qso=list(BLA_dict.keys())
-# for q in qso:
-#     print(q,redshift_path_lambda_CDM(q))
+# print(BLA_dict)
+# BLA_dict={'pg0003': [[63, 40], [14.2, 14.1], [0, 4], [0.02, 0.05],[5.28,4.80],[0.05,0.11]], '1es1553': [[51], [13.88], [1], [0.01],[5.19],[0.04]], 'pg1222': [[52, 43], [14.34, 15.43], [4, 1], [0.05, 0.04],[5,4.81],[0.17,0.19]], 'pg1116': [[71], [13.6], [14], [0.23],[5.39],[0.21]], 'h1821': [[84], [13.64], [13], [0.11],[5.51],[0.16]]}
+# # , 'pg1121': [[60], [14.34], [6], [0.09],[5.35],[0.14]]
+# qso=list(BLA_dict.keys())
+
 
 h=0.7
 H0=100*h    #km/s/ Mpc
@@ -413,18 +454,23 @@ b_all=[]
 b_all_err=[]
 N_all=[]
 N_all_err=[]
+T_all=[]
+T_all_err=[]
 
 for i,q in enumerate(qso):
     
-    b_los, N_los, b_los_err, N_los_err = BLA_dict[q]
+    b_los, N_los, b_los_err, N_los_err,T_los, T_los_err = BLA_dict[q]
 
     b_all+=b_los
     N_all+=N_los
+    T_all+=T_los
     
     b_all_err+=b_los_err
     N_all_err+=N_los_err
+    T_all_err+=T_los_err
 
     val, err = omega_BLA(q,b_los,N_los,b_los_err,N_los_err)
+    # val, err = omega_BLA(q,b_los,N_los,b_los_err,N_los_err,T=T_los,err_T=T_los_err)
 
     omega_BLA_los.append(val*100)
     omega_BLA_los_err.append(err*100)
@@ -439,6 +485,7 @@ for i,q in enumerate(qso):
 
 
 omega_BLA_all, omega_BLA_all_err = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err)
+# omega_BLA_all, omega_BLA_all_err = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err,T=T_all,err_T=T_all_err)
 print(f'\u03A9 = {round(omega_BLA_all*100,2)} \u00B1 {round(omega_BLA_all_err*100,2)}')
 
 # plt.figure()
