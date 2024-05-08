@@ -383,8 +383,25 @@ absorbers=[
             abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')      #
            ]
 
-print([a.z_abs for a in absorbers])
-print([a.qso for a in absorbers])
+# print([a.z_abs for a in absorbers])
+# print([a.qso for a in absorbers])
+
+logT=linspace(5,7,1000)
+log_fH=(5.4*logT)-(0.33*(logT**2))-13.9
+
+plt.figure(figsize=(16,10))
+
+plt.plot(logT,log_fH)
+plt.xlabel(r'\textbf{$z$}',fontsize=35,labelpad=15)
+plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+plt.yticks(fontsize=25)
+plt.xticks(fontsize=25)
+
+# plt.savefig(f'fH_vs_T.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/fH_vs_T.png')
+plt.show()
+
+
 quit()
 # absorbers=[
 #             abs_system('pg0003',0.347586),                        
