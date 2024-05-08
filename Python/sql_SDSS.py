@@ -71,7 +71,7 @@ z_abs=array([0.140756, 0.161064, 0.417539, 0.147104, 0.347586, 0.386089, 0.42192
 
 dA_scale=cosmo.kpc_proper_per_arcmin(z_abs)
 
-dsep=10 #Mpc  transverse distance at absorber redshift to lookfor
+dsep=10                      #Mpc transverse distance at absorber redshift to lookfor
 arcmin=(dsep*1000)/dA_scale    #  angular separation on plane of sky
 
 v_abs=v_z(z_abs)
@@ -79,53 +79,24 @@ v_abs=v_z(z_abs)
 z1=z_v(v_abs-1000)
 z2=z_v(v_abs+1000)
 
+#18,26,28
+# 18 : 120' - 152
+# 26 : 120' - No sources
+# 28 : 120' - 25  
 
-# for i in range(len(qso)):
-# for i in range(2,3):
+# for i in range(27,len(qso)):
+for i in [18,26,28]:
 
-#     ra,dec=ra_dec(qso[i])
-#     query=sql_query(ra,dec,z1[i],z2[i],arcmin[i])
+    print(f'Querying data for {qso[i]} : {z_abs[i]}')
+    ra,dec=ra_dec(qso[i])
 
-#     data=SDSS.query_sql(query)
-#     print(data)
-#     print(f'{qso[i]} {z_abs[i]} {len(data)}')
-#     data.write(f'{qso[i]}_{z_abs[i]}_SDSS_data.fits',overwrite=True)
+    query=sql_query(ra,dec,z1[i],z2[i],120)
 
-ra=238.92935000
-dec=11.19010278
-r=60
+    data=SDSS.query_sql(query)
 
-query=f"""
-        SELECT
-        s.objid,
-        sz.ra AS ra,
-        sz.dec AS dec,
-        pz.z AS photoz,
-        pz.zerr AS photozerr,
-        sz.z AS specz,
-        sz.zerr AS speczerr,
-        b.distance AS proj_sep,
-        s.modelMag_u AS umag,
-        s.modelMagErr_u AS umagerr,
-        s.modelMag_g AS gmag,
-        s.modelMagErr_g AS gmagerr,
-        s.modelMag_r AS rmag,
-        s.modelMagerr_r AS rmagerr,
-        s.type AS obj_type
+    if data is not None:
+        print(f'Sources found : {len(data)} \n--------------------------------------\n')
+        data.write(f'Data/SDSS/{qso[i]}_{z_abs[i]}_SDSS_data.fits',overwrite=True)
 
-        FROM
-            PhotoObjAll AS s
-        JOIN
-            dbo.fGetNearbyObjEq({ra}, {dec}, {r}) AS b ON b.objID = s.objID
-        JOIN
-            Photoz AS pz ON pz.objid = s.objid
-        JOIN
-            specObjAll AS sz ON sz.bestobjid = s.objid
-        WHERE
-            s.type = 3 AND
-            sz.z > {z1[9]:.6f} AND
-            sz.z < {z2[9]:.6f}
-            """
-# print(query)
-data=SDSS.query_sql(query)
-print(data)
+    else:
+        print(f'No data found for {qso[i]} : {z_abs[i]} \n--------------------------------------\n')

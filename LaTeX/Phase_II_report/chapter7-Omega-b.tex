@@ -1,0 +1,43 @@
+\chapter{Estimating $\Omega_\text{b}(\text{BLA})$} \label{ch:Omega-b}
+
+In this chapter we discuss the estimation of the baryon energy density trapped in BLAs, i.e. $\Omega_\text{b}(\text{BLA})$, using our BLA survey which is the cornerstone of the current work. We will statistically estimate the $\Omega_\text{b}(\text{BLA})$ from our survey results. And then we will determine how much BLAs contribute to the baryon budget ($\Omega_\text{b}$) of the current universe.
+
+\section{Methodology to determine $\Omega_\text{b}(\text{BLA})$}
+
+The baryon content of any ion in terms of the current critical density $(\rho_{cr})$ of the universe can be estimated by integrating over the bivariate frequency distribution of the absorbers as function of column density and redshift of that ion and is given as :
+
+\begin{equation} \label{eqn:omega_ion}
+    \Omega_{\text{ion}} = \frac{H_0 m_{\text{ion}}}{c \rho_{\text{cr}}} \int \frac{\partial ^2 \mathcal{N}}{\partial N \ \partial X} N dN 
+\end{equation}
+
+\vspace*{3mm}
+
+Where, $H_0$ is the current value of Hubble's constant, \\ \hspace*{19mm}
+$m_\text{ion}$ is the the mass of ion, \\ \hspace*{19mm}
+$c$ is the speed of light in vacuum, \\ \hspace*{19mm}
+$\mathcal{N}$ is the number of absorbers at column density $N$ and path length $X$
+
+\newpage
+
+The path length $X$ is function of redshift (\emph{z}) and denotes the total absorption path length available for absorption. A non-evolving population of absorbers will show an invariant number density per unit absorption pathlength \citep{Becker-2011}. It is defined as :
+
+\begin{equation}
+    X(z)=\int_0^z  (1+z')^2 \frac{H_0}{H(z')} dz'
+\end{equation}
+
+Now, assuming a flat $\Lambda \text{CDM}$ cosmology, we can write the Hubble's constant at any \emph{z} as :
+
+\begin{equation}
+    H(z) = H_0 \left[\Omega_m(1+z)^3+\Omega_\Lambda\right]^{1/2}
+\end{equation}
+
+with $\Omega_m=0.31$ and $\Omega_\Lambda=0.69$ (ref). This gives,
+
+\begin{equation}
+    X(z)=\int_0^z  \frac{(1+z')^2}{\left[\Omega_m(1+z')^3+\Omega_\Lambda\right]^{1/2}} dz'
+\end{equation}
+
+However, whole pathlength of X may not be available for absorption due to the presence of Ly$\alpha$ forest lines, absorption from strong ISM lines and intervening IGM lines also. So, some correction needs to be made to get the unblocked absorption pathlength. To calculate this correction, we have developed an interactive program, where we manually select the wavelength regions showing strong absorption features from the above mentioned lines along each sight line.
+
+Now, to get the baryon content of BLAs using equation \ref{eqn:omega_ion}, we can use total Hydrogen column density, N(H), and $m_{ion}=\mu . m_H$, where $\mu$ is the mean atomic mass in a.m.u. and $m_H$ is the mass of Hydrogen atom. We take $\mu=1.32$ for $\text{Y}_\text{He}=0.2446$ \citep{Peimbert-2016} taking in account the Helium abundance in the universe. But N(H) is not a directly observable quantity, instead we can get neutral Hydrogen column density, N(\ion{H}{i}), from observations. So we need the correct for the ionisation of Hydrogen to get N(H) from observable N(\ion{H}{i}). This ionisation correction is not trivial and require number of assumptions.
+ 
