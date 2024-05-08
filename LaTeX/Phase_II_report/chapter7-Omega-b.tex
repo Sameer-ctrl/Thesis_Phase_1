@@ -49,9 +49,9 @@ If the gas is collisionally ionised, then we can estimate the hydrogen ionizatio
 
 This relation is valid in the temperature regimes of $10^5-10^7$ K. Figure \ref{fig:fH} shows the variation of $f_H$ with $T$ based on above relation . We can use this to convert N(\ion{H}{i}) to N(H). However, we need to note that at densities lower than $n_H < 10^{-5} \ \text{cm}^{-3}$, photoionisation from UV background could result in higher hydrogen ionization fraction. But since we don't have the hydrogen densities in the absorbers, so we could possibly underestimate the $f_H$ in such cases (see \citet{Richter_2020, Fang-2001} for more details). Still, we need the temperature to get the ionisation correction. We could only estimate the temperature where the BLA is aligned with some other ion like \ion{O}{vi}. We have only few such cases. In rest of the cases, where we don't have an estimate of temperature, we use the Doppler width, \emph{b}, of the BLA to estimate the temperature assuming pure thermal broadening. This gives us an upper limit on the temperature of the absorber. Now, $b^2=2kT/m_H$, so $T=(m_H / 2k) b^2 $. 
 
-\begin{figure}
+\begin{figure}[t]
     \centering
-    \includegraphics[width=\linewidth]{Figures/ion-component.png}
+    \includegraphics[width=\linewidth]{Figures/fH_vs_T.png}
     \caption{Hydrogen ionisation fraction as a function of temperature.}
     \label{fig:fH}
 \end{figure}
@@ -80,5 +80,78 @@ Where $N_{obs}$ is the observed column density of the ion and $\Delta X$ is the 
 
 Where $j$ represents a line of sight and $i$ refers to the absorber along sight line $j$. So numerator is the sum over all the absorbers and the denominator is summed over all the lines of sight.  We use error propogation to find the uncertainity in the value of $\Omega_\text{b}(\text{BLA})$. We consider error in $f_H$, which depend on temperature, which inturn depend on the measured \emph{b} values and error in \ion{H}{i} column densities.  
 
+In the next section we describe the sample of absorbers we will be using to estimate the $\Omega_\text{b}(\text{BLA})$.
 
- 
+\section{Selecting the absorber samples}
+
+We have a total of 29 absorber systems in our survey. These systems have 97 \ion{H}{i} components in total. Out of these 97 components, 37(34) components have Doppler parameters above 40(45) km $\text{s}^{-1}$. But as discussed multiple times throughout this work that just having large \emph{b} value does not ensure we have a `true' BLA. So we have to carefully select the candidates which are actually BLAs from these 37(34) components to estimate the baryon content of BLAs. 
+
+\subsection{Based on Temperature and Ionisation Modelling}
+
+Since, we need the temperature to estimate the ionisation fraction, we consider candidates whose temperatures could be estimated from the Doppler parameters of \ion{H}{i} and \ion{O}{vi}. To estimate the temperature directly from Doppler parameters we need that both species must be fairly aligned. HST/COS data may have wavelength calibration errors of 15-20 km s$^{-1}$, which could be as high as few resolution elements \citep{Wakker-2015}. So, we consider species as aligned if they are separated by less 20 km s$^{-1}$ in velocity within the fitting errors. So, if the species are aligned, then we can asssume that they are co-spatial, so that there non-thermal broadening could be assumed to be same. However, we need to be cautious that aligned species need not be co-spatial always. So, upon calculating the temperatures as mentioned.
+
+We get 5 (value) such systems. We call this as sample A and are labelled so in table \ref{tab:CIE-properties}. This sample will give us a conservative lower limit on the baryon content in BLAs. Using this sample of absorbers we get $\Omega_\text{b}(\text{BLA})=0.0018 \pm 0.05$. Table \ref{tab:Omega_b_sampleA} gives the details of the individual sight lines in this sample.  
+
+
+\begin{table}
+    \centering
+    \vspace{5mm}
+        \begin{tabular}{ccccccc}
+            \hline \hline
+           \head{S. no.} & \head{$\mathbf{z_{abs}}$} & \head{\emph{b}} &  \head{log T}  &  \head{log $\mathbf{f_H}$}  & \head{log N(H)}  & \head{Sample} \tabularnewline
+           
+            &  & (km s\textsuperscript{-1}) &  (K)  &   & (cm\textsuperscript{-2})  &  \tabularnewline  
+
+           \hline  \tabularnewline
+
+      
+           \tabularnewline \hline \hline 
+        \end{tabular}
+    \caption{Details of the 29 BLA candidate absorber system shortlisted  for the survey.}
+    \label{tab:CIE-properties}
+\end{table}
+
+
+\begin{table}
+    \centering
+    \vspace{5mm}
+        \begin{tabular}{ccccccc}
+            \hline \hline
+           \head{Sight line} & \head{$\mathbf{z_{em}}$} &  \head{log N(H)}  &  \head{$\mathbf{\Delta X}$}  & \head{$\mathbf{\Omega_\text{b}(\text{BLA})}$}  \tabularnewline
+           
+            &  &  (cm\textsuperscript{-2})  &  & ($\times 10^{-2} \ {h_{70}}^{-1}$) \tabularnewline \hline 
+
+            PG 0003+158  &  0.451  & 19.61  &  0.454 & 0.24 $\pm$ 0.05 \\
+            1ES 1553+113  &  0.414  & 19.12  &  0.449 & 0.08 $\pm$ 0.01 \\
+            PG 1222+216  &  0.432  & 19.19  &  0.424 & 0.10 $\pm$ 0.08 \\
+            PG 1116+215  &  0.176  & 19.22  &  0.134 & 0.33 $\pm$ 0.34 \\
+            H 1821+643  &  0.297  & 19.48  &  0.239 & 0.34 $\pm$ 0.23 \\
+
+            \hline
+
+            Total &  &  20.06  & 1.700 &  0.18 $\pm$ 0.05 \\
+
+            % Sample A : 7
+            % PG0003+158  &  0.451  & 19.65  &  0.454 & 0.26 $\pm$ 0.06 \\
+            % 1ES1553+113  &  0.414  & 19.12  &  0.449 & 0.08 $\pm$ 0.01 \\
+            % PG1222+216  &  0.432  & 19.95  &  0.424 & 0.57 $\pm$ 0.46 \\
+            % PG1116+215  &  0.176  & 19.22  &  0.134 & 0.33 $\pm$ 0.34 \\
+            % H1821+643  &  0.297  & 19.48  &  0.239 & 0.34 $\pm$ 0.23 \\
+            % \hline
+            % Total &  &  20.29 &  1.700  & 0.30 $\pm$  0.12 \\
+
+            % Sample A : 8
+            % PG0003+158  &  0.451  & 19.65  &  0.454 & 0.26 $\pm$ 0.06 \\
+            % 1ES1553+113  &  0.414  & 19.12  &  0.449 & 0.08 $\pm$ 0.01 \\
+            % PG1222+216  &  0.432  & 19.95  &  0.424 & 0.57 $\pm$ 0.46 \\
+            % PG1116+215  &  0.176  & 19.22  &  0.134 & 0.33 $\pm$ 0.34 \\
+            % H1821+643  &  0.297  & 19.48  &  0.239 & 0.34 $\pm$ 0.23 \\
+            % PG1121+422  &  0.225  & 19.87  &  0.203 & 0.97 $\pm$ 0.86 \\
+            % \hline
+            % Total &  &  20.43 &  1.903  & 0.38 $\pm$  0.14 \\
+
+            \hline \hline 
+        \end{tabular}
+    \caption{$\Omega_\text{b}(\text{BLA})$ estimation using sample A}
+    \label{tab:Omega_b_sampleA}
+\end{table}
