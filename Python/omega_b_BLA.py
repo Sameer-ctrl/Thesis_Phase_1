@@ -392,7 +392,7 @@ absorbers=[
 # plt.figure(figsize=(16,10))
 
 # plt.plot(logT,log_fH,lw=3)
-# plt.xlabel(r'$\mathbf{log \ T}$',fontsize=30,labelpad=15)
+# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',fontsize=30,labelpad=15)
 # plt.ylabel(r'$\mathbf{log \ f_H}$',fontsize=30,labelpad=15)
 # plt.yticks(fontsize=25)
 # plt.xticks(fontsize=25)

@@ -26,6 +26,12 @@
 Acharya A.,  Khaire V.,  2021, \mn@doi [\mnras] {10.1093/mnras/stab3316}, 509,
   5559
 
+\bibitem[\protect\citeauthoryear{{Becker}, {Sargent}, {Rauch}  \&
+  {Calverley}}{{Becker} et~al.}{2011}]{Becker-2011}
+{Becker} G.~D.,  {Sargent} W. L.~W.,  {Rauch} M.,   {Calverley} A.~P.,  2011,
+  \mn@doi [\apj] {10.1088/0004-637X/735/2/93}, \href
+  {https://ui.adsabs.harvard.edu/abs/2011ApJ...735...93B} {735, 93}
+
 \bibitem[\protect\citeauthoryear{Carswell \& Webb}{Carswell \&
   Webb}{2014}]{vpfit}
 Carswell R.~F.,  Webb J.~K.,  2014, Astrophysics Source Code Library, p.
@@ -55,6 +61,11 @@ Danforth C.~W.,  Stocke J.~T.,   Shull J.~M.,  2010, \mn@doi [The Astrophysical
   et~al.}{2016}]{danforth-2016}
 Danforth C.~W.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/817/2/111},
   817, 111
+
+\bibitem[\protect\citeauthoryear{{Fang} \& {Bryan}}{{Fang} \&
+  {Bryan}}{2001}]{Fang-2001}
+{Fang} T.,  {Bryan} G.~L.,  2001, \mn@doi [\apjl] {10.1086/324571}, \href
+  {https://ui.adsabs.harvard.edu/abs/2001ApJ...561L..31F} {561, L31}
 
 \bibitem[\protect\citeauthoryear{Ferland et~al.,}{Ferland
   et~al.}{2017}]{cloudy}
@@ -113,6 +124,12 @@ Le~Fèvre O.,  et~al., 2013, \mn@doi [Astronomy \& Astrophysics]
 {Morton} D.~C.,  {Smith} W.~H.,  1973, \mn@doi [\apjs] {10.1086/190284}, \href
   {https://ui.adsabs.harvard.edu/abs/1973ApJS...26..333M} {26, 333}
 
+\bibitem[\protect\citeauthoryear{{Peimbert}, {Peimbert}  \&
+  {Luridiana}}{{Peimbert} et~al.}{2016}]{Peimbert-2016}
+{Peimbert} A.,  {Peimbert} M.,   {Luridiana} V.,  2016, \mn@doi [\rmxaa]
+  {10.48550/arXiv.1608.02062}, \href
+  {https://ui.adsabs.harvard.edu/abs/2016RMxAA..52..419P} {52, 419}
+
 \bibitem[\protect\citeauthoryear{{Penton}, {Stocke}  \& {Shull}}{{Penton}
   et~al.}{2000}]{Penton-2000}
 {Penton} S.~V.,  {Stocke} J.~T.,   {Shull} J.~M.,  2000, \mn@doi [\apjs]
@@ -162,6 +179,11 @@ Richter P.,  2020, \mn@doi [The Astrophysical Journal]
 \bibitem[\protect\citeauthoryear{Strauss et~al.,}{Strauss
   et~al.}{2002}]{strauss_SDSS}
 Strauss M.~A.,  et~al., 2002, \mn@doi [\aj] {10.1086/342343}, 124, 1810
+
+\bibitem[\protect\citeauthoryear{{Sutherland} \& {Dopita}}{{Sutherland} \&
+  {Dopita}}{1993}]{Sutherland-1993}
+{Sutherland} R.~S.,  {Dopita} M.~A.,  1993, \mn@doi [\apjs] {10.1086/191823},
+  \href {https://ui.adsabs.harvard.edu/abs/1993ApJS...88..253S} {88, 253}
 
 \bibitem[\protect\citeauthoryear{{Tepper-Garc{\'\i}a}, {Richter}  \&
   {Schaye}}{{Tepper-Garc{\'\i}a} et~al.}{2013}]{tepper-2013}
