@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  8 MAY 2024 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  9 MAY 2024 03:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,7 +570,24 @@ File: ot2enc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
 LaTeX Font Info:    Trying to load font information for T1+aer on input line 112.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./macros.tex (/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip75
+\LTright=\skip76
+\LTpre=\skip77
+\LTpost=\skip78
+\LTchunksize=\count293
+\LTcapwidth=\dimen184
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count294
+\LT@rows=\count295
+\c@LT@tables=\count296
+\c@LT@chunks=\count297
+\LT@p@ftn=\toks37
+) (./macros.tex (/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
  (/usr/share/texlive/texmf-dist/tex/latex/minitoc/mtcmess.sty
 Package: mtcmess 2006/03/14
@@ -578,17 +595,17 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 62 ***.
 \tf@mtc=\write4
-\mtcindent=\skip75
-\mtcskipamount=\skip76
+\mtcindent=\skip79
+\mtcskipamount=\skip80
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks37
-\mtc@strutbox=\box50
-\mtc@hstrutbox=\box51
+\mtc@toks=\toks38
+\mtc@strutbox=\box54
+\mtc@hstrutbox=\box55
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout4 = `Report.mtc0'.
@@ -605,11 +622,11 @@ Package minitoc Info: I0031
 
 \openout4 = `Report.mtc0'.
 
-\c@mtc=\count293
-\c@minitocdepth=\count294
-\c@ptc=\count295
-\c@parttocdepth=\count296
-\ptcindent=\skip77
+\c@mtc=\count298
+\c@minitocdepth=\count299
+\c@ptc=\count300
+\c@parttocdepth=\count301
+\ptcindent=\skip81
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -631,57 +648,57 @@ File: switch.def 2020/02/14 3.40 Babel switching mechanism
 Language: french 2020/01/30 v3.5g French support from the babel system
  (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count297
-\U@D=\dimen184
+\babel@savecnt=\count302
+\U@D=\dimen185
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count298
+\bbl@dirlevel=\count303
 )
 Package babel Info: \l@acadian = using hyphenrules for french
 (babel)             (\language57) on input line 91.
 Package babel Info: \l@canadien = using hyphenrules for french
 (babel)             (\language57) on input line 92.
-\FB@nonchar=\count299
+\FB@nonchar=\count304
 Package babel Info: Making : an active character on input line 419.
 Package babel Info: Making ; an active character on input line 420.
 Package babel Info: Making ! an active character on input line 421.
 Package babel Info: Making ? an active character on input line 422.
-\FBguill@level=\count300
-\FBold@everypar=\toks38
-\FB@Mht=\dimen185
-\mc@charclass=\count301
-\mc@charfam=\count302
-\mc@charslot=\count303
-\std@mcc=\count304
-\dec@mcc=\count305
-\c@FBcaption@count=\count306
-\listindentFB=\dimen186
-\descindentFB=\dimen187
-\labelindentFB=\dimen188
-\labelwidthFB=\dimen189
-\leftmarginFB=\dimen190
-\parindentFFN=\dimen191
-\FBfnindent=\dimen192
+\FBguill@level=\count305
+\FBold@everypar=\toks39
+\FB@Mht=\dimen186
+\mc@charclass=\count306
+\mc@charfam=\count307
+\mc@charslot=\count308
+\std@mcc=\count309
+\dec@mcc=\count310
+\c@FBcaption@count=\count311
+\listindentFB=\dimen187
+\descindentFB=\dimen188
+\labelindentFB=\dimen189
+\labelwidthFB=\dimen190
+\leftmarginFB=\dimen191
+\parindentFFN=\dimen192
+\FBfnindent=\dimen193
 )) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 Package hyperref Info: Option `colorlinks' set `true' on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count307
-\lst@gtempboxa=\box52
-\lst@token=\toks39
-\lst@length=\count308
-\lst@currlwidth=\dimen193
-\lst@column=\count309
-\lst@pos=\count310
-\lst@lostspace=\dimen194
-\lst@width=\dimen195
-\lst@newlines=\count311
-\lst@lineno=\count312
-\lst@maxwidth=\dimen196
+\lst@mode=\count312
+\lst@gtempboxa=\box56
+\lst@token=\toks40
+\lst@length=\count313
+\lst@currlwidth=\dimen194
+\lst@column=\count314
+\lst@pos=\count315
+\lst@lostspace=\dimen195
+\lst@width=\dimen196
+\lst@newlines=\count316
+\lst@lineno=\count317
+\lst@maxwidth=\dimen197
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count313
-\lst@skipnumbers=\count314
-\lst@framebox=\box53
+\c@lstnumber=\count318
+\lst@skipnumbers=\count319
+\lst@framebox=\box57
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
@@ -694,60 +711,60 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 ) (/usr/share/texlive/texmf-dist/tex/latex/silence/silence.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
-\sl@Save=\count315
-\sl@StateNumber=\count316
-\sl@MessageCount=\count317
-\sl@Casualties=\count318
-\sl@Filter=\toks40
-\sl@Message=\toks41
-\sl@UnexpandedMessage=\toks42
-\sl@Mess@ge=\toks43
-\sl@WarningCount=\count319
-\sl@WarningNumber=\count320
-\sl@WarningCasualties=\count321
-\sl@TempBOW=\toks44
-\sl@BankOfWarnings=\toks45
+\sl@Save=\count320
+\sl@StateNumber=\count321
+\sl@MessageCount=\count322
+\sl@Casualties=\count323
+\sl@Filter=\toks41
+\sl@Message=\toks42
+\sl@UnexpandedMessage=\toks43
+\sl@Mess@ge=\toks44
+\sl@WarningCount=\count324
+\sl@WarningNumber=\count325
+\sl@WarningCasualties=\count326
+\sl@TempBOW=\toks45
+\sl@BankOfWarnings=\toks46
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count322
-\sl@ErrorNumber=\count323
-\sl@ErrorCasualties=\count324
-\sl@TempBOE=\toks46
-\sl@BankOfErrors=\toks47
+\sl@ErrorCount=\count327
+\sl@ErrorNumber=\count328
+\sl@ErrorCasualties=\count329
+\sl@TempBOE=\toks47
+\sl@BankOfErrors=\toks48
 LaTeX Info: Redefining \GenericError on input line 601.
 )
-\Guidedby=\toks48
-\EncadrantUniv=\toks49
-) (./Report.aux (./chapter7-Omega-b.aux))
+\Guidedby=\toks49
+\EncadrantUniv=\toks50
+) (./Report.aux (./chapter1-Introduction.aux) (./chapter2-Data.aux) (./chapter3-Voigt-Profile-Fitting.aux) (./chapter4-Ionisation-Modelling.aux) (./chapter5-PG0003.aux) (./chapter6-BLA-Survey.aux) (./chapter7-Omega-b.aux))
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 56.
-LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 57.
+LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 57.
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/ot2cmr.fd
 File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
-\AtBeginShipoutBox=\box54
+LaTeX Font Info:    ... okay on input line 57.
+\AtBeginShipoutBox=\box58
 
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring ON on input line 56.
+Package hyperref Info: Link coloring ON on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -755,24 +772,24 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count325
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen197
-\scratchbox=\box55
-\nofMPsegments=\count327
-\nofMParguments=\count328
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen198
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
-\everyMPtoPDFconversion=\toks51
+\scratchcounter=\count331
+\scratchdimen=\dimen198
+\scratchbox=\box59
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen199
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -781,6 +798,10 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -820,7 +841,7 @@ Package caption Info: End \AtBeginDocument code.
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
-LaTeX Info: Redefining \degres on input line 56.
+LaTeX Info: Redefining \degres on input line 57.
 
 Package french.ldf Warning: Figures' and tables' captions might look like
 (french.ldf)                `Figure 1:' in French instead of `Figure 1 :'.
@@ -831,11 +852,11 @@ Package french.ldf Warning: Figures' and tables' captions might look like
 (french.ldf)                you can still add AFTER babel/french
 (french.ldf)                \usepackage[labelsep=period]{caption} or
 (french.ldf)                \usepackage[labelsep=endash]{caption} or
-(french.ldf)                ... live with it; reported on input line 56.
+(french.ldf)                ... live with it; reported on input line 57.
 
-LaTeX Info: Redefining \dots on input line 56.
-LaTeX Info: Redefining \up on input line 56.
-\c@lstlisting=\count332
+LaTeX Info: Redefining \dots on input line 57.
+LaTeX Info: Redefining \up on input line 57.
+\c@lstlisting=\count337
 \openout2 = `chapter7-Omega-b.aux'.
 
 (./chapter7-Omega-b.tex
@@ -865,17 +886,18 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 
 Package natbib Warning: Citation `Wakker-2015' on page 5 undefined on input line 91.
 
+[5]
 LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
-(Font)              Font shape `T1/aer/bx/it' tried instead on input line 101.
-) [5] [6] (./Report.bbl
+(Font)              Font shape `T1/aer/bx/it' tried instead on input line 103.
+ [6] [7] [8]) [9] [10] (./Report.bbl
 Underfull \hbox (badness 1178) in paragraph at lines 37--39
 []\T1/aer/m/n/12 Carswell R. F., Webb J. K., 2014, As-tro-phy-sics Source Code Li-brary, p.
  []
 
-[7
+[11
 
 
-] [8])
+] [12])
 \openout3 = `Report.flg'.
 
 
@@ -887,27 +909,31 @@ Package minitoc Info: I0009
 (minitoc)             Creating the Report.maf file.
 \openout4 = `Report.maf'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+[13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
  (./Report.aux (./chapter7-Omega-b.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 121.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 122.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 16689 strings out of 481239
- 251735 string characters out of 5920376
- 823133 words of memory out of 5000000
- 31394 multiletter control sequences out of 15000+600000
- 592968 words of font info for 135 fonts, out of 8000000 for 9000
+ 16911 strings out of 481239
+ 255285 string characters out of 5920376
+ 847886 words of memory out of 5000000
+ 31587 multiletter control sequences out of 15000+600000
+ 596040 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,62p,1142b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (9 pages, 183906 bytes).
+ 41i,13n,62p,1514b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Report.pdf (13 pages, 207541 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

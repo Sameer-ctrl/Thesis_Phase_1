@@ -19,6 +19,8 @@ data=ascii.read('../Cloudy_runs/ionisation_modelling_sol.txt')
 qso_all=data['qso']
 z_abs_all=data['z_abs']
 
+mH=(proton_mass+electron_mass)
+
 def z_qso(qso):
 
     file_systems=open(f'Data/IGM_Danforth_Data/Systems/{qso}_igm-systems.txt','r')
@@ -241,15 +243,8 @@ def redshift_path_qo(qso,wave_min=1220,v_lim=5000):
 
     return delta_X,dz_unblocked,dzb,dz
 
-# dz=0
-
 # qso=['3c263','pks0637', 'pg1424', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'pg1121', 'pks0405','he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
 
-# for q in qso:
-#     dz+=redshift_path_qo(q)[1]
-
-# print(dz)
-# quit()
 
 def redshift_path_lambda_CDM(qso,wave_min=1220,v_lim=5000):
 
@@ -300,6 +295,23 @@ def redshift_path_lambda_CDM(qso,wave_min=1220,v_lim=5000):
         delta_X+=quad(integrand_X,zmin,z_l[i])[0]
 
     return round(delta_X,3)
+
+
+def z_ion(v_ion,z_abs):
+
+    v_abs=v_z(z_abs)
+
+    if not isinstance(v_ion, (list, tuple, type(array([])))):
+        v_z_ion=array([v_ion])+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val[0]
+
+    else:
+        v_z_ion=array(v_ion)+v_abs
+        z_ion_val=array([round(z_v(v),6) for v in v_z_ion])
+
+        return z_ion_val
 
 
 def f_H(b,x=100):
@@ -407,60 +419,21 @@ absorbers=[
             abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')      #
            ]
 
-'Sample B '
-
-absorbers=[
-            abs_system('3c263',0.140756),
-            abs_system('pks0637',0.161064),
-            abs_system('pks0637',0.417539),
-            abs_system('pg1424',0.147104),
-            abs_system('pg0003',0.347586),                        
-            # abs_system('pg0003',0.386089),
-            abs_system('pg0003',0.421923),
-            abs_system('pg1216',0.282286),
-            abs_system('s135712',0.097869),
-            abs_system('1es1553',0.187764),
-            # abs_system('sbs1108',0.463207),
-            abs_system('pg1222',0.378389),
-            # abs_system('pg1116',0.138527),
-            abs_system('h1821',0.170006),
-            abs_system('h1821',0.224981),
-            abs_system('pg1121',0.192393),
-            abs_system('pks0405',0.167125),
-           ]
-
-# print([a.z_abs for a in absorbers])
-# print([a.qso for a in absorbers])
-
-def CIE_table_print(a):
-
-    BLA_obj=a.BLA_obj
-    b=BLA_obj.b
-    NHi=BLA_obj.logN
-
-    print(b)
-
-CIE_table_print(absorbers[1])
-
-quit()
-
 BLA_dict={}
-z_abs=[]
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
     b=BLA_obj.b
 
     if len(b)>0:
-        BLA_dict[a.qso]=[[],[],[],[],[],[]]
-        z_abs.append(a.z_abs)
-
-z_abs=unique(z_abs)
+        BLA_dict[a.qso]=[[],[],[],[],[]]
 
 for a in absorbers:
     BLA_obj=a.BLA_obj
+    z_abs=a.z_abs
     b=BLA_obj.b
     N=BLA_obj.logN
+    v=BLA_obj.v
 
     if len(b)>0:
 
@@ -468,169 +441,51 @@ for a in absorbers:
         b_err=[]
         N_val=[]
         N_err=[]
+        z_val=[]
 
         for i in range(len(b)):
             b_val.append(b[i][0])
             b_err.append(b[i][1])
             N_val.append(N[i][0])
             N_err.append(N[i][1])
+            z_val.append(round(z_ion(v[i][0],z_abs),6))
+
 
         BLA_dict[a.qso][0]+=b_val
         BLA_dict[a.qso][1]+=N_val
         BLA_dict[a.qso][2]+=b_err
         BLA_dict[a.qso][3]+=N_err
-
-qso=list(BLA_dict.keys())
-# print(BLA_dict)
-
-'Sample A : 5'
-
-# BLA_dict={'pg0003': [[63], [14.2], [3], [0.02],[5.28],[0.05]], '1es1553': [[51], [13.88], [1], [0.01],[5.19],[0.04]], 'pg1222': [[52], [14.34], [4], [0.05],[5],[0.17]], 'pg1116': [[71], [13.6], [14], [0.23],[5.39],[0.21]], 'h1821': [[84], [13.64], [13], [0.11],[5.51],[0.16]]}
-
-'Sample A : 7'
-
-# BLA_dict={'pg0003': [[63, 40], [14.2, 14.1], [0, 4], [0.02, 0.05],[5.28,4.80],[0.05,0.11]], '1es1553': [[51], [13.88], [1], [0.01],[5.19],[0.04]], 'pg1222': [[52, 43], [14.34, 15.43], [4, 1], [0.05, 0.04],[5,4.81],[0.17,0.19]], 'pg1116': [[71], [13.6], [14], [0.23],[5.39],[0.21]], 'h1821': [[84], [13.64], [13], [0.11],[5.51],[0.16]]}
-
-'Sample A : 8'
-
-# BLA_dict={'pg0003': [[63, 40], [14.2, 14.1], [0, 4], [0.02, 0.05],[5.28,4.80],[0.05,0.11]], '1es1553': [[51], [13.88], [1], [0.01],[5.19],[0.04]], 'pg1222': [[52, 43], [14.34, 15.43], [4, 1], [0.05, 0.04],[5,4.81],[0.17,0.19]], 'pg1116': [[71], [13.6], [14], [0.23],[5.39],[0.21]], 'h1821': [[84], [13.64], [13], [0.11],[5.51],[0.16]],'pg1121': [[60], [14.34], [6], [0.09],[5.34],[0.20]]}
-
+        BLA_dict[a.qso][4]+=z_val
 
 qso=list(BLA_dict.keys())
 
+for q in qso:
 
-h=0.7
-H0=100*h    #km/s/ Mpc
-mu=1.3
-mH=(proton_mass+electron_mass)   #kg
-
-rho_c=2*(H0**2)*(1/(8*pi*gravitational_constant))
-A=(mu*mH*H0)/(rho_c*speed_of_light)*(parsec*1e7)   #cm^2
-
-omega_BLA_los=[]
-omega_BLA_los_err=[]
-
-b_all=[]
-b_all_err=[]
-N_all=[]
-N_all_err=[]
-T_all=[]
-T_all_err=[]
-
-for i,q in enumerate(qso):
+    b, N, b_err, N_err, z = BLA_dict[q]
     
-    b_los, N_los, b_los_err, N_los_err,T_los, T_los_err = BLA_dict[q]
+    b=array(b)
+    N=array(N)
+    b_err=array(b_err)
+    N_err=array(N_err)
+    z=array(z)
 
-    b_all+=b_los
-    N_all+=N_los
-    T_all+=T_los
+    fH, logT = f_H(b)
+    log_NH=fH+N
     
-    b_all_err+=b_los_err
-    N_all_err+=N_los_err
-    T_all_err+=T_los_err
+    n=len(b)
 
-    val, err, NH, dX = omega_BLA(q,b_los,N_los,b_los_err,N_los_err)
-    # val, err, NH, dX = omega_BLA(q,b_los,N_los,b_los_err,N_los_err,T=T_los,err_T=T_los_err)
+    print(f'\multicolumn{{7}}{{c}}{{{qso_dict[q]}}} \\\\ \hline \n')
 
-    omega_BLA_los.append(val*100)
-    omega_BLA_los_err.append(err*100)
+    for i in range(n):
 
-    # print(q, f'{round(val*100,2):.2f}')
-    print(f'{qso_dict[q]}  &  {z_qso(q):.3f}  & {NH:.2f}  &  {dX:.3f} & {round(val*100,2):.2f} $\pm$ {round(err*100,2):.2f} \\\\')
+        print(f'{z[i]:.6f}  &  {b[i]:.0f} $\pm$ {b_err[i]:.0f}  &  {N[i]:.2f} $\pm$ {N_err[i]:.2f}  &  {logT[i]:.2f}  &  {fH[i]:.2f}  &  {log_NH[i]:.2f}  &   \\\\')
 
+    print('\n\hline \\tabularnewline\n')    
 
-# qso=['3c263', 'pks0637', 'pg1424', 'pg0003', 'pg1216', 's135712', '1es1553', 'pg1222', 'pg1116', 'h1821', 'pg1121', 'pks0405']
-# b_all=[87, 162, 45, 46, 40, 63, 40, 66, 64, 52, 53, 46, 51, 64, 52, 43, 71, 63, 84, 62, 60, 56]
-# N_all=[13.49, 13.6, 15.01, 14.61, 13.49, 14.2, 14.1, 13.37, 14.17, 15.1, 13.15, 15.01, 13.88, 13.54, 14.34, 15.43, 13.6, 13.68, 13.64, 13.48, 14.34, 13.09]
-# b_all_err=[10, 21, 1, 4, 3, 0, 4, 10, 3, 3, 10, 4, 1, 19, 4, 1, 14, 3, 13, 11, 6, 9]
-# N_all_err=[0.06, 0.06, 0.02, 0.07, 0.02, 0.02, 0.05, 0.05, 0.04, 0.05, 0.18, 0.16, 0.01, 0.11, 0.05, 0.04, 0.23, 0.02, 0.11, 0.06, 0.09, 0.06]
 
 
-omega_BLA_all, omega_BLA_all_err, NH, dX = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err)
-# omega_BLA_all, omega_BLA_all_err, NH, dX = omega_BLA(qso,b_all,N_all,b_all_err,N_all_err,T=T_all,err_T=T_all_err)
-print(f'\n\hline \n \nTotal &  &  {NH:.2f} &  {dX:.3f}  & {round(omega_BLA_all*100,2):.2f} $\pm$  {round(omega_BLA_all_err*100,2):.2f} \\\\ \n')
-print(f'\u03A9 = {round(omega_BLA_all*100,2):.2f} \u00B1 {round(omega_BLA_all_err*100,2):.2f},  dX={dX:.3f} NH={NH:.2f}')
+logT=array([5.28,5.19,5.00,5.39,5.51])
 
-# plt.figure()
+log_fH=(5.4*logT)-(0.33*(logT**2))-13.9
 
-# plt.hist(omega_BLA_los,bins='auto',histtype='step')
-# plt.xlabel('$\mathbf{\Omega_b(BLA) \ [\\times 10^{-2}]}$')
-# plt.vlines(omega_BLA_all*100,0,8,ls='--',color='red')
-
-
-# plt.figure()
-
-# plt.hist(omega_BLA_los_err,bins='auto',histtype='step')
-# plt.xlabel('$\mathbf{\Delta(\Omega_b(BLA)) \ [\\times 10^{-2}]}$')
-# plt.vlines(omega_BLA_all_err*100,0,8,ls='--',color='red')
-
-# plt.figure()
-
-# bin_size=0.05
-# bins=int((max(z_abs)-min(z_abs))/bin_size)
-
-# plt.hist(z_abs,histtype='step',bins=bins)
-# plt.xlabel('$\mathbf{z}$')
-
-
-# plt.figure()
-# plt.errorbar(qso,omega_BLA_los,yerr=omega_BLA_los_err,fmt='o',capsize=3,color='red')
-# plt.hlines(omega_BLA_all*100,qso[0],qso[-1],lw=3,color='black')
-# plt.hlines((omega_BLA_all-omega_BLA_all_err)*100,qso[0],qso[-1],ls='--',lw=2,color='black')
-# plt.hlines((omega_BLA_all+omega_BLA_all_err)*100,qso[0],qso[-1],ls='--',lw=2,color='black')
-
-
-# plt.figure()
-
-# plt.hist(b_all)
-
-# plt.figure()
-
-# plt.hist(N_all)
-
-# plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
-# b=array([87.0, 162.0, 46.0, 29.0, 63.0, 40.0, 64.0, 52.0, 46.0, 51.0, 16.0, 52.0, 71.0, 63.0, 84.0, 60.0, 26.0])
-# N=array([13.49, 13.6, 14.61, 15.44, 14.2, 14.1, 14.17, 15.1, 15.01, 13.88, 15.79, 14.34, 13.6, 13.68, 13.64, 14.34, 13.46])
+print(log_fH)
