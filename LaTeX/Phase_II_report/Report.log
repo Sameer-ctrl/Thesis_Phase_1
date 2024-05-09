@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  9 MAY 2024 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.11.30)  9 MAY 2024 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,7 +734,7 @@ LaTeX Info: Redefining \GenericError on input line 601.
 )
 \Guidedby=\toks49
 \EncadrantUniv=\toks50
-) (./Report.aux (./chapter6-BLA-Survey.aux) (./chapter7-Omega-b.aux))
+) (./Report.aux (./chapter6-BLA-Survey.aux))
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -857,43 +857,96 @@ Package french.ldf Warning: Figures' and tables' captions might look like
 LaTeX Info: Redefining \dots on input line 57.
 LaTeX Info: Redefining \up on input line 57.
 \c@lstlisting=\count337
-\openout2 = `chapter7-Omega-b.aux'.
+\openout2 = `chapter6-BLA-Survey.aux'.
 
-(./chapter7-Omega-b.tex
+(./chapter6-BLA-Survey.tex
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 1.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-) [1
+)
+
+LaTeX Warning: Reference `sec:WHIM-BLA' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `ch:PG0003' on page 1 undefined on input line 11.
+
+[1
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<Figures/fH_vs_T.png, id=21, 992.0262pt x 648.021pt>
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 54.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<Figures/metal-ions.png, id=14, 1162.8243pt x 624.4128pt>
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [3] [4] [5] [6]
-LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
-(Font)              Font shape `T1/aer/bx/it' tried instead on input line 104.
- [7] [8] [9]) [10] [11] (./Report.bbl
+)
+Overfull \hbox (61.92476pt too wide) in paragraph at lines 25--61
+ []|  [] |
+ []
+
+
+LaTeX Warning: Float too large for page by 78.79689pt on input line 63.
+
+[2] [3]
+
+LaTeX Warning: Reference `chap:intro' on page 4 undefined on input line 70.
+
+
+LaTeX Warning: Reference `ch:PG0003' on page 4 undefined on input line 72.
+
+
+LaTeX Warning: Reference `app:survey-results' on page 4 undefined on input line 76.
+
+[4]
+<Figures/ion-component.png, id=29, 1111.0308pt x 589.2414pt>
+ [5]
+<Figures/HI_distribution_survey.png, id=33, 987.2082pt x 538.4115pt>
+ [6]
+<Figures/b_HI_distribution_survey.png, id=37, 987.69pt x 538.6524pt>
+ [7]
+<Figures/OVI_distribution_survey.png, id=42, 982.872pt x 534.0753pt>
+ [8]
+<Figures/SiII_distribution_survey.png, id=46, 987.2082pt x 538.4115pt>
+<Figures/SiIII_distribution_survey.png, id=47, 987.2082pt x 538.4115pt>
+<Figures/SiIV_distribution_survey.png, id=48, 992.9898pt x 538.4115pt>
+ [9] [10]
+<Figures/CII_distribution_survey.png, id=55, 987.2082pt x 538.4115pt>
+<Figures/CIII_distribution_survey.png, id=56, 975.645pt x 538.4115pt>
+<Figures/CIV_distribution_survey.png, id=57, 975.645pt x 538.4115pt>
+ [11] [12]
+<Figures/NV_distribution_survey.png, id=65, 986.2446pt x 538.6524pt>
+ [13]
+<Figures/Z_vs_nH.png, id=71, 549.9747pt x 351.9549pt>
+ [14] [15] [16]
+<Figures/s135712-z=0.097869-compII.png, id=81, 992.9898pt x 610.6815pt>
+<Figures/1es1553-z=0.187764-compI.png, id=82, 992.9898pt x 610.6815pt>
+<Figures/pks0405-z=0.167125-compII.png, id=83, 992.9898pt x 610.6815pt>
+
+
+LaTeX Warning: Float too large for page by 3.39679pt on input line 328.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [17] [18] [19] [20] [21] (./Report.bbl
 Underfull \hbox (badness 1178) in paragraph at lines 37--39
 []\T1/aer/m/n/12 Carswell R. F., Webb J. K., 2014, As-tro-phy-sics Source Code Li-brary, p.
  []
 
-[12
+[22
 
 
-] [13])
+] [23])
 \openout3 = `Report.flg'.
 
 Package minitoc Info: I0009
@@ -902,11 +955,14 @@ Package minitoc Info: I0009
 \openout4 = `Report.maf'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
- [14]
+ [24]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
- (./Report.aux (./chapter7-Omega-b.aux))
+ (./Report.aux (./chapter6-BLA-Survey.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 122.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -914,18 +970,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 16842 strings out of 481239
- 253968 string characters out of 5920376
- 845886 words of memory out of 5000000
- 31533 multiletter control sequences out of 15000+600000
- 596040 words of font info for 141 fonts, out of 8000000 for 9000
+ 16872 strings out of 481239
+ 256040 string characters out of 5920376
+ 831886 words of memory out of 5000000
+ 31564 multiletter control sequences out of 15000+600000
+ 580169 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,62p,1514b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (14 pages, 207631 bytes).
+ 41i,12n,62p,1575b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Report.pdf (24 pages, 186513 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
