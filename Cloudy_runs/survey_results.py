@@ -21,6 +21,8 @@ data=ascii.read('ionisation_modelling_sol.txt')
 qso_all=data['qso']
 z_abs_all=data['z_abs']
 
+n_comp_total=int(len(data)/2)
+
 def ion_label_old(ion,ion_font_size=25,radicle_font_size=17):
 
     for i,s in enumerate(ion):
@@ -209,17 +211,17 @@ absorbers=[
             abs_system('pg1121',0.192393),
             abs_system('pks0405',0.167125),
             # abs_system('he0056',0.043265),
-            # abs_system('pg1216',0.006328),
-            # abs_system('3c263',0.063397),
-            # abs_system('pg1222',0.054479),
-            # abs_system('rxj0439',0.005568),                        
-            # abs_system('uks0242',0.063850),
-            # abs_system('pg1259',0.046284),
-            # abs_system('pks1302',0.094839),
-            # abs_system('3c57',0.077430),
-            # abs_system('p1103',0.003934),
-            # abs_system('phl1811',0.080928),
-            # abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
+            abs_system('pg1216',0.006328),
+            abs_system('3c263',0.063397),
+            abs_system('pg1222',0.054479),
+            abs_system('rxj0439',0.005568),                        
+            abs_system('uks0242',0.063850),
+            abs_system('pg1259',0.046284),
+            abs_system('pks1302',0.094839),
+            abs_system('3c57',0.077430),
+            abs_system('p1103',0.003934),
+            abs_system('phl1811',0.080928),
+            abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
            ]
 
 # qso=[a.qso for a in absorbers]
@@ -455,59 +457,32 @@ def ion_distribution_sys_comp():
 # ion_distribution_sys_comp()
 
 
-
-
-
-
-
-# for a in absorbers:
-
-#     BLA=a.BLA_obj
-#     Ovi=a.ion_obj['OVI']
-    
-#     v_BLA=[x[0] for x in BLA.v]
-#     v_err_BLA=[x[1] for x in BLA.v]
-
-#     v_Ovi=[x[0] for x in Ovi.v]
-#     v_err_Ovi=[x[1] for x in Ovi.v]
-
-#     plt.title(f'{a.qso_label} (z_abs={a.z_abs})')
-#     plt.errorbar(v_BLA,10*ones(len(v_BLA)),0,v_err_BLA,label='BLA',fmt='o',capsize=3)
-#     plt.errorbar(v_Ovi,9*ones(len(v_Ovi)),0,v_err_Ovi,label='OVI',fmt='o',capsize=3)
-#     plt.legend()
-#     plt.ylim(0,11)
-#     plt.show()
-
-
-
 ion_model_sol=[a.ion_modelling_sol for a in absorbers]
+# for i, sol in enumerate(ion_model_sol):
 
-for i, sol in enumerate(ion_model_sol):
+#     NHi=sol.keys()
+#     qso_label=absorbers[i].qso_label
+#     z_abs=absorbers[i].z_abs
 
-    NHi=sol.keys()
-    qso_label=absorbers[i].qso_label
-    z_abs=absorbers[i].z_abs
-
-    for n in NHi:
-        print(f'{qso_label}  &  {z_abs:.6f}  &  {n:.2f}  &   \\\\')
-
-
-quit()
+#     for n in NHi:
+#         print(f'{qso_label}  &  {z_abs:.6f}  &  {n:.2f}  &   \\\\')
 
 
-NHi=zeros(int(len(data)/2))
-err_NHi=zeros(int(len(data)/2))
 
-nH_exc=zeros(int(len(data)/2))
-err_nH_exc=zeros(int(len(data)/2))
-Z_exc=zeros(int(len(data)/2))
-err_Z_exc=zeros(int(len(data)/2))
+NHi=zeros(n_comp_total)
+err_NHi=zeros(n_comp_total)
 
-nH_inc=zeros(int(len(data)/2))
-err_nH_inc=zeros(int(len(data)/2))
-Z_inc=zeros(int(len(data)/2))
-err_Z_inc=zeros(int(len(data)/2))
+nH_exc=zeros(n_comp_total)
+err_nH_exc=zeros(n_comp_total)
+Z_exc=zeros(n_comp_total)
+err_Z_exc=zeros(n_comp_total)
 
+nH_inc=zeros(n_comp_total)
+err_nH_inc=zeros(n_comp_total)
+Z_inc=zeros(n_comp_total)
+err_Z_inc=zeros(n_comp_total)
+
+OVI=[]
 
 
 k=0
@@ -524,9 +499,12 @@ for i,abs_sol in enumerate(ion_model_sol):
 
         k+=1
 
-# print(NHi)
+        if 'OVI' in absorbers[i].ions:
+            OVI.append(True)
+        
+        else:
+            OVI.append(False)
 
-quit()
 
 # hdu=fits.open(f'ionisation_modelling_solution/ionisation_modelling_solution_joined_col_density_param.fits')
 # data=Table(hdu[1].data)
@@ -584,75 +562,82 @@ quit()
 
 'OVI cases'
 
-# categories=[r'$\mathbf{Unexplained}$',r'$\mathbf{Explained}$', r'$\mathbf{Uncertain}$']
-# counts=[22,1,3]
+categories=[r'$\mathbf{CI}$',r'$\mathbf{PI}$', r'$\mathbf{Uncertain}$']
+counts=[20,1,4]
 
-# plt.figure(figsize=(8,5))
+plt.figure(figsize=(8,5))
 
-# plt.bar(categories,counts,width=0.3)
+plt.bar(categories,counts,width=0.3)
 
-# plt.xlabel(r'$\mathbf{Case}$',labelpad=15)
-# plt.ylabel(r'$\mathbf{No. \ of \ components}$',labelpad=15)
-# plt.tick_params(axis='x',bottom=False)
+plt.xlabel(r'$\mathbf{Case}$',labelpad=15)
+plt.ylabel(r'$\mathbf{No. \ of \ components}$',labelpad=15)
+plt.tick_params(axis='x',bottom=False)
 # plt.ylim(0,25.8)
 # plt.savefig('Ovi_cases.png')
-# plt.show()
+plt.show()
+
+qui
 
 'nH-Z'
 
 # plt.figure(figsize=(16,10))
 
-# plt.errorbar(nH_exc,Z_exc,xerr=err_nH_exc,yerr=err_Z_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=20)
-# plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=20)
-# plt.savefig('Z_vs_nH.png')
-# plt.show()
-# quit()
+# plt.errorbar(nH_exc[OVI],Z_exc[OVI],xerr=err_nH_exc[OVI],yerr=err_Z_exc[OVI],fmt='o',capsize=3,color='red',label=ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.errorbar(nH_exc[logical_not(OVI)],Z_exc[logical_not(OVI)],xerr=err_nH_exc[logical_not(OVI)],yerr=err_Z_exc[logical_not(OVI)],fmt='o',capsize=3,color='green',label=r'$\mathbf{Non-}$'+ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',fontsize=30,labelpad=15)
+# plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',fontsize=30,labelpad=15)
+# plt.legend(fontsize=25)
+# plt.yticks(fontsize=25)
+# plt.xticks(fontsize=25)
+
+# plt.savefig(f'Z_vs_nH.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/Z_vs_nH.png')
 
 'NHi vs nH'
 
-# plt.figure(figsize=(8,5))
+# plt.figure(figsize=(16,10))
 
-# plt.errorbar(nH_exc,NHi,xerr=err_nH_exc,yerr=err_NHi,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=20)
-# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=20)
-# plt.savefig('NHi_vs_nH.png')
-# plt.show()
+# plt.errorbar(NHi[OVI],nH_exc[OVI],yerr=err_nH_exc[OVI],xerr=err_NHi[OVI],fmt='o',capsize=3,color='red',label=ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.errorbar(NHi[logical_not(OVI)],nH_exc[logical_not(OVI)],yerr=err_nH_exc[logical_not(OVI)],xerr=err_NHi[logical_not(OVI)],fmt='o',capsize=3,color='green',label=r'$\mathbf{Non-}$'+ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=30)
+# plt.ylabel(r'$\mathbf{log \ [n_H \ {cm}^{-3}]}$',labelpad=15,fontsize=30)
+# plt.legend(fontsize=25)
+# plt.yticks(fontsize=25)
+# plt.xticks(fontsize=25)
+
+# plt.savefig('nH_vs_NHi.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/nH_vs_NHi.png')
+
+# quit()
 
 'NHi vs Z'
 
-# plt.figure(figsize=(8,5))
+# plt.figure(figsize=(16,10))
 
-# plt.subplot(121)
-# plt.title(f'$\mathbf{{Excluding \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# plt.errorbar(Z_exc,NHi,xerr=err_Z_exc,fmt='o',capsize=3)
-# plt.xlabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=20)
-# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=13)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=20)
-# plt.savefig('Files_n_figures/NHi_vs_Z.png')
-# plt.show()
+# plt.errorbar(NHi[OVI],Z_exc[OVI],yerr=err_Z_exc[OVI],xerr=err_NHi[OVI],fmt='o',capsize=3,color='red',label=ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.errorbar(NHi[logical_not(OVI)],Z_exc[logical_not(OVI)],yerr=err_Z_exc[logical_not(OVI)],xerr=err_NHi[logical_not(OVI)],fmt='o',capsize=3,color='green',label=r'$\mathbf{Non-}$'+ion_label('O+5')+r'$\mathbf{ \ absorber}$')
+# plt.xlabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=30)
+# plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=30)
+# plt.legend(fontsize=25,loc='lower left')
+
+# plt.savefig('Z_vs_NHi.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/Z_vs_NHi.png')
+
 # quit()
 
-# # plt.subplot(122)
-# # plt.title(f'$\mathbf{{Including \ }}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15))
-# # plt.errorbar(Z_inc,NHi,xerr=err_Z_inc,fmt='o',capsize=3)
-# # plt.xlabel(r'$\mathbf{log \ Z}$')
-# # plt.ylabel(r'$\mathbf{log \ N(Hi)}$')
-
-# # plt.subplots_adjust(wspace=0.34)
 # plt.savefig('NHi_vs_Z.png')
+
+
 
 # plt.figure()
 
 # plt.subplot(121)
-# plt.hist(nH_exc,bins=4)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
-
-# plt.subplot(122)
-# plt.hist(nH_inc,bins=4)
-# plt.xlabel(r'$\mathbf{log \ n_H}$')
+# plt.hist(Z_exc[OVI],bins=7,label='OVI',histtype='step')
+# plt.hist(Z_exc[logical_not(OVI)],bins=7,histtype='step')
+# plt.legend()
 
 # plt.show()
-
+quit()
 
 
 
