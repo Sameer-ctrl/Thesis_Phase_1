@@ -208,18 +208,18 @@ absorbers=[
             abs_system('h1821',0.224981),
             abs_system('pg1121',0.192393),
             abs_system('pks0405',0.167125),
-            abs_system('he0056',0.043265),
-            abs_system('pg1216',0.006328),
-            abs_system('3c263',0.063397),
-            abs_system('pg1222',0.054479),
-            abs_system('rxj0439',0.005568),                        
-            abs_system('uks0242',0.063850),
-            abs_system('pg1259',0.046284),
-            abs_system('pks1302',0.094839),
-            abs_system('3c57',0.077430),
-            abs_system('p1103',0.003934),
-            abs_system('phl1811',0.080928),
-            abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
+            # abs_system('he0056',0.043265),
+            # abs_system('pg1216',0.006328),
+            # abs_system('3c263',0.063397),
+            # abs_system('pg1222',0.054479),
+            # abs_system('rxj0439',0.005568),                        
+            # abs_system('uks0242',0.063850),
+            # abs_system('pg1259',0.046284),
+            # abs_system('pks1302',0.094839),
+            # abs_system('3c57',0.077430),
+            # abs_system('p1103',0.003934),
+            # abs_system('phl1811',0.080928),
+            # abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
            ]
 
 # qso=[a.qso for a in absorbers]
@@ -360,10 +360,10 @@ def col_den_redshift_ion_distribution_plot(ion):
 # ion='NV'
 # col_den_redshift_ion_distribution_plot(ion)
 
-ion='NV'
+# ion='NV'
 
 # plt.figure(figsize=(16,8))
-b_distribution(ion)
+# b_distribution(ion)
 # plt.vlines(40,0,40,ls='--',lw=2,color='black')
 # plt.ylim(0,38)
 
@@ -460,9 +460,6 @@ def ion_distribution_sys_comp():
 
 
 
-
-
-quit()
 # for a in absorbers:
 
 #     BLA=a.BLA_obj
@@ -485,6 +482,19 @@ quit()
 
 ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 
+for i, sol in enumerate(ion_model_sol):
+
+    NHi=sol.keys()
+    qso_label=absorbers[i].qso_label
+    z_abs=absorbers[i].z_abs
+
+    for n in NHi:
+        print(f'{qso_label}  &  {z_abs:.6f}  &  {n:.2f}  &   \\\\')
+
+
+quit()
+
+
 NHi=zeros(int(len(data)/2))
 err_NHi=zeros(int(len(data)/2))
 
@@ -498,21 +508,25 @@ err_nH_inc=zeros(int(len(data)/2))
 Z_inc=zeros(int(len(data)/2))
 err_Z_inc=zeros(int(len(data)/2))
 
-# k=0
 
-# for i,abs_sol in enumerate(ion_model_sol):
 
-#     for n in abs_sol:
-#         exc,inc,err_NHi_comp=abs_sol[n]
+k=0
+
+for i,abs_sol in enumerate(ion_model_sol):
+
+    for n in abs_sol:
+        exc,inc,err_NHi_comp=abs_sol[n]
         
-#         NHi[k]=n
-#         err_NHi[k]=err_NHi_comp
-#         nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
-#         nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
+        NHi[k]=n
+        err_NHi[k]=err_NHi_comp
+        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
 
-#         k+=1
+        k+=1
 
+# print(NHi)
 
+quit()
 
 # hdu=fits.open(f'ionisation_modelling_solution/ionisation_modelling_solution_joined_col_density_param.fits')
 # data=Table(hdu[1].data)

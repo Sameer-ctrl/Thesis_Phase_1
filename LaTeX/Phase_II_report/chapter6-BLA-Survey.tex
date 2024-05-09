@@ -209,8 +209,123 @@ We find only 14 \ion{N}{v} components in our current survey, which could be attr
 
 
 
-\subsection{Ionisation modelling}
+\subsection{Ionisation modelling}  \label{sec:Ionisation-Modelling-statistics}
 
+We have done the ionisation modelling for a total of 39 components in 29 absorbers. Out of this, 25 components are from \ion{O}{vi} absorbers and remaining are from non-\ion{O}{vi} absorbers. We present the results from ionisation modelling of all these components in this section.
+
+From ionisation modelling, we get the Hydrogen density\footnote{We use this interchangeably with absorber density, i.e density at that component} $(n_H)$ and metallicity (Z) of the absorbers, which dictates the prevalent ionising and physical conditions in the absorber clouds. The figure \ref{fig:nH-Z} shows these values for all the 39 components plotted against each other. We don't see any correlations between the two quantities which is expected as these independently describe the physical conditions of the absorbers. The \ion{O}{vi} absorbers are denoted with red and non-\ion{O}{vi} absorbers are marked by green error bars. 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
+    \caption{Metallicity vs density for all 39 components. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
+    \label{fig:nH-Z}
+\end{figure}
+
+However, when we see the variation of these two quantities with the underlying neutral Hydrogen column density (N(\ion{H}{i})) in these components, we see some trends. Figure \ref{fig:nH-NHi} shows the variation of density with N(\ion{H}{i}). We see a feeble positive relation between $n_H$ and N(\ion{H}{i}). This is expected as higher column density would typically result in higher densities given the sizes of absorbers are of similar order. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
+    \caption{Variation of density with N(\ion{H}{i}) for all 39 components. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
+    \label{fig:nH-NHi}
+\end{figure}
+
+Unlike density, we find a negative correlation between the metallicity and N(\ion{H}{i}) as shown in figure \ref{fig:Z-NHi}. This could be explained by the fact that as we get larger N(\ion{H}{i}), the column densities of metals do not scale accordingly with N(\ion{H}{i}), they remain within the narrow ranges of their distribution. So to recover large N(\ion{H}{i}), large line of sight thickness has to integrated with nearly same amount of metals, which results in the drop in metallicity.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
+    \caption{Variation of metallicity with N(\ion{H}{i}) for all 39 components. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
+    \label{fig:Z-NHi}
+\end{figure}
+
+
+\subsection*{Origin of O \hspace*{-0.5mm}{\footnotesize VI}}
+
+The 17 \ion{O}{vi} absorbers have immense importance in our current study so are there ionisation conditions. Based on the results of these 17 absorbers, we estimate the $\Omega_b(\text{BLA})$ value as discussed in next chapter. For these 17 systems, having 25 components, we want to find the origin of \ion{O}{vi} in these absorbers so that we could see if they are tracing warm-hot gas or cool photoionised gas phase. So, if they arise from a warm-hot plasma, we could infer that the BLA candidate found with \ion{O}{vi} could also be thermally broadend. Figure \ref{fig:OVI-origin} shows the bar plot of the inferred origin of these 25 components. 20 of the components could not be explained with photoionisation (PI) models, so possibly tracing a collisional ionised (CI) phase. One of the components, shown agreement with PI models and in 4 components the origin of \ion{O}{vi} remained uncertain due to models failing to predict the column densities of other ions detected. The absorber which has this PI component also shows CI origin in another component. Out of the 4 uncertain components, two of them do not show good solution, however, in other two components \ion{O}{vi} could be tentatively collisionally ionised, the bad solution is due to large number of ions present in the absorbers where our models fail considerably. However, to be conservative we do not count them in CI case. Table \ref{tab:OVI-origin} gives the details of all these 25 components.
+
+Figure \ref{fig:ex-CI} shows an example of CI origin of \ion{O}{vi}, where other ions could be explained with PI models but not \ion{O}{vi} (orange color). Figure \ref{fig:ex-PI} shows the only example of PI origin of \ion{O}{vi}, where we get similar solution for excluding and including \ion{O}{vi} cases, indicating that all ions could be explained with PI models. Figure \ref{fig:ex-uncertain} shows uncertain case, where our model fails to predict the column densities of other ions as well. 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
+    \caption{Origin of \ion{O}{vi} in 25 components.}
+    \label{fig:OVI-origin}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/s135712-z=0.097869-compII.png}
+    \caption{An example of CI case for an absorber towards the line of sight of SDSS J135712.61+170444 at $z_{abs}=0.097869$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 16.49}
+    \label{fig:ex-CI}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/1es1553-z=0.187764-compI.png}
+    \caption{Only example of PI case for an absorber towards the line of sight of 1ES 1553+113 at $z_{abs}=0.187764$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 12.76}
+    \label{fig:ex-PI}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/pks0405-z=0.167125-compII.png}
+    \caption{An example of uncertain case for an absorber towards the line of sight of PKS 0405-123 at $z_{abs}=0.167125$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 13.46}
+    \label{fig:ex-uncertain}
+\end{figure}
+
+
+
+
+\begin{table}[!h]
+    \centering
+    \vspace{5mm}
+        \begin{tabular}{cccc}
+            \hline \hline
+           \head{Sight line} & \head{$\mathbf{z_{abs}}$} &  \head{log N(H \hspace*{-0.5mm}{\footnotesize I})}  &  \head{Origin of O \hspace*{-0.5mm}{\footnotesize VI}}   \tabularnewline
+           
+            &  &  (cm\textsuperscript{-2})  &   \tabularnewline \hline 
+
+        3C 263  &  0.140756  &  14.49  &  CI \\
+        PKS 0637-752  &  0.161064  &  13.60  & CI  \\
+        PKS 0637-752  &  0.417539  &  15.41  & CI  \\
+        PG 1424+240  &  0.147104  &  14.88  &  CI \\
+        PG 1424+240  &  0.147104  &  15.44  &  CI \\
+        PG 0003+158  &  0.347586  &  16.10  &  CI \\
+        PG 0003+158  &  0.386089  &  14.81  &  uncertain\textsuperscript{a} \\
+        PG 0003+158  &  0.421923  &  14.17  &  CI \\
+        PG 1216+069  &  0.282286  &  15.10 16.40  &  CI \\
+        SDSS J135712.61+170444  &  0.097869  &  15.01  &  CI \\
+        SDSS J135712.61+170444  &  0.097869  &  16.49  &  CI \\
+        1ES 1553+113  &  0.187764  &  12.76  &  PI \\
+        1ES 1553+113  &  0.187764  &  13.88  &  CI \\
+        SBS 1108+560  &  0.463207  &  15.79  &  CI \\
+        SBS 1108+560  &  0.463207  &  18.10  & uncertain\textsuperscript{b}  \\
+        PG 1222+216  &  0.378389  &  15.43  &  CI \\
+        PG 1116+215  &  0.138527  &  13.60  &  uncertain\textsuperscript{b} \\
+        H 1821+643  &  0.170006  &  13.35  &  CI \\
+        H 1821+643  &  0.170006  &  13.68  &  CI \\
+        H 1821+643  &  0.224981  &  15.13  &  CI \\
+        H 1821+643  &  0.224981  &  15.16  &  CI \\
+        PG 1121+422  &  0.192393  &  14.34  &  CI \\
+        PG 1121+422  &  0.192393  &  17.70  &  CI \\
+        PKS 0405-123  &  0.167125  &  13.46  & uncertain\textsuperscript{a}  \\
+        PKS 0405-123  &  0.167125  &  15.98  & CI  \\
+
+        \hline \hline  
+        \multicolumn{4}{l}{\textsuperscript{a} \footnotesize{Other ions also could not be explained}} \\     
+        \multicolumn{4}{l}{\textsuperscript{b} \footnotesize{Bad solution due to many ions}} \\ 
+
+        \end{tabular}
+    \caption{25 \ion{O}{vi} components and origin of \ion{O}{vi} in them}
+    \label{tab:OVI-origin}
+\end{table}
 
 
 
