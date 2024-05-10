@@ -4,7 +4,7 @@ In this chapter we discuss the estimation of the baryon energy density trapped i
 
 \section{Methodology to determine $\Omega_\text{b}(\text{BLA})$}
 
-The baryon content of any ion in terms of the current critical density $(\rho_{cr})$ of the universe can be estimated by integrating over the bivariate frequency distribution of the absorbers as function of column density and redshift of that ion and is given as :
+The baryon content of any ion in terms of the current critical density $(\rho_{cr})$ of the universe can be estimated by integrating over the bivariate frequency distribution of the absorbers as function of column density and redshift of that ion as given in \citet{Becker-2011} by following equation :
 
 \begin{equation} \label{eqn:omega_ion}
     \Omega_{\text{ion}} = \frac{H_0 m_{\text{ion}}}{c \rho_{\text{cr}}} \int \frac{\partial ^2 \mathcal{N}}{\partial N \partial X} N dN 
@@ -25,7 +25,7 @@ The path length $X$ is function of redshift (\emph{z}) and denotes the total abs
     X(z)=\int_0^z  (1+z')^2 \frac{H_0}{H(z')} dz'
 \end{equation}
 
-Now, assuming a flat $\Lambda \text{CDM}$ cosmology, we can write the Hubble's constant at any \emph{z} as :
+\citep{Bahcall-1969}. Now, assuming a flat $\Lambda \text{CDM}$ cosmology, we can write the Hubble's constant at any \emph{z} as :
 
 \begin{equation}
     H(z) = H_0 \left[\Omega_m(1+z)^3+\Omega_\Lambda\right]^{1/2}
@@ -82,20 +82,20 @@ Where $j$ represents a line of sight and $i$ refers to the absorber along sight 
 
 In the next section we describe the sample of absorbers we will be using to estimate the $\Omega_\text{b}(\text{BLA})$.
 
-\section{Selecting the absorber samples}
+\section{Selecting the absorber samples}  \label{sec:BLA-sample}
 
 We have a total of 29 absorber systems in our survey. These systems have 97 \ion{H}{i} components in total. Out of these 97 components, 37(34) components have Doppler parameters above 40(45) km $\text{s}^{-1}$. But as discussed multiple times throughout this work that just having large \emph{b} value does not ensure we have a `true' BLA. So we have to carefully select the candidates which are actually BLAs from these 37(34) components to estimate the baryon content of BLAs. 
 
-\subsection{Based on Temperature and Ionisation Modelling}
+\subsection{Based on Temperature and Ionisation Modelling}  \label{sec:sampleA}
 
-Since, we need the temperature to estimate the ionisation fraction, we consider candidates whose temperatures could be estimated from the Doppler parameters of \ion{H}{i} and \ion{O}{vi}. To estimate the temperature directly from Doppler parameters we need that both species must be fairly aligned. HST/COS data may have wavelength calibration errors of 15-20 km s$^{-1}$, which could be as high as few resolution elements \citep{Wakker-2015}. So, we consider species as aligned if they are separated by less 20 km s$^{-1}$ in velocity within the fitting errors. So, if the species are aligned, then we can asssume that they are co-spatial, so that there non-thermal broadening could be assumed to be same. However, we need to be cautious that aligned species need not be co-spatial always. So, upon calculating the temperatures as mentioned.
+Since, we need the temperature to estimate the ionisation fraction, we consider candidates whose temperatures could be estimated from the Doppler parameters of \ion{H}{i} and \ion{O}{vi}. We estimated temperatures for 7 systems as discussed in section \ref{sec:Temp}. However, two of the systems had temperatures below $10^5$ K, we exclude these candidates as the ionisation correction relation is valid for temperatures above $10^5$ K. We put another constrain from ionisation modelling that \ion{O}{vi} should be collisionally ionised in these systems, which further ensures that we are tracing warm-hot plasma. 
 
-We get 5 (value) such systems with one-one components each. We call this as sample A and are labelled so in table \ref{tab:CIE-properties}. This sample will give us a conservative lower limit on the baryon content in BLAs. Using this sample of absorbers we get $\Omega_\text{b}(\text{BLA})=0.0018 \pm 0.05$. Table \ref{tab:Omega_b_sampleA} gives the details of the individual sight lines in this sample.  
+So we get 5 such systems with one-one components each. We call this as sample A and are labelled so in table \ref{tab:CIE-properties}. This sample will give us a conservative lower limit on the baryon content in BLAs. Using this sample of absorbers we get $\Omega_\text{b}(\text{BLA})=0.0018 \pm 0.05$. Table \ref{tab:Omega_b_sampleA} gives the details of the individual sight lines in this sample.  
 
 
 \subsection{Based on Ionisation Modelling} \label{sec:sampleB}
 
-As discussed in chapter \ref{ch:Survey} we have modelled the ionising conditions in 25 components of 17 \ion{O}{vi} absorbers. And found that 20 of the components could not be explained with photoionisation models, so these could possibly be arising from collisionally ionised gas phase. So these absorbers could potentially be tracing warm hot plasma in WHIM. So we take absorbers where the \ion{O}{vi} could not be explained with photoionisation models and has a broad Ly$\alpha$ line ($\emph{b}>40 \ \text{km s}^{-1}$). We have 14 such systems, which have a total of 21 BLA components. However, we exclude one component towards the sight line of PKS 0637-752 at $z_{comp}=0.161013$ because it has unexpectedly high Doppler parameter of 162 km s$^{-1}$ which affects the estimate of $\Omega_\text{b}(\text{BLA})$ drastically. We get a value of $0.0073 \pm 0.0013$ for $\Omega_\text{b}(\text{BLA})$ using these 20 BLA components. However, if we include the excluded component we get a value of $0.0093 \pm 0.0020$ which is about 27\% higher than the other value. Table \ref{tab:Omega_b_sampleA} gives the details of the individual sight lines in this sample. We could see that individual sight lines have large uncertainities in the $\Omega_\text{b}(\text{BLA})$ value, but the value calculated for whole sample has low uncertainity because of more number of points, hence reducing the statistical errors. 
+As discussed in chapter \ref{ch:Survey} we have modelled the ionising conditions in 25 components of 17 \ion{O}{vi} absorbers. And found that 20 of the components could not be explained with photoionisation models, so these could possibly be arising from collisionally ionised gas phase. So these absorbers could potentially be tracing warm hot plasma in WHIM. So we take absorbers where the \ion{O}{vi} could not be explained with photoionisation models and has a broad Ly$\alpha$ line ($\emph{b}>40 \ \text{km s}^{-1}$). This will give us a little ambitious lower limit on the $\Omega_\text{b}(\text{BLA})$ value.We have 14 such systems, which have a total of 21 BLA components. However, we exclude one component towards the sight line of PKS 0637-752 at $z_{comp}=0.161013$ because it has unexpectedly high Doppler parameter of 162 km s$^{-1}$ which affects the estimate of $\Omega_\text{b}(\text{BLA})$ drastically. We get a value of $0.0073 \pm 0.0013$ for $\Omega_\text{b}(\text{BLA})$ using these 20 BLA components. However, if we include the excluded component we get a value of $0.0093 \pm 0.0020$ which is about 27\% higher than the other value. Table \ref{tab:Omega_b_sampleA} gives the details of the individual sight lines in this sample. We could see that individual sight lines have large uncertainities in the $\Omega_\text{b}(\text{BLA})$ value, but the value calculated for whole sample has low uncertainity because of more number of points, hence reducing the statistical errors. 
 
 \newpage
 

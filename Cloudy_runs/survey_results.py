@@ -192,37 +192,37 @@ class abs_system():
         os.remove('temp_param_file.txt')
 
 
-absorbers=[
-            abs_system('3c263',0.140756),
-            abs_system('pks0637',0.161064),
-            abs_system('pks0637',0.417539),
-            abs_system('pg1424',0.147104),
-            abs_system('pg0003',0.347586),                        
-            abs_system('pg0003',0.386089),
-            abs_system('pg0003',0.421923),
-            abs_system('pg1216',0.282286),
-            abs_system('s135712',0.097869),
-            abs_system('1es1553',0.187764),
-            abs_system('sbs1108',0.463207),
-            abs_system('pg1222',0.378389),
-            abs_system('pg1116',0.138527),
-            abs_system('h1821',0.170006),
-            abs_system('h1821',0.224981),
-            abs_system('pg1121',0.192393),
-            abs_system('pks0405',0.167125),
-            # abs_system('he0056',0.043265),
-            abs_system('pg1216',0.006328),
-            abs_system('3c263',0.063397),
-            abs_system('pg1222',0.054479),
-            abs_system('rxj0439',0.005568),                        
-            abs_system('uks0242',0.063850),
-            abs_system('pg1259',0.046284),
-            abs_system('pks1302',0.094839),
-            abs_system('3c57',0.077430),
-            abs_system('p1103',0.003934),
-            abs_system('phl1811',0.080928),
-            abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
-           ]
+# absorbers=[
+#             abs_system('3c263',0.140756),
+#             abs_system('pks0637',0.161064),
+#             abs_system('pks0637',0.417539),
+#             abs_system('pg1424',0.147104),
+#             abs_system('pg0003',0.347586),                        
+#             abs_system('pg0003',0.386089),
+#             abs_system('pg0003',0.421923),
+#             abs_system('pg1216',0.282286),
+#             abs_system('s135712',0.097869),
+#             abs_system('1es1553',0.187764),
+#             abs_system('sbs1108',0.463207),
+#             abs_system('pg1222',0.378389),
+#             abs_system('pg1116',0.138527),
+#             abs_system('h1821',0.170006),
+#             abs_system('h1821',0.224981),
+#             abs_system('pg1121',0.192393),
+#             abs_system('pks0405',0.167125),
+#             abs_system('he0056',0.043265),
+#             abs_system('pg1216',0.006328),
+#             abs_system('3c263',0.063397),
+#             abs_system('pg1222',0.054479),
+#             abs_system('rxj0439',0.005568),                        
+#             abs_system('uks0242',0.063850),
+#             abs_system('pg1259',0.046284),
+#             abs_system('pks1302',0.094839),
+#             abs_system('3c57',0.077430),
+#             abs_system('p1103',0.003934),
+#             abs_system('phl1811',0.080928),
+#             abs_system('pg0832',0.017505,cont_mark='^',fix_param_mark='B')
+#            ]
 
 # qso=[a.qso for a in absorbers]
 # z=[f'{a.z_abs:.6f}' for a in absorbers]
@@ -252,6 +252,7 @@ def z_ion(v_ion,z_abs):
 def b_distribution(ion,binsize=None):
 
     b=[]
+    b_err=[]
 
     for a in absorbers:
         
@@ -259,14 +260,8 @@ def b_distribution(ion,binsize=None):
 
         if ion in ions:
             b+=[b_val[0] for b_val in a.ion_obj[ion].b]
+            b_err+=[b_val[1] for b_val in a.ion_obj[ion].b]
 
-    # print(len(b))
-    # j=0
-    # for i in b:
-    #     if i >=37:
-    #         j+=1
-
-    # print(j)
 
     if binsize is None:
         bins='auto'
@@ -276,19 +271,20 @@ def b_distribution(ion,binsize=None):
         bins=int((max(b)-min(b))/bin_size)
     
     # plt.title(f'{ion} : {len(b)}')
-    plt.hist(b,bins=bins,histtype='step',lw=2.5)
+    # plt.hist(b,bins=bins,histtype='step',lw=2.5)
 
-    plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [km \ {s}^{-1}}]$',fontsize=30,labelpad=15)
-    plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
-    plt.yticks(fontsize=25)
-    plt.xticks(fontsize=25)
+    # plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [km \ {s}^{-1}}]$',fontsize=30,labelpad=15)
+    # plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',fontsize=30,labelpad=15)
+    # plt.yticks(fontsize=25)
+    # plt.xticks(fontsize=25)
 
-    print(len(b))
+    return b,b_err
 
 
 def col_den_distribution(ion,binsize=None):
 
     ion_col_den=[]
+    ion_col_den_err=[]
 
     for a in absorbers:
         
@@ -296,6 +292,7 @@ def col_den_distribution(ion,binsize=None):
 
         if ion in ions:
             ion_col_den+=[N[0] for N in a.ion_obj[ion].logN]
+            ion_col_den_err+=[N[1] for N in a.ion_obj[ion].logN]
 
     if binsize is None:
         bins='auto'
@@ -305,9 +302,9 @@ def col_den_distribution(ion,binsize=None):
         bins=int((max(ion_col_den)-min(ion_col_den))/bin_size)
     
     # plt.title(f'{ion} : {len(ion_col_den)}')
-    plt.hist(ion_col_den,bins=bins,histtype='step',lw=2.5)
+    # plt.hist(ion_col_den,bins=bins,histtype='step',lw=2.5)
 
-    # return ion_col_den
+    return ion_col_den,ion_col_den_err
 
 
 def redshift_distribution(ion,binsize=None):
@@ -362,19 +359,28 @@ def col_den_redshift_ion_distribution_plot(ion):
 # ion='NV'
 # col_den_redshift_ion_distribution_plot(ion)
 
-# ion='NV'
+# ion='HI'
 
-# plt.figure(figsize=(16,8))
-# b_distribution(ion)
-# plt.vlines(40,0,40,ls='--',lw=2,color='black')
-# plt.ylim(0,38)
+# b,b_err=b_distribution(ion)
+# col_den,col_den_err=col_den_distribution(ion)
 
-# plt.savefig(f'b_{ion}_distribution_survey.png')
-# plt.savefig(f'../LaTeX/Phase_II_report/Figures/b_{ion}_distribution_survey.png')
+# plt.figure(figsize=(16,10))
 
+# plt.errorbar(b,col_den,xerr=b_err,yerr=col_den_err,fmt='o',capsize=3,color='red')
+# plt.vlines(40,10,21,ls='--',lw=2,color='black')
+
+# plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [km \ {s}^{-1}}]$',fontsize=30,labelpad=15)
+# plt.ylabel(f'$\mathbf{{log \ [N(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ {cm}^{-2}}]$',labelpad=15,fontsize=30)
+# plt.yticks(fontsize=25)
+# plt.xticks(fontsize=25)
+# plt.ylim(12.28,19.44)
+
+# plt.savefig(f'NHi_vs_bHi.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/NHi_vs_bHi.png')
 # plt.show()
 
 
+# quit()
 
 
 'metal ion distribution in systems and no. of components of all species'
@@ -457,7 +463,7 @@ def ion_distribution_sys_comp():
 # ion_distribution_sys_comp()
 
 
-ion_model_sol=[a.ion_modelling_sol for a in absorbers]
+# ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 # for i, sol in enumerate(ion_model_sol):
 
 #     NHi=sol.keys()
@@ -468,42 +474,44 @@ ion_model_sol=[a.ion_modelling_sol for a in absorbers]
 #         print(f'{qso_label}  &  {z_abs:.6f}  &  {n:.2f}  &   \\\\')
 
 
-
-NHi=zeros(n_comp_total)
-err_NHi=zeros(n_comp_total)
-
-nH_exc=zeros(n_comp_total)
-err_nH_exc=zeros(n_comp_total)
-Z_exc=zeros(n_comp_total)
-err_Z_exc=zeros(n_comp_total)
-
-nH_inc=zeros(n_comp_total)
-err_nH_inc=zeros(n_comp_total)
-Z_inc=zeros(n_comp_total)
-err_Z_inc=zeros(n_comp_total)
-
-OVI=[]
+'ionisation modelling results'
 
 
-k=0
+# NHi=zeros(n_comp_total)
+# err_NHi=zeros(n_comp_total)
 
-for i,abs_sol in enumerate(ion_model_sol):
+# nH_exc=zeros(n_comp_total)
+# err_nH_exc=zeros(n_comp_total)
+# Z_exc=zeros(n_comp_total)
+# err_Z_exc=zeros(n_comp_total)
 
-    for n in abs_sol:
-        exc,inc,err_NHi_comp=abs_sol[n]
+# nH_inc=zeros(n_comp_total)
+# err_nH_inc=zeros(n_comp_total)
+# Z_inc=zeros(n_comp_total)
+# err_Z_inc=zeros(n_comp_total)
+
+# OVI=[]
+
+
+# k=0
+
+# for i,abs_sol in enumerate(ion_model_sol):
+
+#     for n in abs_sol:
+#         exc,inc,err_NHi_comp=abs_sol[n]
         
-        NHi[k]=n
-        err_NHi[k]=err_NHi_comp
-        nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
-        nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
+#         NHi[k]=n
+#         err_NHi[k]=err_NHi_comp
+#         nH_exc[k],err_nH_exc[k],Z_exc[k],err_Z_exc[k]=exc
+#         nH_inc[k],err_nH_inc[k],Z_inc[k],err_Z_inc[k]=inc
 
-        k+=1
+#         k+=1
 
-        if 'OVI' in absorbers[i].ions:
-            OVI.append(True)
+#         if 'OVI' in absorbers[i].ions:
+#             OVI.append(True)
         
-        else:
-            OVI.append(False)
+#         else:
+#             OVI.append(False)
 
 
 # hdu=fits.open(f'ionisation_modelling_solution/ionisation_modelling_solution_joined_col_density_param.fits')
@@ -562,21 +570,24 @@ for i,abs_sol in enumerate(ion_model_sol):
 
 'OVI cases'
 
-categories=[r'$\mathbf{CI}$',r'$\mathbf{PI}$', r'$\mathbf{Uncertain}$']
-counts=[20,1,4]
+# categories=[r'$\mathbf{CI}$',r'$\mathbf{PI}$', r'$\mathbf{Uncertain}$']
+# counts=[20,1,4]
 
-plt.figure(figsize=(8,5))
+# plt.figure(figsize=(16,10))
 
-plt.bar(categories,counts,width=0.3)
+# plt.bar(categories,counts,width=0.3)
+# plt.xlabel(r'$\mathbf{Origin \ of \ }$'+ion_label("O+5",ion_font_size=30,radicle_font_size=23),labelpad=15,fontsize=30)
+# plt.ylabel(r'$\mathbf{\mathcal{N}_{comp}}$',labelpad=15,fontsize=30)
+# plt.tick_params(axis='x',bottom=False)
+# plt.yticks(fontsize=25)
+# plt.xticks(fontsize=25)
+# plt.ylim(0,23)
+# plt.savefig('OVI_cases.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/OVI_cases.png')
 
-plt.xlabel(r'$\mathbf{Case}$',labelpad=15)
-plt.ylabel(r'$\mathbf{No. \ of \ components}$',labelpad=15)
-plt.tick_params(axis='x',bottom=False)
-# plt.ylim(0,25.8)
-# plt.savefig('Ovi_cases.png')
-plt.show()
+# plt.show()
 
-qui
+# quit()
 
 'nH-Z'
 
@@ -637,63 +648,63 @@ qui
 # plt.legend()
 
 # plt.show()
-quit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # quit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quit()
 
 class BLA():
 
@@ -756,11 +767,11 @@ for i,a in enumerate(absorbers):
 
     qso.append(a.qso)
 
-print(qso)
-print(list(b_H))
-print(list(n_H))
+# print(qso)
+# print(list(b_H))
+# print(list(n_H))
 
-quit()
+# quit()
 m=m_p+m_e
 
 T_all=((8*m)/(15*k))*((b_H*1000)**2-(b_OVI*1000)**2)
@@ -770,16 +781,18 @@ n=6
 
 'T-histogram'
 
-# plt.figure(figsize=(8,5))
+# plt.figure(figsize=(16,10))
 
-# plt.hist(T_aligned,bins=n,histtype='step',label=r'$\mathbf{aligned}$',color='red',linewidth=2)
+# plt.hist(T_aligned,bins=n,histtype='step',color='red',linewidth=2)
 # plt.hist(log10(T_all),bins=n,histtype='step',label=r'$\mathbf{all}$',color='green',linewidth=2,linestyle='--')
-# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',labelpad=15,fontsize=20)
-# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15,fontsize=20)
+# plt.xlabel(r'$\mathbf{log \ T \ [K]}$',labelpad=15,fontsize=30)
+# plt.ylabel(r'$\mathbf{No. \ of \ absorbers}$',labelpad=15,fontsize=30)
 # plt.legend(loc='upper left')
-# plt.savefig('Files_n_figures/T_histogram.png')
+# # plt.savefig('Files_n_figures/T_histogram.png')
+
 
 # plt.show()
+# quit()
 # quit()
 # b_H_fit=[]
 # n_H_fit=[]
@@ -815,26 +828,27 @@ for i,b in enumerate(danforth_b):
     danforth_N_Ovi.append(danforth_N[i][1])
 
 
-plt.figure(figsize=(16,10))
+# plt.figure(figsize=(16,10))
 
-plt.scatter(b_H,b_OVI,c='red')
-plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
-plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
-plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
-plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
-plt.vlines(40,-10,170,ls='--',color='green',lw=2)
-plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
-plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
-plt.ylim(bottom=0,top=160)
-plt.legend(loc='upper left',fontsize=20)
-plt.xlim(0,170)
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
-plt.annotate(r'$\mathbf{b_{nt}=0}$',(120,29) ,xytext=(100,9),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
-plt.annotate(r'$\mathbf{b_{th}=0}$',(120,121) ,xytext=(100,135),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
-plt.savefig('bHi_vs_BOvi_danforth.png')
+# plt.scatter(b_H,b_OVI,c='red')
+# # plt.scatter(danforth_b_Hi,danforth_b_Ovi,c='grey')
+# plt.errorbar(b_H,b_OVI,yerr=b_OVI_err,xerr=b_H_err,c='red',fmt='o',capsize=3)
+# plt.plot(array([0,150]),array([0,150]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+# plt.plot(array([0,165]),array([0,165/4]),ls='--',label=f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=20,radicle_font_size=15)+f'$\mathbf{{)=4*b(}}$'+ion_label('O+5',ion_font_size=20,radicle_font_size=15)+')',lw=2)
+# plt.vlines(40,-10,170,ls='--',color='green',lw=2)
+# plt.xlabel(f'$\mathbf{{b(}}$'+ion_label('H',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
+# plt.ylabel(f'$\mathbf{{b(}}$'+ion_label('O+5',ion_font_size=30,radicle_font_size=23)+r'$\mathbf{) \ [ \ km \ {s}^{-1}}]$',labelpad=15,fontsize=30)
+# plt.ylim(bottom=0,top=160)
+# plt.legend(loc='upper left',fontsize=20)
+# plt.xlim(0,170)
+# plt.xticks(fontsize=25)
+# plt.yticks(fontsize=25)
+# plt.annotate(r'$\mathbf{b_{nt}=0}$',(120,29) ,xytext=(100,9),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
+# plt.annotate(r'$\mathbf{b_{th}=0}$',(120,121) ,xytext=(100,135),xycoords='data',arrowprops=dict(facecolor='#c02424', shrink=0.05),fontsize=25,c='#c02424',weight='bold')
+# plt.savefig('bHi_vs_BOvi.png')
+# plt.savefig(f'../LaTeX/Phase_II_report/Figures/bHi_vs_BOvi.png')
 
-plt.show()
+# plt.show()
 
 quit()
 

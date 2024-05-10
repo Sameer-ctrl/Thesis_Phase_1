@@ -104,11 +104,7 @@ We have identified 97 \ion{H}{i} components in our survey across 29 absorbers. T
 
 \subsubsection*{Distribution of Doppler parameters}
 
-The figure \ref{fig:b_HI_distribution} shows the distribution of Doppler \emph{b} parameters of the 97 \ion{H}{i} components. The vertical dashed line marks the cutoff for the line to be called as `BLA' at \emph{b}=40 km $\text{s}^{-1}$. Assuming a complete thermal broadening, $\emph{b}=40$ km s$^{-1}$ gives a temperature of $10^5$ K. Out of 97 components, 37(34) components have Doppler parameters in excess of 40(45) km $\text{s}^{-1}$. Some components show large Doppler widths of above 100 km $\text{s}^{-1}$, for this components only saturated Ly$\alpha$ lines are seen, making the identification of velocity substructures of these lines difficult. This results in the large \emph{b} values for these lines. 
-
-We can estimate the temperature of the gas directly from the Doppler parameter if we have Doppler parameter of another species coming from the same phase. 
-
-\textbf{Need to add here more...}
+The figure \ref{fig:b_HI_distribution} shows the distribution of Doppler \emph{b} parameters of the 97 \ion{H}{i} components. The vertical dashed line marks the cutoff for the line to be called as `BLA' at \emph{b}=40 km $\text{s}^{-1}$. Assuming a complete thermal broadening, $\emph{b}=40$ km s$^{-1}$ gives a temperature of $10^5$ K. Out of 97 components, 37(34) components have Doppler parameters in excess of 40(45) km $\text{s}^{-1}$. Some components show large Doppler widths of above 100 km $\text{s}^{-1}$, for these components only saturated Ly$\alpha$ lines are seen, making the identification of velocity substructures of these lines difficult. This results in the large \emph{b} values for these lines. 
 
 \begin{figure}
     \centering
@@ -117,9 +113,61 @@ We can estimate the temperature of the gas directly from the Doppler parameter i
     \label{fig:b_HI_distribution} 
 \end{figure}
 
-\subsubsection*{NH-bH plot} 
+\subsubsection*{Temperature estimation using Doppler parameters}  \label{sec:Temp}
 
-\textbf{Need to add here...}
+We make an estimate of the temperature of the absorbers directly from their Doppler parameters as done for the absorber in chapter \ref{ch:PG0003}. To do so we need the \ion{H}{i} lines to be fairly aligned with some other metal ion. Because, if the species are aligned, then we can asssume that they are co-spatial, so that there non-thermal broadening could be assumed to be same. However, we need to be cautious that aligned species need not be co-spatial always. HST/COS data may have wavelength calibration errors of 15-20 km s$^{-1}$, which could be as high as few resolution elements \citep{Wakker-2015}. So, we consider species as aligned if they are separated by less than 20 km s$^{-1}$ in velocity within the fitting errors. We use \ion{O}{vi} as the metal specie for estimating the temperature.
+
+We plot the \emph{b}(\ion{O}{vi}) vs \emph{b}(\ion{H}{i}) in figure \ref{fig:bOVI_bHI} for the 17 absorbers. The orange dashed line corresponds to points where \emph{b}(\ion{H}{i}) = 4\emph{b}(\ion{O}{vi}) which is the case for pure thermal broadening, i.e. non-thermal contributions are zero. The blue marks the region where the non-thermal broadening dominates the line broadening. This is \emph{b}(\ion{H}{i}) = \emph{b}(\ion{O}{vi}) line. And vertical green dashed line marks our cutoff for the line to be called as BLA. Now, we can estimate the temperature for a system if the \emph{b} values of these two species lies within these orange and blue lines given that they are aligned.  
+
+We could estimate the temperature for 7 components where \ion{H}{i} and \ion{O}{vi} were aligned. We list the details of these systems in table \ref{tab:Temperature}. This estimation of temperature is important in our estimation of $\Omega_b(\text{BLA})$ (see section \ref{sec:sampleA}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/bHi_vs_BOvi.png}
+    \caption{\emph{b}(\ion{O}{vi}) vs \emph{b}(\ion{H}{i}) plot. The orange dashed line is the \emph{b}(\ion{H}{i}) = 4\emph{b}(\ion{O}{vi}) line and blue dashed line shows the \emph{b}(\ion{H}{i}) = \emph{b}(\ion{O}{vi}) line.}
+    \label{fig:bOVI_bHI} 
+\end{figure}
+
+
+
+\begin{table}
+    \centering
+    % \vspace*{-2cm}
+    % \hspace{-12mm}
+    \begin{tabular}{c@{\hspace{1.2em}}c@{\hspace{1em}}c@{\hspace{1em}}c@{\hspace{1em}}c@{\hspace{1em}}c@{\hspace{1em}}c@{\hspace{1em}}}
+    \hline \hline 
+    \head{Sight line} & \head{$\mathbf{z_{\text{abs}}}$} & \head{$\mathbf{\Delta v}$}\textsuperscript{a} & \head{\emph{b}(H \hspace*{-0.5mm}{\footnotesize I})} & \head{\emph{b}(O \hspace*{-0.5mm}{\footnotesize VI})}  & \head{$\mathbf{b_{\text{th}}}$} & \head{$\mathbf{\text{log T}}$} \\ 
+
+         &  &  (km s$^{-1}$) &  (km s$^{-1}$)  &  (km s$^{-1}$)  &  (km s$^{-1}$)  &  (K) \\
+
+    \hline \tabularnewline
+
+    PG 0003+158 & 0.347586 & 0 $\pm$ 1 & $62 \pm 3$ & $30 \pm 2$ & $56 \pm 2$ & 5.28 $\pm$ 0.05  \\
+    PG 0003+158 & 0.386089 & 14 $\pm$ 9 & $40 \pm 4$ & $25 \pm 4$  & $32 \pm 3$ & 4.80 $\pm$ 0.11\\
+    1ES 1553+113 & 0.187764 & 28 $\pm$ 1\textsuperscript{b}  & $51 \pm 1$ & $15 \pm 3$ & $50 \pm 1$ & 5.19 $\pm$ 0.04  \\
+    PG 1222+216 & 0.378389 & 4 $\pm$ 15 & $52 \pm 4$ & $34 \pm 13$ & $41 \pm 6$ & 5.00 $\pm$ 0.17  \\
+    PG 1222+216 & 0.378389 & 18 $\pm$ 4  & $43 \pm 1$ & $29 \pm 13$ & $33 \pm 6$ & 4.81 $\pm$ 0.19 \\
+    PG 1116+215  & 0.138527 & 4 $\pm$ 9 & $71 \pm 14$ & $35 \pm 3$ & $64 \pm 8$ & 5.39 $\pm$ 0.21  \\
+    H 1821+643 & 0.224981 & 19 $\pm$ 10 & $84 \pm 13$ & $45 \pm 1$ & $73 \pm 8$ & 5.51 $\pm$ 0.16  \\
+        \tabularnewline
+    \hline \hline 
+    \multicolumn{7}{l}{\footnotesize{\textsuperscript{a} Velocity separation between \ion{H}{i} and \ion{O}{vi} components}} \\
+    \multicolumn{7}{l}{\footnotesize{\textsuperscript{b} Even though $\Delta v > 20$ km s$^{-1}$ we still assume it to be aligned.}}
+    \end{tabular}
+    \caption{Details of temperature estimation from Doppler parameters.}
+    \label{tab:Temperature}
+    \end{table} 
+
+\subsubsection*{N(H \hspace*{-0.6mm}{\footnotesize I})-\emph{b}(H \hspace*{-0.6mm}{\footnotesize I}) distribution} 
+
+We plot the \ion{H}{i} column density with Doppler parameter in figure \ref{fig:NHi_bHi}. We observe that lines with large Doppler widths are found within narrow range of column densities towards the lower end. It could possibly be because large \emph{b} values indicates the presence of high temperature gas, where neutral fraction of Hydrogen will be small. We also see that the lines with large \emph{b} values have large uncertainities also. It is because that most of these are coming from absorbers at lower redshifts where only Ly$\alpha$ is covered in COS/FUV, which is saturated. These large uncertainities affect our estimation of $\Omega_b\text{(BLA)}$ value as discussed in next chapter (see section \ref{sec:BLA-sample}). 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/NHi_vs_bHi.png}
+    \caption{N(\ion{H}{i}) vs \emph{b}(\ion{H}{i}) plot for the 97 \ion{H}{i} components. The vertical black dashed line denotes our threshold for line to be considered as BLA.}
+    \label{fig:NHi_bHi}
+\end{figure}
 
 \subsubsection{Metal absorbers}
 
@@ -218,21 +266,21 @@ From ionisation modelling, we get the Hydrogen density\footnote{We use this inte
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth,draft=False]{Figures/Z_vs_nH.png}
+    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
     \caption{Metallicity vs density for all 39 components estimated from ionisation modelling. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
     \label{fig:nH-Z}
 \end{figure}
 
-However, when we see the variation of these two quantities with the underlying neutral Hydrogen column density (N(\ion{H}{i})) in these components, we see some trends. Figure \ref{fig:nH-NHi} shows the variation of density with N(\ion{H}{i}). We see a feeble positive relation between $n_H$ and N(\ion{H}{i}). This is expected as higher column density would typically result in higher densities given the sizes of absorbers are of similar order. 
+However, when we see the variation of these two quantities with the underlying neutral Hydrogen column density (N(\ion{H}{i})) in these components, we see some trends. Figure \ref{fig:nH-NHi} shows the variation of density with N(\ion{H}{i}). We see a feeble positive relation between $n_H$ and N(\ion{H}{i}) for the components from \ion{O}{vi} absorbers. This is expected as higher column density would typically result in higher densities if the sizes of absorbers, ionisation corrections are of similar order. The lack of such correlation in the non-\ion{O}{vi} case may be due to less number of components.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth,draft=False]{Figures/nH_vs_NHi.png}
-    \caption{Variation of density with N(\ion{H}{i}) for all 39 components. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
+    \includegraphics[width=\linewidth]{Figures/nH_vs_NHi.png}
+    \caption{Variation of density with N(\ion{H}{i}) for all 39 components. Red error bars are from \ion{O}{vi} absorbers and green error are from non-\ion{O}{vi} absorbers}
     \label{fig:nH-NHi}
 \end{figure}
 
-Unlike density, we find a negative correlation between the metallicity and N(\ion{H}{i}) as shown in figure \ref{fig:Z-NHi}. This could be explained by the fact that as we get larger N(\ion{H}{i}), the column densities of metals do not scale accordingly with N(\ion{H}{i}), they remain within the narrow ranges of their distribution. So to recover large N(\ion{H}{i}), large line of sight thickness has to integrated with nearly same amount of metals, which results in the drop in metallicity.
+Unlike density, we find a negative correlation between the metallicity and N(\ion{H}{i}) as shown in figure \ref{fig:Z-NHi} which could be seen for both \ion{O}{vi} and non-\ion{O}{vi} absorbers. However, again due to less number of components for non-\ion{O}{vi} absorbers, it less evident in them. This could be explained by the fact that as we get larger N(\ion{H}{i}), the column densities of metals do not scale accordingly with N(\ion{H}{i}), they remain within the narrow ranges of their distribution. So to recover large N(\ion{H}{i}), large line of sight thickness has to integrated with nearly same amount of metals, which results in the drop in metallicity.
 
 
 \begin{figure}
@@ -243,17 +291,19 @@ Unlike density, we find a negative correlation between the metallicity and N(\io
 \end{figure}
 
 
-\subsection*{Origin of O \hspace*{-0.5mm}{\footnotesize VI}}
+\subsubsection{Origin of O \hspace*{-0.5mm}{\footnotesize VI} in the absorbers}
 
 The 17 \ion{O}{vi} absorbers have immense importance in our current study so are there ionisation conditions. Based on the results of these 17 absorbers, we estimate the $\Omega_b(\text{BLA})$ value as discussed in next chapter. For these 17 systems, having 25 components, we want to find the origin of \ion{O}{vi} in these absorbers so that we could see if they are tracing warm-hot gas or cool photoionised gas phase. So, if they arise from a warm-hot plasma, we could infer that the BLA candidate found with \ion{O}{vi} could also be thermally broadend. Figure \ref{fig:OVI-origin} shows the bar plot of the inferred origin of these 25 components. 20 of the components could not be explained with photoionisation (PI) models, so possibly tracing a collisional ionised (CI) phase. One of the components, shown agreement with PI models and in 4 components the origin of \ion{O}{vi} remained uncertain due to models failing to predict the column densities of other ions detected. The absorber which has this PI component also shows CI origin in another component. Out of the 4 uncertain components, two of them do not show good solution, however, in other two components \ion{O}{vi} could be tentatively collisionally ionised, the bad solution is due to large number of ions present in the absorbers where our models fail considerably. However, to be conservative we do not count them in CI case. Table \ref{tab:OVI-origin} gives the details of all these 25 components.
 
 Figure \ref{fig:ex-CI} shows an example of CI origin of \ion{O}{vi}, where other ions could be explained with PI models but not \ion{O}{vi} (orange color). Figure \ref{fig:ex-PI} shows the only example of PI origin of \ion{O}{vi}, where we get similar solution for excluding and including \ion{O}{vi} cases, indicating that all ions could be explained with PI models. Figure \ref{fig:ex-uncertain} shows uncertain case, where our model fails to predict the column densities of other ions as well. 
 
+Ionisation modelling of these absorbers shows that the gas in these absorbers, which are possibly tracing WHIM, is multiphase in nature, having ions arising from photoionisation as well as collisional ionisation. In the next chapter, we use these results from ionisation modelling as well as Voigt profile fitting to estimate the baryon content in BLAs.  
+
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
-    \caption{Origin of \ion{O}{vi} in 25 components.}
+    \includegraphics[width=\linewidth]{Figures/OVI_cases.png}
+    \caption{Origin of \ion{O}{vi} in 25 components from 17 \ion{O}{vi} absorbers.}
     \label{fig:OVI-origin}
 \end{figure}
 
@@ -279,8 +329,6 @@ Figure \ref{fig:ex-CI} shows an example of CI origin of \ion{O}{vi}, where other
     \caption{An example of uncertain case for an absorber towards the line of sight of PKS 0405-123 at $z_{abs}=0.167125$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 13.46}
     \label{fig:ex-uncertain}
 \end{figure}
-
-
 
 
 \begin{table}[!h]
@@ -326,11 +374,4 @@ Figure \ref{fig:ex-CI} shows an example of CI origin of \ion{O}{vi}, where other
     \caption{25 \ion{O}{vi} components and origin of \ion{O}{vi} in them}
     \label{tab:OVI-origin}
 \end{table}
-
-
-
-
-% \section{Survey so far} \label{sec:OVI-BLA}
-
-% Out of the 28 BLA candidate systems identified as described in section \ref{sec:BLA-candidates}, we first focus on a subset of these systems which have \ion{O}{vi} absorption, as \ion{O}{vi} is a good tracer of WHIM. We have 16 such absorber systems. We begin the survey with these 16 systems. First step of the survey is to fit the Voigt profiles to all the lines identified in these systems. Currently, we have completed the preliminary fitting of these 16 absorber systems. The system plots of all these 16 systems are given in appendix \ref{ap:system-plots}.
 

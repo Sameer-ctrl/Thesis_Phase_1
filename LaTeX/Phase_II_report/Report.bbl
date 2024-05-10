@@ -17,45 +17,16 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
-\bibitem[\protect\citeauthoryear{{Abdurro'uf} et~al.,}{{Abdurro'uf}
-  et~al.}{2022}]{SDSS_DR17}
-{Abdurro'uf} et~al., 2022, \mn@doi [\apjs] {10.3847/1538-4365/ac4414}, 259, 35
-
-\bibitem[\protect\citeauthoryear{Acharya \& Khaire}{Acharya \&
-  Khaire}{2021}]{acharya_khaire}
-Acharya A.,  Khaire V.,  2021, \mn@doi [\mnras] {10.1093/mnras/stab3316}, 509,
-  5559
+\bibitem[\protect\citeauthoryear{{Bahcall} \& {Peebles}}{{Bahcall} \&
+  {Peebles}}{1969}]{Bahcall-1969}
+{Bahcall} J.~N.,  {Peebles} P.~J.~E.,  1969, \mn@doi [\apjl] {10.1086/180337},
+  \href {https://ui.adsabs.harvard.edu/abs/1969ApJ...156L...7B} {156, L7}
 
 \bibitem[\protect\citeauthoryear{{Becker}, {Sargent}, {Rauch}  \&
   {Calverley}}{{Becker} et~al.}{2011}]{Becker-2011}
 {Becker} G.~D.,  {Sargent} W. L.~W.,  {Rauch} M.,   {Calverley} A.~P.,  2011,
   \mn@doi [\apj] {10.1088/0004-637X/735/2/93}, \href
   {https://ui.adsabs.harvard.edu/abs/2011ApJ...735...93B} {735, 93}
-
-\bibitem[\protect\citeauthoryear{Carswell \& Webb}{Carswell \&
-  Webb}{2014}]{vpfit}
-Carswell R.~F.,  Webb J.~K.,  2014, Astrophysics Source Code Library, p.
-  ascl:1408.015
-
-\bibitem[\protect\citeauthoryear{{Cen} \& {Ostriker}}{{Cen} \&
-  {Ostriker}}{1999}]{cen-ostriker-1999}
-{Cen} R.,  {Ostriker} J.~P.,  1999, \mn@doi [\apj] {10.1086/306949}, \href
-  {https://ui.adsabs.harvard.edu/abs/1999ApJ...514....1C} {514, 1}
-
-\bibitem[\protect\citeauthoryear{{Cen} \& {Ostriker}}{{Cen} \&
-  {Ostriker}}{2006}]{cen-ostriker-2006}
-{Cen} R.,  {Ostriker} J.~P.,  2006, \mn@doi [\apj] {10.1086/506505}, \href
-  {https://ui.adsabs.harvard.edu/abs/2006ApJ...650..560C} {650, 560}
-
-\bibitem[\protect\citeauthoryear{Danforth \& Shull}{Danforth \&
-  Shull}{2008}]{Danforth_2008}
-Danforth C.~W.,  Shull J.~M.,  2008, \mn@doi [The Astrophysical Journal]
-  {10.1086/587127}, 679, 194
-
-\bibitem[\protect\citeauthoryear{Danforth, Stocke  \& Shull}{Danforth
-  et~al.}{2010}]{Danforth_2010}
-Danforth C.~W.,  Stocke J.~T.,   Shull J.~M.,  2010, \mn@doi [The Astrophysical
-  Journal] {10.1088/0004-637X/710/1/613}, 710, 613
 
 \bibitem[\protect\citeauthoryear{Danforth et~al.,}{Danforth
   et~al.}{2016}]{danforth-2016}
@@ -67,62 +38,10 @@ Danforth C.~W.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/817/2/111},
 {Fang} T.,  {Bryan} G.~L.,  2001, \mn@doi [\apjl] {10.1086/324571}, \href
   {https://ui.adsabs.harvard.edu/abs/2001ApJ...561L..31F} {561, L31}
 
-\bibitem[\protect\citeauthoryear{Ferland et~al.,}{Ferland
-  et~al.}{2017}]{cloudy}
-Ferland G.~J.,  et~al., 2017, \mn@doi [] {10.48550/ARXIV.1705.10877}
-
-\bibitem[\protect\citeauthoryear{{Fukugita}, {Hogan}  \& {Peebles}}{{Fukugita}
-  et~al.}{1998}]{Fukugita-1998}
-{Fukugita} M.,  {Hogan} C.~J.,   {Peebles} P.~J.~E.,  1998, \mn@doi [\apj]
-  {10.1086/306025}, \href
-  {https://ui.adsabs.harvard.edu/abs/1998ApJ...503..518F} {503, 518}
-
 \bibitem[\protect\citeauthoryear{{Gnat} \& {Sternberg}}{{Gnat} \&
   {Sternberg}}{2007}]{Gnat-Sternberg-2007}
 {Gnat} O.,  {Sternberg} A.,  2007, \mn@doi [\apjs] {10.1086/509786}, \href
   {https://ui.adsabs.harvard.edu/abs/2007ApJS..168..213G} {168, 213}
-
-\bibitem[\protect\citeauthoryear{Grevesse, Asplund, Sauval  \& Scott}{Grevesse
-  et~al.}{2010}]{grevesse-chemical-2010}
-Grevesse N.,  Asplund M.,  Sauval A.~J.,   Scott P.,  2010, \mn@doi
-  [Astrophysics and Space Science] {10.1007/s10509-010-0288-z}, 328, 179
-
-\bibitem[\protect\citeauthoryear{{Hussain}, {Khaire}, {Srianand}, {Muzahid}  \&
-  {Pathak}}{{Hussain} et~al.}{2017}]{Hussain-2017}
-{Hussain} T.,  {Khaire} V.,  {Srianand} R.,  {Muzahid} S.,   {Pathak} A.,
-  2017, \mn@doi [\mnras] {10.1093/mnras/stw3265}, \href
-  {https://ui.adsabs.harvard.edu/abs/2017MNRAS.466.3133H} {466, 3133}
-
-\bibitem[\protect\citeauthoryear{Ilbert et~al.,}{Ilbert
-  et~al.}{2005}]{ilbert_GLF}
-Ilbert O.,  et~al., 2005, \mn@doi [\aap] {10.1051/0004-6361:20041961}, 439, 863
-
-\bibitem[\protect\citeauthoryear{Khaire \& Srianand}{Khaire \&
-  Srianand}{2019}]{KS19}
-Khaire V.,  Srianand R.,  2019, \mn@doi [\mnras] {10.1093/mnras/stz174}, 484,
-  4174
-
-\bibitem[\protect\citeauthoryear{Le~Fèvre et~al.,}{Le~Fèvre
-  et~al.}{2013}]{vimos_data}
-Le~Fèvre O.,  et~al., 2013, \mn@doi [Astronomy \& Astrophysics]
-  {10.1051/0004-6361/201322179}, 559, A14
-
-\bibitem[\protect\citeauthoryear{{Lehner}, {Savage}, {Wakker}, {Sembach}  \&
-  {Tripp}}{{Lehner} et~al.}{2006}]{Lehner-2006}
-{Lehner} N.,  {Savage} B.~D.,  {Wakker} B.~P.,  {Sembach} K.~R.,   {Tripp}
-  T.~M.,  2006, \mn@doi [\apjs] {10.1086/500932}, \href
-  {https://ui.adsabs.harvard.edu/abs/2006ApJS..164....1L} {164, 1}
-
-\bibitem[\protect\citeauthoryear{{Lehner}, {Savage}, {Richter}, {Sembach},
-  {Tripp}  \& {Wakker}}{{Lehner} et~al.}{2007}]{Lehner-2007}
-{Lehner} N.,  {Savage} B.~D.,  {Richter} P.,  {Sembach} K.~R.,  {Tripp} T.~M.,
-   {Wakker} B.~P.,  2007, \mn@doi [\apj] {10.1086/511749}, \href
-  {https://ui.adsabs.harvard.edu/abs/2007ApJ...658..680L} {658, 680}
-
-\bibitem[\protect\citeauthoryear{{Morton} \& {Smith}}{{Morton} \&
-  {Smith}}{1973}]{Voigt-eqn}
-{Morton} D.~C.,  {Smith} W.~H.,  1973, \mn@doi [\apjs] {10.1086/190284}, \href
-  {https://ui.adsabs.harvard.edu/abs/1973ApJS...26..333M} {26, 333}
 
 \bibitem[\protect\citeauthoryear{{Peimbert}, {Peimbert}  \&
   {Luridiana}}{{Peimbert} et~al.}{2016}]{Peimbert-2016}
@@ -136,32 +55,9 @@ Le~Fèvre O.,  et~al., 2013, \mn@doi [Astronomy \& Astrophysics]
   {10.1086/317345}, \href
   {https://ui.adsabs.harvard.edu/abs/2000ApJS..130..121P} {130, 121}
 
-\bibitem[\protect\citeauthoryear{{Planck Collaboration} et~al.,}{{Planck
-  Collaboration} et~al.}{2020}]{planck_collaboration_planck_2020}
-{Planck Collaboration} et~al., 2020, \mn@doi [Astronomy \& Astrophysics]
-  {10.1051/0004-6361/201833910}, 641, A6
-
-\bibitem[\protect\citeauthoryear{{Prochaska}, {Weiner}, {Chen}, {Mulchaey}  \&
-  {Cooksey}}{{Prochaska} et~al.}{2011}]{Prochaska-2011}
-{Prochaska} J.~X.,  {Weiner} B.,  {Chen} H.~W.,  {Mulchaey} J.,   {Cooksey} K.,
-   2011, \mn@doi [\apj] {10.1088/0004-637X/740/2/91}, \href
-  {https://ui.adsabs.harvard.edu/abs/2011ApJ...740...91P} {740, 91}
-
 \bibitem[\protect\citeauthoryear{Richter}{Richter}{2020}]{Richter_2020}
 Richter P.,  2020, \mn@doi [The Astrophysical Journal]
   {10.3847/1538-4357/ab7937}, 892, 33
-
-\bibitem[\protect\citeauthoryear{{Richter}, {Savage}, {Tripp}  \&
-  {Sembach}}{{Richter} et~al.}{2004}]{Richter-2004}
-{Richter} P.,  {Savage} B.~D.,  {Tripp} T.~M.,   {Sembach} K.~R.,  2004,
-  \mn@doi [\apjs] {10.1086/421297}, \href
-  {https://ui.adsabs.harvard.edu/abs/2004ApJS..153..165R} {153, 165}
-
-\bibitem[\protect\citeauthoryear{{Richter}, {Savage}, {Sembach}  \&
-  {Tripp}}{{Richter} et~al.}{2006}]{Richter-2006}
-{Richter} P.,  {Savage} B.~D.,  {Sembach} K.~R.,   {Tripp} T.~M.,  2006,
-  \mn@doi [\aap] {10.1051/0004-6361:20053636}, \href
-  {https://ui.adsabs.harvard.edu/abs/2006A&A...445..827R} {445, 827}
 
 \bibitem[\protect\citeauthoryear{{Savage}, {Kim}, {Wakker}, {Keeney}, {Shull},
   {Stocke}  \& {Green}}{{Savage} et~al.}{2014}]{savage-2014}
@@ -170,38 +66,16 @@ Richter P.,  2020, \mn@doi [The Astrophysical Journal]
   {10.1088/0067-0049/212/1/8}, \href
   {https://ui.adsabs.harvard.edu/abs/2014ApJS..212....8S} {212, 8}
 
-\bibitem[\protect\citeauthoryear{{Shull}, {Smith}  \& {Danforth}}{{Shull}
-  et~al.}{2012}]{Shull}
-{Shull} J.~M.,  {Smith} B.~D.,   {Danforth} C.~W.,  2012, \mn@doi [\apj]
-  {10.1088/0004-637X/759/1/23}, \href
-  {https://ui.adsabs.harvard.edu/abs/2012ApJ...759...23S} {759, 23}
-
-\bibitem[\protect\citeauthoryear{Strauss et~al.,}{Strauss
-  et~al.}{2002}]{strauss_SDSS}
-Strauss M.~A.,  et~al., 2002, \mn@doi [\aj] {10.1086/342343}, 124, 1810
-
 \bibitem[\protect\citeauthoryear{{Sutherland} \& {Dopita}}{{Sutherland} \&
   {Dopita}}{1993}]{Sutherland-1993}
 {Sutherland} R.~S.,  {Dopita} M.~A.,  1993, \mn@doi [\apjs] {10.1086/191823},
   \href {https://ui.adsabs.harvard.edu/abs/1993ApJS...88..253S} {88, 253}
-
-\bibitem[\protect\citeauthoryear{{Tepper-Garc{\'\i}a}, {Richter}  \&
-  {Schaye}}{{Tepper-Garc{\'\i}a} et~al.}{2013}]{tepper-2013}
-{Tepper-Garc{\'\i}a} T.,  {Richter} P.,   {Schaye} J.,  2013, \mn@doi [\mnras]
-  {10.1093/mnras/stt1712}, \href
-  {https://ui.adsabs.harvard.edu/abs/2013MNRAS.436.2063T} {436, 2063}
 
 \bibitem[\protect\citeauthoryear{{Tilton}, {Danforth}, {Shull}  \&
   {Ross}}{{Tilton} et~al.}{2012}]{tilton_2012}
 {Tilton} E.~M.,  {Danforth} C.~W.,  {Shull} J.~M.,   {Ross} T.~L.,  2012,
   \mn@doi [\apj] {10.1088/0004-637X/759/2/112}, \href
   {https://ui.adsabs.harvard.edu/abs/2012ApJ...759..112T} {759, 112}
-
-\bibitem[\protect\citeauthoryear{Tripp, Sembach, Bowen, Savage, Jenkins, Lehner
-   \& Richter}{Tripp et~al.}{2008}]{Tripp_2008}
-Tripp T.~M.,  Sembach K.~R.,  Bowen D.~V.,  Savage B.~D.,  Jenkins E.~B.,
-  Lehner N.,   Richter P.,  2008, \mn@doi [The Astrophysical Journal Supplement
-  Series] {10.1086/587486}, 177, 39
 
 \bibitem[\protect\citeauthoryear{{Tumlinson} et~al.,}{{Tumlinson}
   et~al.}{2011}]{Tumlinson-2011}
@@ -219,12 +93,6 @@ Tripp T.~M.,  Sembach K.~R.,  Bowen D.~V.,  Savage B.~D.,  Jenkins E.~B.,
   {Oppenheimer} B.~D.,   {Savage} B.~D.,  2015, \mn@doi [\apj]
   {10.1088/0004-637X/814/1/40}, \href
   {https://ui.adsabs.harvard.edu/abs/2015ApJ...814...40W} {814, 40}
-
-\bibitem[\protect\citeauthoryear{{Yao}, {Shull}, {Wang}  \& {Cash}}{{Yao}
-  et~al.}{2012}]{yao_2012}
-{Yao} Y.,  {Shull} J.~M.,  {Wang} Q.~D.,   {Cash} W.,  2012, \mn@doi [\apj]
-  {10.1088/0004-637X/746/2/166}, \href
-  {https://ui.adsabs.harvard.edu/abs/2012ApJ...746..166Y} {746, 166}
 
 \makeatother
 \end{thebibliography}
