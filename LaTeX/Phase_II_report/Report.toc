@@ -1,0 +1,64 @@
+\@frame@switchfalse 
+\babel@toc {french}{}
+\contentsline {tlstarchapter}{Abstract}{v}{chapter*.4}%
+\contentsline {spsection}{List of Figures}{ix}{chapter*.5}%
+\contentsline {spsection}{List of Tables}{xv}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.0.1}%
+\contentsline {section}{\numberline {1.1}Where are the baryons ?}{1}{section.0.1.1}%
+\contentsline {section}{\numberline {1.2}Detecting WHIM}{3}{section.0.1.2}%
+\contentsline {section}{\numberline {1.3}Detecting WHIM using BLAs}{4}{section.0.1.3}%
+\contentsline {section}{\numberline {1.4}Road-map for the Current Project}{6}{section.0.1.4}%
+\contentsline {chapter}{\numberline {2}Data and Pre-processing}{7}{chapter.0.2}%
+\contentsline {section}{\numberline {2.1}HST/COS data}{7}{section.0.2.1}%
+\contentsline {section}{\numberline {2.2}Pre-processing}{8}{section.0.2.2}%
+\contentsline {chapter}{\numberline {3}Voigt Profile Fitting}{9}{chapter.0.3}%
+\contentsline {section}{\numberline {3.1}Voigt Profile}{9}{section.0.3.1}%
+\contentsline {section}{\numberline {3.2}VPFIT}{12}{section.0.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Line-identification}{13}{subsection.0.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Example}{14}{subsection.0.3.2.2}%
+\contentsline {chapter}{\numberline {4}Modelling the Ionisation Conditions}{16}{chapter.0.4}%
+\contentsline {section}{\numberline {4.1}Ionisation Modelling}{16}{section.0.4.1}%
+\contentsline {section}{\numberline {4.2}CLOUDY}{16}{section.0.4.2}%
+\contentsline {section}{\numberline {4.3}Ionization Model Based Parameter Estimation}{18}{section.0.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Parameter inference test}{19}{subsection.0.4.3.1}%
+\contentsline {chapter}{\numberline {5}Absorber towards PG 0003+158}{21}{chapter.0.5}%
+\contentsline {section}{\numberline {5.1}Component structure of the absorber system}{21}{section.0.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Component I : z $\sim $ 0.346776}{21}{subsection.0.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Component II : z $\sim $ 0.34758}{22}{subsection.0.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Component III : z $\sim $ 0.34790}{22}{subsection.0.5.1.3}%
+\contentsline {section}{\numberline {5.2}Voigt profile fitting}{23}{section.0.5.2}%
+\contentsline {section}{\numberline {5.3}Ionization Modelling of the Absorber}{27}{section.0.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Component II}{27}{subsection.0.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Photoionization modelling}{27}{subsubsection.0.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}Collisional ionization modelling}{28}{subsubsection.0.5.3.1.2}%
+\contentsline {subsection}{\numberline {5.3.2}Component III}{29}{subsection.0.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Photoionization modelling}{29}{subsubsection.0.5.3.2.1}%
+\contentsline {section}{\numberline {5.4}Origin of {\text {O\tmspace +\thinmuskip {.1667em}\small {\textsc {\uppercase {vi}}}}} in the Absorber}{34}{section.0.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Component II}{34}{subsection.0.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Component III}{35}{subsection.0.5.4.2}%
+\contentsline {section}{\numberline {5.5}Galaxy environment of the absorber}{35}{section.0.5.5}%
+\contentsline {chapter}{\numberline {6}Hunt for BLAs : The Survey}{39}{chapter.0.6}%
+\contentsline {section}{\numberline {6.1}Shortlisting the BLA candidates}{39}{section.0.6.1}%
+\contentsline {section}{\numberline {6.2}Survey methodology}{42}{section.0.6.2}%
+\contentsline {section}{\numberline {6.3}Survey statistics}{42}{section.0.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Voigt profile fitting}{43}{subsection.0.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.1}H \hspace *{-0.5mm}{\footnotesize I} absorbers}{43}{subsubsection.0.6.3.1.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.2}Metal absorbers}{47}{subsubsection.0.6.3.1.2}%
+\contentsline {subsection}{\numberline {6.3.2}Ionisation modelling}{53}{subsection.0.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Origin of O \hspace *{-0.5mm}{\footnotesize VI} in the absorbers}{55}{subsubsection.0.6.3.2.1}%
+\contentsline {chapter}{\numberline {7}Estimating $\Omega _\text {b}(\text {BLA})$}{61}{chapter.0.7}%
+\contentsline {section}{\numberline {7.1}Methodology to determine $\Omega _\text {b}(\text {BLA})$}{61}{section.0.7.1}%
+\contentsline {section}{\numberline {7.2}Selecting the absorber samples}{65}{section.0.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Based on Temperature and Ionisation Modelling}{65}{subsection.0.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Based on Ionisation Modelling}{65}{subsection.0.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Full sample}{66}{subsection.0.7.2.3}%
+\contentsline {section}{\numberline {7.3}Comparison with literature}{70}{section.0.7.3}%
+\contentsline {section}{\numberline {7.4}Contribution to \textnormal {\textbf {$\mathbf {\Omega _b}$}}}{71}{section.0.7.4}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{74}{chapter.0.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{74}{section.0.8.1}%
+\contentsline {section}{\numberline {8.2}Future work}{76}{section.0.8.2}%
+\contentsline {tlstarchapter}{References}{77}{chapter*.62}%
+\contentsline {tlstarchapter}{Appendices}{81}{chapter*.62}%
+\contentsline {chapter}{\numberline {A}Sight lines shortlisted for survey}{81}{annex.0.1}%
+\contentsline {chapter}{\numberline {B}HST/COS observations}{83}{annex.0.2}%
+\contentsline {chapter}{\numberline {C}Survey results}{85}{annex.0.3}%

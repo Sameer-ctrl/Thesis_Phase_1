@@ -1,0 +1,128 @@
+\babel@toc {french}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introduction}{1}{chapter.0.1}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Baryon budget at low redshift universe ($z\sim 0$). Credits : \citet {Shull}\relax }}{3}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Slice of spectrum of quasar HE0153-4520 ($z_{em}=0.4510$). Credits : \citet {danforth-2016}\relax }}{4}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces A BLA blended with other Ly$\alpha $ absorption lines towards the LOS of quasar PG1116+215 $(z_{em} = 0.176)$. Credits : \citet {Richter_2020}\relax }}{5}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Data and Pre-processing}{7}{chapter.0.2}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Voigt Profile Fitting}{9}{chapter.0.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simulated Voigt profiles for different Doppler parameters. X-axis is the velocity from the central wavelength, taken as a proxy of wavelength\relax }}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Simulated Voigt profiles for different column densities. X-axis is the velocity from the central wavelength, taken as a proxy of wavelength\relax }}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Input to {\tt VPFIT} and output from {\tt VPFIT}\relax }}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces An example 2 component fit as displayed in {\tt VPFIT}\relax }}{15}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Modelling the Ionisation Conditions}{16}{chapter.0.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic of a {\tt CLOUDY} simulation showing how {\tt {CLOUDY}} adds slabs until given stopping column density is reached by taking in account the background radiation\relax }}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Posterior distribution of $n_H$ and $Z$ for the randomly selected model added with Gauassain noise\relax }}{20}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Absorber towards PG 0003+158}{21}{chapter.0.5}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System plot of the absorption system. Reference velocity taken at $z=0.347586$\relax }}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces CIE solution for component II. The figure shows the metallicity found for various densities. At high densities no variation in metallicity is seen.\relax }}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Modelled and observed column densities for the component III based on photoionization modelling. Red error bars shows the observed column densities and corresponding 1-$\sigma $ errors in column densities. The green and orange filled circles are the modelled column densities for the including \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} and excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} case of PIE modelling. And the light green and light orange lines are modelled column densities with densities and metallicity sampled from normal distributions of log $n_H$ and log Z of including \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} and excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} case respectively.\relax }}{32}{figure.caption.21}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Galaxies around the absorber color-coded with their velocity separation from the absorber.\relax }}{37}{figure.caption.25}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Hunt for BLAs : The Survey}{39}{chapter.0.6}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces No. of different metal ions in all the 29 absorber systems.\relax }}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces No. of components identified for \text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}} and different metal ions.\relax }}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 97 \text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}} components.\relax }}{44}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Distribution of \emph {b} parameters of 97 \text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}} components.\relax }}{45}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \emph {b}(\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}}) vs \emph {b}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) plot. The orange dashed line is the \emph {b}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) = 4\emph {b}(\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}}) line and blue dashed line shows the \emph {b}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) = \emph {b}(\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}}) line.\relax }}{46}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) vs \emph {b}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) plot for the 97 \text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}} components. The vertical black dashed line denotes our threshold for line to be considered as BLA.\relax }}{48}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 35 \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components.\relax }}{49}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 19 \text {Si\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}} components.\relax }}{50}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 36 \text {Si\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iii}}} components.\relax }}{50}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 20 \text {Si\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iv}}} components.\relax }}{51}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 23 \text {C\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}} components.\relax }}{52}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 26 \text {C\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iii}}} components.\relax }}{52}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 22 \text {C\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iv}}} components.\relax }}{53}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Distribution of column densities (left panel) and redshift (right panel) of 14 \text {N\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {v}}} components.\relax }}{54}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Metallicity vs density for all 39 components estimated from ionisation modelling. Red error bars are the \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components and green error bars are non-\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components\relax }}{55}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Variation of density with N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) for all 39 components. Red error bars are from \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} absorbers and green error are from non-\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} absorbers\relax }}{56}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Variation of metallicity with N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) for all 39 components. Red error bars are the \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components and green error bars are non-\text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components\relax }}{57}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Origin of \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} in 25 components from 17 \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} absorbers.\relax }}{58}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces An example of CI case for an absorber towards the line of sight of SDSS J135712.61+170444 at $z_{abs}=0.097869$ with log N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) [cm\textsuperscript {-2}] = 16.49\relax }}{58}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Only example of PI case for an absorber towards the line of sight of 1ES 1553+113 at $z_{abs}=0.187764$ with log N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) [cm\textsuperscript {-2}] = 12.76\relax }}{59}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces An example of uncertain case for an absorber towards the line of sight of PKS 0405-123 at $z_{abs}=0.167125$ with log N(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) [cm\textsuperscript {-2}] = 13.46\relax }}{59}{figure.caption.55}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Estimating $\Omega _\text {b}(\text {BLA})$}{61}{chapter.0.7}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Hydrogen ionisation fraction as a function of temperature.\relax }}{64}{figure.caption.57}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusions and Future Work}{74}{chapter.0.8}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces System plot for the absorber along the LOS of 3C 263 at $z_{abs} = 0.140756$. \relax }}{86}{figure.caption.65}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.49\relax }}{87}{figure.caption.66}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces System plot for the absorber along the LOS of PKS 0637-752 at $z_{abs} = 0.161064$. \relax }}{88}{figure.caption.67}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.60\relax }}{89}{figure.caption.68}%
+\contentsline {figure}{\numberline {C.5}{\ignorespaces System plot for the absorber along the LOS of PKS 0637-752 at $z_{abs} = 0.417539$. \relax }}{90}{figure.caption.69}%
+\contentsline {figure}{\numberline {C.6}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.41\relax }}{91}{figure.caption.70}%
+\contentsline {figure}{\numberline {C.7}{\ignorespaces System plot for the absorber along the LOS of PG 1424+240 at $z_{abs} = 0.147104$. \relax }}{92}{figure.caption.71}%
+\contentsline {figure}{\numberline {C.8}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.44\relax }}{94}{figure.caption.72}%
+\contentsline {figure}{\numberline {C.9}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.88\relax }}{94}{figure.caption.73}%
+\contentsline {figure}{\numberline {C.10}{\ignorespaces System plot for the absorber along the LOS of PG 0003+158 at $z_{abs} = 0.386089$. \relax }}{95}{figure.caption.74}%
+\contentsline {figure}{\numberline {C.11}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.81\relax }}{96}{figure.caption.75}%
+\contentsline {figure}{\numberline {C.12}{\ignorespaces System plot for the absorber along the LOS of PG 0003+158 at $z_{abs} = 0.421923$. \relax }}{97}{figure.caption.76}%
+\contentsline {figure}{\numberline {C.13}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.17\relax }}{98}{figure.caption.77}%
+\contentsline {figure}{\numberline {C.14}{\ignorespaces System plot for the absorber along the LOS of PG 1216+069 at $z_{abs} = 0.282286$. \relax }}{99}{figure.caption.78}%
+\contentsline {figure}{\numberline {C.15}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.10\relax }}{101}{figure.caption.79}%
+\contentsline {figure}{\numberline {C.16}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 16.40\relax }}{101}{figure.caption.80}%
+\contentsline {figure}{\numberline {C.17}{\ignorespaces System plot for the absorber along the LOS of SDSS J135712.61+170444 at $z_{abs} = 0.097869$. \relax }}{102}{figure.caption.81}%
+\contentsline {figure}{\numberline {C.18}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 16.49\relax }}{104}{figure.caption.82}%
+\contentsline {figure}{\numberline {C.19}{\ignorespaces System plot for the absorber along the LOS of 1ES 1553+113 at $z_{abs} = 0.187764$. \relax }}{105}{figure.caption.83}%
+\contentsline {figure}{\numberline {C.20}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 12.76\relax }}{107}{figure.caption.84}%
+\contentsline {figure}{\numberline {C.21}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.88\relax }}{107}{figure.caption.85}%
+\contentsline {figure}{\numberline {C.22}{\ignorespaces System plot for the absorber along the LOS of SBS 1108+560 at $z_{abs} = 0.463207$. \relax }}{108}{figure.caption.86}%
+\contentsline {figure}{\numberline {C.23}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 18.10\relax }}{110}{figure.caption.87}%
+\contentsline {figure}{\numberline {C.24}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.79\relax }}{110}{figure.caption.88}%
+\contentsline {figure}{\numberline {C.25}{\ignorespaces System plot for the absorber along the LOS of PG 1222+216 at $z_{abs} = 0.378389$. \relax }}{111}{figure.caption.89}%
+\contentsline {figure}{\numberline {C.26}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.43\relax }}{113}{figure.caption.90}%
+\contentsline {figure}{\numberline {C.27}{\ignorespaces System plot for the absorber along the LOS of PG 1116+215 at $z_{abs} = 0.138527$. \relax }}{114}{figure.caption.91}%
+\contentsline {figure}{\numberline {C.28}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.60\relax }}{116}{figure.caption.92}%
+\contentsline {figure}{\numberline {C.29}{\ignorespaces System plot for the absorber along the LOS of H 1821+643 at $z_{abs} = 0.170006$. \relax }}{117}{figure.caption.93}%
+\contentsline {figure}{\numberline {C.30}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.68\relax }}{119}{figure.caption.94}%
+\contentsline {figure}{\numberline {C.31}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.35\relax }}{119}{figure.caption.95}%
+\contentsline {figure}{\numberline {C.32}{\ignorespaces System plot for the absorber along the LOS of H 1821+643 at $z_{abs} = 0.224981$. \relax }}{120}{figure.caption.96}%
+\contentsline {figure}{\numberline {C.33}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.16\relax }}{122}{figure.caption.97}%
+\contentsline {figure}{\numberline {C.34}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.13\relax }}{122}{figure.caption.98}%
+\contentsline {figure}{\numberline {C.35}{\ignorespaces System plot for the absorber along the LOS of PG 1121+422 at $z_{abs} = 0.192393$. \relax }}{123}{figure.caption.99}%
+\contentsline {figure}{\numberline {C.36}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.34\relax }}{125}{figure.caption.100}%
+\contentsline {figure}{\numberline {C.37}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 17.70\relax }}{125}{figure.caption.101}%
+\contentsline {figure}{\numberline {C.38}{\ignorespaces System plot for the absorber along the LOS of PKS 0405-123 at $z_{abs} = 0.167125$. \relax }}{126}{figure.caption.102}%
+\contentsline {figure}{\numberline {C.39}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.46\relax }}{129}{figure.caption.103}%
+\contentsline {figure}{\numberline {C.40}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.98\relax }}{130}{figure.caption.104}%
+\contentsline {figure}{\numberline {C.41}{\ignorespaces System plot for the absorber along the LOS of HE 0056-3622 at $z_{abs} = 0.043265$. \relax }}{131}{figure.caption.105}%
+\contentsline {figure}{\numberline {C.42}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.98\relax }}{132}{figure.caption.106}%
+\contentsline {figure}{\numberline {C.43}{\ignorespaces System plot for the absorber along the LOS of PG 1216+069 at $z_{abs} = 0.006328$. \relax }}{133}{figure.caption.107}%
+\contentsline {figure}{\numberline {C.44}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.79\relax }}{135}{figure.caption.108}%
+\contentsline {figure}{\numberline {C.45}{\ignorespaces System plot for the absorber along the LOS of 3C 263 at $z_{abs} = 0.063397$. \relax }}{136}{figure.caption.109}%
+\contentsline {figure}{\numberline {C.46}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 16.46\relax }}{138}{figure.caption.110}%
+\contentsline {figure}{\numberline {C.47}{\ignorespaces System plot for the absorber along the LOS of PG 1222+216 at $z_{abs} = 0.054479$. \relax }}{139}{figure.caption.111}%
+\contentsline {figure}{\numberline {C.48}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.08\relax }}{141}{figure.caption.112}%
+\contentsline {figure}{\numberline {C.49}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 17.91\relax }}{141}{figure.caption.113}%
+\contentsline {figure}{\numberline {C.50}{\ignorespaces System plot for the absorber along the LOS of RX J0439.6-5311 at $z_{abs} = 0.005568$. \relax }}{142}{figure.caption.114}%
+\contentsline {figure}{\numberline {C.51}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 16.11\relax }}{143}{figure.caption.115}%
+\contentsline {figure}{\numberline {C.52}{\ignorespaces System plot for the absorber along the LOS of UKS 0242-724 at $z_{abs} = 0.063850$. \relax }}{144}{figure.caption.116}%
+\contentsline {figure}{\numberline {C.53}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.61\relax }}{146}{figure.caption.117}%
+\contentsline {figure}{\numberline {C.54}{\ignorespaces System plot for the absorber along the LOS of PG 1259+593 at $z_{abs} = 0.046284$. \relax }}{147}{figure.caption.118}%
+\contentsline {figure}{\numberline {C.55}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 17.79\relax }}{149}{figure.caption.119}%
+\contentsline {figure}{\numberline {C.56}{\ignorespaces System plot for the absorber along the LOS of PKS 1302-102 at $z_{abs} = 0.094839$. \relax }}{150}{figure.caption.120}%
+\contentsline {figure}{\numberline {C.57}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.96\relax }}{152}{figure.caption.121}%
+\contentsline {figure}{\numberline {C.58}{\ignorespaces System plot for the absorber along the LOS of 3C 57 at $z_{abs} = 0.077430$. \relax }}{153}{figure.caption.122}%
+\contentsline {figure}{\numberline {C.59}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 13.30\relax }}{154}{figure.caption.123}%
+\contentsline {figure}{\numberline {C.60}{\ignorespaces System plot for the absorber along the LOS of PMN J1103-2329 at $z_{abs} = 0.003934$. \relax }}{155}{figure.caption.124}%
+\contentsline {figure}{\numberline {C.61}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 16.29\relax }}{156}{figure.caption.125}%
+\contentsline {figure}{\numberline {C.62}{\ignorespaces System plot for the absorber along the LOS of PHL 1811 at $z_{abs} = 0.080928$. \relax }}{157}{figure.caption.126}%
+\contentsline {figure}{\numberline {C.63}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 18.02, all ions\relax }}{159}{figure.caption.127}%
+\contentsline {figure}{\numberline {C.64}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 18.02, \text {C\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}}, \text {C\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iv}}}, \text {Si\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}} and \text {Si\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {iv}}}\relax }}{159}{figure.caption.128}%
+\contentsline {figure}{\numberline {C.65}{\ignorespaces System plot for the absorber along the LOS of PG 0832+251 at $z_{abs} = 0.017505$. \relax }}{160}{figure.caption.129}%
+\contentsline {figure}{\numberline {C.66}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 15.82\relax }}{162}{figure.caption.130}%
+\contentsline {figure}{\numberline {C.67}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 14.79, excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}, \text {Fe\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {II}}} and \text {Al\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {ii}}}\relax }}{163}{figure.caption.131}%
+\contentsline {figure}{\numberline {C.68}{\ignorespaces $\qopname \relax o{log}\text {N}(\text {H\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {i}}}) \ [\text {cm}^{-2}]=$ 18.22\relax }}{163}{figure.caption.132}%

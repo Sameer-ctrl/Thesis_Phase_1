@@ -10,7 +10,7 @@ z_abs=0.347586
 vlim=350
 # xticks_val=[-600,-400,-200,0,200,400,600]
 xticks_val=[-300,-200,-100,0,100,200,300]
-n_col=1
+n_col=3
 lw1=1.5
 
 spec=ascii.read(f'Data/IGM_Danforth_Data/Cont_norm_spectra/{qso}_cont_norm.asc')
@@ -102,9 +102,9 @@ def tick_pos(file):
 # lines=lines_all()
 # print(lines)
 # quit()
-# lines=['HI_1215', 'OVI_1032','CIII_977', 'HI_1025' , 'OVI_1038', 'CII_1036', 'HI_972' ,'SiIII_1206', 'SiII_1260']
-lines=['HI_1215', 'HI_1025', 'HI_972', 'HI_949', 'OVI_1038','OVI_1032' , 'CII_1036', 'CIII_977', 'SiII_1260' ,'SiIII_1206']
-
+lines=['HI_1215', 'OVI_1032','CIII_977', 'HI_1025' , 'OVI_1038', 'CII_1036', 'HI_972' ,'SiIII_1206', 'SiII_1260']
+# lines=['HI_1215', 'HI_1025', 'HI_972', 'HI_949', 'OVI_1038','OVI_1032' , 'CII_1036', 'CIII_977', 'SiII_1260' ,'SiIII_1206']
+print(1)
 n=len(lines)
 line_vshift=dict(zip(lines,zeros(n)))
 line_name_dict=dict(zip(lines,['']*len(lines)))
@@ -312,14 +312,14 @@ def abs_line_plot(line):
 
     if line=='HI_1215':
         plt.text(v_tick1+8,1.1,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{I}}$}}')
-        plt.text(v_tick2-19,1.1,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{II}}$}}')
+        plt.text(v_tick2-28,1.1,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{II}}$}}')
         plt.text(v_tick3+8,1.1,f'{{\\fontsize{{25pt}}{{3em}}\selectfont{{}}$\mathbf{{III}}$}}')
     
 
     
 
-# fig=plt.figure(figsize=(40,20),dpi=300)
-fig=plt.figure(figsize=(20,40),dpi=300)
+fig=plt.figure(figsize=(40,20),dpi=300)
+# fig=plt.figure(figsize=(20,40),dpi=300)
 
 ax1=plt.subplot(int(ceil(n/n_col)),n_col,1)
 
@@ -343,24 +343,24 @@ for i,line in enumerate(lines):
         ax=plt.subplot(int(ceil(n/n_col)),n_col,i+2,sharex=ax1, sharey=ax1)
 
 
-# fig.supxlabel(r'$\mathbf{V} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
-# fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
-# plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-# plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
-# plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
-# plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs:.6f}_sys_plot.png')
-# plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot.png')
-
+fig.supxlabel(r'$\mathbf{v} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=-0.02)  #y=0.18  (y=0 for lyman)
+fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.08, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
+plt.legend(bbox_to_anchor=(0.51,1.03),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
+plt.text(0.38, 1.08, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+plt.savefig(f'Files_n_figures/sys_plots/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+plt.savefig(f'../VPfit/{qso}/z={z_abs:.6f}/{qso_label}_z={z_abs:.6f}_sys_plot.png')
+plt.savefig(f'../LaTeX/Phase_II_report/Figures/{qso_label}_z={z_abs:.6f}_sys_plot.png')
 
 
 'single column'
 
-fig.supxlabel(r'$\mathbf{v} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=0.02)  #y=0.18  (y=0 for lyman)
-fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.01, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
-plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
-plt.legend(bbox_to_anchor=(0.51,1.01),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
-plt.text(0.30, 1.04, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
-plt.savefig(f'{qso_label}_z={z_abs:.6f}_sys_plot.png')
+# fig.supxlabel(r'$\mathbf{v} \ \mathbf{(km \ \ s^{-1})}$',fontsize=50,y=0.02)  #y=0.18  (y=0 for lyman)
+# fig.supylabel(r'$\mathbf{Continuum \ Normalized \ Flux} $',fontsize=50,x=0.01, y=0.52) #x=0.05, y=0.62 (x=0.05, y=0.55 for lyman)
+# plt.subplots_adjust(hspace=0,top=0.99,bottom=0.07,wspace=0)
+# plt.legend(bbox_to_anchor=(0.51,1.01),bbox_transform=plt.gcf().transFigure, loc='center',ncols=3,fontsize=30)
+# plt.text(0.30, 1.04, f'$\mathbf{{{qso_label} \ (z_{{abs}}={z_abs:.6f})}}$', fontsize=40, transform=plt.gcf().transFigure)
+# plt.savefig(f'{qso_label}_z={z_abs:.6f}_sys_plot.png')
 
 
 

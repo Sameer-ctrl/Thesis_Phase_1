@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 
 # plt.style.use('../Python/my_style.mpl')
 
+
 hdu=fits.open('Data/component_III_1d_col_density_param.fits')
 data=Table(hdu[1].data)
 

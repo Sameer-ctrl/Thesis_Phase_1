@@ -6,33 +6,46 @@ Relying solely on Voigt profile measurements yields limited information about th
 
 \section{CLOUDY} \label{sec:Cloudy}
 
-To model the ionization conditions prevailing in the absorbers, we use ionization modelling code CLOUDY \citep{cloudy}. CLOUDY considers processes like ionization, recombination, dissociation, and various chemical reactions among atoms, ions, and molecules. These processes determine the composition and abundance of different species in the absorber cloud. CLOUDY accounts for the radiation transfer within the gas cloud. This includes the absorption, emission, and scattering of photons. The simulation considers how radiation interacts with the particles in the cloud, influencing its temperature, density, and ionization state. 
+To model the ionization conditions prevailing in the absorbers, we use ionization modelling code {\tt CLOUDY} (\citet{Ferland-1998}; \citeyear{cloudy}). {\tt CLOUDY} is a 1-d radiative transfer code which considers processes like ionization, recombination, dissociation, and various chemical reactions among atoms, ions, and molecules. These processes determine the composition and abundance of different species in the absorber cloud.  {\tt CLOUDY} accounts for the radiation transfer within the gas cloud. This includes the absorption, emission, and scattering of photons. The simulation considers how radiation interacts with the particles in the cloud, influencing its temperature, density, and ionization state.
 
 It calculates the ionization equilibrium within the cloud, balancing ionization and recombination processes. It can perform equilibrium calculations for both photoionization and collisional ionization separately and simultaneously as well. To perform photoionization equilibrium calculations we give a model of extragalactic ionization radiation background, which mainly arises from AGNs and star formation activities, whereas for collisional ionization calculations we specify a temperature and then calculations are performed at this constant temperature. A combination of both will give results considering both types of ionizations simultaneously, such models are called hybrid models. 
 
-CLOUDY takes various input parameters like density, temperature, redshift, metallicity of the cloud, abundance pattern of the elements, background radiation model, etc. to perform the equilibrium calculations. It models the clouds as plane parallel slabs with uniform densities and metallicities, and continues to add such slabs until a given stopping criteria is met. As we have the neutral Hydrogen column density from Voigt profile fitting, we use it as stopping criteria for CLOUDY simulations. So CLOUDY continues to add the slabs until the column density of neutral Hydrogen in simulated clouds reaches our given value.
-Figure \ref{fig:Cloudy} shows the schematic of a CLOUDY simulation where neutral Hydrogen column density is used as a stopping criteria.
-CLOUDY gives us a lot of useful quantities, including column densities and ionization fractions of various ions, equilibrium temperature (for photoionization calculations), etc. We can use these quantities to get the insights on the physical conditions and ionisation state of the absorbers. 
+{\tt CLOUDY} takes various input parameters like density, temperature, redshift, metallicity of the cloud, abundance pattern of the elements, background radiation model, etc. to perform the equilibrium calculations. It models the clouds as plane parallel slabs with uniform densities and metallicities, and continues to add such slabs until a given stopping criteria is met. As we have the neutral Hydrogen column density from Voigt profile fitting, we use it as stopping criteria for {\tt CLOUDY} simulations. So {\tt CLOUDY} continues to add the slabs until the column density of neutral Hydrogen in simulated clouds reaches our given value.
+Figure \ref{fig:Cloudy} shows the schematic of a {\tt CLOUDY} simulation where neutral Hydrogen column density is used as a stopping criteria.
+{\tt CLOUDY} gives us a lot of useful quantities, including column densities and ionization fractions of various ions, equilibrium temperature (for photoionization calculations), etc. We can use these quantities to get the insights on the physical conditions and ionisation state of the absorbers. 
 
-For all the CLOUDY models we set the abundance pattern of elements heavier than Helium to be that of solar abundance as given in \citet{grevesse-chemical-2010} and Helium abundance is set to $8.163\times{10}^{-2}$ (by number relative to Hydrogen) based on the latest CMB measurements \citep{planck_collaboration_planck_2020}. And for extragalactic radiation background model we use KS19 (Q18) model given in \cite{KS19}.  
+For all the {\tt CLOUDY} models we set the abundance pattern of elements heavier than Helium to be that of solar abundance as given in \citet{grevesse-chemical-2010} and Helium abundance is set to $8.163\times{10}^{-2}$ (by number relative to Hydrogen) based on the latest CMB measurements \citep{planck_collaboration_planck_2020}. And for extragalactic radiation background model we use KS19 (Q18) model given in \cite{KS19}.  
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{Figures/Cloudy.png}
-    \caption{Schematic of a CLOUDY simulation.}
+    \caption{Schematic of a {\tt CLOUDY} simulation showing how {\tt {CLOUDY}} adds slabs until given stopping column density is reached by taking in account the background radiation}
     \label{fig:Cloudy}
 \end{figure}
 
 
 \section{Ionization Model Based Parameter Estimation}  \label{sec:param-estimation}
 
-As discussed in section \ref{sec:Cloudy}, we use CLOUDY to get the physical conditions existing in the absorber clouds. The physical conditions are characterised by properties like density, temperature, metallicity, pressures, etc. We estimate these quantities based on CLOUDY simulations with methods described in \citet{acharya_khaire}.
+As discussed in section \ref{sec:Cloudy}, we use {\tt CLOUDY} to get the physical conditions existing in the absorber clouds. The physical conditions are characterised by properties like density, temperature, metallicity, pressures, etc. We estimate these quantities based on {\tt CLOUDY} simulations with methods described in \citet{acharya_khaire}.
 
-We use the $\chi^2$ minimisation technique as discussed in \citet{acharya_khaire} to estimate the density ($n_H$) and metallicity (Z) of the absorber. We consider a dense grid of photoionization CLOUDY models with varying the density ($n_H$) and metallicity (Z) over certain range in the parameter space. We give the  N(\ion{H}{i}) column density from Voigt profile measurements as the stopping criteria for the CLOUDY calculations. We interpolate the column densities in log $n_H$ and log Z space and then use $\chi^2$ minimisation to find the log $n_H$ and log Z values that best fits the data, i.e. the column densities of the observed ions. CLOUDY also gives us the equilibrium temperature also for all the density and metallicity. So we can find the temperature of the absorber cloud by putting the density and metallicity solution which we get from the above procedure. 
+We use the Bayesian MCMC inference approach as discussed in \citet{acharya_khaire} to estimate the density ($n_H$) and metallicity (Z) of the absorber. We consider a dense grid of photoionization {\tt CLOUDY} models with varying the density ($n_H$) and metallicity (Z) over certain range in the parameter space. We give the N(\ion{H}{i}) column density from Voigt profile measurements as the stopping criteria for the {\tt CLOUDY} calculations. We interpolate the column densities in log $n_H$ and log Z space and then use MCMC to sample the posterior of these quantities to estimate the log $n_H$ and log Z values that best fits the data, i.e. the column densities of the observed ions. {\tt CLOUDY} also gives us the equilibrium temperature also for all the density and metallicity. So we can find the temperature of the absorber cloud by putting the density and metallicity solution which we get from the above procedure. 
 
-In case of collisional ionisation, we can follow the similar approach. If we can get a estimate of the temperature from some other means like using the Doppler parameters of the absorption lines, then we can use the same way of creating a 2D grid of CLOUDY models by fixing the temperature at the known temperature. When we give a constant temperature like this, CLOUDY performs collisional ionisation calculations. And if we don't know the temperature, then we can extend our 2D grid to a 3D one by varying the temperature also. And then use the same approach as in case of 2D grid to find the temperature as well.
+In case of collisional ionisation, we can follow the similar approach. If we can get a estimate of the temperature from some other means like using the Doppler parameters of the absorption lines, then we can use the same way of creating a 2D grid of {\tt CLOUDY} models by fixing the temperature at the known temperature. When we give a constant temperature like this, {\tt CLOUDY} performs collisional ionisation calculations. And if we don't know the temperature, then we can extend our 2D grid to a 3D one by varying the temperature also. And then use the same approach as in case of 2D grid to find the temperature as well.
+
+In the below section we perform an inference test to check the above method of parameter estimation.
 
 
+\subsection{Parameter inference test}
 
+For this inference test, we consider a grid of photoionization {\tt CLOUDY} models with $-5 \leq \log n_H \ (\text{cm}^{-3}) \leq -1 $ in steps of 0.02 and $ -3 \leq \log Z/Z_\odot \leq 1 $ in steps of 0.05. We take a random model from this grid and add Gauassain noise to the column densities of ions to mimic real world observations. We take 5 ions to estimate the $n_H$ and $Z$ value for this random model. 
 
+The randomly selected model has $\log n_H \ (\text{cm}^{-3}) = -3.32$ and $\log Z/Z_\odot = -2.64 $. We take \ion{C}{i}, \ion{N}{v}, \ion{O}{vi}, \ion{Si}{ii} and \ion{Si}{iii} for the test. Figure \ref{fig:inference-test} shows the posterior distribution of $n_H$ and $Z$, which gives us the estimated value of $\log n_H \ (\text{cm}^{-3}) = -3.33 \pm 0.03$ and $\log Z/Z_\odot = -2.63 \pm 0.06 $ which matches with the $n_H$ and $Z$ values of the model within the errors. So, we see that the above mentioned method could be used to estimate parameters from {\tt CLOUDY} models.
 
+\newpage
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/inference-test.png}
+    \caption{Posterior distribution of $n_H$ and $Z$ for the randomly selected model added with Gauassain noise}
+    \label{fig:inference-test}
+\end{figure}

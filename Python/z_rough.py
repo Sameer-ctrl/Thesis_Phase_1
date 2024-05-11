@@ -1,4 +1,5 @@
 import os
+from traceback import print_tb
 from astropy.io import fits,ascii
 from astropy.table import Table,Column
 import matplotlib.pyplot as plt
@@ -7,6 +8,35 @@ from scipy.integrate import quad
 from scipy.stats import poisson
 
 # print(poisson.ppf(0.67,2))
+
+
+file=open('appendix.txt','r')
+
+lines=file.readlines()
+
+empty_lines=[]
+
+a='\includegraphics[width=1.25\linewidth]'
+
+for i,l in enumerate(lines):
+
+    empty_lines.append(l)
+
+    if a in l:
+        
+        splitted1=l.split('/')[1]
+        splitted2=splitted1.split('_')
+
+        qso=splitted2[0]
+        z_abs=splitted2[1][2:]
+
+        empty_lines.append(f'    \caption{{System plot for the absorber along the line of sight of {qso} at $z_{{abs}} = {z_abs}$. }}\n')
+
+file=open(f'correct.txt','w+')
+file.writelines(empty_lines)
+file.close()
+
+quit()
 
 qso1=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405']
 qso2=['he0056', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']

@@ -12,11 +12,9 @@ The FUV detector of the COS comprises of two segments viz. A and B. This results
 
 \section{Pre-processing}
 
-% \subsection{Continuum fitting}
-
-The HST/COS data is over-sampled at 6 pixels per resolution element, so we re-sample the spectrum at an optimum binning of 2 pixels per resolution element. We use python package \emph{LINETOOLS}\footnote{https://github.com/linetools/linetools}, which uses simple linear interpolation and flux conservation, to rebin the spectrum. 
+The HST/COS data is over-sampled at 6 pixels per resolution element, so we re-sample the spectrum at an optimum binning of 2 pixels per resolution element. We use python package {\tt{LINETOOLS}}\footnote{https://github.com/linetools/linetools}, which uses simple linear interpolation and flux conservation, to rebin the spectrum. 
 \\
-A continuum is fitted to the spectrum after rebinning. To fit the continuum we again use the \emph{LINETOOLS} package, which places the knots at regions with no absorption and emission features at uniform spacing in wavelength along with interactive human input. The continuum is created by interpolating these knots with lower order polynomials. Then the spectrum is normalised by this continuum for fitting the Voigt profiles to the absorption lines.  
+A continuum is fitted to the spectrum after rebinning. To fit the continuum we again use the {\tt{LINETOOLS}} package, which places the knots, points that mark the continuum, at regions with no absorption and emission features at uniform spacing in wavelength along with interactive human input. The continuum is created by interpolating these knots with lower order polynomials. Then the spectrum is normalised by this continuum for fitting the Voigt profiles to the absorption lines.  
 
 
 

@@ -8,7 +8,7 @@ The foremost goal of the current study is to do a survey of BLAs over a large da
 
 We use two criterias to select BLA candidates for our survey. First, we look for broad Ly$\alpha$ lines in all the 2611 absorbers. For a Ly$\alpha$ line to be adjudged as `broad', we fix our threshold for \emph{b} value to be greater than 45 km s$^{-1}$ in the preliminary fitting done by \citet{danforth-2016}. Assuming a complete thermal broadening, $\emph{b}=45$ km s$^{-1}$ gives a temperature of $\approx 1.2 \times 10^5$ K, which lies in the lower ranges of the temperature of WHIM. By giving this constrain, we get 568 such systems in the complete data-set.
 
-As discussed in section \ref{sec:WHIM-BLA}, multiple lines or contaminations from other lines can blend together to give rise to broad absorption features. In such cases, we need to carefully model these broad lines and confirm that these are actually tracing hot collisionally ionised gas phase so that they are indeed probing WHIM and not just cool photoionised phase. We need to perform ionisation modelling for it. To model the ionisation conditions of the absorber systems, we need metal ion column densities. So we search for systems showing metal line absorption in these 568 `broad' systems. We need at least three distinct metal ions (not lines) to better constrain the ionisation state of an absorber system. This sets our second criteria that there should be minimum of three metal ion absorption in the absorber systems. Upon putting this constrain, we get 29 systems having at least 3 distinct metal ions out of 568 already identified systems. Out of these 29 systems, we have already studied one of the absorber in chapter \ref{ch:PG0003}. Table \ref{tab:BLA-candidates} lists the lines of sight, redshift of the absorber and the ions detected in the systems these 29 identified BLA candidate absorber systems. Figure \ref{fig:metal-ions-hist} shows the distribution of different metal ions found in these 29 absorber systems. 
+As discussed in section \ref{sec:WHIM-BLA}, multiple lines or contaminations from other lines can blend together to give rise to broad absorption features. In such cases, we need to carefully model these broad lines and confirm that these are actually tracing hot collisionally ionised gas phase so that they are indeed probing WHIM and not just cool photoionised phase. We need to perform ionisation modelling for it. To model the ionisation conditions of the absorber systems, we need metal ion column densities. So we search for systems showing metal line absorption in these 568 `broad' systems. We need at least three distinct metal ions (not lines) to better constrain the ionisation state of an absorber system. This sets our second criteria that there should be minimum of three metal ion absorption in the absorber systems. Upon putting this constrain, we get 29 systems having at least 3 distinct metal ions out of 568 already identified systems. Out of these 29 systems, we have already studied one of the absorber in chapter \ref{ch:PG0003}. Table \ref{tab:BLA-candidates} lists the lines of sight, redshift of the absorber and the ions detected in the systems these 29 identified BLA candidate absorber systems. Figure \ref{fig:metal-ions-hist} shows the distribution of different metal ions found in these 29 absorber systems. These 29 absorbers are found along 22 different sight lines. The details these lines of sight are given in appendix \ref{ap:los}. The details of the HST/COS observations of these 22 sight lines are given in appendix \ref{ap:COS-observations}
 
 
 \begin{figure}
@@ -73,7 +73,7 @@ We first model the ionisation conditions in the 16 \ion{O}{vi} absorbers and see
 
 Then, we will use the results from this survey to estimate the baryon content in BLAs and their contribution to cosmic closure density, $\Omega_b$, the details of which are described in the upcoming chapter.
 
-The Voigt profile fitting and ionisation modelling results are given in appendix \ref{app:survey-results} after the references.
+The Voigt profile fitting and ionisation modelling results are given in appendix \ref{ap:survey-results} after the references.
 
 
 \section{Survey statistics}
@@ -162,7 +162,7 @@ We could estimate the temperature for 7 components where \ion{H}{i} and \ion{O}{
 
 We plot the \ion{H}{i} column density with Doppler parameter in figure \ref{fig:NHi_bHi}. We observe that lines with large Doppler widths are found within narrow range of column densities towards the lower end. It could possibly be because large \emph{b} values indicates the presence of high temperature gas, where neutral fraction of Hydrogen will be small. We also see that the lines with large \emph{b} values have large uncertainities also. It is because that most of these are coming from absorbers at lower redshifts where only Ly$\alpha$ is covered in COS/FUV, which is saturated. These large uncertainities affect our estimation of $\Omega_b\text{(BLA)}$ value as discussed in next chapter (see section \ref{sec:BLA-sample}). 
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{Figures/NHi_vs_bHi.png}
     \caption{N(\ion{H}{i}) vs \emph{b}(\ion{H}{i}) plot for the 97 \ion{H}{i} components. The vertical black dashed line denotes our threshold for line to be considered as BLA.}
@@ -264,7 +264,7 @@ We have done the ionisation modelling for a total of 39 components in 29 absorbe
 From ionisation modelling, we get the Hydrogen density\footnote{We use this interchangeably with absorber density, i.e density at that component} $(n_H)$ and metallicity (Z) of the absorbers, which dictates the prevalent ionising and physical conditions in the absorber clouds. The figure \ref{fig:nH-Z} shows these values for all the 39 components plotted against each other. We don't see any correlations between the two quantities which is expected as these independently describe the physical conditions of the absorbers. The \ion{O}{vi} absorbers are denoted with red and non-\ion{O}{vi} absorbers are marked by green error bars. 
 
 
-\begin{figure}
+\begin{figure}[!t]
     \centering
     \includegraphics[width=\linewidth]{Figures/Z_vs_nH.png}
     \caption{Metallicity vs density for all 39 components estimated from ionisation modelling. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
@@ -273,9 +273,9 @@ From ionisation modelling, we get the Hydrogen density\footnote{We use this inte
 
 However, when we see the variation of these two quantities with the underlying neutral Hydrogen column density (N(\ion{H}{i})) in these components, we see some trends. Figure \ref{fig:nH-NHi} shows the variation of density with N(\ion{H}{i}). We see a feeble positive relation between $n_H$ and N(\ion{H}{i}) for the components from \ion{O}{vi} absorbers. This is expected as higher column density would typically result in higher densities if the sizes of absorbers, ionisation corrections are of similar order. The lack of such correlation in the non-\ion{O}{vi} case may be due to less number of components.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
-    \includegraphics[width=\linewidth]{Figures/nH_vs_NHi.png}
+    \includegraphics[width=0.9\linewidth]{Figures/nH_vs_NHi.png}
     \caption{Variation of density with N(\ion{H}{i}) for all 39 components. Red error bars are from \ion{O}{vi} absorbers and green error are from non-\ion{O}{vi} absorbers}
     \label{fig:nH-NHi}
 \end{figure}
@@ -283,9 +283,9 @@ However, when we see the variation of these two quantities with the underlying n
 Unlike density, we find a negative correlation between the metallicity and N(\ion{H}{i}) as shown in figure \ref{fig:Z-NHi} which could be seen for both \ion{O}{vi} and non-\ion{O}{vi} absorbers. However, again due to less number of components for non-\ion{O}{vi} absorbers, it less evident in them. This could be explained by the fact that as we get larger N(\ion{H}{i}), the column densities of metals do not scale accordingly with N(\ion{H}{i}), they remain within the narrow ranges of their distribution. So to recover large N(\ion{H}{i}), large line of sight thickness has to integrated with nearly same amount of metals, which results in the drop in metallicity.
 
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
-    \includegraphics[width=\linewidth]{Figures/Z_vs_NHi.png}
+    \includegraphics[width=0.9\linewidth]{Figures/Z_vs_NHi.png}
     \caption{Variation of metallicity with N(\ion{H}{i}) for all 39 components. Red error bars are the \ion{O}{vi} components and green error bars are non-\ion{O}{vi} components}
     \label{fig:Z-NHi}
 \end{figure}
@@ -302,7 +302,7 @@ Ionisation modelling of these absorbers shows that the gas in these absorbers, w
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/OVI_cases.png}
+    \includegraphics[width=0.9\linewidth]{Figures/OVI_cases.png}
     \caption{Origin of \ion{O}{vi} in 25 components from 17 \ion{O}{vi} absorbers.}
     \label{fig:OVI-origin}
 \end{figure}
@@ -310,14 +310,14 @@ Ionisation modelling of these absorbers shows that the gas in these absorbers, w
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/s135712-z=0.097869-compII.png}
+    \includegraphics[width=0.9\linewidth]{Figures/s135712-z=0.097869-compII.png}
     \caption{An example of CI case for an absorber towards the line of sight of SDSS J135712.61+170444 at $z_{abs}=0.097869$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 16.49}
     \label{fig:ex-CI}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/1es1553-z=0.187764-compI.png}
+    \includegraphics[width=0.9\linewidth]{Figures/1es1553-z=0.187764-compI.png}
     \caption{Only example of PI case for an absorber towards the line of sight of 1ES 1553+113 at $z_{abs}=0.187764$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 12.76}
     \label{fig:ex-PI}
 \end{figure}
@@ -325,7 +325,7 @@ Ionisation modelling of these absorbers shows that the gas in these absorbers, w
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Figures/pks0405-z=0.167125-compII.png}
+    \includegraphics[width=0.9\linewidth]{Figures/pks0405-z=0.167125-compII.png}
     \caption{An example of uncertain case for an absorber towards the line of sight of PKS 0405-123 at $z_{abs}=0.167125$ with log N(\ion{H}{i}) [cm\textsuperscript{-2}] = 13.46}
     \label{fig:ex-uncertain}
 \end{figure}
