@@ -1,5 +1,5 @@
 \@frame@switchfalse 
-\babel@toc {french}{}
+\babel@toc {french}{}\relax 
 \contentsline {tlstarchapter}{Abstract}{v}{chapter*.4}%
 \contentsline {spsection}{List of Figures}{ix}{chapter*.5}%
 \contentsline {spsection}{List of Tables}{xv}{chapter*.5}%
@@ -33,9 +33,9 @@
 \contentsline {subsubsection}{\numberline {5.3.1.2}Collisional ionization modelling}{28}{subsubsection.0.5.3.1.2}%
 \contentsline {subsection}{\numberline {5.3.2}Component III}{29}{subsection.0.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.2.1}Photoionization modelling}{29}{subsubsection.0.5.3.2.1}%
-\contentsline {section}{\numberline {5.4}Origin of {\text {O\tmspace +\thinmuskip {.1667em}\small {\textsc {\uppercase {vi}}}}} in the Absorber}{34}{section.0.5.4}%
+\contentsline {section}{\numberline {5.4}Origin of {\text {O\,\small {\textsc {\uppercase {vi}}}}} in the Absorber}{34}{section.0.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Component II}{34}{subsection.0.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Component III}{35}{subsection.0.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.2}Component III}{34}{subsection.0.5.4.2}%
 \contentsline {section}{\numberline {5.5}Galaxy environment of the absorber}{35}{section.0.5.5}%
 \contentsline {chapter}{\numberline {6}Hunt for BLAs : The Survey}{39}{chapter.0.6}%
 \contentsline {section}{\numberline {6.1}Shortlisting the BLA candidates}{39}{section.0.6.1}%
