@@ -1,4 +1,4 @@
-import wave
+import os
 from numpy import *
 from astropy.io import ascii
 import matplotlib.pyplot as plt
@@ -118,6 +118,9 @@ binning=1.23
 for i in range(len(lines)):
 
     print(f'{lines[i]} : {cos_siglevel(eq_w(lines[i],line_name[i]),cen_wave[i],b[i],snpix[i],binning=binning)}')
+
+
+os.remove('temp_param_file.txt')
 
 quit()
 
