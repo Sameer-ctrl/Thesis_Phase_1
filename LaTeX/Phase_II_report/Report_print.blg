@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Report_print.aux
+A level-1 auxiliary file: chapter1-Introduction.aux
+A level-1 auxiliary file: chapter2-Data.aux
+A level-1 auxiliary file: chapter3-Voigt-Profile-Fitting.aux
+A level-1 auxiliary file: chapter4-Ionisation-Modelling.aux
+A level-1 auxiliary file: chapter5-PG0003.aux
+A level-1 auxiliary file: chapter6-BLA-Survey.aux
+A level-1 auxiliary file: chapter7-Omega-b.aux
+A level-1 auxiliary file: chapter8-Conclusion.aux
+The style file: mnras.bst
+Database file #1: References.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 44 entries,
+            2881 wiz_defined-function locations,
+            1127 strings with 31752 characters,
+and the built_in function-call counts, 21339 in all, are:
+= -- 1709
+> -- 1625
+< -- 95
++ -- 689
+- -- 262
+* -- 2687
+:= -- 3358
+add.period$ -- 0
+call.type$ -- 44
+change.case$ -- 88
+chr.to.int$ -- 43
+cite$ -- 44
+duplicate$ -- 1018
+empty$ -- 983
+format.name$ -- 412
+if$ -- 3670
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 44
+newline$ -- 145
+num.names$ -- 314
+pop$ -- 171
+preamble$ -- 1
+purify$ -- 176
+quote$ -- 0
+skip$ -- 646
+stack$ -- 0
+substring$ -- 1156
+swap$ -- 601
+text.length$ -- 177
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 396
+warning$ -- 0
+while$ -- 332
+width$ -- 0
+write$ -- 451
