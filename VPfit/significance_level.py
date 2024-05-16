@@ -2,21 +2,23 @@ import wave
 from numpy import *
 from astropy.io import ascii
 import matplotlib.pyplot as plt
+from scipy.integrate import simpson
 
 
-# data=ascii.read('../Python/Data/IGM_Danforth_Data/Cont_norm_spectra/pg0003_cont_norm.asc')
 
-# wave=data['WAVE']
+z_abs=0.347586
+file_path=f'pg0003/z={z_abs:.6f}/VPfit_chunks'
 
-# diff=zeros(len(wave)-1)
+data=loadtxt('../Python/Data/rest_wave.txt',dtype=str)
 
-# for i in range(len(wave)-1):
-#     diff[i]=wave[i+1]-wave[i]
+line_atom=data[:,0]
+wave_rest=data[:,1].astype(float)
 
-# print(diff[10],diff[-10])
+rest_wave={}
 
-# plt.hist(diff)
-# plt.show()
+for i in range(len(line_atom)):
+    rest_wave.update({line_atom[i]:wave_rest[i]})
+
 
 def cos_siglevel(W, wavelength, b, snpix=None, snx=None, disp=None, binning=None, xopt=None, fcx=None):
 
@@ -67,6 +69,69 @@ def cos_siglevel(W, wavelength, b, snpix=None, snx=None, disp=None, binning=None
     return siglevel
 
 
+def eq_w(line,line_name):
+
+    data=loadtxt(f'{file_path}/{line}.txt',comments='!')
+
+    cen_wave_rest=rest_wave[line_name]
+
+    wave=data[:,0]
+    cont=data[:,3]
+
+    w=wave[-1]-wave[0]-simpson(cont,wave)
+    
+    return w*1000  #mA,
+
+
+file=f'pg0003/z={z_abs:.6f}/fit_params.txt'
+        
+with open(file) as f:
+    text=f.read()
+    text=text.replace('A','')
+    # print(text)
+    # print('\n')
+
+with open('temp_param_file.txt','w') as f:
+    f.write(text)
+
+param_file=loadtxt('temp_param_file.txt',dtype=str,comments=('>','#'))
+
+ions=param_file[:,0]
+mask=[]
+
+for i in ions:
+    mask.append('*' not in i)  
+
+ions=ions[mask]
+z=param_file[:,1].astype(float)[mask]
+b=param_file[:,3].astype(float)[mask]
+
+cen_wave=(1+z)*array([1260.4221,1206.5,1036.3367,977.0201,1031.927,1031.927,1215.6701,1215.6701,1215.6701])
+
+snpix=[12,11,15,16,18,19,12,12,12]
+
+lines=['SiII_1260', 'SiIII_1206', 'CII_1036', 'CIII_977_1', 'OVI_1032_1', 'OVI_1032_2', 'HI_1215_1', 'HI_1215_2', 'HI_1215_3']
+line_name=['SiII_1260', 'SiIII_1206', 'CII_1036', 'CIII_977', 'OVI_1032', 'OVI_1032', 'HI_1215', 'HI_1215', 'HI_1215']
+
+binning=1.23
+
+for i in range(len(lines)):
+
+    print(f'{lines[i]} : {cos_siglevel(eq_w(lines[i],line_name[i]),cen_wave[i],b[i],snpix[i],binning=binning)}')
+
+quit()
+
+
+
+
+
+
+W=eq_w('OVI_1032_1','OVI_1032')
+binning=1.23
+
+sl=cos_siglevel(W=l[5],wavelength=l[0],b=l[7],snpix=l[4],binning=binning)
+
+
 
 line_param=[[1390.60,  "OVI 1032",   0.347567, 21.5, 18.0,  155,   9,  30.2],
             [1390.92,  "OVI 1032",   0.347878, 14.7, 19.0,   82,   7,  19.0],
@@ -90,4 +155,5 @@ for l in line_param:
 
     sl=cos_siglevel(W=l[5],wavelength=l[0],b=l[7],snpix=l[4],binning=binning)
     print(f'{sl:.2f} : {l[3]} : {sl/l[3]:.2f}')
+
 
