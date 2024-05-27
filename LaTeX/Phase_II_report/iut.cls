@@ -204,7 +204,8 @@
     \\ \vspace{5mm}
     under the guidance of \\ \vspace{5mm}
     \textbf{\large{\FirstAdvisor and \SecondAdvisor}} \\ \vspace{11mm}
-    \includegraphics[scale=0.2]{IIST.png}
+    % \includegraphics[scale=0.2]{IIST.png}
+    \includegraphics[scale=0.04]{iist-min-2.png}
     \\ \vspace{8mm}
     
       \large

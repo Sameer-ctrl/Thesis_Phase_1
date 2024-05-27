@@ -127,7 +127,8 @@ for file in files:
                 n_BLA_metal_ions+=1
                 i=1
 
-                # print(f'Ions > 2     : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
+                print(f'Ions > 2     : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
+                print(line_sys)
 
                 'systems with OVI and other distinct metal ions >= 2'
 
@@ -135,7 +136,7 @@ for file in files:
                     n_BLA_OVI_metal_ions+=1
                     b.append(True)
                     z_plot_BLA_OVI_metal_ions.append(z)
-                    print(f'OVI and ions : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
+                    # print(f'OVI and ions : {z:.6f} : {metal_lines} : {ions} : {len(ions)}')
 
         n_los_BLA_ions+=i
 

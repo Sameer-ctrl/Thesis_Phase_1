@@ -12,19 +12,19 @@ import sys
 plt.style.use('../Python/my_style.mpl')
 
 
-qso='pg0832'
-z_abs=0.017505
-comp='I' 
+qso='he0056'
+z_abs=0.043265
+comp='II' 
 
 
-ions=['C+3','Si+3','O','Al+']
-col_den_dict=[[17.26,0.12],[13.72,0.1],[15.28,0.41],[12.76,0.08]]
+ions=['C+3','Si+2','N+4']
+col_den_dict=[[13.64,0.03],[12.37,0.07],[13.42,0.46]]
 
 non_detc_ions=[]
 non_detc_col_den=[]
 
-N_Hi=15.82
-logZ_ref=1
+N_Hi=15.30
+logZ_ref=-1
 
 observations=dict(zip(ions,col_den_dict))
 non_detections=dict(zip(non_detc_ions,non_detc_col_den))

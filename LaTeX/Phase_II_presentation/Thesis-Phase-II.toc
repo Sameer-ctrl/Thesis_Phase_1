@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Motivation \& Objective}{2}{0}{1}
+\beamer@sectionintoc {2}{Thesis Phase-I : Recap}{9}{0}{2}
+\beamer@sectionintoc {3}{The BLA Survey}{16}{0}{3}
+\beamer@sectionintoc {4}{Voigt profile fitting}{22}{0}{4}
+\beamer@sectionintoc {5}{Ionisation Modelling}{28}{0}{5}
+\beamer@sectionintoc {6}{$\Omega _\text {b}(\text {BLA})$}{45}{0}{6}
+\beamer@sectionintoc {8}{\textit {The End}}{74}{0}{7}

@@ -6,6 +6,92 @@ import matplotlib.pyplot as plt
 from numpy import *
 from scipy.integrate import quad
 
+import matplotlib.pyplot as plt
+from numpy import loadtxt,ceil, unique, array, zeros
+from astropy.io import ascii
+import os
+
+
+def lines_sys_total(qso,z_abs):
+
+    file_path=f'../VPfit/{qso}/z={z_abs:.6f}/VPfit_chunks'
+    files=os.listdir(f'{file_path}')
+
+    def file_group(x):
+
+        grouped=[]
+        n=len(x)
+
+        for i in files:   
+            if i[0:n]==x:
+                grouped.append(i)
+        
+        return grouped
+
+
+    def lines_all():
+
+        lines=[]
+
+        for file in files:
+
+            if file[:2]!='Ly':
+
+                a=file.split('_')
+
+                if len(a)==3:
+                    lines.append(f'{a[0]}_{a[1]}')
+                
+                else:
+                    b=a[1].split('.')[0]
+                    lines.append(f'{a[0]}_{b}')
+            
+            else:
+                a=file.split('_')
+
+                if len(a)==2:
+                    lines.append(a[0])
+                
+                else:
+                    lines.append(a[0].split('.')[0])
+
+
+        lines=unique(lines)
+
+        return lines
+
+    lines=lines_all()
+
+
+    def total_lines(line):
+
+        vpfit_chunks=file_group(line)
+
+        n=len(vpfit_chunks)-1
+
+        if n==0:
+            n=1
+
+        return n
+
+    n=0
+
+    for l in lines:
+        n+=total_lines(l)
+
+    return n
+
+qso=['3c263', 'pks0637', 'pks0637', 'pg1424', 'pg0003', 'pg0003', 'pg0003', 'pg1216', 's135712', '1es1553', 'sbs1108', 'pg1222', 'pg1116', 'h1821', 'h1821', 'pg1121', 'pks0405', 'he0056', 'pg1216', '3c263', 'pg1222', 'rxj0439', 'uks0242', 'pg1259', 'pks1302', '3c57', 'p1103', 'phl1811', 'pg0832']
+z_abs=['0.140756', '0.161064', '0.417539', '0.147104', '0.347586', '0.386089', '0.421923', '0.282286', '0.097869', '0.187764', '0.463207', '0.378389', '0.138527', '0.170006', '0.224981', '0.192393', '0.167125', '0.043265', '0.006328', '0.063397', '0.054479', '0.005568', '0.063850', '0.046284', '0.094839', '0.077430', '0.003934', '0.080928', '0.017505']
+
+n=0
+
+for i in range(len(qso)):
+    z=float(z_abs[i])
+    n+=lines_sys_total(qso[i],z)
+
+print(n)
+quit()
 
 wave=[round(i,2) for i in arange(1390.92-2,1390.92+2,0.03)]
 flux=ones(len(wave))
