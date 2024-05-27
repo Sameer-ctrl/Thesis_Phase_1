@@ -1,4 +1,4 @@
-\babel@toc {french}{}\relax 
+\babel@toc {french}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -14,17 +14,17 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Absorber towards PG 0003+158}{21}{chapter.0.5}%
 \contentsline {table}{\numberline {5.1}{\ignorespaces Component structure of the absorber system. Reference velocity at z = 0.347586\relax }}{22}{table.caption.15}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Parameters from Voigt profile fitting of the absorption lines. Velocity is taken to be zero at the redshift of \text {O\,\textsc {\lowercase {vi}}} line of component II, i.e. z = 0.347586\relax }}{24}{table.caption.16}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameters from Voigt profile fitting of the absorption lines. Velocity is taken to be zero at the redshift of \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} line of component II, i.e. z = 0.347586\relax }}{24}{table.caption.16}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Error calculated using $\chi ^2$ and the systematic uncertainty in column densities due to continuum fitting given in units of log[N ($\text {cm}^{-2}$)]\relax }}{25}{table.caption.17}%
 \contentsline {table}{\numberline {5.4}{\ignorespaces Column densities and corresponding 1-$\sigma $ errors of the ions used in PIE modelling of the component III\relax }}{31}{table.caption.20}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Cloudy modelling solutions for absorber at z $\sim $ 0.34790. In case of all ions $\chi ^2$ is calculated using the column densities of all the ions but for excluding \text {O\,\textsc {\lowercase {vi}}} ion case, $\chi ^2$ is calculated by excluding \text {O\,\textsc {\lowercase {vi}}} column density so as to show that this fits other ions very well.\relax }}{31}{table.caption.22}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Physical properties of the absorbers based on Voigt profile measurement and CLOUDY ionisation modelling. The PIE solution for absorber at z $\sim $ 0.34758 is based on the excluding \text {O\,\textsc {\lowercase {vi}}} case PIE solution of the absorber at z $\sim $ 0.34790.\relax }}{33}{table.caption.23}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Cloudy modelling solutions for absorber at z $\sim $ 0.34790. In case of all ions $\chi ^2$ is calculated using the column densities of all the ions but for excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} ion case, $\chi ^2$ is calculated by excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} column density so as to show that this fits other ions very well.\relax }}{31}{table.caption.22}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Physical properties of the absorbers based on Voigt profile measurement and CLOUDY ionisation modelling. The PIE solution for absorber at z $\sim $ 0.34758 is based on the excluding \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} case PIE solution of the absorber at z $\sim $ 0.34790.\relax }}{33}{table.caption.23}%
 \contentsline {table}{\numberline {5.7}{\ignorespaces Galaxies in the neighbourhood of the absorber system identified in VIMOS survey. Velocity is taken to be zero at z = 0.347586\relax }}{36}{table.caption.24}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hunt for BLAs : The Survey}{39}{chapter.0.6}%
 \contentsline {table}{\numberline {6.1}{\ignorespaces Details of the 29 BLA candidate absorber system shortlisted for the survey.\relax }}{41}{table.caption.27}%
 \contentsline {table}{\numberline {6.2}{\ignorespaces Details of temperature estimation from Doppler parameters.\relax }}{47}{table.caption.34}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces 25 \text {O\,\textsc {\lowercase {vi}}} components and origin of \text {O\,\textsc {\lowercase {vi}}} in them\relax }}{60}{table.caption.56}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces 25 \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} components and origin of \text {O\tmspace +\thinmuskip {.1667em}\textsc {\lowercase {vi}}} in them\relax }}{60}{table.caption.56}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Estimating $\Omega _\text {b}(\text {BLA})$}{61}{chapter.0.7}%
 \contentsline {table}{\numberline {7.1}{\ignorespaces CIE properties of 37 BLA components. \textsuperscript {a} \footnotesize {Temperature estimated from Doppler parameters}. \textsuperscript {b} \footnotesize {The excluded BLA component discussed in section \ref {sec:sampleB}}\relax }}{70}{table.0.7.1}%

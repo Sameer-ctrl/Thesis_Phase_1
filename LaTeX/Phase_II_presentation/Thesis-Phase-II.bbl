@@ -1,0 +1,56 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{Acharya \& Khaire}{Acharya \&
+  Khaire}{2021}]{acharya_khaire}
+Acharya A.,  Khaire V.,  2021, \mn@doi [\mnras] {10.1093/mnras/stab3316}, 509,
+  5559
+
+\bibitem[\protect\citeauthoryear{{Becker}, {Sargent}, {Rauch}  \&
+  {Calverley}}{{Becker} et~al.}{2011}]{Becker-2011}
+{Becker} G.~D.,  {Sargent} W. L.~W.,  {Rauch} M.,   {Calverley} A.~P.,  2011,
+  \mn@doi [\apj] {10.1088/0004-637X/735/2/93}, \href
+  {https://ui.adsabs.harvard.edu/abs/2011ApJ...735...93B} {735, 93}
+
+\bibitem[\protect\citeauthoryear{Danforth et~al.,}{Danforth
+  et~al.}{2016}]{danforth-2016}
+Danforth C.~W.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/817/2/111},
+  817, 111
+
+\bibitem[\protect\citeauthoryear{{Lehner}, {Savage}, {Richter}, {Sembach},
+  {Tripp}  \& {Wakker}}{{Lehner} et~al.}{2007}]{Lehner-2007}
+{Lehner} N.,  {Savage} B.~D.,  {Richter} P.,  {Sembach} K.~R.,  {Tripp} T.~M.,
+   {Wakker} B.~P.,  2007, \mn@doi [\apj] {10.1086/511749}, \href
+  {https://ui.adsabs.harvard.edu/abs/2007ApJ...658..680L} {658, 680}
+
+\bibitem[\protect\citeauthoryear{{Richter}, {Savage}, {Sembach}  \&
+  {Tripp}}{{Richter} et~al.}{2006}]{Richter-2006}
+{Richter} P.,  {Savage} B.~D.,  {Sembach} K.~R.,   {Tripp} T.~M.,  2006,
+  \mn@doi [\aap] {10.1051/0004-6361:20053636}, \href
+  {https://ui.adsabs.harvard.edu/abs/2006A&A...445..827R} {445, 827}
+
+\bibitem[\protect\citeauthoryear{{Savage}, {Kim}, {Wakker}, {Keeney}, {Shull},
+  {Stocke}  \& {Green}}{{Savage} et~al.}{2014}]{savage-2014}
+{Savage} B.~D.,  {Kim} T.~S.,  {Wakker} B.~P.,  {Keeney} B.,  {Shull} J.~M.,
+  {Stocke} J.~T.,   {Green} J.~C.,  2014, \mn@doi [\apjs]
+  {10.1088/0067-0049/212/1/8}, \href
+  {https://ui.adsabs.harvard.edu/abs/2014ApJS..212....8S} {212, 8}
+
+\makeatother
+\end{thebibliography}
