@@ -14,7 +14,7 @@ plt.style.use('Files_n_figures/my_style.mpl')
 
 'component II CIE'
 
-hdu=fits.open('pg0003/z=0.347579/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
+hdu=fits.open('pg0003/z=0.347586/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
 nH=data['log_nH']
@@ -61,7 +61,7 @@ plt.ylabel(r'$\mathbf{log \ [Z/Z_\odot]}$',labelpad=15,fontsize=40)
 plt.xlim(-5.25,0.25)
 plt.ylim(-1.383,-0.37)
 
-plt.savefig('comp_II_CIE_Danforth.png')
+# plt.savefig('comp_II_CIE_Danforth.png')
 
 # plt.show()
 

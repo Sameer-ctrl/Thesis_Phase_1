@@ -175,7 +175,6 @@ m1=model(chi_sq_exc,'Excluding OVI','orange')
 m2=model(chi_sq_inc,'Including OVI','green')
 plt.clf()
 
-
 plt.errorbar(xaxis,obs_col_den,c='red',yerr=col_den_error, fmt='o',capsize=3,label=r'$\mathbf{Observed}$')
 plot_samples(m1,'orange',n=100)
 m1=model(chi_sq_exc,r'$\mathbf{Excluding \ }$'+ion_label('O+5'),'orange')

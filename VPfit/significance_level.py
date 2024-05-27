@@ -72,6 +72,7 @@ def cos_siglevel(W, wavelength, b, snpix=None, snx=None, disp=None, binning=None
 def eq_w(line,line_name):
 
     data=loadtxt(f'{file_path}/{line}.txt',comments='!')
+    # data=loadtxt(f'{line}.txt',comments='!')
 
     cen_wave_rest=rest_wave[line_name]
 
@@ -79,8 +80,13 @@ def eq_w(line,line_name):
     cont=data[:,3]
 
     w=wave[-1]-wave[0]-simpson(cont,wave)
-    
+
     return w*1000  #mA,
+
+# eq_w('OVI_1032_2','OVI_1032')
+# eq_w('OVI_1032','OVI_1032')
+
+# quit()
 
 
 file=f'pg0003/z={z_abs:.6f}/fit_params.txt'
@@ -117,7 +123,8 @@ binning=1.23
 
 for i in range(len(lines)):
 
-    print(f'{lines[i]} : {cos_siglevel(eq_w(lines[i],line_name[i]),cen_wave[i],b[i],snpix[i],binning=binning)}')
+    # print(f'{lines[i]} : {cos_siglevel(eq_w(lines[i],line_name[i]),cen_wave[i],b[i],snpix[i],binning=binning)}')
+    print(f'{lines[i]} : {eq_w(lines[i],line_name[i])}')
 
 
 os.remove('temp_param_file.txt')

@@ -5,36 +5,48 @@ from astropy.table import Table,Column
 import matplotlib.pyplot as plt
 from numpy import *
 from scipy.integrate import quad
-from scipy.stats import poisson
-
-# print(poisson.ppf(0.67,2))
 
 
-file=open('appendix.txt','r')
+wave=[round(i,2) for i in arange(1390.92-2,1390.92+2,0.03)]
+flux=ones(len(wave))
 
-lines=file.readlines()
+table=Table()
 
-empty_lines=[]
+wave_col=Column(name='WAVE', data=wave)
+flux_col=Column(name='FLUX', data=flux)
+error_col=Column(name='ERROR', data=flux*0.1)
 
-a='\includegraphics[width=1.25\linewidth]'
 
-for i,l in enumerate(lines):
+table.add_columns([wave_col,flux_col,error_col])
 
-    empty_lines.append(l)
+table.write('mock_spectra.asc',format='ascii',overwrite=True)
+quit()
 
-    if a in l:
+# file=open('appendix.txt','r')
+
+# lines=file.readlines()
+
+# empty_lines=[]
+
+# a='\includegraphics[width=1.25\linewidth]'
+
+# for i,l in enumerate(lines):
+
+#     empty_lines.append(l)
+
+#     if a in l:
         
-        splitted1=l.split('/')[1]
-        splitted2=splitted1.split('_')
+#         splitted1=l.split('/')[1]
+#         splitted2=splitted1.split('_')
 
-        qso=splitted2[0]
-        z_abs=splitted2[1][2:]
+#         qso=splitted2[0]
+#         z_abs=splitted2[1][2:]
 
-        empty_lines.append(f'    \caption{{System plot for the absorber along the line of sight of {qso} at $z_{{abs}} = {z_abs}$. }}\n')
+#         empty_lines.append(f'    \caption{{System plot for the absorber along the line of sight of {qso} at $z_{{abs}} = {z_abs}$. }}\n')
 
-file=open(f'correct.txt','w+')
-file.writelines(empty_lines)
-file.close()
+# file=open(f'correct.txt','w+')
+# file.writelines(empty_lines)
+# file.close()
 
 quit()
 
