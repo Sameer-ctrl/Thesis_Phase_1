@@ -29,7 +29,7 @@ col_den_H=log10(data['H']+data['H+'])
 
 def save_func(func,name):
 
-    with open(f'Interp_2d_func_new/{name}.pkl','wb') as pickle_file:
+    with open(f'{name}.pkl','wb') as pickle_file:
         pickle.dump(func,pickle_file)
 
 def interp_func(ion,kind='cubic'):
