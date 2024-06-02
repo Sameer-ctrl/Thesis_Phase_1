@@ -12,6 +12,35 @@ warnings.filterwarnings("ignore")
 plt.style.use('../Python/my_style.mpl')
 
 
+'component II CIE'
+
+hdu=fits.open('pg0003/z=0.347586/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
+data=Table(hdu[1].data)
+
+nH=data['log_nH']
+Z=data['log_Z']
+col_den_H=log10(data['H']+data['H+'])
+
+# plt.figure(figsize=(16,10))
+
+# plt.scatter(nH,Z,c=col_den_H)
+# plt.colorbar()
+# plt.savefig('H.png')
+
+def save_func(func,name):
+
+    with open(f'Interp_2d_func_new/{name}.pkl','wb') as pickle_file:
+        pickle.dump(func,pickle_file)
+
+def interp_func(ion,kind='cubic'):
+
+    f_2d=interp2d(nH,Z,col_den_H,kind=kind)
+    save_func(f_2d,f'{ion}_{kind}')
+
+interp_func('H',kind='quintic')
+
+quit()
+
 hdu=fits.open(f'scaling_approx/scaling_Z_col_density_param.fits')
 data=Table(hdu[1].data)
 

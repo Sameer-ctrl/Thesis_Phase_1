@@ -7,9 +7,10 @@ from roman import toRoman
 from scipy.interpolate import interp2d,interp1d
 from scipy.optimize import fsolve
 from roman import toRoman
+import matplotlib
+# matplotlib.rcParams['backend']='TkAgg'
 
-
-plt.style.use('Files_n_figures/my_style.mpl')
+# plt.style.use('Files_n_figures/my_style.mpl')
 
 
 'component II CIE'
@@ -20,6 +21,7 @@ data=Table(hdu[1].data)
 nH=data['log_nH']
 Z=data['log_Z']
 col_den_OVI=log10(data['O+5'])
+col_den_H=log10(data['H']+data['H+'])
 
 obs_OVI=14.25 
 
@@ -63,7 +65,7 @@ plt.ylim(-1.383,-0.37)
 
 # plt.savefig('comp_II_CIE_Danforth.png')
 
-# plt.show()
+plt.show()
 
 
 

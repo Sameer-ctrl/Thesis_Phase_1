@@ -12,6 +12,22 @@ from astropy.io import ascii
 import os
 
 
+data=loadtxt(f'vpfit_chunk001.txt',comments='!')
+
+wave=data[:,0]
+
+mask=logical_and(wave>1147.2, wave<1149)
+
+flux=data[:,1][mask]
+err=data[:,2][mask]
+cont=data[:,3][mask]
+
+chi_sq=sum(((cont-flux)/err)**2)
+print(chi_sq)
+# 3.55
+
+quit()
+
 def lines_sys_total(qso,z_abs):
 
     file_path=f'../VPfit/{qso}/z={z_abs:.6f}/VPfit_chunks'
