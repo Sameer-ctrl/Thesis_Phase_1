@@ -112,14 +112,16 @@ def interpolate_OVI(kind='quintic'):
 # interpolate_OVI(kind='quintic')
 
 
-hdu=fits.open('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits')
+# hdu=fits.open('pg0003/z=0.347579/nH_Z/col_den_OVI_extrapolated.fits')
+hdu=fits.open('pg0003/z=0.347586/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
 
 i='O+5'
 
 log_nH=data['log_nH']
 log_Z=data['log_Z']
-log_col_den=data[i]
+log_col_den=log10(data['H']+data['H+'])
+# log_col_den=data[i]
 
 
 
@@ -133,7 +135,8 @@ def col_vs_z(nH):
     plt.scatter(Z,log_col_den,label=f'{nH}',marker='D')  
 
 
-with open(f'Interp_2d_func_new/{i}_quintic.pkl','rb') as pickle_file:
+# with open(f'Interp_2d_func_new/{i}_quintic.pkl','rb') as pickle_file:
+with open(f'H_quintic.pkl','rb') as pickle_file:
     f=pickle.load(pickle_file)
 
 
@@ -152,7 +155,7 @@ with open(f'Interp_2d_func_new/{i}_quintic.pkl','rb') as pickle_file:
 # plt.show() 
 
 nH=linspace(-5,0,100)
-Z=linspace(-3,2,100)
+Z=linspace(-2,1,100)
 
 x=array(list(nH)*len(Z))
 y=zeros(len(x))
@@ -174,7 +177,7 @@ col_den1=col_den1.flatten()
 fig=plt.figure()
 ax=plt.axes(projection ='3d')   
 
-ax.scatter(log_nH,log_Z,log_col_den,label='interp1')
+ax.scatter(log_nH,log_Z,log_col_den,label='obs')
 ax.scatter(x,y,col_den,label='interpolated')
 # ax.scatter(x,y,col_den1,label='interpolated2')
 ax.set_xlabel('nH')

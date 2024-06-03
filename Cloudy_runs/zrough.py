@@ -16,10 +16,14 @@ plt.style.use('../Python/my_style.mpl')
 
 hdu=fits.open('pg0003/z=0.347586/component_II_CI/component_II_nH_Z_const_T_col_density_param.fits')
 data=Table(hdu[1].data)
-
-nH=data['log_nH']
 Z=data['log_Z']
-col_den_H=log10(data['H']+data['H+'])
+
+mask=logical_and(Z>=-1.4,Z<=-0.4)
+
+nH=data['log_nH'][mask]
+Z=data['log_Z'][mask]
+
+col_den_H=log10(data['H']+data['H+'])[mask]
 
 # plt.figure(figsize=(16,10))
 
