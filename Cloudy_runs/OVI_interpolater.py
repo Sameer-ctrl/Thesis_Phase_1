@@ -155,7 +155,7 @@ with open(f'H_quintic.pkl','rb') as pickle_file:
 # plt.show() 
 
 nH=linspace(-5,0,100)
-Z=linspace(-2,1,100)
+Z=linspace(-1.4,-0.4,100)
 
 x=array(list(nH)*len(Z))
 y=zeros(len(x))
